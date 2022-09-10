@@ -25,19 +25,19 @@
 
 #### Король
 
-![](images/2.jpg)
+<img src="images/2.jpg" title="" alt="" width="538">
 
 #### Ферзь
 
-![](images/1.jpg)
+<img src="images/1.jpg" title="" alt="" width="538">
 
 #### Слон
 
-![](images/5.jpg)
+<img src="images/5.jpg" title="" alt="" width="538">
 
 #### Ладья
 
-![](images/3.jpg)
+<img src="images/3.jpg" title="" alt="" width="538">
 
 #### Конь
 
