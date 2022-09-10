@@ -25,37 +25,37 @@
 
 #### Король
 
-![](https://github.com/MR-Geri/chess/blob/main/images/2.jpg)
+![](images/2.jpg)
 
 #### Ферзь
 
-![](https://github.com/MR-Geri/chess/blob/main/images/1.jpg)
+![](images/1.jpg)
 
 #### Слон
 
-![](https://github.com/MR-Geri/chess/blob/main/images/5.jpg)
+![](images/5.jpg)
 
 #### Ладья
 
-![](https://github.com/MR-Geri/chess/blob/main/images/3.jpg)
+![](images/3.jpg)
 
 #### Конь
 
-<img src="https://github.com/MR-Geri/chess/blob/main/images/4.jpg" title="" alt="" width="539">
+<img src="images/4.jpg" title="" alt="" width="538">
 
 #### Пешка
 
 Ходы пешки:
 
-<img src="https://github.com/MR-Geri/chess/blob/main/images/6.jpg" title="" alt="" width="539">
+<img src="images/6.jpg" title="" alt="" width="538">
 
 Взятие пешкой фигур противника:
 
-<img src="https://github.com/MR-Geri/chess/blob/main/images/7.jpg" title="" alt="" width="538">
+<img src="images/7.jpg" title="" alt="" width="538">
 
 Взятие на проходе:
 
-<img src="https://github.com/MR-Geri/chess/blob/main/images/8.jpg" title="" alt="" width="538">
+<img src="images/8.jpg" title="" alt="" width="538">
 
 #### Рокировки
 
@@ -78,6 +78,6 @@
   
   
   
-  <img src="https://github.com/MR-Geri/chess/blob/main/images/11.jpg" title="" alt="" width="542">
+  <img src="images/11.jpg" title="" alt="" width="538">
 
 ## Техническое задание
