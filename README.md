@@ -25,37 +25,37 @@
 
 #### Король
 
-![](/home/Pavel/Загрузки/Шахматы/2.jpg)
+![](https://github.com/MR-Geri/chess/blob/main/images/2.jpg)
 
 #### Ферзь
 
-![](/home/Pavel/Загрузки/Шахматы/1.jpg)
+![](https://github.com/MR-Geri/chess/blob/main/images/1.jpg)
 
 #### Слон
 
-![](/home/Pavel/Загрузки/Шахматы/5.jpg)
+![](https://github.com/MR-Geri/chess/blob/main/images/5.jpg)
 
 #### Ладья
 
-![](/home/Pavel/Загрузки/Шахматы/3.jpg)
+![](https://github.com/MR-Geri/chess/blob/main/images/3.jpg)
 
 #### Конь
 
-<img src="file:///home/Pavel/Загрузки/Шахматы/4.jpg" title="" alt="" width="539">
+<img src="https://github.com/MR-Geri/chess/blob/main/images/4.jpg" title="" alt="" width="539">
 
 #### Пешка
 
 Ходы пешки:
 
-<img src="file:///home/Pavel/Загрузки/Шахматы/6.jpg" title="" alt="" width="539">
+<img src="https://github.com/MR-Geri/chess/blob/main/images/6.jpg" title="" alt="" width="539">
 
 Взятие пешкой фигур противника:
 
-<img src="file:///home/Pavel/Загрузки/Шахматы/7.jpg" title="" alt="" width="538">
+<img src="https://github.com/MR-Geri/chess/blob/main/images/7.jpg" title="" alt="" width="538">
 
 Взятие на проходе:
 
-<img src="file:///home/Pavel/Загрузки/Шахматы/8.jpg" title="" alt="" width="538">
+<img src="https://github.com/MR-Geri/chess/blob/main/images/8.jpg" title="" alt="" width="538">
 
 #### Рокировки
 
@@ -78,6 +78,6 @@
   
   
   
-  <img src="file:///home/Pavel/Загрузки/Шахматы/11.jpg" title="" alt="" width="542">
+  <img src="https://github.com/MR-Geri/chess/blob/main/images/11.jpg" title="" alt="" width="542">
 
 ## Техническое задание
