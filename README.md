@@ -164,11 +164,14 @@ close
 
 ---
 #### User
+
 ---
 #### Bot
+
 ---
 #### Board
 delete_figure
+
 ---
 #### Music
 start
