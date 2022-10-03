@@ -133,6 +133,9 @@
    1. Junior
    2. Middle
    3. Senior
+7. QTimer
+   1. FirstPlayer
+   2. SecondPlayer
 
 В структуре описаны основные классы и функции, которые не реализованы Qt.
 
@@ -160,8 +163,14 @@
 #### saving_move
 Сохранение хода игрока.
 
+#### change_active_player
+Вызывается после завершения игроком хода.
+Переключает текущего игрока и таймеры.
+
 ---
 ### Bot
+#### get_move(depth)
+Поиск лучшего хода с глубиной поиска depth.
 
 ---
 ### QGraphicsView::Board
@@ -188,3 +197,7 @@
 ---
 ### QTableView Junior, QTableView Middle и QTableView Senior
 Объекты класса QTableView библиотеки Qt, используемые для отображения таблиц лидеров.
+
+---
+### QTimer FirstPlayer и QTimer SecondPlayer
+Объекты класса библиотеки Qt, отвечающие за таймеры игроков.
