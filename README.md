@@ -78,9 +78,11 @@
 <img src="images/9.jpg" title="" alt="" width="538">
 
 ##### Короткая
-Короткая рокировка делается ходом вправо, король делает шаг на 2 клетки. Король становится на G1, а ладья на F1.
-<img src="images/10.jpg" title="" alt="" width="538">
-<img src="images/11.jpg" title="" alt="" width="538">
+Короткая рокировка делается ходом вправо, король делает шаг на 2 клетки. Король становится на G1, а ладья на F1.  
+
+<img src="images/10.jpg" title="" alt="" width="538">  
+
+<img src="images/11.jpg" title="" alt="" width="538">  
 
 #### Проход
 
