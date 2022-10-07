@@ -1,16 +1,13 @@
 #pragma once
 
 #include <QGraphicsItem>
-
-class Move{};
+#include <QPair>
 
 class Figure : public QGraphicsItem
 {
 public:
-    Figure();
-
-    virtual void move(Move);
-    virtual QList<Move> getValidMoves();
+    virtual void move(QPair<int, int>);
+    virtual QList<QPair<int, int>> getValidMoves();
     int getPrice() const;
     int getX() const;
     int getY() const;
@@ -23,49 +20,32 @@ private:
     int col, row;
 };
 
-class Move
-{
-    Move(int new_col, int new_row);
-    int getDeltaX() const;
-    int getDeltaY() const;
-    int getDeltaCol() const;
-    int getDeltaRow() const;
-    Figure* getFigureInTargetField() const;
-    Figure* getFigureInTargetField() const;
-
-private:
-    int delta_x, delta_y; // Изменение координат в QGraphicScene
-    int delta_col, delta_row; // Изменение номера столбца и строки поля
-    Figure* figure_in_target_field; // Фигура на целевом поле, nullptr если её там нет
-    Figure* figure_making_move; // Фигура, котрая совершает ход
-};
-
 class King : public Figure {
-    void move(Move);
-    QList<Move> getValidMoves();
+    void move(QPair<int, int>);
+    QList<QPair<int, int>> getValidMoves();
 };
 
 class Queen : public Figure {
-    void move(Move);
-    QList<Move> getValidMoves();
+    void move(QPair<int, int>);
+    QList<QPair<int, int>> getValidMoves();
 };
 
 class Bishop : public Figure {
-    void move(Move);
-    QList<Move> getValidMoves();
+    void move(QPair<int, int>);
+    QList<QPair<int, int>> getValidMoves();
 };
 
 class Rook : public Figure {
-    void move(Move);
-    QList<Move> getValidMoves();
+    void move(QPair<int, int>);
+    QList<QPair<int, int>> getValidMoves();
 };
 
 class Kinght : public Figure {
-    void move(Move);
-    QList<Move> getValidMoves();
+    void move(QPair<int, int>);
+    QList<QPair<int, int>> getValidMoves();
 };
 
 class Pawn : public Figure {
-    void move(Move);
-    QList<Move> getValidMoves();
+    void move(QPair<int, int>);
+    QList<QPair<int, int>> getValidMoves();
 };
