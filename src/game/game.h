@@ -2,10 +2,10 @@
 
 #include <QMainWindow>
 #include <QStackedWidget>
-#include <chose_type_game_window.h>
-#include <game_field_window.h>
-#include <menu_window.h>
-#include <settings_window.h>
+#include <src/chose_type_game_window/chose_type_game_window.h>
+#include <src/game_field_window/game_field_window.h>
+#include <src/menu_window/menu_window.h>
+#include <src/settings_window/settings_window.h>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class Game; }

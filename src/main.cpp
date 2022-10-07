@@ -1,4 +1,4 @@
-#include "game.h"
+#include <src/game/game.h>
 
 #include <QApplication>
 

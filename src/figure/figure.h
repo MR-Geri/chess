@@ -2,6 +2,8 @@
 
 #include <QGraphicsItem>
 
+class Move{};
+
 class Figure : public QGraphicsItem
 {
 public:

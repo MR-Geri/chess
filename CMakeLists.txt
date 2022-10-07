@@ -15,25 +15,24 @@ find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Widgets)
 find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets)
 
 set(PROJECT_SOURCES
-        main.cpp
-        game/game.cpp
-        game/game.h
-        game/game.ui
-        figure/figure.h
-        figure/figure.cpp
-        chose_type_game_window/chose_type_game_window.h
-        chose_type_game_window/chose_type_game_window.cpp
-        chose_type_game_window/chose_type_game_window.ui
-        menu_window/menu_window.h
-        menu_window/menu_window.cpp
-        menu_window/menu_window.ui
-        settings_window/settings_window.h
-        settings_window/settings_window.cpp
-        settings_window/settings_window.ui
-        game_field_window/game_field_window.h
-        game_field_window/game_field_window.cpp
-        game_field_window/game_field_window.ui
-
+    src/main.cpp
+    src/game/game.cpp
+    src/game/game.h
+    src/game/game.ui
+    src/figure/figure.h
+    src/figure/figure.cpp
+    src/chose_type_game_window/chose_type_game_window.h
+    src/chose_type_game_window/chose_type_game_window.cpp
+    src/chose_type_game_window/chose_type_game_window.ui
+    src/menu_window/menu_window.h
+    src/menu_window/menu_window.cpp
+    src/menu_window/menu_window.ui
+    src/settings_window/settings_window.h
+    src/settings_window/settings_window.cpp
+    src/settings_window/settings_window.ui
+    src/game_field_window/game_field_window.h
+    src/game_field_window/game_field_window.cpp
+    src/game_field_window/game_field_window.ui
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
