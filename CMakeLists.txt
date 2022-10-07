@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.5)
 
-project(Chess VERSION 0.1 LANGUAGES CXX)
+project(chess VERSION 0.1 LANGUAGES CXX)
 
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 
@@ -8,51 +8,60 @@ set(CMAKE_AUTOUIC ON)
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
 
-set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-find_package(QT NAMES Qt6 Qt5 COMPONENTS Widgets REQUIRED)
-find_package(Qt${QT_VERSION_MAJOR} COMPONENTS Widgets REQUIRED)
+find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Widgets)
+find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets)
 
 set(PROJECT_SOURCES
         main.cpp
-        chess.cpp
-        chess.h
-        chess.ui
-        settings.h
-        settings.cpp
-        settings.ui
-        menu.h
-        menu.cpp
-        menu.ui
+        game/game.cpp
+        game/game.h
+        game/game.ui
+        figure/figure.h
+        figure/figure.cpp
+        chose_type_game_window/chose_type_game_window.h
+        chose_type_game_window/chose_type_game_window.cpp
+        chose_type_game_window/chose_type_game_window.ui
+        menu_window/menu_window.h
+        menu_window/menu_window.cpp
+        menu_window/menu_window.ui
+        settings_window/settings_window.h
+        settings_window/settings_window.cpp
+        settings_window/settings_window.ui
+        game_field_window/game_field_window.h
+        game_field_window/game_field_window.cpp
+        game_field_window/game_field_window.ui
+
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
-    qt_add_executable(Chess
+    qt_add_executable(chess
         MANUAL_FINALIZATION
         ${PROJECT_SOURCES}
     )
 # Define target properties for Android with Qt 6 as:
-#    set_property(TARGET Chess APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR
+#    set_property(TARGET chess APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR
 #                 ${CMAKE_CURRENT_SOURCE_DIR}/android)
 # For more information, see https://doc.qt.io/qt-6/qt-add-executable.html#target-creation
 else()
     if(ANDROID)
-        add_library(Chess SHARED
+        add_library(chess SHARED
             ${PROJECT_SOURCES}
         )
 # Define properties for Android with Qt 5 after find_package() calls as:
 #    set(ANDROID_PACKAGE_SOURCE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/android")
     else()
-        add_executable(Chess
+        add_executable(chess
             ${PROJECT_SOURCES}
         )
     endif()
 endif()
 
-target_link_libraries(Chess PRIVATE Qt${QT_VERSION_MAJOR}::Widgets)
+target_link_libraries(chess PRIVATE Qt${QT_VERSION_MAJOR}::Widgets)
 
-set_target_properties(Chess PROPERTIES
+set_target_properties(chess PROPERTIES
     MACOSX_BUNDLE_GUI_IDENTIFIER my.example.com
     MACOSX_BUNDLE_BUNDLE_VERSION ${PROJECT_VERSION}
     MACOSX_BUNDLE_SHORT_VERSION_STRING ${PROJECT_VERSION_MAJOR}.${PROJECT_VERSION_MINOR}
@@ -60,6 +69,10 @@ set_target_properties(Chess PROPERTIES
     WIN32_EXECUTABLE TRUE
 )
 
+install(TARGETS chess
+    BUNDLE DESTINATION .
+    LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR})
+
 if(QT_VERSION_MAJOR EQUAL 6)
-    qt_finalize_executable(Chess)
+    qt_finalize_executable(chess)
 endif()

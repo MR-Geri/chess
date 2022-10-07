@@ -1,16 +1,11 @@
-#include "chess.h"
-#include "settings.h"
-#include "menu.h"
+#include "game.h"
 
 #include <QApplication>
 
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-    Chess chess;
-    Menu menu;
-    Settings settings;
-    menu.show();
-
+    Game w;
+    w.show();
     return a.exec();
 }
