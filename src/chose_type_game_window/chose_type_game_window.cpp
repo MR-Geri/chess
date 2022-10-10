@@ -3,12 +3,10 @@
 
 ChoseTypeGameWindow::ChoseTypeGameWindow(QWidget *parent) :
     QWidget(parent),
-    ui(new Ui::ChoseTypeGameWindow)
-{
+    ui(new Ui::ChoseTypeGameWindow) {
     ui->setupUi(this);
 }
 
-ChoseTypeGameWindow::~ChoseTypeGameWindow()
-{
+ChoseTypeGameWindow::~ChoseTypeGameWindow() {
     delete ui;
 }

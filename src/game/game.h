@@ -11,8 +11,7 @@ QT_BEGIN_NAMESPACE
 namespace Ui { class Game; }
 QT_END_NAMESPACE
 
-class Game : public QMainWindow
-{
+class Game : public QMainWindow {
     Q_OBJECT
 
 public:

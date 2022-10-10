@@ -4,8 +4,7 @@
 #include <QPair>
 #include <QList>
 
-class Figure : public QGraphicsItem
-{
+class Figure : public QGraphicsItem {
 public:
     virtual int move(QPair<int, int>) = 0;
     virtual QList<QPair<int, int>> getValidMoves() = 0;

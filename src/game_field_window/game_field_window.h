@@ -6,8 +6,7 @@ namespace Ui {
 class GameFieldWindow;
 }
 
-class GameFieldWindow : public QWidget
-{
+class GameFieldWindow : public QWidget {
     Q_OBJECT
 
 public:

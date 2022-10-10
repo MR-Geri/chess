@@ -3,12 +3,14 @@
 
 MenuWindow::MenuWindow(QWidget *parent) :
     QWidget(parent),
-    ui(new Ui::MenuWindow)
-{
+    ui(new Ui::MenuWindow) {
     ui->setupUi(this);
 }
 
-MenuWindow::~MenuWindow()
-{
+MenuWindow::~MenuWindow() {
     delete ui;
+}
+
+void MenuWindow::go_to_settings() {
+
 }
