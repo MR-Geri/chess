@@ -2,12 +2,13 @@
 
 #include <QGraphicsItem>
 #include <QPair>
+#include <QList>
 
 class Figure : public QGraphicsItem
 {
 public:
-    virtual void move(QPair<int, int>);
-    virtual QList<QPair<int, int>> getValidMoves();
+    virtual int move(QPair<int, int>) = 0;
+    virtual QList<QPair<int, int>> getValidMoves() = 0;
     int getPrice() const;
     int getX() const;
     int getY() const;
@@ -23,36 +24,38 @@ protected:
 
 class King : public Figure {
 public:
+    King();
+
     int move(QPair<int, int>);
     QList<QPair<int, int>> getValidMoves();
 };
 
 class Queen : public Figure {
 public:
-    void move(QPair<int, int>);
+    int move(QPair<int, int>);
     QList<QPair<int, int>> getValidMoves();
 };
 
 class Bishop : public Figure {
 public:
-    void move(QPair<int, int>);
+    int move(QPair<int, int>);
     QList<QPair<int, int>> getValidMoves();
 };
 
 class Rook : public Figure {
 public:
-    void move(QPair<int, int>);
+    int move(QPair<int, int>);
     QList<QPair<int, int>> getValidMoves();
 };
 
 class Kinght : public Figure {
 public:
-    void move(QPair<int, int>);
+    int move(QPair<int, int>);
     QList<QPair<int, int>> getValidMoves();
 };
 
 class Pawn : public Figure {
 public:
-    void move(QPair<int, int>);
+    int move(QPair<int, int>);
     QList<QPair<int, int>> getValidMoves();
 };
