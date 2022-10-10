@@ -1,4 +1,4 @@
-build_and_run.sh
+scripts/
 *.user
 .cache/
 .cmake/

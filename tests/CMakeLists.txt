@@ -17,7 +17,7 @@ set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 add_executable(tests
-    tst_tests.cpp
+    tst_figure.cpp
     ../src/figure/figure.h
     ../src/figure/figure.cpp
 )
