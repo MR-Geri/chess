@@ -6,8 +6,8 @@ int King::move(QPair<int, int> cords_board) {
         // Невозможный ход
         return 1;
     }
-    if ((col + cords_board.first) < 0 || (col + cords_board.second) > 8 ||
-        (row + cords_board.first) < 0 || (row + cords_board.second) > 8) {
+    if ((col + cords_board.first) < 0 || (col + cords_board.second) >= 8 ||
+        (row + cords_board.first) < 0 || (row + cords_board.second) >= 8) {
         // Может быть добавлена обработка ошибки
         // Выход за поле
         return 2;
