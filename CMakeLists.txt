@@ -2,6 +2,8 @@ cmake_minimum_required(VERSION 3.5)
 
 project(chess VERSION 0.1 LANGUAGES CXX)
 
+add_subdirectory(./tests)
+
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 
 set(CMAKE_AUTOUIC ON)
@@ -11,8 +13,8 @@ set(CMAKE_AUTORCC ON)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Widgets Test)
-find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets Test)
+find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Test Widgets)
+find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Test Widgets)
 
 
 set(PROJECT_SOURCES
@@ -58,6 +60,7 @@ else()
         )
     endif()
 endif()
+
 
 target_link_libraries(chess PRIVATE
     Qt${QT_VERSION_MAJOR}::Widgets

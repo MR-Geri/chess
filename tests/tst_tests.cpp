@@ -1,4 +1,6 @@
 #include <QtTest>
+#include "../src/figure/figure.h"
+
 
 // add necessary includes here
 
