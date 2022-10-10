@@ -1,4 +1,5 @@
 #include <QtTest>
+#include "../src/figure/figure.h"
 
 // add necessary includes here
 
@@ -28,6 +29,7 @@ tests::~tests()
 void tests::test_case1()
 {
     King h;
+    QCOMPARE(h.move(QPair<int, int>(1, 1)), 1);
 }
 
 QTEST_APPLESS_MAIN(tests)

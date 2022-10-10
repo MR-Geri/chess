@@ -4,8 +4,8 @@ project(tests LANGUAGES CXX)
 
 enable_testing()
 
-find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Test)
-find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Test)
+find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Test Widgets)
+find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Test Widgets)
 
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 
@@ -16,8 +16,6 @@ set(CMAKE_AUTORCC ON)
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-add_subdirectory(../ sourse_dir)
-
 add_executable(tests
     tst_tests.cpp
     ../src/figure/figure.h
@@ -25,5 +23,8 @@ add_executable(tests
 )
 add_test(NAME tests COMMAND tests)
 
-target_link_libraries(tests PRIVATE Qt${QT_VERSION_MAJOR}::Test)
+target_link_libraries(tests PRIVATE
+    Qt${QT_VERSION_MAJOR}::Test
+    Qt${QT_VERSION_MAJOR}::Widgets
+)
 

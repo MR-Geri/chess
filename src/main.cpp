@@ -1,8 +1,7 @@
 #include <src/game/game.h>
+#include <src/figure/figure.h>
 
 #include <QApplication>
-#include <QTest>
-#include <src/figure/figure.h>
 
 int main(int argc, char *argv[]) {
     QApplication a(argc, argv);
