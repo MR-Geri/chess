@@ -8,3 +8,4 @@ Makefile
 chess
 chess_autogen/
 html/
+build-tests-Desktop-Debug/
