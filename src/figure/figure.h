@@ -14,38 +14,45 @@ public:
     int getCol() const;
     int getRow() const;
 
-private:
+protected:
     int price;
     int x, y;
+    int figure_size;
     int col, row;
 };
 
 class King : public Figure {
-    void move(QPair<int, int>);
+public:
+    int move(QPair<int, int>);
     QList<QPair<int, int>> getValidMoves();
 };
 
 class Queen : public Figure {
+public:
     void move(QPair<int, int>);
     QList<QPair<int, int>> getValidMoves();
 };
 
 class Bishop : public Figure {
+public:
     void move(QPair<int, int>);
     QList<QPair<int, int>> getValidMoves();
 };
 
 class Rook : public Figure {
+public:
     void move(QPair<int, int>);
     QList<QPair<int, int>> getValidMoves();
 };
 
 class Kinght : public Figure {
+public:
     void move(QPair<int, int>);
     QList<QPair<int, int>> getValidMoves();
 };
 
 class Pawn : public Figure {
+public:
     void move(QPair<int, int>);
     QList<QPair<int, int>> getValidMoves();
 };

@@ -8,7 +8,7 @@ Game::Game(QWidget *parent)
     ui->setupUi(this);
 
     ui->stackedWidget->addWidget(&menu_window);
-
+    ui->stackedWidget->setCurrentIndex(1);
 }
 
 Game::~Game()
