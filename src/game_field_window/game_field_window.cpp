@@ -5,6 +5,7 @@ GameFieldWindow::GameFieldWindow(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::GameFieldWindow) {
     ui->setupUi(this);
+
 }
 
 GameFieldWindow::~GameFieldWindow() {

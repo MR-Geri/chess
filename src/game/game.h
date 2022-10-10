@@ -2,6 +2,7 @@
 
 #include <QMainWindow>
 #include <QStackedWidget>
+#include <src/figure/figure.h>
 #include <src/chose_type_game_window/chose_type_game_window.h>
 #include <src/game_field_window/game_field_window.h>
 #include <src/menu_window/menu_window.h>

@@ -3,6 +3,7 @@
 #include <QGraphicsItem>
 #include <QPair>
 #include <QList>
+#include <QPainter>
 
 class Figure : public QGraphicsItem {
 public:
@@ -24,9 +25,11 @@ protected:
 class King : public Figure {
 public:
     King();
-
-    int move(QPair<int, int>);
-    QList<QPair<int, int>> getValidMoves();
+    QRectF boundingRect() const override;
+    void paint(QPainter *painter, const QStyleOptionGraphicsItem *option,
+                   QWidget *widget) override;
+    int move(QPair<int, int>) override;
+    QList<QPair<int, int>> getValidMoves() override;
 };
 
 class Queen : public Figure {
