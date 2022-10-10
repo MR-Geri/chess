@@ -1,6 +1,5 @@
 #include "game.h"
 #include "ui_game.h"
-#include <QTest>
 
 Game::Game(QWidget *parent)
     : QMainWindow(parent)
