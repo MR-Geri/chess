@@ -1,5 +1,6 @@
 #!/usr/bin/sh
 RED='\033[0;31m'
+GREN='\033[0;32m'
 NC='\033[0m' # No Color
 cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=1
 make
@@ -7,3 +8,4 @@ if [[ ! -z $(./tests/tests | grep -m 1 'FAIL!') ]]; then
         echo -e "$RED No Commit tests FAIL...$NC"
         exit 1
 fi
+echo -e "$GREN tests SUCCESS $NC"
