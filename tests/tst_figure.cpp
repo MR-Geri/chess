@@ -1,41 +1,33 @@
-#include <QtTest>
 #include "../src/figure/figure.h"
+#include <QtTest>
 
 // add necessary includes here
 
-class tests : public QObject
-{
-    Q_OBJECT
+class tests : public QObject {
+  Q_OBJECT
 
 public:
-    tests();
-    ~tests();
+  tests();
+  ~tests();
 
 private slots:
-    void test_king();
-    void test_queen();
-    void test_bishop();
-    void test_rook();
-    void test_kinght();
-    void test_pawn();
+  void test_king();
+  void test_queen();
+  void test_bishop();
+  void test_rook();
+  void test_kinght();
+  void test_pawn();
 };
 
-tests::tests()
-{
+tests::tests() {}
 
-}
+tests::~tests() {}
 
-tests::~tests()
-{
-
-}
-
-void tests::test_king()
-{
-    King figure;
-    QCOMPARE(figure.move(QPair<int, int>(0, 0)), 0);
-    QCOMPARE(figure.move(QPair<int, int>(1, 1)), 0);
-    QCOMPARE(figure.move(QPair<int, int>(2, 2)), 1);
+void tests::test_king() {
+  King figure;
+  QCOMPARE(figure.move(QPair<int, int>(0, 0)), 0);
+  QCOMPARE(figure.move(QPair<int, int>(1, 1)), 0);
+  QCOMPARE(figure.move(QPair<int, int>(2, 2)), 1);
 }
 
 void tests::test_queen() {}

@@ -1,16 +1,11 @@
 #include "menu_window.h"
 #include "ui_menu_window.h"
 
-MenuWindow::MenuWindow(QWidget *parent) :
-    QWidget(parent),
-    ui(new Ui::MenuWindow) {
-    ui->setupUi(this);
+MenuWindow::MenuWindow(QWidget *parent)
+    : QWidget(parent), ui(new Ui::MenuWindow) {
+  ui->setupUi(this);
 }
 
-MenuWindow::~MenuWindow() {
-    delete ui;
-}
+MenuWindow::~MenuWindow() { delete ui; }
 
-void MenuWindow::go_to_settings() {
-
-}
+void MenuWindow::go_to_settings() {}
