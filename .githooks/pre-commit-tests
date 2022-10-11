@@ -2,7 +2,7 @@
 RED='\033[0;31m'
 GREEN='\033[0;32m'
 NC='\033[0m' # No Color
-echo  "\n$GREEN------Testing the code hook is called-------$NC"
+echo -e "\n$GREEN------Testing the code hook is called-------$NC"
 cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=1
 make
 if [[ ! -z $(./tests/tests | grep -m 1 'FAIL!') ]]; then
