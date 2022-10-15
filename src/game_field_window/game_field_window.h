@@ -1,6 +1,8 @@
 #pragma once
 
 #include <QWidget>
+#include <src/bot/bot.h>
+#include <src/gameboard/gameboard.h>
 
 namespace Ui {
 class GameFieldWindow;
@@ -15,4 +17,6 @@ public:
 
 private:
     Ui::GameFieldWindow *ui;
+    GameBoard game_board;
+    Bot bot;
 };
