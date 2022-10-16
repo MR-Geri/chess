@@ -3,8 +3,21 @@ RED='\033[0;31m'
 GREEN='\033[0;32m'
 NC='\033[0m' # No Color
 echo -e "\n$GREEN------Testing the code hook is called-------$NC"
+
 cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=1
+if [ $? -eq 0 ]; then
+echo "cmake OK"
+else
+exit 1
+fi
+
 make
+if [ $? -eq 0 ]; then
+echo "make OK"
+else
+exit 1
+fi
+
 if [[ ! -z $(./tests/tests | grep -m 1 'FAIL!') ]]; then
         echo -e "$RED No Commit tests FAIL...$NC"
         exit 1
