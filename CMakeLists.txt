@@ -19,6 +19,7 @@ find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Test Widgets)
 
 set(PROJECT_SOURCES
     src/main.cpp
+    src/constants.h
     src/game/game.cpp
     src/game/game.h
     src/game/game.ui
@@ -40,6 +41,9 @@ set(PROJECT_SOURCES
     src/game_field_window/game_field_window.h
     src/game_field_window/game_field_window.cpp
     src/game_field_window/game_field_window.ui
+    src/liderboard_window/liderboard_window.h
+    src/liderboard_window/liderboard_window.cpp
+    src/liderboard_window/liderboard_window.ui
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)

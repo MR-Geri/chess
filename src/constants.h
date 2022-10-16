@@ -1,0 +1,3 @@
+#pragma once
+
+enum Windows { CHOOSE_TYPE_GAME, GAME_FIELD, MENU, SETTINGS, LIDERBOARD, EXIT };
