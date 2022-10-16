@@ -14,15 +14,15 @@ public:
     explicit MenuWindow(QWidget *parent = nullptr);
     ~MenuWindow();
 
-public slots:
-  void go_to_settings();
-  void go_to_chose_game();
-  void go_to_liderboard();
-  void exit();
+  signals:
+    void change_window(int on_window);
 
-signals:
-  void change_window(int on_window);
+  private slots:
+    void go_to_settings();
+    void go_to_chose_game();
+    void go_to_liderboard();
+    void exit();
 
-private:
+  private:
     Ui::MenuWindow *ui;
 };

@@ -2,6 +2,7 @@
 
 #include <QWidget>
 #include <src/bot/bot.h>
+#include <src/constants.h>
 #include <src/gameboard/gameboard.h>
 
 namespace Ui {
@@ -15,7 +16,14 @@ public:
     explicit GameFieldWindow(QWidget *parent = nullptr);
     ~GameFieldWindow();
 
-private:
+  signals:
+    void change_window(int on_window);
+
+  private slots:
+    void buttonBackGame_released();
+    void buttonNewGame_released();
+
+  private:
     Ui::GameFieldWindow *ui;
     GameBoard game_board;
     Bot bot;

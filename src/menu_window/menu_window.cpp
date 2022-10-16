@@ -18,7 +18,7 @@ MenuWindow::~MenuWindow() { delete ui; }
 void MenuWindow::go_to_settings() { emit change_window(Windows::SETTINGS); }
 
 void MenuWindow::go_to_chose_game() {
-  emit change_window(Windows::CHOOSE_TYPE_GAME);
+  emit change_window(Windows::CHOSE_TYPE_GAME);
 }
 
 void MenuWindow::go_to_liderboard() { emit change_window(Windows::LIDERBOARD); }

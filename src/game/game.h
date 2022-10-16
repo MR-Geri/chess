@@ -27,7 +27,7 @@ public:
 
   private:
     Ui::Game *ui;
-    ChoseTypeGameWindow choose_type_game_window;
+    ChoseTypeGameWindow chose_type_game_window;
     GameFieldWindow game_field_window;
     MenuWindow menu_window;
     SettingsWindow settings_window;

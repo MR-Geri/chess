@@ -1,6 +1,7 @@
 #pragma once
 
 #include <QWidget>
+#include <src/constants.h>
 
 namespace Ui {
 class SettingsWindow;
@@ -13,6 +14,12 @@ public:
     explicit SettingsWindow(QWidget *parent = nullptr);
     ~SettingsWindow();
 
-private:
+  signals:
+    void change_window(int on_window);
+
+  private slots:
+    void buttonBackSettings_released();
+
+  private:
     Ui::SettingsWindow *ui;
 };

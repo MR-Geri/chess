@@ -19,7 +19,7 @@
      <item>
       <layout class="QHBoxLayout" name="game_header">
        <item>
-        <widget class="QPushButton" name="buttonNewGameGame">
+        <widget class="QPushButton" name="buttonNewGame">
          <property name="focusPolicy">
           <enum>Qt::NoFocus</enum>
          </property>
