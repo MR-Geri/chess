@@ -14,3 +14,5 @@ LiderboardWindow::~LiderboardWindow() { delete ui; }
 void LiderboardWindow::buttonBackLiderboard_released() {
   emit change_window(Windows::MENU);
 }
+
+void LiderboardWindow::add_new_record(QString record) {}

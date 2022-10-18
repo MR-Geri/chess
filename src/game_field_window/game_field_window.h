@@ -1,5 +1,6 @@
 #pragma once
 
+#include <QString>
 #include <QWidget>
 #include <src/constants.h>
 #include <src/gameboard/gameboard.h>
@@ -48,7 +49,7 @@ signals:
    * \brief make_new_record
    * Сигнал для добавления новой записи в таблицу лидеров
    */
-  void make_new_record(QString);
+  void make_new_record(QString record);
 
 private slots:
   /*!

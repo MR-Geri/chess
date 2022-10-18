@@ -20,3 +20,5 @@ void GameFieldWindow::buttonNewGame_released() {
 void GameFieldWindow::buttonBackGame_released() {
   emit change_window(Windows::MENU);
 }
+
+void GameFieldWindow::save_move(QString move) {}
