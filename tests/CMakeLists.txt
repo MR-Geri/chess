@@ -18,8 +18,6 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 add_executable(tests
     tst_figure.cpp
-    ../src/figure/figure.h
-    ../src/figure/figure.cpp
 )
 
 add_test(NAME tests COMMAND tests)

@@ -8,18 +8,18 @@ class SettingsWindow;
 }
 
 class SettingsWindow : public QWidget {
-    Q_OBJECT
+  Q_OBJECT
 
 public:
-    explicit SettingsWindow(QWidget *parent = nullptr);
-    ~SettingsWindow();
+  explicit SettingsWindow(QWidget *parent = nullptr);
+  ~SettingsWindow();
 
-  signals:
-    void change_window(int on_window);
+signals:
+  void change_window(int on_window);
 
-  private slots:
-    void buttonBackSettings_released();
+private slots:
+  void buttonBackSettings_released();
 
-  private:
-    Ui::SettingsWindow *ui;
+private:
+  Ui::SettingsWindow *ui;
 };
