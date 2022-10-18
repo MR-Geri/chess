@@ -1,3 +1,3 @@
 #include "gameboard.h"
 
-GameBoard::GameBoard(QObject *parent) : QGraphicsScene{parent} {}
+GameGraphicScene::GameGraphicScene(QObject *parent) : QGraphicsScene{parent} {}
