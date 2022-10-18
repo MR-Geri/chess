@@ -24,6 +24,6 @@ private slots:
 
 private:
   Ui::GameFieldWindow *ui;
-  GameBoard game_board;
+  GameGraphicScene game_scene;
   int game_type;
 };
