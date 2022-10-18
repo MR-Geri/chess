@@ -13,7 +13,6 @@
  *
  * \param map Матрица, которая хранит фигуры и их расположение на поле.
  */
-
 class ChessBoard {
 public:
   /*!
@@ -68,7 +67,6 @@ private:
  *
  * \param board Объект класса ChessBoard - игровая доска.
  */
-
 class GameGraphicScene : public QGraphicsScene {
 public:
   /*!
@@ -77,7 +75,6 @@ public:
    * \param parent
    */
   explicit GameGraphicScene(QObject *parent = nullptr);
-
   /*!
    * \brief move_figure
    * Метод, перемещающий фигуры на поле board.
@@ -88,12 +85,33 @@ public:
    */
   void move_figure(QPair<int, int> old_position, QPair<int, int> new_position);
 
+  /*!
+   * \brief is_end_game
+   * Метод вызывается после каждого хода для проверки конца игры.
+   * Если возможных ходов нет, значит игра завершилась. Вызывается
+   * после каждого хода.
+   * \return
+   * 0 - если игра не завершена
+   * 1 - если победили белые
+   * -1 - если победили черные
+   */
+  int is_end_game();
+
 private:
   /*!
    * \brief update_scene
    * Метод, обновляющий сцену, вызывается из метода move_figure.
    */
   void update_scene();
+
+signals:
+  /*!
+   * \brief move_for_save
+   * Сигнал, отправляющий запись хода, который нужно сохранить.
+   * \param move
+   * Запись хода.
+   */
+  void move_for_save(QString move);
 
 private slots:
   /*!
