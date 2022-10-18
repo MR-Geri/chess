@@ -23,15 +23,8 @@ set(PROJECT_SOURCES
     src/game/game.cpp
     src/game/game.h
     src/game/game.ui
-    src/figure/figure.h
-    src/figure/figure.cpp
     src/gameboard/gameboard.h
     src/gameboard/gameboard.cpp
-    src/bot/bot.h
-    src/bot/bot.cpp
-    src/chose_type_game_window/chose_type_game_window.h
-    src/chose_type_game_window/chose_type_game_window.cpp
-    src/chose_type_game_window/chose_type_game_window.ui
     src/menu_window/menu_window.h
     src/menu_window/menu_window.cpp
     src/menu_window/menu_window.ui

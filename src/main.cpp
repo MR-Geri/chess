@@ -1,4 +1,3 @@
-#include <src/figure/figure.h>
 #include <src/game/game.h>
 
 #include <QApplication>

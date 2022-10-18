@@ -39,16 +39,6 @@
         </widget>
        </item>
        <item>
-        <widget class="QToolButton" name="buttonPauseGame">
-         <property name="focusPolicy">
-          <enum>Qt::NoFocus</enum>
-         </property>
-         <property name="text">
-          <string>⏸</string>
-         </property>
-        </widget>
-       </item>
-       <item>
         <spacer name="horizontalSpacer_5">
          <property name="orientation">
           <enum>Qt::Horizontal</enum>
@@ -106,26 +96,6 @@
         <widget class="QComboBox" name="comboBoxSteps">
          <property name="focusPolicy">
           <enum>Qt::NoFocus</enum>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLCDNumber" name="timerFirstPlayer">
-         <property name="maximumSize">
-          <size>
-           <width>70</width>
-           <height>16777215</height>
-          </size>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLCDNumber" name="timerSecondPlayer">
-         <property name="maximumSize">
-          <size>
-           <width>70</width>
-           <height>16777215</height>
-          </size>
          </property>
         </widget>
        </item>

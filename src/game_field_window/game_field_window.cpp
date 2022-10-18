@@ -14,7 +14,7 @@ GameFieldWindow::GameFieldWindow(QWidget *parent)
 GameFieldWindow::~GameFieldWindow() { delete ui; }
 
 void GameFieldWindow::buttonNewGame_released() {
-  emit change_window(Windows::CHOSE_TYPE_GAME);
+
 }
 
 void GameFieldWindow::buttonBackGame_released() {

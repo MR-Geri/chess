@@ -8,21 +8,21 @@ class MenuWindow;
 }
 
 class MenuWindow : public QWidget {
-    Q_OBJECT
+  Q_OBJECT
 
 public:
-    explicit MenuWindow(QWidget *parent = nullptr);
-    ~MenuWindow();
+  explicit MenuWindow(QWidget *parent = nullptr);
+  ~MenuWindow();
 
-  signals:
-    void change_window(int on_window);
+signals:
+  void change_window(int on_window);
 
-  private slots:
-    void go_to_settings();
-    void go_to_chose_game();
-    void go_to_liderboard();
-    void exit();
+private slots:
+  void go_to_settings();
+  void go_to_game_field();
+  void go_to_liderboard();
+  void exit();
 
-  private:
-    Ui::MenuWindow *ui;
+private:
+  Ui::MenuWindow *ui;
 };

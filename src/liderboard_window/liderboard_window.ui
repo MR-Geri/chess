@@ -15,11 +15,11 @@
   </property>
   <layout class="QGridLayout" name="gridLayout">
    <item row="0" column="0">
-    <layout class="QVBoxLayout" name="verticalLayout" stretch="0,0,0,0,0,0,0,0">
+    <layout class="QVBoxLayout" name="verticalLayout" stretch="0,0,0">
      <item>
       <widget class="QLabel" name="labelLiderBoard">
        <property name="sizePolicy">
-        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+        <sizepolicy hsizetype="Expanding" vsizetype="Maximum">
          <horstretch>0</horstretch>
          <verstretch>0</verstretch>
         </sizepolicy>
@@ -45,17 +45,7 @@
       </widget>
      </item>
      <item>
-      <widget class="QLabel" name="label_junior">
-       <property name="text">
-        <string>Junior бот</string>
-       </property>
-       <property name="alignment">
-        <set>Qt::AlignCenter</set>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QTableWidget" name="tableJunior">
+      <widget class="QTableWidget" name="tableLiderboard">
        <property name="enabled">
         <bool>true</bool>
        </property>
@@ -77,40 +67,6 @@
        </property>
        <property name="showGrid">
         <bool>true</bool>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QLabel" name="label_middle">
-       <property name="text">
-        <string>Middle бот</string>
-       </property>
-       <property name="alignment">
-        <set>Qt::AlignCenter</set>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QTableWidget" name="tableMiddle">
-       <property name="focusPolicy">
-        <enum>Qt::NoFocus</enum>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QLabel" name="label_senior">
-       <property name="text">
-        <string>Senior бот</string>
-       </property>
-       <property name="alignment">
-        <set>Qt::AlignCenter</set>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QTableWidget" name="tableSenior">
-       <property name="focusPolicy">
-        <enum>Qt::NoFocus</enum>
        </property>
       </widget>
      </item>
