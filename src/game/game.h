@@ -4,10 +4,10 @@
 #include <QStackedWidget>
 #include <QString>
 #include <src/constants.h>
-#include <src/game_field_window/game_field_window.h>
-#include <src/liderboard_window/liderboard_window.h>
-#include <src/menu_window/menu_window.h>
-#include <src/settings_window/settings_window.h>
+#include <src/gui/game_field_window/game_field_window.h>
+#include <src/gui/liderboard_window/liderboard_window.h>
+#include <src/gui/menu_window/menu_window.h>
+#include <src/gui/settings_window/settings_window.h>
 
 QT_BEGIN_NAMESPACE
 namespace Ui {

@@ -3,7 +3,6 @@
 #include <QString>
 #include <QWidget>
 #include <src/constants.h>
-#include <src/game_graphics_scene/game_graphics_scene.h>
 
 namespace Ui {
 class GameFieldWindow;
@@ -74,5 +73,4 @@ private slots:
 
 private:
   Ui::GameFieldWindow *ui;
-  GameGraphicScene *game_scene;
 };
