@@ -6,12 +6,10 @@
 
 /*!
  * \brief ChessBoard
- *
  * класс наследник стандартного класса QT - QGraphicsScene.
  * Данный класс используется для отрисовки игрового поля.
  * Он является сценой для QGraphicsWidget.
- *
- * \param map Матрица, которая хранит фигуры и их расположение на поле.
+ * \param map матрица, которая хранит фигуры и их расположение на поле.
  */
 class ChessBoard {
 public:
@@ -60,12 +58,10 @@ private:
 
 /*!
  * \brief GameBoard
- *
  * наследник стандартного класса QT - QGraphicsScene.
  * Данный класс используется для отрисовки игрового поля.
  * Он является сценой для QGraphicsWidget.
- *
- * \param board Объект класса ChessBoard - игровая доска.
+ * \param board объект класса ChessBoard - игровая доска.
  */
 class GameGraphicScene : public QGraphicsScene {
 public:
