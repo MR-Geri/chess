@@ -1,0 +1,165 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Chess: Документация</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Chess
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="PageDoc"><div class="header">
+  <div class="headertitle">
+<div class="title">Документация </div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><h1><a class="anchor" id="autotoc_md1"></a>
+Состав команды</h1>
+<p>Камкин Илья - проектировщик</p>
+<p>Стебенев Павел - разработчик</p>
+<p>Шишкина Алина - разработчик</p>
+<p>Дадонов Александр - тестировщик</p>
+<p>Беляев Максим - тестировщик</p>
+<h1><a class="anchor" id="autotoc_md2"></a>
+Основные правила</h1>
+<p>Игра происходит на доске, поделённой на равные квадратные клетки, или поля. Размер доски — 8×8 клеток. Вертикальные ряды полей (вертикали) обозначаются латинскими буквами от а до h слева направо, горизонтальные ряды (горизонтали) — цифрами от 1 до 8 снизу вверх; каждое поле обозначается сочетанием соответствующих буквы и цифры. Поля раскрашены в тёмный и светлый цвета (и называются, соответственно, чёрными и белыми) так, что соседние по вертикали и горизонтали поля раскрашены в разные цвета. Доска располагается так, чтобы ближнее угловое поле справа от игрока было белым (для белых это поле h1, для чёрных — поле а8).</p>
+<p>У игроков в начале игры имеется по одинаковому набору фигур. Фигуры одного из игроков условно называются «белыми», другого — «чёрными». Белые фигуры окрашены в светлый цвет, чёрные — в тёмный. Сами игроки называются «белые» и «чёрные» по цвету своих фигур.</p>
+<p>Игра заключается в том, что игроки поочерёдно делают ходы. Первый ход делают белые.</p>
+<h2><a class="anchor" id="autotoc_md3"></a>
+Типы фигур и их вес</h2>
+<ol type="1">
+<li><a href="#король">Король</a> (♔, ♚)</li>
+<li><a href="#ферзь">Ферзь</a> (♕, ♛) Вес: 5</li>
+<li><a href="#слон">Слон</a> (♗, ♝) Вес: 4</li>
+<li><a href="#ладья">Ладья</a> (♖, ♜) Вес: 3</li>
+<li><a href="#конь">Конь</a> (♘, ♞) Вес: 2</li>
+<li><a href="#пешка">Пешка</a> (♙, ♟) Вес: 1</li>
+</ol>
+<h2><a class="anchor" id="autotoc_md4"></a>
+Ходы</h2>
+<ul>
+<li>Фигуры (кроме <a href="#конь">коня</a>) передвигаются по прямой линии, при этом все промежуточные поля между начальным и конечным должны быть свободны (на них не должно быть своих или чужих фигур). Исключением является ход <a href="#конь">коня</a>.</li>
+<li>Ход на поле, занятое своей фигурой, невозможен.</li>
+<li>При ходе на поле, занятое чужой фигурой происходит <a href="#атака">атака</a>.</li>
+</ul>
+<h3><a class="anchor" id="autotoc_md5"></a>
+Король</h3>
+<p><img src="images/2.jpg" alt="" width="538" class="inline"/></p>
+<h3><a class="anchor" id="autotoc_md6"></a>
+Ферзь</h3>
+<p><img src="images/1.jpg" alt="" width="538" class="inline"/></p>
+<h3><a class="anchor" id="autotoc_md7"></a>
+Слон</h3>
+<p><img src="images/5.jpg" alt="" width="538" class="inline"/></p>
+<h3><a class="anchor" id="autotoc_md8"></a>
+Ладья</h3>
+<p><img src="images/3.jpg" alt="" width="538" class="inline"/></p>
+<h3><a class="anchor" id="autotoc_md9"></a>
+Конь</h3>
+<p><img src="images/4.jpg" alt="" width="538" class="inline"/></p>
+<h3><a class="anchor" id="autotoc_md10"></a>
+Пешка</h3>
+<p>Ходы пешки:</p>
+<p><img src="images/6.jpg" alt="" width="538" class="inline"/></p>
+<p>Взятие пешкой фигур противника:</p>
+<p><img src="images/7.jpg" alt="" width="538" class="inline"/></p>
+<h3><a class="anchor" id="autotoc_md11"></a>
+Атака</h3>
+<p>При ходе на поле, занятое чужой фигурой сравнивается <a href="#типы-фигур-и-их-вес">вес фигур</a>. Вес Вашей фигуры расчитывается следующим образом: <br  />
+ {Вес Вашей фигуры} - математическое_округление[({Вес Вашей фигуры} - {Вес фигуры противника}) / 2] <br  />
+</p>
+<p>Следовательно выгоднее бить более слабыми фигурами более сильные фигуры. <br  />
+ Ниже преведены все изменения веса Вашей фигуры при атаке фигур противника: <br  />
+</p>
+<p><img src="images/8.jpg" alt="" class="inline"/></p>
+<p>Данные правила пременимы ко всем фигурам, кроме короля. Если Ваш король находится под зоной хода фигуры противника вы должны сделать ход в такую клетку, в которой король не находится под зоной атаки фигуры противника. Если Вы не можете сделать такого хода - Вы проиграли.</p>
+<h3><a class="anchor" id="autotoc_md12"></a>
+Стартовый состав армии</h3>
+<ul>
+<li>1 Король</li>
+<li>1 Ферзь</li>
+<li>2 Слона</li>
+<li>2 Ладьи</li>
+<li>2 Коня</li>
+<li>8 Пешек</li>
+</ul>
+<p><img src="images/12.jpg" alt="" width="538" class="inline"/></p>
+<h1><a class="anchor" id="autotoc_md13"></a>
+Описание проекта</h1>
+<p>Проект представляет собой Desktop-приложение (игра по мативам Шахмат) написанное на языке программирования C++ с использованием фреймворка QT.</p>
+<p>Проект подразумевает возможности:</p>
+<ol type="1">
+<li><p class="startli">Одновременной игры двух пользователей.</p>
+<p class="startli">Два пользователя могут вести игру друг с другом сидя за одним компьютером.</p>
+</li>
+<li><p class="startli">Оценки позиции игроков в реальном времени.</p>
+<p class="startli">Во время партии каждый из игроков может получить оценку своего шанса на победу, которая рассчитывается с учетом позиции фигур на игровом поле.</p>
+</li>
+<li><p class="startli">Ведения таблицы лидеров.</p>
+<p class="startli">Перед началом партии игрокам будет предложено ввести свои имена для таблицы лидеров.</p>
+</li>
+</ol>
+<hr  />
+ <h1><a class="anchor" id="autotoc_md15"></a>
+Классы</h1>
+<p>Ссылка на doxygen </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

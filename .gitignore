@@ -12,5 +12,4 @@ chess
 chess_autogen/
 tests/tests
 tests/tests_autogen/
-html/
 build-tests-Desktop-Debug/
