@@ -70,7 +70,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>GameBoard.  
+<p>GameBoard наследник стандартного класса QT - QGraphicsScene. Данный класс используется для отрисовки игрового поля. Он является сценой для QGraphicsWidget.  
  <a href="classGameGraphicScene.html#details">Подробнее...</a></p>
 
 <p><code>#include &lt;<a class="el" href="gameboard_8h_source.html">gameboard.h</a>&gt;</code></p>
@@ -84,27 +84,26 @@ $(function() {
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="signals"></a>
 Сигналы</h2></td></tr>
 <tr class="memitem:a9d0739808b53498779ac3357a03f4e57"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGameGraphicScene.html#a9d0739808b53498779ac3357a03f4e57">move_for_save</a> (QString move)</td></tr>
-<tr class="memdesc:a9d0739808b53498779ac3357a03f4e57"><td class="mdescLeft">&#160;</td><td class="mdescRight">move_for_save Сигнал, отправляющий запись хода, который нужно сохранить.  <a href="classGameGraphicScene.html#a9d0739808b53498779ac3357a03f4e57">Подробнее...</a><br /></td></tr>
+<tr class="memdesc:a9d0739808b53498779ac3357a03f4e57"><td class="mdescLeft">&#160;</td><td class="mdescRight">move_for_save сигнал, отправляющий запись хода, который нужно сохранить.  <a href="classGameGraphicScene.html#a9d0739808b53498779ac3357a03f4e57">Подробнее...</a><br /></td></tr>
 <tr class="separator:a9d0739808b53498779ac3357a03f4e57"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Открытые члены</h2></td></tr>
 <tr class="memitem:ab9970ae965ec7ea9c8f78c961312c42e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGameGraphicScene.html#ab9970ae965ec7ea9c8f78c961312c42e">GameGraphicScene</a> (QObject *parent=nullptr)</td></tr>
-<tr class="memdesc:ab9970ae965ec7ea9c8f78c961312c42e"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classGameGraphicScene.html" title="GameBoard.">GameGraphicScene</a> Конструктор  <a href="classGameGraphicScene.html#ab9970ae965ec7ea9c8f78c961312c42e">Подробнее...</a><br /></td></tr>
+<tr class="memdesc:ab9970ae965ec7ea9c8f78c961312c42e"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classGameGraphicScene.html" title="GameBoard наследник стандартного класса QT - QGraphicsScene. Данный класс используется для отрисовки ...">GameGraphicScene</a> конструктор  <a href="classGameGraphicScene.html#ab9970ae965ec7ea9c8f78c961312c42e">Подробнее...</a><br /></td></tr>
 <tr class="separator:ab9970ae965ec7ea9c8f78c961312c42e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a46f88dfd8edeba746d16cc4098b338a6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGameGraphicScene.html#a46f88dfd8edeba746d16cc4098b338a6">move_figure</a> (QPair&lt; int, int &gt; old_position, QPair&lt; int, int &gt; new_position)</td></tr>
-<tr class="memdesc:a46f88dfd8edeba746d16cc4098b338a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">move_figure Метод, перемещающий фигуры на поле board.  <a href="classGameGraphicScene.html#a46f88dfd8edeba746d16cc4098b338a6">Подробнее...</a><br /></td></tr>
+<tr class="memdesc:a46f88dfd8edeba746d16cc4098b338a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">move_figure метод, перемещающий фигуры на поле board.  <a href="classGameGraphicScene.html#a46f88dfd8edeba746d16cc4098b338a6">Подробнее...</a><br /></td></tr>
 <tr class="separator:a46f88dfd8edeba746d16cc4098b338a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa17fadf933774463e5de40aee2868d0c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGameGraphicScene.html#aa17fadf933774463e5de40aee2868d0c">is_end_game</a> ()</td></tr>
-<tr class="memdesc:aa17fadf933774463e5de40aee2868d0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">is_end_game Метод вызывается после каждого хода для проверки конца игры. Если возможных ходов нет, значит игра завершилась. Вызывается после каждого хода.  <a href="classGameGraphicScene.html#aa17fadf933774463e5de40aee2868d0c">Подробнее...</a><br /></td></tr>
+<tr class="memdesc:aa17fadf933774463e5de40aee2868d0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">is_end_game метод вызывается после каждого хода для проверки конца игры. Если возможных ходов нет, значит игра завершилась. Вызывается после каждого хода.  <a href="classGameGraphicScene.html#aa17fadf933774463e5de40aee2868d0c">Подробнее...</a><br /></td></tr>
 <tr class="separator:aa17fadf933774463e5de40aee2868d0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
-<div class="textblock"><p>GameBoard. </p>
-<p>Класс наследник стандартного класса QT - QGraphicsScene. Данный класс используется для отрисовки игрового поля. Он является сценой для QGraphicsWidget.</p>
+<div class="textblock"><p>GameBoard наследник стандартного класса QT - QGraphicsScene. Данный класс используется для отрисовки игрового поля. Он является сценой для QGraphicsWidget. </p>
 <dl class="params"><dt>Аргументы</dt><dd>
   <table class="params">
-    <tr><td class="paramname">board</td><td>Объект класса <a class="el" href="classChessBoard.html" title="ChessBoard.">ChessBoard</a> - игровая доска. </td></tr>
+    <tr><td class="paramname">board</td><td>объект класса <a class="el" href="classChessBoard.html" title="ChessBoard класс наследник стандартного класса QT - QGraphicsScene. Данный класс используется для отр...">ChessBoard</a> - игровая доска. </td></tr>
   </table>
   </dd>
 </dl>
@@ -133,7 +132,7 @@ $(function() {
 </table>
 </div><div class="memdoc">
 
-<p><a class="el" href="classGameGraphicScene.html" title="GameBoard.">GameGraphicScene</a> Конструктор </p>
+<p><a class="el" href="classGameGraphicScene.html" title="GameBoard наследник стандартного класса QT - QGraphicsScene. Данный класс используется для отрисовки ...">GameGraphicScene</a> конструктор </p>
 <dl class="params"><dt>Аргументы</dt><dd>
   <table class="params">
     <tr><td class="paramname">parent</td><td></td></tr>
@@ -159,7 +158,7 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p>is_end_game Метод вызывается после каждого хода для проверки конца игры. Если возможных ходов нет, значит игра завершилась. Вызывается после каждого хода. </p>
+<p>is_end_game метод вызывается после каждого хода для проверки конца игры. Если возможных ходов нет, значит игра завершилась. Вызывается после каждого хода. </p>
 <dl class="section return"><dt>Возвращает</dt><dd>0 - если игра не завершена 1 - если победили белые -1 - если победили черные </dd></dl>
 
 </div>
@@ -190,11 +189,11 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p>move_figure Метод, перемещающий фигуры на поле board. </p>
+<p>move_figure метод, перемещающий фигуры на поле board. </p>
 <dl class="params"><dt>Аргументы</dt><dd>
   <table class="params">
-    <tr><td class="paramname">old_position</td><td>Старая позиция фигуры. </td></tr>
-    <tr><td class="paramname">new_position</td><td>Новая позиция фигуры. </td></tr>
+    <tr><td class="paramname">old_position</td><td>старая позиция фигуры. </td></tr>
+    <tr><td class="paramname">new_position</td><td>новая позиция фигуры. </td></tr>
   </table>
   </dd>
 </dl>
@@ -225,10 +224,10 @@ $(function() {
 </table>
 </div><div class="memdoc">
 
-<p>move_for_save Сигнал, отправляющий запись хода, который нужно сохранить. </p>
+<p>move_for_save сигнал, отправляющий запись хода, который нужно сохранить. </p>
 <dl class="params"><dt>Аргументы</dt><dd>
   <table class="params">
-    <tr><td class="paramname">move</td><td>Запись хода. </td></tr>
+    <tr><td class="paramname">move</td><td>запись хода. </td></tr>
   </table>
   </dd>
 </dl>
