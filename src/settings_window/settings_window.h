@@ -9,7 +9,7 @@ class SettingsWindow;
 
 /*!
  * \brief The SettingsWindow class
- * Класс наследник стандартного класса QT - QWidget.
+ * класс наследник стандартного класса QT - QWidget.
  * Класс - окно настроек.
  */
 class SettingsWindow : public QWidget {
@@ -18,7 +18,7 @@ class SettingsWindow : public QWidget {
 public:
   /*!
    * \brief SettingsWindow
-   * Конструктор.
+   * конструктор.
    * \param parent
    */
   explicit SettingsWindow(QWidget *parent = nullptr);
@@ -27,48 +27,48 @@ public:
 signals:
   /*!
    * \brief change_window
-   * Сигнал, который показываем менеджеру окон на какое окно
+   * сигнал, который показываем менеджеру окон на какое окно
    * нужно перейти.
    * \param on_window
-   * Окно на которое нужно переместиться.
+   * окно на которое нужно переместиться.
    */
   void change_window(int on_window);
 
 private slots:
   /*!
    * \brief buttonBackSettings_released
-   * Слот для обработки нажатия кнопки.
+   * слот для обработки нажатия кнопки.
    * Отправляет сигнал о смене окна на окно меню.
    */
   void buttonBackSettings_released();
   /*!
    * \brief start_music
-   * Слот включающий музыку.
+   * слот включающий музыку.
    */
   void start_music();
   /*!
    * \brief stop_music
-   * Слот выключающий музыку.
+   * слот выключающий музыку.
    */
   void stop_music();
   /*!
    * \brief start_sounds
-   * Слот включающий звуки.
+   * слот включающий звуки.
    */
   void start_sounds();
   /*!
    * \brief stop_sounds
-   * Слот выключающий звуки.
+   * слот выключающий звуки.
    */
   void stop_sounds();
   /*!
    * \brief change_music_volume
-   * Слот, изменяющий громкость музыки.
+   * слот, изменяющий громкость музыки.
    */
   void change_music_volume();
   /*!
    * \brief change_sounds_volume
-   * Слот, изменяющий громкость звуков.
+   * слот, изменяющий громкость звуков.
    */
   void change_sounds_volume();
 

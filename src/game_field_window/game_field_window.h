@@ -11,9 +11,9 @@ class GameFieldWindow;
 
 /*!
  * \brief The GameFieldWindow class
- * Класс наследник класса QT QWidget
+ * класс наследник класса QT QWidget
  * \param *game_scene
- * Указатель на объект сцены игры (поле).
+ * указатель на объект сцены игры (поле).
  */
 class GameFieldWindow : public QWidget {
   Q_OBJECT
@@ -21,7 +21,7 @@ class GameFieldWindow : public QWidget {
 public:
   /*!
    * \brief GameFieldWindow
-   * Конструктор.
+   * конструктор.
    * \param parent
    */
   explicit GameFieldWindow(QWidget *parent = nullptr);
@@ -30,7 +30,7 @@ public:
 private:
   /*!
    * \brief end_game
-   * Метод вызывается в конце игры, уведомляет игрока,
+   * метод вызывается в конце игры, уведомляет игрока,
    * после чего вызывает окно меню.
    */
   void end_game();
@@ -38,35 +38,35 @@ private:
 signals:
   /*!
    * \brief change_window
-   * Сигнал, который показываем менеджеру окон на какое окно
+   * сигнал, который показываем менеджеру окон на какое окно
    * нужно перейти.
    * \param on_window
-   * Окно на которое нужно переместиться.
+   * окно на которое нужно переместиться.
    */
   void change_window(int on_window);
 
   /*!
    * \brief make_new_record
-   * Сигнал для добавления новой записи в таблицу лидеров
+   * сигнал для добавления новой записи в таблицу лидеров
    */
   void make_new_record(QString record);
 
 private slots:
   /*!
    * \brief buttonBackGame_released
-   * Слот, обрабатывающий нажатие кнопки.
+   * слот, обрабатывающий нажатие кнопки.
    * Отправляет сигнал перехода на окно меню.
    */
   void buttonBackGame_released();
   /*!
    * \brief buttonNewGame_released
-   * Слот, обрабатывающий нажатие кнопки.
+   * слот, обрабатывающий нажатие кнопки.
    * Отправляет сигнал перехода на окно игры (перезапускает игру).
    */
   void buttonNewGame_released();
   /*!
    * \brief save_move
-   * Метод, сохраняющий произведенные ходы.
+   * метод, сохраняющий произведенные ходы.
    * \param move
    * Запись хода.
    */
