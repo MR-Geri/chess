@@ -13,3 +13,4 @@ chess_autogen/
 tests/tests
 tests/tests_autogen/
 build-tests-Desktop-Debug/
+.obsidian/
