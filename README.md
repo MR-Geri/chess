@@ -109,5 +109,5 @@
 ---
 ## Классы
 
-<meta http-equiv="Refresh" content="2; url=https://github.com/MR-Geri/chess/html/index.html">
+<meta http-equiv="Refresh" content="2; url=https://mr-geri.github.io/chess/html/index.html">
 
