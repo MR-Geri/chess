@@ -23,8 +23,8 @@ set(PROJECT_SOURCES
     src/game/game.cpp
     src/game/game.h
     src/game/game.ui
-    src/gameboard/gameboard.h
-    src/gameboard/gameboard.cpp
+    src/game_graphics_scene/game_graphics_scene.h
+    src/game_graphics_scene/game_graphics_scene.cpp
     src/menu_window/menu_window.h
     src/menu_window/menu_window.cpp
     src/menu_window/menu_window.ui

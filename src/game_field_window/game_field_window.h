@@ -3,7 +3,7 @@
 #include <QString>
 #include <QWidget>
 #include <src/constants.h>
-#include <src/gameboard/gameboard.h>
+#include <src/game_graphics_scene/game_graphics_scene.h>
 
 namespace Ui {
 class GameFieldWindow;
