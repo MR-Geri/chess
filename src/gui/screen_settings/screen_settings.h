@@ -4,7 +4,7 @@
 #include <src/constants.h>
 
 namespace Ui {
-class SettingsWindow;
+class ScreenSettings;
 }
 
 /*!
@@ -12,7 +12,7 @@ class SettingsWindow;
  * класс наследник стандартного класса QT - QWidget.
  * Класс - окно настроек.
  */
-class SettingsWindow : public QWidget {
+class ScreenSettings : public QWidget {
   Q_OBJECT
 
 public:
@@ -21,8 +21,8 @@ public:
    * конструктор.
    * \param parent
    */
-  explicit SettingsWindow(QWidget *parent = nullptr);
-  ~SettingsWindow();
+  explicit ScreenSettings(QWidget *parent = nullptr);
+  ~ScreenSettings();
 
 signals:
   /*!
@@ -73,5 +73,5 @@ private slots:
   void change_sounds_volume();
 
 private:
-  Ui::SettingsWindow *ui;
+  Ui::ScreenSettings *ui;
 };

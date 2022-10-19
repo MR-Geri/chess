@@ -1,7 +1,8 @@
 var searchData=
 [
-  ['make_5fnew_5frecord_10',['make_new_record',['../classGameFieldWindow.html#ae1b42819625e0d8d0d3c3f99ecbf9330',1,'GameFieldWindow']]],
-  ['menuwindow_11',['MenuWindow',['../classMenuWindow.html',1,'MenuWindow'],['../classMenuWindow.html#a8b0827e31f1373dde6f48a944ac32f3e',1,'MenuWindow::MenuWindow()']]],
-  ['move_5ffigure_12',['move_figure',['../classGameGraphicsScene.html#a0069a034dc789e8e4fb6d60cd1c2258e',1,'GameGraphicsScene']]],
-  ['move_5ffor_5fsave_13',['move_for_save',['../classGameGraphicsScene.html#aecaa9abd835b42b9fc4e60cdb6b66950',1,'GameGraphicsScene']]]
+  ['scenegame_10',['SceneGame',['../classSceneGame.html',1,'SceneGame'],['../classSceneGame.html#a9fa689dfeedb8aec2f25088750ca05c1',1,'SceneGame::SceneGame()']]],
+  ['screengame_11',['ScreenGame',['../classScreenGame.html',1,'ScreenGame'],['../classScreenGame.html#a510bde54887671e51185e19f00d8b7f4',1,'ScreenGame::ScreenGame()']]],
+  ['screenliderboard_12',['ScreenLiderboard',['../classScreenLiderboard.html',1,'ScreenLiderboard'],['../classScreenLiderboard.html#a01635816bd4c91868be303b1801d46ae',1,'ScreenLiderboard::ScreenLiderboard()']]],
+  ['screenmenu_13',['ScreenMenu',['../classScreenMenu.html',1,'ScreenMenu'],['../classScreenMenu.html#a61ed295b340b34244e12bd49b38f3697',1,'ScreenMenu::ScreenMenu()']]],
+  ['screensettings_14',['ScreenSettings',['../classScreenSettings.html',1,'ScreenSettings'],['../classScreenSettings.html#af0f226067ae6c297e288e769cc43f7d7',1,'ScreenSettings::ScreenSettings()']]]
 ];

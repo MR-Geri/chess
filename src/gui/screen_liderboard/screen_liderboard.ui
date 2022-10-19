@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>LiderboardWindow</class>
+ <class>ScreenLiderboard</class>
  <widget class="QWidget" name="LiderboardWindow">
   <property name="geometry">
    <rect>

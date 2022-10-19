@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['settingswindow_14',['SettingsWindow',['../classSettingsWindow.html',1,'SettingsWindow'],['../classSettingsWindow.html#ad1e0f4254dc44e9efadee40b8602fe5a',1,'SettingsWindow::SettingsWindow()']]]
+  ['windows_5fmanager_15',['windows_manager',['../classGame.html#a3ffbb250214c1cc7f70730a59f58e883',1,'Game']]]
 ];

@@ -1,3 +1,3 @@
-#include "game_board.h"
+#include "board.h"
 
 GameBoard::GameBoard() {}

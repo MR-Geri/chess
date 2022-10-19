@@ -11,14 +11,14 @@
  * Он является сценой для QGraphicsWidget.
  * \param board объект класса ChessBoard - игровая доска.
  */
-class GameGraphicsScene : public QGraphicsScene {
+class SceneGame : public QGraphicsScene {
 public:
   /*!
    * \brief GameGraphicScene
    * конструктор
    * \param parent
    */
-  explicit GameGraphicsScene(QObject *parent = nullptr);
+  explicit SceneGame(QObject *parent = nullptr);
   /*!
    * \brief move_figure
    * метод, перемещающий фигуры на поле board.

@@ -75,10 +75,10 @@ $(function() {
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;QStackedWidget&gt;</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;QString&gt;</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;src/constants.h&gt;</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;src/gui/game_field_window/game_field_window.h&gt;</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;src/gui/liderboard_window/liderboard_window.h&gt;</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;src/gui/menu_window/menu_window.h&gt;</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;src/gui/settings_window/settings_window.h&gt;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;src/gui/screen_game/screen_game.h&gt;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;src/gui/screen_liderboard/screen_liderboard.h&gt;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;src/gui/screen_menu/screen_menu.h&gt;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;src/gui/screen_settings/screen_settings.h&gt;</span></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;QT_BEGIN_NAMESPACE</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">namespace </span>Ui {</div>
@@ -98,18 +98,18 @@ $(function() {
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="keyword">private</span>:</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  Ui::Game *ui;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  <a class="code" href="classGameFieldWindow.html">GameFieldWindow</a> game_field_window;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  <a class="code" href="classMenuWindow.html">MenuWindow</a> menu_window;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  <a class="code" href="classSettingsWindow.html">SettingsWindow</a> settings_window;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  <a class="code" href="classLiderboardWindow.html">LiderboardWindow</a> liderboard_window;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  <a class="code" href="classScreenGame.html">ScreenGame</a> screen_game;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  <a class="code" href="classScreenMenu.html">ScreenMenu</a> screen_menu;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  <a class="code" href="classScreenSettings.html">ScreenSettings</a> screen_settings;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  <a class="code" href="classScreenLiderboard.html">ScreenLiderboard</a> screen_liderboard;</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;};</div>
-<div class="ttc" id="aclassGameFieldWindow_html"><div class="ttname"><a href="classGameFieldWindow.html">GameFieldWindow</a></div><div class="ttdoc">The GameFieldWindow class класс наследник класса QT QWidget.</div><div class="ttdef"><b>Definition:</b> game_field_window.h:17</div></div>
 <div class="ttc" id="aclassGame_html"><div class="ttname"><a href="classGame.html">Game</a></div><div class="ttdoc">The Game class класс наследник класса QT QMainWindow. Главный класс игры. Этот класс связывает окна и...</div><div class="ttdef"><b>Definition:</b> game.h:31</div></div>
 <div class="ttc" id="aclassGame_html_a3ffbb250214c1cc7f70730a59f58e883"><div class="ttname"><a href="classGame.html#a3ffbb250214c1cc7f70730a59f58e883">Game::windows_manager</a></div><div class="ttdeci">void windows_manager(int window_id)</div><div class="ttdoc">windows_manager менеджер окон, переключает QStacedWidget на тот виджет, номер которого ему передали.</div><div class="ttdef"><b>Definition:</b> game.cpp:25</div></div>
 <div class="ttc" id="aclassGame_html_ac1a9dde49041f68e14234a41a862865d"><div class="ttname"><a href="classGame.html#ac1a9dde49041f68e14234a41a862865d">Game::Game</a></div><div class="ttdeci">Game(QWidget *parent=nullptr)</div><div class="ttdoc">Game конструктор.</div><div class="ttdef"><b>Definition:</b> game.cpp:4</div></div>
-<div class="ttc" id="aclassLiderboardWindow_html"><div class="ttname"><a href="classLiderboardWindow.html">LiderboardWindow</a></div><div class="ttdoc">The LiderboardWindow class класс наследник стандартного класса QT - QWidget. Класс - окно табллицы ли...</div><div class="ttdef"><b>Definition:</b> liderboard_window.h:15</div></div>
-<div class="ttc" id="aclassMenuWindow_html"><div class="ttname"><a href="classMenuWindow.html">MenuWindow</a></div><div class="ttdoc">The MenuWindow class класс наследник стандартного класса QT - QWidget. Класс - окно меню.</div><div class="ttdef"><b>Definition:</b> menu_window.h:15</div></div>
-<div class="ttc" id="aclassSettingsWindow_html"><div class="ttname"><a href="classSettingsWindow.html">SettingsWindow</a></div><div class="ttdoc">The SettingsWindow class класс наследник стандартного класса QT - QWidget. Класс - окно настроек.</div><div class="ttdef"><b>Definition:</b> settings_window.h:15</div></div>
+<div class="ttc" id="aclassScreenGame_html"><div class="ttname"><a href="classScreenGame.html">ScreenGame</a></div><div class="ttdoc">The GameFieldWindow class класс наследник класса QT QWidget.</div><div class="ttdef"><b>Definition:</b> screen_game.h:17</div></div>
+<div class="ttc" id="aclassScreenLiderboard_html"><div class="ttname"><a href="classScreenLiderboard.html">ScreenLiderboard</a></div><div class="ttdoc">The LiderboardWindow class класс наследник стандартного класса QT - QWidget. Класс - окно табллицы ли...</div><div class="ttdef"><b>Definition:</b> screen_liderboard.h:15</div></div>
+<div class="ttc" id="aclassScreenMenu_html"><div class="ttname"><a href="classScreenMenu.html">ScreenMenu</a></div><div class="ttdoc">The MenuWindow class класс наследник стандартного класса QT - QWidget. Класс - окно меню.</div><div class="ttdef"><b>Definition:</b> screen_menu.h:15</div></div>
+<div class="ttc" id="aclassScreenSettings_html"><div class="ttname"><a href="classScreenSettings.html">ScreenSettings</a></div><div class="ttdoc">The SettingsWindow class класс наследник стандартного класса QT - QWidget. Класс - окно настроек.</div><div class="ttdef"><b>Definition:</b> screen_settings.h:15</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

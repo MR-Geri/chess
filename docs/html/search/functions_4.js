@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['liderboardwindow_33',['LiderboardWindow',['../classLiderboardWindow.html#ac659cdd0f1dd039286088670b8acefad',1,'LiderboardWindow']]]
+  ['make_5fnew_5frecord_31',['make_new_record',['../classScreenGame.html#adafc1227a9c4b165906425531cf33e22',1,'ScreenGame']]],
+  ['move_5ffigure_32',['move_figure',['../classSceneGame.html#a208eaa238be8eff757e85596b86d9b48',1,'SceneGame']]],
+  ['move_5ffor_5fsave_33',['move_for_save',['../classSceneGame.html#a00ae3452521addf62d4f28566259df82',1,'SceneGame']]]
 ];

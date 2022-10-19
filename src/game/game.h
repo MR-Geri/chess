@@ -4,10 +4,10 @@
 #include <QStackedWidget>
 #include <QString>
 #include <src/constants.h>
-#include <src/gui/game_field_window/game_field_window.h>
-#include <src/gui/liderboard_window/liderboard_window.h>
-#include <src/gui/menu_window/menu_window.h>
-#include <src/gui/settings_window/settings_window.h>
+#include <src/gui/screen_game/screen_game.h>
+#include <src/gui/screen_liderboard/screen_liderboard.h>
+#include <src/gui/screen_menu/screen_menu.h>
+#include <src/gui/screen_settings/screen_settings.h>
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -52,8 +52,8 @@ public slots:
 
 private:
   Ui::Game *ui;
-  GameFieldWindow game_field_window;
-  MenuWindow menu_window;
-  SettingsWindow settings_window;
-  LiderboardWindow liderboard_window;
+  ScreenGame screen_game;
+  ScreenMenu screen_menu;
+  ScreenSettings screen_settings;
+  ScreenLiderboard screen_liderboard;
 };

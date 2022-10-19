@@ -4,19 +4,19 @@
 Game::Game(QWidget *parent) : QMainWindow(parent), ui(new Ui::Game) {
   ui->setupUi(this);
 
-  ui->stackedWidget->addWidget(&game_field_window);
-  ui->stackedWidget->addWidget(&menu_window);
-  ui->stackedWidget->addWidget(&settings_window);
-  ui->stackedWidget->addWidget(&liderboard_window);
+  ui->stackedWidget->addWidget(&screen_game);
+  ui->stackedWidget->addWidget(&screen_menu);
+  ui->stackedWidget->addWidget(&screen_settings);
+  ui->stackedWidget->addWidget(&screen_liderboard);
   ui->stackedWidget->setCurrentIndex(Windows::MENU);
 
-  connect(&game_field_window, SIGNAL(change_window(int)), this,
+  connect(&screen_game, SIGNAL(change_window(int)), this,
           SLOT(windows_manager(int)));
-  connect(&menu_window, SIGNAL(change_window(int)), this,
+  connect(&screen_menu, SIGNAL(change_window(int)), this,
           SLOT(windows_manager(int)));
-  connect(&settings_window, SIGNAL(change_window(int)), this,
+  connect(&screen_settings, SIGNAL(change_window(int)), this,
           SLOT(windows_manager(int)));
-  connect(&liderboard_window, SIGNAL(change_window(int)), this,
+  connect(&screen_liderboard, SIGNAL(change_window(int)), this,
           SLOT(windows_manager(int)));
 }
 

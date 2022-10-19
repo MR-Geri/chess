@@ -23,22 +23,22 @@ set(PROJECT_SOURCES
     src/game/game.cpp
     src/game/game.h
     src/game/game.ui
-    src/board/game_board.h
-    src/board/game_board.cpp
-    src/gui/game_graphics_scene/game_graphics_scene.h
-    src/gui/game_graphics_scene/game_graphics_scene.cpp
-    src/gui/menu_window/menu_window.h
-    src/gui/menu_window/menu_window.cpp
-    src/gui/menu_window/menu_window.ui
-    src/gui/settings_window/settings_window.h
-    src/gui/settings_window/settings_window.cpp
-    src/gui/settings_window/settings_window.ui
-    src/gui/game_field_window/game_field_window.h
-    src/gui/game_field_window/game_field_window.cpp
-    src/gui/game_field_window/game_field_window.ui
-    src/gui/liderboard_window/liderboard_window.h
-    src/gui/liderboard_window/liderboard_window.cpp
-    src/gui/liderboard_window/liderboard_window.ui
+    src/board/board.h
+    src/board/board.cpp
+    src/gui/scene_game/scene_game.h
+    src/gui/scene_game/scene_game.cpp
+    src/gui/screen_menu/screen_menu.h
+    src/gui/screen_menu/screen_menu.cpp
+    src/gui/screen_menu/screen_menu.ui
+    src/gui/screen_settings/screen_settings.h
+    src/gui/screen_settings/screen_settings.cpp
+    src/gui/screen_settings/screen_settings.ui
+    src/gui/screen_game/screen_game.h
+    src/gui/screen_game/screen_game.cpp
+    src/gui/screen_game/screen_game.ui
+    src/gui/screen_liderboard/screen_liderboard.h
+    src/gui/screen_liderboard/screen_liderboard.cpp
+    src/gui/screen_liderboard/screen_liderboard.ui
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)

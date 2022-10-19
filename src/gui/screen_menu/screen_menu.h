@@ -4,7 +4,7 @@
 #include <src/constants.h>
 
 namespace Ui {
-class MenuWindow;
+class ScreenMenu;
 }
 
 /*!
@@ -12,7 +12,7 @@ class MenuWindow;
  * класс наследник стандартного класса QT - QWidget.
  * Класс - окно меню.
  */
-class MenuWindow : public QWidget {
+class ScreenMenu : public QWidget {
   Q_OBJECT
 
 public:
@@ -21,8 +21,8 @@ public:
    * конструктор.
    * \param parent
    */
-  explicit MenuWindow(QWidget *parent = nullptr);
-  ~MenuWindow();
+  explicit ScreenMenu(QWidget *parent = nullptr);
+  ~ScreenMenu();
 
 signals:
   /*!
@@ -57,5 +57,5 @@ private slots:
   void exit();
 
 private:
-  Ui::MenuWindow *ui;
+  Ui::ScreenMenu *ui;
 };

@@ -4,7 +4,7 @@
 #include <src/constants.h>
 
 namespace Ui {
-class LiderboardWindow;
+class ScreenLiderboard;
 }
 
 /*!
@@ -12,7 +12,7 @@ class LiderboardWindow;
  * класс наследник стандартного класса QT - QWidget.
  * Класс - окно табллицы лидеров.
  */
-class LiderboardWindow : public QWidget {
+class ScreenLiderboard : public QWidget {
   Q_OBJECT
 
 public:
@@ -21,8 +21,8 @@ public:
    * конструктор
    * \param parent
    */
-  explicit LiderboardWindow(QWidget *parent = nullptr);
-  ~LiderboardWindow();
+  explicit ScreenLiderboard(QWidget *parent = nullptr);
+  ~ScreenLiderboard();
 
 signals:
   /*!
@@ -52,5 +52,5 @@ private slots:
   void buttonBackLiderboard_released();
 
 private:
-  Ui::LiderboardWindow *ui;
+  Ui::ScreenLiderboard *ui;
 };

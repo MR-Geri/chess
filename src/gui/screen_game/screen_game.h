@@ -5,7 +5,7 @@
 #include <src/constants.h>
 
 namespace Ui {
-class GameFieldWindow;
+class ScreenGame;
 }
 
 /*!
@@ -14,7 +14,7 @@ class GameFieldWindow;
  * \param *game_scene
  * указатель на объект сцены игры (поле).
  */
-class GameFieldWindow : public QWidget {
+class ScreenGame : public QWidget {
   Q_OBJECT
 
 public:
@@ -23,8 +23,8 @@ public:
    * конструктор.
    * \param parent
    */
-  explicit GameFieldWindow(QWidget *parent = nullptr);
-  ~GameFieldWindow();
+  explicit ScreenGame(QWidget *parent = nullptr);
+  ~ScreenGame();
 
 private:
   /*!
@@ -72,5 +72,5 @@ private slots:
   void save_move(QString move);
 
 private:
-  Ui::GameFieldWindow *ui;
+  Ui::ScreenGame *ui;
 };
