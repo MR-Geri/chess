@@ -1,0 +1,11 @@
+#!/bin/sh
+
+GREEN='\033[0;32m'
+NC='\033[0m' # No Color
+
+echo -e "\n$GREEN------Generation doxygen hook is called-------$NC"
+
+doxygen
+
+echo -e "$GREEN------Generation doxygen hook is completed----$NC\n"
+exit 0
