@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['liderboardwindow_21',['LiderboardWindow',['../classLiderboardWindow.html',1,'']]]
+  ['menuwindow_22',['MenuWindow',['../classMenuWindow.html',1,'']]]
 ];

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Chess: Исходный файл src/game_graphics_scene/game_graphics_scene.h</title>
+<title>Chess: Исходный файл src/gui/game_graphics_scene/game_graphics_scene.h</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -61,7 +61,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_1a1e7fccc46f25d41621a853b879ec99.html">game_graphics_scene</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_99d0482cf009f9d97a0877749b817f19.html">gui</a></li><li class="navelem"><a class="el" href="dir_5d955aa90959bdd63973431b8250abc5.html">game_graphics_scene</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -75,45 +75,27 @@ $(function() {
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;QList&gt;</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;QVector&gt;</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
-<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="classChessBoard.html">   14</a></span>&#160;<span class="keyword">class </span><a class="code" href="classChessBoard.html">ChessBoard</a> {</div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="classGameGraphicsScene.html">   14</a></span>&#160;<span class="keyword">class </span><a class="code" href="classGameGraphicsScene.html">GameGraphicsScene</a> : <span class="keyword">public</span> QGraphicsScene {</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;  <a class="code" href="classChessBoard.html#a6585395bb4f064b4f4566df1c7fa4276">ChessBoard</a>();</div>
-<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="classChessBoard.html#a203ee13c7be2a97adf98fa44b79dfdc9">   32</a></span>&#160;  QList&lt;QPair&lt;int, int&gt;&gt; <a class="code" href="classChessBoard.html#a203ee13c7be2a97adf98fa44b79dfdc9">get_possible_steps_from</a>(QPair&lt;int, int&gt; coords) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="classChessBoard.html#af753797279a39235a935baf1a0426998">   43</a></span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classChessBoard.html#af753797279a39235a935baf1a0426998">get_figure_from</a>(QPair&lt;int, int&gt; coords) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  <span class="keywordtype">int</span> get_situation() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  QVector&lt;QVector&lt;int&gt;&gt; map;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;};</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;  <span class="keyword">explicit</span> <a class="code" href="classGameGraphicsScene.html#a2504440f05cf7cf26ef7f7c144a226f1">GameGraphicsScene</a>(QObject *parent = <span class="keyword">nullptr</span>);</div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="classGameGraphicsScene.html#a0069a034dc789e8e4fb6d60cd1c2258e">   30</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classGameGraphicsScene.html#a0069a034dc789e8e4fb6d60cd1c2258e">move_figure</a>(QPair&lt;int, int&gt; old_position, QPair&lt;int, int&gt; new_position);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="classGameGraphicsScene.html#ac94e52eb216d29c91562adf3b7c33e78">   42</a></span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classGameGraphicsScene.html#ac94e52eb216d29c91562adf3b7c33e78">is_end_game</a>();</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  <span class="keywordtype">void</span> update_scene();</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;signals:</div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="classGameGraphicsScene.html#aecaa9abd835b42b9fc4e60cdb6b66950">   58</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classGameGraphicsScene.html#aecaa9abd835b42b9fc4e60cdb6b66950">move_for_save</a>(QString move);</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
-<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="classGameGraphicScene.html">   67</a></span>&#160;<span class="keyword">class </span><a class="code" href="classGameGraphicScene.html">GameGraphicScene</a> : <span class="keyword">public</span> QGraphicsScene {</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  <span class="keyword">explicit</span> <a class="code" href="classGameGraphicScene.html#ab9970ae965ec7ea9c8f78c961312c42e">GameGraphicScene</a>(QObject *parent = <span class="keyword">nullptr</span>);</div>
-<div class="line"><a name="l00083"></a><span class="lineno"><a class="line" href="classGameGraphicScene.html#a46f88dfd8edeba746d16cc4098b338a6">   83</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classGameGraphicScene.html#a46f88dfd8edeba746d16cc4098b338a6">move_figure</a>(QPair&lt;int, int&gt; old_position, QPair&lt;int, int&gt; new_position);</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
-<div class="line"><a name="l00095"></a><span class="lineno"><a class="line" href="classGameGraphicScene.html#aa17fadf933774463e5de40aee2868d0c">   95</a></span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classGameGraphicScene.html#aa17fadf933774463e5de40aee2868d0c">is_end_game</a>();</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160; </div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;  <span class="keywordtype">void</span> update_scene();</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160; </div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;signals:</div>
-<div class="line"><a name="l00111"></a><span class="lineno"><a class="line" href="classGameGraphicScene.html#a9d0739808b53498779ac3357a03f4e57">  111</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classGameGraphicScene.html#a9d0739808b53498779ac3357a03f4e57">move_for_save</a>(QString move);</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160; </div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;<span class="keyword">private</span> slots:</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;  <span class="keywordtype">void</span> catch_move_figure();</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160; </div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;  <a class="code" href="classChessBoard.html">ChessBoard</a> board;</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;};</div>
-<div class="ttc" id="aclassChessBoard_html"><div class="ttname"><a href="classChessBoard.html">ChessBoard</a></div><div class="ttdoc">ChessBoard класс наследник стандартного класса QT - QGraphicsScene. Данный класс используется для отр...</div><div class="ttdef"><b>Definition:</b> game_graphics_scene.h:14</div></div>
-<div class="ttc" id="aclassChessBoard_html_a203ee13c7be2a97adf98fa44b79dfdc9"><div class="ttname"><a href="classChessBoard.html#a203ee13c7be2a97adf98fa44b79dfdc9">ChessBoard::get_possible_steps_from</a></div><div class="ttdeci">QList&lt; QPair&lt; int, int &gt; &gt; get_possible_steps_from(QPair&lt; int, int &gt; coords) const</div><div class="ttdoc">get_possible_steps_from константный метод, возвращающий список ходов, которые может совершить фигура,...</div></div>
-<div class="ttc" id="aclassChessBoard_html_a6585395bb4f064b4f4566df1c7fa4276"><div class="ttname"><a href="classChessBoard.html#a6585395bb4f064b4f4566df1c7fa4276">ChessBoard::ChessBoard</a></div><div class="ttdeci">ChessBoard()</div><div class="ttdoc">ChessBoard коструктор по умолчанию, генерирует поле с фигурами (стартовая расстановка и набор фигур).</div><div class="ttdef"><b>Definition:</b> game_graphics_scene.cpp:5</div></div>
-<div class="ttc" id="aclassChessBoard_html_af753797279a39235a935baf1a0426998"><div class="ttname"><a href="classChessBoard.html#af753797279a39235a935baf1a0426998">ChessBoard::get_figure_from</a></div><div class="ttdeci">int get_figure_from(QPair&lt; int, int &gt; coords) const</div><div class="ttdoc">get_figure_from константный метод, возвращающий тип фигуры, которая находится в ячейке поля с координ...</div></div>
-<div class="ttc" id="aclassGameGraphicScene_html"><div class="ttname"><a href="classGameGraphicScene.html">GameGraphicScene</a></div><div class="ttdoc">GameBoard наследник стандартного класса QT - QGraphicsScene. Данный класс используется для отрисовки ...</div><div class="ttdef"><b>Definition:</b> game_graphics_scene.h:67</div></div>
-<div class="ttc" id="aclassGameGraphicScene_html_a46f88dfd8edeba746d16cc4098b338a6"><div class="ttname"><a href="classGameGraphicScene.html#a46f88dfd8edeba746d16cc4098b338a6">GameGraphicScene::move_figure</a></div><div class="ttdeci">void move_figure(QPair&lt; int, int &gt; old_position, QPair&lt; int, int &gt; new_position)</div><div class="ttdoc">move_figure метод, перемещающий фигуры на поле board.</div></div>
-<div class="ttc" id="aclassGameGraphicScene_html_a9d0739808b53498779ac3357a03f4e57"><div class="ttname"><a href="classGameGraphicScene.html#a9d0739808b53498779ac3357a03f4e57">GameGraphicScene::move_for_save</a></div><div class="ttdeci">void move_for_save(QString move)</div><div class="ttdoc">move_for_save сигнал, отправляющий запись хода, который нужно сохранить.</div></div>
-<div class="ttc" id="aclassGameGraphicScene_html_aa17fadf933774463e5de40aee2868d0c"><div class="ttname"><a href="classGameGraphicScene.html#aa17fadf933774463e5de40aee2868d0c">GameGraphicScene::is_end_game</a></div><div class="ttdeci">int is_end_game()</div><div class="ttdoc">is_end_game метод вызывается после каждого хода для проверки конца игры. Если возможных ходов нет,...</div></div>
-<div class="ttc" id="aclassGameGraphicScene_html_ab9970ae965ec7ea9c8f78c961312c42e"><div class="ttname"><a href="classGameGraphicScene.html#ab9970ae965ec7ea9c8f78c961312c42e">GameGraphicScene::GameGraphicScene</a></div><div class="ttdeci">GameGraphicScene(QObject *parent=nullptr)</div><div class="ttdoc">GameGraphicScene конструктор</div><div class="ttdef"><b>Definition:</b> game_graphics_scene.cpp:3</div></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="keyword">private</span> slots:</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  <span class="keywordtype">void</span> catch_move_figure();</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;};</div>
+<div class="ttc" id="aclassGameGraphicsScene_html"><div class="ttname"><a href="classGameGraphicsScene.html">GameGraphicsScene</a></div><div class="ttdoc">GameGraphicScene наследник стандартного класса QT - QGraphicsScene. Данный класс используется для отр...</div><div class="ttdef"><b>Definition:</b> game_graphics_scene.h:14</div></div>
+<div class="ttc" id="aclassGameGraphicsScene_html_a0069a034dc789e8e4fb6d60cd1c2258e"><div class="ttname"><a href="classGameGraphicsScene.html#a0069a034dc789e8e4fb6d60cd1c2258e">GameGraphicsScene::move_figure</a></div><div class="ttdeci">void move_figure(QPair&lt; int, int &gt; old_position, QPair&lt; int, int &gt; new_position)</div><div class="ttdoc">move_figure метод, перемещающий фигуры на поле board.</div></div>
+<div class="ttc" id="aclassGameGraphicsScene_html_a2504440f05cf7cf26ef7f7c144a226f1"><div class="ttname"><a href="classGameGraphicsScene.html#a2504440f05cf7cf26ef7f7c144a226f1">GameGraphicsScene::GameGraphicsScene</a></div><div class="ttdeci">GameGraphicsScene(QObject *parent=nullptr)</div><div class="ttdoc">GameGraphicScene конструктор</div><div class="ttdef"><b>Definition:</b> game_graphics_scene.cpp:3</div></div>
+<div class="ttc" id="aclassGameGraphicsScene_html_ac94e52eb216d29c91562adf3b7c33e78"><div class="ttname"><a href="classGameGraphicsScene.html#ac94e52eb216d29c91562adf3b7c33e78">GameGraphicsScene::is_end_game</a></div><div class="ttdeci">int is_end_game()</div><div class="ttdoc">is_end_game метод вызывается после каждого хода для проверки конца игры. Если возможных ходов нет,...</div></div>
+<div class="ttc" id="aclassGameGraphicsScene_html_aecaa9abd835b42b9fc4e60cdb6b66950"><div class="ttname"><a href="classGameGraphicsScene.html#aecaa9abd835b42b9fc4e60cdb6b66950">GameGraphicsScene::move_for_save</a></div><div class="ttdeci">void move_for_save(QString move)</div><div class="ttdoc">move_for_save сигнал, отправляющий запись хода, который нужно сохранить.</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
