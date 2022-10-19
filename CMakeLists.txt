@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.5)
+cmake_minimum_required(VERSION 3.12)
 
 project(chess VERSION 0.1 LANGUAGES CXX)
 
@@ -17,28 +17,12 @@ find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Test Widgets)
 find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Test Widgets)
 
 
-set(PROJECT_SOURCES
-    src/main.cpp
-    src/constants.h
-    src/game/game.cpp
-    src/game/game.h
-    src/game/game.ui
-    src/board/board.h
-    src/board/board.cpp
-    src/gui/scene_game/scene_game.h
-    src/gui/scene_game/scene_game.cpp
-    src/gui/screen_menu/screen_menu.h
-    src/gui/screen_menu/screen_menu.cpp
-    src/gui/screen_menu/screen_menu.ui
-    src/gui/screen_settings/screen_settings.h
-    src/gui/screen_settings/screen_settings.cpp
-    src/gui/screen_settings/screen_settings.ui
-    src/gui/screen_game/screen_game.h
-    src/gui/screen_game/screen_game.cpp
-    src/gui/screen_game/screen_game.ui
-    src/gui/screen_liderboard/screen_liderboard.h
-    src/gui/screen_liderboard/screen_liderboard.cpp
-    src/gui/screen_liderboard/screen_liderboard.ui
+file(GLOB chess_src CONFIGURE_DEPENDS 
+  "src/*.h" "src/*.cpp" "src/*.ui"
+  "src/*/*.h" "src/*/*.cpp" "src/*/*.ui"
+  "src/*/*/*.h" "src/*/*/*.cpp" "src/*/*/*.ui"
+  "src/*/*/*/*.h" "src/*/*/*/*.cpp" "src/*/*/*/*.ui"
+  "src/*/*/*/*/*.h" "src/*/*/*/*/*.cpp" "src/*/*/*/*/*.ui"
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
@@ -59,7 +43,7 @@ else()
 #    set(ANDROID_PACKAGE_SOURCE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/android")
     else()
         add_executable(chess
-            ${PROJECT_SOURCES}
+            ${chess_src}
         )
     endif()
 endif()
