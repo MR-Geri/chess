@@ -6,6 +6,7 @@ NC='\033[0m' # No Color
 echo -e "\n$GREEN------Generation doxygen hook is called-------$NC"
 
 doxygen
+git add docs/html
 
 echo -e "$GREEN------Generation doxygen hook is completed----$NC\n"
 exit 0
