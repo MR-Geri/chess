@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['windows_5fmanager_15',['windows_manager',['../classGame.html#a3ffbb250214c1cc7f70730a59f58e883',1,'Game']]]
+  ['windows_5fmanager_15',['windows_manager',['../classMainWindow.html#a840f51a5eceab09fff249eb69970c281',1,'MainWindow']]]
 ];

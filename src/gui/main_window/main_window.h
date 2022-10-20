@@ -11,7 +11,7 @@
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
-class Game;
+class MainWindow;
 }
 QT_END_NAMESPACE
 
@@ -28,7 +28,7 @@ QT_END_NAMESPACE
  * \param LiderboardWindow
  * окно таблицы лидеров.
  */
-class Game : public QMainWindow {
+class MainWindow : public QMainWindow {
   Q_OBJECT
 
 public:
@@ -37,8 +37,8 @@ public:
    * конструктор.
    * \param parent
    */
-  Game(QWidget *parent = nullptr);
-  ~Game();
+  MainWindow(QWidget *parent = nullptr);
+  ~MainWindow();
 
 public slots:
   /*!
@@ -51,7 +51,7 @@ public slots:
   void windows_manager(int window_id);
 
 private:
-  Ui::Game *ui;
+  Ui::MainWindow *ui;
   ScreenGame screen_game;
   ScreenMenu screen_menu;
   ScreenSettings screen_settings;

@@ -1,7 +1,8 @@
-#include "game.h"
-#include "ui_game.h"
+#include "main_window.h"
+#include "ui_main_window.h"
 
-Game::Game(QWidget *parent) : QMainWindow(parent), ui(new Ui::Game) {
+MainWindow::MainWindow(QWidget *parent)
+    : QMainWindow(parent), ui(new Ui::MainWindow) {
   ui->setupUi(this);
 
   ui->stackedWidget->addWidget(&screen_game);
@@ -20,9 +21,9 @@ Game::Game(QWidget *parent) : QMainWindow(parent), ui(new Ui::Game) {
           SLOT(windows_manager(int)));
 }
 
-Game::~Game() { delete ui; }
+MainWindow::~MainWindow() { delete ui; }
 
-void Game::windows_manager(int window_id) {
+void MainWindow::windows_manager(int window_id) {
   if (window_id == Windows::EXIT)
     this->close();
   ui->stackedWidget->setCurrentIndex(window_id);
