@@ -8,7 +8,7 @@ class ScreenLiderboard;
 }
 
 /*!
- * \brief The LiderboardWindow class
+ * \brief The ScreenLiderboard class
  * класс наследник стандартного класса QT - QWidget.
  * Класс - окно табллицы лидеров.
  */
@@ -17,7 +17,7 @@ class ScreenLiderboard : public QWidget {
 
 public:
   /*!
-   * \brief LiderboardWindow
+   * \brief ScreenLiderboard
    * конструктор
    * \param parent
    */

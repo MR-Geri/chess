@@ -8,7 +8,7 @@ class ScreenMenu;
 }
 
 /*!
- * \brief The MenuWindow class
+ * \brief The ScreeMenu class
  * класс наследник стандартного класса QT - QWidget.
  * Класс - окно меню.
  */
@@ -17,7 +17,7 @@ class ScreenMenu : public QWidget {
 
 public:
   /*!
-   * \brief MenuWindow
+   * \brief ScreeMenu
    * конструктор.
    * \param parent
    */

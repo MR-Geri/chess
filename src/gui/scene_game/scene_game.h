@@ -5,16 +5,16 @@
 #include <QVector>
 
 /*!
- * \brief GameGraphicScene
+ * \brief SceneGame
  * наследник стандартного класса QT - QGraphicsScene.
  * Данный класс используется для отрисовки игрового поля.
  * Он является сценой для QGraphicsWidget.
- * \param board объект класса ChessBoard - игровая доска.
+ * \param board объект класса GameBoard - игровая доска.
  */
 class SceneGame : public QGraphicsScene {
 public:
   /*!
-   * \brief GameGraphicScene
+   * \brief SceneGame
    * конструктор
    * \param parent
    */

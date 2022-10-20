@@ -8,7 +8,7 @@ class ScreenSettings;
 }
 
 /*!
- * \brief The SettingsWindow class
+ * \brief The ScreenSettings class
  * класс наследник стандартного класса QT - QWidget.
  * Класс - окно настроек.
  */
@@ -17,7 +17,7 @@ class ScreenSettings : public QWidget {
 
 public:
   /*!
-   * \brief SettingsWindow
+   * \brief ScreenSettings
    * конструктор.
    * \param parent
    */

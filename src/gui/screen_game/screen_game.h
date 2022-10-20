@@ -9,7 +9,7 @@ class ScreenGame;
 }
 
 /*!
- * \brief The GameFieldWindow class
+ * \brief The ScreenGame class
  * класс наследник класса QT QWidget
  * \param *game_scene
  * указатель на объект сцены игры (поле).
@@ -19,7 +19,7 @@ class ScreenGame : public QWidget {
 
 public:
   /*!
-   * \brief GameFieldWindow
+   * \brief ScreenGame
    * конструктор.
    * \param parent
    */
