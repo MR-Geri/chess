@@ -10,7 +10,7 @@ class ScreenGame;
 
 /*!
  * \brief The ScreenGame
- * класс наследник QT QWidget
+ * наследник QT QWidget
  * \param *game_scene
  * указатель на объект сцены игры (поле).
  */
