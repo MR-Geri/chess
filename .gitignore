@@ -1,4 +1,4 @@
-scripts/
+*.sh
 *.user
 .cache/
 .cmake/

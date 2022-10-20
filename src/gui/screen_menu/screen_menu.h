@@ -8,8 +8,8 @@ class ScreenMenu;
 }
 
 /*!
- * \brief The ScreeMenu class
- * класс наследник стандартного класса QT - QWidget.
+ * \brief The ScreeMenu
+ * наследник стандартного класса QT - QWidget.
  * Класс - окно меню.
  */
 class ScreenMenu : public QWidget {

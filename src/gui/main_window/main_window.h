@@ -16,8 +16,8 @@ class MainWindow;
 QT_END_NAMESPACE
 
 /*!
- * \brief The MainWindow class
- * класс наследник класса QT QMainWindow. Главный класс игры.
+ * \brief The MainWindow
+ * класс наследникQT QMainWindow. Главный класс игры.
  * Этот класс связывает окна игры.
  * \param ScreenGame
  * окно с полем игры.

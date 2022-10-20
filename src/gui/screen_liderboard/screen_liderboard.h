@@ -8,8 +8,8 @@ class ScreenLiderboard;
 }
 
 /*!
- * \brief The ScreenLiderboard class
- * класс наследник стандартного класса QT - QWidget.
+ * \brief The ScreenLiderboard
+ * наследник стандартного класса QT - QWidget.
  * Класс - окно табллицы лидеров.
  */
 class ScreenLiderboard : public QWidget {
