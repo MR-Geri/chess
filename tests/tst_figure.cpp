@@ -1,4 +1,4 @@
-//#include "../src/figure/figure.h"
+#include "../src/logic/figures/figures.cpp"
 #include <QtTest>
 
 // add necessary includes here
@@ -24,10 +24,9 @@ tests::tests() {}
 tests::~tests() {}
 
 void tests::test_king() {
-  /*King figure;
-  QCOMPARE(figure.move(QPair<int, int>(0, 0)), 0);
-  QCOMPARE(figure.move(QPair<int, int>(1, 1)), 0);
-  QCOMPARE(figure.move(QPair<int, int>(2, 2)), 1);*/
+  QCOMPARE(King().move(QPair<int, int>(0, 0)), 0);
+  QCOMPARE(King().move(QPair<int, int>(1, 1)), 0);
+  QCOMPARE(King().move(QPair<int, int>(2, 2)), 1);
 }
 
 void tests::test_queen() {}

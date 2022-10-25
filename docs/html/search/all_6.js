@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['windows_5fmanager_15',['windows_manager',['../classMainWindow.html#a840f51a5eceab09fff249eb69970c281',1,'MainWindow']]]
+  ['king_8',['King',['../classKing.html',1,'']]],
+  ['kinght_9',['Kinght',['../classKinght.html',1,'']]]
 ];

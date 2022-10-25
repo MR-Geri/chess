@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['settingswindow_23',['SettingsWindow',['../classSettingsWindow.html',1,'']]]
+  ['mainwindow_29',['MainWindow',['../classMainWindow.html',1,'']]]
 ];

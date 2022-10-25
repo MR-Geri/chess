@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['mainwindow_6',['MainWindow',['../classMainWindow.html',1,'MainWindow'],['../classMainWindow.html#a996c5a2b6f77944776856f08ec30858d',1,'MainWindow::MainWindow()']]],
-  ['make_5fnew_5frecord_7',['make_new_record',['../classScreenGame.html#adafc1227a9c4b165906425531cf33e22',1,'ScreenGame']]],
-  ['move_5ffigure_8',['move_figure',['../classSceneGame.html#a208eaa238be8eff757e85596b86d9b48',1,'SceneGame']]],
-  ['move_5ffor_5fsave_9',['move_for_save',['../classSceneGame.html#a00ae3452521addf62d4f28566259df82',1,'SceneGame']]]
+  ['gameboard_4',['GameBoard',['../classGameBoard.html',1,'GameBoard'],['../classGameBoard.html#ac622cadcc81b3ffb71d8feb4506c04ac',1,'GameBoard::GameBoard()']]],
+  ['get_5ffigure_5ffrom_5',['get_figure_from',['../classGameBoard.html#a822ff7618cb5d2c4b87e342f38191d12',1,'GameBoard']]],
+  ['get_5fpossible_5fsteps_5ffrom_6',['get_possible_steps_from',['../classGameBoard.html#a62f5c775a4928d8c6b9d9e651e8d507d',1,'GameBoard']]]
 ];

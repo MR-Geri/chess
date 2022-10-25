@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['settingswindow_23',['SettingsWindow',['../classSettingsWindow.html',1,'']]]
+  ['king_27',['King',['../classKing.html',1,'']]],
+  ['kinght_28',['Kinght',['../classKinght.html',1,'']]]
 ];
