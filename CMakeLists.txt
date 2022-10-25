@@ -16,37 +16,6 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Test Widgets)
 find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Test Widgets)
 
-    # src/main.cpp
-    # src/constants.h
-    # src/gui/main_window/main_window.cpp
-    # src/gui/main_window/main_window.h
-    # src/gui/main_window/main_window.ui
-    # src/gui/scene_game/scene_game.cpp
-    # src/gui/scene_game/scene_game.h
-    # src/gui/scene_game/scene_game.ui
-    # src/gui/screen_game/screen_game.cpp
-    # src/gui/screen_game/screen_game.h
-    # src/gui/screen_game/screen_game.ui
-    # src/gui/screen_liderboard/screen_liderboard.cpp
-    # src/gui/screen_liderboard/screen_liderboard.h
-    # src/gui/screen_liderboard/screen_liderboard.ui
-    # src/gui/screen_menu/screen_menu.cpp
-    # src/gui/screen_menu/screen_menu.h
-    # src/gui/screen_menu/screen_menu.ui
-    # src/gui/screen_settings/screen_settings.cpp
-    # src/gui/screen_settings/screen_settings.h
-    # src/gui/screen_settings/screen_settings.ui
-    # src/logic/board/board.cpp
-    # src/logic/board/board.h
-    # src/logic/board/board.ui
-    # src/logic/figures/figures.cpp
-    # src/logic/figures/figures.h
-    # src/logic/figures/figures.ui
-    # src/logic/liderboard/liderboard.cpp
-    # src/logic/liderboard/liderboard.h
-    # src/logic/liderboard/liderboard.ui
-    # src/storage/settings/settings.cpp
-    # src/storage/settings/settings.h
 
 file(GLOB chess_src CONFIGURE_DEPENDS 
   "src/*.cpp" "src/*.h" "src/*.ui"

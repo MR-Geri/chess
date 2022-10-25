@@ -1,4 +1,4 @@
-#include "../src/logic/figures/figures.cpp"
+#include "../src/logic/figures/figures.h"
 #include <QtTest>
 
 // add necessary includes here
