@@ -1,5 +1,4 @@
 #include <src/gui/main_window/main_window.h>
-#include <src/logic/figures/figures.h>
 
 #include <QApplication>
 

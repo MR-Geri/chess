@@ -1,28 +1,49 @@
 #include "figures.h"
 
+King::King(int x, int y) {
+  b_price = 0;
+  b_x = x;
+  b_y = y;
+}
+
 King::King() {
-  price = 0;
-  col = 0;
-  row = 0;
+  b_price = 0;
+  b_x = 0;
+  b_y = 0;
 }
 
 int King::move(QPair<int, int> step_board) {
-  if (abs(step_board.first) > 1 || abs(step_board.second) > 1) {
-    // Может быть добавлена обработка ошибки
-    // Невозможный ход
+  if (step_board.first == 0 && step_board.second == 0) {
+    // Отсутствие хода
     return 1;
   }
-  if ((col + step_board.first) < 0 || (col + step_board.second) >= 8 ||
-      (row + step_board.first) < 0 || (row + step_board.second) >= 8) {
-    // Может быть добавлена обработка ошибки
-    // Выход за поле
+  if (abs(step_board.first) > 1 || abs(step_board.second) > 1) {
+    // Невозможный ход
     return 2;
   }
-  col += step_board.first;
-  row += step_board.second;
+  if ((b_x + step_board.first) < 0 || (b_x + step_board.first) >= 8 ||
+      (b_y + step_board.second) < 0 || (b_y + step_board.second) >= 8) {
+    // Выход за поле
+    return 3;
+  }
+
+  // V Ошибка, если ход на/через собственную фигуру V
+  if (0) {
+    return 4;
+  }
+  // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  b_x += step_board.first;
+  b_y += step_board.second;
   return 0;
 }
 
 QList<QPair<int, int>> King::getValidMoves() {
   return QList<QPair<int, int>>();
 }
+
+int King::getPrice() { return b_price; }
+
+int King::getX() { return b_x; }
+
+int King::getY() { return b_y; }

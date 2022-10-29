@@ -8,19 +8,24 @@ public:
   virtual int move(QPair<int, int>) = 0;
   virtual QList<QPair<int, int>> getValidMoves() = 0;
   int getPrice() const;
-  int getCol() const;
-  int getRow() const;
+  int getX() const;
+  int getY() const;
 
 protected:
-  int price;
-  int col, row;
+  int b_price;
+  int b_x, b_y;
 };
 
 class King : public Figure {
 public:
   King();
+  King(int x, int y);
+
   int move(QPair<int, int>) override;
   QList<QPair<int, int>> getValidMoves() override;
+  int getPrice();
+  int getX();
+  int getY();
 };
 
 class Queen : public Figure {
