@@ -54,6 +54,7 @@ void tests::test_king() {
   QCOMPARE(King(4, 4).move(QPair<int, int>(-1, 0)), 0);
   QCOMPARE(King(4, 4).move(QPair<int, int>(0, -1)), 0);
   QCOMPARE(King(4, 4).move(QPair<int, int>(-1, 1)), 0);
+  QCOMPARE(King(4, 4).move(QPair<int, int>(1, -1)), 0);
   QCOMPARE(King(4, 4).move(QPair<int, int>(0, 1)), 0);
   QCOMPARE(King(4, 4).move(QPair<int, int>(1, 0)), 0);
   QCOMPARE(King(4, 4).move(QPair<int, int>(1, 1)), 0);
