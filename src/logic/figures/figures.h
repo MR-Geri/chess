@@ -2,58 +2,48 @@
 
 #include <QList>
 #include <QPair>
+#include <QSet>
+#include <qpair.h>
 
 class Figure {
 public:
-  virtual int move(QPair<int, int>) = 0;
-  virtual QList<QPair<int, int>> getValidMoves() = 0;
-  int getPrice() const;
-  int getX() const;
-  int getY() const;
+  virtual QList<QPair<int, int>> getUnarySteps(QPair<int, int> step) = 0;
+  int getPrice();
+  QSet<QPair<int, int>> getPossibleMoves();
 
 protected:
   int b_price;
-  int b_x, b_y;
+  QSet<QPair<int, int>> possible_moves;
 };
 
 class King : public Figure {
 public:
   King();
-  King(int x, int y);
 
-  int move(QPair<int, int>) override;
-  QList<QPair<int, int>> getValidMoves() override;
-  int getPrice();
-  int getX();
-  int getY();
+  QList<QPair<int, int>> getUnarySteps(QPair<int, int> step) override;
 };
 
 class Queen : public Figure {
 public:
-  int move(QPair<int, int>) override;
-  QList<QPair<int, int>> getValidMoves() override;
+  QList<QPair<int, int>> getUnarySteps(QPair<int, int> step) override;
 };
 
 class Bishop : public Figure {
 public:
-  int move(QPair<int, int>) override;
-  QList<QPair<int, int>> getValidMoves() override;
+  QList<QPair<int, int>> getUnarySteps(QPair<int, int> step) override;
 };
 
 class Rook : public Figure {
 public:
-  int move(QPair<int, int>) override;
-  QList<QPair<int, int>> getValidMoves() override;
+  QList<QPair<int, int>> getUnarySteps(QPair<int, int> step) override;
 };
 
 class Kinght : public Figure {
 public:
-  int move(QPair<int, int>) override;
-  QList<QPair<int, int>> getValidMoves() override;
+  QList<QPair<int, int>> getUnarySteps(QPair<int, int> step) override;
 };
 
 class Pawn : public Figure {
 public:
-  int move(QPair<int, int>) override;
-  QList<QPair<int, int>> getValidMoves() override;
+  QList<QPair<int, int>> getUnarySteps(QPair<int, int> step) override;
 };

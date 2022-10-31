@@ -1,49 +1,33 @@
 #include "figures.h"
+#include <QPair>
 
-King::King(int x, int y) {
-  b_price = 0;
-  b_x = x;
-  b_y = y;
-}
+int Figure::getPrice() { return b_price; }
+
+QSet<QPair<int, int>> Figure::getPossibleMoves() { return possible_moves; }
 
 King::King() {
   b_price = 0;
-  b_x = 0;
-  b_y = 0;
+  for (int i = 0; i <= 1; i++) {
+    for (int j = 0; j <= 1; j++) {
+      if (i != 0 && j != 0)
+        possible_moves.insert(QPair(i, j));
+    }
+  }
 }
 
-int King::move(QPair<int, int> step_board) {
-  if (step_board.first == 0 && step_board.second == 0) {
-    // Отсутствие хода
-    return 1;
+QList<QPair<int, int>> Figure::getUnarySteps(QPair<int, int> step) {
+  int x_step = step.first != 0 ? std::min(std::max(step.first, -1), 1) : 0;
+  int y_step = step.second != 0 ? std::min(std::max(step.second, -1), 1) : 0;
+  QList<QPair<int, int>> out;
+  QPair<int, int> pos(0, 0);
+  while (pos != step) {
+    out.append(pos);
+    pos.first += x_step;
+    pos.second += y_step;
   }
-  if (abs(step_board.first) > 1 || abs(step_board.second) > 1) {
-    // Невозможный ход
-    return 2;
-  }
-  if ((b_x + step_board.first) < 0 || (b_x + step_board.first) >= 8 ||
-      (b_y + step_board.second) < 0 || (b_y + step_board.second) >= 8) {
-    // Выход за поле
-    return 3;
-  }
-
-  // V Ошибка, если ход на/через собственную фигуру V
-  if (0) {
-    return 4;
-  }
-  // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-  b_x += step_board.first;
-  b_y += step_board.second;
-  return 0;
+  return out;
 }
 
-QList<QPair<int, int>> King::getValidMoves() {
-  return QList<QPair<int, int>>();
+QList<QPair<int, int>> Kinght::getUnarySteps(QPair<int, int> step) {
+  return QList<QPair<int, int>>({step});
 }
-
-int King::getPrice() { return b_price; }
-
-int King::getX() { return b_x; }
-
-int King::getY() { return b_y; }

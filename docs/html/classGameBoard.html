@@ -80,12 +80,15 @@ $(function() {
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGameBoard.html#ac622cadcc81b3ffb71d8feb4506c04ac">GameBoard</a> ()</td></tr>
 <tr class="memdesc:ac622cadcc81b3ffb71d8feb4506c04ac"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classGameBoard.html" title="GameBoard данный класс используется для отрисовки игрового поля. Он является сценой для QGraphicsWidg...">GameBoard</a> коструктор по умолчанию, генерирует поле с фигурами (стартовая расстановка и набор фигур). <br /></td></tr>
 <tr class="separator:ac622cadcc81b3ffb71d8feb4506c04ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a62f5c775a4928d8c6b9d9e651e8d507d"><td class="memItemLeft" align="right" valign="top">QList&lt; QPair&lt; int, int &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGameBoard.html#a62f5c775a4928d8c6b9d9e651e8d507d">get_possible_steps_from</a> (QPair&lt; int, int &gt; coords) const</td></tr>
-<tr class="memdesc:a62f5c775a4928d8c6b9d9e651e8d507d"><td class="mdescLeft">&#160;</td><td class="mdescRight">get_possible_steps_from константный метод, возвращающий список ходов, которые может совершить фигура, находящаяся на поле в ячейке с координатами coords.  <a href="classGameBoard.html#a62f5c775a4928d8c6b9d9e651e8d507d">Подробнее...</a><br /></td></tr>
-<tr class="separator:a62f5c775a4928d8c6b9d9e651e8d507d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a822ff7618cb5d2c4b87e342f38191d12"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGameBoard.html#a822ff7618cb5d2c4b87e342f38191d12">get_figure_from</a> (QPair&lt; int, int &gt; coords) const</td></tr>
-<tr class="memdesc:a822ff7618cb5d2c4b87e342f38191d12"><td class="mdescLeft">&#160;</td><td class="mdescRight">get_figure_from константный метод, возвращающий тип фигуры, которая находится в ячейке поля с координатами coords.  <a href="classGameBoard.html#a822ff7618cb5d2c4b87e342f38191d12">Подробнее...</a><br /></td></tr>
-<tr class="separator:a822ff7618cb5d2c4b87e342f38191d12"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aedad20c88f94872cffc5b5e116b8754a"><td class="memItemLeft" align="right" valign="top">QList&lt; QPair&lt; int, int &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGameBoard.html#aedad20c88f94872cffc5b5e116b8754a">getPossibleStepsFrom</a> (QPair&lt; int, int &gt; coords) const</td></tr>
+<tr class="memdesc:aedad20c88f94872cffc5b5e116b8754a"><td class="mdescLeft">&#160;</td><td class="mdescRight">get_possible_steps_from константный метод, возвращающий список ходов, которые может совершить фигура, находящаяся на поле в ячейке с координатами coords.  <a href="classGameBoard.html#aedad20c88f94872cffc5b5e116b8754a">Подробнее...</a><br /></td></tr>
+<tr class="separator:aedad20c88f94872cffc5b5e116b8754a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2cd4f358bb354bc754cc916ffff44612"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classFigure.html">Figure</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGameBoard.html#a2cd4f358bb354bc754cc916ffff44612">getFigure</a> (QPair&lt; int, int &gt; coords) const</td></tr>
+<tr class="memdesc:a2cd4f358bb354bc754cc916ffff44612"><td class="mdescLeft">&#160;</td><td class="mdescRight">get_figure_from константный метод, возвращающий фигуру, которая находится в ячейке поля с координатами coords.  <a href="classGameBoard.html#a2cd4f358bb354bc754cc916ffff44612">Подробнее...</a><br /></td></tr>
+<tr class="separator:a2cd4f358bb354bc754cc916ffff44612"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94938ca901027f4b05a68b2cc60b4f3a"><td class="memItemLeft" align="right" valign="top"><a id="a94938ca901027f4b05a68b2cc60b4f3a"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>move</b> (QPair&lt; int, int &gt; from, QPair&lt; int, int &gt; to)</td></tr>
+<tr class="separator:a94938ca901027f4b05a68b2cc60b4f3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
 <div class="textblock"><p><a class="el" href="classGameBoard.html" title="GameBoard данный класс используется для отрисовки игрового поля. Он является сценой для QGraphicsWidg...">GameBoard</a> данный класс используется для отрисовки игрового поля. Он является сценой для QGraphicsWidget. </p>
@@ -96,14 +99,14 @@ $(function() {
   </dd>
 </dl>
 </div><h2 class="groupheader">Методы</h2>
-<a id="a822ff7618cb5d2c4b87e342f38191d12"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a822ff7618cb5d2c4b87e342f38191d12">&#9670;&nbsp;</a></span>get_figure_from()</h2>
+<a id="a2cd4f358bb354bc754cc916ffff44612"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2cd4f358bb354bc754cc916ffff44612">&#9670;&nbsp;</a></span>getFigure()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int GameBoard::get_figure_from </td>
+          <td class="memname"><a class="el" href="classFigure.html">Figure</a> GameBoard::getFigure </td>
           <td>(</td>
           <td class="paramtype">QPair&lt; int, int &gt;&#160;</td>
           <td class="paramname"><em>coords</em></td><td>)</td>
@@ -112,25 +115,25 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p>get_figure_from константный метод, возвращающий тип фигуры, которая находится в ячейке поля с координатами coords. </p>
+<p>get_figure_from константный метод, возвращающий фигуру, которая находится в ячейке поля с координатами coords. </p>
 <dl class="params"><dt>Аргументы</dt><dd>
   <table class="params">
     <tr><td class="paramname">coords</td><td>координаты ячейки поля, содержимое которой нужно узнать. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Возвращает</dt><dd>значение int, которое может принимать целочисленные значения от -5 до 5 включительно. </dd></dl>
+<dl class="section return"><dt>Возвращает</dt><dd>наследник класса <a class="el" href="classFigure.html">Figure</a>. </dd></dl>
 
 </div>
 </div>
-<a id="a62f5c775a4928d8c6b9d9e651e8d507d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a62f5c775a4928d8c6b9d9e651e8d507d">&#9670;&nbsp;</a></span>get_possible_steps_from()</h2>
+<a id="aedad20c88f94872cffc5b5e116b8754a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aedad20c88f94872cffc5b5e116b8754a">&#9670;&nbsp;</a></span>getPossibleStepsFrom()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">QList&lt;QPair&lt;int, int&gt; &gt; GameBoard::get_possible_steps_from </td>
+          <td class="memname">QList&lt;QPair&lt;int, int&gt; &gt; GameBoard::getPossibleStepsFrom </td>
           <td>(</td>
           <td class="paramtype">QPair&lt; int, int &gt;&#160;</td>
           <td class="paramname"><em>coords</em></td><td>)</td>

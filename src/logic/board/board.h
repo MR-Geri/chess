@@ -1,7 +1,9 @@
 #pragma once
 
+#include "../figures/figures.h"
 #include <QList>
 #include <QPair>
+#include <qpair.h>
 
 /*!
  * @brief GameBoard
@@ -27,18 +29,17 @@ public:
    * список возможных ходов для фигуры с координатами
    * coords.
    */
-  QList<QPair<int, int>> get_possible_steps_from(QPair<int, int> coords) const;
+  QList<QPair<int, int>> getPossibleStepsFrom(QPair<int, int> coords) const;
   /*!
    * @brief get_figure_from
-   * константный метод, возвращающий тип фигуры, которая находится в
+   * константный метод, возвращающий фигуру, которая находится в
    * ячейке поля с координатами coords.
    * @param coords
    * координаты ячейки поля, содержимое которой нужно узнать.
    * @return
-   * значение int, которое может принимать целочисленные значения
-   * от -5 до 5 включительно.
+   * наследник класса Figure.
    */
-  int get_figure_from(QPair<int, int> coords) const;
+  Figure getFigure(QPair<int, int> coords) const;
   /*!
    * @private
    * @brief get_situation
@@ -49,8 +50,10 @@ public:
    * значение int, которое может принимать значения от -100 до 100,
    * где -100 означает победу черных, а 100 означает победу белых.
    */
-  int get_situation() const;
+  int getSituation() const;
+
+  void move(QPair<int, int> from, QPair<int, int> to);
 
 private:
-  QVector<QVector<int>> map;
+  QVector<QVector<Figure>> board;
 };

@@ -1,4 +1,6 @@
 #include "engine.h"
+#include <QPair>
+#include <QSet>
 
 Engine::Engine() {}
 
@@ -7,26 +9,25 @@ int Engine::move(QPair<int, int> from_pos, QPair<int, int> step) {
     // Отсутствие хода
     return 1;
   }
-  if (abs(step.first) > 1 || abs(step.second) > 1) {
-    // Невозможный ход
+  if ((from_pos.first + step.first) < 0 || (from_pos.first + step.first) >= 8 ||
+      (from_pos.second + step.second) < 0 ||
+      (from_pos.second + step.second) >= 8) {
+    // Выход за поле
     return 2;
   }
-  if ((from_cords.first + step.first) < 0 ||
-      (from_cords.first + step.first) >= 8 ||
-      (from_cords.second + step.second) < 0 ||
-      (from_cords.second + step.second) >= 8) {
-    // Выход за поле
+  QSet<QPair<int, int>> possible_moves =
+      game_board.getFigure(from_pos).getPossibleMoves();
+  if (possible_moves.find(step) == possible_moves.end()) {
+    // Невозможный ход
     return 3;
   }
-
   // V Ошибка, если ход на/через собственную фигуру V
   if (0) {
     return 4;
   }
   // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-  map[from_cords.first + step.first][from_cords.second + step.second] =
-      map[from_cords.first][from_cords.second];
-  map[from_cords.first][from_cords.second] = 0;
+  game_board.move(from_pos, QPair(from_pos.first + step.first,
+                                  from_pos.second + step.second));
   return 0;
 }
