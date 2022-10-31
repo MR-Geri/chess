@@ -71,20 +71,21 @@ $(function() {
 <div class="contents">
 <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;QList&gt;</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;QPair&gt;</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
-<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="classGameBoard.html">   12</a></span>&#160;<span class="keyword">class </span><a class="code" href="classGameBoard.html">GameBoard</a> {</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;  <a class="code" href="classGameBoard.html#ac622cadcc81b3ffb71d8feb4506c04ac">GameBoard</a>();</div>
-<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="classGameBoard.html#a62f5c775a4928d8c6b9d9e651e8d507d">   30</a></span>&#160;  QList&lt;QPair&lt;int, int&gt;&gt; <a class="code" href="classGameBoard.html#a62f5c775a4928d8c6b9d9e651e8d507d">get_possible_steps_from</a>(QPair&lt;int, int&gt; coords) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="classGameBoard.html#a822ff7618cb5d2c4b87e342f38191d12">   41</a></span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classGameBoard.html#a822ff7618cb5d2c4b87e342f38191d12">get_figure_from</a>(QPair&lt;int, int&gt; coords) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  <span class="keywordtype">int</span> get_situation() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  QVector&lt;QVector&lt;int&gt;&gt; map;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;};</div>
-<div class="ttc" id="aclassGameBoard_html"><div class="ttname"><a href="classGameBoard.html">GameBoard</a></div><div class="ttdoc">GameBoard данный класс используется для отрисовки игрового поля. Он является сценой для QGraphicsWidg...</div><div class="ttdef"><b>Definition:</b> board.h:12</div></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;../figures/figures.h&quot;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;QList&gt;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;QPair&gt;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="classGameBoard.html">   13</a></span>&#160;<span class="keyword">class </span><a class="code" href="classGameBoard.html">GameBoard</a> {</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;  <a class="code" href="classGameBoard.html#ac622cadcc81b3ffb71d8feb4506c04ac">GameBoard</a>();</div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="classGameBoard.html#a822ff7618cb5d2c4b87e342f38191d12">   31</a></span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classGameBoard.html#a822ff7618cb5d2c4b87e342f38191d12">get_figure_from</a>(QPair&lt;int, int&gt; coords) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="classGameBoard.html#a62f5c775a4928d8c6b9d9e651e8d507d">   42</a></span>&#160;  QList&lt;QPair&lt;int, int&gt;&gt; <a class="code" href="classGameBoard.html#a62f5c775a4928d8c6b9d9e651e8d507d">get_possible_steps_from</a>(QPair&lt;int, int&gt; coords) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  <span class="keywordtype">int</span> get_situation() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  QVector&lt;QVector&lt;Figure&gt;&gt; board;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;};</div>
+<div class="ttc" id="aclassGameBoard_html"><div class="ttname"><a href="classGameBoard.html">GameBoard</a></div><div class="ttdoc">GameBoard данный класс используется для отрисовки игрового поля. Он является сценой для QGraphicsWidg...</div><div class="ttdef"><b>Definition:</b> board.h:13</div></div>
 <div class="ttc" id="aclassGameBoard_html_a62f5c775a4928d8c6b9d9e651e8d507d"><div class="ttname"><a href="classGameBoard.html#a62f5c775a4928d8c6b9d9e651e8d507d">GameBoard::get_possible_steps_from</a></div><div class="ttdeci">QList&lt; QPair&lt; int, int &gt; &gt; get_possible_steps_from(QPair&lt; int, int &gt; coords) const</div><div class="ttdoc">get_possible_steps_from константный метод, возвращающий список ходов, которые может совершить фигура,...</div></div>
 <div class="ttc" id="aclassGameBoard_html_a822ff7618cb5d2c4b87e342f38191d12"><div class="ttname"><a href="classGameBoard.html#a822ff7618cb5d2c4b87e342f38191d12">GameBoard::get_figure_from</a></div><div class="ttdeci">int get_figure_from(QPair&lt; int, int &gt; coords) const</div><div class="ttdoc">get_figure_from константный метод, возвращающий тип фигуры, которая находится в ячейке поля с координ...</div></div>
 <div class="ttc" id="aclassGameBoard_html_ac622cadcc81b3ffb71d8feb4506c04ac"><div class="ttname"><a href="classGameBoard.html#ac622cadcc81b3ffb71d8feb4506c04ac">GameBoard::GameBoard</a></div><div class="ttdeci">GameBoard()</div><div class="ttdoc">GameBoard коструктор по умолчанию, генерирует поле с фигурами (стартовая расстановка и набор фигур).</div><div class="ttdef"><b>Definition:</b> board.cpp:3</div></div>

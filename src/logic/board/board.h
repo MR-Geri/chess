@@ -1,5 +1,6 @@
 #pragma once
 
+#include "../figures/figures.h"
 #include <QList>
 #include <QPair>
 
@@ -18,17 +19,6 @@ public:
    */
   GameBoard();
   /*!
-   * \brief get_possible_steps_from
-   * константный метод, возвращающий список ходов, которые может совершить
-   * фигура, находящаяся на поле в ячейке с координатами coords.
-   * \param coords
-   * координаты фигуры для которой необходимо получить возможные ходы.
-   * \return
-   * список возможных ходов для фигуры с координатами
-   * coords.
-   */
-  QList<QPair<int, int>> get_possible_steps_from(QPair<int, int> coords) const;
-  /*!
    * \brief get_figure_from
    * константный метод, возвращающий тип фигуры, которая находится в
    * ячейке поля с координатами coords.
@@ -39,6 +29,17 @@ public:
    * от -5 до 5 включительно.
    */
   int get_figure_from(QPair<int, int> coords) const;
+  /*!
+   * \brief get_possible_steps_from
+   * константный метод, возвращающий список ходов, которые может совершить
+   * фигура, находящаяся на поле в ячейке с координатами coords.
+   * \param coords
+   * координаты фигуры для которой необходимо получить возможные ходы.
+   * \return
+   * список возможных ходов для фигуры с координатами
+   * coords.
+   */
+  QList<QPair<int, int>> get_possible_steps_from(QPair<int, int> coords) const;
   /*!
    * \private
    * \brief get_situation
@@ -52,5 +53,5 @@ public:
   int get_situation() const;
 
 private:
-  QVector<QVector<int>> map;
+  QVector<QVector<Figure>> board;
 };
