@@ -1,5 +1,6 @@
 #pragma once
 
+#include "../scene_game/scene_game.h"
 #include <QString>
 #include <QWidget>
 #include <src/constants.h>
@@ -28,11 +29,11 @@ public:
 
 private:
   /**
-   * @brief end_game
-   * метод вызывается в конце игры, уведомляет игрока,
-   * после чего вызывает окно меню.
+   * @brief generateScene
+   * метод, который вызывается слотом update, по полученным
+   * данным генерирует новую сцену для отрисовки.
    */
-  void end_game();
+  void generateScene(/* Данные */);
 
 signals:
   /**
@@ -44,11 +45,12 @@ signals:
    */
   void change_window(int on_window);
 
+public slots:
   /**
-   * @brief make_new_record
-   * сигнал для добавления новой записи в таблицу лидеров
+   * @brief update
+   * слот, который получает данные для отрисовки из логики.
    */
-  void make_new_record(QString record);
+  void update(/* Данные */);
 
 private slots:
   /**
@@ -63,14 +65,8 @@ private slots:
    * Отправляет сигнал перехода на окно игры (перезапускает игру).
    */
   void buttonNewGame_released();
-  /**
-   * @brief save_move
-   * метод, сохраняющий произведенные ходы.
-   * @param move
-   * Запись хода.
-   */
-  void save_move(QString move);
 
 private:
   Ui::ScreenGame *ui;
+  SceneGame scene;
 };

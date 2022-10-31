@@ -19,4 +19,6 @@ void ScreenGame::buttonBackGame_released() {
   emit change_window(Windows::MENU);
 }
 
-void ScreenGame::save_move(QString move) {}
+void ScreenGame::update() {}
+
+void ScreenGame::generateScene() {}
