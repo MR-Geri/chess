@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['change_5fwindow_43',['change_window',['../classScreenGame.html#a1a83377b90e74ed6f9fbbbb2c2ae5cac',1,'ScreenGame::change_window()'],['../classScreenLiderboard.html#a2fafd4249a4a949b2dadab87d40f9bc9',1,'ScreenLiderboard::change_window()'],['../classScreenMenu.html#ad0341984f0f580395f5345bb8184f802',1,'ScreenMenu::change_window()'],['../classScreenSettings.html#a7e3c1526158d877bdd8a86507735d058',1,'ScreenSettings::change_window()']]]
+  ['changewindow_42',['changeWindow',['../classScreenGame.html#af814ece97f9910fb3477d576ae35e145',1,'ScreenGame::changeWindow()'],['../classScreenLiderboard.html#ad7e82e4c95348b2fa773acbe3db09c4e',1,'ScreenLiderboard::changeWindow()'],['../classScreenMenu.html#a4145535a52af1dc6f3e11f60b0289e7c',1,'ScreenMenu::changeWindow()'],['../classScreenSettings.html#a6a093ced01e2ac20bf3441894ad1f064',1,'ScreenSettings::changeWindow()']]]
 ];

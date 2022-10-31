@@ -11,8 +11,8 @@ ScreenLiderboard::ScreenLiderboard(QWidget *parent)
 
 ScreenLiderboard::~ScreenLiderboard() { delete ui; }
 
-void ScreenLiderboard::buttonBackLiderboard_released() {
-  emit change_window(Windows::MENU);
+void ScreenLiderboard::buttonBackLiderboardReleased() {
+  emit changeWindow(Windows::MENU);
 }
 
-void ScreenLiderboard::add_new_record(QString record) {}
+void ScreenLiderboard::addNewRecord(QString record) {}

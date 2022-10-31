@@ -72,7 +72,7 @@ $(function() {
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Открытые члены</h2></td></tr>
 <tr class="memitem:a936ddd5d85b63d46016d859b53b773b1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEngine.html#a936ddd5d85b63d46016d859b53b773b1">move</a> (QPair&lt; int, int &gt; from_pos, QPair&lt; int, int &gt; step)</td></tr>
-<tr class="memdesc:a936ddd5d85b63d46016d859b53b773b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">move проверяет возможность хода и перемещает фигуру.  <a href="classEngine.html#a936ddd5d85b63d46016d859b53b773b1">Подробнее...</a><br /></td></tr>
+<tr class="memdesc:a936ddd5d85b63d46016d859b53b773b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Проверяет возможность хода и перемещает фигуру.  <a href="classEngine.html#a936ddd5d85b63d46016d859b53b773b1">Подробнее...</a><br /></td></tr>
 <tr class="separator:a936ddd5d85b63d46016d859b53b773b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Методы</h2>
@@ -102,7 +102,7 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p>move проверяет возможность хода и перемещает фигуру. </p>
+<p>Проверяет возможность хода и перемещает фигуру. </p>
 <dl class="params"><dt>Аргументы</dt><dd>
   <table class="params">
     <tr><td class="paramname">from_pos</td><td>позиция фигуры, которую переместить </td></tr>
@@ -110,7 +110,12 @@ $(function() {
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Возвращает</dt><dd>статус перемещения. 0 - перемещение выполнено. </dd></dl>
+<dl class="section return"><dt>Возвращает</dt><dd>статус перемещения: <br  />
+ 0 - перемещение выполнено <br  />
+ 1 - отсутствие перемещения <br  />
+ 2 - выход за игровое поле <br  />
+ 3 - фигура не может совершить такой ход <br  />
+ 4 - ход совершается на/через собственную фигуру </dd></dl>
 
 </div>
 </div>

@@ -78,31 +78,30 @@ $(function() {
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">class </span><a class="code" href="classScreenSettings.html">ScreenSettings</a>;</div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;}</div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
-<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="classScreenSettings.html">   15</a></span>&#160;<span class="keyword">class </span><a class="code" href="classScreenSettings.html">ScreenSettings</a> : <span class="keyword">public</span> QWidget {</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;  Q_OBJECT</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  <span class="keyword">explicit</span> <a class="code" href="classScreenSettings.html#af0f226067ae6c297e288e769cc43f7d7">ScreenSettings</a>(QWidget *parent = <span class="keyword">nullptr</span>);</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  ~<a class="code" href="classScreenSettings.html">ScreenSettings</a>();</div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="classScreenSettings.html">   14</a></span>&#160;<span class="keyword">class </span><a class="code" href="classScreenSettings.html">ScreenSettings</a> : <span class="keyword">public</span> QWidget {</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;  Q_OBJECT</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;  <span class="keyword">explicit</span> <a class="code" href="classScreenSettings.html">ScreenSettings</a>(QWidget *parent = <span class="keyword">nullptr</span>);</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;  ~<a class="code" href="classScreenSettings.html">ScreenSettings</a>();</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;signals:</div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="classScreenSettings.html#a6a093ced01e2ac20bf3441894ad1f064">   25</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classScreenSettings.html#a6a093ced01e2ac20bf3441894ad1f064">changeWindow</a>(<span class="keywordtype">int</span> on_window);</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;signals:</div>
-<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="classScreenSettings.html#a7e3c1526158d877bdd8a86507735d058">   35</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classScreenSettings.html#a7e3c1526158d877bdd8a86507735d058">change_window</a>(<span class="keywordtype">int</span> on_window);</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="keyword">private</span> slots:</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  <span class="keywordtype">void</span> buttonBackSettings_released();</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  <span class="keywordtype">void</span> start_music();</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  <span class="keywordtype">void</span> stop_music();</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  <span class="keywordtype">void</span> start_sounds();</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  <span class="keywordtype">void</span> stop_sounds();</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  <span class="keywordtype">void</span> change_music_volume();</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  <span class="keywordtype">void</span> change_sounds_volume();</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  Ui::ScreenSettings *ui;</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;};</div>
-<div class="ttc" id="aclassScreenSettings_html"><div class="ttname"><a href="classScreenSettings.html">ScreenSettings</a></div><div class="ttdoc">The ScreenSettings наследник стандартного класса QT - QWidget. Класс - окно настроек.</div><div class="ttdef"><b>Definition:</b> screen_settings.h:15</div></div>
-<div class="ttc" id="aclassScreenSettings_html_a7e3c1526158d877bdd8a86507735d058"><div class="ttname"><a href="classScreenSettings.html#a7e3c1526158d877bdd8a86507735d058">ScreenSettings::change_window</a></div><div class="ttdeci">void change_window(int on_window)</div><div class="ttdoc">change_window сигнал, который показывает менеджеру окон на какое окно нужно перейти.</div></div>
-<div class="ttc" id="aclassScreenSettings_html_af0f226067ae6c297e288e769cc43f7d7"><div class="ttname"><a href="classScreenSettings.html#af0f226067ae6c297e288e769cc43f7d7">ScreenSettings::ScreenSettings</a></div><div class="ttdeci">ScreenSettings(QWidget *parent=nullptr)</div><div class="ttdoc">ScreenSettings конструктор.</div><div class="ttdef"><b>Definition:</b> screen_settings.cpp:4</div></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">private</span> slots:</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  <span class="keywordtype">void</span> buttonBackSettingsReleased();</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  <span class="keywordtype">void</span> startMusic();</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  <span class="keywordtype">void</span> stopMusic();</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  <span class="keywordtype">void</span> startSounds();</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  <span class="keywordtype">void</span> stopSounds();</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  <span class="keywordtype">void</span> changeMusicVolume();</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  <span class="keywordtype">void</span> changeSoundsVolume();</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  Ui::ScreenSettings *ui;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;};</div>
+<div class="ttc" id="aclassScreenSettings_html"><div class="ttname"><a href="classScreenSettings.html">ScreenSettings</a></div><div class="ttdoc">Наследник стандартного класса QT - QWidget. Класс - окно настроек.</div><div class="ttdef"><b>Definition:</b> screen_settings.h:14</div></div>
+<div class="ttc" id="aclassScreenSettings_html_a6a093ced01e2ac20bf3441894ad1f064"><div class="ttname"><a href="classScreenSettings.html#a6a093ced01e2ac20bf3441894ad1f064">ScreenSettings::changeWindow</a></div><div class="ttdeci">void changeWindow(int on_window)</div><div class="ttdoc">Показывает менеджеру окон на какое окно нужно перейти.</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

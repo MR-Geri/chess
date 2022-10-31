@@ -10,8 +10,7 @@ class ScreenGame;
 }
 
 /**
- * @brief The ScreenGame
- * наследник QT QWidget
+ * @brief Наследник QWidget
  * @param *game_scene
  * указатель на объект сцены игры (поле).
  */
@@ -19,52 +18,40 @@ class ScreenGame : public QWidget {
   Q_OBJECT
 
 public:
-  /**
-   * @brief ScreenGame
-   * конструктор.
-   * @param parent
-   */
   explicit ScreenGame(QWidget *parent = nullptr);
   ~ScreenGame();
 
 private:
   /**
-   * @brief generateScene
-   * метод, который вызывается слотом update, по полученным
+   * @brief Вызывается слотом update, по полученным
    * данным генерирует новую сцену для отрисовки.
    */
   void generateScene(/* Данные */);
 
 signals:
   /**
-   * @brief change_window
-   * сигнал, который показывает менеджеру окон на какое окно
+   * @brief Показывает менеджеру окон на какое окно
    * нужно перейти.
    * @param on_window
    * окно на которое нужно переместиться.
    */
-  void change_window(int on_window);
+  void changeWindow(int on_window);
 
 public slots:
   /**
-   * @brief update
-   * слот, который получает данные для отрисовки из логики.
+   * @brief Получает данные для отрисовки из логики.
    */
   void update(/* Данные */);
 
 private slots:
   /**
-   * @brief buttonBackGame_released
-   * слот, обрабатывающий нажатие кнопки.
-   * Отправляет сигнал перехода на окно меню.
+   * @brief Отправляет сигнал перехода на окно меню.
    */
-  void buttonBackGame_released();
+  void buttonBackGameReleased();
   /**
-   * @brief buttonNewGame_released
-   * слот, обрабатывающий нажатие кнопки.
-   * Отправляет сигнал перехода на окно игры (перезапускает игру).
+   * @brief Отправляет сигнал перехода на окно игры (перезапускает игру).
    */
-  void buttonNewGame_released();
+  void buttonNewGameReleased();
 
 private:
   Ui::ScreenGame *ui;

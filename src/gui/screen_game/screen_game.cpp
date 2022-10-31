@@ -13,11 +13,9 @@ ScreenGame::ScreenGame(QWidget *parent)
 
 ScreenGame::~ScreenGame() { delete ui; }
 
-void ScreenGame::buttonNewGame_released() {}
+void ScreenGame::buttonNewGameReleased() {}
 
-void ScreenGame::buttonBackGame_released() {
-  emit change_window(Windows::MENU);
-}
+void ScreenGame::buttonBackGameReleased() { emit changeWindow(Windows::MENU); }
 
 void ScreenGame::update() {}
 

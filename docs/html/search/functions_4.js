@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['is_5fend_5fgame_46',['is_end_game',['../classSceneGame.html#ad0e826c5869be143d3ef219292e7c07d',1,'SceneGame']]]
+  ['move_45',['move',['../classBoard.html#ae19c1f44d1f6e4183ca2c6a66c27bc34',1,'Board::move()'],['../classEngine.html#a936ddd5d85b63d46016d859b53b773b1',1,'Engine::move()']]],
+  ['movedfigure_46',['movedFigure',['../classSceneGame.html#a207d949439c411b6ca25c15a11b70a9c',1,'SceneGame']]]
 ];

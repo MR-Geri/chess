@@ -11,13 +11,13 @@ ScreenSettings::ScreenSettings(QWidget *parent)
 
 ScreenSettings::~ScreenSettings() { delete ui; }
 
-void ScreenSettings::buttonBackSettings_released() {
-  emit change_window(Windows::MENU);
+void ScreenSettings::buttonBackSettingsReleased() {
+  emit changeWindow(Windows::MENU);
 }
 
-void ScreenSettings::start_music() {}
-void ScreenSettings::stop_music() {}
-void ScreenSettings::start_sounds() {}
-void ScreenSettings::stop_sounds() {}
-void ScreenSettings::change_music_volume() {}
-void ScreenSettings::change_sounds_volume() {}
+void ScreenSettings::startMusic() {}
+void ScreenSettings::stopMusic() {}
+void ScreenSettings::startSounds() {}
+void ScreenSettings::stopSounds() {}
+void ScreenSettings::changeMusicVolume() {}
+void ScreenSettings::changeSoundsVolume() {}

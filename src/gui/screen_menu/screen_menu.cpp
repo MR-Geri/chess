@@ -15,10 +15,10 @@ ScreenMenu::ScreenMenu(QWidget *parent)
 
 ScreenMenu::~ScreenMenu() { delete ui; }
 
-void ScreenMenu::go_to_settings() { emit change_window(Windows::SETTINGS); }
+void ScreenMenu::goToSettings() { emit changeWindow(Windows::SETTINGS); }
 
-void ScreenMenu::go_to_game_field() { emit change_window(Windows::GAME_FIELD); }
+void ScreenMenu::goToGameField() { emit changeWindow(Windows::GAME_FIELD); }
 
-void ScreenMenu::go_to_liderboard() { emit change_window(Windows::LIDERBOARD); }
+void ScreenMenu::goToLiderboard() { emit changeWindow(Windows::LIDERBOARD); }
 
-void ScreenMenu::exit() { emit change_window(Windows::EXIT); }
+void ScreenMenu::exit() { emit changeWindow(Windows::EXIT); }

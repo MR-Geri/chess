@@ -8,69 +8,51 @@ class ScreenSettings;
 }
 
 /**
- * @brief The ScreenSettings
- * наследник стандартного класса QT - QWidget.
+ * @brief Наследник стандартного класса QT - QWidget.
  * Класс - окно настроек.
  */
 class ScreenSettings : public QWidget {
   Q_OBJECT
 
 public:
-  /**
-   * @brief ScreenSettings
-   * конструктор.
-   * @param parent
-   */
   explicit ScreenSettings(QWidget *parent = nullptr);
   ~ScreenSettings();
 
 signals:
   /**
-   * @brief change_window
-   * сигнал, который показывает менеджеру окон на какое окно
-   * нужно перейти.
-   * @param on_window
-   * окно на которое нужно переместиться.
+   * @brief Показывает менеджеру окон на какое окно нужно перейти.
    */
-  void change_window(int on_window);
+  void changeWindow(int on_window);
 
 private slots:
   /**
-   * @brief buttonBackSettings_released
-   * слот для обработки нажатия кнопки.
-   * Отправляет сигнал о смене окна на окно меню.
+   * @brief Отправляет сигнал о смене окна на окно меню.
    */
-  void buttonBackSettings_released();
+  void buttonBackSettingsReleased();
   /**
-   * @brief start_music
-   * слот включающий музыку.
+   * @brief Включает музыку.
    */
-  void start_music();
+  void startMusic();
   /**
-   * @brief stop_music
-   * слот выключающий музыку.
+   * @brief Выключает музыку.
    */
-  void stop_music();
+  void stopMusic();
   /**
-   * @brief start_sounds
-   * слот включающий звуки.
+   * @brief Включает звуки.
    */
-  void start_sounds();
+  void startSounds();
   /**
-   * @brief stop_sounds
-   * слот выключающий звуки.
+   * @brief Выключает звуки.
    */
-  void stop_sounds();
+  void stopSounds();
   /**
-   * @brief change_music_volume
-   * слот, изменяющий громкость музыки.
+   * @brief Изменяет громкость музыки.
    */
-  void change_music_volume();
+  void changeMusicVolume();
   /**
-   * @brief change_sounds_volume
-   * слот, изменяющий громкость звуков.
+   * @brief Изменяет громкость звуков.
    */
-  void change_sounds_volume();
+  void changeSoundsVolume();
 
 private:
   Ui::ScreenSettings *ui;

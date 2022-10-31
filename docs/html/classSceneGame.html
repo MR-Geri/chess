@@ -70,7 +70,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p><a class="el" href="classSceneGame.html" title="SceneGame наследник стандартного класса QT - QGraphicsScene. Данный класс используется для отрисовки ...">SceneGame</a> наследник стандартного класса QT - QGraphicsScene. Данный класс используется для отрисовки игрового поля. Он является сценой для QGraphicsWidget.  
+<p>Используется для отрисовки игрового поля. Класс является сценой для QGraphicsWidget.  
  <a href="classSceneGame.html#details">Подробнее...</a></p>
 
 <p><code>#include &lt;<a class="el" href="scene__game_8h_source.html">scene_game.h</a>&gt;</code></p>
@@ -83,33 +83,24 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="signals"></a>
 Сигналы</h2></td></tr>
-<tr class="memitem:a00ae3452521addf62d4f28566259df82"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSceneGame.html#a00ae3452521addf62d4f28566259df82">move_for_save</a> (QString move)</td></tr>
-<tr class="memdesc:a00ae3452521addf62d4f28566259df82"><td class="mdescLeft">&#160;</td><td class="mdescRight">move_for_save сигнал, отправляющий запись хода, который нужно сохранить.  <a href="classSceneGame.html#a00ae3452521addf62d4f28566259df82">Подробнее...</a><br /></td></tr>
-<tr class="separator:a00ae3452521addf62d4f28566259df82"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab178194482d9274e5eaceb7b9bba4477"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSceneGame.html#ab178194482d9274e5eaceb7b9bba4477">saveMove</a> (QString move)</td></tr>
+<tr class="memdesc:ab178194482d9274e5eaceb7b9bba4477"><td class="mdescLeft">&#160;</td><td class="mdescRight">Сигнал, отправляющий запись хода, который нужно сохранить.  <a href="classSceneGame.html#ab178194482d9274e5eaceb7b9bba4477">Подробнее...</a><br /></td></tr>
+<tr class="separator:ab178194482d9274e5eaceb7b9bba4477"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a207d949439c411b6ca25c15a11b70a9c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSceneGame.html#a207d949439c411b6ca25c15a11b70a9c">movedFigure</a> (QPair&lt; int, int &gt; coords_from, QPair&lt; int, int &gt; coords_to)</td></tr>
+<tr class="memdesc:a207d949439c411b6ca25c15a11b70a9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Показывает, какой ход был совершен.  <a href="classSceneGame.html#a207d949439c411b6ca25c15a11b70a9c">Подробнее...</a><br /></td></tr>
+<tr class="separator:a207d949439c411b6ca25c15a11b70a9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Открытые члены</h2></td></tr>
-<tr class="memitem:a9fa689dfeedb8aec2f25088750ca05c1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSceneGame.html#a9fa689dfeedb8aec2f25088750ca05c1">SceneGame</a> (QObject *parent=nullptr)</td></tr>
-<tr class="memdesc:a9fa689dfeedb8aec2f25088750ca05c1"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classSceneGame.html" title="SceneGame наследник стандартного класса QT - QGraphicsScene. Данный класс используется для отрисовки ...">SceneGame</a> конструктор  <a href="classSceneGame.html#a9fa689dfeedb8aec2f25088750ca05c1">Подробнее...</a><br /></td></tr>
+<tr class="memitem:a9fa689dfeedb8aec2f25088750ca05c1"><td class="memItemLeft" align="right" valign="top"><a id="a9fa689dfeedb8aec2f25088750ca05c1"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>SceneGame</b> (QObject *parent=nullptr)</td></tr>
 <tr class="separator:a9fa689dfeedb8aec2f25088750ca05c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a208eaa238be8eff757e85596b86d9b48"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSceneGame.html#a208eaa238be8eff757e85596b86d9b48">move_figure</a> (QPair&lt; int, int &gt; old_position, QPair&lt; int, int &gt; new_position)</td></tr>
-<tr class="memdesc:a208eaa238be8eff757e85596b86d9b48"><td class="mdescLeft">&#160;</td><td class="mdescRight">move_figure метод, перемещающий фигуры на поле board.  <a href="classSceneGame.html#a208eaa238be8eff757e85596b86d9b48">Подробнее...</a><br /></td></tr>
-<tr class="separator:a208eaa238be8eff757e85596b86d9b48"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad0e826c5869be143d3ef219292e7c07d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSceneGame.html#ad0e826c5869be143d3ef219292e7c07d">is_end_game</a> ()</td></tr>
-<tr class="memdesc:ad0e826c5869be143d3ef219292e7c07d"><td class="mdescLeft">&#160;</td><td class="mdescRight">is_end_game метод вызывается после каждого хода для проверки конца игры. Если возможных ходов нет, значит игра завершилась. Вызывается после каждого хода.  <a href="classSceneGame.html#ad0e826c5869be143d3ef219292e7c07d">Подробнее...</a><br /></td></tr>
-<tr class="separator:ad0e826c5869be143d3ef219292e7c07d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
-<div class="textblock"><p><a class="el" href="classSceneGame.html" title="SceneGame наследник стандартного класса QT - QGraphicsScene. Данный класс используется для отрисовки ...">SceneGame</a> наследник стандартного класса QT - QGraphicsScene. Данный класс используется для отрисовки игрового поля. Он является сценой для QGraphicsWidget. </p>
-<dl class="params"><dt>Аргументы</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">board</td><td>объект класса GameBoard - игровая доска. </td></tr>
-  </table>
-  </dd>
-</dl>
-</div><h2 class="groupheader">Конструктор(ы)</h2>
-<a id="a9fa689dfeedb8aec2f25088750ca05c1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9fa689dfeedb8aec2f25088750ca05c1">&#9670;&nbsp;</a></span>SceneGame()</h2>
+<div class="textblock"><p>Используется для отрисовки игрового поля. Класс является сценой для QGraphicsWidget. </p>
+</div><h2 class="groupheader">Методы</h2>
+<a id="a207d949439c411b6ca25c15a11b70a9c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a207d949439c411b6ca25c15a11b70a9c">&#9670;&nbsp;</a></span>movedFigure</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -118,68 +109,16 @@ $(function() {
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">SceneGame::SceneGame </td>
-          <td>(</td>
-          <td class="paramtype">QObject *&#160;</td>
-          <td class="paramname"><em>parent</em> = <code>nullptr</code></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p><a class="el" href="classSceneGame.html" title="SceneGame наследник стандартного класса QT - QGraphicsScene. Данный класс используется для отрисовки ...">SceneGame</a> конструктор </p>
-<dl class="params"><dt>Аргументы</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">parent</td><td></td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<h2 class="groupheader">Методы</h2>
-<a id="ad0e826c5869be143d3ef219292e7c07d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad0e826c5869be143d3ef219292e7c07d">&#9670;&nbsp;</a></span>is_end_game()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int SceneGame::is_end_game </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>is_end_game метод вызывается после каждого хода для проверки конца игры. Если возможных ходов нет, значит игра завершилась. Вызывается после каждого хода. </p>
-<dl class="section return"><dt>Возвращает</dt><dd>0 - если игра не завершена 1 - если победили белые -1 - если победили черные </dd></dl>
-
-</div>
-</div>
-<a id="a208eaa238be8eff757e85596b86d9b48"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a208eaa238be8eff757e85596b86d9b48">&#9670;&nbsp;</a></span>move_figure()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void SceneGame::move_figure </td>
+          <td class="memname">void SceneGame::movedFigure </td>
           <td>(</td>
           <td class="paramtype">QPair&lt; int, int &gt;&#160;</td>
-          <td class="paramname"><em>old_position</em>, </td>
+          <td class="paramname"><em>coords_from</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">QPair&lt; int, int &gt;&#160;</td>
-          <td class="paramname"><em>new_position</em>&#160;</td>
+          <td class="paramname"><em>coords_to</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -187,21 +126,26 @@ $(function() {
           <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">signal</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p>move_figure метод, перемещающий фигуры на поле board. </p>
+<p>Показывает, какой ход был совершен. </p>
 <dl class="params"><dt>Аргументы</dt><dd>
   <table class="params">
-    <tr><td class="paramname">old_position</td><td>старая позиция фигуры. </td></tr>
-    <tr><td class="paramname">new_position</td><td>новая позиция фигуры. </td></tr>
+    <tr><td class="paramname">coords_from</td><td>координаты ячейки в которой фигура находилась до начала хода. </td></tr>
+    <tr><td class="paramname">coords_to</td><td>координаты ячейки в которой фигура находится после завершения хода. </td></tr>
   </table>
   </dd>
 </dl>
 
 </div>
 </div>
-<a id="a00ae3452521addf62d4f28566259df82"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a00ae3452521addf62d4f28566259df82">&#9670;&nbsp;</a></span>move_for_save</h2>
+<a id="ab178194482d9274e5eaceb7b9bba4477"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab178194482d9274e5eaceb7b9bba4477">&#9670;&nbsp;</a></span>saveMove</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -210,7 +154,7 @@ $(function() {
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void SceneGame::move_for_save </td>
+          <td class="memname">void SceneGame::saveMove </td>
           <td>(</td>
           <td class="paramtype">QString&#160;</td>
           <td class="paramname"><em>move</em></td><td>)</td>
@@ -224,10 +168,10 @@ $(function() {
 </table>
 </div><div class="memdoc">
 
-<p>move_for_save сигнал, отправляющий запись хода, который нужно сохранить. </p>
+<p>Сигнал, отправляющий запись хода, который нужно сохранить. </p>
 <dl class="params"><dt>Аргументы</dt><dd>
   <table class="params">
-    <tr><td class="paramname">move</td><td>запись хода. </td></tr>
+    <tr><td class="paramname">move</td><td>ход для записи. </td></tr>
   </table>
   </dd>
 </dl>

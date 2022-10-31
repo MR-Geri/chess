@@ -23,7 +23,7 @@ MainWindow::MainWindow(QWidget *parent)
 
 MainWindow::~MainWindow() { delete ui; }
 
-void MainWindow::windows_manager(int window_id) {
+void MainWindow::windowsManager(int window_id) {
   if (window_id == Windows::EXIT)
     this->close();
   ui->stackedWidget->setCurrentIndex(window_id);
