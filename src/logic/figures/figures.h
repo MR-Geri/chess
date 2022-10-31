@@ -6,7 +6,7 @@
 class Figure {
 public:
   virtual int move(QPair<int, int>) = 0;
-  virtual QVector<QPair<int, int>> getValidMoves() = 0;
+  virtual QList<QPair<int, int>> getValidMoves() = 0;
   int getPrice() const;
   int getX() const;
   int getY() const;
@@ -49,7 +49,7 @@ public:
 class Kinght : public Figure {
 public:
   int move(QPair<int, int>) override;
-  QVector<QPair<int, int>> getValidMoves() override;
+  QList<QPair<int, int>> getValidMoves() override;
 };
 
 class Pawn : public Figure {
