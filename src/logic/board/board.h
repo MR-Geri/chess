@@ -5,7 +5,7 @@
 #include <QPair>
 #include <qpair.h>
 
-/*!
+/**
  * @brief GameBoard
  * данный класс используется для отрисовки игрового поля.
  * Он является сценой для QGraphicsWidget.
@@ -13,13 +13,13 @@
  */
 class GameBoard {
 public:
-  /*!
+  /**
    * @brief GameBoard
    * коструктор по умолчанию, генерирует поле с фигурами
    * (стартовая расстановка и набор фигур).
    */
   GameBoard();
-  /*!
+  /**
    * @brief get_possible_steps_from
    * константный метод, возвращающий список ходов, которые может совершить
    * фигура, находящаяся на поле в ячейке с координатами coords.
@@ -30,7 +30,7 @@ public:
    * coords.
    */
   QList<QPair<int, int>> getPossibleStepsFrom(QPair<int, int> coords) const;
-  /*!
+  /**
    * @brief get_figure_from
    * константный метод, возвращающий фигуру, которая находится в
    * ячейке поля с координатами coords.
@@ -40,7 +40,7 @@ public:
    * наследник класса Figure.
    */
   Figure getFigure(QPair<int, int> coords) const;
-  /*!
+  /**
    * @private
    * @brief get_situation
    * константный метод, возвращающий текущую ситуацию на поле.

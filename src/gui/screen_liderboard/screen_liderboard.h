@@ -7,7 +7,7 @@ namespace Ui {
 class ScreenLiderboard;
 }
 
-/*!
+/**
  * @brief The ScreenLiderboard
  * наследник стандартного класса QT - QWidget.
  * Класс - окно табллицы лидеров.
@@ -16,7 +16,7 @@ class ScreenLiderboard : public QWidget {
   Q_OBJECT
 
 public:
-  /*!
+  /**
    * @brief ScreenLiderboard
    * конструктор
    * @param parent
@@ -25,7 +25,7 @@ public:
   ~ScreenLiderboard();
 
 signals:
-  /*!
+  /**
    * @brief change_window
    * сигнал, который показывает менеджеру окон на какое окно
    * нужно перейти.
@@ -35,7 +35,7 @@ signals:
   void change_window(int on_window);
 
 public slots:
-  /*!
+  /**
    * @brief add_new_record
    * слот, добавляющий новую запись в таблицу.
    * @param record
@@ -44,7 +44,7 @@ public slots:
   void add_new_record(QString record);
 
 private slots:
-  /*!
+  /**
    * @brief buttonBackLiderboard_released
    * слот для обработки нажатия кнопки.
    * Отправляет сигнал о смене окна на окно меню.
