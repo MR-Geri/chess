@@ -7,12 +7,12 @@ int Figure::getPrice() { return b_price; }
 
 QSet<QPair<int, int>> Figure::getPossibleMoves() { return possible_moves; }
 
-King::King() {
+King::King() : Figure() {
   b_price = 0;
   for (int i = 0; i <= 1; i++) {
     for (int j = 0; j <= 1; j++) {
       if (i != 0 && j != 0)
-        possible_moves.insert(QPair(i, j));
+        possible_moves.insert({i, j});
     }
   }
 }

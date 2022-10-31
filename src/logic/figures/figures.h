@@ -8,7 +8,7 @@
 class Figure {
 public:
   Figure();
-  virtual QList<QPair<int, int>> getUnarySteps(QPair<int, int> step) = 0;
+  QList<QPair<int, int>> getUnarySteps(QPair<int, int> step);
   int getPrice();
   QSet<QPair<int, int>> getPossibleMoves();
 
@@ -20,31 +20,30 @@ protected:
 class King : public Figure {
 public:
   King();
-
-  QList<QPair<int, int>> getUnarySteps(QPair<int, int> step) override;
+  QList<QPair<int, int>> getUnarySteps(QPair<int, int> step);
 };
 
 class Queen : public Figure {
 public:
-  QList<QPair<int, int>> getUnarySteps(QPair<int, int> step) override;
+  QList<QPair<int, int>> getUnarySteps(QPair<int, int> step);
 };
 
 class Bishop : public Figure {
 public:
-  QList<QPair<int, int>> getUnarySteps(QPair<int, int> step) override;
+  QList<QPair<int, int>> getUnarySteps(QPair<int, int> step);
 };
 
 class Rook : public Figure {
 public:
-  QList<QPair<int, int>> getUnarySteps(QPair<int, int> step) override;
+  QList<QPair<int, int>> getUnarySteps(QPair<int, int> step);
 };
 
 class Kinght : public Figure {
 public:
-  QList<QPair<int, int>> getUnarySteps(QPair<int, int> step) override;
+  QList<QPair<int, int>> getUnarySteps(QPair<int, int> step);
 };
 
 class Pawn : public Figure {
 public:
-  QList<QPair<int, int>> getUnarySteps(QPair<int, int> step) override;
+  QList<QPair<int, int>> getUnarySteps(QPair<int, int> step);
 };

@@ -24,7 +24,7 @@ tests::tests() {}
 tests::~tests() {}
 
 void tests::test_king() {
-  // Проверка генератора
+  /*// Проверка генератора
   QCOMPARE(King().getX(), 0);
   QCOMPARE(King().getY(), 0);
   QCOMPARE(King(2, 3).getX(), 2);
@@ -57,7 +57,7 @@ void tests::test_king() {
   QCOMPARE(King(4, 4).move(QPair<int, int>(1, -1)), 0);
   QCOMPARE(King(4, 4).move(QPair<int, int>(0, 1)), 0);
   QCOMPARE(King(4, 4).move(QPair<int, int>(1, 0)), 0);
-  QCOMPARE(King(4, 4).move(QPair<int, int>(1, 1)), 0);
+  QCOMPARE(King(4, 4).move(QPair<int, int>(1, 1)), 0);*/
 }
 
 void tests::test_queen() {}

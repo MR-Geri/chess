@@ -6,19 +6,19 @@
 #include <qpair.h>
 
 /**
- * @brief GameBoard
+ * @brief Board
  * данный класс используется для отрисовки игрового поля.
  * Он является сценой для QGraphicsWidget.
  * @param map матрица, которая хранит фигуры и их расположение на поле.
  */
-class GameBoard {
+class Board {
 public:
   /**
-   * @brief GameBoard
+   * @brief Board
    * коструктор по умолчанию, генерирует поле с фигурами
    * (стартовая расстановка и набор фигур).
    */
-  GameBoard();
+  Board();
   /**
    * @brief get_possible_steps_from
    * константный метод, возвращающий список ходов, которые может совершить

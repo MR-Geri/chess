@@ -12,5 +12,5 @@ public:
   int move(QPair<int, int> from_pos, QPair<int, int> step);
 
 private:
-  GameBoard game_board;
+  Board game_board;
 };
