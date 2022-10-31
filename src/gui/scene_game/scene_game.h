@@ -5,8 +5,7 @@
 #include <QVector>
 
 /**
- * @brief Используется для отрисовки игрового поля.
- * Класс является сценой для QGraphicsWidget.
+ * @brief Отрисовывает игровое поле.
  */
 class SceneGame : public QGraphicsScene {
 public:

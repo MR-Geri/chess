@@ -8,8 +8,7 @@ class ScreenSettings;
 }
 
 /**
- * @brief Наследник стандартного класса QT - QWidget.
- * Класс - окно настроек.
+ * @brief Окно настроек.
  */
 class ScreenSettings : public QWidget {
   Q_OBJECT

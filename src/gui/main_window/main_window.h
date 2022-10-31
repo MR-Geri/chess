@@ -16,7 +16,7 @@ class MainWindow;
 QT_END_NAMESPACE
 
 /**
- * @brief Наследник QMainWindow. Этот класс связывает окна игры.
+ * @brief Связывает окна игры.
  * @param screen_game
  * окно с полем игры.
  * @param screen_menu

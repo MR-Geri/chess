@@ -8,8 +8,7 @@ class ScreenMenu;
 }
 
 /**
- * @brief Наследник стандартного класса QT - QWidget.
- * Класс - окно меню.
+ * @brief Окно меню.
  */
 class ScreenMenu : public QWidget {
   Q_OBJECT

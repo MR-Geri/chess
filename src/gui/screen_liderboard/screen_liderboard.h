@@ -8,8 +8,7 @@ class ScreenLiderboard;
 }
 
 /**
- * @brief Наследник стандартного класса QT - QWidget.
- * Класс - окно табллицы лидеров.
+ * @brief Окно табллицы лидеров.
  */
 class ScreenLiderboard : public QWidget {
   Q_OBJECT
