@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['gameboard_5',['GameBoard',['../classGameBoard.html',1,'GameBoard'],['../classGameBoard.html#ac622cadcc81b3ffb71d8feb4506c04ac',1,'GameBoard::GameBoard()']]],
-  ['getfigure_6',['getFigure',['../classGameBoard.html#a2cd4f358bb354bc754cc916ffff44612',1,'GameBoard']]],
-  ['getpossiblestepsfrom_7',['getPossibleStepsFrom',['../classGameBoard.html#aedad20c88f94872cffc5b5e116b8754a',1,'GameBoard']]]
+  ['getfigure_6',['getFigure',['../classBoard.html#a02b1cb1a48042b78cb5ff5d7e2147d38',1,'Board']]],
+  ['getpossiblestepsfrom_7',['getPossibleStepsFrom',['../classBoard.html#a1c596b241131252e8754026222d9b79d',1,'Board']]]
 ];

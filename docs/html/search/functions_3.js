@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['is_5fend_5fgame_45',['is_end_game',['../classSceneGame.html#ad0e826c5869be143d3ef219292e7c07d',1,'SceneGame']]]
+  ['getfigure_43',['getFigure',['../classBoard.html#a02b1cb1a48042b78cb5ff5d7e2147d38',1,'Board']]],
+  ['getpossiblestepsfrom_44',['getPossibleStepsFrom',['../classBoard.html#a1c596b241131252e8754026222d9b79d',1,'Board']]]
 ];

@@ -1,8 +1,7 @@
 var searchData=
 [
-  ['scenegame_50',['SceneGame',['../classSceneGame.html#a9fa689dfeedb8aec2f25088750ca05c1',1,'SceneGame']]],
-  ['screengame_51',['ScreenGame',['../classScreenGame.html#a510bde54887671e51185e19f00d8b7f4',1,'ScreenGame']]],
-  ['screenliderboard_52',['ScreenLiderboard',['../classScreenLiderboard.html#a01635816bd4c91868be303b1801d46ae',1,'ScreenLiderboard']]],
-  ['screenmenu_53',['ScreenMenu',['../classScreenMenu.html#a61ed295b340b34244e12bd49b38f3697',1,'ScreenMenu']]],
-  ['screensettings_54',['ScreenSettings',['../classScreenSettings.html#af0f226067ae6c297e288e769cc43f7d7',1,'ScreenSettings']]]
+  ['mainwindow_46',['MainWindow',['../classMainWindow.html#a996c5a2b6f77944776856f08ec30858d',1,'MainWindow']]],
+  ['make_5fnew_5frecord_47',['make_new_record',['../classScreenGame.html#adafc1227a9c4b165906425531cf33e22',1,'ScreenGame']]],
+  ['move_5ffigure_48',['move_figure',['../classSceneGame.html#a208eaa238be8eff757e85596b86d9b48',1,'SceneGame']]],
+  ['move_5ffor_5fsave_49',['move_for_save',['../classSceneGame.html#a00ae3452521addf62d4f28566259df82',1,'SceneGame']]]
 ];
