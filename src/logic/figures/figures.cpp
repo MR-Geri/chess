@@ -1,13 +1,65 @@
 #include "figures.h"
 #include <QPair>
 
-Figure::Figure() { b_price = 0; }
-
 int Figure::getPrice() { return b_price; }
 
 QSet<QPair<int, int>> Figure::getPossibleMoves() { return possible_moves; }
 
+Figure::Figure() { b_price = 0; }
+
 King::King() : Figure() {
+  b_price = 0;
+  for (int i = 0; i <= 1; i++) {
+    for (int j = 0; j <= 1; j++) {
+      if (i != 0 && j != 0)
+        possible_moves.insert({i, j});
+    }
+  }
+}
+
+Queen::Queen() : Figure() {
+  b_price = 0;
+  for (int i = -7; i <= 7; i++) {
+    for (int j = -7; j <= 7; j++) {
+      if (i != 0 && j != 0)
+        possible_moves.insert({i, j});
+    }
+  }
+}
+
+Bishop::Bishop() : Figure() {
+  b_price = 0;
+  for (int i = 1; i <= 7; i++) {
+    possible_moves.insert({i, i});
+    possible_moves.insert({-i, i});
+    possible_moves.insert({i, -i});
+    possible_moves.insert({-i, -i});
+  }
+}
+
+Rook::Rook() : Figure() {
+  b_price = 0;
+  for (int i = 1; i <= 7; i++) {
+    possible_moves.insert({0, i});
+    possible_moves.insert({i, 0});
+    possible_moves.insert({0, -i});
+    possible_moves.insert({-i, 0});
+  }
+}
+
+Kinght::Kinght() : Figure() {
+  b_price = 0;
+  possible_moves.insert({1, 2});
+  possible_moves.insert({1, -2});
+  possible_moves.insert({-1, 2});
+  possible_moves.insert({-1, -2});
+  possible_moves.insert({2, 1});
+  possible_moves.insert({2, -1});
+  possible_moves.insert({-2, 1});
+  possible_moves.insert({-2, -1});
+}
+
+Pawn::Pawn() : Figure() {
   b_price = 0;
   for (int i = 0; i <= 1; i++) {
     for (int j = 0; j <= 1; j++) {

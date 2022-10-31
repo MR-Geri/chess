@@ -83,15 +83,16 @@ $(function() {
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  <a class="code" href="classFigure.html">Figure</a> <a class="code" href="classBoard.html#a02b1cb1a48042b78cb5ff5d7e2147d38">getFigure</a>(QPair&lt;int, int&gt; coords) <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  <span class="keywordtype">int</span> getSituation() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  <span class="keywordtype">void</span> move(QPair&lt;int, int&gt; from, QPair&lt;int, int&gt; to);</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  QVector&lt;QVector&lt;Figure&gt;&gt; board;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;};</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classBoard.html#ae19c1f44d1f6e4183ca2c6a66c27bc34">move</a>(QPair&lt;int, int&gt; from, QPair&lt;int, int&gt; to);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  QVector&lt;QVector&lt;Figure&gt;&gt; board;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;};</div>
 <div class="ttc" id="aclassBoard_html"><div class="ttname"><a href="classBoard.html">Board</a></div><div class="ttdoc">Board данный класс используется для отрисовки игрового поля. Он является сценой для QGraphicsWidget.</div><div class="ttdef"><b>Definition:</b> board.h:14</div></div>
 <div class="ttc" id="aclassBoard_html_a02b1cb1a48042b78cb5ff5d7e2147d38"><div class="ttname"><a href="classBoard.html#a02b1cb1a48042b78cb5ff5d7e2147d38">Board::getFigure</a></div><div class="ttdeci">Figure getFigure(QPair&lt; int, int &gt; coords) const</div><div class="ttdoc">get_figure_from константный метод, возвращающий фигуру, которая находится в ячейке поля с координатам...</div><div class="ttdef"><b>Definition:</b> board.cpp:5</div></div>
 <div class="ttc" id="aclassBoard_html_a1c596b241131252e8754026222d9b79d"><div class="ttname"><a href="classBoard.html#a1c596b241131252e8754026222d9b79d">Board::getPossibleStepsFrom</a></div><div class="ttdeci">QList&lt; QPair&lt; int, int &gt; &gt; getPossibleStepsFrom(QPair&lt; int, int &gt; coords) const</div><div class="ttdoc">get_possible_steps_from константный метод, возвращающий список ходов, которые может совершить фигура,...</div></div>
 <div class="ttc" id="aclassBoard_html_a9ee491d4fea680cf69b033374a9fdfcb"><div class="ttname"><a href="classBoard.html#a9ee491d4fea680cf69b033374a9fdfcb">Board::Board</a></div><div class="ttdeci">Board()</div><div class="ttdoc">Board коструктор по умолчанию, генерирует поле с фигурами (стартовая расстановка и набор фигур).</div><div class="ttdef"><b>Definition:</b> board.cpp:3</div></div>
+<div class="ttc" id="aclassBoard_html_ae19c1f44d1f6e4183ca2c6a66c27bc34"><div class="ttname"><a href="classBoard.html#ae19c1f44d1f6e4183ca2c6a66c27bc34">Board::move</a></div><div class="ttdeci">void move(QPair&lt; int, int &gt; from, QPair&lt; int, int &gt; to)</div><div class="ttdoc">move перемещает фигуру в board</div><div class="ttdef"><b>Definition:</b> board.cpp:9</div></div>
 <div class="ttc" id="aclassFigure_html"><div class="ttname"><a href="classFigure.html">Figure</a></div><div class="ttdef"><b>Definition:</b> figures.h:8</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->

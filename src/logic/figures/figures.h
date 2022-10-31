@@ -25,25 +25,30 @@ public:
 
 class Queen : public Figure {
 public:
+  Queen();
   QList<QPair<int, int>> getUnarySteps(QPair<int, int> step);
 };
 
 class Bishop : public Figure {
 public:
+  Bishop();
   QList<QPair<int, int>> getUnarySteps(QPair<int, int> step);
 };
 
 class Rook : public Figure {
 public:
+  Rook();
   QList<QPair<int, int>> getUnarySteps(QPair<int, int> step);
 };
 
 class Kinght : public Figure {
 public:
+  Kinght();
   QList<QPair<int, int>> getUnarySteps(QPair<int, int> step);
 };
 
 class Pawn : public Figure {
 public:
+  Pawn();
   QList<QPair<int, int>> getUnarySteps(QPair<int, int> step);
 };

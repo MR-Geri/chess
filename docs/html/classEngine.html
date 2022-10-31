@@ -71,10 +71,49 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Открытые члены</h2></td></tr>
-<tr class="memitem:a936ddd5d85b63d46016d859b53b773b1"><td class="memItemLeft" align="right" valign="top"><a id="a936ddd5d85b63d46016d859b53b773b1"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>move</b> (QPair&lt; int, int &gt; from_pos, QPair&lt; int, int &gt; step)</td></tr>
+<tr class="memitem:a936ddd5d85b63d46016d859b53b773b1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEngine.html#a936ddd5d85b63d46016d859b53b773b1">move</a> (QPair&lt; int, int &gt; from_pos, QPair&lt; int, int &gt; step)</td></tr>
+<tr class="memdesc:a936ddd5d85b63d46016d859b53b773b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">move проверяет возможность хода и перемещает фигуру.  <a href="classEngine.html#a936ddd5d85b63d46016d859b53b773b1">Подробнее...</a><br /></td></tr>
 <tr class="separator:a936ddd5d85b63d46016d859b53b773b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Методы</h2>
+<a id="a936ddd5d85b63d46016d859b53b773b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a936ddd5d85b63d46016d859b53b773b1">&#9670;&nbsp;</a></span>move()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Engine::move </td>
+          <td>(</td>
+          <td class="paramtype">QPair&lt; int, int &gt;&#160;</td>
+          <td class="paramname"><em>from_pos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QPair&lt; int, int &gt;&#160;</td>
+          <td class="paramname"><em>step</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>move проверяет возможность хода и перемещает фигуру. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">from_pos</td><td>позиция фигуры, которую переместить </td></tr>
+    <tr><td class="paramname">step</td><td>шаг, на который переместить фигуру </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>статус перемещения. 0 - перемещение выполнено. </dd></dl>
+
+</div>
+</div>
 <hr/>Объявления и описания членов классов находятся в файлах:<ul>
 <li>src/logic/engine/<a class="el" href="engine_8h_source.html">engine.h</a></li>
 <li>src/logic/engine/engine.cpp</li>

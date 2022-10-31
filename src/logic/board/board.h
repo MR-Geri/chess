@@ -52,6 +52,12 @@ public:
    */
   int getSituation() const;
 
+  /**
+   * @brief move
+   * перемещает фигуру в board
+   * @param from позиция с которой переместить фигуру.
+   * @param to позиция куда переместить фигуру.
+   */
   void move(QPair<int, int> from, QPair<int, int> to);
 
 private:
