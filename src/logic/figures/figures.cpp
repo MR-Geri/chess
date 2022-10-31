@@ -1,6 +1,8 @@
 #include "figures.h"
 #include <QPair>
 
+Figure::Figure() { b_price = 0; }
+
 int Figure::getPrice() { return b_price; }
 
 QSet<QPair<int, int>> Figure::getPossibleMoves() { return possible_moves; }

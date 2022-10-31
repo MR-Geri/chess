@@ -7,6 +7,7 @@
 
 class Figure {
 public:
+  Figure();
   virtual QList<QPair<int, int>> getUnarySteps(QPair<int, int> step) = 0;
   int getPrice();
   QSet<QPair<int, int>> getPossibleMoves();
