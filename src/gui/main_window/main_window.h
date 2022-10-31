@@ -16,16 +16,16 @@ class MainWindow;
 QT_END_NAMESPACE
 
 /*!
- * \brief The MainWindow
+ * @brief The MainWindow
  * наследникQT QMainWindow. Главный класс игры.
  * Этот класс связывает окна игры.
- * \param ScreenGame
+ * @param ScreenGame
  * окно с полем игры.
- * \param ScreenMenu
+ * @param ScreenMenu
  * окно меню.
- * \param ScreenSettings
+ * @param ScreenSettings
  * окно настроек.
- * \param ScreenLiderboard
+ * @param ScreenLiderboard
  * окно таблицы лидеров.
  */
 class MainWindow : public QMainWindow {
@@ -33,19 +33,19 @@ class MainWindow : public QMainWindow {
 
 public:
   /*!
-   * \brief MainWindow
+   * @brief MainWindow
    * конструктор.
-   * \param parent
+   * @param parent
    */
   MainWindow(QWidget *parent = nullptr);
   ~MainWindow();
 
 public slots:
   /*!
-   * \brief windows_manager
+   * @brief windows_manager
    * менеджер окон, переключает QStacedWidget на тот виджет,
    * номер которого ему передали.
-   * \param window_id
+   * @param window_id
    * номер виджета (окна).
    */
   void windows_manager(int window_id);
