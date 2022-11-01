@@ -8,6 +8,7 @@
 class Figure {
 public:
   Figure();
+  Figure(int _b_price);
   QList<QPair<int, int>> getUnarySteps(QPair<int, int> step);
   int getPrice();
   QSet<QPair<int, int>> getPossibleMoves();
