@@ -28,26 +28,32 @@ private slots:
    * @brief Отправляет сигнал о смене окна на окно меню.
    */
   void buttonBackSettingsReleased();
+
   /**
    * @brief Включает музыку.
    */
   void startMusic();
+
   /**
    * @brief Выключает музыку.
    */
   void stopMusic();
+
   /**
    * @brief Включает звуки.
    */
   void startSounds();
+
   /**
    * @brief Выключает звуки.
    */
   void stopSounds();
+
   /**
    * @brief Изменяет громкость музыки.
    */
   void changeMusicVolume();
+
   /**
    * @brief Изменяет громкость звуков.
    */

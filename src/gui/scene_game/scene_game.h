@@ -18,6 +18,7 @@ signals:
    * ход для записи.
    */
   void saveMove(QString move);
+
   /**
    * @brief Показывает, какой ход был совершен.
    * @param coords_from

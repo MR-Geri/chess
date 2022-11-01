@@ -25,6 +25,7 @@ public:
    * список возможных ходов для фигуры с координатами.
    */
   QList<QPair<int, int>> getPossibleStepsFrom(QPair<int, int> coords) const;
+
   /**
    * @brief Возвращает фигуру, которая находится в
    * ячейке поля с координатами coords.
@@ -33,6 +34,7 @@ public:
    * @return наследника класса Figure.
    */
   Figure getFigure(QPair<int, int> coords) const;
+
   /**
    * @brief Возвращает текущую ситуацию на поле.
    * @warning
