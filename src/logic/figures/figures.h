@@ -1,13 +1,14 @@
 #pragma once
 
+#include "../../constants.h"
 #include "../../utils.h"
 #include <list>
 #include <set>
 
 class Figure {
 public:
-  Figure();
-  Figure(int _b_price);
+  Figure(FigureColor color = WHITE);
+  Figure(int price, FigureColor color = WHITE);
 
   int getPrice();
   std::list<Position> getUnarySteps(Position step);
@@ -17,43 +18,38 @@ public:
 protected:
   int b_price;
   std::set<Position> possible_moves;
+  FigureColor b_color;
 };
 
 class King : public Figure {
 public:
-  King();
-  std::list<Position> getUnarySteps(Position step);
+  King(FigureColor color = WHITE);
 };
 
 class Queen : public Figure {
 public:
-  Queen();
-  std::list<Position> getUnarySteps(Position step);
+  Queen(FigureColor color = WHITE);
 };
 
 class Bishop : public Figure {
 public:
-  Bishop();
-  std::list<Position> getUnarySteps(Position step);
+  Bishop(FigureColor color = WHITE);
 };
 
 class Rook : public Figure {
 public:
-  Rook();
-  std::list<Position> getUnarySteps(Position step);
+  Rook(FigureColor color = WHITE);
 };
 
 class Kinght : public Figure {
 public:
-  Kinght();
+  Kinght(FigureColor color = WHITE);
   std::list<Position> getUnarySteps(Position step);
 };
 
 class Pawn : public Figure {
 public:
-  bool check();
-  Pawn();
-  Pawn(bool flag_move);
-  std::list<Position> getUnarySteps(Position step);
+  Pawn(FigureColor color = WHITE);
+  Pawn(bool flag_move, FigureColor color = WHITE);
   std::set<Position> getPossibleAttacks();
 };

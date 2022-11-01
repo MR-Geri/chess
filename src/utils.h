@@ -10,9 +10,6 @@ public:
   Position(const Position &pos) : Base(pos) {}
   Position(int x, int y) : Base(x, y) {}
 
-  int &x() { return first; }
-  const int &x() const { return first; }
-
-  int &y() { return second; }
-  const int &y() const { return second; }
+  int &x = this->first;
+  int &y = this->second;
 };

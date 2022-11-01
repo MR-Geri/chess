@@ -15,6 +15,7 @@ public:
    * (стартовая расстановка и набор фигур).
    */
   Board();
+  ~Board();
   /**
    * @brief Возвращает список ходов, которые может совершить
    * фигура, находящаяся на поле в ячейке с координатами coords.
@@ -50,6 +51,10 @@ public:
    * @param to позиция куда переместить фигуру.
    */
   void move(Position from, Position to);
+
+  bool setFigureOn(Figure *figure, Position position);
+
+  void clear();
 
 private:
   std::vector<std::vector<Figure *>> board;

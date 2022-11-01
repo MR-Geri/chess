@@ -7,6 +7,7 @@
 class Engine {
 public:
   Engine();
+  ~Engine();
 
   /**
    * @brief Проверяет возможность хода и перемещает фигуру.
@@ -16,8 +17,14 @@ public:
    */
   StatusMove move(Position from_pos, Position step);
 
-  // void
+  void calculateAdvantage();
+
+  void setStartingArrangement();
+
+  bool setFigureOnBoard(Figure *figure, Position position);
 
 private:
   Board game_board;
+  int advantage; // Преимущесто кого-то из игроков. Отрицательное значение -
+                 // преимущество черных, положительное - белых.
 };

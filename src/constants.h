@@ -1,7 +1,7 @@
 #pragma once
 
 /**
- * \brief Перечисление, содержащее окна приложения.
+ * @brief Перечисление, содержащее окна приложения.
  */
 enum Windows { GAME_FIELD, MENU, SETTINGS, LIDERBOARD, EXIT };
 
@@ -14,3 +14,10 @@ enum Windows { GAME_FIELD, MENU, SETTINGS, LIDERBOARD, EXIT };
  * \n MOVE_TO_YOUR_FIGURE - ход совершается на/через собственную фигуру
  */
 enum StatusMove { DONE, FAIL, GO_OUT, IMPOSSIBLE_MOVE, MOVE_TO_YOUR_FIGURE };
+
+/**
+ * @brief Перечисление, содержащее веса фигур.
+ */
+enum FiguresPrice { KING = -1, PAWN = 1, KINGHT, BISHOP, ROOK, QUEEN };
+
+enum FigureColor { WHITE, BLACK };

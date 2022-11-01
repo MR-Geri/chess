@@ -6,11 +6,14 @@ std::set<Position> Figure::getPossibleMoves() { return possible_moves; }
 
 std::set<Position> Figure::getPossibleAttacks() { return possible_moves; }
 
-Figure::Figure() { b_price = 0; }
+Figure::Figure(FigureColor color) {
+  b_price = 0;
+  b_color = color;
+}
 
-Figure::Figure(int _b_price) : b_price(_b_price) {}
+Figure::Figure(int price, FigureColor color) : b_price(price), b_color(color) {}
 
-King::King() : Figure(-1) {
+King::King(FigureColor color) : Figure(KING, color) {
   for (int i = 0; i <= 1; i++) {
     for (int j = 0; j <= 1; j++) {
       if (i != 0 && j != 0)
@@ -19,7 +22,7 @@ King::King() : Figure(-1) {
   }
 }
 
-Queen::Queen() : Figure(5) {
+Queen::Queen(FigureColor color) : Figure(QUEEN, color) {
   for (int i = -7; i <= 7; i++) {
     for (int j = -7; j <= 7; j++) {
       if (i != 0 && j != 0)
@@ -28,7 +31,7 @@ Queen::Queen() : Figure(5) {
   }
 }
 
-Bishop::Bishop() : Figure(4) {
+Bishop::Bishop(FigureColor color) : Figure(BISHOP, color) {
   for (int i = 1; i <= 7; i++) {
     possible_moves.insert({i, i});
     possible_moves.insert({-i, i});
@@ -37,7 +40,7 @@ Bishop::Bishop() : Figure(4) {
   }
 }
 
-Rook::Rook() : Figure(3) {
+Rook::Rook(FigureColor color) : Figure(ROOK, color) {
   for (int i = 1; i <= 7; i++) {
     possible_moves.insert({0, i});
     possible_moves.insert({i, 0});
@@ -46,7 +49,7 @@ Rook::Rook() : Figure(3) {
   }
 }
 
-Kinght::Kinght() : Figure(2) {
+Kinght::Kinght(FigureColor color) : Figure(KINGHT, color) {
   possible_moves.insert({1, 2});
   possible_moves.insert({1, -2});
   possible_moves.insert({-1, 2});
@@ -57,9 +60,11 @@ Kinght::Kinght() : Figure(2) {
   possible_moves.insert({-2, -1});
 }
 
-Pawn::Pawn() : Figure(1) { possible_moves.insert({0, 1}); }
+Pawn::Pawn(FigureColor color) : Figure(PAWN, color) {
+  possible_moves.insert({0, 1});
+}
 
-Pawn::Pawn(bool flag_move) : Figure(1) {
+Pawn::Pawn(bool flag_move, FigureColor color) : Figure(PAWN, color) {
   if (flag_move) {
     possible_moves.insert({0, 1});
   } else {
@@ -76,14 +81,14 @@ std::set<Position> Pawn::getPossibleAttacks() {
 }
 
 std::list<Position> Figure::getUnarySteps(Position step) {
-  int x_step = step.x() != 0 ? std::min(std::max(step.x(), -1), 1) : 0;
-  int y_step = step.y() != 0 ? std::min(std::max(step.y(), -1), 1) : 0;
+  int x_step = step.x != 0 ? std::min(std::max(step.x, -1), 1) : 0;
+  int y_step = step.y != 0 ? std::min(std::max(step.y, -1), 1) : 0;
   std::list<Position> out;
   Position pos(0, 0);
   while (pos != step) {
     out.emplace_back(pos);
-    pos.x() += x_step;
-    pos.y() += y_step;
+    pos.x += x_step;
+    pos.y += y_step;
   }
   return out;
 }

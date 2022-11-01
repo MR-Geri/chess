@@ -12,46 +12,71 @@ Board::Board() {
   }
 }
 
+Board::~Board() {
+  for (int i = 0; i < 8; i++) {
+    for (int j = 0; j < 8; j++) {
+      if (board[i][j] != nullptr) {
+        delete board[i][j];
+      }
+    }
+  }
+}
+
 Figure *Board::getFigure(Position coords) const {
-  return board[coords.x()][coords.y()]; // TODO
+  return board[coords.x][coords.y]; // TODO
 }
 
 void Board::move(Position from, Position to) {
-  int to_price = board[to.x()][to.y()]->getPrice(),
-      price = board[from.x()][from.y()]->getPrice();
+  int to_price = board[to.x][to.y]->getPrice(),
+      price = board[from.x][from.y]->getPrice();
 
   if (to_price != 0 && price != -1) {
     int price = price - round(float(price - to_price) / 2);
   }
 
-  if (board[to.x()][to.y()] != nullptr)
-    delete board[to.x()][to.y()];
+  if (board[to.x][to.y] != nullptr)
+    delete board[to.x][to.y];
+
+  delete board[from.x][from.y];
+  board[from.x][from.y] = nullptr;
 
   switch (price) {
-  case -1:
-    board[to.x()][to.y()] = board[from.x()][from.y()];
+  case KING:
+    board[to.x][to.y] = new King();
     break;
-  case 1:
-    board[to.x()][to.y()] = board[from.x()][from.y()];
-    board[to.x()][to.y()] = static_cast<Pawn *>(board[to.x()][to.y()]);
+  case PAWN:
+    board[to.x][to.y] = new Pawn();
     break;
-  case 2:
-    board[to.x()][to.y()] = board[from.x()][from.y()];
-    board[to.x()][to.y()] = static_cast<Kinght *>(board[to.x()][to.y()]);
+  case KINGHT:
+    board[to.x][to.y] = new Kinght();
     break;
-  case 3:
-    board[to.x()][to.y()] = board[from.x()][from.y()];
-    board[to.x()][to.y()] = static_cast<Rook *>(board[to.x()][to.y()]);
+  case ROOK:
+    board[to.x][to.y] = new Rook();
     break;
-  case 4:
-    board[to.x()][to.y()] = board[from.x()][from.y()];
-    board[to.x()][to.y()] = static_cast<Bishop *>(board[to.x()][to.y()]);
+  case BISHOP:
+    board[to.x][to.y] = new Bishop();
     break;
-  case 5:
-    board[to.x()][to.y()] = board[from.x()][from.y()];
-    board[to.x()][to.y()] = static_cast<Queen *>(board[to.x()][to.y()]);
+  case QUEEN:
+    board[to.x][to.y] = new Queen();
     break;
   }
+}
 
-  board[from.x()][from.y()] = nullptr;
+bool Board::setFigureOn(Figure *figure, Position position) {
+  if (board[position.x][position.y] != nullptr) {
+    delete figure;
+    return false;
+  }
+  board[position.x][position.y] = figure;
+  return true;
+}
+
+void Board::clear() {
+  for (int i = 0; i < 8; i++) {
+    for (int j = 0; j < 8; j++) {
+      if (board[i][j] != nullptr) {
+        delete board[i][j];
+      }
+    }
+  }
 }
