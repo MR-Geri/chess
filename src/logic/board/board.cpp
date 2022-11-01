@@ -5,11 +5,11 @@ Board::Board() {
   // Pawn(false)
 }
 
-Figure Board::getFigure(QPair<int, int> coords) const {
+Figure Board::getFigure(std::pair<int, int> coords) const {
   return board[coords.first][coords.second]; // TODO
 }
 
-void Board::move(QPair<int, int> from, QPair<int, int> to) {
+void Board::move(std::pair<int, int> from, std::pair<int, int> to) {
   int to_price = board[to.first][to.second].getPrice(),
       price = board[from.first][from.second].getPrice();
 

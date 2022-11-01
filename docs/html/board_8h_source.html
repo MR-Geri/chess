@@ -72,33 +72,31 @@ $(function() {
 <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;../figures/figures.h&quot;</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;QList&gt;</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;QPair&gt;</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;qpair.h&gt;</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
-<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="classBoard.html">   12</a></span>&#160;<span class="keyword">class </span><a class="code" href="classBoard.html">Board</a> {</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;  <a class="code" href="classBoard.html#a9ee491d4fea680cf69b033374a9fdfcb">Board</a>();</div>
-<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="classBoard.html#a1c596b241131252e8754026222d9b79d">   27</a></span>&#160;  QList&lt;QPair&lt;int, int&gt;&gt; <a class="code" href="classBoard.html#a1c596b241131252e8754026222d9b79d">getPossibleStepsFrom</a>(QPair&lt;int, int&gt; coords) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;list&gt;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="classBoard.html">   11</a></span>&#160;<span class="keyword">class </span><a class="code" href="classBoard.html">Board</a> {</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;  <a class="code" href="classBoard.html#a9ee491d4fea680cf69b033374a9fdfcb">Board</a>();</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  std::list&lt;std::pair&lt;int, int&gt;&gt;</div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="classBoard.html#a2ee058daca7b24f273e0a028e1885445">   27</a></span>&#160;  <a class="code" href="classBoard.html#a2ee058daca7b24f273e0a028e1885445">getPossibleStepsFrom</a>(std::pair&lt;int, int&gt; coords) <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  <a class="code" href="classFigure.html">Figure</a> <a class="code" href="classBoard.html#a02b1cb1a48042b78cb5ff5d7e2147d38">getFigure</a>(QPair&lt;int, int&gt; coords) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  <a class="code" href="classFigure.html">Figure</a> <a class="code" href="classBoard.html#a5f16c8cba2a17b5776d9ca3260b9efb2">getFigure</a>(std::pair&lt;int, int&gt; coords) <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
 <div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="classBoard.html#ab88eabe2d17dadba7cbe4bf2a73e5b77">   46</a></span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classBoard.html#ab88eabe2d17dadba7cbe4bf2a73e5b77">getSituation</a>() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classBoard.html#ae19c1f44d1f6e4183ca2c6a66c27bc34">move</a>(QPair&lt;int, int&gt; from, QPair&lt;int, int&gt; to);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classBoard.html#a96e9303bc38a629850d43831f9b47ad9">move</a>(std::pair&lt;int, int&gt; from, std::pair&lt;int, int&gt; to);</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  <span class="keywordtype">void</span> transform(QPair&lt;int, int&gt; pos);</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  QVector&lt;QVector&lt;Figure&gt;&gt; board;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;};</div>
-<div class="ttc" id="aclassBoard_html"><div class="ttname"><a href="classBoard.html">Board</a></div><div class="ttdoc">Обрабатывает логику игрового поля.</div><div class="ttdef"><b>Definition:</b> board.h:12</div></div>
-<div class="ttc" id="aclassBoard_html_a02b1cb1a48042b78cb5ff5d7e2147d38"><div class="ttname"><a href="classBoard.html#a02b1cb1a48042b78cb5ff5d7e2147d38">Board::getFigure</a></div><div class="ttdeci">Figure getFigure(QPair&lt; int, int &gt; coords) const</div><div class="ttdoc">Возвращает фигуру, которая находится в ячейке поля с координатами coords.</div><div class="ttdef"><b>Definition:</b> board.cpp:8</div></div>
-<div class="ttc" id="aclassBoard_html_a1c596b241131252e8754026222d9b79d"><div class="ttname"><a href="classBoard.html#a1c596b241131252e8754026222d9b79d">Board::getPossibleStepsFrom</a></div><div class="ttdeci">QList&lt; QPair&lt; int, int &gt; &gt; getPossibleStepsFrom(QPair&lt; int, int &gt; coords) const</div><div class="ttdoc">Возвращает список ходов, которые может совершить фигура, находящаяся на поле в ячейке с координатами ...</div></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  std::vector&lt;std::vector&lt;Figure&gt;&gt; board;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;};</div>
+<div class="ttc" id="aclassBoard_html"><div class="ttname"><a href="classBoard.html">Board</a></div><div class="ttdoc">Обрабатывает логику игрового поля.</div><div class="ttdef"><b>Definition:</b> board.h:11</div></div>
+<div class="ttc" id="aclassBoard_html_a2ee058daca7b24f273e0a028e1885445"><div class="ttname"><a href="classBoard.html#a2ee058daca7b24f273e0a028e1885445">Board::getPossibleStepsFrom</a></div><div class="ttdeci">std::list&lt; std::pair&lt; int, int &gt; &gt; getPossibleStepsFrom(std::pair&lt; int, int &gt; coords) const</div><div class="ttdoc">Возвращает список ходов, которые может совершить фигура, находящаяся на поле в ячейке с координатами ...</div></div>
+<div class="ttc" id="aclassBoard_html_a5f16c8cba2a17b5776d9ca3260b9efb2"><div class="ttname"><a href="classBoard.html#a5f16c8cba2a17b5776d9ca3260b9efb2">Board::getFigure</a></div><div class="ttdeci">Figure getFigure(std::pair&lt; int, int &gt; coords) const</div><div class="ttdoc">Возвращает фигуру, которая находится в ячейке поля с координатами coords.</div><div class="ttdef"><b>Definition:</b> board.cpp:8</div></div>
+<div class="ttc" id="aclassBoard_html_a96e9303bc38a629850d43831f9b47ad9"><div class="ttname"><a href="classBoard.html#a96e9303bc38a629850d43831f9b47ad9">Board::move</a></div><div class="ttdeci">void move(std::pair&lt; int, int &gt; from, std::pair&lt; int, int &gt; to)</div><div class="ttdoc">Перемещает фигуру в board.</div><div class="ttdef"><b>Definition:</b> board.cpp:12</div></div>
 <div class="ttc" id="aclassBoard_html_a9ee491d4fea680cf69b033374a9fdfcb"><div class="ttname"><a href="classBoard.html#a9ee491d4fea680cf69b033374a9fdfcb">Board::Board</a></div><div class="ttdeci">Board()</div><div class="ttdoc">Коструктор по умолчанию, генерирует поле с фигурами (стартовая расстановка и набор фигур).</div><div class="ttdef"><b>Definition:</b> board.cpp:4</div></div>
 <div class="ttc" id="aclassBoard_html_ab88eabe2d17dadba7cbe4bf2a73e5b77"><div class="ttname"><a href="classBoard.html#ab88eabe2d17dadba7cbe4bf2a73e5b77">Board::getSituation</a></div><div class="ttdeci">int getSituation() const</div><div class="ttdoc">Возвращает текущую ситуацию на поле.</div></div>
-<div class="ttc" id="aclassBoard_html_ae19c1f44d1f6e4183ca2c6a66c27bc34"><div class="ttname"><a href="classBoard.html#ae19c1f44d1f6e4183ca2c6a66c27bc34">Board::move</a></div><div class="ttdeci">void move(QPair&lt; int, int &gt; from, QPair&lt; int, int &gt; to)</div><div class="ttdoc">Перемещает фигуру в board.</div><div class="ttdef"><b>Definition:</b> board.cpp:12</div></div>
-<div class="ttc" id="aclassFigure_html"><div class="ttname"><a href="classFigure.html">Figure</a></div><div class="ttdef"><b>Definition:</b> figures.h:8</div></div>
+<div class="ttc" id="aclassFigure_html"><div class="ttname"><a href="classFigure.html">Figure</a></div><div class="ttdef"><b>Definition:</b> figures.h:6</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

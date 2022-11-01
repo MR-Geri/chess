@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['getfigure_44',['getFigure',['../classBoard.html#a02b1cb1a48042b78cb5ff5d7e2147d38',1,'Board']]],
-  ['getpossiblestepsfrom_45',['getPossibleStepsFrom',['../classBoard.html#a1c596b241131252e8754026222d9b79d',1,'Board']]],
+  ['getfigure_44',['getFigure',['../classBoard.html#a5f16c8cba2a17b5776d9ca3260b9efb2',1,'Board']]],
+  ['getpossiblestepsfrom_45',['getPossibleStepsFrom',['../classBoard.html#a2ee058daca7b24f273e0a028e1885445',1,'Board']]],
   ['getsituation_46',['getSituation',['../classBoard.html#ab88eabe2d17dadba7cbe4bf2a73e5b77',1,'Board']]]
 ];

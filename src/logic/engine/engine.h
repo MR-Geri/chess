@@ -2,8 +2,6 @@
 
 #include "../board/board.h"
 #include "../figures/figures.h"
-#include <QPair>
-#include <QVector>
 
 class Engine {
 public:
@@ -20,9 +18,9 @@ public:
    * \n 3 - фигура не может совершить такой ход
    * \n 4 - ход совершается на/через собственную фигуру
    */
-  int move(QPair<int, int> from_pos, QPair<int, int> step);
+  int move(std::pair<int, int> from_pos, std::pair<int, int> step);
 
-  int transform(QPair<int, int> pos);
+  // void
 
 private:
   Board game_board;
