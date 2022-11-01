@@ -23,8 +23,7 @@ public:
    * @return
    * список возможных ходов для фигуры с координатами.
    */
-  std::list<std::pair<int, int>>
-  getPossibleStepsFrom(std::pair<int, int> coords) const;
+  std::list<Position> getPossibleStepsFrom(Position coords) const;
 
   /**
    * @brief Возвращает фигуру, которая находится в
@@ -33,7 +32,7 @@ public:
    * координаты ячейки поля, содержимое которой нужно узнать.
    * @return наследника класса Figure.
    */
-  Figure getFigure(std::pair<int, int> coords) const;
+  Figure *getFigure(Position coords) const;
 
   /**
    * @brief Возвращает текущую ситуацию на поле.
@@ -50,8 +49,8 @@ public:
    * @param from позиция с которой переместить фигуру.
    * @param to позиция куда переместить фигуру.
    */
-  void move(std::pair<int, int> from, std::pair<int, int> to);
+  void move(Position from, Position to);
 
 private:
-  std::vector<std::vector<Figure>> board;
+  std::vector<std::vector<Figure *>> board;
 };

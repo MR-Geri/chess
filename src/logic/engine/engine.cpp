@@ -2,28 +2,25 @@
 
 Engine::Engine() {}
 
-StatusMove Engine::move(std::pair<int, int> from_pos,
-                        std::pair<int, int> step) {
-  std::pair<int, int> to_pos(from_pos.first + step.first,
-                             from_pos.second + step.second);
-  if (step.first == 0 && step.second == 0) {
+StatusMove Engine::move(Position from_pos, Position step) {
+  Position to_pos(from_pos.x() + step.x(), from_pos.y() + step.y());
+  if (step.x() == 0 && step.y() == 0) {
     // Отсутствие хода
     return FAIL;
   }
 
-  if (to_pos.first < 0 || to_pos.first >= 8 || to_pos.second < 0 ||
-      to_pos.second >= 8) {
+  if (to_pos.x() < 0 || to_pos.x() >= 8 || to_pos.y() < 0 || to_pos.y() >= 8) {
     // Выход за поле
     return GO_OUT;
   }
 
-  std::set<std::pair<int, int>> possible_moves =
-      game_board.getFigure(from_pos).getPossibleMoves();
-  std::set<std::pair<int, int>> possible_attacks =
-      game_board.getFigure(from_pos).getPossibleAttacks();
-  Figure to_pos_figure = game_board.getFigure(to_pos);
+  std::set<Position> possible_moves =
+      game_board.getFigure(from_pos)->getPossibleMoves();
+  std::set<Position> possible_attacks =
+      game_board.getFigure(from_pos)->getPossibleAttacks();
+  Figure *to_pos_figure = game_board.getFigure(to_pos);
   if ((possible_moves.find(step) == possible_moves.end() ||
-       to_pos_figure.getPrice() != 0) ||
+       to_pos_figure->getPrice() != 0) ||
       possible_attacks.find(step) == possible_attacks.end()) {
     // Невозможный ход
     return IMPOSSIBLE_MOVE;

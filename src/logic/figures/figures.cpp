@@ -2,13 +2,9 @@
 
 int Figure::getPrice() { return b_price; }
 
-std::set<std::pair<int, int>> Figure::getPossibleMoves() {
-  return possible_moves;
-}
+std::set<Position> Figure::getPossibleMoves() { return possible_moves; }
 
-std::set<std::pair<int, int>> Figure::getPossibleAttacks() {
-  return possible_moves;
-}
+std::set<Position> Figure::getPossibleAttacks() { return possible_moves; }
 
 Figure::Figure() { b_price = 0; }
 
@@ -72,26 +68,26 @@ Pawn::Pawn(bool flag_move) : Figure(1) {
   }
 }
 
-std::set<std::pair<int, int>> Pawn::getPossibleAttacks() {
-  std::set<std::pair<int, int>> out;
+std::set<Position> Pawn::getPossibleAttacks() {
+  std::set<Position> out;
   out.insert({1, 1});
   out.insert({-1, 1});
   return out;
 }
 
-std::list<std::pair<int, int>> Figure::getUnarySteps(std::pair<int, int> step) {
-  int x_step = step.first != 0 ? std::min(std::max(step.first, -1), 1) : 0;
-  int y_step = step.second != 0 ? std::min(std::max(step.second, -1), 1) : 0;
-  std::list<std::pair<int, int>> out;
-  std::pair<int, int> pos(0, 0);
+std::list<Position> Figure::getUnarySteps(Position step) {
+  int x_step = step.x() != 0 ? std::min(std::max(step.x(), -1), 1) : 0;
+  int y_step = step.y() != 0 ? std::min(std::max(step.y(), -1), 1) : 0;
+  std::list<Position> out;
+  Position pos(0, 0);
   while (pos != step) {
     out.emplace_back(pos);
-    pos.first += x_step;
-    pos.second += y_step;
+    pos.x() += x_step;
+    pos.y() += y_step;
   }
   return out;
 }
 
-std::list<std::pair<int, int>> Kinght::getUnarySteps(std::pair<int, int> step) {
-  return std::list<std::pair<int, int>>({step});
+std::list<Position> Kinght::getUnarySteps(Position step) {
+  return std::list<Position>({step});
 }

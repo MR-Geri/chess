@@ -14,7 +14,7 @@ public:
    * @param step шаг, на который переместить фигуру
    * @return статус перемещения StatusMove (Enum)
    */
-  StatusMove move(std::pair<int, int> from_pos, std::pair<int, int> step);
+  StatusMove move(Position from_pos, Position step);
 
   // void
 

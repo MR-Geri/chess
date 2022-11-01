@@ -1,5 +1,6 @@
 #pragma once
 
+#include "../../utils.h"
 #include <list>
 #include <set>
 
@@ -9,49 +10,50 @@ public:
   Figure(int _b_price);
 
   int getPrice();
-  std::list<std::pair<int, int>> getUnarySteps(std::pair<int, int> step);
-  std::set<std::pair<int, int>> getPossibleMoves();
-  std::set<std::pair<int, int>> getPossibleAttacks();
+  std::list<Position> getUnarySteps(Position step);
+  std::set<Position> getPossibleMoves();
+  std::set<Position> getPossibleAttacks();
 
 protected:
   int b_price;
-  std::set<std::pair<int, int>> possible_moves;
+  std::set<Position> possible_moves;
 };
 
 class King : public Figure {
 public:
   King();
-  std::list<std::pair<int, int>> getUnarySteps(std::pair<int, int> step);
+  std::list<Position> getUnarySteps(Position step);
 };
 
 class Queen : public Figure {
 public:
   Queen();
-  std::list<std::pair<int, int>> getUnarySteps(std::pair<int, int> step);
+  std::list<Position> getUnarySteps(Position step);
 };
 
 class Bishop : public Figure {
 public:
   Bishop();
-  std::list<std::pair<int, int>> getUnarySteps(std::pair<int, int> step);
+  std::list<Position> getUnarySteps(Position step);
 };
 
 class Rook : public Figure {
 public:
   Rook();
-  std::list<std::pair<int, int>> getUnarySteps(std::pair<int, int> step);
+  std::list<Position> getUnarySteps(Position step);
 };
 
 class Kinght : public Figure {
 public:
   Kinght();
-  std::list<std::pair<int, int>> getUnarySteps(std::pair<int, int> step);
+  std::list<Position> getUnarySteps(Position step);
 };
 
 class Pawn : public Figure {
 public:
+  bool check();
   Pawn();
   Pawn(bool flag_move);
-  std::list<std::pair<int, int>> getUnarySteps(std::pair<int, int> step);
-  std::set<std::pair<int, int>> getPossibleAttacks();
+  std::list<Position> getUnarySteps(Position step);
+  std::set<Position> getPossibleAttacks();
 };
