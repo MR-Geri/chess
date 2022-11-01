@@ -11,6 +11,7 @@ public:
   QList<QPair<int, int>> getUnarySteps(QPair<int, int> step);
   int getPrice();
   QSet<QPair<int, int>> getPossibleMoves();
+  QSet<QPair<int, int>> getPossibleAttacks();
 
 protected:
   int b_price;
@@ -50,5 +51,7 @@ public:
 class Pawn : public Figure {
 public:
   Pawn();
+  Pawn(bool flag_move);
   QList<QPair<int, int>> getUnarySteps(QPair<int, int> step);
+  QSet<QPair<int, int>> getPossibleAttacks();
 };

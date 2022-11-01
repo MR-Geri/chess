@@ -22,6 +22,8 @@ public:
    */
   int move(QPair<int, int> from_pos, QPair<int, int> step);
 
+  int transform(QPair<int, int> pos);
+
 private:
   Board game_board;
 };

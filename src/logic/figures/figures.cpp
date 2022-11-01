@@ -5,10 +5,12 @@ int Figure::getPrice() { return b_price; }
 
 QSet<QPair<int, int>> Figure::getPossibleMoves() { return possible_moves; }
 
+QSet<QPair<int, int>> Figure::getPossibleAttacks() { return possible_moves; }
+
 Figure::Figure() { b_price = 0; }
 
 King::King() : Figure() {
-  b_price = 0;
+  b_price = -1;
   for (int i = 0; i <= 1; i++) {
     for (int j = 0; j <= 1; j++) {
       if (i != 0 && j != 0)
@@ -18,7 +20,7 @@ King::King() : Figure() {
 }
 
 Queen::Queen() : Figure() {
-  b_price = 0;
+  b_price = 5;
   for (int i = -7; i <= 7; i++) {
     for (int j = -7; j <= 7; j++) {
       if (i != 0 && j != 0)
@@ -28,7 +30,7 @@ Queen::Queen() : Figure() {
 }
 
 Bishop::Bishop() : Figure() {
-  b_price = 0;
+  b_price = 4;
   for (int i = 1; i <= 7; i++) {
     possible_moves.insert({i, i});
     possible_moves.insert({-i, i});
@@ -38,7 +40,7 @@ Bishop::Bishop() : Figure() {
 }
 
 Rook::Rook() : Figure() {
-  b_price = 0;
+  b_price = 3;
   for (int i = 1; i <= 7; i++) {
     possible_moves.insert({0, i});
     possible_moves.insert({i, 0});
@@ -48,7 +50,7 @@ Rook::Rook() : Figure() {
 }
 
 Kinght::Kinght() : Figure() {
-  b_price = 0;
+  b_price = 2;
   possible_moves.insert({1, 2});
   possible_moves.insert({1, -2});
   possible_moves.insert({-1, 2});
@@ -60,13 +62,25 @@ Kinght::Kinght() : Figure() {
 }
 
 Pawn::Pawn() : Figure() {
-  b_price = 0;
-  for (int i = 0; i <= 1; i++) {
-    for (int j = 0; j <= 1; j++) {
-      if (i != 0 && j != 0)
-        possible_moves.insert({i, j});
-    }
+  b_price = 1;
+  possible_moves.insert({0, 1});
+}
+
+Pawn::Pawn(bool flag_move) : Figure() {
+  b_price = 1;
+  if (flag_move) {
+    possible_moves.insert({0, 1});
+  } else {
+    possible_moves.insert({0, 1});
+    possible_moves.insert({0, 2});
   }
+}
+
+QSet<QPair<int, int>> Pawn::getPossibleAttacks() {
+  QSet<QPair<int, int>> out;
+  out.insert({1, 1});
+  out.insert({-1, 1});
+  return out;
 }
 
 QList<QPair<int, int>> Figure::getUnarySteps(QPair<int, int> step) {

@@ -50,6 +50,8 @@ public:
    */
   void move(QPair<int, int> from, QPair<int, int> to);
 
+  void transform(QPair<int, int> pos);
+
 private:
   QVector<QVector<Figure>> board;
 };
