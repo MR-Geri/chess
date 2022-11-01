@@ -2,18 +2,19 @@
 
 Engine::Engine() {}
 
-int Engine::move(std::pair<int, int> from_pos, std::pair<int, int> step) {
+StatusMove Engine::move(std::pair<int, int> from_pos,
+                        std::pair<int, int> step) {
   std::pair<int, int> to_pos(from_pos.first + step.first,
                              from_pos.second + step.second);
   if (step.first == 0 && step.second == 0) {
     // Отсутствие хода
-    return 1;
+    return FAIL;
   }
 
   if (to_pos.first < 0 || to_pos.first >= 8 || to_pos.second < 0 ||
       to_pos.second >= 8) {
     // Выход за поле
-    return 2;
+    return GO_OUT;
   }
 
   std::set<std::pair<int, int>> possible_moves =
@@ -25,15 +26,15 @@ int Engine::move(std::pair<int, int> from_pos, std::pair<int, int> step) {
        to_pos_figure.getPrice() != 0) ||
       possible_attacks.find(step) == possible_attacks.end()) {
     // Невозможный ход
-    return 3;
+    return IMPOSSIBLE_MOVE;
   }
 
   // V Ошибка, если ход на/через собственную фигуру V
   if (0) {
-    return 4;
+    return MOVE_TO_YOUR_FIGURE;
   }
   // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   game_board.move(from_pos, to_pos);
-  return 0;
+  return DONE;
 }
