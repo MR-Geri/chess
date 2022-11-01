@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['move_47',['move',['../classBoard.html#ae19c1f44d1f6e4183ca2c6a66c27bc34',1,'Board::move()'],['../classEngine.html#a936ddd5d85b63d46016d859b53b773b1',1,'Engine::move()']]],
+  ['move_47',['move',['../classBoard.html#a96e9303bc38a629850d43831f9b47ad9',1,'Board::move()'],['../classEngine.html#ad1a74efec1ab9f2b6324fd7dd4e18174',1,'Engine::move()']]],
   ['movedfigure_48',['movedFigure',['../classSceneGame.html#a207d949439c411b6ca25c15a11b70a9c',1,'SceneGame']]]
 ];

@@ -1,9 +1,8 @@
 #pragma once
 
 #include "../figures/figures.h"
-#include <QList>
-#include <QPair>
-#include <qpair.h>
+#include <list>
+#include <vector>
 
 /**
  * @brief Обрабатывает логику игрового поля.
@@ -24,7 +23,8 @@ public:
    * @return
    * список возможных ходов для фигуры с координатами.
    */
-  QList<QPair<int, int>> getPossibleStepsFrom(QPair<int, int> coords) const;
+  std::list<std::pair<int, int>>
+  getPossibleStepsFrom(std::pair<int, int> coords) const;
 
   /**
    * @brief Возвращает фигуру, которая находится в
@@ -33,7 +33,7 @@ public:
    * координаты ячейки поля, содержимое которой нужно узнать.
    * @return наследника класса Figure.
    */
-  Figure getFigure(QPair<int, int> coords) const;
+  Figure getFigure(std::pair<int, int> coords) const;
 
   /**
    * @brief Возвращает текущую ситуацию на поле.
@@ -50,10 +50,8 @@ public:
    * @param from позиция с которой переместить фигуру.
    * @param to позиция куда переместить фигуру.
    */
-  void move(QPair<int, int> from, QPair<int, int> to);
-
-  void transform(QPair<int, int> pos);
+  void move(std::pair<int, int> from, std::pair<int, int> to);
 
 private:
-  QVector<QVector<Figure>> board;
+  std::vector<std::vector<Figure>> board;
 };

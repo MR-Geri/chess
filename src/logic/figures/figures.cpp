@@ -1,11 +1,14 @@
 #include "figures.h"
-#include <QPair>
 
 int Figure::getPrice() { return b_price; }
 
-QSet<QPair<int, int>> Figure::getPossibleMoves() { return possible_moves; }
+std::set<std::pair<int, int>> Figure::getPossibleMoves() {
+  return possible_moves;
+}
 
-QSet<QPair<int, int>> Figure::getPossibleAttacks() { return possible_moves; }
+std::set<std::pair<int, int>> Figure::getPossibleAttacks() {
+  return possible_moves;
+}
 
 Figure::Figure() { b_price = 0; }
 
@@ -69,26 +72,26 @@ Pawn::Pawn(bool flag_move) : Figure(1) {
   }
 }
 
-QSet<QPair<int, int>> Pawn::getPossibleAttacks() {
-  QSet<QPair<int, int>> out;
+std::set<std::pair<int, int>> Pawn::getPossibleAttacks() {
+  std::set<std::pair<int, int>> out;
   out.insert({1, 1});
   out.insert({-1, 1});
   return out;
 }
 
-QList<QPair<int, int>> Figure::getUnarySteps(QPair<int, int> step) {
+std::list<std::pair<int, int>> Figure::getUnarySteps(std::pair<int, int> step) {
   int x_step = step.first != 0 ? std::min(std::max(step.first, -1), 1) : 0;
   int y_step = step.second != 0 ? std::min(std::max(step.second, -1), 1) : 0;
-  QList<QPair<int, int>> out;
-  QPair<int, int> pos(0, 0);
+  std::list<std::pair<int, int>> out;
+  std::pair<int, int> pos(0, 0);
   while (pos != step) {
-    out.append(pos);
+    out.emplace_back(pos);
     pos.first += x_step;
     pos.second += y_step;
   }
   return out;
 }
 
-QList<QPair<int, int>> Kinght::getUnarySteps(QPair<int, int> step) {
-  return QList<QPair<int, int>>({step});
+std::list<std::pair<int, int>> Kinght::getUnarySteps(std::pair<int, int> step) {
+  return std::list<std::pair<int, int>>({step});
 }

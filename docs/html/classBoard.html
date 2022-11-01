@@ -80,21 +80,18 @@ $(function() {
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBoard.html#a9ee491d4fea680cf69b033374a9fdfcb">Board</a> ()</td></tr>
 <tr class="memdesc:a9ee491d4fea680cf69b033374a9fdfcb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Коструктор по умолчанию, генерирует поле с фигурами (стартовая расстановка и набор фигур). <br /></td></tr>
 <tr class="separator:a9ee491d4fea680cf69b033374a9fdfcb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1c596b241131252e8754026222d9b79d"><td class="memItemLeft" align="right" valign="top">QList&lt; QPair&lt; int, int &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBoard.html#a1c596b241131252e8754026222d9b79d">getPossibleStepsFrom</a> (QPair&lt; int, int &gt; coords) const</td></tr>
-<tr class="memdesc:a1c596b241131252e8754026222d9b79d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает список ходов, которые может совершить фигура, находящаяся на поле в ячейке с координатами coords.  <a href="classBoard.html#a1c596b241131252e8754026222d9b79d">Подробнее...</a><br /></td></tr>
-<tr class="separator:a1c596b241131252e8754026222d9b79d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a02b1cb1a48042b78cb5ff5d7e2147d38"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classFigure.html">Figure</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBoard.html#a02b1cb1a48042b78cb5ff5d7e2147d38">getFigure</a> (QPair&lt; int, int &gt; coords) const</td></tr>
-<tr class="memdesc:a02b1cb1a48042b78cb5ff5d7e2147d38"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает фигуру, которая находится в ячейке поля с координатами coords.  <a href="classBoard.html#a02b1cb1a48042b78cb5ff5d7e2147d38">Подробнее...</a><br /></td></tr>
-<tr class="separator:a02b1cb1a48042b78cb5ff5d7e2147d38"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ee058daca7b24f273e0a028e1885445"><td class="memItemLeft" align="right" valign="top">std::list&lt; std::pair&lt; int, int &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBoard.html#a2ee058daca7b24f273e0a028e1885445">getPossibleStepsFrom</a> (std::pair&lt; int, int &gt; coords) const</td></tr>
+<tr class="memdesc:a2ee058daca7b24f273e0a028e1885445"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает список ходов, которые может совершить фигура, находящаяся на поле в ячейке с координатами coords.  <a href="classBoard.html#a2ee058daca7b24f273e0a028e1885445">Подробнее...</a><br /></td></tr>
+<tr class="separator:a2ee058daca7b24f273e0a028e1885445"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f16c8cba2a17b5776d9ca3260b9efb2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classFigure.html">Figure</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBoard.html#a5f16c8cba2a17b5776d9ca3260b9efb2">getFigure</a> (std::pair&lt; int, int &gt; coords) const</td></tr>
+<tr class="memdesc:a5f16c8cba2a17b5776d9ca3260b9efb2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает фигуру, которая находится в ячейке поля с координатами coords.  <a href="classBoard.html#a5f16c8cba2a17b5776d9ca3260b9efb2">Подробнее...</a><br /></td></tr>
+<tr class="separator:a5f16c8cba2a17b5776d9ca3260b9efb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab88eabe2d17dadba7cbe4bf2a73e5b77"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBoard.html#ab88eabe2d17dadba7cbe4bf2a73e5b77">getSituation</a> () const</td></tr>
 <tr class="memdesc:ab88eabe2d17dadba7cbe4bf2a73e5b77"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает текущую ситуацию на поле.  <a href="classBoard.html#ab88eabe2d17dadba7cbe4bf2a73e5b77">Подробнее...</a><br /></td></tr>
 <tr class="separator:ab88eabe2d17dadba7cbe4bf2a73e5b77"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae19c1f44d1f6e4183ca2c6a66c27bc34"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBoard.html#ae19c1f44d1f6e4183ca2c6a66c27bc34">move</a> (QPair&lt; int, int &gt; from, QPair&lt; int, int &gt; to)</td></tr>
-<tr class="memdesc:ae19c1f44d1f6e4183ca2c6a66c27bc34"><td class="mdescLeft">&#160;</td><td class="mdescRight">Перемещает фигуру в board.  <a href="classBoard.html#ae19c1f44d1f6e4183ca2c6a66c27bc34">Подробнее...</a><br /></td></tr>
-<tr class="separator:ae19c1f44d1f6e4183ca2c6a66c27bc34"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1b1e05c5f4e9f453448876172e03d4fa"><td class="memItemLeft" align="right" valign="top"><a id="a1b1e05c5f4e9f453448876172e03d4fa"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>transform</b> (QPair&lt; int, int &gt; pos)</td></tr>
-<tr class="separator:a1b1e05c5f4e9f453448876172e03d4fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a96e9303bc38a629850d43831f9b47ad9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBoard.html#a96e9303bc38a629850d43831f9b47ad9">move</a> (std::pair&lt; int, int &gt; from, std::pair&lt; int, int &gt; to)</td></tr>
+<tr class="memdesc:a96e9303bc38a629850d43831f9b47ad9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Перемещает фигуру в board.  <a href="classBoard.html#a96e9303bc38a629850d43831f9b47ad9">Подробнее...</a><br /></td></tr>
+<tr class="separator:a96e9303bc38a629850d43831f9b47ad9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
 <div class="textblock"><p>Обрабатывает логику игрового поля. </p>
@@ -105,8 +102,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>transform</b> (QPair&
   </dd>
 </dl>
 </div><h2 class="groupheader">Методы</h2>
-<a id="a02b1cb1a48042b78cb5ff5d7e2147d38"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a02b1cb1a48042b78cb5ff5d7e2147d38">&#9670;&nbsp;</a></span>getFigure()</h2>
+<a id="a5f16c8cba2a17b5776d9ca3260b9efb2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f16c8cba2a17b5776d9ca3260b9efb2">&#9670;&nbsp;</a></span>getFigure()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -114,7 +111,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>transform</b> (QPair&
         <tr>
           <td class="memname"><a class="el" href="classFigure.html">Figure</a> Board::getFigure </td>
           <td>(</td>
-          <td class="paramtype">QPair&lt; int, int &gt;&#160;</td>
+          <td class="paramtype">std::pair&lt; int, int &gt;&#160;</td>
           <td class="paramname"><em>coords</em></td><td>)</td>
           <td> const</td>
         </tr>
@@ -132,16 +129,16 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>transform</b> (QPair&
 
 </div>
 </div>
-<a id="a1c596b241131252e8754026222d9b79d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1c596b241131252e8754026222d9b79d">&#9670;&nbsp;</a></span>getPossibleStepsFrom()</h2>
+<a id="a2ee058daca7b24f273e0a028e1885445"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ee058daca7b24f273e0a028e1885445">&#9670;&nbsp;</a></span>getPossibleStepsFrom()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">QList&lt;QPair&lt;int, int&gt; &gt; Board::getPossibleStepsFrom </td>
+          <td class="memname">std::list&lt;std::pair&lt;int, int&gt; &gt; Board::getPossibleStepsFrom </td>
           <td>(</td>
-          <td class="paramtype">QPair&lt; int, int &gt;&#160;</td>
+          <td class="paramtype">std::pair&lt; int, int &gt;&#160;</td>
           <td class="paramname"><em>coords</em></td><td>)</td>
           <td> const</td>
         </tr>
@@ -180,8 +177,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>transform</b> (QPair&
 
 </div>
 </div>
-<a id="ae19c1f44d1f6e4183ca2c6a66c27bc34"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae19c1f44d1f6e4183ca2c6a66c27bc34">&#9670;&nbsp;</a></span>move()</h2>
+<a id="a96e9303bc38a629850d43831f9b47ad9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a96e9303bc38a629850d43831f9b47ad9">&#9670;&nbsp;</a></span>move()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -189,13 +186,13 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>transform</b> (QPair&
         <tr>
           <td class="memname">void Board::move </td>
           <td>(</td>
-          <td class="paramtype">QPair&lt; int, int &gt;&#160;</td>
+          <td class="paramtype">std::pair&lt; int, int &gt;&#160;</td>
           <td class="paramname"><em>from</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">QPair&lt; int, int &gt;&#160;</td>
+          <td class="paramtype">std::pair&lt; int, int &gt;&#160;</td>
           <td class="paramname"><em>to</em>&#160;</td>
         </tr>
         <tr>

@@ -1,12 +1,11 @@
 #include "engine.h"
-#include <QPair>
-#include <QSet>
 
 Engine::Engine() {}
 
-StatusMove Engine::move(QPair<int, int> from_pos, QPair<int, int> step) {
-  QPair<int, int> to_pos(from_pos.first + step.first,
-                         from_pos.second + step.second);
+StatusMove Engine::move(std::pair<int, int> from_pos,
+                        std::pair<int, int> step) {
+  std::pair<int, int> to_pos(from_pos.first + step.first,
+                             from_pos.second + step.second);
   if (step.first == 0 && step.second == 0) {
     // Отсутствие хода
     return FAIL;
@@ -15,12 +14,12 @@ StatusMove Engine::move(QPair<int, int> from_pos, QPair<int, int> step) {
   if (to_pos.first < 0 || to_pos.first >= 8 || to_pos.second < 0 ||
       to_pos.second >= 8) {
     // Выход за поле
-    return FAIL;
+    return GO_OUT;
   }
 
-  QSet<QPair<int, int>> possible_moves =
+  std::set<std::pair<int, int>> possible_moves =
       game_board.getFigure(from_pos).getPossibleMoves();
-  QSet<QPair<int, int>> possible_attacks =
+  std::set<std::pair<int, int>> possible_attacks =
       game_board.getFigure(from_pos).getPossibleAttacks();
   Figure to_pos_figure = game_board.getFigure(to_pos);
   if ((possible_moves.find(step) == possible_moves.end() ||
@@ -39,5 +38,3 @@ StatusMove Engine::move(QPair<int, int> from_pos, QPair<int, int> step) {
   game_board.move(from_pos, to_pos);
   return DONE;
 }
-
-int Engine::transform(QPair<int, int> pos) { return 0; }
