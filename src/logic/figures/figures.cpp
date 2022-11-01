@@ -14,9 +14,9 @@ Figure::Figure(FigureColor color) {
 Figure::Figure(int price, FigureColor color) : b_price(price), b_color(color) {}
 
 King::King(FigureColor color) : Figure(KING, color) {
-  for (int i = 0; i <= 1; i++) {
-    for (int j = 0; j <= 1; j++) {
-      if (i != 0 && j != 0)
+  for (int i = -1; i <= 1; i++) {
+    for (int j = -1; j <= 1; j++) {
+      if (i != 0 || j != 0)
         possible_moves.insert({i, j});
     }
   }

@@ -23,6 +23,8 @@ public:
 
   bool setFigureOnBoard(Figure *figure, Position position);
 
+  void clearBoard();
+
 private:
   Board game_board;
   int advantage; // Преимущесто кого-то из игроков. Отрицательное значение -

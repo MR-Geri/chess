@@ -22,7 +22,7 @@ StatusMove Engine::move(Position from_pos, Position step) {
       game_board.getFigure(from_pos)->getPossibleAttacks();
   Figure *to_pos_figure = game_board.getFigure(to_pos);
   if ((possible_moves.find(step) == possible_moves.end() ||
-       to_pos_figure->getPrice() != 0) ||
+       to_pos_figure != nullptr) ||
       possible_attacks.find(step) == possible_attacks.end()) {
     // Невозможный ход
     return IMPOSSIBLE_MOVE;
@@ -67,3 +67,5 @@ void Engine::setStartingArrangement() {
 bool Engine::setFigureOnBoard(Figure *figure, Position position) {
   game_board.setFigureOn(figure, position);
 }
+
+void Engine::clearBoard() { game_board.clear(); }
