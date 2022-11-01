@@ -5,11 +5,8 @@ Board::Board() {
   // Pawn(false)
   // Генерация поля
   // TODO
-  for (int i = 0; i < 8; i++) {
-    for (int j = 0; j < 8; j++) {
-      board[i][j] = nullptr;
-    }
-  }
+  board =
+      std::vector<std::vector<Figure *>>(8, std::vector<Figure *>(8, nullptr));
 }
 
 Board::~Board() {
