@@ -6,11 +6,6 @@ std::set<Position> Figure::getPossibleMoves() { return possible_moves; }
 
 std::set<Position> Figure::getPossibleAttacks() { return possible_moves; }
 
-Figure::Figure(FigureColor color) {
-  b_price = 0;
-  b_color = color;
-}
-
 Figure::Figure(int price, FigureColor color) : b_price(price), b_color(color) {}
 
 King::King(FigureColor color) : Figure(KING, color) {
