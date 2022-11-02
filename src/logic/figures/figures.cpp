@@ -25,7 +25,7 @@ King::King(FigureColor color) : Figure(KING, color) {
 Queen::Queen(FigureColor color) : Figure(QUEEN, color) {
   for (int i = -7; i <= 7; i++) {
     for (int j = -7; j <= 7; j++) {
-      if (i != 0 && j != 0)
+      if (i != 0 || j != 0)
         possible_moves.insert({i, j});
     }
   }
