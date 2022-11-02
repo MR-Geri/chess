@@ -6,7 +6,8 @@ pipeline{
     stages {
         stage("CMAKE compile"){
             steps {
-                sh 'cmake [options] -S /var/jenkins_home/workspace/chess_dev/'
+                cmake arguments: '-DCMAKE_TOOLCHAIN_FILE=CMakeLists.txt', installation: 'InSearchPath'
+                cmakeBuild buildType: 'Release', cleanBuild: true, installation: 'InSearchPath', steps: [[withCmake: true]]
             }
         }
         stage("MAKE compile"){
