@@ -80,14 +80,6 @@ void tests::test_king() {
       }
     }
   }
-  for (int i = -1; i <= 1; i++) {
-    for (int j = -1; j <= 1; j++) {
-      if (i != 0 || j != 0) {
-        setOnlyOneFigureOn(engine, new King(WHITE), {4, 4});
-        QCOMPARE(engine.move({4, 4}, {i, j}), DONE);
-      }
-    }
-  }
 }
 
 void tests::test_queen() {
@@ -95,10 +87,9 @@ void tests::test_queen() {
 
   // Невозможные ходы
   setOnlyOneFigureOn(engine, new Queen(WHITE), {0, 0});
+  QCOMPARE(engine.move({0, 0}, {3, 2}), IMPOSSIBLE_MOVE);
   setOnlyOneFigureOn(engine, new Queen(WHITE), {0, 0});
-  QCOMPARE(engine.move({0, 0}, {-2, 2}), GO_OUT);
-  setOnlyOneFigureOn(engine, new Queen(WHITE), {0, 0});
-  QCOMPARE(engine.move({0, 0}, {2, -2}), GO_OUT);
+  QCOMPARE(engine.move({0, 0}, {2, 1}), IMPOSSIBLE_MOVE);
 
   // Нет хода
   setOnlyOneFigureOn(engine, new Queen(WHITE), {0, 0});
@@ -118,35 +109,150 @@ void tests::test_queen() {
     QCOMPARE(engine.move({i, 0}, {0, -1}), GO_OUT);
     setOnlyOneFigureOn(engine, new Queen(WHITE), {i, 7});
     QCOMPARE(engine.move({i, 7}, {0, 1}), GO_OUT);
-  }
-
-  // Ходы через своих
+  } // Ходы через своих
   // QCOMPARE(Queen().move(QPair<int, int>(0, 0)), 4);
 
   // Успешные ходы
-  for (int i = -1; i <= 1; i++) {
-    for (int j = -1; j <= 1; j++) {
-      if (i != 0 || j != 0) {
-        setOnlyOneFigureOn(engine, new Queen(WHITE), {4, 4});
-        QCOMPARE(engine.move({4, 4}, {i, j}), DONE);
+  for (int i = -4; i <= 3; i++) {
+    for (int j = -4; j <= 3; j++) {
+      if (i != 0 && j != 0) {
+        if ((abs(i) == abs(j)) || (i == 0 && j != 0) || (i != 0 && j == 0)) {
+          setOnlyOneFigureOn(engine, new Queen(WHITE), {4, 4});
+          QCOMPARE(engine.move({4, 4}, {i, j}), DONE);
+        }
       }
     }
   }
-  for (int i = -1; i <= 1; i++) {
-    for (int j = -1; j <= 1; j++) {
-      if (i != 0 || j != 0) {
-        setOnlyOneFigureOn(engine, new Queen(WHITE), {4, 4});
+}
+
+void tests::test_bishop() {
+  Engine engine;
+
+  // Невозможные ходы
+  setOnlyOneFigureOn(engine, new Bishop(WHITE), {0, 0});
+  QCOMPARE(engine.move({0, 0}, {1, 2}), IMPOSSIBLE_MOVE);
+  setOnlyOneFigureOn(engine, new Bishop(WHITE), {0, 0});
+  QCOMPARE(engine.move({0, 0}, {0, 2}), IMPOSSIBLE_MOVE);
+
+  // Нет хода
+  setOnlyOneFigureOn(engine, new Bishop(WHITE), {0, 0});
+  QCOMPARE(engine.move({0, 0}, {0, 0}), FAIL);
+
+  // Выход за границы поля
+  setOnlyOneFigureOn(engine, new Bishop(WHITE), {0, 0});
+  QCOMPARE(engine.move({0, 0}, {9, 1}), GO_OUT);
+
+  // Выход за границы поля
+  for (int i = 0; i < 8; i++) {
+    setOnlyOneFigureOn(engine, new Bishop(WHITE), {0, i});
+    QCOMPARE(engine.move({0, i}, {-1, 1}), GO_OUT);
+    setOnlyOneFigureOn(engine, new Bishop(WHITE), {7, i});
+    QCOMPARE(engine.move({7, i}, {1, 1}), GO_OUT);
+    setOnlyOneFigureOn(engine, new Bishop(WHITE), {i, 0});
+    QCOMPARE(engine.move({i, 0}, {1, -1}), GO_OUT);
+    setOnlyOneFigureOn(engine, new Bishop(WHITE), {i, 7});
+    QCOMPARE(engine.move({i, 7}, {1, 1}), GO_OUT);
+  }
+
+  // Ходы через своих
+  // QCOMPARE(Bishop().move(QPair<int, int>(0, 0)), 4);
+
+  // Успешные ходы
+  for (int i = -3; i <= 3; i++) {
+    for (int j = -3; j <= 3; j++) {
+      if (i != 0 && j != 0 && abs(i) == abs(j)) {
+        setOnlyOneFigureOn(engine, new Bishop(WHITE), {4, 4});
         QCOMPARE(engine.move({4, 4}, {i, j}), DONE);
       }
     }
   }
 }
 
-void tests::test_bishop() {}
+void tests::test_rook() {
+  Engine engine;
 
-void tests::test_rook() {}
+  // Невозможные ходы
+  setOnlyOneFigureOn(engine, new Rook(WHITE), {0, 0});
+  QCOMPARE(engine.move({0, 0}, {2, 1}), IMPOSSIBLE_MOVE);
+  setOnlyOneFigureOn(engine, new Rook(WHITE), {0, 0});
+  QCOMPARE(engine.move({0, 0}, {2, 3}), IMPOSSIBLE_MOVE);
 
-void tests::test_kinght() {}
+  // Нет хода
+  setOnlyOneFigureOn(engine, new Rook(WHITE), {0, 0});
+  QCOMPARE(engine.move({0, 0}, {0, 0}), FAIL);
+
+  // Выход за границы поля
+  setOnlyOneFigureOn(engine, new Rook(WHITE), {0, 0});
+  QCOMPARE(engine.move({0, 0}, {9, 1}), GO_OUT);
+
+  // Выход за границы поля
+  for (int i = 0; i < 8; i++) {
+    setOnlyOneFigureOn(engine, new Rook(WHITE), {0, i});
+    QCOMPARE(engine.move({0, i}, {-1, 0}), GO_OUT);
+    setOnlyOneFigureOn(engine, new Rook(WHITE), {7, i});
+    QCOMPARE(engine.move({7, i}, {1, 0}), GO_OUT);
+    setOnlyOneFigureOn(engine, new Rook(WHITE), {i, 0});
+    QCOMPARE(engine.move({i, 0}, {0, -1}), GO_OUT);
+    setOnlyOneFigureOn(engine, new Rook(WHITE), {i, 7});
+    QCOMPARE(engine.move({i, 7}, {0, 1}), GO_OUT);
+  }
+
+  // Ходы через своих
+  // QCOMPARE(Rook().move(QPair<int, int>(0, 0)), 4);
+
+  // Успешные ходы
+  for (int i = -4; i <= 3; i++) {
+    if (i != 0) {
+      setOnlyOneFigureOn(engine, new Rook(WHITE), {4, 4});
+      QCOMPARE(engine.move({4, 4}, {0, i}), DONE);
+      setOnlyOneFigureOn(engine, new Rook(WHITE), {4, 4});
+      QCOMPARE(engine.move({4, 4}, {i, 0}), DONE);
+    }
+  }
+}
+
+void tests::test_kinght() {
+  Engine engine;
+
+  // Невозможные ходы
+  setOnlyOneFigureOn(engine, new Kinght(WHITE), {0, 0});
+  QCOMPARE(engine.move({0, 0}, {2, 2}), IMPOSSIBLE_MOVE);
+  setOnlyOneFigureOn(engine, new Kinght(WHITE), {0, 0});
+  QCOMPARE(engine.move({0, 0}, {1, 1}), IMPOSSIBLE_MOVE);
+
+  // Нет хода
+  // setOnlyOneFigureOn(engine, new Kinght(WHITE), {0, 0});
+  // QCOMPARE(engine.move({0, 0}, {0, 0}), FAIL);
+  //
+  // // Выход за границы поля
+  // setOnlyOneFigureOn(engine, new Kinght(WHITE), {0, 0});
+  // QCOMPARE(engine.move({0, 0}, {9, 1}), GO_OUT);
+  //
+  // // Выход за границы поля
+  // for (int i = 0; i < 8; i++) {
+  //   setOnlyOneFigureOn(engine, new Kinght(WHITE), {0, i});
+  //   QCOMPARE(engine.move({0, i}, {-1, 0}), GO_OUT);
+  //   setOnlyOneFigureOn(engine, new Kinght(WHITE), {7, i});
+  //   QCOMPARE(engine.move({7, i}, {1, 0}), GO_OUT);
+  //   setOnlyOneFigureOn(engine, new Kinght(WHITE), {i, 0});
+  //   QCOMPARE(engine.move({i, 0}, {0, -1}), GO_OUT);
+  //   setOnlyOneFigureOn(engine, new Kinght(WHITE), {i, 7});
+  //   QCOMPARE(engine.move({i, 7}, {0, 1}), GO_OUT);
+  // }
+  //
+  // // Ходы через своих
+  // // QCOMPARE(Kinght().move(QPair<int, int>(0, 0)), 4);
+  //
+  // // Успешные ходы
+  // for (int i = -4; i <= 3; i++) {
+  //   if (i != 0){
+  //     setOnlyOneFigureOn(engine, new Kinght(WHITE), {4, 4});
+  //     QCOMPARE(engine.move({4, 4}, {0, i}), DONE);
+  //     setOnlyOneFigureOn(engine, new Kinght(WHITE), {4, 4});
+  //     QCOMPARE(engine.move({4, 4}, {i, 0}), DONE);
+  //   }
+  // }
+}
 
 void tests::test_pawn() {}
 

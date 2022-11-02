@@ -23,10 +23,11 @@ King::King(FigureColor color) : Figure(KING, color) {
 }
 
 Queen::Queen(FigureColor color) : Figure(QUEEN, color) {
-  for (int i = -7; i <= 7; i++) {
-    for (int j = -7; j <= 7; j++) {
+  for (int i = -1; i <= 1; i++) {
+    for (int j = -1; j <= 1; j++) {
       if (i != 0 || j != 0)
-        possible_moves.insert({i, j});
+        for (int k = 1; k <= 7; k++)
+          possible_moves.insert({i * k, j * k});
     }
   }
 }
