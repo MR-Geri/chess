@@ -1,0 +1,9 @@
+<map id="Figure" name="Figure">
+<area shape="rect" id="node1" title="Абстрактный класс фигуры." alt="" coords="275,5,429,171"/>
+<area shape="rect" id="node2" href="$classBishop.html" title="Слон." alt="" coords="5,233,88,311"/>
+<area shape="rect" id="node3" href="$classKing.html" title="Король." alt="" coords="113,233,181,311"/>
+<area shape="rect" id="node4" href="$classKinght.html" title="Конь." alt="" coords="205,226,334,318"/>
+<area shape="rect" id="node5" href="$classPawn.html" title="Пешка." alt="" coords="359,219,513,325"/>
+<area shape="rect" id="node6" href="$classQueen.html" title="Ферзь." alt="" coords="537,233,617,311"/>
+<area shape="rect" id="node7" href="$classRook.html" title="Ладья." alt="" coords="642,233,715,311"/>
+</map>

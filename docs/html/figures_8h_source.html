@@ -69,7 +69,7 @@ $(function() {
 <div class="title">figures.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<a href="figures_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;../../constants.h&quot;</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;../../utils.h&quot;</span></div>
@@ -79,7 +79,7 @@ $(function() {
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
 <div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="classFigure.html">   12</a></span>&#160;<span class="keyword">class </span><a class="code" href="classFigure.html">Figure</a> {</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;  <a class="code" href="classFigure.html#af51162c8ed60dde80e326cae9fd2fba3">Figure</a>(<span class="keywordtype">int</span> price, FigureColor color = WHITE);</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;  <a class="code" href="classFigure.html#af51162c8ed60dde80e326cae9fd2fba3">Figure</a>(<span class="keywordtype">int</span> price, <a class="code" href="constants_8h.html#a80feabe81f30d5b97df91defa4774c0f">FigureColor</a> color = <a class="code" href="constants_8h.html#a80feabe81f30d5b97df91defa4774c0fa283fc479650da98250635b9c3c0e7e50">WHITE</a>);</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classFigure.html#a7a36488fa19e8ceb96b684527df50d9e">getPrice</a>();</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
@@ -90,51 +90,54 @@ $(function() {
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  std::set&lt;Position&gt; <a class="code" href="classFigure.html#a7e8010799eaba0919bc3b68eff755db0">getPossibleAttacks</a>();</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  <span class="keywordtype">int</span> b_price;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  std::set&lt;Position&gt; possible_moves;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  FigureColor b_color;</div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="classFigure.html#a72d0bf2ff589f0ceb9171d31268b3494">   47</a></span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classFigure.html#a72d0bf2ff589f0ceb9171d31268b3494">b_price</a>;</div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="classFigure.html#aa506c0bde1a6ac01f3d3b729ae0fd1f5">   48</a></span>&#160;  std::set&lt;Position&gt; <a class="code" href="classFigure.html#aa506c0bde1a6ac01f3d3b729ae0fd1f5">possible_moves</a>;</div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="classFigure.html#a13206acc9b4fce30d4d18a911f5cbf83">   49</a></span>&#160;  <a class="code" href="constants_8h.html#a80feabe81f30d5b97df91defa4774c0f">FigureColor</a> <a class="code" href="classFigure.html#a13206acc9b4fce30d4d18a911f5cbf83">b_color</a>;</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;};</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
 <div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="classKing.html">   55</a></span>&#160;<span class="keyword">class </span><a class="code" href="classKing.html">King</a> : <span class="keyword">public</span> <a class="code" href="classFigure.html">Figure</a> {</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  <a class="code" href="classKing.html#a2ce46bf43fede5a700d153dd648a91c9">King</a>(FigureColor color = WHITE);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  <a class="code" href="classKing.html#a2ce46bf43fede5a700d153dd648a91c9">King</a>(<a class="code" href="constants_8h.html#a80feabe81f30d5b97df91defa4774c0f">FigureColor</a> color = <a class="code" href="constants_8h.html#a80feabe81f30d5b97df91defa4774c0fa283fc479650da98250635b9c3c0e7e50">WHITE</a>);</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;};</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
 <div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="classQueen.html">   67</a></span>&#160;<span class="keyword">class </span><a class="code" href="classQueen.html">Queen</a> : <span class="keyword">public</span> <a class="code" href="classFigure.html">Figure</a> {</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  <a class="code" href="classQueen.html#a56662c4ff83e3dd61f5ba4f5a2a65061">Queen</a>(FigureColor color = WHITE);</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  <a class="code" href="classQueen.html#a56662c4ff83e3dd61f5ba4f5a2a65061">Queen</a>(<a class="code" href="constants_8h.html#a80feabe81f30d5b97df91defa4774c0f">FigureColor</a> color = <a class="code" href="constants_8h.html#a80feabe81f30d5b97df91defa4774c0fa283fc479650da98250635b9c3c0e7e50">WHITE</a>);</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;};</div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
 <div class="line"><a name="l00079"></a><span class="lineno"><a class="line" href="classBishop.html">   79</a></span>&#160;<span class="keyword">class </span><a class="code" href="classBishop.html">Bishop</a> : <span class="keyword">public</span> <a class="code" href="classFigure.html">Figure</a> {</div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  <a class="code" href="classBishop.html#afd7972b31fd21fa1fb8ec45e64d5a7b4">Bishop</a>(FigureColor color = WHITE);</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  <a class="code" href="classBishop.html#afd7972b31fd21fa1fb8ec45e64d5a7b4">Bishop</a>(<a class="code" href="constants_8h.html#a80feabe81f30d5b97df91defa4774c0f">FigureColor</a> color = <a class="code" href="constants_8h.html#a80feabe81f30d5b97df91defa4774c0fa283fc479650da98250635b9c3c0e7e50">WHITE</a>);</div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;};</div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
 <div class="line"><a name="l00091"></a><span class="lineno"><a class="line" href="classRook.html">   91</a></span>&#160;<span class="keyword">class </span><a class="code" href="classRook.html">Rook</a> : <span class="keyword">public</span> <a class="code" href="classFigure.html">Figure</a> {</div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;  <a class="code" href="classRook.html#a7f2139b242deef9e32fc3b136e96be68">Rook</a>(FigureColor color = WHITE);</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;  <a class="code" href="classRook.html#a7f2139b242deef9e32fc3b136e96be68">Rook</a>(<a class="code" href="constants_8h.html#a80feabe81f30d5b97df91defa4774c0f">FigureColor</a> color = <a class="code" href="constants_8h.html#a80feabe81f30d5b97df91defa4774c0fa283fc479650da98250635b9c3c0e7e50">WHITE</a>);</div>
 <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;};</div>
 <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; </div>
 <div class="line"><a name="l00103"></a><span class="lineno"><a class="line" href="classKinght.html">  103</a></span>&#160;<span class="keyword">class </span><a class="code" href="classKinght.html">Kinght</a> : <span class="keyword">public</span> <a class="code" href="classFigure.html">Figure</a> {</div>
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;  <a class="code" href="classKinght.html#a2e51e2eba7db582e66dd9fb0b32704c0">Kinght</a>(FigureColor color = WHITE);</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;  <a class="code" href="classKinght.html#a2e51e2eba7db582e66dd9fb0b32704c0">Kinght</a>(<a class="code" href="constants_8h.html#a80feabe81f30d5b97df91defa4774c0f">FigureColor</a> color = <a class="code" href="constants_8h.html#a80feabe81f30d5b97df91defa4774c0fa283fc479650da98250635b9c3c0e7e50">WHITE</a>);</div>
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160; </div>
 <div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;  std::list&lt;Position&gt; <a class="code" href="classKinght.html#ab6f06a7094d4d8458cc89bcbb3af274f">getUnarySteps</a>(<a class="code" href="classPosition.html">Position</a> step);</div>
 <div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;};</div>
 <div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160; </div>
 <div class="line"><a name="l00122"></a><span class="lineno"><a class="line" href="classPawn.html">  122</a></span>&#160;<span class="keyword">class </span><a class="code" href="classPawn.html">Pawn</a> : <span class="keyword">public</span> <a class="code" href="classFigure.html">Figure</a> {</div>
 <div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;  <a class="code" href="classPawn.html#a8d03682a1590cde01da0dc998dea0426">Pawn</a>(FigureColor color = WHITE);</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;  <a class="code" href="classPawn.html#a8d03682a1590cde01da0dc998dea0426">Pawn</a>(<a class="code" href="constants_8h.html#a80feabe81f30d5b97df91defa4774c0f">FigureColor</a> color = <a class="code" href="constants_8h.html#a80feabe81f30d5b97df91defa4774c0fa283fc479650da98250635b9c3c0e7e50">WHITE</a>);</div>
 <div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160; </div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;  <a class="code" href="classPawn.html#a8d03682a1590cde01da0dc998dea0426">Pawn</a>(<span class="keywordtype">bool</span> flag_move, FigureColor color = WHITE);</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;  <a class="code" href="classPawn.html#a8d03682a1590cde01da0dc998dea0426">Pawn</a>(<span class="keywordtype">bool</span> flag_move, <a class="code" href="constants_8h.html#a80feabe81f30d5b97df91defa4774c0f">FigureColor</a> color = <a class="code" href="constants_8h.html#a80feabe81f30d5b97df91defa4774c0fa283fc479650da98250635b9c3c0e7e50">WHITE</a>);</div>
 <div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160; </div>
 <div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;  std::set&lt;Position&gt; <a class="code" href="classPawn.html#a9d256e4d572ede8146c30ec85bbbee9c">getPossibleAttacks</a>();</div>
 <div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;};</div>
 <div class="ttc" id="aclassBishop_html"><div class="ttname"><a href="classBishop.html">Bishop</a></div><div class="ttdoc">Слон.</div><div class="ttdef"><b>Definition:</b> figures.h:79</div></div>
 <div class="ttc" id="aclassBishop_html_afd7972b31fd21fa1fb8ec45e64d5a7b4"><div class="ttname"><a href="classBishop.html#afd7972b31fd21fa1fb8ec45e64d5a7b4">Bishop::Bishop</a></div><div class="ttdeci">Bishop(FigureColor color=WHITE)</div><div class="ttdoc">Конструктор.</div><div class="ttdef"><b>Definition:</b> figures.cpp:30</div></div>
 <div class="ttc" id="aclassFigure_html"><div class="ttname"><a href="classFigure.html">Figure</a></div><div class="ttdoc">Абстрактный класс фигуры.</div><div class="ttdef"><b>Definition:</b> figures.h:12</div></div>
+<div class="ttc" id="aclassFigure_html_a13206acc9b4fce30d4d18a911f5cbf83"><div class="ttname"><a href="classFigure.html#a13206acc9b4fce30d4d18a911f5cbf83">Figure::b_color</a></div><div class="ttdeci">FigureColor b_color</div><div class="ttdef"><b>Definition:</b> figures.h:49</div></div>
+<div class="ttc" id="aclassFigure_html_a72d0bf2ff589f0ceb9171d31268b3494"><div class="ttname"><a href="classFigure.html#a72d0bf2ff589f0ceb9171d31268b3494">Figure::b_price</a></div><div class="ttdeci">int b_price</div><div class="ttdef"><b>Definition:</b> figures.h:47</div></div>
 <div class="ttc" id="aclassFigure_html_a7a36488fa19e8ceb96b684527df50d9e"><div class="ttname"><a href="classFigure.html#a7a36488fa19e8ceb96b684527df50d9e">Figure::getPrice</a></div><div class="ttdeci">int getPrice()</div><div class="ttdoc">Получение веса фигуры.</div><div class="ttdef"><b>Definition:</b> figures.cpp:3</div></div>
 <div class="ttc" id="aclassFigure_html_a7e8010799eaba0919bc3b68eff755db0"><div class="ttname"><a href="classFigure.html#a7e8010799eaba0919bc3b68eff755db0">Figure::getPossibleAttacks</a></div><div class="ttdeci">std::set&lt; Position &gt; getPossibleAttacks()</div><div class="ttdoc">Получение возможных ходов атаки.</div><div class="ttdef"><b>Definition:</b> figures.cpp:7</div></div>
+<div class="ttc" id="aclassFigure_html_aa506c0bde1a6ac01f3d3b729ae0fd1f5"><div class="ttname"><a href="classFigure.html#aa506c0bde1a6ac01f3d3b729ae0fd1f5">Figure::possible_moves</a></div><div class="ttdeci">std::set&lt; Position &gt; possible_moves</div><div class="ttdef"><b>Definition:</b> figures.h:48</div></div>
 <div class="ttc" id="aclassFigure_html_aad86c6d796ac96d30f2a310c107fdbac"><div class="ttname"><a href="classFigure.html#aad86c6d796ac96d30f2a310c107fdbac">Figure::getUnarySteps</a></div><div class="ttdeci">std::list&lt; Position &gt; getUnarySteps(Position step)</div><div class="ttdoc">Получение элементарных ходов.</div><div class="ttdef"><b>Definition:</b> figures.cpp:81</div></div>
 <div class="ttc" id="aclassFigure_html_ab648751cbee093526d0d531c4f599d58"><div class="ttname"><a href="classFigure.html#ab648751cbee093526d0d531c4f599d58">Figure::getPossibleMoves</a></div><div class="ttdeci">std::set&lt; Position &gt; getPossibleMoves()</div><div class="ttdoc">Получение возможных ходов перемещения.</div><div class="ttdef"><b>Definition:</b> figures.cpp:5</div></div>
 <div class="ttc" id="aclassFigure_html_af51162c8ed60dde80e326cae9fd2fba3"><div class="ttname"><a href="classFigure.html#af51162c8ed60dde80e326cae9fd2fba3">Figure::Figure</a></div><div class="ttdeci">Figure(int price, FigureColor color=WHITE)</div><div class="ttdoc">Конструктор, используемый в классах наследниках.</div><div class="ttdef"><b>Definition:</b> figures.cpp:9</div></div>
@@ -151,6 +154,8 @@ $(function() {
 <div class="ttc" id="aclassQueen_html_a56662c4ff83e3dd61f5ba4f5a2a65061"><div class="ttname"><a href="classQueen.html#a56662c4ff83e3dd61f5ba4f5a2a65061">Queen::Queen</a></div><div class="ttdeci">Queen(FigureColor color=WHITE)</div><div class="ttdoc">Конструктор.</div><div class="ttdef"><b>Definition:</b> figures.cpp:20</div></div>
 <div class="ttc" id="aclassRook_html"><div class="ttname"><a href="classRook.html">Rook</a></div><div class="ttdoc">Ладья.</div><div class="ttdef"><b>Definition:</b> figures.h:91</div></div>
 <div class="ttc" id="aclassRook_html_a7f2139b242deef9e32fc3b136e96be68"><div class="ttname"><a href="classRook.html#a7f2139b242deef9e32fc3b136e96be68">Rook::Rook</a></div><div class="ttdeci">Rook(FigureColor color=WHITE)</div><div class="ttdoc">Конструктор.</div><div class="ttdef"><b>Definition:</b> figures.cpp:39</div></div>
+<div class="ttc" id="aconstants_8h_html_a80feabe81f30d5b97df91defa4774c0f"><div class="ttname"><a href="constants_8h.html#a80feabe81f30d5b97df91defa4774c0f">FigureColor</a></div><div class="ttdeci">FigureColor</div><div class="ttdoc">Перечисление, содержащее цвета фигур.</div><div class="ttdef"><b>Definition:</b> constants.h:26</div></div>
+<div class="ttc" id="aconstants_8h_html_a80feabe81f30d5b97df91defa4774c0fa283fc479650da98250635b9c3c0e7e50"><div class="ttname"><a href="constants_8h.html#a80feabe81f30d5b97df91defa4774c0fa283fc479650da98250635b9c3c0e7e50">WHITE</a></div><div class="ttdeci">@ WHITE</div><div class="ttdef"><b>Definition:</b> constants.h:26</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

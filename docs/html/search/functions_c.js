@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['windowsmanager_79',['windowsManager',['../classMainWindow.html#aaf47fc01862209102bc55bc5cca41ecb',1,'MainWindow']]]
+  ['update_178',['update',['../classScreenGame.html#afb3deb5d3d6c4e13899e83de7bed5720',1,'ScreenGame']]]
 ];

@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['queen_23',['Queen',['../classQueen.html',1,'Queen'],['../classQueen.html#a56662c4ff83e3dd61f5ba4f5a2a65061',1,'Queen::Queen()']]]
+  ['liderboard_40',['LIDERBOARD',['../constants_8h.html#af1edd7b7fcdf15ab1bff70cf1daf8ae5aedb219d039d864ce9bb4d5337b378422',1,'constants.h']]],
+  ['liderboard_2ecpp_41',['liderboard.cpp',['../logic_2liderboard_2liderboard_8cpp.html',1,'(Глобальное пространство имён)'],['../storage_2liderboard_2liderboard_8cpp.html',1,'(Глобальное пространство имён)']]],
+  ['liderboard_2eh_42',['liderboard.h',['../logic_2liderboard_2liderboard_8h.html',1,'(Глобальное пространство имён)'],['../storage_2liderboard_2liderboard_8h.html',1,'(Глобальное пространство имён)']]]
 ];

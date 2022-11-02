@@ -1,5 +1,7 @@
 var searchData=
 [
-  ['pawn_21',['Pawn',['../classPawn.html',1,'Pawn'],['../classPawn.html#a8d03682a1590cde01da0dc998dea0426',1,'Pawn::Pawn(FigureColor color=WHITE)'],['../classPawn.html#a1f29610a1f93f12fc49de75a33331d23',1,'Pawn::Pawn(bool flag_move, FigureColor color=WHITE)']]],
-  ['position_22',['Position',['../classPosition.html',1,'']]]
+  ['king_36',['King',['../classKing.html',1,'King'],['../classKing.html#a2ce46bf43fede5a700d153dd648a91c9',1,'King::King()']]],
+  ['king_37',['KING',['../constants_8h.html#a3da527ca0edbe6a57ea4f61d1e5af434a157524408d6f0fc4b7dc5e52f3dd3b80',1,'constants.h']]],
+  ['kinght_38',['Kinght',['../classKinght.html',1,'Kinght'],['../classKinght.html#a2e51e2eba7db582e66dd9fb0b32704c0',1,'Kinght::Kinght()']]],
+  ['kinght_39',['KINGHT',['../constants_8h.html#a3da527ca0edbe6a57ea4f61d1e5af434ae6eca7709e5f68a4b00be2b57e9b93e0',1,'constants.h']]]
 ];

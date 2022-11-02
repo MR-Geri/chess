@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['mainwindow_18',['MainWindow',['../classMainWindow.html',1,'']]],
-  ['move_19',['move',['../classBoard.html#a4ed8cf3fae283d3c88eb6b0dea9e9f0a',1,'Board::move()'],['../classEngine.html#a66f2b590d92c6e0fa99741f02a8a9a3f',1,'Engine::move()']]],
-  ['movedfigure_20',['movedFigure',['../classSceneGame.html#a207d949439c411b6ca25c15a11b70a9c',1,'SceneGame']]]
+  ['impossible_5fmove_35',['IMPOSSIBLE_MOVE',['../constants_8h.html#a8b9a4049772aeb1c0e054b0571babc95a2ff03637351b08d6d3032ff73f842f5f',1,'constants.h']]]
 ];

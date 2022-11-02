@@ -1,10 +1,9 @@
 var searchData=
 [
-  ['getfigure_9',['getFigure',['../classBoard.html#a0bac43a8a2fc2aabc7e687eeedbe9f9e',1,'Board']]],
-  ['getpossibleattacks_10',['getPossibleAttacks',['../classFigure.html#a7e8010799eaba0919bc3b68eff755db0',1,'Figure::getPossibleAttacks()'],['../classPawn.html#a9d256e4d572ede8146c30ec85bbbee9c',1,'Pawn::getPossibleAttacks()']]],
-  ['getpossiblemoves_11',['getPossibleMoves',['../classFigure.html#ab648751cbee093526d0d531c4f599d58',1,'Figure']]],
-  ['getpossiblestepsfrom_12',['getPossibleStepsFrom',['../classBoard.html#ad2288a8adf6de5ecbb70fa2a11cd390f',1,'Board']]],
-  ['getprice_13',['getPrice',['../classFigure.html#a7a36488fa19e8ceb96b684527df50d9e',1,'Figure']]],
-  ['getsituation_14',['getSituation',['../classBoard.html#ab88eabe2d17dadba7cbe4bf2a73e5b77',1,'Board']]],
-  ['getunarysteps_15',['getUnarySteps',['../classFigure.html#aad86c6d796ac96d30f2a310c107fdbac',1,'Figure::getUnarySteps()'],['../classKinght.html#ab6f06a7094d4d8458cc89bcbb3af274f',1,'Kinght::getUnarySteps()']]]
+  ['fail_20',['FAIL',['../constants_8h.html#a8b9a4049772aeb1c0e054b0571babc95a936c4a5547a9360243178f726f6b2715',1,'constants.h']]],
+  ['figure_21',['Figure',['../classFigure.html',1,'Figure'],['../classFigure.html#af51162c8ed60dde80e326cae9fd2fba3',1,'Figure::Figure()']]],
+  ['figurecolor_22',['FigureColor',['../constants_8h.html#a80feabe81f30d5b97df91defa4774c0f',1,'constants.h']]],
+  ['figures_2ecpp_23',['figures.cpp',['../figures_8cpp.html',1,'']]],
+  ['figures_2eh_24',['figures.h',['../figures_8h.html',1,'']]],
+  ['figuresprice_25',['FiguresPrice',['../constants_8h.html#a3da527ca0edbe6a57ea4f61d1e5af434',1,'constants.h']]]
 ];

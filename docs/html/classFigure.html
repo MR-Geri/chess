@@ -77,21 +77,17 @@ $(function() {
 <div class="dynheader">
 Граф наследования:Figure:</div>
 <div class="dyncontent">
- <div class="center">
-  <img src="classFigure.png" usemap="#Figure_map" alt=""/>
-  <map id="Figure_map" name="Figure_map">
-<area href="classBishop.html" title="Слон." alt="Bishop" shape="rect" coords="0,56,50,80"/>
-<area href="classKing.html" title="Король." alt="King" shape="rect" coords="60,56,110,80"/>
-<area href="classKinght.html" title="Конь." alt="Kinght" shape="rect" coords="120,56,170,80"/>
-<area href="classPawn.html" title="Пешка." alt="Pawn" shape="rect" coords="180,56,230,80"/>
-<area href="classQueen.html" title="Ферзь." alt="Queen" shape="rect" coords="240,56,290,80"/>
-<area href="classRook.html" title="Ладья." alt="Rook" shape="rect" coords="300,56,350,80"/>
-  </map>
-</div></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classFigure__inherit__graph.svg" width="100%" height="548"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+<div class="dynheader">
+Граф связей класса Figure:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classFigure__coll__graph.svg" width="166" height="176"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Открытые члены</h2></td></tr>
-<tr class="memitem:af51162c8ed60dde80e326cae9fd2fba3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFigure.html#af51162c8ed60dde80e326cae9fd2fba3">Figure</a> (int price, FigureColor color=WHITE)</td></tr>
+<tr class="memitem:af51162c8ed60dde80e326cae9fd2fba3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFigure.html#af51162c8ed60dde80e326cae9fd2fba3">Figure</a> (int price, <a class="el" href="constants_8h.html#a80feabe81f30d5b97df91defa4774c0f">FigureColor</a> color=<a class="el" href="constants_8h.html#a80feabe81f30d5b97df91defa4774c0fa283fc479650da98250635b9c3c0e7e50">WHITE</a>)</td></tr>
 <tr class="memdesc:af51162c8ed60dde80e326cae9fd2fba3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Конструктор, используемый в классах наследниках.  <a href="classFigure.html#af51162c8ed60dde80e326cae9fd2fba3">Подробнее...</a><br /></td></tr>
 <tr class="separator:af51162c8ed60dde80e326cae9fd2fba3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7a36488fa19e8ceb96b684527df50d9e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFigure.html#a7a36488fa19e8ceb96b684527df50d9e">getPrice</a> ()</td></tr>
@@ -109,14 +105,11 @@ $(function() {
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Защищенные данные</h2></td></tr>
-<tr class="memitem:a72d0bf2ff589f0ceb9171d31268b3494"><td class="memItemLeft" align="right" valign="top"><a id="a72d0bf2ff589f0ceb9171d31268b3494"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>b_price</b></td></tr>
+<tr class="memitem:a72d0bf2ff589f0ceb9171d31268b3494"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFigure.html#a72d0bf2ff589f0ceb9171d31268b3494">b_price</a></td></tr>
 <tr class="separator:a72d0bf2ff589f0ceb9171d31268b3494"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa506c0bde1a6ac01f3d3b729ae0fd1f5"><td class="memItemLeft" align="right" valign="top"><a id="aa506c0bde1a6ac01f3d3b729ae0fd1f5"></a>
-std::set&lt; <a class="el" href="classPosition.html">Position</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>possible_moves</b></td></tr>
+<tr class="memitem:aa506c0bde1a6ac01f3d3b729ae0fd1f5"><td class="memItemLeft" align="right" valign="top">std::set&lt; <a class="el" href="classPosition.html">Position</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFigure.html#aa506c0bde1a6ac01f3d3b729ae0fd1f5">possible_moves</a></td></tr>
 <tr class="separator:aa506c0bde1a6ac01f3d3b729ae0fd1f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a13206acc9b4fce30d4d18a911f5cbf83"><td class="memItemLeft" align="right" valign="top"><a id="a13206acc9b4fce30d4d18a911f5cbf83"></a>
-FigureColor&#160;</td><td class="memItemRight" valign="bottom"><b>b_color</b></td></tr>
+<tr class="memitem:a13206acc9b4fce30d4d18a911f5cbf83"><td class="memItemLeft" align="right" valign="top"><a class="el" href="constants_8h.html#a80feabe81f30d5b97df91defa4774c0f">FigureColor</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFigure.html#a13206acc9b4fce30d4d18a911f5cbf83">b_color</a></td></tr>
 <tr class="separator:a13206acc9b4fce30d4d18a911f5cbf83"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
@@ -137,8 +130,8 @@ FigureColor&#160;</td><td class="memItemRight" valign="bottom"><b>b_color</b></t
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">FigureColor&#160;</td>
-          <td class="paramname"><em>color</em> = <code>WHITE</code>&#160;</td>
+          <td class="paramtype"><a class="el" href="constants_8h.html#a80feabe81f30d5b97df91defa4774c0f">FigureColor</a>&#160;</td>
+          <td class="paramname"><em>color</em> = <code><a class="el" href="constants_8h.html#a80feabe81f30d5b97df91defa4774c0fa283fc479650da98250635b9c3c0e7e50">WHITE</a></code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -247,9 +240,76 @@ FigureColor&#160;</td><td class="memItemRight" valign="bottom"><b>b_color</b></t
 
 </div>
 </div>
+<h2 class="groupheader">Данные класса</h2>
+<a id="a13206acc9b4fce30d4d18a911f5cbf83"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a13206acc9b4fce30d4d18a911f5cbf83">&#9670;&nbsp;</a></span>b_color</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="constants_8h.html#a80feabe81f30d5b97df91defa4774c0f">FigureColor</a> Figure::b_color</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a72d0bf2ff589f0ceb9171d31268b3494"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a72d0bf2ff589f0ceb9171d31268b3494">&#9670;&nbsp;</a></span>b_price</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Figure::b_price</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa506c0bde1a6ac01f3d3b729ae0fd1f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa506c0bde1a6ac01f3d3b729ae0fd1f5">&#9670;&nbsp;</a></span>possible_moves</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::set&lt;<a class="el" href="classPosition.html">Position</a>&gt; Figure::possible_moves</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <hr/>Объявления и описания членов классов находятся в файлах:<ul>
 <li>src/logic/figures/<a class="el" href="figures_8h_source.html">figures.h</a></li>
-<li>src/logic/figures/figures.cpp</li>
+<li>src/logic/figures/<a class="el" href="figures_8cpp.html">figures.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

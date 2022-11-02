@@ -1,12 +1,7 @@
 var searchData=
 [
-  ['savemove_25',['saveMove',['../classSceneGame.html#ab178194482d9274e5eaceb7b9bba4477',1,'SceneGame']]],
-  ['scenegame_26',['SceneGame',['../classSceneGame.html',1,'']]],
-  ['screengame_27',['ScreenGame',['../classScreenGame.html',1,'']]],
-  ['screenliderboard_28',['ScreenLiderboard',['../classScreenLiderboard.html',1,'']]],
-  ['screenmenu_29',['ScreenMenu',['../classScreenMenu.html',1,'']]],
-  ['screensettings_30',['ScreenSettings',['../classScreenSettings.html',1,'']]],
-  ['setfigureon_31',['setFigureOn',['../classBoard.html#a183ac960c959ed0df9b49314d0479703',1,'Board']]],
-  ['setfigureonboard_32',['setFigureOnBoard',['../classEngine.html#aecc43b5398baffd0cddd1af03dca4793',1,'Engine']]],
-  ['setstartingarrangement_33',['setStartingArrangement',['../classEngine.html#a9027b51e4922e147b8ae3b50348c69af',1,'Engine']]]
+  ['pawn_52',['Pawn',['../classPawn.html',1,'Pawn'],['../classPawn.html#a8d03682a1590cde01da0dc998dea0426',1,'Pawn::Pawn(FigureColor color=WHITE)'],['../classPawn.html#a1f29610a1f93f12fc49de75a33331d23',1,'Pawn::Pawn(bool flag_move, FigureColor color=WHITE)']]],
+  ['pawn_53',['PAWN',['../constants_8h.html#a3da527ca0edbe6a57ea4f61d1e5af434a1f189a15a64c7c4a1553e876b56c6bf2',1,'constants.h']]],
+  ['position_54',['Position',['../classPosition.html',1,'Position'],['../classPosition.html#a369a577425f8ba02e8750d04b6a088db',1,'Position::Position()'],['../classPosition.html#ae89a1c268c745eeb3f34a3e3f969fbf5',1,'Position::Position(const Position &amp;pos)'],['../classPosition.html#a6e36cf0fee251e74cfedb86f4e99558d',1,'Position::Position(int x, int y)']]],
+  ['possible_5fmoves_55',['possible_moves',['../classFigure.html#aa506c0bde1a6ac01f3d3b729ae0fd1f5',1,'Figure']]]
 ];
