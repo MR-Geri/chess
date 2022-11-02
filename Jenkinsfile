@@ -6,7 +6,7 @@ pipeline{
     stages {
         stage("CMAKE compile"){
             steps {
-                sh 'cmake [options] -S /var/jenkins_home/workspace/chess_dev/CMakeLists.txt'
+                sh 'cmake [options] -S /var/jenkins_home/workspace/chess_dev/'
             }
         }
         stage("MAKE compile"){
