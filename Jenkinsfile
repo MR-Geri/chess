@@ -1,7 +1,7 @@
 pipeline{
     agent any
     options {
-        tumestamps()
+        timestamps()
     }
     stages {
         stage("One"){
