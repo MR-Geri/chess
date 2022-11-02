@@ -7,6 +7,7 @@ pipeline{
         stage("CMAKE compile"){
             steps {
                 sh 'pwd'
+                sh 'ls'
                 cmake installation: 'InSearchPath'
                 sh 'pwd'
                 cmakeBuild buildType: 'Release', cleanBuild: true, installation: 'InSearchPath', steps: [[withCmake: true]]
