@@ -75,32 +75,33 @@ $(function() {
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;list&gt;</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
-<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="classBoard.html">   11</a></span>&#160;<span class="keyword">class </span><a class="code" href="classBoard.html">Board</a> {</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;  <a class="code" href="classBoard.html#a9ee491d4fea680cf69b033374a9fdfcb">Board</a>();</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;  ~<a class="code" href="classBoard.html">Board</a>();</div>
-<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="classBoard.html#ad2288a8adf6de5ecbb70fa2a11cd390f">   27</a></span>&#160;  std::list&lt;Position&gt; <a class="code" href="classBoard.html#ad2288a8adf6de5ecbb70fa2a11cd390f">getPossibleStepsFrom</a>(<a class="code" href="classPosition.html">Position</a> coords) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  <a class="code" href="classFigure.html">Figure</a> *<a class="code" href="classBoard.html#a0bac43a8a2fc2aabc7e687eeedbe9f9e">getFigure</a>(<a class="code" href="classPosition.html">Position</a> coords) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
-<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="classBoard.html#ab88eabe2d17dadba7cbe4bf2a73e5b77">   46</a></span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classBoard.html#ab88eabe2d17dadba7cbe4bf2a73e5b77">getSituation</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classBoard.html#a4ed8cf3fae283d3c88eb6b0dea9e9f0a">move</a>(<a class="code" href="classPosition.html">Position</a> from, <a class="code" href="classPosition.html">Position</a> to);</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  <span class="keywordtype">bool</span> setFigureOn(<a class="code" href="classFigure.html">Figure</a> *figure, <a class="code" href="classPosition.html">Position</a> position);</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  <span class="keywordtype">void</span> clear();</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  std::vector&lt;std::vector&lt;Figure *&gt;&gt; board;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;};</div>
-<div class="ttc" id="aclassBoard_html"><div class="ttname"><a href="classBoard.html">Board</a></div><div class="ttdoc">Обрабатывает логику игрового поля.</div><div class="ttdef"><b>Definition:</b> board.h:11</div></div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="classBoard.html">   12</a></span>&#160;<span class="keyword">class </span><a class="code" href="classBoard.html">Board</a> {</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;  <a class="code" href="classBoard.html">Board</a>();</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;  ~<a class="code" href="classBoard.html">Board</a>();</div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="classBoard.html#ad2288a8adf6de5ecbb70fa2a11cd390f">   24</a></span>&#160;  std::list&lt;Position&gt; <a class="code" href="classBoard.html#ad2288a8adf6de5ecbb70fa2a11cd390f">getPossibleStepsFrom</a>(<a class="code" href="classPosition.html">Position</a> coords) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  <a class="code" href="classFigure.html">Figure</a> *<a class="code" href="classBoard.html#a0bac43a8a2fc2aabc7e687eeedbe9f9e">getFigure</a>(<a class="code" href="classPosition.html">Position</a> coords) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="classBoard.html#ab88eabe2d17dadba7cbe4bf2a73e5b77">   43</a></span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classBoard.html#ab88eabe2d17dadba7cbe4bf2a73e5b77">getSituation</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classBoard.html#a4ed8cf3fae283d3c88eb6b0dea9e9f0a">move</a>(<a class="code" href="classPosition.html">Position</a> from, <a class="code" href="classPosition.html">Position</a> to);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classBoard.html#a183ac960c959ed0df9b49314d0479703">setFigureOn</a>(<a class="code" href="classFigure.html">Figure</a> *figure, <a class="code" href="classPosition.html">Position</a> position);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classBoard.html#af74f0d4b43e5aa3faea16d7c6407b05e">clear</a>();</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  std::vector&lt;std::vector&lt;Figure *&gt;&gt; board;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;};</div>
+<div class="ttc" id="aclassBoard_html"><div class="ttname"><a href="classBoard.html">Board</a></div><div class="ttdoc">Обрабатывает логику игрового поля.</div><div class="ttdef"><b>Definition:</b> board.h:12</div></div>
 <div class="ttc" id="aclassBoard_html_a0bac43a8a2fc2aabc7e687eeedbe9f9e"><div class="ttname"><a href="classBoard.html#a0bac43a8a2fc2aabc7e687eeedbe9f9e">Board::getFigure</a></div><div class="ttdeci">Figure * getFigure(Position coords) const</div><div class="ttdoc">Возвращает фигуру, которая находится в ячейке поля с координатами coords.</div><div class="ttdef"><b>Definition:</b> board.cpp:22</div></div>
+<div class="ttc" id="aclassBoard_html_a183ac960c959ed0df9b49314d0479703"><div class="ttname"><a href="classBoard.html#a183ac960c959ed0df9b49314d0479703">Board::setFigureOn</a></div><div class="ttdeci">bool setFigureOn(Figure *figure, Position position)</div><div class="ttdoc">Устанавливает фигуру на доску.</div><div class="ttdef"><b>Definition:</b> board.cpp:61</div></div>
 <div class="ttc" id="aclassBoard_html_a4ed8cf3fae283d3c88eb6b0dea9e9f0a"><div class="ttname"><a href="classBoard.html#a4ed8cf3fae283d3c88eb6b0dea9e9f0a">Board::move</a></div><div class="ttdeci">void move(Position from, Position to)</div><div class="ttdoc">Перемещает фигуру в board.</div><div class="ttdef"><b>Definition:</b> board.cpp:26</div></div>
-<div class="ttc" id="aclassBoard_html_a9ee491d4fea680cf69b033374a9fdfcb"><div class="ttname"><a href="classBoard.html#a9ee491d4fea680cf69b033374a9fdfcb">Board::Board</a></div><div class="ttdeci">Board()</div><div class="ttdoc">Коструктор по умолчанию, генерирует поле с фигурами (стартовая расстановка и набор фигур).</div><div class="ttdef"><b>Definition:</b> board.cpp:4</div></div>
 <div class="ttc" id="aclassBoard_html_ab88eabe2d17dadba7cbe4bf2a73e5b77"><div class="ttname"><a href="classBoard.html#ab88eabe2d17dadba7cbe4bf2a73e5b77">Board::getSituation</a></div><div class="ttdeci">int getSituation() const</div><div class="ttdoc">Возвращает текущую ситуацию на поле.</div></div>
 <div class="ttc" id="aclassBoard_html_ad2288a8adf6de5ecbb70fa2a11cd390f"><div class="ttname"><a href="classBoard.html#ad2288a8adf6de5ecbb70fa2a11cd390f">Board::getPossibleStepsFrom</a></div><div class="ttdeci">std::list&lt; Position &gt; getPossibleStepsFrom(Position coords) const</div><div class="ttdoc">Возвращает список ходов, которые может совершить фигура, находящаяся на поле в ячейке с координатами ...</div></div>
-<div class="ttc" id="aclassFigure_html"><div class="ttname"><a href="classFigure.html">Figure</a></div><div class="ttdef"><b>Definition:</b> figures.h:9</div></div>
+<div class="ttc" id="aclassBoard_html_af74f0d4b43e5aa3faea16d7c6407b05e"><div class="ttname"><a href="classBoard.html#af74f0d4b43e5aa3faea16d7c6407b05e">Board::clear</a></div><div class="ttdeci">void clear()</div><div class="ttdoc">clear Очищает доску.</div><div class="ttdef"><b>Definition:</b> board.cpp:70</div></div>
+<div class="ttc" id="aclassFigure_html"><div class="ttname"><a href="classFigure.html">Figure</a></div><div class="ttdoc">Абстрактный класс фигуры.</div><div class="ttdef"><b>Definition:</b> figures.h:12</div></div>
 <div class="ttc" id="aclassPosition_html"><div class="ttname"><a href="classPosition.html">Position</a></div><div class="ttdoc">Позиция на поле (координаты).</div><div class="ttdef"><b>Definition:</b> utils.h:6</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->

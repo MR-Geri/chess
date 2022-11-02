@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['pawn_34',['Pawn',['../classPawn.html',1,'']]],
-  ['position_35',['Position',['../classPosition.html',1,'']]]
+  ['pawn_44',['Pawn',['../classPawn.html',1,'']]],
+  ['position_45',['Position',['../classPosition.html',1,'']]]
 ];
