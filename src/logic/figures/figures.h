@@ -125,14 +125,14 @@ public:
    * @brief Конструктор.
    * @param color цвет фигуры.
    */
-  Pawn(FigureColor color = WHITE);
+  // Pawn(FigureColor color = WHITE);
 
   /**
    * @brief Конструктор.
    * @param flag_move флаг, показывающий первый ли это ход пешки.
    * @param color цвет фигуры.
    */
-  Pawn(bool flag_move, FigureColor color = WHITE);
+  Pawn(bool flag_move = true, FigureColor color = WHITE);
 
   /**
    * @brief Получение возможных ходов атаки. Перегуженный для пешки метод.

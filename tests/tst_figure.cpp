@@ -221,40 +221,72 @@ void tests::test_kinght() {
   QCOMPARE(engine.move({0, 0}, {1, 1}), IMPOSSIBLE_MOVE);
 
   // Нет хода
-  // setOnlyOneFigureOn(engine, new Kinght(WHITE), {0, 0});
-  // QCOMPARE(engine.move({0, 0}, {0, 0}), FAIL);
-  //
-  // // Выход за границы поля
-  // setOnlyOneFigureOn(engine, new Kinght(WHITE), {0, 0});
-  // QCOMPARE(engine.move({0, 0}, {9, 1}), GO_OUT);
-  //
-  // // Выход за границы поля
-  // for (int i = 0; i < 8; i++) {
-  //   setOnlyOneFigureOn(engine, new Kinght(WHITE), {0, i});
-  //   QCOMPARE(engine.move({0, i}, {-1, 0}), GO_OUT);
-  //   setOnlyOneFigureOn(engine, new Kinght(WHITE), {7, i});
-  //   QCOMPARE(engine.move({7, i}, {1, 0}), GO_OUT);
-  //   setOnlyOneFigureOn(engine, new Kinght(WHITE), {i, 0});
-  //   QCOMPARE(engine.move({i, 0}, {0, -1}), GO_OUT);
-  //   setOnlyOneFigureOn(engine, new Kinght(WHITE), {i, 7});
-  //   QCOMPARE(engine.move({i, 7}, {0, 1}), GO_OUT);
-  // }
-  //
-  // // Ходы через своих
-  // // QCOMPARE(Kinght().move(QPair<int, int>(0, 0)), 4);
-  //
-  // // Успешные ходы
-  // for (int i = -4; i <= 3; i++) {
-  //   if (i != 0){
-  //     setOnlyOneFigureOn(engine, new Kinght(WHITE), {4, 4});
-  //     QCOMPARE(engine.move({4, 4}, {0, i}), DONE);
-  //     setOnlyOneFigureOn(engine, new Kinght(WHITE), {4, 4});
-  //     QCOMPARE(engine.move({4, 4}, {i, 0}), DONE);
-  //   }
-  // }
+  setOnlyOneFigureOn(engine, new Kinght(WHITE), {0, 0});
+  QCOMPARE(engine.move({0, 0}, {0, 0}), FAIL);
+  // Выход за границы поля
+  setOnlyOneFigureOn(engine, new Kinght(WHITE), {0, 0});
+  QCOMPARE(engine.move({0, 0}, {9, 1}), GO_OUT);
+  // Выход за границы поля
+  for (int i = 0; i < 8; i++) {
+    setOnlyOneFigureOn(engine, new Kinght(WHITE), {0, i});
+    QCOMPARE(engine.move({0, i}, {-1, 0}), GO_OUT);
+    setOnlyOneFigureOn(engine, new Kinght(WHITE), {7, i});
+    QCOMPARE(engine.move({7, i}, {1, 0}), GO_OUT);
+    setOnlyOneFigureOn(engine, new Kinght(WHITE), {i, 0});
+    QCOMPARE(engine.move({i, 0}, {0, -1}), GO_OUT);
+    setOnlyOneFigureOn(engine, new Kinght(WHITE), {i, 7});
+    QCOMPARE(engine.move({i, 7}, {0, 1}), GO_OUT);
+  }
+  // Ходы через своих
+  // QCOMPARE(Kinght().move(QPair<int, int>(0, 0)), 4);
+  // Успешные ходы
+  setOnlyOneFigureOn(engine, new Kinght(WHITE), {4, 4});
+  QCOMPARE(engine.move({4, 4}, {2, 1}), DONE);
+  setOnlyOneFigureOn(engine, new Kinght(WHITE), {4, 4});
+  QCOMPARE(engine.move({4, 4}, {1, 2}), DONE);
+  setOnlyOneFigureOn(engine, new Kinght(WHITE), {4, 4});
+  QCOMPARE(engine.move({4, 4}, {-2, -1}), DONE);
+  setOnlyOneFigureOn(engine, new Kinght(WHITE), {4, 4});
+  QCOMPARE(engine.move({4, 4}, {-1, -2}), DONE);
 }
 
-void tests::test_pawn() {}
+void tests::test_pawn() {
+  Engine engine;
+
+  // Невозможные ходы
+  setOnlyOneFigureOn(engine, new Pawn(WHITE), {0, 0});
+  QCOMPARE(engine.move({0, 0}, {2, 2}), IMPOSSIBLE_MOVE);
+  setOnlyOneFigureOn(engine, new Pawn(WHITE), {0, 0});
+  // QCOMPARE(engine.move({0, 0}, {0, 2}), IMPOSSIBLE_MOVE);
+
+  // Нет хода
+  setOnlyOneFigureOn(engine, new Pawn(WHITE), {0, 0});
+  QCOMPARE(engine.move({0, 0}, {0, 0}), FAIL);
+  // Выход за границы поля
+  setOnlyOneFigureOn(engine, new Pawn(WHITE), {0, 0});
+  QCOMPARE(engine.move({0, 0}, {9, 1}), GO_OUT);
+  // Выход за границы поля
+  for (int i = 0; i < 8; i++) {
+    setOnlyOneFigureOn(engine, new Pawn(WHITE), {0, i});
+    QCOMPARE(engine.move({0, i}, {-1, 0}), GO_OUT);
+    setOnlyOneFigureOn(engine, new Pawn(WHITE), {7, i});
+    QCOMPARE(engine.move({7, i}, {1, 0}), GO_OUT);
+    setOnlyOneFigureOn(engine, new Pawn(WHITE), {i, 0});
+    QCOMPARE(engine.move({i, 0}, {0, -1}), GO_OUT);
+    setOnlyOneFigureOn(engine, new Pawn(WHITE), {i, 7});
+    QCOMPARE(engine.move({i, 7}, {0, 1}), GO_OUT);
+  }
+  // Ходы через своих
+  // QCOMPARE(Kinght().move(QPair<int, int>(0, 0)), 4);
+  // Успешные ходы
+
+  setOnlyOneFigureOn(engine, new Pawn(WHITE), {4, 4});
+  QCOMPARE(engine.move({4, 4}, {0, 1}), DONE);
+  setOnlyOneFigureOn(engine, new Pawn(WHITE), {4, 4});
+  QCOMPARE(engine.move({4, 4}, {0, 1}), DONE);
+  setOnlyOneFigureOn(engine, new Pawn(WHITE), {4, 4});
+  QCOMPARE(engine.move({4, 4}, {0, 1}), DONE);
+}
 
 QTEST_APPLESS_MAIN(tests)
 
