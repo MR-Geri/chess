@@ -1,0 +1,4 @@
+<map id="Rook" name="Rook">
+<area shape="rect" id="node1" title="Ладья." alt="" coords="46,219,119,296"/>
+<area shape="rect" id="node2" href="$classFigure.html" title="Абстрактный класс фигуры." alt="" coords="5,5,160,171"/>
+</map>

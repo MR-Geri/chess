@@ -73,13 +73,18 @@ $(function() {
  <a href="classBoard.html#details">Подробнее...</a></p>
 
 <p><code>#include &lt;<a class="el" href="board_8h_source.html">board.h</a>&gt;</code></p>
+<div class="dynheader">
+Граф связей класса Board:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classBoard__coll__graph.svg" width="186" height="191"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Открытые члены</h2></td></tr>
-<tr class="memitem:a9ee491d4fea680cf69b033374a9fdfcb"><td class="memItemLeft" align="right" valign="top"><a id="a9ee491d4fea680cf69b033374a9fdfcb"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBoard.html#a9ee491d4fea680cf69b033374a9fdfcb">Board</a> ()</td></tr>
-<tr class="memdesc:a9ee491d4fea680cf69b033374a9fdfcb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Коструктор по умолчанию, генерирует поле с фигурами (стартовая расстановка и набор фигур). <br /></td></tr>
+<tr class="memitem:a9ee491d4fea680cf69b033374a9fdfcb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBoard.html#a9ee491d4fea680cf69b033374a9fdfcb">Board</a> ()</td></tr>
 <tr class="separator:a9ee491d4fea680cf69b033374a9fdfcb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af73f45730119a1fd8f6670f53f959e68"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBoard.html#af73f45730119a1fd8f6670f53f959e68">~Board</a> ()</td></tr>
+<tr class="separator:af73f45730119a1fd8f6670f53f959e68"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad2288a8adf6de5ecbb70fa2a11cd390f"><td class="memItemLeft" align="right" valign="top">std::list&lt; <a class="el" href="classPosition.html">Position</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBoard.html#ad2288a8adf6de5ecbb70fa2a11cd390f">getPossibleStepsFrom</a> (<a class="el" href="classPosition.html">Position</a> coords) const</td></tr>
 <tr class="memdesc:ad2288a8adf6de5ecbb70fa2a11cd390f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает список ходов, которые может совершить фигура, находящаяся на поле в ячейке с координатами coords.  <a href="classBoard.html#ad2288a8adf6de5ecbb70fa2a11cd390f">Подробнее...</a><br /></td></tr>
 <tr class="separator:ad2288a8adf6de5ecbb70fa2a11cd390f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -92,22 +97,76 @@ $(function() {
 <tr class="memitem:a4ed8cf3fae283d3c88eb6b0dea9e9f0a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBoard.html#a4ed8cf3fae283d3c88eb6b0dea9e9f0a">move</a> (<a class="el" href="classPosition.html">Position</a> from, <a class="el" href="classPosition.html">Position</a> to)</td></tr>
 <tr class="memdesc:a4ed8cf3fae283d3c88eb6b0dea9e9f0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Перемещает фигуру в board.  <a href="classBoard.html#a4ed8cf3fae283d3c88eb6b0dea9e9f0a">Подробнее...</a><br /></td></tr>
 <tr class="separator:a4ed8cf3fae283d3c88eb6b0dea9e9f0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a183ac960c959ed0df9b49314d0479703"><td class="memItemLeft" align="right" valign="top"><a id="a183ac960c959ed0df9b49314d0479703"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>setFigureOn</b> (<a class="el" href="classFigure.html">Figure</a> *figure, <a class="el" href="classPosition.html">Position</a> position)</td></tr>
+<tr class="memitem:a183ac960c959ed0df9b49314d0479703"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBoard.html#a183ac960c959ed0df9b49314d0479703">setFigureOn</a> (<a class="el" href="classFigure.html">Figure</a> *figure, <a class="el" href="classPosition.html">Position</a> position)</td></tr>
+<tr class="memdesc:a183ac960c959ed0df9b49314d0479703"><td class="mdescLeft">&#160;</td><td class="mdescRight">Устанавливает фигуру на доску.  <a href="classBoard.html#a183ac960c959ed0df9b49314d0479703">Подробнее...</a><br /></td></tr>
 <tr class="separator:a183ac960c959ed0df9b49314d0479703"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af74f0d4b43e5aa3faea16d7c6407b05e"><td class="memItemLeft" align="right" valign="top"><a id="af74f0d4b43e5aa3faea16d7c6407b05e"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>clear</b> ()</td></tr>
+<tr class="memitem:af74f0d4b43e5aa3faea16d7c6407b05e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBoard.html#af74f0d4b43e5aa3faea16d7c6407b05e">clear</a> ()</td></tr>
+<tr class="memdesc:af74f0d4b43e5aa3faea16d7c6407b05e"><td class="mdescLeft">&#160;</td><td class="mdescRight">clear Очищает доску.  <a href="classBoard.html#af74f0d4b43e5aa3faea16d7c6407b05e">Подробнее...</a><br /></td></tr>
 <tr class="separator:af74f0d4b43e5aa3faea16d7c6407b05e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
 <div class="textblock"><p>Обрабатывает логику игрового поля. </p>
 <dl class="params"><dt>Аргументы</dt><dd>
   <table class="params">
-    <tr><td class="paramname">board</td><td>матрица, которая хранит фигуры и их расположение на поле. </td></tr>
+    <tr><td class="paramname">board</td><td>матрица, которая хранит указатели на фигуры и расположение фигур на поле. </td></tr>
   </table>
   </dd>
 </dl>
-</div><h2 class="groupheader">Методы</h2>
+</div><h2 class="groupheader">Конструктор(ы)</h2>
+<a id="a9ee491d4fea680cf69b033374a9fdfcb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ee491d4fea680cf69b033374a9fdfcb">&#9670;&nbsp;</a></span>Board()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Board::Board </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af73f45730119a1fd8f6670f53f959e68"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af73f45730119a1fd8f6670f53f959e68">&#9670;&nbsp;</a></span>~Board()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Board::~Board </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="af74f0d4b43e5aa3faea16d7c6407b05e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af74f0d4b43e5aa3faea16d7c6407b05e">&#9670;&nbsp;</a></span>clear()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Board::clear </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>clear Очищает доску. </p>
+
+</div>
+</div>
 <a id="a0bac43a8a2fc2aabc7e687eeedbe9f9e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0bac43a8a2fc2aabc7e687eeedbe9f9e">&#9670;&nbsp;</a></span>getFigure()</h2>
 
@@ -131,7 +190,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>clear</b> ()</td></tr
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Возвращает</dt><dd>наследника класса <a class="el" href="classFigure.html">Figure</a>. </dd></dl>
+<dl class="section return"><dt>Возвращает</dt><dd>наследника класса <a class="el" href="classFigure.html" title="Абстрактный класс фигуры.">Figure</a>. </dd></dl>
 
 </div>
 </div>
@@ -220,9 +279,47 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>clear</b> ()</td></tr
 
 </div>
 </div>
+<a id="a183ac960c959ed0df9b49314d0479703"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a183ac960c959ed0df9b49314d0479703">&#9670;&nbsp;</a></span>setFigureOn()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Board::setFigureOn </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classFigure.html">Figure</a> *&#160;</td>
+          <td class="paramname"><em>figure</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classPosition.html">Position</a>&#160;</td>
+          <td class="paramname"><em>position</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Устанавливает фигуру на доску. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">figure</td><td>ссылка на фигуру, которую нужно разместить на поле. </td></tr>
+    <tr><td class="paramname">position</td><td>позиция, на котрую нужно разместить фигуру. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>если установка прошла успешно - true, в противном случае - false. </dd></dl>
+
+</div>
+</div>
 <hr/>Объявления и описания членов классов находятся в файлах:<ul>
 <li>src/logic/board/<a class="el" href="board_8h_source.html">board.h</a></li>
-<li>src/logic/board/board.cpp</li>
+<li>src/logic/board/<a class="el" href="board_8cpp.html">board.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

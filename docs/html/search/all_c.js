@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['update_24',['update',['../classScreenGame.html#afb3deb5d3d6c4e13899e83de7bed5720',1,'ScreenGame']]]
+  ['queen_56',['Queen',['../classQueen.html',1,'Queen'],['../classQueen.html#a56662c4ff83e3dd61f5ba4f5a2a65061',1,'Queen::Queen()']]],
+  ['queen_57',['QUEEN',['../constants_8h.html#a3da527ca0edbe6a57ea4f61d1e5af434a58561257be7e2f96f82c0fdb51d7f964',1,'constants.h']]]
 ];
