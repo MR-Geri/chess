@@ -257,7 +257,7 @@ void tests::test_pawn() {
   setOnlyOneFigureOn(engine, new Pawn(WHITE), {0, 0});
   QCOMPARE(engine.move({0, 0}, {2, 2}), IMPOSSIBLE_MOVE);
   setOnlyOneFigureOn(engine, new Pawn(WHITE), {0, 0});
-  // QCOMPARE(engine.move({0, 0}, {0, 2}), IMPOSSIBLE_MOVE);
+  QCOMPARE(engine.move({0, 0}, {0, 2}), IMPOSSIBLE_MOVE);
 
   // Нет хода
   setOnlyOneFigureOn(engine, new Pawn(WHITE), {0, 0});
@@ -284,6 +284,8 @@ void tests::test_pawn() {
   QCOMPARE(engine.move({4, 4}, {0, 1}), DONE);
   setOnlyOneFigureOn(engine, new Pawn(WHITE), {4, 4});
   QCOMPARE(engine.move({4, 4}, {0, 1}), DONE);
+  setOnlyOneFigureOn(engine, new Pawn(false, WHITE), {4, 4});
+  QCOMPARE(engine.move({4, 4}, {0, 2}), DONE);
   setOnlyOneFigureOn(engine, new Pawn(WHITE), {4, 4});
   QCOMPARE(engine.move({4, 4}, {0, 1}), DONE);
 }
