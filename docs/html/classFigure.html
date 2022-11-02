@@ -99,7 +99,7 @@ $(function() {
 <tr class="memitem:ab648751cbee093526d0d531c4f599d58"><td class="memItemLeft" align="right" valign="top">std::set&lt; <a class="el" href="classPosition.html">Position</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFigure.html#ab648751cbee093526d0d531c4f599d58">getPossibleMoves</a> ()</td></tr>
 <tr class="memdesc:ab648751cbee093526d0d531c4f599d58"><td class="mdescLeft">&#160;</td><td class="mdescRight">Получение возможных ходов перемещения.  <a href="classFigure.html#ab648751cbee093526d0d531c4f599d58">Подробнее...</a><br /></td></tr>
 <tr class="separator:ab648751cbee093526d0d531c4f599d58"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7e8010799eaba0919bc3b68eff755db0"><td class="memItemLeft" align="right" valign="top">std::set&lt; <a class="el" href="classPosition.html">Position</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFigure.html#a7e8010799eaba0919bc3b68eff755db0">getPossibleAttacks</a> ()</td></tr>
+<tr class="memitem:a7e8010799eaba0919bc3b68eff755db0"><td class="memItemLeft" align="right" valign="top">virtual std::set&lt; <a class="el" href="classPosition.html">Position</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFigure.html#a7e8010799eaba0919bc3b68eff755db0">getPossibleAttacks</a> ()</td></tr>
 <tr class="memdesc:a7e8010799eaba0919bc3b68eff755db0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Получение возможных ходов атаки.  <a href="classFigure.html#a7e8010799eaba0919bc3b68eff755db0">Подробнее...</a><br /></td></tr>
 <tr class="separator:a7e8010799eaba0919bc3b68eff755db0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -158,6 +158,9 @@ $(function() {
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">std::set&lt; <a class="el" href="classPosition.html">Position</a> &gt; Figure::getPossibleAttacks </td>
@@ -166,10 +169,17 @@ $(function() {
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Получение возможных ходов атаки. </p>
 <dl class="section return"><dt>Возвращает</dt><dd>список ходов. </dd></dl>
+
+<p>Переопределяется в <a class="el" href="classPawn.html#ab75b1dee4c3dc234f5f9587214f17f32">Pawn</a>.</p>
 
 </div>
 </div>

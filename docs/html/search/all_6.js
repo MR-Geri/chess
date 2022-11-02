@@ -2,7 +2,7 @@ var searchData=
 [
   ['game_5ffield_26',['GAME_FIELD',['../constants_8h.html#af1edd7b7fcdf15ab1bff70cf1daf8ae5a798135e850645f5609a36f8c750033b8',1,'constants.h']]],
   ['getfigure_27',['getFigure',['../classBoard.html#a0bac43a8a2fc2aabc7e687eeedbe9f9e',1,'Board']]],
-  ['getpossibleattacks_28',['getPossibleAttacks',['../classFigure.html#a7e8010799eaba0919bc3b68eff755db0',1,'Figure::getPossibleAttacks()'],['../classPawn.html#a9d256e4d572ede8146c30ec85bbbee9c',1,'Pawn::getPossibleAttacks()']]],
+  ['getpossibleattacks_28',['getPossibleAttacks',['../classFigure.html#a7e8010799eaba0919bc3b68eff755db0',1,'Figure::getPossibleAttacks()'],['../classPawn.html#ab75b1dee4c3dc234f5f9587214f17f32',1,'Pawn::getPossibleAttacks()']]],
   ['getpossiblemoves_29',['getPossibleMoves',['../classFigure.html#ab648751cbee093526d0d531c4f599d58',1,'Figure']]],
   ['getpossiblestepsfrom_30',['getPossibleStepsFrom',['../classBoard.html#ad2288a8adf6de5ecbb70fa2a11cd390f',1,'Board']]],
   ['getprice_31',['getPrice',['../classFigure.html#a7a36488fa19e8ceb96b684527df50d9e',1,'Figure']]],
