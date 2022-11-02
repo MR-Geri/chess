@@ -26,75 +26,121 @@ tests::tests() {}
 
 tests::~tests() {}
 
-void setOnlyOneFigureOn(Engine engine, Figure *figure, Position position) {
+void setOnlyOneFigureOn(Engine &engine, Figure *figure, Position position) {
   engine.clearBoard();
   engine.setFigureOnBoard(figure, position);
 }
 
 void tests::test_king() {
-
   Engine engine;
-  engine.setFigureOnBoard(new King(WHITE), {0, 0});
-
-  // Успешные ходы
-  QCOMPARE(engine.move({0, 0}, {0, 1}), DONE);
-
-  engine.clearBoard();
-  engine.setFigureOnBoard(new King(WHITE), {0, 0});
-  QCOMPARE(engine.move({0, 0}, {1, 0}), DONE);
 
   // Невозможные ходы
-  engine.clearBoard();
-  engine.setFigureOnBoard(new King(WHITE), {0, 0});
+  setOnlyOneFigureOn(engine, new King(WHITE), {0, 0});
   QCOMPARE(engine.move({0, 0}, {3, 1}), IMPOSSIBLE_MOVE);
+  setOnlyOneFigureOn(engine, new King(WHITE), {0, 0});
+  QCOMPARE(engine.move({0, 0}, {0, 2}), IMPOSSIBLE_MOVE);
+  setOnlyOneFigureOn(engine, new King(WHITE), {0, 0});
+  QCOMPARE(engine.move({0, 0}, {1, 2}), IMPOSSIBLE_MOVE);
+  setOnlyOneFigureOn(engine, new King(WHITE), {0, 0});
+  QCOMPARE(engine.move({0, 0}, {2, 2}), IMPOSSIBLE_MOVE);
+  setOnlyOneFigureOn(engine, new King(WHITE), {0, 0});
+  QCOMPARE(engine.move({0, 0}, {-2, 2}), GO_OUT);
+  setOnlyOneFigureOn(engine, new King(WHITE), {0, 0});
+  QCOMPARE(engine.move({0, 0}, {2, -2}), GO_OUT);
 
   // Нет хода
-  engine.clearBoard();
-  engine.setFigureOnBoard(new King(WHITE), {0, 0});
+  setOnlyOneFigureOn(engine, new King(WHITE), {0, 0});
   QCOMPARE(engine.move({0, 0}, {0, 0}), FAIL);
 
   // Выход за границы поля
-  engine.clearBoard();
-  engine.setFigureOnBoard(new King(WHITE), {0, 0});
+  setOnlyOneFigureOn(engine, new King(WHITE), {0, 0});
   QCOMPARE(engine.move({0, 0}, {9, 1}), GO_OUT);
-
-  /*// Проверка генератора
-  QCOMPARE(King().getX(), 0);
-  QCOMPARE(King().getY(), 0);
-  QCOMPARE(King(2, 3).getX(), 2);
-  QCOMPARE(King(2, 3).getY(), 3);
-  // Нет хода
-  QCOMPARE(King().move(QPair<int, int>(0, 0)), 1);
-  // Невозможные ходы
-  QCOMPARE(King().move(QPair<int, int>(0, 2)), 2);
-  QCOMPARE(King().move(QPair<int, int>(1, 2)), 2);
-  QCOMPARE(King().move(QPair<int, int>(2, 2)), 2);
-  QCOMPARE(King().move(QPair<int, int>(-2, 2)), 2);
-  QCOMPARE(King().move(QPair<int, int>(2, -2)), 2);
 
   // Выход за границы поля
   for (int i = 0; i < 8; i++) {
-    QCOMPARE(King(0, i).move(QPair<int, int>(-1, 0)), 3);
-    QCOMPARE(King(7, i).move(QPair<int, int>(1, 0)), 3);
-    QCOMPARE(King(i, 0).move(QPair<int, int>(0, -1)), 3);
-    QCOMPARE(King(i, 7).move(QPair<int, int>(0, 1)), 3);
+    setOnlyOneFigureOn(engine, new King(WHITE), {0, i});
+    QCOMPARE(engine.move({0, i}, {-1, 0}), GO_OUT);
+    setOnlyOneFigureOn(engine, new King(WHITE), {7, i});
+    QCOMPARE(engine.move({7, i}, {1, 0}), GO_OUT);
+    setOnlyOneFigureOn(engine, new King(WHITE), {i, 0});
+    QCOMPARE(engine.move({i, 0}, {0, -1}), GO_OUT);
+    setOnlyOneFigureOn(engine, new King(WHITE), {i, 7});
+    QCOMPARE(engine.move({i, 7}, {0, 1}), GO_OUT);
   }
 
   // Ходы через своих
   // QCOMPARE(King().move(QPair<int, int>(0, 0)), 4);
 
   // Успешные ходы
-  QCOMPARE(King(4, 4).move(QPair<int, int>(-1, -1)), 0);
-  QCOMPARE(King(4, 4).move(QPair<int, int>(-1, 0)), 0);
-  QCOMPARE(King(4, 4).move(QPair<int, int>(0, -1)), 0);
-  QCOMPARE(King(4, 4).move(QPair<int, int>(-1, 1)), 0);
-  QCOMPARE(King(4, 4).move(QPair<int, int>(1, -1)), 0);
-  QCOMPARE(King(4, 4).move(QPair<int, int>(0, 1)), 0);
-  QCOMPARE(King(4, 4).move(QPair<int, int>(1, 0)), 0);
-  QCOMPARE(King(4, 4).move(QPair<int, int>(1, 1)), 0);*/
+  for (int i = -1; i <= 1; i++) {
+    for (int j = -1; j <= 1; j++) {
+      if (i != 0 || j != 0) {
+        setOnlyOneFigureOn(engine, new King(WHITE), {4, 4});
+        QCOMPARE(engine.move({4, 4}, {i, j}), DONE);
+      }
+    }
+  }
+  for (int i = -1; i <= 1; i++) {
+    for (int j = -1; j <= 1; j++) {
+      if (i != 0 || j != 0) {
+        setOnlyOneFigureOn(engine, new King(WHITE), {4, 4});
+        QCOMPARE(engine.move({4, 4}, {i, j}), DONE);
+      }
+    }
+  }
 }
 
-void tests::test_queen() {}
+void tests::test_queen() {
+  Engine engine;
+
+  // Невозможные ходы
+  setOnlyOneFigureOn(engine, new Queen(WHITE), {0, 0});
+  setOnlyOneFigureOn(engine, new Queen(WHITE), {0, 0});
+  QCOMPARE(engine.move({0, 0}, {-2, 2}), GO_OUT);
+  setOnlyOneFigureOn(engine, new Queen(WHITE), {0, 0});
+  QCOMPARE(engine.move({0, 0}, {2, -2}), GO_OUT);
+
+  // Нет хода
+  setOnlyOneFigureOn(engine, new Queen(WHITE), {0, 0});
+  QCOMPARE(engine.move({0, 0}, {0, 0}), FAIL);
+
+  // Выход за границы поля
+  setOnlyOneFigureOn(engine, new Queen(WHITE), {0, 0});
+  QCOMPARE(engine.move({0, 0}, {9, 1}), GO_OUT);
+
+  // Выход за границы поля
+  for (int i = 0; i < 8; i++) {
+    setOnlyOneFigureOn(engine, new Queen(WHITE), {0, i});
+    QCOMPARE(engine.move({0, i}, {-1, 0}), GO_OUT);
+    setOnlyOneFigureOn(engine, new Queen(WHITE), {7, i});
+    QCOMPARE(engine.move({7, i}, {1, 0}), GO_OUT);
+    setOnlyOneFigureOn(engine, new Queen(WHITE), {i, 0});
+    QCOMPARE(engine.move({i, 0}, {0, -1}), GO_OUT);
+    setOnlyOneFigureOn(engine, new Queen(WHITE), {i, 7});
+    QCOMPARE(engine.move({i, 7}, {0, 1}), GO_OUT);
+  }
+
+  // Ходы через своих
+  // QCOMPARE(Queen().move(QPair<int, int>(0, 0)), 4);
+
+  // Успешные ходы
+  for (int i = -1; i <= 1; i++) {
+    for (int j = -1; j <= 1; j++) {
+      if (i != 0 || j != 0) {
+        setOnlyOneFigureOn(engine, new Queen(WHITE), {4, 4});
+        QCOMPARE(engine.move({4, 4}, {i, j}), DONE);
+      }
+    }
+  }
+  for (int i = -1; i <= 1; i++) {
+    for (int j = -1; j <= 1; j++) {
+      if (i != 0 || j != 0) {
+        setOnlyOneFigureOn(engine, new Queen(WHITE), {4, 4});
+        QCOMPARE(engine.move({4, 4}, {i, j}), DONE);
+      }
+    }
+  }
+}
 
 void tests::test_bishop() {}
 
