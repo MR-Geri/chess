@@ -262,6 +262,21 @@ void tests::test_pawn() {
   QCOMPARE(engine.move({0, 0}, {2, 2}), IMPOSSIBLE_MOVE);
   setOnlyOneFigureOn(engine, new Pawn(WHITE), {0, 0});
   QCOMPARE(engine.move({0, 0}, {0, 2}), IMPOSSIBLE_MOVE);
+  setOnlyOneFigureOn(engine, new Pawn(WHITE), {0, 0});
+  engine.setFigureOnBoard(new Pawn(WHITE), {0, 1});
+  QCOMPARE(engine.move({0, 0}, {0, 1}), IMPOSSIBLE_MOVE);
+  //*****************************************************
+  setOnlyOneFigureOn(engine, new Pawn(WHITE), {0, 0});
+  engine.setFigureOnBoard(new Pawn(WHITE), {0, 1});
+  QCOMPARE(engine.move({0, 0}, {0, 2}), IMPOSSIBLE_MOVE);
+  setOnlyOneFigureOn(engine, new Pawn(WHITE), {0, 0});
+  engine.setFigureOnBoard(new Pawn(WHITE), {0, 1});
+  QCOMPARE(engine.move({0, 0}, {0, 1}), IMPOSSIBLE_MOVE);
+  /* TODO
+  setOnlyOneFigureOn(engine, new Pawn(false, WHITE), {0, 0});
+  engine.setFigureOnBoard(new Pawn(WHITE), {0, 1});
+  QCOMPARE(engine.move({0, 0}, {0, 2}), IMPOSSIBLE_MOVE);
+  */
 
   // Нет хода
   setOnlyOneFigureOn(engine, new Pawn(WHITE), {0, 0});
@@ -286,15 +301,21 @@ void tests::test_pawn() {
   // Ходы через своих
   // QCOMPARE(Kinght().move(QPair<int, int>(0, 0)), 4);
   // Успешные ходы
-
-  setOnlyOneFigureOn(engine, new Pawn(WHITE), {4, 4});
-  QCOMPARE(engine.move({4, 4}, {0, 1}), DONE);
   setOnlyOneFigureOn(engine, new Pawn(WHITE), {4, 4});
   QCOMPARE(engine.move({4, 4}, {0, 1}), DONE);
   setOnlyOneFigureOn(engine, new Pawn(false, WHITE), {4, 4});
   QCOMPARE(engine.move({4, 4}, {0, 2}), DONE);
+  setOnlyOneFigureOn(engine, new Pawn(false, WHITE), {0, 0});
+  QCOMPARE(engine.move({0, 0}, {0, 2}), DONE);
+  setOnlyOneFigureOn(engine, new Pawn(false, WHITE), {0, 0});
+  QCOMPARE(engine.move({0, 0}, {0, 2}), DONE);
+  // Взятие
   setOnlyOneFigureOn(engine, new Pawn(WHITE), {4, 4});
-  QCOMPARE(engine.move({4, 4}, {0, 1}), DONE);
+  engine.setFigureOnBoard(new Pawn(WHITE), {5, 5});
+  QCOMPARE(engine.move({4, 4}, {1, 1}), DONE);
+  setOnlyOneFigureOn(engine, new Pawn(WHITE), {4, 4});
+  engine.setFigureOnBoard(new Pawn(WHITE), {3, 5});
+  QCOMPARE(engine.move({4, 4}, {-1, 1}), DONE);
 }
 
 QTEST_APPLESS_MAIN(tests)
