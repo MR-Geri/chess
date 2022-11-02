@@ -8,6 +8,7 @@ pipeline{
             steps {
                 sh 'pwd'
                 sh 'ls'
+                sh 'ls /var/jenkins_home/tools/hudson.plugins.cmake.CmakeTool/3.24.3/bin/'
                 cmake installation: 'InSearchPath'
                 sh 'pwd'
                 cmakeBuild buildType: 'Release', cleanBuild: true, installation: 'InSearchPath', steps: [[withCmake: true]]
