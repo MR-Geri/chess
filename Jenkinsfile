@@ -6,7 +6,7 @@ pipeline{
     stages {
         stage("CMAKE compile"){
             steps {
-                sh 'CXX=/usr/bin/g++ cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=1'
+                sh 'cmake [options] -S /var/jenkins_home/workspace/chess_dev/CMakeLists.txt'
             }
         }
         stage("MAKE compile"){
