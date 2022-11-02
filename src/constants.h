@@ -20,4 +20,7 @@ enum StatusMove { DONE, FAIL, GO_OUT, IMPOSSIBLE_MOVE, MOVE_TO_YOUR_FIGURE };
  */
 enum FiguresPrice { KING = -1, PAWN = 1, KINGHT, BISHOP, ROOK, QUEEN };
 
+/**
+ * @brief Перечисление, содержащее цвета фигур.
+ */
 enum FigureColor { WHITE, BLACK };
