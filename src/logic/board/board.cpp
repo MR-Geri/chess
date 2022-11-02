@@ -24,14 +24,10 @@ Figure *Board::getFigure(Position coords) const {
 }
 
 void Board::move(Position from, Position to) {
-  int to_price =
-          board[to.x][to.y] == nullptr ? 0 : board[to.x][to.y]->getPrice(),
-      price = board[from.x][from.y] == nullptr
-                  ? 0
-                  : board[from.x][from.y]->getPrice();
+  int price = board[from.x][from.y]->getPrice();
 
-  if (to_price != 0 && price != -1) {
-    int price = price - round(float(price - to_price) / 2);
+  if (board[to.x][to.y] != nullptr && price != -1) {
+    price -= round(float(price - board[from.x][from.y]->getPrice()) / 2);
   }
 
   if (board[to.x][to.y] != nullptr)
