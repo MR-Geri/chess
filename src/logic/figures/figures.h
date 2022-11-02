@@ -41,7 +41,7 @@ public:
    * @brief Получение возможных ходов атаки.
    * @return список ходов.
    */
-  std::set<Position> getPossibleAttacks();
+  virtual std::set<Position> getPossibleAttacks();
 
 protected:
   int b_price;
@@ -138,5 +138,5 @@ public:
    * @brief Получение возможных ходов атаки. Перегуженный для пешки метод.
    * @return список ходов.
    */
-  std::set<Position> getPossibleAttacks();
+  std::set<Position> getPossibleAttacks() override;
 };

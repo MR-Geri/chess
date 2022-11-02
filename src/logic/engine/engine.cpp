@@ -21,11 +21,13 @@ StatusMove Engine::move(Position from_pos, Position step) {
   std::set<Position> possible_attacks =
       game_board.getFigure(from_pos)->getPossibleAttacks();
   Figure *to_pos_figure = game_board.getFigure(to_pos);
-  if ((possible_moves.find(step) == possible_moves.end() ||
-       to_pos_figure != nullptr) ||
-      possible_attacks.find(step) == possible_attacks.end()) {
-    // Невозможный ход
-    return IMPOSSIBLE_MOVE;
+
+  if (to_pos_figure == nullptr) {
+    if (possible_moves.find(step) == possible_moves.end())
+      return IMPOSSIBLE_MOVE;
+  } else {
+    if (possible_attacks.find(step) == possible_attacks.end())
+      return IMPOSSIBLE_MOVE;
   }
 
   // V Ошибка, если ход на/через собственную фигуру V
