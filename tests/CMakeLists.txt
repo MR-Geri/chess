@@ -20,6 +20,10 @@ add_executable(tests
     tst_figure.cpp
     ../src/logic/figures/figures.h
     ../src/logic/figures/figures.cpp
+    ../src/logic/engine/engine.h
+    ../src/logic/engine/engine.cpp
+    ../src/logic/board/board.h
+    ../src/logic/board/board.cpp
 )
 
 add_test(NAME tests COMMAND tests)

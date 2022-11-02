@@ -1,5 +1,8 @@
+#include "../src/logic/board/board.h"
+#include "../src/logic/engine/engine.h"
 #include "../src/logic/figures/figures.h"
 #include <QtTest>
+#include <iostream>
 
 // add necessary includes here
 
@@ -23,7 +26,38 @@ tests::tests() {}
 
 tests::~tests() {}
 
+void setOnlyOneFigureOn(Engine engine, Figure *figure, Position position) {
+  engine.clearBoard();
+  engine.setFigureOnBoard(figure, position);
+}
+
 void tests::test_king() {
+
+  Engine engine;
+  engine.setFigureOnBoard(new King(WHITE), {0, 0});
+
+  // Успешные ходы
+  QCOMPARE(engine.move({0, 0}, {0, 1}), DONE);
+
+  engine.clearBoard();
+  engine.setFigureOnBoard(new King(WHITE), {0, 0});
+  QCOMPARE(engine.move({0, 0}, {1, 0}), DONE);
+
+  // Невозможные ходы
+  engine.clearBoard();
+  engine.setFigureOnBoard(new King(WHITE), {0, 0});
+  QCOMPARE(engine.move({0, 0}, {3, 1}), IMPOSSIBLE_MOVE);
+
+  // Нет хода
+  engine.clearBoard();
+  engine.setFigureOnBoard(new King(WHITE), {0, 0});
+  QCOMPARE(engine.move({0, 0}, {0, 0}), FAIL);
+
+  // Выход за границы поля
+  engine.clearBoard();
+  engine.setFigureOnBoard(new King(WHITE), {0, 0});
+  QCOMPARE(engine.move({0, 0}, {9, 1}), GO_OUT);
+
   /*// Проверка генератора
   QCOMPARE(King().getX(), 0);
   QCOMPARE(King().getY(), 0);
