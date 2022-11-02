@@ -4,19 +4,24 @@ pipeline{
         timestamps()
     }
     stages {
-        stage("One"){
+        stage("CMAKE compile"){
             steps {
-                sh "sleep 1"
+                sh "cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=1"
             }
         }
-        stage("Two"){
+        stage("MAKE compile"){
             steps {
-                sh "sleep 5"
+                sh "make"
             }
         }
-        stage("Three"){
+        stage("Tests"){
             steps {
-                sh "sleep 1"
+                sh """
+                    if [[ ! -z $(./tests/tests | grep -m 1 'FAIL!') ]]; then
+                        exit 1
+                    fi
+                    exit 0
+                """
             }
         }
     }
