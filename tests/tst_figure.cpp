@@ -285,8 +285,8 @@ void tests::test_pawn() {
 
   // Ходы через своих
   // QCOMPARE(Kinght().move(QPair<int, int>(0, 0)), 4);
-
   // Успешные ходы
+
   setOnlyOneFigureOn(engine, new Pawn(WHITE), {4, 4});
   QCOMPARE(engine.move({4, 4}, {0, 1}), DONE);
   setOnlyOneFigureOn(engine, new Pawn(WHITE), {4, 4});
