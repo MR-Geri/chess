@@ -16,12 +16,12 @@ pipeline{
         }
         stage("Tests"){
             steps {
-                sh ```
+                sh '''
                     if [[ ! -z $(./tests/tests | grep -m 1 'FAIL!') ]]; then
                         exit 1
                     fi
                     exit 0
-                ```
+                '''
             }
         }
     }
