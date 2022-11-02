@@ -4,6 +4,9 @@
 #include "../board/board.h"
 #include "../figures/figures.h"
 
+/**
+ * @brief Движок игры. Реализует логику ходов.
+ */
 class Engine {
 public:
   Engine();
@@ -17,16 +20,30 @@ public:
    */
   StatusMove move(Position from_pos, Position step);
 
-  void calculateAdvantage();
+  /**
+   * @brief Расчет преимущества игрока.
+   * @return расчитанное значение.
+   */
+  int calculateAdvantage();
 
+  /**
+   * @brief Базовая расстановка фигур на поле.
+   */
   void setStartingArrangement();
 
+  /**
+   * @brief Установка фигуры на доску.
+   * @param figure указатель на фигуру, которую нужно поставить на поле.
+   * @param position позиция на которую нужно поставить фигуру.
+   * @return если установка прошла успешно - true, в противном случае - false.
+   */
   bool setFigureOnBoard(Figure *figure, Position position);
 
+  /**
+   * @brief clearBoard
+   */
   void clearBoard();
 
 private:
   Board game_board;
-  int advantage; // Преимущесто кого-то из игроков. Отрицательное значение -
-                 // преимущество черных, положительное - белых.
 };
