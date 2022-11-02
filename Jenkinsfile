@@ -6,7 +6,7 @@ pipeline{
     stages {
         stage("CMAKE compile"){
             steps {
-                sh 'cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=1'
+                sh 'CXX=/usr/bin/g++ cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=1'
             }
         }
         stage("MAKE compile"){
