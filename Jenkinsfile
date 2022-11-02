@@ -6,7 +6,7 @@ pipeline{
     stages {
         stage("CMAKE compile"){
             steps {
-                cmake arguments: '/var/jenkins_home/workspace/chess_dev', installation: 'InSearchPath'
+                cmake installation: 'InSearchPath'
                 cmakeBuild buildType: 'Release', cleanBuild: true, installation: 'InSearchPath', steps: [[withCmake: true]]
             }
         }
