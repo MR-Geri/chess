@@ -6,11 +6,7 @@ pipeline{
     stages {
         stage("CMAKE compile"){
             steps {
-                sh 'pwd'
-                sh 'ls'
-                sh 'ls /var/jenkins_home/tools/hudson.plugins.cmake.CmakeTool/'
                 cmake installation: 'InSearchPath'
-                sh 'pwd'
                 cmakeBuild buildType: 'Release', cleanBuild: true, installation: 'InSearchPath', steps: [[withCmake: true]]
             }
         }
