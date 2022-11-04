@@ -32,7 +32,7 @@ pipeline{
         }
         stage("Git add commit push"){
             when {
-                sh 'git diff-files --name-only'
+                changeset "*"
             }
             steps {
                 sh 'git add .'
