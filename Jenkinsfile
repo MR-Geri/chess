@@ -19,6 +19,9 @@ pipeline{
             when {
                 anyOf {
                     changeset pattern: ".*\\.cpp", comparator: "REGEXP"
+                    changeset pattern: ".*\\.h", comparator: "REGEXP"
+                    changeset pattern: ".*\\.hpp", comparator: "REGEXP"
+                    changeset pattern: ".*\\.cxx", comparator: "REGEXP"
                 }
             }
             steps {
@@ -29,6 +32,10 @@ pipeline{
             when {
                 anyOf {
                     changeset pattern: ".*\\.cpp", comparator: "REGEXP"
+                    changeset pattern: ".*\\.h", comparator: "REGEXP"
+                    changeset pattern: ".*\\.hpp", comparator: "REGEXP"
+                    changeset pattern: ".*\\.cxx", comparator: "REGEXP"
+                    changeset pattern: "README.md", comparator: "REGEXP"
                 }
             }
             steps {
@@ -44,6 +51,10 @@ pipeline{
             when {
                 anyOf {
                     changeset pattern: ".*\\.cpp", comparator: "REGEXP"
+                    changeset pattern: ".*\\.h", comparator: "REGEXP"
+                    changeset pattern: ".*\\.hpp", comparator: "REGEXP"
+                    changeset pattern: ".*\\.cxx", comparator: "REGEXP"
+                    changeset pattern: "README.md", comparator: "REGEXP"
                 }
             }
             steps {
