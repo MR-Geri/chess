@@ -18,10 +18,10 @@ pipeline{
         stage("Formating"){
             when {
                 anyOf {
-                    changeset pattern: ".*\\.cpp", comparator: "REGEXP";
-                    changeset pattern: ".*\\.h", comparator: "REGEXP";
-                    changeset pattern: ".*\\.hpp", comparator: "REGEXP";
-                    changeset pattern: ".*\\.cxx", comparator: "REGEXP";
+                    changeset pattern: "src/.*\\.cpp", comparator: "REGEXP";
+                    changeset pattern: "src/.*\\.h", comparator: "REGEXP";
+                    changeset pattern: "src/.*\\.hpp", comparator: "REGEXP";
+                    changeset pattern: "src/.*\\.cxx", comparator: "REGEXP";
                 }
             }
             steps {
@@ -31,10 +31,10 @@ pipeline{
         stage("Create documentation"){
             when {
                 anyOf {
-                    changeset pattern: ".*\\.cpp", comparator: "REGEXP";
-                    changeset pattern: ".*\\.h", comparator: "REGEXP";
-                    changeset pattern: ".*\\.hpp", comparator: "REGEXP";
-                    changeset pattern: ".*\\.cxx", comparator: "REGEXP";
+                    changeset pattern: "src/.*\\.cpp", comparator: "REGEXP";
+                    changeset pattern: "src/.*\\.h", comparator: "REGEXP";
+                    changeset pattern: "src/.*\\.hpp", comparator: "REGEXP";
+                    changeset pattern: "src/.*\\.cxx", comparator: "REGEXP";
                     changeset pattern: "README.md", comparator: "REGEXP";
                 }
             }
@@ -50,10 +50,10 @@ pipeline{
         stage("Git add commit push"){
             when {
                 anyOf {
-                    changeset pattern: ".*\\.cpp", comparator: "REGEXP";
-                    changeset pattern: ".*\\.h", comparator: "REGEXP";
-                    changeset pattern: ".*\\.hpp", comparator: "REGEXP";
-                    changeset pattern: ".*\\.cxx", comparator: "REGEXP";
+                    changeset pattern: "src/.*\\.cpp", comparator: "REGEXP";
+                    changeset pattern: "src/.*\\.h", comparator: "REGEXP";
+                    changeset pattern: "src/.*\\.hpp", comparator: "REGEXP";
+                    changeset pattern: "src/.*\\.cxx", comparator: "REGEXP";
                     changeset pattern: "README.md", comparator: "REGEXP";
                 }
             }
