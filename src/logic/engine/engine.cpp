@@ -1,4 +1,5 @@
 #include "engine.h"
+#include <iostream>
 
 Engine::Engine() {}
 
@@ -23,16 +24,22 @@ StatusMove Engine::move(Position from_pos, Position step) {
   Figure *to_pos_figure = game_board.getFigure(to_pos);
 
   if (to_pos_figure == nullptr) {
-    if (possible_moves.find(step) == possible_moves.end())
+    if (possible_moves.find(step) == possible_moves.end()) {
       return IMPOSSIBLE_MOVE;
+    }
   } else {
-    if (possible_attacks.find(step) == possible_attacks.end())
+    if (possible_attacks.find(step) == possible_attacks.end()) {
       return IMPOSSIBLE_MOVE;
+    }
   }
 
-  // V Ошибка, если ход на/через собственную фигуру V
-  if (0) {
-    return MOVE_TO_YOUR_FIGURE;
+  // V Ошибка, если ход на/через фигуру V
+  for (auto i_step : game_board.getFigure(from_pos)->getUnarySteps(step)) {
+    Position check(from_pos.x + i_step.x, from_pos.y + i_step.y);
+    if (game_board.getFigure(check) != nullptr &&
+        possible_attacks.find(i_step) == possible_attacks.end()) {
+      return MOVE_TO_THROUGH_FIGURE;
+    }
   }
   // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 

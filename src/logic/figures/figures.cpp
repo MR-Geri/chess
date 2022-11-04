@@ -1,3 +1,4 @@
+#include <iostream>
 #include "figures.h"
 
 int Figure::getPrice() { return b_price; }
@@ -84,9 +85,9 @@ std::list<Position> Figure::getUnarySteps(Position step) {
   std::list<Position> out;
   Position pos(0, 0);
   while (pos != step) {
-    out.emplace_back(pos);
     pos.x += x_step;
     pos.y += y_step;
+    out.emplace_back(pos);
   }
   return out;
 }

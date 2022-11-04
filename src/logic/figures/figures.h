@@ -29,7 +29,7 @@ public:
    * @param step позиция в которую нужно переместиться.
    * @return список элементарных ходов.
    */
-  std::list<Position> getUnarySteps(Position step);
+  virtual std::list<Position> getUnarySteps(Position step);
 
   /**
    * @brief Получение возможных ходов перемещения.
@@ -113,7 +113,7 @@ public:
    * @param step позиция в которую нужно переместиться.
    * @return список элементарных ходов.
    */
-  std::list<Position> getUnarySteps(Position step);
+  std::list<Position> getUnarySteps(Position step) override;
 };
 
 /**
