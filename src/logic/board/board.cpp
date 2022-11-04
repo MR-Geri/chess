@@ -30,7 +30,6 @@ void Board::move(Position from, Position to) {
     price -= round(float(price - board[from.x][from.y]->getPrice()) / 2);
   }
 
-
   if (board[to.x][to.y] != nullptr)
     delete board[to.x][to.y];
 
