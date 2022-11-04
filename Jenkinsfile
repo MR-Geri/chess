@@ -22,7 +22,7 @@ pipeline{
                 }
             }
             steps {
-                sh '(git diff-tree --no-commit-id --name-only -r $(git symbolic-ref --short HEAD)) | grep \'.*[\\.cpp|\\.h|\\.hpp|\\.cxx]\' && xargs -n 1 clang-format --sort-includes --style=LLVM -i'
+                sh '(git diff-tree --no-commit-id --name-only -r $(git symbolic-ref --short HEAD)) | grep \'.*[\\.cpp|\\.h|\\.hpp|\\.cxx]\' | clang-format --sort-includes --style=LLVM -i'
             }
         }
         stage("Create documentation"){
