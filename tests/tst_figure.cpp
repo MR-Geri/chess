@@ -20,7 +20,7 @@ private slots:
       void test_bishop();
       void test_rook();
       void test_kinght();
-  void test_pawn();
+      void test_pawn();
 };
 
 tests::tests() {}
