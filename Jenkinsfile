@@ -39,7 +39,7 @@ pipeline{
                 }
             }
             steps {
-                sh '(git diff-tree --no-commit-id --name-only -r $(git symbolic-ref --short HEAD)) && doxygen'
+                sh 'doxygen'
             }
         }
         stage("Tests"){
