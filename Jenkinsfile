@@ -18,7 +18,7 @@ pipeline{
         stage("Formating"){
             when {
                 anyOf {
-                    changeset pattern: ".\\.cpp", comparator: "REGEXP"
+                    changeset pattern: ".*\\.cpp", comparator: "REGEXP"
                 }
             }
             steps {
