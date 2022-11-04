@@ -16,16 +16,18 @@ pipeline{
             }
         }
         stage("Formating"){
-            when {
-                changeset pattern: ".*[\\.cpp|\\.h|\\.hpp|\\.cxx]", comparator: "REGEXP"
+            anyOf {
+                changeset pattern: "*.cpp"
             }
             steps {
-                sh '(git diff-tree --no-commit-id --name-only -r $(git symbolic-ref --short HEAD)) | grep \'.*[\\.cpp|\\.h|\\.hpp|\\.cxx]\' | xargs -n 1 clang-format --sort-includes --style=LLVM -i'
+                sh '(git diff-tree --no-commit-id --name-only -r $(git symbolic-ref --short HEAD)) | grep \'.*[\\.cpp|\\.h|\\.hpp|\\.cxx]\' && xargs -n 1 clang-format --sort-includes --style=LLVM -i'
             }
         }
         stage("Create documentation"){
             when {
-                changeset pattern: ".*[\\.cpp|\\.h|\\.hpp|\\.cxx]", comparator: "REGEXP"
+                anyOf {
+                    changeset pattern: "*.cpp"
+                }
             }
             steps {
                 sh '(git diff-tree --no-commit-id --name-only -r $(git symbolic-ref --short HEAD)) && doxygen'
@@ -39,8 +41,7 @@ pipeline{
         stage("Git add commit push"){
             when {
                 anyOf {
-                    changeset pattern: "docs/.*", comparator: "REGEXP"
-                    changeset pattern: ".*[\\.cpp|\\.h|\\.hpp|\\.cxx]", comparator: "REGEXP"
+                    changeset pattern: "*.cpp"
                 }
             }
             steps {
