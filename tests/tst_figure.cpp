@@ -3,6 +3,7 @@
 #include "../src/logic/figures/figures.h"
 #include <QtTest>
 #include <iostream>
+#include <qtestcase.h>
 
 // add necessary includes here
 
@@ -316,6 +317,8 @@ void tests::test_pawn() {
   setOnlyOneFigureOn(engine, new Pawn(WHITE), {4, 4});
   engine.setFigureOnBoard(new Pawn(WHITE), {3, 5});
   QCOMPARE(engine.move({4, 4}, {-1, 1}), DONE);
+  // Its test FAIL
+  QCOMPARE(0, 1);
 }
 
 QTEST_APPLESS_MAIN(tests)
