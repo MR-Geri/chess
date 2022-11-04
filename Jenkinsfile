@@ -32,11 +32,11 @@ pipeline{
         }
         stage("Git add commit push"){
             when {
-                changeset "*"
+                changeset pattern: "docs/.*|.*[\.cpp|\.h|\.hpp|\.cxx]", comparator: "REGEXP"
             }
             steps {
                 sh 'git add .'
-                sh 'git config --global user.email "jenkins@mr-geri.ru"'
+                sh 'git config --global user.email "ilya.kamckine@ya.ru"'
                 sh 'git config --global user.name "Jenkins"'
                 sh 'git commit -m \"$(git show-branch --no-name $(git symbolic-ref --short HEAD)) +edit_jenkins\"'
                 sh 'git push --set-upstream origin $(git symbolic-ref --short HEAD)'
