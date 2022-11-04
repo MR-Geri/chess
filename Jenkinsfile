@@ -32,8 +32,8 @@ pipeline{
         }
         stage("Git add commit push"){
             steps {
-                sh 'git diff-files --name-only | xargs -n 1 git add -i'
-                sh 'git commit -m "$(git show-branch --no-name $(git symbolic-ref --short HEAD)) +edit_jenkins" --amend --author="Jenkins <jenkins@mr_geri.ru>"'
+                sh 'git diff-files --name-only | xargs -n 1 git add'
+                sh 'git commit -m \"$(git show-branch --no-name $(git symbolic-ref --short HEAD)) +edit_jenkins\" --amend --author="Jenkins <jenkins@mr_geri.ru>"'
                 sh 'git push'
             }
         }
