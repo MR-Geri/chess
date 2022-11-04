@@ -31,12 +31,15 @@ pipeline{
             }
         }
         stage("Git add commit push"){
+            when {
+                sh 'git diff-files --name-only'
+            }
             steps {
-                sh 'git diff-files --name-only && git add || true'
+                sh 'git add .'
                 sh 'git config --global user.email "jenkins@mr-geri.ru"'
                 sh 'git config --global user.name "Jenkins"'
-                sh 'git commit -m \"$(git show-branch --no-name $(git symbolic-ref --short HEAD)) +edit_jenkins\" || true'
-                sh 'git push || true'
+                sh 'git commit -m \"$(git show-branch --no-name $(git symbolic-ref --short HEAD)) +edit_jenkins\"'
+                sh 'git push --set-upstream origin $(git symbolic-ref --short HEAD)'
             }
         }
     }
