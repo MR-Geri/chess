@@ -1,5 +1,5 @@
-#include <iostream>
 #include "figures.h"
+#include <iostream>
 
 int Figure::getPrice() { return b_price; }
 

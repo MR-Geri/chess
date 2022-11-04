@@ -277,7 +277,6 @@ void tests::test_pawn() {
   setOnlyOneFigureOn(engine, new Pawn(false, WHITE), {0, 0});
   engine.setFigureOnBoard(new Pawn(WHITE), {0, 1});
   QCOMPARE(engine.move({0, 0}, {0, 2}), MOVE_TO_THROUGH_FIGURE);
- 
 
   // Нет хода
   setOnlyOneFigureOn(engine, new Pawn(WHITE), {0, 0});
