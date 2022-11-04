@@ -32,9 +32,11 @@ pipeline{
         }
         stage("Git add commit push"){
             steps {
-                sh 'git diff-files --name-only && xargs -n 1 git add'
-                sh 'git commit -m \"$(git show-branch --no-name $(git symbolic-ref --short HEAD)) +edit_jenkins\" --amend --author="Jenkins <ilya.kamckine@ya.ru>"'
-                sh 'git push'
+                sh 'git diff-files --name-only && git add || true'
+                sh 'git config --global user.email "jenkins@mr-geri.ru"'
+                sh 'git config --global user.name "Jenkins"'
+                sh 'git commit -m \"$(git show-branch --no-name $(git symbolic-ref --short HEAD)) +edit_jenkins\" || true'
+                sh 'git push || true'
             }
         }
     }
