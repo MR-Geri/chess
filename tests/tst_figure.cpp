@@ -17,7 +17,7 @@ public:
 private slots:
       void test_king();
       void test_queen();
-      void test_bishop();
+  void test_bishop();
   void test_rook();
   void test_kinght();
   void test_pawn();
