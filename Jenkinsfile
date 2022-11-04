@@ -16,8 +16,10 @@ pipeline{
             }
         }
         stage("Formating"){
-            anyOf {
-                changeset pattern: "*.cpp"
+            when {
+                anyOf {
+                    changeset pattern: "*.cpp"
+                }
             }
             steps {
                 sh '(git diff-tree --no-commit-id --name-only -r $(git symbolic-ref --short HEAD)) | grep \'.*[\\.cpp|\\.h|\\.hpp|\\.cxx]\' && xargs -n 1 clang-format --sort-includes --style=LLVM -i'
