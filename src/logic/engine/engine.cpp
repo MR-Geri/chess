@@ -67,7 +67,7 @@ void Engine::setStartingArrangement() {
 }
 
 bool Engine::setFigureOnBoard(Figure *figure, Position position) {
-  game_board.setFigureOn(figure, position);
+  return game_board.setFigureOn(figure, position);
 }
 
 void Engine::clearBoard() { game_board.clear(); }
