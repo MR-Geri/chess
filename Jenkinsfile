@@ -38,7 +38,10 @@ pipeline{
         }
         stage("Git add commit push"){
             when {
-                changeset pattern: "docs/.*|.*[\\.cpp|\\.h|\\.hpp|\\.cxx]", comparator: "REGEXP"
+                anyOf {
+                    changeset pattern: "docs/.*", comparator: "REGEXP"
+                    changeset pattern: ".*[\\.cpp|\\.h|\\.hpp|\\.cxx]", comparator: "REGEXP"
+                }
             }
             steps {
                 sh 'git add .'
