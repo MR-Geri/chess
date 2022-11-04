@@ -7,6 +7,6 @@ var searchData=
   ['mainwindow_47',['MainWindow',['../classMainWindow.html',1,'MainWindow'],['../classMainWindow.html#a996c5a2b6f77944776856f08ec30858d',1,'MainWindow::MainWindow()']]],
   ['menu_48',['MENU',['../constants_8h.html#af1edd7b7fcdf15ab1bff70cf1daf8ae5a4c40e60bc71a32b924ce1f08d57f9721',1,'constants.h']]],
   ['move_49',['move',['../classBoard.html#a4ed8cf3fae283d3c88eb6b0dea9e9f0a',1,'Board::move()'],['../classEngine.html#a66f2b590d92c6e0fa99741f02a8a9a3f',1,'Engine::move()']]],
-  ['move_5fto_5fyour_5ffigure_50',['MOVE_TO_YOUR_FIGURE',['../constants_8h.html#a8b9a4049772aeb1c0e054b0571babc95ac66ad31561135dfff00b184efc75ade4',1,'constants.h']]],
+  ['move_5fto_5fthrough_5ffigure_50',['MOVE_TO_THROUGH_FIGURE',['../constants_8h.html#a8b9a4049772aeb1c0e054b0571babc95a3f5c66d2b4eac7ece123eac05867a3c6',1,'constants.h']]],
   ['movedfigure_51',['movedFigure',['../classSceneGame.html#a207d949439c411b6ca25c15a11b70a9c',1,'SceneGame']]]
 ];

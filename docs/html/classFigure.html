@@ -93,7 +93,7 @@ $(function() {
 <tr class="memitem:a7a36488fa19e8ceb96b684527df50d9e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFigure.html#a7a36488fa19e8ceb96b684527df50d9e">getPrice</a> ()</td></tr>
 <tr class="memdesc:a7a36488fa19e8ceb96b684527df50d9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Получение веса фигуры.  <a href="classFigure.html#a7a36488fa19e8ceb96b684527df50d9e">Подробнее...</a><br /></td></tr>
 <tr class="separator:a7a36488fa19e8ceb96b684527df50d9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aad86c6d796ac96d30f2a310c107fdbac"><td class="memItemLeft" align="right" valign="top">std::list&lt; <a class="el" href="classPosition.html">Position</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFigure.html#aad86c6d796ac96d30f2a310c107fdbac">getUnarySteps</a> (<a class="el" href="classPosition.html">Position</a> step)</td></tr>
+<tr class="memitem:aad86c6d796ac96d30f2a310c107fdbac"><td class="memItemLeft" align="right" valign="top">virtual std::list&lt; <a class="el" href="classPosition.html">Position</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFigure.html#aad86c6d796ac96d30f2a310c107fdbac">getUnarySteps</a> (<a class="el" href="classPosition.html">Position</a> step)</td></tr>
 <tr class="memdesc:aad86c6d796ac96d30f2a310c107fdbac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Получение элементарных ходов.  <a href="classFigure.html#aad86c6d796ac96d30f2a310c107fdbac">Подробнее...</a><br /></td></tr>
 <tr class="separator:aad86c6d796ac96d30f2a310c107fdbac"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab648751cbee093526d0d531c4f599d58"><td class="memItemLeft" align="right" valign="top">std::set&lt; <a class="el" href="classPosition.html">Position</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFigure.html#ab648751cbee093526d0d531c4f599d58">getPossibleMoves</a> ()</td></tr>
@@ -228,6 +228,9 @@ $(function() {
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">std::list&lt; <a class="el" href="classPosition.html">Position</a> &gt; Figure::getUnarySteps </td>
@@ -237,6 +240,11 @@ $(function() {
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Получение элементарных ходов. </p>
@@ -247,6 +255,8 @@ $(function() {
   </dd>
 </dl>
 <dl class="section return"><dt>Возвращает</dt><dd>список элементарных ходов. </dd></dl>
+
+<p>Переопределяется в <a class="el" href="classKinght.html#abb1932ed1a52489a3d738ca9ceb82fef">Kinght</a>.</p>
 
 </div>
 </div>
