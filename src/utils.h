@@ -13,4 +13,3 @@ public:
   int &x = this->first;
   int &y = this->second;
 };
-
