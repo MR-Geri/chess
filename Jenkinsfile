@@ -17,12 +17,7 @@ pipeline{
         }
         stage("Tests"){
             steps {
-                sh '''
-                    if [[ ! -z $(./tests/tests | grep -m 1 'FAIL!') ]]; then
-                        exit 1
-                    fi
-                    exit 0
-                '''
+                sh './tests/tests'
             }
         }
     }
