@@ -1,5 +1,24 @@
+void setBuildStatus(String message, String state, String my_repo) {
+  step([
+      $class: "GitHubCommitStatusSetter",
+      reposSource: [$class: "ManuallyEnteredRepositorySource", url: my_repo],
+      contextSource: [$class: "ManuallyEnteredCommitContextSource", context: "ci/jenkins/build-status"],
+      errorHandlers: [[$class: "ChangingBuildStatusErrorHandler", result: "UNSTABLE"]],
+      statusResultSource: [ $class: "ConditionalStatusResultSource", results: [[$class: "AnyBuildResult", message: message, state: state]] ]
+  ]);
+}
+
 pipeline{
     agent any
+    environment {
+        GitUrl = """${sh(
+                returnStdout: true,
+                script: 'git config --get remote.origin.url'
+            )}""" 
+    }
+    triggers {
+        githubPush()
+    }
     options {
         timestamps()
     }
@@ -84,6 +103,14 @@ pipeline{
                 sh 'git commit -m \"Jenkins fix: $(git show-branch --no-name $(git symbolic-ref --short HEAD))\"'
                 sh 'git push --set-upstream origin $(git symbolic-ref --short HEAD)'
             }
+        }
+    }
+    post {
+        success {
+            setBuildStatus("Build succeeded", "SUCCESS", "${env.GitUrl}");
+        }
+        failure {
+            setBuildStatus("Build failed", "FAILURE", "${env.GitUrl}");
         }
     }
 }
