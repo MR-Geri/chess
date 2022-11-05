@@ -4,17 +4,6 @@ pipeline{
         timestamps()
     }
     stages {
-        stage("CMAKE compile"){
-            steps {
-                cmake installation: 'InSearchPath'
-                cmakeBuild buildType: 'Release', cleanBuild: true, installation: 'InSearchPath', steps: [[withCmake: true]]
-            }
-        }
-        stage("MAKE compile"){
-            steps {
-                sh 'make'
-            }
-        }
         stage("Formating"){
             when {
                 anyOf {
@@ -32,27 +21,46 @@ pipeline{
                 sh '(git diff-tree --no-commit-id --name-only -r $(git symbolic-ref --short HEAD)) | grep \'.*[\\.cpp|\\.h|\\.hpp|\\.cxx]\' | xargs -n 1 clang-format --sort-includes --style=LLVM -i'
             }
         }
-        stage("Create documentation"){
-            when {
-                anyOf {
-                    changeset pattern: "src/.*\\.cpp", comparator: "REGEXP";
-                    changeset pattern: "src/.*\\.h", comparator: "REGEXP";
-                    changeset pattern: "src/.*\\.hpp", comparator: "REGEXP";
-                    changeset pattern: "src/.*\\.cxx", comparator: "REGEXP";
-                    changeset pattern: "tests/.*\\.cpp", comparator: "REGEXP";
-                    changeset pattern: "tests/.*\\.h", comparator: "REGEXP";
-                    changeset pattern: "tests/.*\\.hpp", comparator: "REGEXP";
-                    changeset pattern: "tests/.*\\.cxx", comparator: "REGEXP";
-                    changeset pattern: "README.md", comparator: "REGEXP";
+        // stage("CMAKE compile"){
+        //     steps {
+        //         cmake installation: 'InSearchPath'
+        //         cmakeBuild buildType: 'Release', cleanBuild: true, installation: 'InSearchPath', steps: [[withCmake: true]]
+        //     }
+        // }
+        // stage("MAKE compile"){
+        //     steps {
+        //         sh 'make'
+        //     }
+        // }
+        parallel {
+            stage("Create documentation"){
+                when {
+                    anyOf {
+                        changeset pattern: "src/.*\\.cpp", comparator: "REGEXP";
+                        changeset pattern: "src/.*\\.h", comparator: "REGEXP";
+                        changeset pattern: "src/.*\\.hpp", comparator: "REGEXP";
+                        changeset pattern: "src/.*\\.cxx", comparator: "REGEXP";
+                        changeset pattern: "tests/.*\\.cpp", comparator: "REGEXP";
+                        changeset pattern: "tests/.*\\.h", comparator: "REGEXP";
+                        changeset pattern: "tests/.*\\.hpp", comparator: "REGEXP";
+                        changeset pattern: "tests/.*\\.cxx", comparator: "REGEXP";
+                        changeset pattern: "README.md", comparator: "REGEXP";
+                    }
+                }
+                steps {
+                    sh 'doxygen'
                 }
             }
-            steps {
-                sh 'doxygen'
-            }
-        }
-        stage("Tests"){
-            steps {
-                sh './tests/tests'
+            stage("Tests"){
+                agent {
+                    dockerfile {
+                        filename 'Dockerfile'
+                        label 'maker_cpp'
+                    }
+                }
+                steps {
+                    sh './tests/tests'
+                }
             }
         }
         stage("Git add commit push"){

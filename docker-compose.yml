@@ -1,0 +1,5 @@
+version: '3.7'
+services:
+    maker_cpp:
+        build:
+            context: ./
