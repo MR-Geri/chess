@@ -15,10 +15,6 @@ pipeline{
                 returnStdout: true,
                 script: 'git config --get remote.origin.url'
             )}""" 
-        GitBranch = """${sh(
-                returnStdout: true,
-                script: 'git symbolic-ref --short HEAD'
-            )}""" 
     }
     triggers {
         githubPush()
@@ -41,7 +37,7 @@ pipeline{
                 }
             }
             steps {
-                sh 'git diff-tree --no-commit-id --name-only -r ${env.GitBranch} | grep \'.*[\\.cpp|\\.h|\\.hpp|\\.cxx]\' | xargs -n 1 clang-format --sort-includes --style=LLVM -i'
+                sh '(git diff-tree --no-commit-id --name-only -r $(git symbolic-ref --short HEAD)) | grep \'.*[\\.cpp|\\.h|\\.hpp|\\.cxx]\' | xargs -n 1 clang-format --sort-includes --style=LLVM -i'
             }
         }
         // stage("CMAKE compile"){
@@ -104,8 +100,8 @@ pipeline{
                 sh 'git add .'
                 sh 'git config --global user.email "ilya.kamckine@yandex.ru"'
                 sh 'git config --global user.name "Jenkins"'
-                sh 'git commit -m \"Jenkins fix: $(git show-branch --no-name ${env.GitBranch})\"'
-                sh 'git push --set-upstream origin ${env.GitBranch}'
+                sh 'git commit -m \"Jenkins fix: $(git show-branch --no-name $(git symbolic-ref --short HEAD))\"'
+                sh 'git push --set-upstream origin $(git symbolic-ref --short HEAD)'
             }
         }
     }
