@@ -53,6 +53,13 @@ pipeline{
                     }
                 }
                 stage("Tests"){
+                    node {
+                        checkout scm
+                        def customImage = docker.build("Dockerfile")
+                        customImage.inside {
+                            sh 'ls'
+                        }
+                    }
                     // agent {
                     //     dockerfile {
                     //         filename 'Dockerfile'
@@ -62,10 +69,6 @@ pipeline{
                     //     sh 'ls'
                     //     sh 'ls tests'
                     // }
-                    def customImage = docker.build("Dockerfile")
-                    customImage.inside {
-                        sh 'ls'
-                    }
                 }
             }
         }
