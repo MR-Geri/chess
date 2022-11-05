@@ -32,34 +32,36 @@ pipeline{
         //         sh 'make'
         //     }
         // }
-        parallel {
-            stage("Create documentation"){
-                when {
-                    anyOf {
-                        changeset pattern: "src/.*\\.cpp", comparator: "REGEXP";
-                        changeset pattern: "src/.*\\.h", comparator: "REGEXP";
-                        changeset pattern: "src/.*\\.hpp", comparator: "REGEXP";
-                        changeset pattern: "src/.*\\.cxx", comparator: "REGEXP";
-                        changeset pattern: "tests/.*\\.cpp", comparator: "REGEXP";
-                        changeset pattern: "tests/.*\\.h", comparator: "REGEXP";
-                        changeset pattern: "tests/.*\\.hpp", comparator: "REGEXP";
-                        changeset pattern: "tests/.*\\.cxx", comparator: "REGEXP";
-                        changeset pattern: "README.md", comparator: "REGEXP";
+        stage("Documentation and Test"){
+            parallel {
+                stage("Create documentation"){
+                    when {
+                        anyOf {
+                            changeset pattern: "src/.*\\.cpp", comparator: "REGEXP";
+                            changeset pattern: "src/.*\\.h", comparator: "REGEXP";
+                            changeset pattern: "src/.*\\.hpp", comparator: "REGEXP";
+                            changeset pattern: "src/.*\\.cxx", comparator: "REGEXP";
+                            changeset pattern: "tests/.*\\.cpp", comparator: "REGEXP";
+                            changeset pattern: "tests/.*\\.h", comparator: "REGEXP";
+                            changeset pattern: "tests/.*\\.hpp", comparator: "REGEXP";
+                            changeset pattern: "tests/.*\\.cxx", comparator: "REGEXP";
+                            changeset pattern: "README.md", comparator: "REGEXP";
+                        }
+                    }
+                    steps {
+                        sh 'doxygen'
                     }
                 }
-                steps {
-                    sh 'doxygen'
-                }
-            }
-            stage("Tests"){
-                agent {
-                    dockerfile {
-                        filename 'Dockerfile'
-                        label 'maker_cpp'
+                stage("Tests"){
+                    agent {
+                        dockerfile {
+                            filename 'Dockerfile'
+                            label 'maker_cpp'
+                        }
                     }
-                }
-                steps {
-                    sh './tests/tests'
+                    steps {
+                        sh './tests/tests'
+                    }
                 }
             }
         }
