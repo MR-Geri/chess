@@ -12,12 +12,12 @@ pipeline{
     agent any
     environment {
         GitUrl = """${sh(
-                returnStdout: true,
-                script: 'git config --get remote.origin.url'
-            )}""" 
+            returnStdout: true,
+            script: 'git config --get remote.origin.url'
+        )}""" 
         GitEditCodeFiles = """${sh(
-                returnStdout: true,
-                script: '(git diff-tree --diff-filter=AM --no-commit-id --name-only -r $(git symbolic-ref --short HEAD)) | grep \'.*[\\.cpp|\\.h|\\.hpp|\\.cxx]\''
+            returnStdout: true,
+            script: '(git diff-tree --diff-filter=AM --no-commit-id --name-only -r $(git symbolic-ref --short HEAD)) | grep \'.*[\\.cpp|\\.h|\\.hpp|\\.cxx]\''
             )}""" 
     }
     triggers {
