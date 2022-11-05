@@ -53,14 +53,18 @@ pipeline{
                     }
                 }
                 stage("Tests"){
-                    agent {
-                        dockerfile {
-                            filename 'Dockerfile'
-                        }
-                    }
-                    steps {
+                    // agent {
+                    //     dockerfile {
+                    //         filename 'Dockerfile'
+                    //     }
+                    // }
+                    // steps {
+                    //     sh 'ls'
+                    //     sh 'ls tests'
+                    // }
+                    def customImage = docker.build("Dockerfile")
+                    customImage.inside {
                         sh 'ls'
-                        sh 'ls tests'
                     }
                 }
             }
