@@ -15,6 +15,10 @@ pipeline{
                 returnStdout: true,
                 script: 'git config --get remote.origin.url'
             )}""" 
+        GitEditCodeFiles = """${sh(
+                returnStdout: true,
+                script: '(git diff-tree --diff-filter=AM --no-commit-id --name-only -r $(git symbolic-ref --short HEAD)) | grep \'.*[\\.cpp|\\.h|\\.hpp|\\.cxx]\''
+            )}""" 
     }
     triggers {
         githubPush()
@@ -25,12 +29,12 @@ pipeline{
     stages {
         stage("Formating"){
             when {
-                anyOf {
-                    changeset pattern: "tests/**/*.cpp"
+                expression {
+                    return "${GitEditCodeFiles}" != '';
                 }
             }
             steps {
-                sh '(git diff-tree --diff-filter=AM --no-commit-id --name-only -r $(git symbolic-ref --short HEAD)) | grep \'.*[\\.cpp|\\.h|\\.hpp|\\.cxx]\' | xargs -n 1 clang-format --sort-includes --style=LLVM -i'
+                sh '${GitEditCodeFiles} | xargs -n 1 clang-format --sort-includes --style=LLVM -i'
             }
         }
         // stage("CMAKE compile"){
@@ -48,9 +52,8 @@ pipeline{
             parallel {
                 stage("Create documentation"){
                     when {
-                        anyOf {
-                            changeset pattern: "tests/**/*.cpp"
-                            changeset pattern: "README.md", comparator: "REGEXP";
+                        expression {
+                            return "${GitEditCodeFiles}" != '';
                         }
                     }
                     steps {
@@ -71,7 +74,7 @@ pipeline{
         stage("Git add commit push"){
             when {
                 expression {
-                    return "${sh(returnStdout: true, script: 'git status --short')}" != 'master';
+                    return "${sh(returnStdout: true, script: 'git status --short')}" != '';
                 }
             }
             steps {
