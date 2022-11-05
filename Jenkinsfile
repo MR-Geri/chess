@@ -30,7 +30,7 @@ pipeline{
         stage("Formating"){
             when {
                 expression {
-                    return "${GitEditCodeFiles}";
+                    return "${GitEditCodeFiles}" == "0";
                 }
             }
             steps {
@@ -42,7 +42,7 @@ pipeline{
                 stage("Create documentation"){
                     when {
                         expression {
-                            return "${GitEditCodeFiles}";
+                            return "${GitEditCodeFiles}" == "0";
                         }
                     }
                     steps {
