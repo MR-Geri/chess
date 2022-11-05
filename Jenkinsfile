@@ -53,12 +53,13 @@ pipeline{
                     }
                 }
                 stage("Tests"){
+                    agent {
+                        dockerfile {
+                            filename 'Dockerfile'
+                        }
+                    }
                     steps {
-                        sh 'docker-compose down --remove-orphans'
-                        sh 'docker-compose pull'
-                        sh 'docker-compose build --pull'
-                        sh 'docker-compose up -d'
-                        sh 'docker-compose run maker_cpp ./tests/tests'
+                        sh './tests/tests'
                     }
                 }
             }
@@ -79,8 +80,6 @@ pipeline{
             }
             steps {
                 sh 'git add .'
-                sh 'git config --global user.email "ilya.kamckine@yandex.ru"'
-                sh 'git config --global user.name "Jenkins"'
                 sh 'git commit -m \"Jenkins fix: $(git show-branch --no-name $(git symbolic-ref --short HEAD))\"'
                 sh 'git push --set-upstream origin $(git symbolic-ref --short HEAD)'
             }
