@@ -87,11 +87,12 @@ std::list<Position> Figure::getUnarySteps(Position step) {
   while (pos != step) {
     pos.x += x_step;
     pos.y += y_step;
-    out.emplace_back(pos);
+    if (pos != step) 
+      out.emplace_back(pos);
   }
   return out;
 }
 
 std::list<Position> Kinght::getUnarySteps(Position step) {
-  return std::list<Position>({step});
+  return std::list<Position>({});
 }

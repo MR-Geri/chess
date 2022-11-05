@@ -36,8 +36,7 @@ StatusMove Engine::move(Position from_pos, Position step) {
   // V Ошибка, если ход на/через фигуру V
   for (auto i_step : game_board.getFigure(from_pos)->getUnarySteps(step)) {
     Position check(from_pos.x + i_step.x, from_pos.y + i_step.y);
-    if (game_board.getFigure(check) != nullptr &&
-        possible_attacks.find(i_step) == possible_attacks.end()) {
+    if (game_board.getFigure(check) != nullptr) {
       return MOVE_TO_THROUGH_FIGURE;
     }
   }
