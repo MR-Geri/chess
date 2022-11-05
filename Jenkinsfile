@@ -59,7 +59,7 @@ pipeline{
                         }
                     }
                     steps {
-                        sh './tests/tests'
+                        sh './app/tests/tests'
                     }
                 }
             }
