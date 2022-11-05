@@ -78,4 +78,3 @@ bool Engine::setFigureOnBoard(Figure *figure, Position position) {
 }
 
 void Engine::clearBoard() { game_board.clear(); }
-
