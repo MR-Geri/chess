@@ -54,6 +54,7 @@ pipeline{
                 }
                 stage("Tests"){
                     steps {
+                        checkout scm
                         docker.build("Dockerfile").inside {
                             sh 'ls'
                         }
