@@ -87,7 +87,7 @@ std::list<Position> Figure::getUnarySteps(Position step) {
   while (pos != step) {
     pos.x += x_step;
     pos.y += y_step;
-    if (pos != step) 
+    if (pos != step)
       out.emplace_back(pos);
   }
   return out;
