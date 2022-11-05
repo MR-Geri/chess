@@ -37,17 +37,6 @@ pipeline{
                 sh '(git diff-tree --diff-filter=AM --no-commit-id --name-only -r $(git symbolic-ref --short HEAD)) | grep \'.*[\\.cpp|\\.h|\\.hpp|\\.cxx]\' | xargs -n 1 clang-format --sort-includes --style=LLVM -i'
             }
         }
-        // stage("CMAKE compile"){
-        //     steps {
-        //         cmake installation: 'InSearchPath'
-        //         cmakeBuild buildType: 'Release', cleanBuild: true, installation: 'InSearchPath', steps: [[withCmake: true]]
-        //     }
-        // }
-        // stage("MAKE compile"){
-        //     steps {
-        //         sh 'make'
-        //     }
-        // }
         stage("Documentation and Test"){
             parallel {
                 stage("Create documentation"){
@@ -88,6 +77,8 @@ pipeline{
     }
     post {
         success {
+            setBuildStatus("Build succeeded", "SUCCESS", "${env.GitUrl}");
+            sh 'git pull origin $(git symbolic-ref --short HEAD)'
             setBuildStatus("Build succeeded", "SUCCESS", "${env.GitUrl}");
         }
         failure {

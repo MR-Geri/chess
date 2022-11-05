@@ -15,7 +15,7 @@ public:
   ~tests();
 
 private slots:
-  void test_king();
+    void test_king();
   void test_queen();
   void test_bishop();
   void test_rook();
