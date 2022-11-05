@@ -108,8 +108,12 @@ pipeline{
     post {
         success {
             setBuildStatus("Build succeeded", "SUCCESS", "${env.GitUrl}");
+            sh 'git pull'
+            setBuildStatus("Build succeeded", "SUCCESS", "${env.GitUrl}");
         }
         failure {
+            setBuildStatus("Build failed", "FAILURE", "${env.GitUrl}");
+            sh 'git pull'
             setBuildStatus("Build failed", "FAILURE", "${env.GitUrl}");
         }
     }
