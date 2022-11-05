@@ -17,4 +17,4 @@ USER sample
 
 # Установим точку входа
 # ENTRYPOINT ["./hello_world_app"]
-# ENTRYPOINT ["./tests/tests"]
+ENTRYPOINT ["./tests/tests"]
