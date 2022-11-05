@@ -26,7 +26,7 @@ pipeline{
         stage("Formating"){
             when {
                 anyOf {
-                    changeset pattern: "tests/.*[\.cpp|\.h]"
+                    changeset pattern: "tests/**/*.cpp"
                 }
             }
             steps {
@@ -49,7 +49,7 @@ pipeline{
                 stage("Create documentation"){
                     when {
                         anyOf {
-                            changeset pattern: "tests/.*[\.cpp|\.h]"
+                            changeset pattern: "tests/**/*.cpp"
                             changeset pattern: "README.md", comparator: "REGEXP";
                         }
                     }
@@ -71,7 +71,7 @@ pipeline{
         stage("Git add commit push"){
             when {
                 anyOf {
-                    changeset pattern: "tests/.*[\.cpp|\.h]"
+                    changeset pattern: "tests/**/*.cpp"
                     changeset pattern: "README.md", comparator: "REGEXP";
                 }
             }
