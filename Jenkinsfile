@@ -18,7 +18,7 @@ pipeline{
         GitEditCodeFiles = """${sh(
             returnStdout: true,
             script: '(git diff-tree --diff-filter=AM --no-commit-id --name-only -r $(git symbolic-ref --short HEAD)) | grep \'.*[\\.cpp|\\.h|\\.hpp|\\.cxx]\''
-            )}""" 
+            ) || " "}""" 
     }
     triggers {
         githubPush()
@@ -30,7 +30,7 @@ pipeline{
         stage("Formating"){
             when {
                 expression {
-                    return "${GitEditCodeFiles}" != '';
+                    return "${GitEditCodeFiles}" != ' ';
                 }
             }
             steps {
@@ -42,7 +42,7 @@ pipeline{
                 stage("Create documentation"){
                     when {
                         expression {
-                            return "${GitEditCodeFiles}" != '';
+                            return "${GitEditCodeFiles}" != ' ';
                         }
                     }
                     steps {
@@ -63,7 +63,7 @@ pipeline{
         stage("Git add commit push"){
             when {
                 expression {
-                    return "${sh(returnStdout: true, script: 'git status --short')}" != '';
+                    return "${sh(returnStdout: true, script: 'git status --short')}" != ' ';
                 }
             }
             steps {
