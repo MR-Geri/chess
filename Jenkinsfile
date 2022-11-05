@@ -70,9 +70,8 @@ pipeline{
         }
         stage("Git add commit push"){
             when {
-                anyOf {
-                    changeset pattern: "tests/**/*.cpp"
-                    changeset pattern: "README.md", comparator: "REGEXP";
+                expression {
+                    return "${sh(returnStdout: true, script: 'git status --short')}" != 'master';
                 }
             }
             steps {
