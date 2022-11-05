@@ -56,7 +56,7 @@ pipeline{
                     agent {
                         dockerfile {
                             filename 'Dockerfile'
-                            label 'maker_cpp'
+                            dir './'
                         }
                     }
                     steps {
