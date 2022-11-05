@@ -59,8 +59,7 @@ pipeline{
                         }
                     }
                     steps {
-                        sh 'ls'
-                        sh './app/tests/tests'
+                        sh 'docker-compose run maker_cpp ./tests/tests'
                     }
                 }
             }
