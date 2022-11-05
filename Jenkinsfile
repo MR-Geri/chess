@@ -53,13 +53,12 @@ pipeline{
                     }
                 }
                 stage("Tests"){
-                    agent {
-                        dockerfile {
-                            filename 'Dockerfile'
-                        }
-                    }
                     steps {
-                        sh './tests/tests'
+                        sh 'docker-compose down --remove-orphans'
+                        sh 'docker-compose pull'
+                        sh 'docker-compose build --pull'
+                        sh 'docker-compose up -d'
+                        sh 'docker-compose run maker_cpp ./tests/tests'
                     }
                 }
             }
