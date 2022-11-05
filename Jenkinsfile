@@ -53,21 +53,16 @@ pipeline{
                     }
                 }
                 stage("Tests"){
-                    steps {
-                        checkout scm
-                        docker.build("Dockerfile").inside {
-                            sh 'ls'
+                    agent {
+                        dockerfile {
+                            filename 'Dockerfile'
+                            args './tests/tests'
                         }
                     }
-                    // agent {
-                    //     dockerfile {
-                    //         filename 'Dockerfile'
-                    //     }
-                    // }
-                    // steps {
-                    //     sh 'ls'
-                    //     sh 'ls tests'
-                    // }
+                    steps {
+                        sh 'ls'
+                        sh 'ls tests'
+                    }
                 }
             }
         }
