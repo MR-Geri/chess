@@ -41,8 +41,13 @@ pipeline{
             parallel {
                 stage("Create documentation"){
                     when {
-                        expression {
-                            return "${GitEditCodeFiles}" != "";
+                        anyOf {
+                            expression {
+                                return "${GitEditCodeFiles}" != "";
+                            }
+                            changeset { 
+                                "README.md"
+                            }
                         }
                     }
                     steps {
