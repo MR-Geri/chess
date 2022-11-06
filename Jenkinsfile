@@ -17,7 +17,7 @@ pipeline{
         )}""" 
         GitEditFile = """${sh(
             returnStdout: true,
-            script: '(git diff-tree --diff-filter=AM --no-commit-id --name-only -r $(git symbolic-ref --short HEAD))'
+            script: 'git diff-tree --diff-filter=AM --no-commit-id --name-only -r $(git symbolic-ref --short HEAD)'
         )}""" 
         GitEditCodeFiles = """${sh(
             returnStatus: true,
@@ -54,7 +54,7 @@ pipeline{
                                 return "${GitEditCodeFiles}" == "0";
                             }
                             extension {
-                                return 
+                                return "${GitEditReadme}" == "0";
                             }
                         }
                     }
