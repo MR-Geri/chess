@@ -16,8 +16,8 @@ pipeline{
             script: 'git config --get remote.origin.url'
         )}""" 
         GitEditCodeFiles = """${sh(
-            returnStdout: true,
-            script: '(git diff-tree --diff-filter=AM --no-commit-id --name-only -r $(git symbolic-ref --short HEAD)) | grep \'.*[\\.cpp|\\.h|\\.hpp|\\.cxx]\' || echo "1"'
+            returnStatus: true,
+            script: '(git diff-tree --diff-filter=AM --no-commit-id --name-only -r $(git symbolic-ref --short HEAD)) | grep \'.*[\\.cpp|\\.h|\\.hpp|\\.cxx]\''
             )}""" 
     }
     triggers {
@@ -30,12 +30,11 @@ pipeline{
         stage("Formating"){
             when {
                 expression {
-                    return "${GitEditCodeFiles}" != 1;
+                    return "${GitEditCodeFiles}" == "0";
                 }
             }
             steps {
-                echo "${GitEditCodeFiles}"
-                sh 'clang-format --sort-includes --style=LLVM -i ${GitEditCodeFiles}'
+                sh 'clang-format --sort-includes --style=LLVM -i ${((git diff-tree --diff-filter=AM --no-commit-id --name-only -r $(git symbolic-ref --short HEAD)) | grep \'.*[\\.cpp|\\.h|\\.hpp|\\.cxx]\')}'
             }
         }
         stage("Documentation and Test"){
@@ -44,7 +43,7 @@ pipeline{
                     when {
                         anyOf {
                             expression {
-                                return "${GitEditCodeFiles}" != 1;
+                                return "${GitEditCodeFiles}" == "0";
                             }
                             changeset "README.md"
                         }
