@@ -31,12 +31,6 @@ pipeline{
         githubPush()
     }
     stages {
-        stage("Echo") {
-            steps {
-                sh 'echo "${GitEditCodeFiles}"'
-                sh 'echo "${GitEditReadme}"'
-            }
-        }
         stage("Formating"){
             when {
                 expression {
