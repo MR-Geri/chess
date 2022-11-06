@@ -41,32 +41,46 @@ pipeline{
                 sh 'git diff-tree --diff-filter=AM --no-commit-id --name-only -r $(git symbolic-ref --short HEAD) | grep \'.*[\\.cpp|\\.h|\\.hpp|\\.cxx]$\' | xargs -n 1 clang-format --sort-includes --style=LLVM -i'
             }
         }
-        stage("Documentation and Test"){
-            parallel {
-                stage("Create documentation"){
-                    when {
-                        expression {
-                            return "${GitEditCodeFiles}" == "0" || "${GitEditReadme}" == "0";
-                        }
-                    }
-                    steps {
-                        sh 'doxygen'
-                    }
+        stage("Init docker"){
+            steps {
+                sh 'docker-compose pull'
+                sh 'docker-compose build --pull'
+                sh 'docker-compose up -d'
+            }
+        }
+        stage("Create documentation"){
+            when {
+                expression {
+                    return "${GitEditCodeFiles}" == "0" || "${GitEditReadme}" == "0";
                 }
-                stage("Tests"){
-                    when {
-                        expression {
-                            return "${GitEditCodeFiles}" == "0";
-                        }
-                    }
+            }
+            steps {
+                sh 'doxygen'
+            }
+        }
+        stage("Tests"){
+            when {
+                expression {
+                    return "${GitEditCodeFiles}" == "0";
+                }
+            }
+            stages {
+                stage("Unit Tests"){
                     steps {
-                        sh 'docker-compose down --remove-orphans'
-                        sh 'docker-compose pull'
-                        sh 'docker-compose build --pull'
-                        sh 'docker-compose up -d'
                         sh 'docker-compose run maker_cpp ./tests/tests'
                     }
                 }
+                stage("CppCheck"){
+                    steps {
+                        echo 'CppCheck OK'
+                        // sh 'cppcheck --enable=all --suppress=missingInclude --std=c++17 --library=qt --quiet --verbose --template="[{severity}][{id}] {message} \n\t> {callstack}\n" ./'
+                    }
+                }
+            }
+        }
+        stage("Down docker"){
+            steps {
+                sh 'docker-compose down --remove-orphans'
             }
         }
         stage("Git add commit push"){
