@@ -15,18 +15,10 @@ pipeline{
             returnStdout: true,
             script: 'git config --get remote.origin.url'
         )}""" 
-        GitEditFile = """${sh(
-            returnStdout: true,
-            script: 'git diff-tree --diff-filter=AM --no-commit-id --name-only -r $(git symbolic-ref --short HEAD)'
-        )}""" 
         GitEditCodeFiles = """${sh(
             returnStatus: true,
-            script: 'echo "${GitEditFile}" | grep \'.*[\\.cpp|\\.h|\\.hpp|\\.cxx]\''
-        )}""" 
-        GitEditReadme = """${sh(
-            returnStatus: true,
-            script: 'echo "${GitEditFile}" | grep \'README.md\''
-        )}""" 
+            script: '(git diff-tree --diff-filter=AM --no-commit-id --name-only -r $(git symbolic-ref --short HEAD)) | grep \'.*[\\.cpp|\\.h|\\.hpp|\\.cxx]\''
+            )}""" 
     }
     triggers {
         githubPush()
@@ -42,15 +34,18 @@ pipeline{
                 }
             }
             steps {
-                sh 'clang-format --sort-includes --style=LLVM -i ${((git diff-tree --diff-filter=AM --no-commit-id --name-only -r $(git symbolic-ref --short HEAD)) | grep \'.*[\\.cpp|\\.h|\\.hpp|\\.cxx]\')}'
+                sh '(git diff-tree --diff-filter=AM --no-commit-id --name-only -r $(git symbolic-ref --short HEAD)) | grep \'.*[\\.cpp|\\.h|\\.hpp|\\.cxx]\' | xargs -n 1 clang-format --sort-includes --style=LLVM -i'
             }
         }
         stage("Documentation and Test"){
             parallel {
                 stage("Create documentation"){
                     when {
-                        expression {
-                            return "${GitEditCodeFiles}" == "0" || "${GitEditReadme}" == "0";
+                        anyOf {
+                            expression {
+                                return "${GitEditCodeFiles}" == "0";
+                            }
+                            changeset "README.md"
                         }
                     }
                     steps {
