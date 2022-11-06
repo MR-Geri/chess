@@ -30,7 +30,7 @@ pipeline{
         stage("Formating"){
             when {
                 expression {
-                    return "${GitEditCodeFiles}" != "1";
+                    return "${GitEditCodeFiles}" != 1;
                 }
             }
             steps {
@@ -44,7 +44,7 @@ pipeline{
                     when {
                         anyOf {
                             expression {
-                                return "${GitEditCodeFiles}" != "1";
+                                return "${GitEditCodeFiles}" != 1;
                             }
                             changeset "README.md"
                         }
