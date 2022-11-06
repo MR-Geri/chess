@@ -17,7 +17,7 @@ pipeline{
         )}""" 
         GitEditCodeFiles = """${sh(
             returnStdout: true,
-            script: '(git diff-tree --diff-filter=AM --no-commit-id --name-only -r $(git symbolic-ref --short HEAD)) | grep \'.*[\\.cpp|\\.h|\\.hpp|\\.cxx]\' || "1"'
+            script: '(git diff-tree --diff-filter=AM --no-commit-id --name-only -r $(git symbolic-ref --short HEAD)) | grep \'.*[\\.cpp|\\.h|\\.hpp|\\.cxx]\''
             )}""" 
     }
     triggers {
@@ -30,10 +30,11 @@ pipeline{
         stage("Formating"){
             when {
                 expression {
-                    return "${GitEditCodeFiles}" != "1";
+                    return "${GitEditCodeFiles}" != "";
                 }
             }
             steps {
+                echo "${GitEditCodeFiles}"
                 sh 'clang-format --sort-includes --style=LLVM -i ${GitEditCodeFiles}'
             }
         }
@@ -43,7 +44,7 @@ pipeline{
                     when {
                         anyOf {
                             expression {
-                                return "${GitEditCodeFiles}" != "1";
+                                return "${GitEditCodeFiles}" != "";
                             }
                             changeset "README.md"
                         }
