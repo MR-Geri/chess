@@ -17,7 +17,7 @@ pipeline{
         )}""" 
         GitEditCodeFiles = """${sh(
             returnStdout: true,
-            script: '(git diff-tree --diff-filter=AM --no-commit-id --name-only -r $(git symbolic-ref --short HEAD)) | grep \'.*[\\.cpp|\\.h|\\.hpp|\\.cxx]\' || "1"'
+            script: '(git diff-tree --diff-filter=AM --no-commit-id --name-only -r $(git symbolic-ref --short HEAD)) | grep \'.*[\\.cpp|\\.h|\\.hpp|\\.cxx]\' || echo "1"'
             )}""" 
     }
     triggers {
