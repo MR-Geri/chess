@@ -34,6 +34,8 @@ pipeline{
                 }
             }
             steps {
+                echo "${GitEditCodeFiles}"
+                echo "${env.GitEditCodeFiles}"
                 sh '(git diff-tree --diff-filter=AM --no-commit-id --name-only -r $(git symbolic-ref --short HEAD)) | grep \'.*[\\.cpp|\\.h|\\.hpp|\\.cxx]\' | xargs -n 1 clang-format --sort-includes --style=LLVM -i'
             }
         }
