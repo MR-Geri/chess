@@ -49,13 +49,8 @@ pipeline{
             parallel {
                 stage("Create documentation"){
                     when {
-                        anyOf {
-                            expression {
-                                return "${GitEditCodeFiles}" == "0";
-                            }
-                            extension {
-                                return "${GitEditReadme}" == "0";
-                            }
+                        expression {
+                            return "${GitEditCodeFiles}" == "0" || "${GitEditReadme}" == "0";
                         }
                     }
                     steps {
