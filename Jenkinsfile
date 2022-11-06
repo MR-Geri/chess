@@ -23,11 +23,11 @@ pipeline{
             script: 'git diff-tree --diff-filter=AM --no-commit-id --name-only -r $(git symbolic-ref --short HEAD)'
         )}""" 
         GitEditCodeFiles = """${sh(
-            returnStdout: true,
+            returnStatus: true,
             script: 'echo "${GitEditFile}" | grep \'.*[\\.cpp|\\.h|\\.hpp|\\.cxx]$\''
         )}""" 
         GitEditReadme = """${sh(
-            returnStdout: true,
+            returnStatus: true,
             script: 'echo "${GitEditFile}" | grep \'README.md\''
         )}""" 
     }
@@ -35,10 +35,17 @@ pipeline{
         githubPush()
     }
     stages {
+        shage("Echo") {
+            steps {
+                sh 'echo "${GitEditFile}"'
+                sh 'echo "${GitEditCodeFiles}"'
+                sh 'echo "${GitEditReadme}"'
+            }
+        }
         stage("Formating"){
             when {
                 expression {
-                    return "${GitEditCodeFiles}" == "";
+                    return "${GitEditCodeFiles}";
                 }
             }
             steps {
@@ -50,7 +57,7 @@ pipeline{
                 stage("Create documentation"){
                     when {
                         expression {
-                            return "${GitEditCodeFiles}" == "" || "${GitEditReadme}" == "";
+                            return "${GitEditCodeFiles}" || "${GitEditReadme}";
                         }
                     }
                     steps {
@@ -60,7 +67,7 @@ pipeline{
                 stage("Tests"){
                     when {
                         expression {
-                            return "${GitEditCodeFiles}" == "";
+                            return "${GitEditCodeFiles}";
                         }
                     }
                     steps {
@@ -76,7 +83,7 @@ pipeline{
         stage("Git add commit push"){
             when {
                 expression {
-                    return "${sh(returnStdout: true, script: 'git status --short')}" != "";
+                    return "${sh(returnStdout: true, script: 'git status --short')}";
                 }
             }
             steps {
