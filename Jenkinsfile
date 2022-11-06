@@ -18,17 +18,13 @@ pipeline{
             returnStdout: true,
             script: 'git config --get remote.origin.url'
         )}""" 
-        GitEditFile = """${sh(
-            returnStdout: true,
-            script: 'git diff-tree --diff-filter=AM --no-commit-id --name-only -r $(git symbolic-ref --short HEAD)'
-        )}""" 
         GitEditCodeFiles = """${sh(
             returnStatus: true,
-            script: '${GitEditFile} | grep \'.*[\\.cpp|\\.h|\\.hpp|\\.cxx]$\''
+            script: 'git diff-tree --diff-filter=AM --no-commit-id --name-only -r $(git symbolic-ref --short HEAD) | grep \'.*[\\.cpp|\\.h|\\.hpp|\\.cxx]$\''
         )}""" 
         GitEditReadme = """${sh(
             returnStatus: true,
-            script: '${GitEditFile} | grep \'README.md\''
+            script: 'git diff-tree --diff-filter=AM --no-commit-id --name-only -r $(git symbolic-ref --short HEAD) | grep \'README.md\''
         )}""" 
     }
     triggers {
@@ -37,7 +33,6 @@ pipeline{
     stages {
         stage("Echo") {
             steps {
-                sh 'echo "${GitEditFile}"'
                 sh 'echo "${GitEditCodeFiles}"'
                 sh 'echo "${GitEditReadme}"'
             }
@@ -49,7 +44,7 @@ pipeline{
                 }
             }
             steps {
-                sh 'echo "${GitEditFile}" | grep \'.*[\\.cpp|\\.h|\\.hpp|\\.cxx]$\' | xargs -n 1 clang-format --sort-includes --style=LLVM -i'
+                sh 'git diff-tree --diff-filter=AM --no-commit-id --name-only -r $(git symbolic-ref --short HEAD) | grep \'.*[\\.cpp|\\.h|\\.hpp|\\.cxx]$\' | xargs -n 1 clang-format --sort-includes --style=LLVM -i'
             }
         }
         stage("Documentation and Test"){
