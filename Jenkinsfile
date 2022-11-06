@@ -35,7 +35,7 @@ pipeline{
         githubPush()
     }
     stages {
-        shage("Echo") {
+        stage("Echo") {
             steps {
                 sh 'echo "${GitEditFile}"'
                 sh 'echo "${GitEditCodeFiles}"'
