@@ -42,6 +42,11 @@ pipeline{
             }
         }
         stage("Init docker"){
+            when {
+                expression {
+                    return "${GitEditCodeFiles}" == "0";
+                }
+            }
             steps {
                 sh 'docker-compose pull'
                 sh 'docker-compose build --pull'
@@ -72,12 +77,17 @@ pipeline{
                 }
                 stage("CppCheck"){
                     steps {
-                        sh 'cppcheck --enable=all --suppress=missingInclude --std=c++17 --library=qt --quiet --verbose --template="[{severity}][{id}] {message} \n\t> {callstack}\n" ./'
+                        sh 'docker-compose run maker_cpp cppcheck --enable=all --suppress=missingInclude --std=c++17 --library=qt --quiet --verbose --template="[{severity}][{id}] {message} \n\t> {callstack}\n" ./'
                     }
                 }
             }
         }
         stage("Down docker"){
+            when {
+                expression {
+                    return "${GitEditCodeFiles}" == "0";
+                }
+            }
             steps {
                 sh 'docker-compose down --remove-orphans'
             }
