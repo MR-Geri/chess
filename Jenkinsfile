@@ -72,8 +72,7 @@ pipeline{
                 }
                 stage("CppCheck"){
                     steps {
-                        echo 'CppCheck OK'
-                        // sh 'cppcheck --enable=all --suppress=missingInclude --std=c++17 --library=qt --quiet --verbose --template="[{severity}][{id}] {message} \n\t> {callstack}\n" ./'
+                        sh 'cppcheck --enable=all --suppress=missingInclude --std=c++17 --library=qt --quiet --verbose --template="[{severity}][{id}] {message} \n\t> {callstack}\n" ./'
                     }
                 }
             }
