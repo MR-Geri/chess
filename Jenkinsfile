@@ -72,7 +72,7 @@ pipeline{
         stage("Git add commit push"){
             when {
                 expression {
-                    return "${sh(returnStdout: true, script: 'git status --short')}" == "0";
+                    return "${sh(returnStdout: true, script: 'git status --short')}";
                 }
             }
             steps {
