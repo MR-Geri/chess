@@ -10,6 +10,9 @@ void setBuildStatus(String message, String state, String my_repo) {
 
 pipeline{
     agent any
+    options {
+        timestamps()
+    }
     environment {
         GitUrl = """${sh(
             returnStdout: true,
@@ -20,25 +23,22 @@ pipeline{
             script: 'git diff-tree --diff-filter=AM --no-commit-id --name-only -r $(git symbolic-ref --short HEAD)'
         )}""" 
         GitEditCodeFiles = """${sh(
-            returnStatus: true,
+            returnStdout: true,
             script: 'echo "${GitEditFile}" | grep \'.*[\\.cpp|\\.h|\\.hpp|\\.cxx]$\''
         )}""" 
         GitEditReadme = """${sh(
-            returnStatus: true,
+            returnStdout: true,
             script: 'echo "${GitEditFile}" | grep \'README.md\''
         )}""" 
     }
     triggers {
         githubPush()
     }
-    options {
-        timestamps()
-    }
     stages {
         stage("Formating"){
             when {
                 expression {
-                    return "${GitEditCodeFiles}" == "0";
+                    return "${GitEditCodeFiles}" == "";
                 }
             }
             steps {
@@ -50,7 +50,7 @@ pipeline{
                 stage("Create documentation"){
                     when {
                         expression {
-                            return "${GitEditCodeFiles}" == "0" || "${GitEditReadme}" == "0";
+                            return "${GitEditCodeFiles}" == "" || "${GitEditReadme}" == "";
                         }
                     }
                     steps {
@@ -60,7 +60,7 @@ pipeline{
                 stage("Tests"){
                     when {
                         expression {
-                            return "${GitEditCodeFiles}" == "0";
+                            return "${GitEditCodeFiles}" == "";
                         }
                     }
                     steps {
@@ -76,7 +76,7 @@ pipeline{
         stage("Git add commit push"){
             when {
                 expression {
-                    return "${sh(returnStdout: true, script: 'git status --short')}";
+                    return "${sh(returnStdout: true, script: 'git status --short')}" != "";
                 }
             }
             steps {
