@@ -40,7 +40,7 @@ pipeline{
         stage("Formating"){
             when {
                 expression {
-                    return "${GitEditCodeFiles}";
+                    return "${GitEditCodeFiles}" == "0";
                 }
             }
             steps {
@@ -52,7 +52,7 @@ pipeline{
                 stage("Create documentation"){
                     when {
                         expression {
-                            return "${GitEditCodeFiles}" || "${GitEditReadme}";
+                            return "${GitEditCodeFiles}" == "0" || "${GitEditReadme}" == "0";
                         }
                     }
                     steps {
@@ -62,7 +62,7 @@ pipeline{
                 stage("Tests"){
                     when {
                         expression {
-                            return "${GitEditCodeFiles}";
+                            return "${GitEditCodeFiles}" == "0";
                         }
                     }
                     steps {
@@ -78,7 +78,7 @@ pipeline{
         stage("Git add commit push"){
             when {
                 expression {
-                    return "${sh(returnStdout: true, script: 'git status --short')}";
+                    return "${sh(returnStdout: true, script: 'git status --short')}" == "0";
                 }
             }
             steps {
