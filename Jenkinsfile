@@ -45,9 +45,7 @@ pipeline{
                             expression {
                                 return "${GitEditCodeFiles}" != "";
                             }
-                            changeset { 
-                                "README.md"
-                            }
+                            changeset "README.md"
                         }
                     }
                     steps {
