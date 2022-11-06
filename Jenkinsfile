@@ -16,7 +16,7 @@ pipeline{
             script: 'git config --get remote.origin.url'
         )}""" 
         GitEditCodeFiles = """${sh(
-            returnStatus: true,
+            returnStdout: true,
             script: '(git diff-tree --diff-filter=AM --no-commit-id --name-only -r $(git symbolic-ref --short HEAD)) | grep \'.*[\\.cpp|\\.h|\\.hpp|\\.cxx]\''
             )}""" 
     }
@@ -30,7 +30,7 @@ pipeline{
         stage("Formating"){
             when {
                 expression {
-                    return "${GitEditCodeFiles}" == "0";
+                    return "${GitEditCodeFiles}" != "";
                 }
             }
             steps {
@@ -42,7 +42,7 @@ pipeline{
                 stage("Create documentation"){
                     when {
                         expression {
-                            return "${GitEditCodeFiles}" == "0";
+                            return "${GitEditCodeFiles}" != "";
                         }
                     }
                     steps {
