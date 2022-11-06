@@ -15,10 +15,18 @@ pipeline{
             returnStdout: true,
             script: 'git config --get remote.origin.url'
         )}""" 
+        GitEditFile = """${sh(
+            returnStdout: true,
+            script: '(git diff-tree --diff-filter=AM --no-commit-id --name-only -r $(git symbolic-ref --short HEAD))'
+        )}""" 
         GitEditCodeFiles = """${sh(
             returnStatus: true,
-            script: '(git diff-tree --diff-filter=AM --no-commit-id --name-only -r $(git symbolic-ref --short HEAD)) | grep \'.*[\\.cpp|\\.h|\\.hpp|\\.cxx]\''
-            )}""" 
+            script: 'echo "${GitEditFile}" | grep \'.*[\\.cpp|\\.h|\\.hpp|\\.cxx]\''
+        )}""" 
+        GitEditReadme = """${sh(
+            returnStatus: true,
+            script: 'echo "${GitEditFile}" | grep \'README.md\''
+        )}""" 
     }
     triggers {
         githubPush()
@@ -45,7 +53,9 @@ pipeline{
                             expression {
                                 return "${GitEditCodeFiles}" == "0";
                             }
-                            changeset "README.md"
+                            extension {
+                                return 
+                            }
                         }
                     }
                     steps {
@@ -53,6 +63,11 @@ pipeline{
                     }
                 }
                 stage("Tests"){
+                    when {
+                        expression {
+                            return "${GitEditCodeFiles}" == "0";
+                        }
+                    }
                     steps {
                         sh 'docker-compose down --remove-orphans'
                         sh 'docker-compose pull'
