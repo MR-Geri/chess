@@ -24,11 +24,11 @@ pipeline{
         )}""" 
         GitEditCodeFiles = """${sh(
             returnStatus: true,
-            script: 'echo "${GitEditFile}" | grep \'.*[\\.cpp|\\.h|\\.hpp|\\.cxx]$\''
+            script: '${GitEditFile} | grep \'.*[\\.cpp|\\.h|\\.hpp|\\.cxx]$\''
         )}""" 
         GitEditReadme = """${sh(
             returnStatus: true,
-            script: 'echo "${GitEditFile}" | grep \'README.md\''
+            script: '${GitEditFile} | grep \'README.md\''
         )}""" 
     }
     triggers {
