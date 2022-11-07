@@ -3,3 +3,5 @@ services:
     maker_cpp:
         build:
             context: ./
+        volumes:
+            - ./:/app

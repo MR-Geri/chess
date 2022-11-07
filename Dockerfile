@@ -3,9 +3,9 @@ FROM gcc:latest as build
 RUN apt-get update && \
     apt-get install -y cmake qtdeclarative5-dev cppcheck
 
-ADD ./src /app/src
-ADD ./tests /app/tests
-ADD CMakeLists.txt /app
+# ADD ./src /app/src
+# ADD ./tests /app/tests
+# ADD CMakeLists.txt /app
 
 WORKDIR /app
 
