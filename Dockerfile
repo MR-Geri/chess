@@ -7,7 +7,7 @@ RUN apt-get update && \
 # ADD ./tests /app/tests
 # ADD CMakeLists.txt /app
 
-# WORKDIR /app
+WORKDIR /app
 
 RUN cmake .
 RUN make
