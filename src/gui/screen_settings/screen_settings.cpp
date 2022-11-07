@@ -6,7 +6,7 @@ ScreenSettings::ScreenSettings(QWidget *parent)
   ui->setupUi(this);
 
   connect(ui->buttonBackSettings, SIGNAL(released()), this,
-          SLOT(buttonBackSettings_released()));
+          SLOT(buttonBackSettingsReleased()));
 }
 
 ScreenSettings::~ScreenSettings() { delete ui; }
