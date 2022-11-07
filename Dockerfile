@@ -7,6 +7,7 @@ RUN apt-get update && \
 # ADD ./tests /app/tests
 # ADD CMakeLists.txt /app
 
+VOLUME ["/app"]
 WORKDIR /app
 
 RUN cmake .
