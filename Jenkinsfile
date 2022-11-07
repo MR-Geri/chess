@@ -31,16 +31,6 @@ pipeline{
         githubPush()
     }
     stages {
-        stage("Formating"){
-            when {
-                expression {
-                    return "${GitEditCodeFiles}" == "0";
-                }
-            }
-            steps {
-                sh 'git diff-tree --diff-filter=AM --no-commit-id --name-only -r $(git symbolic-ref --short HEAD) | grep \'.*[\\.cpp|\\.h|\\.hpp|\\.cxx]$\' | xargs -n 1 clang-format --sort-includes --style=LLVM -i'
-            }
-        }
         stage("Init docker"){
             when {
                 expression {
@@ -53,6 +43,27 @@ pipeline{
                 sh 'docker-compose up -d'
             }
         }
+        stage("Formating"){
+            when {
+                expression {
+                    return "${GitEditCodeFiles}" == "0";
+                }
+            }
+            steps {
+                sh 'docker-compose run maker_cpp git diff-tree --diff-filter=AM --no-commit-id --name-only -r $(git symbolic-ref --short HEAD) | grep \'.*[\\.cpp|\\.h|\\.hpp|\\.cxx]$\' | xargs -n 1 clang-format --sort-includes --style=LLVM -i'
+            }
+        }
+        stage("Compile"){
+            when {
+                expression {
+                    return "${GitEditCodeFiles}" == "0";
+                }
+            }
+            steps {
+                sh 'docker-compose run maker_cpp cmake ./'
+                sh 'docker-compose run maker_cpp make'
+            }
+        }
         stage("Create documentation"){
             when {
                 expression {
@@ -60,7 +71,7 @@ pipeline{
                 }
             }
             steps {
-                sh 'doxygen'
+                sh 'docker-compose run maker_cpp doxygen'
             }
         }
         stage("Tests"){

@@ -3,5 +3,6 @@ services:
     maker_cpp:
         build:
             context: ./
+        user: '1000:1000'
         volumes:
             - ./:/app

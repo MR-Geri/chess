@@ -10,11 +10,11 @@ RUN apt-get update && \
 VOLUME ["/app"]
 WORKDIR /app
 
+USER app
+
 # RUN cmake .
 # RUN make
 
-RUN groupadd -r sample && useradd -r -g sample sample
-USER sample
 
 # Установим точку входа
 # ENTRYPOINT ["./hello_world_app"]
