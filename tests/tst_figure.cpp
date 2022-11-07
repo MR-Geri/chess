@@ -112,11 +112,9 @@ void tests::test_queen() {
   // Успешные ходы
   for (int i = -4; i <= 3; i++) {
     for (int j = -4; j <= 3; j++) {
-      if (i != 0 && j != 0) {
-        if ((abs(i) == abs(j)) || (i == 0 && j != 0) || (i != 0 && j == 0)) {
-          setOnlyOneFigureOn(engine, new Queen(WHITE), {4, 4});
-          QCOMPARE(engine.move({4, 4}, {i, j}), DONE);
-        }
+      if ((abs(i) == abs(j)) || (i == 0 && j != 0) || (i != 0 && j == 0)) {
+        setOnlyOneFigureOn(engine, new Queen(WHITE), {4, 4});
+        QCOMPARE(engine.move({4, 4}, {i, j}), DONE);
       }
     }
   }

@@ -70,14 +70,14 @@ pipeline{
                 }
             }
             stages {
-                stage("Unit Tests"){
-                    steps {
-                        sh 'docker-compose run maker_cpp ./tests/tests'
-                    }
-                }
                 stage("CppCheck"){
                     steps {
                         sh 'docker-compose run maker_cpp cppcheck --enable=all --suppress=missingInclude --std=c++17 --library=qt --quiet --verbose --template="[{severity}][{id}] {message} \n\t> {callstack}\n" ./'
+                    }
+                }
+                stage("Unit Tests"){
+                    steps {
+                        sh 'docker-compose run maker_cpp ./tests/tests'
                     }
                 }
             }
