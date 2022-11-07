@@ -6,10 +6,10 @@ ScreenMenu::ScreenMenu(QWidget *parent)
   ui->setupUi(this);
 
   connect(ui->buttonNewGame, SIGNAL(released()), this,
-          SLOT(go_to_game_field()));
+          SLOT(goToGameField()));
   connect(ui->buttonLiderboard, SIGNAL(released()), this,
-          SLOT(go_to_liderboard()));
-  connect(ui->buttonSettings, SIGNAL(released()), this, SLOT(go_to_settings()));
+          SLOT(goToLiderboard()));
+  connect(ui->buttonSettings, SIGNAL(released()), this, SLOT(goToSettings()));
   connect(ui->buttonExit, SIGNAL(released()), this, SLOT(exit()));
 }
 

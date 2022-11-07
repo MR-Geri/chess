@@ -6,9 +6,9 @@ ScreenGame::ScreenGame(QWidget *parent)
   ui->setupUi(this);
 
   connect(ui->buttonNewGame, SIGNAL(released()), this,
-          SLOT(buttonNewGame_released()));
+          SLOT(buttonNewGameReleased()));
   connect(ui->buttonBackGame, SIGNAL(released()), this,
-          SLOT(buttonBackGame_released()));
+          SLOT(buttonBackGameReleased()));
 }
 
 ScreenGame::~ScreenGame() { delete ui; }

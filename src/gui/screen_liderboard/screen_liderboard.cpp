@@ -6,7 +6,7 @@ ScreenLiderboard::ScreenLiderboard(QWidget *parent)
   ui->setupUi(this);
 
   connect(ui->buttonBackLiderboard, SIGNAL(released()), this,
-          SLOT(buttonBackLiderboard_released()));
+          SLOT(buttonBackLiderboardReleased()));
 }
 
 ScreenLiderboard::~ScreenLiderboard() { delete ui; }
