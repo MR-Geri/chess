@@ -20,7 +20,7 @@ pipeline{
         )}""" 
         GitEditCodeFiles = """${sh(
             returnStatus: true,
-            script: 'git diff-tree --diff-filter=AM --no-commit-id --name-only -r $(git symbolic-ref --short HEAD) | grep \'.*[\\.cpp|\\.h|\\.hpp|\\.cxx]$\''
+            script: 'git diff-tree --diff-filter=AM --no-commit-id --name-only -r $(git symbolic-ref --short HEAD) | grep -E \'(\\.cpp|\\.h|\\.hpp|\\.cxx)$\''
         )}""" 
         GitEditReadme = """${sh(
             returnStatus: true,
