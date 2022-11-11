@@ -35,13 +35,19 @@ public:
    * @brief Получение возможных ходов перемещения.
    * @return список ходов.
    */
-  std::set<Position> getPossibleMoves();
+  virtual std::set<Position> getPossibleMoves();
 
   /**
    * @brief Получение возможных ходов атаки.
    * @return список ходов.
    */
   virtual std::set<Position> getPossibleAttacks();
+
+  /**
+   * @brief Получение цвета фигуры.
+   * @return цвет фигуры.
+   */
+  FigureColor getColor();
 
 protected:
   int b_price;

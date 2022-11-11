@@ -17,17 +17,20 @@ StatusMove Engine::move(Position from_pos, Position step) {
     return GO_OUT;
   }
 
-  std::set<Position> possible_moves =
-      game_board.getFigure(from_pos)->getPossibleMoves();
-  std::set<Position> possible_attacks =
-      game_board.getFigure(from_pos)->getPossibleAttacks();
+
+  Figure *from_pos_figure = game_board.getFigure(from_pos);
   Figure *to_pos_figure = game_board.getFigure(to_pos);
+  std::set<Position> possible_moves = from_pos_figure->getPossibleMoves();
+  std::set<Position> possible_attacks = from_pos_figure->getPossibleAttacks();
 
   if (to_pos_figure == nullptr) {
     if (possible_moves.find(step) == possible_moves.end()) {
       return IMPOSSIBLE_MOVE;
     }
   } else {
+    if (from_pos_figure->getColor() == to_pos_figure->getColor()) {
+      return IMPOSSIBLE_MOVE;
+    }
     if (possible_attacks.find(step) == possible_attacks.end()) {
       return IMPOSSIBLE_MOVE;
     }

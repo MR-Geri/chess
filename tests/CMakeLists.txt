@@ -2,8 +2,6 @@ cmake_minimum_required(VERSION 3.5)
 
 project(tests LANGUAGES CXX)
 
-enable_testing()
-
 find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Test Widgets)
 find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Test Widgets)
 
@@ -25,8 +23,6 @@ add_executable(tests
     ../src/logic/board/board.h
     ../src/logic/board/board.cpp
 )
-
-add_test(NAME tests COMMAND tests)
 
 target_link_libraries(tests 
         Qt${QT_VERSION_MAJOR}::Widgets

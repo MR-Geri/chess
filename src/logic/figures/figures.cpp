@@ -3,6 +3,8 @@
 
 int Figure::getPrice() { return b_price; }
 
+FigureColor Figure::getColor() { return b_color; }
+
 std::set<Position> Figure::getPossibleMoves() { return possible_moves; }
 
 std::set<Position> Figure::getPossibleAttacks() { return possible_moves; }
@@ -73,9 +75,10 @@ Pawn::Pawn(bool flag_move, FigureColor color) : Figure(PAWN, color) {
 }
 
 std::set<Position> Pawn::getPossibleAttacks() {
+  int color_mod = (b_color == WHITE) ? 1 : -1;
   std::set<Position> out;
-  out.insert({1, 1});
-  out.insert({-1, 1});
+  out.insert({1, 1 * color_mod});
+  out.insert({-1, 1 * color_mod});
   return out;
 }
 
