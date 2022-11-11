@@ -1,0 +1,5 @@
+<map id="Board::setFigureOn" name="Board::setFigureOn">
+<area shape="rect" id="node1" title="Устанавливает фигуру на доску." alt="" coords="260,31,395,57"/>
+<area shape="rect" id="node2" href="$classEngine.html#aecc43b5398baffd0cddd1af03dca4793" title="Установка фигуры на доску." alt="" coords="21,5,196,32"/>
+<area shape="rect" id="node3" href="$classEngine.html#a9027b51e4922e147b8ae3b50348c69af" title="Базовая расстановка фигур на поле." alt="" coords="5,56,212,83"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="Board::clear" name="Board::clear">
+<area shape="rect" id="node1" title="clear Очищает доску." alt="" coords="260,31,352,57"/>
+<area shape="rect" id="node2" href="$classEngine.html#a7e19f1f9eb9e6ec51f646bb0a94dd1d6" title="clearBoard" alt="" coords="43,5,175,32"/>
+<area shape="rect" id="node3" href="$classEngine.html#a9027b51e4922e147b8ae3b50348c69af" title="Базовая расстановка фигур на поле." alt="" coords="5,56,212,83"/>
+</map>
