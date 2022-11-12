@@ -1,6 +1,6 @@
 FROM gcc:latest as build
 
-RUN apt-get update && \
+RUN apt-get update && apt-get upgrade \
     apt-get install -y cmake qtdeclarative5-dev cppcheck doxygen clang-format
 
 # ADD ./src /app/src
