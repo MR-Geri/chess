@@ -10,6 +10,6 @@ public:
   Position(const Position &pos) : Base(pos) {}
   Position(int x, int y) : Base(x, y) {}
 
-          int &x = this->first;
+  int &x = this->first;
   int &y = this->second;
 };
