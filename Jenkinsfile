@@ -33,10 +33,9 @@ pipeline{
         stage("Formating"){
             steps {
                 echo 'Formating src'
-                sh 'docker-compose run maker_cpp find src | grep -E \'.*(\\.cpp|\\.h|\\.hpp|\\.cxx)$\''
-                sh 'docker-compose run maker_cpp find src | grep -E \'.*(\\.cpp|\\.h|\\.hpp|\\.cxx)$\' | xargs -n 1 clang-format --sort-includes --style=LLVM -i'
+                sh 'docker-compose run maker_cpp find src | grep -E \'.*(\\.cpp|\\.h|\\.hpp|\\.cxx)[^\\.]\' | xargs -n 1 clang-format --sort-includes --style=LLVM -i'
                 echo 'Formating tests'
-                sh 'docker-compose run maker_cpp find tests | grep -E \'.*(\\.cpp|\\.h|\\.hpp|\\.cxx)$\' | xargs -n 1 clang-format --sort-includes --style=LLVM -i'
+                sh 'docker-compose run maker_cpp find tests | grep -E \'tst.*(\\.cpp|\\.h|\\.hpp|\\.cxx)[^\\.]\' | xargs -n 1 clang-format --sort-includes --style=LLVM -i'
             }
         }
         stage("Compile"){

@@ -1,7 +1,7 @@
 FROM gcc:latest as build
 
 RUN apt-get update && \
-    apt-get install -y cmake qtdeclarative5-dev cppcheck doxygen clang-format grep=3.7
+    apt-get install -y cmake qtdeclarative5-dev cppcheck doxygen clang-format
 
 # ADD ./src /app/src
 # ADD ./tests /app/tests
