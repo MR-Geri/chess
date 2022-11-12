@@ -17,7 +17,6 @@ StatusMove Engine::move(Position from_pos, Position step) {
     return GO_OUT;
   }
 
-
   Figure *from_pos_figure = game_board.getFigure(from_pos);
   Figure *to_pos_figure = game_board.getFigure(to_pos);
   std::set<Position> possible_moves = from_pos_figure->getPossibleMoves();

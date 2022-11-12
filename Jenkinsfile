@@ -18,25 +18,12 @@ pipeline{
             returnStdout: true,
             script: 'git config --get remote.origin.url'
         )}""" 
-        GitEditCodeFiles = """${sh(
-            returnStatus: true,
-            script: 'git diff-tree --diff-filter=AM --no-commit-id --name-only -r $(git symbolic-ref --short HEAD) | grep -E \'(\\.cpp|\\.h|\\.hpp|\\.cxx)$\''
-        )}""" 
-        GitEditReadme = """${sh(
-            returnStatus: true,
-            script: 'git diff-tree --diff-filter=AM --no-commit-id --name-only -r $(git symbolic-ref --short HEAD) | grep \'README.md\''
-        )}""" 
     }
     triggers {
         githubPush()
     }
     stages {
         stage("Init docker"){
-            when {
-                expression {
-                    return "${GitEditCodeFiles}" == "0";
-                }
-            }
             steps {
                 sh 'docker-compose pull'
                 sh 'docker-compose build --pull'
@@ -44,42 +31,25 @@ pipeline{
             }
         }
         stage("Formating"){
-            when {
-                expression {
-                    return "${GitEditCodeFiles}" == "0";
-                }
-            }
             steps {
-                sh 'docker-compose run maker_cpp git diff-tree --diff-filter=AM --no-commit-id --name-only -r $(git symbolic-ref --short HEAD) | grep \'.*[\\.cpp|\\.h|\\.hpp|\\.cxx]$\' | xargs -n 1 clang-format --sort-includes --style=LLVM -i'
+                echo 'Formating src'
+                sh 'find ./src | grep -E \'(\\.cpp|\\.h|\\.hpp|\\.cxx)$\' | xargs -n 1 clang-format --sort-includes --style=LLVM -i'
+                echo 'Formating tests'
+                sh 'find ./tests | grep -E \'(\\.cpp|\\.h|\\.hpp|\\.cxx)$\' | xargs -n 1 clang-format --sort-includes --style=LLVM -i'
             }
         }
         stage("Compile"){
-            when {
-                expression {
-                    return "${GitEditCodeFiles}" == "0";
-                }
-            }
             steps {
                 sh 'docker-compose run maker_cpp cmake ./'
                 sh 'docker-compose run maker_cpp make'
             }
         }
         stage("Create documentation"){
-            when {
-                expression {
-                    return "${GitEditCodeFiles}" == "0" || "${GitEditReadme}" == "0";
-                }
-            }
             steps {
                 sh 'docker-compose run maker_cpp doxygen'
             }
         }
         stage("Tests"){
-            when {
-                expression {
-                    return "${GitEditCodeFiles}" == "0";
-                }
-            }
             stages {
                 stage("CppCheck"){
                     steps {
@@ -94,11 +64,6 @@ pipeline{
             }
         }
         stage("Down docker"){
-            when {
-                expression {
-                    return "${GitEditCodeFiles}" == "0";
-                }
-            }
             steps {
                 sh 'docker-compose down --remove-orphans'
             }
