@@ -33,10 +33,10 @@ pipeline{
         stage("Formating"){
             steps {
                 echo 'Formating src'
-                sh 'find ./src | grep -E \'(\\.cpp|\\.h|\\.hpp|\\.cxx)$\''
-                sh 'find ./src | grep -E \'(\\.cpp|\\.h|\\.hpp|\\.cxx)$\' | xargs -n 1 clang-format --sort-includes --style=LLVM -i'
+                sh 'find ./src | grep -E \'.*(\\.cpp|\\.h|\\.hpp|\\.cxx)$\''
+                sh 'find ./src | grep -E \'.*(\\.cpp|\\.h|\\.hpp|\\.cxx)$\' | xargs -n 1 clang-format --sort-includes --style=LLVM -i'
                 echo 'Formating tests'
-                sh 'find ./tests | grep -E \'(\\.cpp|\\.h|\\.hpp|\\.cxx)$\' | xargs -n 1 clang-format --sort-includes --style=LLVM -i'
+                sh 'find ./tests | grep -E \'.*(\\.cpp|\\.h|\\.hpp|\\.cxx)$\' | xargs -n 1 clang-format --sort-includes --style=LLVM -i'
             }
         }
         stage("Compile"){
