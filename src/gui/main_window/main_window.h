@@ -35,6 +35,9 @@ public:
   MainWindow(QWidget *parent = nullptr);
   ~MainWindow();
 
+private:
+  void sendToGuiBoardData();
+
 public slots:
   /**
    * @brief Менеджер окон, переключает QStacedWidget на тот виджет,
@@ -45,6 +48,8 @@ public slots:
   void windowsManager(int window_id);
 
   void connectGuiMoveWithEngine(Position from_board, Position delta_board);
+
+  void startNewGame();
 
 signals:
   void sendDataToGui(QVector<QVector<Figures>> data);

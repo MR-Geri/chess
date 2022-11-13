@@ -37,6 +37,8 @@ signals:
    */
   void figureMovedBoard(Position from_board, Position delta_board);
 
+  void newGameFromGame();
+
 public slots:
   /**
    * @brief Получает данные для отрисовки из логики.

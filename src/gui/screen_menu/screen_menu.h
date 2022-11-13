@@ -25,6 +25,8 @@ signals:
    */
   void changeWindow(int on_window);
 
+  void newGameFromMenu();
+
 private slots:
   /**
    * @brief Отправляет сигнал о смене окна на окно настроек.

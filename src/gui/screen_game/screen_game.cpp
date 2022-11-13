@@ -30,7 +30,9 @@ ScreenGame::~ScreenGame() {
   delete board;
 }
 
-void ScreenGame::buttonNewGameReleased() {}
+void ScreenGame::buttonNewGameReleased() {
+  emit newGameFromGame();
+}
 
 void ScreenGame::buttonBackGameReleased() { emit changeWindow(Windows::MENU); }
 
