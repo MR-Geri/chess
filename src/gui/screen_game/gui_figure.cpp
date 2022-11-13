@@ -1,5 +1,7 @@
 #include "gui_figure.h"
 
+#include <iostream>
+
 GuiFigure::GuiFigure(QGraphicsItem *parent) : QGraphicsSvgItem(parent) {}
 
 GuiFigure::GuiFigure(float w_gV, float h_gV, Figures figure,
@@ -20,18 +22,18 @@ GuiFigure::GuiFigure(float w_gV, float h_gV, Figures figure,
 GuiFigure::~GuiFigure() { delete renderer; }
 
 void GuiFigure::mousePressEvent(QGraphicsSceneMouseEvent *event) {
-    x = this->scenePos().x();
-    y = this->scenePos().y();
-    this->setZValue(1);
-    QGraphicsItem::mousePressEvent(event);
+  x = this->scenePos().x();
+  y = this->scenePos().y();
+  this->setZValue(1);
+  QGraphicsItem::mousePressEvent(event);
 }
 
 void GuiFigure::mouseReleaseEvent(QGraphicsSceneMouseEvent *event) {
-    last_delta_move.x = this->scenePos().x() - x;
-    last_delta_move.y = this->scenePos().y() - y;
-    this->setPos(x, y);
-    this->setZValue(0);
-    QGraphicsItem::mouseReleaseEvent(event);
-    emit moved(Position(y, x), Position(last_delta_move.y, last_delta_move.x));
-
+  last_delta_move.x = this->scenePos().x() - x;
+  last_delta_move.y = this->scenePos().y() - y;
+  this->setPos(x, y);
+  this->setZValue(0);
+  QGraphicsItem::mouseReleaseEvent(event);
+  emit moved(Position(x, y), Position(last_delta_move.x, last_delta_move.y));
+  std::cout << x << " " << y << '\n';
 }

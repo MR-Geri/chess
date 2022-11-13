@@ -56,27 +56,27 @@ StatusMove Engine::move(Position from_pos, Position step) {
 void Engine::setStartingArrangement() {
   game_board->clear();
   for (int i = 0; i < 8; i++) {
-    Figure *pawn_black = new Pawn(false, BLACK);
-    Figure *pawn_white = new Pawn(false, WHITE);
-    game_board->setFigureOn(pawn_black, {1, i});
-    game_board->setFigureOn(pawn_white, {6, i});
+    Figure *pawn_black = new Pawn(false, WHITE);
+    Figure *pawn_white = new Pawn(false, BLACK);
+    game_board->setFigureOn(pawn_black, {i, 6});
+    game_board->setFigureOn(pawn_white, {i, 1});
   }
-  game_board->setFigureOn(new Rook(BLACK), {0, 7});
-  game_board->setFigureOn(new Rook(WHITE), {7, 7});
-  game_board->setFigureOn(new Rook(BLACK), {0, 0});
-  game_board->setFigureOn(new Rook(WHITE), {7, 0});
-  game_board->setFigureOn(new Bishop(BLACK), {0, 6});
-  game_board->setFigureOn(new Bishop(WHITE), {7, 6});
-  game_board->setFigureOn(new Bishop(BLACK), {0, 1});
-  game_board->setFigureOn(new Bishop(WHITE), {7, 1});
-  game_board->setFigureOn(new Kinght(BLACK), {0, 5});
-  game_board->setFigureOn(new Kinght(WHITE), {7, 5});
-  game_board->setFigureOn(new Kinght(BLACK), {0, 2});
-  game_board->setFigureOn(new Kinght(WHITE), {7, 2});
-  game_board->setFigureOn(new Queen(BLACK), {0, 3});
-  game_board->setFigureOn(new Queen(WHITE), {7, 3});
-  game_board->setFigureOn(new King(BLACK), {0, 4});
-  game_board->setFigureOn(new King(WHITE), {7, 4});
+   game_board->setFigureOn(new Rook(WHITE), {0, 7});
+   game_board->setFigureOn(new Rook(BLACK), {0, 0});
+   game_board->setFigureOn(new Rook(WHITE), {7, 7});
+   game_board->setFigureOn(new Rook(BLACK), {7, 0});
+   game_board->setFigureOn(new Bishop(WHITE), {1, 7});
+   game_board->setFigureOn(new Bishop(BLACK), {1, 0});
+   game_board->setFigureOn(new Bishop(WHITE), {6, 7});
+   game_board->setFigureOn(new Bishop(BLACK), {6, 0});
+   game_board->setFigureOn(new Kinght(WHITE), {2, 7});
+   game_board->setFigureOn(new Kinght(BLACK), {2, 0});
+   game_board->setFigureOn(new Kinght(WHITE), {5, 7});
+   game_board->setFigureOn(new Kinght(BLACK), {5, 0});
+   game_board->setFigureOn(new Queen(WHITE), {4, 7});
+   game_board->setFigureOn(new Queen(BLACK), {3, 0});
+   game_board->setFigureOn(new King(WHITE), {3, 7});
+   game_board->setFigureOn(new King(BLACK), {4, 0});
 }
 
 bool Engine::setFigureOnBoard(Figure *figure, Position position) {

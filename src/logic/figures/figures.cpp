@@ -86,7 +86,7 @@ Kinght::Kinght(FigureColor color) : Figure(KINGHT, color) {
 
 Pawn::Pawn(FigureColor color) : Figure(PAWN, color) {
   int color_mod = (color == WHITE) ? -1 : 1;
-  possible_moves.insert({1 * color_mod, 0});
+  possible_moves.insert({0, 1 * color_mod});
   if (color == FigureColor::WHITE) {
     type_figure = Figures::W_PAWN;
   } else {
@@ -97,10 +97,10 @@ Pawn::Pawn(FigureColor color) : Figure(PAWN, color) {
 Pawn::Pawn(bool flag_move, FigureColor color) : Figure(PAWN, color) {
   int color_mod = (color == WHITE) ? -1 : 1;
   if (flag_move) {
-    possible_moves.insert({1 * color_mod, 0});
+    possible_moves.insert({0, 1 * color_mod});
   } else {
-    possible_moves.insert({1 * color_mod, 0});
-    possible_moves.insert({2 * color_mod, 0});
+    possible_moves.insert({0, 1 * color_mod});
+    possible_moves.insert({0, 2 * color_mod});
   }
   if (color == FigureColor::WHITE) {
     type_figure = Figures::W_PAWN;
@@ -112,8 +112,8 @@ Pawn::Pawn(bool flag_move, FigureColor color) : Figure(PAWN, color) {
 std::set<Position> Pawn::getPossibleAttacks() {
   int color_mod = (b_color == WHITE) ? -1 : 1;
   std::set<Position> out;
-  out.insert({1 * color_mod, 1});
-  out.insert({1 * color_mod, -1});
+  out.insert({1, 1 * color_mod});
+  out.insert({-1, 1 * color_mod});
   return out;
 }
 

@@ -55,8 +55,8 @@ void ScreenGame::drawGameField() {
   positions = QVector<QVector<Position>>(8, QVector<Position>(8));
   for (int i = 0; i < 8; i++) {
     for (int j = 0; j < 8; j++) {
-      positions[i][j].y = indent + i * ((width_board * scale_board) / 8);
-      positions[i][j].x = indent + j * ((height_board * scale_board) / 8);
+      positions[i][j].x = indent + i * ((width_board * scale_board) / 8);
+      positions[i][j].y = indent + j * ((height_board * scale_board) / 8);
     }
   }
 
