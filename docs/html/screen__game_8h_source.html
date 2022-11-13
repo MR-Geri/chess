@@ -92,33 +92,43 @@ $(function() {
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;signals:</div>
 <div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="classScreenGame.html#af814ece97f9910fb3477d576ae35e145">   32</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classScreenGame.html#af814ece97f9910fb3477d576ae35e145">changeWindow</a>(<span class="keywordtype">int</span> on_window);</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="keyword">public</span> slots:</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classScreenGame.html#a2b2401bd2e187d25f3da8505d81ba360">catchData</a>(QVector&lt;QVector&lt;Figures&gt;&gt; catched_data);</div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="classScreenGame.html#ac7c78c25f7448752e5d901d434f7d813">   38</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classScreenGame.html#ac7c78c25f7448752e5d901d434f7d813">figureMovedBoard</a>(<a class="code" href="classPosition.html">Position</a> from_board, <a class="code" href="classPosition.html">Position</a> delta_board);</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="keyword">private</span> slots:</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  <span class="keywordtype">void</span> buttonBackGameReleased();</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  <span class="keywordtype">void</span> buttonNewGameReleased();</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  <span class="keywordtype">void</span> resizeEvent(QResizeEvent *event);</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  <span class="keywordtype">void</span> drawGameField();</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  Ui::ScreenGame *ui;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  QGraphicsScene *scene;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  QGraphicsSvgItem *board;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  QVector&lt;QVector&lt;Position&gt;&gt; positions;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  QVector&lt;QVector&lt;Figures&gt;&gt; data;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;};</div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="classScreenGame.html#ac6f16eced5239c184a16922ac16aadfe">   40</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classScreenGame.html#ac6f16eced5239c184a16922ac16aadfe">newGameFromGame</a>();</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="keyword">public</span> slots:</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classScreenGame.html#a2b2401bd2e187d25f3da8505d81ba360">catchData</a>(QVector&lt;QVector&lt;Figures&gt;&gt; catched_data);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="keyword">private</span> slots:</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  <span class="keywordtype">void</span> buttonBackGameReleased();</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  <span class="keywordtype">void</span> buttonNewGameReleased();</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  <span class="keywordtype">void</span> figureMoved(<a class="code" href="classPosition.html">Position</a> from, <a class="code" href="classPosition.html">Position</a> delta);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  <span class="keywordtype">void</span> resizeEvent(QResizeEvent *event);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  <span class="keywordtype">void</span> drawGameField();</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  Ui::ScreenGame *ui;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  QGraphicsScene *scene;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  QGraphicsSvgItem *board;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  QVector&lt;QVector&lt;Position&gt;&gt; positions;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;  QVector&lt;QVector&lt;Figures&gt;&gt; data;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  <span class="keywordtype">int</span> indent;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;};</div>
+<div class="ttc" id="aclassPosition_html"><div class="ttname"><a href="classPosition.html">Position</a></div><div class="ttdoc">Позиция на поле (координаты).</div><div class="ttdef"><b>Definition:</b> utils.h:8</div></div>
 <div class="ttc" id="aclassScreenGame_html"><div class="ttname"><a href="classScreenGame.html">ScreenGame</a></div><div class="ttdoc">Окно игры.</div><div class="ttdef"><b>Definition:</b> screen_game.h:19</div></div>
-<div class="ttc" id="aclassScreenGame_html_a2b2401bd2e187d25f3da8505d81ba360"><div class="ttname"><a href="classScreenGame.html#a2b2401bd2e187d25f3da8505d81ba360">ScreenGame::catchData</a></div><div class="ttdeci">void catchData(QVector&lt; QVector&lt; Figures &gt;&gt; catched_data)</div><div class="ttdoc">Получает данные для отрисовки из логики.</div><div class="ttdef"><b>Definition:</b> screen_game.cpp:83</div></div>
+<div class="ttc" id="aclassScreenGame_html_a2b2401bd2e187d25f3da8505d81ba360"><div class="ttname"><a href="classScreenGame.html#a2b2401bd2e187d25f3da8505d81ba360">ScreenGame::catchData</a></div><div class="ttdeci">void catchData(QVector&lt; QVector&lt; Figures &gt;&gt; catched_data)</div><div class="ttdoc">Получает данные для отрисовки из логики.</div><div class="ttdef"><b>Definition:</b> screen_game.cpp:78</div></div>
 <div class="ttc" id="aclassScreenGame_html_a510bde54887671e51185e19f00d8b7f4"><div class="ttname"><a href="classScreenGame.html#a510bde54887671e51185e19f00d8b7f4">ScreenGame::ScreenGame</a></div><div class="ttdeci">ScreenGame(QWidget *parent=nullptr)</div><div class="ttdef"><b>Definition:</b> screen_game.cpp:4</div></div>
-<div class="ttc" id="aclassScreenGame_html_ae3be2b72300f87330ffc78b5bbbfc009"><div class="ttname"><a href="classScreenGame.html#ae3be2b72300f87330ffc78b5bbbfc009">ScreenGame::~ScreenGame</a></div><div class="ttdeci">~ScreenGame()</div><div class="ttdef"><b>Definition:</b> screen_game.cpp:32</div></div>
+<div class="ttc" id="aclassScreenGame_html_ac6f16eced5239c184a16922ac16aadfe"><div class="ttname"><a href="classScreenGame.html#ac6f16eced5239c184a16922ac16aadfe">ScreenGame::newGameFromGame</a></div><div class="ttdeci">void newGameFromGame()</div></div>
+<div class="ttc" id="aclassScreenGame_html_ac7c78c25f7448752e5d901d434f7d813"><div class="ttname"><a href="classScreenGame.html#ac7c78c25f7448752e5d901d434f7d813">ScreenGame::figureMovedBoard</a></div><div class="ttdeci">void figureMovedBoard(Position from_board, Position delta_board)</div><div class="ttdoc">Показывает откуда и куда была перемещена фигура в координатах поля. (Строка, столбец)</div></div>
+<div class="ttc" id="aclassScreenGame_html_ae3be2b72300f87330ffc78b5bbbfc009"><div class="ttname"><a href="classScreenGame.html#ae3be2b72300f87330ffc78b5bbbfc009">ScreenGame::~ScreenGame</a></div><div class="ttdeci">~ScreenGame()</div><div class="ttdef"><b>Definition:</b> screen_game.cpp:27</div></div>
 <div class="ttc" id="aclassScreenGame_html_af814ece97f9910fb3477d576ae35e145"><div class="ttname"><a href="classScreenGame.html#af814ece97f9910fb3477d576ae35e145">ScreenGame::changeWindow</a></div><div class="ttdeci">void changeWindow(int on_window)</div><div class="ttdoc">Показывает менеджеру окон на какое окно нужно перейти.</div></div>
 <div class="ttc" id="aconstants_8h_html"><div class="ttname"><a href="constants_8h.html">constants.h</a></div></div>
 <div class="ttc" id="agui__figure_8h_html"><div class="ttname"><a href="gui__figure_8h.html">gui_figure.h</a></div></div>
-<div class="ttc" id="anamespaceUi_html"><div class="ttname"><a href="namespaceUi.html">Ui</a></div><div class="ttdef"><b>Definition:</b> main_window.h:13</div></div>
+<div class="ttc" id="anamespaceUi_html"><div class="ttname"><a href="namespaceUi.html">Ui</a></div><div class="ttdef"><b>Definition:</b> main_window.h:15</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

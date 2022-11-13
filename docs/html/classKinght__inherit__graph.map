@@ -1,4 +1,4 @@
 <map id="Kinght" name="Kinght">
-<area shape="rect" id="node1" title="Конь." alt="" coords="18,219,147,311"/>
-<area shape="rect" id="node2" href="$classFigure.html" title="Абстрактный класс фигуры." alt="" coords="5,5,160,171"/>
+<area shape="rect" id="node1" title="Конь." alt="" coords="19,263,162,355"/>
+<area shape="rect" id="node2" href="$classFigure.html" title="Абстрактный класс фигуры." alt="" coords="5,5,176,215"/>
 </map>

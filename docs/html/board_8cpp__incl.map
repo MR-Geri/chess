@@ -1,12 +1,13 @@
 <map id="src/logic/board/board.cpp" name="src/logic/board/board.cpp">
-<area shape="rect" id="node1" title=" " alt="" coords="117,5,285,32"/>
-<area shape="rect" id="node2" href="$board_8h.html" title=" " alt="" coords="117,80,183,107"/>
-<area shape="rect" id="node7" title=" " alt="" coords="377,229,440,256"/>
-<area shape="rect" id="node3" href="$figures_8h.html" title=" " alt="" coords="145,155,272,181"/>
-<area shape="rect" id="node8" title=" " alt="" coords="5,229,44,256"/>
-<area shape="rect" id="node10" title=" " alt="" coords="62,155,121,181"/>
-<area shape="rect" id="node4" href="$constants_8h.html" title=" " alt="" coords="133,229,247,256"/>
-<area shape="rect" id="node5" href="$utils_8h.html" title=" " alt="" coords="272,229,353,256"/>
-<area shape="rect" id="node9" title=" " alt="" coords="69,229,109,256"/>
-<area shape="rect" id="node6" title=" " alt="" coords="286,304,339,331"/>
+<area shape="rect" id="node1" title=" " alt="" coords="119,5,305,32"/>
+<area shape="rect" id="node2" href="$board_8h.html" title=" " alt="" coords="123,80,194,107"/>
+<area shape="rect" id="node8" title=" " alt="" coords="395,229,463,256"/>
+<area shape="rect" id="node3" href="$figures_8h.html" title=" " alt="" coords="152,155,291,181"/>
+<area shape="rect" id="node9" title=" " alt="" coords="5,229,48,256"/>
+<area shape="rect" id="node11" title=" " alt="" coords="65,155,127,181"/>
+<area shape="rect" id="node4" href="$constants_8h.html" title=" " alt="" coords="139,229,261,256"/>
+<area shape="rect" id="node6" href="$utils_8h.html" title=" " alt="" coords="285,229,371,256"/>
+<area shape="rect" id="node10" title=" " alt="" coords="72,229,115,256"/>
+<area shape="rect" id="node5" title=" " alt="" coords="163,304,237,331"/>
+<area shape="rect" id="node7" title=" " alt="" coords="298,304,358,331"/>
 </map>

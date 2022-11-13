@@ -135,6 +135,4 @@ std::list<Position> Kinght::getUnarySteps(Position step) {
   return std::list<Position>({});
 }
 
-Figures Figure::getTypeFigure() const {
-  return type_figure;
-}
+Figures Figure::getTypeFigure() const { return type_figure; }

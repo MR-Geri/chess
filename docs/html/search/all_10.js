@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['ui_95',['Ui',['../namespaceUi.html',1,'']]],
-  ['utils_2eh_96',['utils.h',['../utils_8h.html',1,'']]]
+  ['type_5ffigure_104',['type_figure',['../classFigure.html#a301940106d0bfb22d955362ec885e95f',1,'Figure']]]
 ];

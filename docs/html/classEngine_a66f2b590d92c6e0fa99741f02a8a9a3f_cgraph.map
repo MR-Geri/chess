@@ -1,8 +1,9 @@
 <map id="Engine::move" name="Engine::move">
-<area shape="rect" id="node1" title="Проверяет возможность хода и перемещает фигуру." alt="" coords="5,107,108,133"/>
-<area shape="rect" id="node2" href="$classBoard.html#a0bac43a8a2fc2aabc7e687eeedbe9f9e" title="Возвращает фигуру, которая находится в ячейке поля с координатами coords." alt="" coords="186,5,305,32"/>
-<area shape="rect" id="node3" href="$classFigure.html#a7e8010799eaba0919bc3b68eff755db0" title="Получение возможных ходов атаки." alt="" coords="156,56,335,83"/>
-<area shape="rect" id="node4" href="$classFigure.html#ab648751cbee093526d0d531c4f599d58" title="Получение возможных ходов перемещения." alt="" coords="159,107,332,133"/>
-<area shape="rect" id="node5" href="$classFigure.html#aad86c6d796ac96d30f2a310c107fdbac" title="Получение элементарных ходов." alt="" coords="169,157,322,184"/>
-<area shape="rect" id="node6" href="$classBoard.html#a4ed8cf3fae283d3c88eb6b0dea9e9f0a" title="Перемещает фигуру в board." alt="" coords="197,208,293,235"/>
+<area shape="rect" id="node1" title="Проверяет возможность хода и перемещает фигуру." alt="" coords="5,132,116,159"/>
+<area shape="rect" id="node2" href="$classFigure.html#af27c0f2d5fe69cb9eb17380d3ba91d6a" title="Получение цвета фигуры." alt="" coords="199,5,324,32"/>
+<area shape="rect" id="node3" href="$classBoard.html#a0bac43a8a2fc2aabc7e687eeedbe9f9e" title="Возвращает фигуру, которая находится в ячейке поля с координатами coords." alt="" coords="197,56,326,83"/>
+<area shape="rect" id="node4" href="$classFigure.html#a7e8010799eaba0919bc3b68eff755db0" title="Получение возможных ходов атаки." alt="" coords="164,107,359,133"/>
+<area shape="rect" id="node5" href="$classFigure.html#ab648751cbee093526d0d531c4f599d58" title="Получение возможных ходов перемещения." alt="" coords="167,157,355,184"/>
+<area shape="rect" id="node6" href="$classFigure.html#aad86c6d796ac96d30f2a310c107fdbac" title="Получение элементарных ходов." alt="" coords="178,208,345,235"/>
+<area shape="rect" id="node7" href="$classBoard.html#a4ed8cf3fae283d3c88eb6b0dea9e9f0a" title="Перемещает фигуру в board." alt="" coords="209,259,314,285"/>
 </map>

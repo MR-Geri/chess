@@ -76,6 +76,4 @@ void Board::clear() {
   }
 }
 
-std::vector<std::vector<Figure *>> Board::getBoardData() const {
-  return board;
-}
+std::vector<std::vector<Figure *>> Board::getBoardData() const { return board; }

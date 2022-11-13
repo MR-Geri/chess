@@ -39,18 +39,22 @@ void MainWindow::windowsManager(int window_id) {
   ui->stackedWidget->setCurrentIndex(window_id);
 }
 
-void MainWindow::connectGuiMoveWithEngine(Position from_board, Position delta_board) {
+void MainWindow::connectGuiMoveWithEngine(Position from_board,
+                                          Position delta_board) {
   engine.move(from_board, delta_board);
   sendToGuiBoardData();
 }
 
 void MainWindow::sendToGuiBoardData() {
   std::vector<std::vector<Figure *>> data = engine.getData();
-  QVector<QVector<Figures>> data_for_gui(data.size(), QVector<Figures>(data.size()));
+  QVector<QVector<Figures>> data_for_gui(data.size(),
+                                         QVector<Figures>(data.size()));
   for (int i = 0; i < data.size(); i++) {
     for (int j = 0; j < data[i].size(); j++) {
-      if (data[i][j] == nullptr) data_for_gui[i][j] = NONE;
-      else data_for_gui[i][j] = data[i][j]->getTypeFigure();
+      if (data[i][j] == nullptr)
+        data_for_gui[i][j] = NONE;
+      else
+        data_for_gui[i][j] = data[i][j]->getTypeFigure();
     }
   }
   emit sendDataToGui(data_for_gui);

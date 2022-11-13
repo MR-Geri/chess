@@ -5,9 +5,7 @@ Engine::Engine() {
   setStartingArrangement();
 }
 
-Engine::~Engine() {
-  delete game_board;
-}
+Engine::~Engine() { delete game_board; }
 
 StatusMove Engine::move(Position from_pos, Position step) {
   Position to_pos(from_pos.x + step.x, from_pos.y + step.y);
@@ -23,7 +21,8 @@ StatusMove Engine::move(Position from_pos, Position step) {
 
   Figure *from_pos_figure = game_board->getFigure(from_pos);
   Figure *to_pos_figure = game_board->getFigure(to_pos);
-  if (from_pos_figure == nullptr) return FAIL;
+  if (from_pos_figure == nullptr)
+    return FAIL;
   std::set<Position> possible_moves = from_pos_figure->getPossibleMoves();
   std::set<Position> possible_attacks = from_pos_figure->getPossibleAttacks();
 
@@ -61,22 +60,22 @@ void Engine::setStartingArrangement() {
     game_board->setFigureOn(pawn_black, {i, 6});
     game_board->setFigureOn(pawn_white, {i, 1});
   }
-   game_board->setFigureOn(new Rook(WHITE), {0, 7});
-   game_board->setFigureOn(new Rook(BLACK), {0, 0});
-   game_board->setFigureOn(new Rook(WHITE), {7, 7});
-   game_board->setFigureOn(new Rook(BLACK), {7, 0});
-   game_board->setFigureOn(new Bishop(WHITE), {1, 7});
-   game_board->setFigureOn(new Bishop(BLACK), {1, 0});
-   game_board->setFigureOn(new Bishop(WHITE), {6, 7});
-   game_board->setFigureOn(new Bishop(BLACK), {6, 0});
-   game_board->setFigureOn(new Kinght(WHITE), {2, 7});
-   game_board->setFigureOn(new Kinght(BLACK), {2, 0});
-   game_board->setFigureOn(new Kinght(WHITE), {5, 7});
-   game_board->setFigureOn(new Kinght(BLACK), {5, 0});
-   game_board->setFigureOn(new Queen(WHITE), {4, 7});
-   game_board->setFigureOn(new Queen(BLACK), {3, 0});
-   game_board->setFigureOn(new King(WHITE), {3, 7});
-   game_board->setFigureOn(new King(BLACK), {4, 0});
+  game_board->setFigureOn(new Rook(WHITE), {0, 7});
+  game_board->setFigureOn(new Rook(BLACK), {0, 0});
+  game_board->setFigureOn(new Rook(WHITE), {7, 7});
+  game_board->setFigureOn(new Rook(BLACK), {7, 0});
+  game_board->setFigureOn(new Bishop(WHITE), {1, 7});
+  game_board->setFigureOn(new Bishop(BLACK), {1, 0});
+  game_board->setFigureOn(new Bishop(WHITE), {6, 7});
+  game_board->setFigureOn(new Bishop(BLACK), {6, 0});
+  game_board->setFigureOn(new Kinght(WHITE), {2, 7});
+  game_board->setFigureOn(new Kinght(BLACK), {2, 0});
+  game_board->setFigureOn(new Kinght(WHITE), {5, 7});
+  game_board->setFigureOn(new Kinght(BLACK), {5, 0});
+  game_board->setFigureOn(new Queen(WHITE), {4, 7});
+  game_board->setFigureOn(new Queen(BLACK), {3, 0});
+  game_board->setFigureOn(new King(WHITE), {3, 7});
+  game_board->setFigureOn(new King(BLACK), {4, 0});
 }
 
 bool Engine::setFigureOnBoard(Figure *figure, Position position) {

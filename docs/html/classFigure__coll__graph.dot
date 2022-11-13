@@ -1,9 +1,0 @@
-digraph "Figure"
-{
- // INTERACTIVE_SVG=YES
- // LATEX_PDF_SIZE
-  bgcolor="transparent";
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
-  Node1 [label="{Figure\n|# b_price\l# possible_moves\l# b_color\l|+ Figure()\l+ getPrice()\l+ getUnarySteps()\l+ getPossibleMoves()\l+ getPossibleAttacks()\l+ getColor()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Абстрактный класс фигуры."];
-}

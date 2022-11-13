@@ -1,0 +1,5 @@
+<map id="Engine::move" name="Engine::move">
+<area shape="rect" id="node1" title="Проверяет возможность хода и перемещает фигуру." alt="" coords="521,13,632,39"/>
+<area shape="rect" id="node2" href="$classMainWindow.html#a85e58f13e52e2a2d01b0bbf87c1442e9" title=" " alt="" coords="251,5,473,47"/>
+<area shape="rect" id="node3" href="$classMainWindow.html#a996c5a2b6f77944776856f08ec30858d" title=" " alt="" coords="5,13,203,39"/>
+</map>
