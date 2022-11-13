@@ -19,7 +19,7 @@ protected:
   void mouseReleaseEvent(QGraphicsSceneMouseEvent *event) override;
 
 signals:
-  void moved(Position delta_position);
+  void moved(Position from, Position delta);
 
 private:
   float scale;

@@ -12,16 +12,11 @@ ScreenGame::ScreenGame(QWidget *parent)
   ui->graphicsView->setMinimumHeight(500);
   ui->graphicsView->setMinimumWidth(500);
 
-  data = {
-      {B_ROOK, B_KINGHT, B_BISHOP, B_QUEEN, B_KING, B_BISHOP, B_KINGHT, B_ROOK},
-      {B_PAWN, B_PAWN, B_PAWN, B_PAWN, B_PAWN, B_PAWN, B_PAWN, B_PAWN},
-      {NONE, NONE, NONE, NONE, NONE, NONE, NONE, NONE},
-      {NONE, NONE, NONE, NONE, NONE, NONE, NONE, NONE},
-      {NONE, NONE, NONE, NONE, NONE, NONE, NONE, NONE},
-      {NONE, NONE, NONE, NONE, NONE, NONE, NONE, NONE},
-      {W_PAWN, W_PAWN, W_PAWN, W_PAWN, W_PAWN, W_PAWN, W_PAWN, W_PAWN},
-      {W_ROOK, W_KINGHT, W_BISHOP, W_QUEEN, W_KING, W_BISHOP, W_KINGHT,
-       W_ROOK}};
+  indent = 20;
+  scene = new QGraphicsScene();
+  ui->graphicsView->setScene(this->scene);
+
+  data = QVector<QVector<Figures>>(8, QVector<Figures>(8, Figures::NONE));
 
   connect(ui->buttonNewGame, SIGNAL(released()), this,
           SLOT(buttonNewGameReleased()));
@@ -35,7 +30,9 @@ ScreenGame::~ScreenGame() {
   delete board;
 }
 
-void ScreenGame::buttonNewGameReleased() {}
+void ScreenGame::buttonNewGameReleased() {
+  emit newGameFromGame();
+}
 
 void ScreenGame::buttonBackGameReleased() { emit changeWindow(Windows::MENU); }
 
@@ -43,11 +40,8 @@ void ScreenGame::drawGameField() {
   float width_graphicsView = ui->graphicsView->width() - 10;
   float height_graphicsView = ui->graphicsView->height() - 10;
 
-  delete this->scene;
-  this->scene = new QGraphicsScene();
-  scene->setSceneRect(0, 0, std::min(width_graphicsView, height_graphicsView),
-                      std::min(width_graphicsView, height_graphicsView));
-  ui->graphicsView->setScene(this->scene);
+  scene->clear();
+  scene->setSceneRect(0,0,std::min(width_graphicsView, height_graphicsView),std::min(width_graphicsView, height_graphicsView));
 
   board = new QGraphicsSvgItem(":/images/green_chess_board.svg");
   float width_board = board->boundingRect().size().width();
@@ -55,23 +49,23 @@ void ScreenGame::drawGameField() {
   float scale_board =
       (std::min(width_graphicsView, height_graphicsView) - 40) / width_board;
   board->setScale(scale_board);
-  board->setPos(20, 20);
+  board->setPos(indent, indent);
   scene->addItem(board);
 
   positions = QVector<QVector<Position>>(8, QVector<Position>(8));
   for (int i = 0; i < 8; i++) {
     for (int j = 0; j < 8; j++) {
-      positions[i][j].y = 20 + i * ((width_board * scale_board) / 8);
-      positions[i][j].x = 20 + j * ((height_board * scale_board) / 8);
+      positions[i][j].y = indent + i * ((width_board * scale_board) / 8);
+      positions[i][j].x = indent + j * ((height_board * scale_board) / 8);
     }
   }
 
   for (int i = 0; i < data.size(); i++) {
     for (int j = 0; j < data[i].size(); j++) {
-      if (data[i][j] == NONE)
-        continue;
-      GuiFigure *figure =
-          new GuiFigure(width_graphicsView, height_graphicsView, data[i][j]);
+      if(data[i][j] == NONE) continue;
+      GuiFigure *figure = new GuiFigure(width_graphicsView, height_graphicsView, data[i][j]);
+      connect(figure, SIGNAL(moved(Position, Position)),
+              this, SLOT(figureMoved(Position, Position)));
       figure->setPos(positions[i][j].x, positions[i][j].y);
       scene->addItem(figure);
     }
@@ -83,4 +77,18 @@ void ScreenGame::resizeEvent(QResizeEvent *event) { this->drawGameField(); }
 void ScreenGame::catchData(QVector<QVector<Figures>> catched_data) {
   this->data = catched_data;
   this->drawGameField();
+}
+
+void ScreenGame::figureMoved(Position from, Position delta) {
+  Position from_board;
+  Position delta_board;
+  float width_graphicsView = ui->graphicsView->width() - 10;
+  float height_graphicsView = ui->graphicsView->height() - 10;
+  float size_cell_board = (std::min(width_graphicsView, height_graphicsView) - indent * 2) / 8.;
+  float ratio = size_cell_board / 2;
+  from_board.x = static_cast<int>((from.x + 1 - indent) / size_cell_board);
+  from_board.y = static_cast<int>((from.y + 1 - indent) / size_cell_board);
+  delta_board.x = static_cast<int>((delta.x + ((delta.x > 0) ? ratio : -ratio)) / size_cell_board);
+  delta_board.y = static_cast<int>((delta.y + ((delta.y > 0) ? ratio : -ratio)) / size_cell_board);
+  emit figureMovedBoard(from_board, delta_board);
 }

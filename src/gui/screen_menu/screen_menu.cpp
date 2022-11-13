@@ -16,7 +16,10 @@ ScreenMenu::~ScreenMenu() { delete ui; }
 
 void ScreenMenu::goToSettings() { emit changeWindow(Windows::SETTINGS); }
 
-void ScreenMenu::goToGameField() { emit changeWindow(Windows::GAME_FIELD); }
+void ScreenMenu::goToGameField() {
+  emit changeWindow(Windows::GAME_FIELD);
+  emit newGameFromMenu();
+}
 
 void ScreenMenu::goToLiderboard() { emit changeWindow(Windows::LIDERBOARD); }
 

@@ -62,6 +62,8 @@ public:
    */
   void clear();
 
+  std::vector<std::vector<Figure *>> getBoardData() const;
+
 private:
   std::vector<std::vector<Figure *>> board;
 };

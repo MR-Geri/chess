@@ -31,6 +31,14 @@ signals:
    */
   void changeWindow(int on_window);
 
+  /**
+   * @brief Показывает откуда и куда была перемещена фигура
+   * в координатах поля. (Строка, столбец)
+   */
+  void figureMovedBoard(Position from_board, Position delta_board);
+
+  void newGameFromGame();
+
 public slots:
   /**
    * @brief Получает данные для отрисовки из логики.
@@ -48,6 +56,8 @@ private slots:
    */
   void buttonNewGameReleased();
 
+  void figureMoved(Position from, Position delta);
+
 private:
   void resizeEvent(QResizeEvent *event);
   void drawGameField();
@@ -58,4 +68,5 @@ private:
   QGraphicsSvgItem *board;
   QVector<QVector<Position>> positions;
   QVector<QVector<Figures>> data;
+  int indent;
 };

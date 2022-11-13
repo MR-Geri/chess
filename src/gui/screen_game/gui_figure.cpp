@@ -20,17 +20,18 @@ GuiFigure::GuiFigure(float w_gV, float h_gV, Figures figure,
 GuiFigure::~GuiFigure() { delete renderer; }
 
 void GuiFigure::mousePressEvent(QGraphicsSceneMouseEvent *event) {
-  last_delta_move.x = event->pos().x();
-  last_delta_move.y = event->pos().y();
-  x = this->scenePos().x();
-  y = this->scenePos().y();
-  QGraphicsItem::mousePressEvent(event);
+    x = this->scenePos().x();
+    y = this->scenePos().y();
+    this->setZValue(1);
+    QGraphicsItem::mousePressEvent(event);
 }
 
 void GuiFigure::mouseReleaseEvent(QGraphicsSceneMouseEvent *event) {
-  last_delta_move.x -= event->pos().x();
-  last_delta_move.y -= event->pos().y();
-  this->setPos(x, y);
-  emit moved(Position(last_delta_move.x, last_delta_move.y));
-  QGraphicsItem::mouseReleaseEvent(event);
+    last_delta_move.x = this->scenePos().x() - x;
+    last_delta_move.y = this->scenePos().y() - y;
+    this->setPos(x, y);
+    this->setZValue(0);
+    QGraphicsItem::mouseReleaseEvent(event);
+    emit moved(Position(y, x), Position(last_delta_move.y, last_delta_move.x));
+
 }

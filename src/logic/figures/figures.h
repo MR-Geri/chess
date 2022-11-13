@@ -49,10 +49,13 @@ public:
    */
   FigureColor getColor();
 
+  Figures getTypeFigure() const;
+
 protected:
   int b_price;
   std::set<Position> possible_moves;
   FigureColor b_color;
+  Figures type_figure;
 };
 
 /**
