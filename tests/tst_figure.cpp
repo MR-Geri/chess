@@ -147,6 +147,9 @@ void tests::test_queen() {
     QCOMPARE(engine.move({0, 0}, {2, 2}), MOVE_TO_THROUGH_FIGURE);
 
     // Взятие
+    setOnlyOneFigureOn(engine, new Queen(me), {0, 0});
+    engine.setFigureOnBoard(new Queen(enemy), {1, 1});
+    QCOMPARE(engine.move({0, 0}, {1, 1}), DONE);
   }
 }
 
@@ -203,6 +206,9 @@ void tests::test_bishop() {
     QCOMPARE(engine.move({0, 0}, {2, 2}), MOVE_TO_THROUGH_FIGURE);
 
     // Взятие
+    setOnlyOneFigureOn(engine, new Bishop(me), {0, 0});
+    engine.setFigureOnBoard(new Bishop(enemy), {1, 1});
+    QCOMPARE(engine.move({0, 0}, {1, 1}), DONE);
   }
 }
 
@@ -253,6 +259,9 @@ void tests::test_rook() {
     QCOMPARE(engine.move({0, 0}, {0, 2}), MOVE_TO_THROUGH_FIGURE);
 
     // Взятие
+    setOnlyOneFigureOn(engine, new Rook(me), {0, 0});
+    engine.setFigureOnBoard(new Rook(enemy), {0, 1});
+    QCOMPARE(engine.move({0, 0}, {0, 1}), DONE);
   }
 }
 
@@ -303,6 +312,9 @@ void tests::test_kinght() {
     QCOMPARE(engine.move({0, 0}, {2, 1}), DONE);
 
     // Взятие
+    setOnlyOneFigureOn(engine, new Kinght(me), {0, 0});
+    engine.setFigureOnBoard(new Kinght(enemy), {2, 1});
+    QCOMPARE(engine.move({0, 0}, {2, 1}), DONE);
   }
 }
 
