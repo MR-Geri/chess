@@ -21,15 +21,6 @@ ScreenGame::ScreenGame(QWidget *parent)
   ui->graphicsView->setScene(this->scene);
 
   data = QVector<QVector<Figures>>(8, QVector<Figures>(8, Figures::NONE));
-  /*{{B_ROOK, B_KINGHT, B_BISHOP, B_QUEEN, B_KING, B_BISHOP, B_KINGHT, B_ROOK},
-          {B_PAWN, B_PAWN, B_PAWN, B_PAWN, B_PAWN, B_PAWN, B_PAWN, B_PAWN},
-          {NONE, NONE, NONE, NONE, NONE, NONE, NONE, NONE},
-          {NONE, NONE, NONE, NONE, NONE, NONE, NONE, NONE},
-          {NONE, NONE, NONE, NONE, NONE, NONE, NONE, NONE},
-          {NONE, NONE, NONE, NONE, NONE, NONE, NONE, NONE},
-          {W_PAWN, W_PAWN, W_PAWN, W_PAWN, W_PAWN, W_PAWN, W_PAWN, W_PAWN},
-          {W_ROOK, W_KINGHT, W_BISHOP, W_QUEEN, W_KING, W_BISHOP, W_KINGHT, W_ROOK}};
-  */
 
   connect(ui->buttonNewGame, SIGNAL(released()), this,
           SLOT(buttonNewGameReleased()));
@@ -57,7 +48,8 @@ void ScreenGame::drawGameField() {
   board = new QGraphicsSvgItem(":/images/green_chess_board.svg");
   float width_board = board->boundingRect().size().width();
   float height_board = board->boundingRect().size().height();
-  float scale_board = (std::min(width_graphicsView, height_graphicsView) - 40) / width_board;
+  float scale_board =
+      (std::min(width_graphicsView, height_graphicsView) - 40) / width_board;
   board->setScale(scale_board);
   board->setPos(indent, indent);
   scene->addItem(board);
@@ -82,9 +74,7 @@ void ScreenGame::drawGameField() {
   }
 }
 
-void ScreenGame::resizeEvent(QResizeEvent *event) {
-  this->drawGameField();
-}
+void ScreenGame::resizeEvent(QResizeEvent *event) { this->drawGameField(); }
 
 void ScreenGame::catchData(QVector<QVector<Figures>> catched_data) {
   this->data = catched_data;

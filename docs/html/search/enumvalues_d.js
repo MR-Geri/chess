@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['white_216',['WHITE',['../constants_8h.html#a80feabe81f30d5b97df91defa4774c0fa283fc479650da98250635b9c3c0e7e50',1,'constants.h']]]
+  ['settings_241',['SETTINGS',['../constants_8h.html#af1edd7b7fcdf15ab1bff70cf1daf8ae5ac678338caea29d77d56be2ea56325610',1,'constants.h']]]
 ];

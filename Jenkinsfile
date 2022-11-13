@@ -53,7 +53,7 @@ pipeline{
             stages {
                 stage("CppCheck"){
                     steps {
-                        sh 'docker-compose run maker_cpp cppcheck --enable=all --suppress=missingInclude --std=c++17 --library=qt --quiet --verbose --template="[{severity}][{id}] {message} \n\t> {callstack}\n" ./'
+                        sh 'docker-compose run maker_cpp cppcheck --enable=all --suppress=missingInclude --std=c++17 --library=qt --quiet --verbose --template="[{severity}][{id}] {message} \n\t> {callstack}\n" src/'
                     }
                 }
                 stage("Unit Tests"){

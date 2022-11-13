@@ -2,8 +2,11 @@
 
 GuiFigure::GuiFigure(QGraphicsItem *parent) : QGraphicsSvgItem(parent) {}
 
-GuiFigure::GuiFigure(float w_gV, float h_gV, Figures figure, QGraphicsItem *parent) : QGraphicsSvgItem(parent) {
-  renderer = new QSvgRenderer(QString(":/images/figures/") + QString::number(figure) +  QString(".svg"));
+GuiFigure::GuiFigure(float w_gV, float h_gV, Figures figure,
+                     QGraphicsItem *parent)
+    : QGraphicsSvgItem(parent) {
+  renderer = new QSvgRenderer(QString(":/images/figures/") +
+                              QString::number(figure) + QString(".svg"));
   this->setSharedRenderer(renderer);
   float width_figure = this->boundingRect().size().width();
   float height_figure = this->boundingRect().size().height();
@@ -14,9 +17,7 @@ GuiFigure::GuiFigure(float w_gV, float h_gV, Figures figure, QGraphicsItem *pare
   last_delta_move.y = 0;
 }
 
-GuiFigure::~GuiFigure() {
-  delete renderer;
-}
+GuiFigure::~GuiFigure() { delete renderer; }
 
 void GuiFigure::mousePressEvent(QGraphicsSceneMouseEvent *event) {
     x = this->scenePos().x();
@@ -32,5 +33,5 @@ void GuiFigure::mouseReleaseEvent(QGraphicsSceneMouseEvent *event) {
     this->setZValue(0);
     QGraphicsItem::mouseReleaseEvent(event);
     emit moved(Position(y, x), Position(last_delta_move.y, last_delta_move.x));
-}
 
+}

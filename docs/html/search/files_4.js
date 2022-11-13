@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['liderboard_2ecpp_125',['liderboard.cpp',['../logic_2liderboard_2liderboard_8cpp.html',1,'(Глобальное пространство имён)'],['../storage_2liderboard_2liderboard_8cpp.html',1,'(Глобальное пространство имён)']]],
-  ['liderboard_2eh_126',['liderboard.h',['../logic_2liderboard_2liderboard_8h.html',1,'(Глобальное пространство имён)'],['../storage_2liderboard_2liderboard_8h.html',1,'(Глобальное пространство имён)']]]
+  ['gui_5ffigure_2ecpp_141',['gui_figure.cpp',['../gui__figure_8cpp.html',1,'']]],
+  ['gui_5ffigure_2eh_142',['gui_figure.h',['../gui__figure_8h.html',1,'']]]
 ];
