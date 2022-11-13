@@ -357,26 +357,26 @@ void tests::test_pawn() {
 
   // Успешные ходы
   setOnlyOneFigureOn(engine, new Pawn(WHITE), {4, 4});
-  QCOMPARE(engine.move({4, 4}, {0, 1}), DONE);
+  QCOMPARE(engine.move({4, 4}, {0, -1}), DONE);
   setOnlyOneFigureOn(engine, new Pawn(false, WHITE), {4, 4});
-  QCOMPARE(engine.move({4, 4}, {0, 2}), DONE);
-  setOnlyOneFigureOn(engine, new Pawn(false, WHITE), {0, 0});
-  QCOMPARE(engine.move({0, 0}, {0, 2}), DONE);
-  setOnlyOneFigureOn(engine, new Pawn(false, WHITE), {0, 0});
-  QCOMPARE(engine.move({0, 0}, {0, 2}), DONE);
+  QCOMPARE(engine.move({4, 4}, {0, -2}), DONE);
+  setOnlyOneFigureOn(engine, new Pawn(false, WHITE), {6, 6});
+  QCOMPARE(engine.move({6, 6}, {0, -2}), DONE);
+  setOnlyOneFigureOn(engine, new Pawn(false, WHITE), {5, 5});
+  QCOMPARE(engine.move({5, 5}, {0, -2}), DONE);
 
   // Ход через фигуры
-  setOnlyOneFigureOn(engine, new Pawn(false, WHITE), {0, 0});
-  engine.setFigureOnBoard(new Pawn(WHITE), {0, 1});
-  QCOMPARE(engine.move({0, 0}, {0, 2}), MOVE_TO_THROUGH_FIGURE);
+  setOnlyOneFigureOn(engine, new Pawn(WHITE), {5, 3});
+  engine.setFigureOnBoard(new Pawn(false, WHITE), {5, 4});
+  QCOMPARE(engine.move({5, 4}, {0, -2}), MOVE_TO_THROUGH_FIGURE);
 
   // Взятие
   setOnlyOneFigureOn(engine, new Pawn(WHITE), {4, 4});
-  engine.setFigureOnBoard(new Pawn(BLACK), {5, 5});
-  QCOMPARE(engine.move({4, 4}, {1, 1}), DONE);
+  engine.setFigureOnBoard(new Pawn(BLACK), {3, 3});
+  QCOMPARE(engine.move({4, 4}, {-1, -1}), DONE);
   setOnlyOneFigureOn(engine, new Pawn(WHITE), {4, 4});
-  engine.setFigureOnBoard(new Pawn(BLACK), {3, 5});
-  QCOMPARE(engine.move({4, 4}, {-1, 1}), DONE);
+  engine.setFigureOnBoard(new Pawn(BLACK), {5, 3});
+  QCOMPARE(engine.move({4, 4}, {1, -1}), DONE);
 
   // -------------------------------------------------------------------------
   // -----------------------------BLACK---------------------------------------
@@ -414,26 +414,26 @@ void tests::test_pawn() {
 
   // Успешные ходы
   setOnlyOneFigureOn(engine, new Pawn(BLACK), {4, 4});
-  QCOMPARE(engine.move({4, 4}, {0, -1}), DONE);
+  QCOMPARE(engine.move({4, 4}, {0, 1}), DONE);
   setOnlyOneFigureOn(engine, new Pawn(false, BLACK), {4, 4});
-  QCOMPARE(engine.move({4, 4}, {0, -2}), DONE);
-  setOnlyOneFigureOn(engine, new Pawn(false, BLACK), {0, 7});
-  QCOMPARE(engine.move({0, 7}, {0, -2}), DONE);
-  setOnlyOneFigureOn(engine, new Pawn(false, BLACK), {0, 7});
-  QCOMPARE(engine.move({0, 7}, {0, -2}), DONE);
+  QCOMPARE(engine.move({4, 4}, {0, 2}), DONE);
+  setOnlyOneFigureOn(engine, new Pawn(false, BLACK), {0, 0});
+  QCOMPARE(engine.move({0, 0}, {0, 2}), DONE);
+  setOnlyOneFigureOn(engine, new Pawn(false, BLACK), {0, 0});
+  QCOMPARE(engine.move({0, 0}, {0, 2}), DONE);
 
   // Ход через фигуры
-  setOnlyOneFigureOn(engine, new Pawn(false, BLACK), {0, 7});
-  engine.setFigureOnBoard(new Pawn(BLACK), {0, 6});
-  QCOMPARE(engine.move({0, 7}, {0, -2}), MOVE_TO_THROUGH_FIGURE);
+  setOnlyOneFigureOn(engine, new Pawn(false, BLACK), {0, 0});
+  engine.setFigureOnBoard(new Pawn(BLACK), {0, 1});
+  QCOMPARE(engine.move({0, 0}, {0, 2}), MOVE_TO_THROUGH_FIGURE);
 
   // Взятие
   setOnlyOneFigureOn(engine, new Pawn(BLACK), {4, 4});
-  engine.setFigureOnBoard(new Pawn(WHITE), {3, 3});
-  QCOMPARE(engine.move({4, 4}, {-1, -1}), DONE);
+  engine.setFigureOnBoard(new Pawn(WHITE), {3, 5});
+  QCOMPARE(engine.move({4, 4}, {-1, 1}), DONE);
   setOnlyOneFigureOn(engine, new Pawn(BLACK), {4, 4});
-  engine.setFigureOnBoard(new Pawn(WHITE), {5, 3});
-  QCOMPARE(engine.move({4, 4}, {1, -1}), DONE);
+  engine.setFigureOnBoard(new Pawn(WHITE), {5, 5});
+  QCOMPARE(engine.move({4, 4}, {1, 1}), DONE);
 }
 
 QTEST_APPLESS_MAIN(tests)
