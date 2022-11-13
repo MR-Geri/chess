@@ -1,9 +1,11 @@
 #pragma once
 
-#include "../scene_game/scene_game.h"
+#include <QGraphicsScene>
+#include <QGraphicsSvgItem>
 #include <QString>
 #include <QWidget>
 #include <src/constants.h>
+#include <src/gui/screen_game/gui_figure.h>
 
 namespace Ui {
 class ScreenGame;
@@ -21,13 +23,6 @@ public:
   explicit ScreenGame(QWidget *parent = nullptr);
   ~ScreenGame();
 
-private:
-  /**
-   * @brief Вызывается слотом update, по полученным
-   * данным генерирует новую сцену для отрисовки.
-   */
-  void generateScene(/* Данные */);
-
 signals:
   /**
    * @brief Показывает менеджеру окон на какое окно нужно перейти.
@@ -40,7 +35,7 @@ public slots:
   /**
    * @brief Получает данные для отрисовки из логики.
    */
-  void update(/* Данные */);
+  void catchData(QVector<QVector<Figures>> catched_data);
 
 private slots:
   /**
@@ -54,6 +49,13 @@ private slots:
   void buttonNewGameReleased();
 
 private:
+  void resizeEvent(QResizeEvent *event);
+  void drawGameField();
+
+private:
   Ui::ScreenGame *ui;
-  SceneGame scene;
+  QGraphicsScene *scene;
+  QGraphicsSvgItem *board;
+  QVector<QVector<Position>> positions;
+  QVector<QVector<Figures>> data;
 };
