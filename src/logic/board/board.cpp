@@ -2,9 +2,6 @@
 #include "math.h"
 
 Board::Board() {
-  // Pawn(false)
-  // Генерация поля
-  // TODO
   board =
       std::vector<std::vector<Figure *>>(8, std::vector<Figure *>(8, nullptr));
 }
@@ -33,27 +30,28 @@ void Board::move(Position from, Position to) {
   if (board[to.x][to.y] != nullptr)
     delete board[to.x][to.y];
 
+  FigureColor color = board[from.x][from.y]->getColor();
   delete board[from.x][from.y];
   board[from.x][from.y] = nullptr;
 
   switch (price) {
   case KING:
-    board[to.x][to.y] = new King();
+    board[to.x][to.y] = new King(color);
     break;
   case PAWN:
-    board[to.x][to.y] = new Pawn();
+    board[to.x][to.y] = new Pawn(color);
     break;
   case KINGHT:
-    board[to.x][to.y] = new Kinght();
+    board[to.x][to.y] = new Kinght(color);
     break;
   case ROOK:
-    board[to.x][to.y] = new Rook();
+    board[to.x][to.y] = new Rook(color);
     break;
   case BISHOP:
-    board[to.x][to.y] = new Bishop();
+    board[to.x][to.y] = new Bishop(color);
     break;
   case QUEEN:
-    board[to.x][to.y] = new Queen();
+    board[to.x][to.y] = new Queen(color);
     break;
   }
 }
@@ -76,4 +74,8 @@ void Board::clear() {
       }
     }
   }
+}
+
+std::vector<std::vector<Figure *>> Board::getBoardData() const {
+  return board;
 }

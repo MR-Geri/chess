@@ -1,9 +1,13 @@
 #include "engine.h"
-#include <iostream>
 
-Engine::Engine() {}
+Engine::Engine() {
+  game_board = new Board();
+  setStartingArrangement();
+}
 
-Engine::~Engine() {}
+Engine::~Engine() {
+  delete game_board;
+}
 
 StatusMove Engine::move(Position from_pos, Position step) {
   Position to_pos(from_pos.x + step.x, from_pos.y + step.y);
@@ -17,8 +21,9 @@ StatusMove Engine::move(Position from_pos, Position step) {
     return GO_OUT;
   }
 
-  Figure *from_pos_figure = game_board.getFigure(from_pos);
-  Figure *to_pos_figure = game_board.getFigure(to_pos);
+  Figure *from_pos_figure = game_board->getFigure(from_pos);
+  Figure *to_pos_figure = game_board->getFigure(to_pos);
+  if (from_pos_figure == nullptr) return FAIL;
   std::set<Position> possible_moves = from_pos_figure->getPossibleMoves();
   std::set<Position> possible_attacks = from_pos_figure->getPossibleAttacks();
 
@@ -36,46 +41,51 @@ StatusMove Engine::move(Position from_pos, Position step) {
   }
 
   // V Ошибка, если ход на/через фигуру V
-  for (auto i_step : game_board.getFigure(from_pos)->getUnarySteps(step)) {
+  for (auto i_step : game_board->getFigure(from_pos)->getUnarySteps(step)) {
     Position check(from_pos.x + i_step.x, from_pos.y + i_step.y);
-    if (game_board.getFigure(check) != nullptr) {
+    if (game_board->getFigure(check) != nullptr) {
       return MOVE_TO_THROUGH_FIGURE;
     }
   }
   // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-  game_board.move(from_pos, to_pos);
+  game_board->move(from_pos, to_pos);
   return DONE;
 }
 
 void Engine::setStartingArrangement() {
-  game_board.clear();
+  game_board->clear();
   for (int i = 0; i < 8; i++) {
     Figure *pawn_black = new Pawn(false, BLACK);
     Figure *pawn_white = new Pawn(false, WHITE);
-    game_board.setFigureOn(pawn_black, {i, 6});
-    game_board.setFigureOn(pawn_white, {i, 1});
+    game_board->setFigureOn(pawn_black, {1, i});
+    game_board->setFigureOn(pawn_white, {6, i});
   }
-  game_board.setFigureOn(new Rook(BLACK), {0, 7});
-  game_board.setFigureOn(new Rook(WHITE), {0, 0});
-  game_board.setFigureOn(new Rook(BLACK), {7, 7});
-  game_board.setFigureOn(new Rook(WHITE), {7, 0});
-  game_board.setFigureOn(new Bishop(BLACK), {1, 7});
-  game_board.setFigureOn(new Bishop(WHITE), {1, 0});
-  game_board.setFigureOn(new Bishop(BLACK), {6, 7});
-  game_board.setFigureOn(new Bishop(WHITE), {6, 0});
-  game_board.setFigureOn(new Kinght(BLACK), {2, 7});
-  game_board.setFigureOn(new Kinght(WHITE), {2, 0});
-  game_board.setFigureOn(new Kinght(BLACK), {5, 7});
-  game_board.setFigureOn(new Kinght(WHITE), {5, 0});
-  game_board.setFigureOn(new Queen(BLACK), {4, 7});
-  game_board.setFigureOn(new Queen(WHITE), {3, 0});
-  game_board.setFigureOn(new King(BLACK), {3, 7});
-  game_board.setFigureOn(new King(WHITE), {4, 0});
+  game_board->setFigureOn(new Rook(BLACK), {0, 7});
+  game_board->setFigureOn(new Rook(WHITE), {7, 7});
+  game_board->setFigureOn(new Rook(BLACK), {0, 0});
+  game_board->setFigureOn(new Rook(WHITE), {7, 0});
+  game_board->setFigureOn(new Bishop(BLACK), {0, 6});
+  game_board->setFigureOn(new Bishop(WHITE), {7, 6});
+  game_board->setFigureOn(new Bishop(BLACK), {0, 1});
+  game_board->setFigureOn(new Bishop(WHITE), {7, 1});
+  game_board->setFigureOn(new Kinght(BLACK), {0, 5});
+  game_board->setFigureOn(new Kinght(WHITE), {7, 5});
+  game_board->setFigureOn(new Kinght(BLACK), {0, 2});
+  game_board->setFigureOn(new Kinght(WHITE), {7, 2});
+  game_board->setFigureOn(new Queen(BLACK), {0, 3});
+  game_board->setFigureOn(new Queen(WHITE), {7, 3});
+  game_board->setFigureOn(new King(BLACK), {0, 4});
+  game_board->setFigureOn(new King(WHITE), {7, 4});
 }
 
 bool Engine::setFigureOnBoard(Figure *figure, Position position) {
-  return game_board.setFigureOn(figure, position);
+  return game_board->setFigureOn(figure, position);
 }
 
-void Engine::clearBoard() { game_board.clear(); }
+void Engine::clearBoard() { game_board->clear(); }
+
+std::vector<std::vector<Figure *>> Engine::getData() {
+  std::vector<std::vector<Figure *>> data = this->game_board->getBoardData();
+  return data;
+}

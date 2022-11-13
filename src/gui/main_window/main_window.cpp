@@ -1,6 +1,8 @@
 #include "main_window.h"
 #include "ui_main_window.h"
 
+#include <iostream>
+
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent), ui(new Ui::MainWindow) {
   ui->setupUi(this);
@@ -19,6 +21,11 @@ MainWindow::MainWindow(QWidget *parent)
           SLOT(windowsManager(int)));
   connect(&screen_liderboard, SIGNAL(changeWindow(int)), this,
           SLOT(windowsManager(int)));
+  connect(&screen_game, SIGNAL(figureMovedBoard(Position, Position)), this,
+          SLOT(connectGuiMoveWithEngine(Position, Position)));
+  connect(this, SIGNAL(sendDataToGui(QVector<QVector<Figures>>)), &screen_game,
+          SLOT(catchData(QVector<QVector<Figures>>)));
+  connectGuiMoveWithEngine(Position(0, 0), Position(0, 0));
 }
 
 MainWindow::~MainWindow() { delete ui; }
@@ -27,4 +34,17 @@ void MainWindow::windowsManager(int window_id) {
   if (window_id == Windows::EXIT)
     this->close();
   ui->stackedWidget->setCurrentIndex(window_id);
+}
+
+void MainWindow::connectGuiMoveWithEngine(Position from_board, Position delta_board) {
+  engine.move(from_board, delta_board);
+  std::vector<std::vector<Figure *>> data = engine.getData();
+  QVector<QVector<Figures>> data_for_gui(data.size(), QVector<Figures>(data.size()));
+  for (int i = 0; i < data.size(); i++) {
+    for (int j = 0; j < data[i].size(); j++) {
+      if (data[i][j] == nullptr) data_for_gui[i][j] = NONE;
+      else data_for_gui[i][j] = data[i][j]->getTypeFigure();
+    }
+  }
+  emit sendDataToGui(data_for_gui);
 }

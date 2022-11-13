@@ -44,8 +44,8 @@ public:
    */
   void clearBoard();
 
-
+  std::vector<std::vector<Figure *>> getData();
 
 private:
-  Board game_board;
+  Board *game_board;
 };

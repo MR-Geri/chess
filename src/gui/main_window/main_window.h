@@ -3,11 +3,13 @@
 #include <QMainWindow>
 #include <QStackedWidget>
 #include <QString>
+#include <QVector>
 #include <src/constants.h>
 #include <src/gui/screen_game/screen_game.h>
 #include <src/gui/screen_liderboard/screen_liderboard.h>
 #include <src/gui/screen_menu/screen_menu.h>
 #include <src/gui/screen_settings/screen_settings.h>
+#include <src/logic/engine/engine.h>
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -42,8 +44,14 @@ public slots:
    */
   void windowsManager(int window_id);
 
+  void connectGuiMoveWithEngine(Position from_board, Position delta_board);
+
+signals:
+  void sendDataToGui(QVector<QVector<Figures>> data);
+
 private:
   Ui::MainWindow *ui;
+  Engine engine;
   ScreenGame screen_game;
   ScreenMenu screen_menu;
   ScreenSettings screen_settings;

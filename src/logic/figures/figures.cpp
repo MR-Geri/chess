@@ -18,6 +18,11 @@ King::King(FigureColor color) : Figure(KING, color) {
         possible_moves.insert({i, j});
     }
   }
+  if (color == FigureColor::WHITE) {
+    type_figure = Figures::W_KING;
+  } else {
+    type_figure = Figures::B_KING;
+  }
 }
 
 Queen::Queen(FigureColor color) : Figure(QUEEN, color) {
@@ -28,6 +33,11 @@ Queen::Queen(FigureColor color) : Figure(QUEEN, color) {
           possible_moves.insert({i * k, j * k});
     }
   }
+  if (color == FigureColor::WHITE) {
+    type_figure = Figures::W_QUEEN;
+  } else {
+    type_figure = Figures::B_QUEEN;
+  }
 }
 
 Bishop::Bishop(FigureColor color) : Figure(BISHOP, color) {
@@ -37,6 +47,11 @@ Bishop::Bishop(FigureColor color) : Figure(BISHOP, color) {
     possible_moves.insert({i, -i});
     possible_moves.insert({-i, -i});
   }
+  if (color == FigureColor::WHITE) {
+    type_figure = Figures::W_BISHOP;
+  } else {
+    type_figure = Figures::B_BISHOP;
+  }
 }
 
 Rook::Rook(FigureColor color) : Figure(ROOK, color) {
@@ -45,6 +60,11 @@ Rook::Rook(FigureColor color) : Figure(ROOK, color) {
     possible_moves.insert({i, 0});
     possible_moves.insert({0, -i});
     possible_moves.insert({-i, 0});
+  }
+  if (color == FigureColor::WHITE) {
+    type_figure = Figures::W_ROOK;
+  } else {
+    type_figure = Figures::B_ROOK;
   }
 }
 
@@ -57,28 +77,43 @@ Kinght::Kinght(FigureColor color) : Figure(KINGHT, color) {
   possible_moves.insert({2, -1});
   possible_moves.insert({-2, 1});
   possible_moves.insert({-2, -1});
+  if (color == FigureColor::WHITE) {
+    type_figure = Figures::W_KINGHT;
+  } else {
+    type_figure = Figures::B_KINGHT;
+  }
 }
 
 Pawn::Pawn(FigureColor color) : Figure(PAWN, color) {
-  int color_mod = (color == WHITE) ? 1 : -1;
-  possible_moves.insert({0, 1 * color_mod});
+  int color_mod = (color == WHITE) ? -1 : 1;
+  possible_moves.insert({1 * color_mod, 0});
+  if (color == FigureColor::WHITE) {
+    type_figure = Figures::W_PAWN;
+  } else {
+    type_figure = Figures::B_PAWN;
+  }
 }
 
 Pawn::Pawn(bool flag_move, FigureColor color) : Figure(PAWN, color) {
-  int color_mod = (color == WHITE) ? 1 : -1;
+  int color_mod = (color == WHITE) ? -1 : 1;
   if (flag_move) {
-    possible_moves.insert({0, 1 * color_mod});
+    possible_moves.insert({1 * color_mod, 0});
   } else {
-    possible_moves.insert({0, 1 * color_mod});
-    possible_moves.insert({0, 2 * color_mod});
+    possible_moves.insert({1 * color_mod, 0});
+    possible_moves.insert({2 * color_mod, 0});
+  }
+  if (color == FigureColor::WHITE) {
+    type_figure = Figures::W_PAWN;
+  } else {
+    type_figure = Figures::B_PAWN;
   }
 }
 
 std::set<Position> Pawn::getPossibleAttacks() {
-  int color_mod = (b_color == WHITE) ? 1 : -1;
+  int color_mod = (b_color == WHITE) ? -1 : 1;
   std::set<Position> out;
-  out.insert({1, 1 * color_mod});
-  out.insert({-1, 1 * color_mod});
+  out.insert({1 * color_mod, 1});
+  out.insert({1 * color_mod, -1});
   return out;
 }
 
@@ -98,4 +133,8 @@ std::list<Position> Figure::getUnarySteps(Position step) {
 
 std::list<Position> Kinght::getUnarySteps(Position step) {
   return std::list<Position>({});
+}
+
+Figures Figure::getTypeFigure() const {
+  return type_figure;
 }
