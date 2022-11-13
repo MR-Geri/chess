@@ -44,8 +44,6 @@ public:
    */
   void clearBoard();
 
-
-
 private:
   Board game_board;
 };

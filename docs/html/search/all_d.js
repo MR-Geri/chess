@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['readme_2emd_59',['README.md',['../README_8md.html',1,'']]],
-  ['rook_60',['Rook',['../classRook.html',1,'Rook'],['../classRook.html#a7f2139b242deef9e32fc3b136e96be68',1,'Rook::Rook()']]],
-  ['rook_61',['ROOK',['../constants_8h.html#a3da527ca0edbe6a57ea4f61d1e5af434a49b75ad9a5137e805c60f32ed9cc2820',1,'constants.h']]]
+  ['queen_71',['Queen',['../classQueen.html',1,'Queen'],['../classQueen.html#a56662c4ff83e3dd61f5ba4f5a2a65061',1,'Queen::Queen()']]],
+  ['queen_72',['QUEEN',['../constants_8h.html#a3da527ca0edbe6a57ea4f61d1e5af434a58561257be7e2f96f82c0fdb51d7f964',1,'constants.h']]]
 ];
