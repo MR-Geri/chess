@@ -1,10 +1,6 @@
 #include "screen_game.h"
 #include "ui_screen_game.h"
 
-//**************************************************
-#include <iostream>
-//**************************************************
-
 ScreenGame::ScreenGame(QWidget *parent)
     : QWidget(parent), ui(new Ui::ScreenGame) {
   ui->setupUi(this);
@@ -92,8 +88,5 @@ void ScreenGame::figureMoved(Position from, Position delta) {
   from_board.y = static_cast<int>((from.y + 1 - indent) / size_cell_board);
   delta_board.x = static_cast<int>((delta.x + ((delta.x > 0) ? ratio : -ratio)) / size_cell_board);
   delta_board.y = static_cast<int>((delta.y + ((delta.y > 0) ? ratio : -ratio)) / size_cell_board);
-  std::cout << size_cell_board << '\n';
-  std::cout << from.x - indent << ":" << from_board.x << " " << from.y - indent << ":" << from_board.y << '\n'
-            << delta.x << ":" << delta_board.x << " " << delta.y << ":" << delta_board.y << '\n';
   emit figureMovedBoard(from_board, delta_board);
 }
