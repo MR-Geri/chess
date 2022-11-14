@@ -22,21 +22,26 @@ Figure *Board::getFigure(Position coords) const {
 }
 
 void Board::move(Position from, Position to) {
-  int price = board[from.x][from.y]->getPrice();
-
-  if (board[to.x][to.y] != nullptr && board[to.x][to.y]->getPrice() != -1) {
-    price -=
-        round((static_cast<float>(price) - board[to.x][to.y]->getPrice()) / 2.);
-  }
-
-  if (board[to.x][to.y] != nullptr) {
-    delete board[to.x][to.y];
-    board[to.x][to.y] = nullptr;
-  }
-
   FigureColor color = board[from.x][from.y]->getColor();
+  int price = board[from.x][from.y]->getPrice();
+  Figures type_figure_from = board[from.x][from.y]->getTypeFigure();
+
   delete board[from.x][from.y];
   board[from.x][from.y] = nullptr;
+
+  if (board[to.x][to.y] == nullptr) {
+    if (type_figure_from == W_PAWN && to.y == 0 ||
+        type_figure_from == B_PAWN && to.y == 7) {
+      board[to.x][to.y] = new Queen(color);
+      return;
+  }
+  } else {
+    if (board[to.x][to.y]->getPrice() != -1) {
+      price -=
+          round((static_cast<float>(price) - board[to.x][to.y]->getPrice()) / 2.);
+      delete board[to.x][to.y];
+    }
+  }
 
   switch (price) {
   case KING:
