@@ -27,7 +27,8 @@ void Board::move(Position from, Position to) {
   int price = board[from.x][from.y]->getPrice();
 
   if (board[to.x][to.y] != nullptr && board[to.x][to.y]->getPrice() != -1) {
-    price -= round((static_cast<float>(price) - board[to.x][to.y]->getPrice()) / 2.);
+    price -=
+        round((static_cast<float>(price) - board[to.x][to.y]->getPrice()) / 2.);
   }
 
   if (board[to.x][to.y] != nullptr) {
