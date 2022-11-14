@@ -1,6 +1,8 @@
 #include "board.h"
 #include "math.h"
 
+#include <iostream>
+
 Board::Board() {
   board =
       std::vector<std::vector<Figure *>>(8, std::vector<Figure *>(8, nullptr));
@@ -11,6 +13,7 @@ Board::~Board() {
     for (int j = 0; j < 8; j++) {
       if (board[i][j] != nullptr) {
         delete board[i][j];
+        board[i][j] = nullptr;
       }
     }
   }
@@ -23,12 +26,14 @@ Figure *Board::getFigure(Position coords) const {
 void Board::move(Position from, Position to) {
   int price = board[from.x][from.y]->getPrice();
 
-  if (board[to.x][to.y] != nullptr && price != -1) {
-    price = round(float(price - board[from.x][from.y]->getPrice()) / 2);
+  if (board[to.x][to.y] != nullptr && board[to.x][to.y]->getPrice() != -1) {
+    price -= round((static_cast<float>(price) - board[to.x][to.y]->getPrice()) / 2.);
   }
 
-  if (board[to.x][to.y] != nullptr)
+  if (board[to.x][to.y] != nullptr) {
     delete board[to.x][to.y];
+    board[to.x][to.y] = nullptr;
+  }
 
   FigureColor color = board[from.x][from.y]->getColor();
   delete board[from.x][from.y];
