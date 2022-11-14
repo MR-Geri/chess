@@ -1,8 +1,6 @@
 #include "board.h"
 #include "math.h"
 
-#include <iostream>
-
 Board::Board() {
   board =
       std::vector<std::vector<Figure *>>(8, std::vector<Figure *>(8, nullptr));
