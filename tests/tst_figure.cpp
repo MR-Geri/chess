@@ -19,7 +19,7 @@ private slots:
   void test_queen();
   void test_bishop();
   void test_rook();
-  void test_kinght();
+  void test_knight();
   void test_pawn();
 };
 
@@ -265,55 +265,55 @@ void tests::test_rook() {
   }
 }
 
-void tests::test_kinght() {
+void tests::test_knight() {
   Engine engine;
 
   for (int i_color = 0; i_color < 2; i_color++) {
     FigureColor me = colors[i_color], enemy = colors[1 - i_color];
     // Невозможные ходы
-    setOnlyOneFigureOn(engine, new Kinght(me), {0, 0});
+    setOnlyOneFigureOn(engine, new Knight(me), {0, 0});
     QCOMPARE(engine.move({0, 0}, {2, 2}), IMPOSSIBLE_MOVE);
-    setOnlyOneFigureOn(engine, new Kinght(me), {0, 0});
+    setOnlyOneFigureOn(engine, new Knight(me), {0, 0});
     QCOMPARE(engine.move({0, 0}, {1, 1}), IMPOSSIBLE_MOVE);
 
     // Нет хода
-    setOnlyOneFigureOn(engine, new Kinght(me), {0, 0});
+    setOnlyOneFigureOn(engine, new Knight(me), {0, 0});
     QCOMPARE(engine.move({0, 0}, {0, 0}), FAIL);
 
     // Выход за границы поля
-    setOnlyOneFigureOn(engine, new Kinght(me), {0, 0});
+    setOnlyOneFigureOn(engine, new Knight(me), {0, 0});
     QCOMPARE(engine.move({0, 0}, {9, 1}), GO_OUT);
 
     // Выход за границы поля
     for (int i = 0; i < 8; i++) {
-      setOnlyOneFigureOn(engine, new Kinght(me), {0, i});
+      setOnlyOneFigureOn(engine, new Knight(me), {0, i});
       QCOMPARE(engine.move({0, i}, {-1, 0}), GO_OUT);
-      setOnlyOneFigureOn(engine, new Kinght(me), {7, i});
+      setOnlyOneFigureOn(engine, new Knight(me), {7, i});
       QCOMPARE(engine.move({7, i}, {1, 0}), GO_OUT);
-      setOnlyOneFigureOn(engine, new Kinght(me), {i, 0});
+      setOnlyOneFigureOn(engine, new Knight(me), {i, 0});
       QCOMPARE(engine.move({i, 0}, {0, -1}), GO_OUT);
-      setOnlyOneFigureOn(engine, new Kinght(me), {i, 7});
+      setOnlyOneFigureOn(engine, new Knight(me), {i, 7});
       QCOMPARE(engine.move({i, 7}, {0, 1}), GO_OUT);
     }
 
     // Успешные ходы
-    setOnlyOneFigureOn(engine, new Kinght(me), {4, 4});
+    setOnlyOneFigureOn(engine, new Knight(me), {4, 4});
     QCOMPARE(engine.move({4, 4}, {2, 1}), DONE);
-    setOnlyOneFigureOn(engine, new Kinght(me), {4, 4});
+    setOnlyOneFigureOn(engine, new Knight(me), {4, 4});
     QCOMPARE(engine.move({4, 4}, {1, 2}), DONE);
-    setOnlyOneFigureOn(engine, new Kinght(me), {4, 4});
+    setOnlyOneFigureOn(engine, new Knight(me), {4, 4});
     QCOMPARE(engine.move({4, 4}, {-2, -1}), DONE);
-    setOnlyOneFigureOn(engine, new Kinght(me), {4, 4});
+    setOnlyOneFigureOn(engine, new Knight(me), {4, 4});
     QCOMPARE(engine.move({4, 4}, {-1, -2}), DONE);
 
     // Ход через фигуры
-    setOnlyOneFigureOn(engine, new Kinght(me), {0, 0});
-    engine.setFigureOnBoard(new Kinght(me), {0, 1});
+    setOnlyOneFigureOn(engine, new Knight(me), {0, 0});
+    engine.setFigureOnBoard(new Knight(me), {0, 1});
     QCOMPARE(engine.move({0, 0}, {2, 1}), DONE);
 
     // Взятие
-    setOnlyOneFigureOn(engine, new Kinght(me), {0, 0});
-    engine.setFigureOnBoard(new Kinght(enemy), {2, 1});
+    setOnlyOneFigureOn(engine, new Knight(me), {0, 0});
+    engine.setFigureOnBoard(new Knight(enemy), {2, 1});
     QCOMPARE(engine.move({0, 0}, {2, 1}), DONE);
   }
 }
