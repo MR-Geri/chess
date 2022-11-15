@@ -109,13 +109,13 @@ public:
 /**
  * @brief Конь.
  */
-class Kinght : public Figure {
+class Knight : public Figure {
 public:
   /**
    * @brief Конструктор.
    * @param color цвет фигуры.
    */
-  Kinght(FigureColor color = WHITE);
+  Knight(FigureColor color = WHITE);
 
   /**
    * @brief Получение элементарных ходов. Перегруженный для коня метод.

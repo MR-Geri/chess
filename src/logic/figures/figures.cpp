@@ -68,7 +68,7 @@ Rook::Rook(FigureColor color) : Figure(ROOK, color) {
   }
 }
 
-Kinght::Kinght(FigureColor color) : Figure(KINGHT, color) {
+Knight::Knight(FigureColor color) : Figure(KINGHT, color) {
   possible_moves.insert({1, 2});
   possible_moves.insert({1, -2});
   possible_moves.insert({-1, 2});
@@ -131,7 +131,7 @@ std::list<Position> Figure::getUnarySteps(Position step) {
   return out;
 }
 
-std::list<Position> Kinght::getUnarySteps(Position step) {
+std::list<Position> Knight::getUnarySteps(Position step) {
   return std::list<Position>({});
 }
 

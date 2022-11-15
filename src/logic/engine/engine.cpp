@@ -68,10 +68,10 @@ void Engine::setStartingArrangement() {
   game_board->setFigureOn(new Bishop(BLACK), {1, 0});
   game_board->setFigureOn(new Bishop(WHITE), {6, 7});
   game_board->setFigureOn(new Bishop(BLACK), {6, 0});
-  game_board->setFigureOn(new Kinght(WHITE), {2, 7});
-  game_board->setFigureOn(new Kinght(BLACK), {2, 0});
-  game_board->setFigureOn(new Kinght(WHITE), {5, 7});
-  game_board->setFigureOn(new Kinght(BLACK), {5, 0});
+  game_board->setFigureOn(new Knight(WHITE), {2, 7});
+  game_board->setFigureOn(new Knight(BLACK), {2, 0});
+  game_board->setFigureOn(new Knight(WHITE), {5, 7});
+  game_board->setFigureOn(new Knight(BLACK), {5, 0});
   game_board->setFigureOn(new Queen(WHITE), {4, 7});
   game_board->setFigureOn(new Queen(BLACK), {3, 0});
   game_board->setFigureOn(new King(WHITE), {3, 7});
