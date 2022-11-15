@@ -11,7 +11,7 @@ var searchData=
   ['getprice_44',['getPrice',['../classFigure.html#a7a36488fa19e8ceb96b684527df50d9e',1,'Figure']]],
   ['getsituation_45',['getSituation',['../classBoard.html#ab88eabe2d17dadba7cbe4bf2a73e5b77',1,'Board']]],
   ['gettypefigure_46',['getTypeFigure',['../classFigure.html#a6e9afb1f33f8d9298adb15608666c801',1,'Figure']]],
-  ['getunarysteps_47',['getUnarySteps',['../classKinght.html#abb1932ed1a52489a3d738ca9ceb82fef',1,'Kinght::getUnarySteps()'],['../classFigure.html#aad86c6d796ac96d30f2a310c107fdbac',1,'Figure::getUnarySteps()']]],
+  ['getunarysteps_47',['getUnarySteps',['../classKnight.html#a4fcfdb07e9fb214be013de3cefe425f7',1,'Knight::getUnarySteps()'],['../classFigure.html#aad86c6d796ac96d30f2a310c107fdbac',1,'Figure::getUnarySteps()']]],
   ['go_5fout_48',['GO_OUT',['../constants_8h.html#a8b9a4049772aeb1c0e054b0571babc95a2712d5b0cbf61d5d441224182e9ec1da',1,'constants.h']]],
   ['gui_5ffigure_2ecpp_49',['gui_figure.cpp',['../gui__figure_8cpp.html',1,'']]],
   ['gui_5ffigure_2eh_50',['gui_figure.h',['../gui__figure_8h.html',1,'']]],

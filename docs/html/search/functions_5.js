@@ -10,6 +10,6 @@ var searchData=
   ['getprice_189',['getPrice',['../classFigure.html#a7a36488fa19e8ceb96b684527df50d9e',1,'Figure']]],
   ['getsituation_190',['getSituation',['../classBoard.html#ab88eabe2d17dadba7cbe4bf2a73e5b77',1,'Board']]],
   ['gettypefigure_191',['getTypeFigure',['../classFigure.html#a6e9afb1f33f8d9298adb15608666c801',1,'Figure']]],
-  ['getunarysteps_192',['getUnarySteps',['../classFigure.html#aad86c6d796ac96d30f2a310c107fdbac',1,'Figure::getUnarySteps()'],['../classKinght.html#abb1932ed1a52489a3d738ca9ceb82fef',1,'Kinght::getUnarySteps()']]],
+  ['getunarysteps_192',['getUnarySteps',['../classFigure.html#aad86c6d796ac96d30f2a310c107fdbac',1,'Figure::getUnarySteps()'],['../classKnight.html#a4fcfdb07e9fb214be013de3cefe425f7',1,'Knight::getUnarySteps()']]],
   ['guifigure_193',['GuiFigure',['../classGuiFigure.html#a71a04c51f2d58ab07c225f962df1189a',1,'GuiFigure::GuiFigure(QGraphicsItem *parent=nullptr)'],['../classGuiFigure.html#ac6355c43ee006eddd9cddffb01228195',1,'GuiFigure::GuiFigure(float w_gV, float h_gV, Figures figure, QGraphicsItem *parent=nullptr)']]]
 ];

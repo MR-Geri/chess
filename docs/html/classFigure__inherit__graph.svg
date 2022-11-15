@@ -117,13 +117,13 @@ var sectionId = 'dynsection-0';
 <!-- Node4 -->
 <g id="node4" class="node">
 <title>Node4</title>
-<g id="a_node4"><a xlink:href="classKinght.html" target="_top" xlink:title="Конь.">
+<g id="a_node4"><a xlink:href="classKnight.html" target="_top" xlink:title="Конь.">
 <polygon fill="none" stroke="black" points="161.5,-6 161.5,-74 268.5,-74 268.5,-6 161.5,-6"/>
-<text text-anchor="middle" x="215" y="-62" font-family="Helvetica,sans-Serif" font-size="10.00">Kinght</text>
+<text text-anchor="middle" x="215" y="-62" font-family="Helvetica,sans-Serif" font-size="10.00">Knight</text>
 <polyline fill="none" stroke="black" points="161.5,-55 268.5,-55 "/>
 <text text-anchor="middle" x="215" y="-43" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
 <polyline fill="none" stroke="black" points="161.5,-36 268.5,-36 "/>
-<text text-anchor="start" x="169.5" y="-24" font-family="Helvetica,sans-Serif" font-size="10.00">+ Kinght()</text>
+<text text-anchor="start" x="169.5" y="-24" font-family="Helvetica,sans-Serif" font-size="10.00">+ Knight()</text>
 <text text-anchor="start" x="169.5" y="-13" font-family="Helvetica,sans-Serif" font-size="10.00">+ getUnarySteps()</text>
 </a>
 </g>
