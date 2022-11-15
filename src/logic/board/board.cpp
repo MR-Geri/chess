@@ -34,11 +34,11 @@ void Board::move(Position from, Position to) {
         type_figure_from == B_PAWN && to.y == 7) {
       board[to.x][to.y] = new Queen(color);
       return;
-  }
+    }
   } else {
     if (board[to.x][to.y]->getPrice() != -1) {
-      price -=
-          round((static_cast<float>(price) - board[to.x][to.y]->getPrice()) / 2.);
+      price -= round(
+          (static_cast<float>(price) - board[to.x][to.y]->getPrice()) / 2.);
       delete board[to.x][to.y];
     }
   }
