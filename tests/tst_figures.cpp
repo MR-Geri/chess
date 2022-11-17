@@ -1,6 +1,5 @@
 #include "tst_figures.h"
 
-
 TestsFigures::TestsFigures() {}
 
 TestsFigures::~TestsFigures() {}

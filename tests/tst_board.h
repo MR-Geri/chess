@@ -5,7 +5,6 @@
 #include <iostream>
 #include <qtestcase.h>
 
-
 class TestsBoard : public QObject {
   Q_OBJECT
 

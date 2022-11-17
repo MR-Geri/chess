@@ -3,7 +3,7 @@ var searchData=
   ['b_5fbishop_1',['B_BISHOP',['../constants_8h.html#aad5143bace5bd3ff842dc242706a3682a68012127cc230c8fc2038fa80f33e3f9',1,'constants.h']]],
   ['b_5fcolor_2',['b_color',['../classFigure.html#a13206acc9b4fce30d4d18a911f5cbf83',1,'Figure']]],
   ['b_5fking_3',['B_KING',['../constants_8h.html#aad5143bace5bd3ff842dc242706a3682a9c419a9a2cc88ad479284577858c469e',1,'constants.h']]],
-  ['b_5fkinght_4',['B_KINGHT',['../constants_8h.html#aad5143bace5bd3ff842dc242706a3682a0c9828a689e8e2b9495fd644fed178ad',1,'constants.h']]],
+  ['b_5fknight_4',['B_KNIGHT',['../constants_8h.html#aad5143bace5bd3ff842dc242706a3682abf5807e62f8378eb70b1a43d048963bc',1,'constants.h']]],
   ['b_5fpawn_5',['B_PAWN',['../constants_8h.html#aad5143bace5bd3ff842dc242706a3682ae12c95af2cb74b1426bbcbdf6081dba9',1,'constants.h']]],
   ['b_5fprice_6',['b_price',['../classFigure.html#a72d0bf2ff589f0ceb9171d31268b3494',1,'Figure']]],
   ['b_5fqueen_7',['B_QUEEN',['../constants_8h.html#aad5143bace5bd3ff842dc242706a3682ae835e3319547c8a23a451ab299ace328',1,'constants.h']]],
