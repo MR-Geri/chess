@@ -50,7 +50,7 @@ void Board::move(Position from, Position to) {
   case PAWN:
     board[to.x][to.y] = new Pawn(color);
     break;
-  case KINGHT:
+  case KNIGHT:
     board[to.x][to.y] = new Knight(color);
     break;
   case ROOK:

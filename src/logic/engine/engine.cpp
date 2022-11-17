@@ -55,10 +55,10 @@ StatusMove Engine::move(Position from_pos, Position step) {
 void Engine::setStartingArrangement() {
   game_board->clear();
   for (int i = 0; i < 8; i++) {
-    Figure *pawn_black = new Pawn(false, WHITE);
-    Figure *pawn_white = new Pawn(false, BLACK);
-    game_board->setFigureOn(pawn_black, {i, 6});
-    game_board->setFigureOn(pawn_white, {i, 1});
+    Figure *pawn_white = new Pawn(false, WHITE);
+    Figure *pawn_black = new Pawn(false, BLACK);
+    game_board->setFigureOn(pawn_white, {i, 6});
+    game_board->setFigureOn(pawn_black, {i, 1});
   }
   game_board->setFigureOn(new Rook(WHITE), {0, 7});
   game_board->setFigureOn(new Rook(BLACK), {0, 0});

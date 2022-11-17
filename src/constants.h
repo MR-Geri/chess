@@ -19,7 +19,7 @@ enum StatusMove { DONE, FAIL, GO_OUT, IMPOSSIBLE_MOVE, MOVE_TO_THROUGH_FIGURE };
 /**
  * @brief Перечисление, содержащее веса фигур.
  */
-enum FiguresPrice { KING = -1, PAWN = 1, KINGHT, BISHOP, ROOK, QUEEN };
+enum FiguresPrice { KING = -1, PAWN = 1, KNIGHT, BISHOP, ROOK, QUEEN };
 
 /**
  * @brief Перечисление, содержащее цвета фигур.
@@ -30,13 +30,13 @@ enum Figures {
   NONE = 0,
   W_KING,
   W_PAWN,
-  W_KINGHT,
+  W_KNIGHT,
   W_BISHOP,
   W_ROOK,
   W_QUEEN,
   B_KING,
   B_PAWN,
-  B_KINGHT,
+  B_KNIGHT,
   B_BISHOP,
   B_ROOK,
   B_QUEEN

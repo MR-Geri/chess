@@ -68,7 +68,7 @@ Rook::Rook(FigureColor color) : Figure(ROOK, color) {
   }
 }
 
-Knight::Knight(FigureColor color) : Figure(KINGHT, color) {
+Knight::Knight(FigureColor color) : Figure(KNIGHT, color) {
   possible_moves.insert({1, 2});
   possible_moves.insert({1, -2});
   possible_moves.insert({-1, 2});
@@ -78,9 +78,9 @@ Knight::Knight(FigureColor color) : Figure(KINGHT, color) {
   possible_moves.insert({-2, 1});
   possible_moves.insert({-2, -1});
   if (color == FigureColor::WHITE) {
-    type_figure = Figures::W_KINGHT;
+    type_figure = Figures::W_KNIGHT;
   } else {
-    type_figure = Figures::B_KINGHT;
+    type_figure = Figures::B_KNIGHT;
   }
 }
 

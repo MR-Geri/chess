@@ -1,31 +1,9 @@
-#include "../src/logic/board/board.h"
-#include "../src/logic/engine/engine.h"
-#include "../src/logic/figures/figures.h"
-#include <QtTest>
-#include <iostream>
-#include <qtestcase.h>
+#include "tst_figures.h"
 
-// add necessary includes here
 
-class tests : public QObject {
-  Q_OBJECT
+TestsFigures::TestsFigures() {}
 
-public:
-  tests();
-  ~tests();
-
-private slots:
-  void test_king();
-  void test_queen();
-  void test_bishop();
-  void test_rook();
-  void test_knight();
-  void test_pawn();
-};
-
-tests::tests() {}
-
-tests::~tests() {}
+TestsFigures::~TestsFigures() {}
 
 FigureColor colors[2] = {WHITE, BLACK};
 
@@ -34,7 +12,7 @@ void setOnlyOneFigureOn(Engine &engine, Figure *figure, Position position) {
   engine.setFigureOnBoard(figure, position);
 }
 
-void tests::test_king() {
+void TestsFigures::test_king() {
   Engine engine;
 
   for (int i_color = 0; i_color < 2; i_color++) {
@@ -90,7 +68,7 @@ void tests::test_king() {
   }
 }
 
-void tests::test_queen() {
+void TestsFigures::test_queen() {
   Engine engine;
 
   for (int i_color = 0; i_color < 2; i_color++) {
@@ -153,7 +131,7 @@ void tests::test_queen() {
   }
 }
 
-void tests::test_bishop() {
+void TestsFigures::test_bishop() {
   Engine engine;
 
   for (int i_color = 0; i_color < 2; i_color++) {
@@ -212,7 +190,7 @@ void tests::test_bishop() {
   }
 }
 
-void tests::test_rook() {
+void TestsFigures::test_rook() {
   Engine engine;
 
   for (int i_color = 0; i_color < 2; i_color++) {
@@ -265,7 +243,7 @@ void tests::test_rook() {
   }
 }
 
-void tests::test_knight() {
+void TestsFigures::test_knight() {
   Engine engine;
 
   for (int i_color = 0; i_color < 2; i_color++) {
@@ -318,7 +296,7 @@ void tests::test_knight() {
   }
 }
 
-void tests::test_pawn() {
+void TestsFigures::test_pawn() {
   Engine engine;
 
   // -------------------------------------------------------------------------
@@ -436,6 +414,4 @@ void tests::test_pawn() {
   QCOMPARE(engine.move({4, 4}, {1, 1}), DONE);
 }
 
-QTEST_APPLESS_MAIN(tests)
-
-#include "tst_figure.moc"
+#include "tst_figures.moc"
