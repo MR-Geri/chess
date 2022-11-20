@@ -123,6 +123,25 @@ int enemyUnderAttack(std::vector<std::vector<Figure *>> board, Position pos) {
   return figures_under_attack;
 }
 
+int quantityPossibleMove(std::vector<std::vector<Figure *>> board,
+                         Position pos) {
+  int moves = 0;
+  for (auto line : board[pos.x][pos.y]->getPossibleMoves()) {
+    for (auto step : line) {
+      Position current_pos = {pos.x + step.x, pos.y + step.y};
+      if (current_pos.x >= 0 && current_pos.x <= 7 && current_pos.y >= 0 &&
+          current_pos.y <= 7) {
+        if (board[current_pos.x][current_pos.y] == nullptr) {
+          moves++;
+        } else {
+          break;
+        }
+      }
+    }
+  }
+  return moves * 20;
+}
+
 double Engine::calculateAdvantageWhite() {
   double white = 1, black = 1;
   std::vector<std::vector<Figure *>> board = this->getData();
@@ -135,9 +154,11 @@ double Engine::calculateAdvantageWhite() {
         if (color == WHITE) {
           white += board[i][j]->getPriceAdvantage();
           white += enemyUnderAttack(board, {i, j});
+          white += quantityPossibleMove(board, {i, j});
         } else {
           black += board[i][j]->getPriceAdvantage();
           black += enemyUnderAttack(board, {i, j});
+          black += quantityPossibleMove(board, {i, j});
         }
       }
     }
