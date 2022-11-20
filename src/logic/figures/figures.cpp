@@ -119,7 +119,8 @@ Pawn::Pawn(FigureColor color) : Figure(PAWN, ADVANTAGE_PAWN, color) {
   }
 }
 
-Pawn::Pawn(bool flag_move, FigureColor color) : Figure(PAWN, ADVANTAGE_PAWN, color) {
+Pawn::Pawn(bool flag_move, FigureColor color)
+    : Figure(PAWN, ADVANTAGE_PAWN, color) {
   int color_mod = (color == WHITE) ? -1 : 1;
   std::list<Position> line;
   if (flag_move) {

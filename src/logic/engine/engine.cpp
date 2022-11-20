@@ -108,10 +108,13 @@ int enemyUnderAttack(std::vector<std::vector<Figure *>> board, Position pos) {
   for (auto line : board[pos.x][pos.y]->getPossibleAttacks()) {
     for (auto step : line) {
       Position current_pos = {pos.x + step.x, pos.y + step.y};
-      if (current_pos.x >= 0 && current_pos.x <= 7 && current_pos.y >= 0 && current_pos.y <= 7)
-        if (board[current_pos.x][current_pos.y] != nullptr){
-          if (board[current_pos.x][current_pos.y]->getColor() != board[pos.x][pos.y]->getColor()) {
-            figures_under_attack += board[current_pos.x][current_pos.y]->getPriceAdvantage() / 2;
+      if (current_pos.x >= 0 && current_pos.x <= 7 && current_pos.y >= 0 &&
+          current_pos.y <= 7)
+        if (board[current_pos.x][current_pos.y] != nullptr) {
+          if (board[current_pos.x][current_pos.y]->getColor() !=
+              board[pos.x][pos.y]->getColor()) {
+            figures_under_attack +=
+                board[current_pos.x][current_pos.y]->getPriceAdvantage() / 2;
           }
           break;
         }

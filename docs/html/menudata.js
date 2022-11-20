@@ -73,7 +73,9 @@ var menudata={children:[
 {text:"Файлы",url:"files.html"},
 {text:"Список членов всех файлов",url:"globals.html",children:[
 {text:"Указатель",url:"globals.html",children:[
+{text:"a",url:"globals.html#index_a"},
 {text:"b",url:"globals.html#index_b"},
+{text:"c",url:"globals.html#index_c"},
 {text:"d",url:"globals.html#index_d"},
 {text:"e",url:"globals.html#index_e"},
 {text:"f",url:"globals.html#index_f"},
@@ -91,6 +93,7 @@ var menudata={children:[
 {text:"Функции",url:"globals_func.html"},
 {text:"Перечисления",url:"globals_enum.html"},
 {text:"Элементы перечислений",url:"globals_eval.html",children:[
+{text:"a",url:"globals_eval.html#index_a"},
 {text:"b",url:"globals_eval.html#index_b"},
 {text:"d",url:"globals_eval.html#index_d"},
 {text:"e",url:"globals_eval.html#index_e"},
