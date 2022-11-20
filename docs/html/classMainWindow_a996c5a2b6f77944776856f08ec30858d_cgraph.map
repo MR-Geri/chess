@@ -1,22 +1,23 @@
 <map id="MainWindow::MainWindow" name="MainWindow::MainWindow">
-<area shape="rect" id="node1" title=" " alt="" coords="5,419,203,445"/>
-<area shape="rect" id="node2" href="$classMainWindow.html#a85e58f13e52e2a2d01b0bbf87c1442e9" title=" " alt="" coords="253,281,475,322"/>
-<area shape="rect" id="node15" href="$classMainWindow.html#a4195422fe1346c1aa9c640715dfe73cb" title=" " alt="" coords="259,419,469,445"/>
-<area shape="rect" id="node20" href="$classMainWindow.html#aaf47fc01862209102bc55bc5cca41ecb" title="Менеджер окон, переключает QStacedWidget на тот виджет, номер которого ему передали." alt="" coords="251,469,477,496"/>
-<area shape="rect" id="node3" href="$classEngine.html#a66f2b590d92c6e0fa99741f02a8a9a3f" title="Проверяет возможность хода и перемещает фигуру." alt="" coords="585,241,696,268"/>
-<area shape="rect" id="node4" href="$classEngine.html#a2b384a18565b9cdd85b52fed6d25ff0c" title="Расчет преимущества игрока." alt="" coords="804,23,1007,65"/>
-<area shape="rect" id="node8" href="$engine_8cpp.html#a0aedf9d17abf2bab41a04d5beb4f4988" title=" " alt="" coords="825,89,986,116"/>
-<area shape="rect" id="node9" href="$classFigure.html#af27c0f2d5fe69cb9eb17380d3ba91d6a" title="Получение цвета фигуры." alt="" coords="843,140,968,167"/>
-<area shape="rect" id="node10" href="$classBoard.html#a0bac43a8a2fc2aabc7e687eeedbe9f9e" title="Возвращает фигуру, которая находится в ячейке поля с координатами coords." alt="" coords="841,191,970,217"/>
-<area shape="rect" id="node11" href="$classFigure.html#a12d36f015da3026f980f87a93210885a" title="Получение возможных ходов атаки." alt="" coords="808,241,1003,268"/>
-<area shape="rect" id="node12" href="$classFigure.html#ac527b099db89b98b705eb74bed96c147" title="Получение возможных ходов перемещения." alt="" coords="811,292,999,319"/>
-<area shape="rect" id="node13" href="$classFigure.html#aad86c6d796ac96d30f2a310c107fdbac" title="Получение элементарных ходов." alt="" coords="822,343,989,369"/>
-<area shape="rect" id="node14" href="$classBoard.html#a4ed8cf3fae283d3c88eb6b0dea9e9f0a" title="Перемещает фигуру в board." alt="" coords="853,393,958,420"/>
-<area shape="rect" id="node5" href="$engine_8cpp.html#a8bc4d4b36aae439f5e6e3ce34903c487" title=" " alt="" coords="1055,5,1203,32"/>
-<area shape="rect" id="node6" href="$classEngine.html#af2c8028ccaf85425744ad55844765fac" title=" " alt="" coords="1065,56,1192,83"/>
-<area shape="rect" id="node7" href="$classBoard.html#ab906dade3854d38f6354861a715fccac" title=" " alt="" coords="1251,56,1409,83"/>
-<area shape="rect" id="node16" href="$classEngine.html#a7e19f1f9eb9e6ec51f646bb0a94dd1d6" title="clearBoard" alt="" coords="569,419,713,445"/>
-<area shape="rect" id="node18" href="$classEngine.html#a9027b51e4922e147b8ae3b50348c69af" title="Базовая расстановка фигур на поле." alt="" coords="525,469,756,496"/>
-<area shape="rect" id="node17" href="$classBoard.html#af74f0d4b43e5aa3faea16d7c6407b05e" title="clear Очищает доску." alt="" coords="855,444,955,471"/>
-<area shape="rect" id="node19" href="$classBoard.html#a183ac960c959ed0df9b49314d0479703" title="Устанавливает фигуру на доску." alt="" coords="832,495,979,521"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,444,203,471"/>
+<area shape="rect" id="node2" href="$classMainWindow.html#a85e58f13e52e2a2d01b0bbf87c1442e9" title=" " alt="" coords="253,306,475,347"/>
+<area shape="rect" id="node16" href="$classMainWindow.html#a4195422fe1346c1aa9c640715dfe73cb" title=" " alt="" coords="259,444,469,471"/>
+<area shape="rect" id="node21" href="$classMainWindow.html#aaf47fc01862209102bc55bc5cca41ecb" title="Менеджер окон, переключает QStacedWidget на тот виджет, номер которого ему передали." alt="" coords="251,495,477,521"/>
+<area shape="rect" id="node3" href="$classEngine.html#a66f2b590d92c6e0fa99741f02a8a9a3f" title="Проверяет возможность хода и перемещает фигуру." alt="" coords="585,267,696,293"/>
+<area shape="rect" id="node4" href="$classEngine.html#a2b384a18565b9cdd85b52fed6d25ff0c" title="Расчет преимущества игрока." alt="" coords="804,49,1007,90"/>
+<area shape="rect" id="node9" href="$engine_8cpp.html#a0aedf9d17abf2bab41a04d5beb4f4988" title=" " alt="" coords="825,115,986,141"/>
+<area shape="rect" id="node10" href="$classFigure.html#af27c0f2d5fe69cb9eb17380d3ba91d6a" title="Получение цвета фигуры." alt="" coords="843,165,968,192"/>
+<area shape="rect" id="node11" href="$classBoard.html#a0bac43a8a2fc2aabc7e687eeedbe9f9e" title="Возвращает фигуру, которая находится в ячейке поля с координатами coords." alt="" coords="841,216,970,243"/>
+<area shape="rect" id="node12" href="$classFigure.html#a12d36f015da3026f980f87a93210885a" title="Получение возможных ходов атаки." alt="" coords="808,267,1003,293"/>
+<area shape="rect" id="node13" href="$classFigure.html#ac527b099db89b98b705eb74bed96c147" title="Получение возможных ходов перемещения." alt="" coords="811,317,999,344"/>
+<area shape="rect" id="node14" href="$classFigure.html#aad86c6d796ac96d30f2a310c107fdbac" title="Получение элементарных ходов." alt="" coords="822,368,989,395"/>
+<area shape="rect" id="node15" href="$classBoard.html#a4ed8cf3fae283d3c88eb6b0dea9e9f0a" title="Перемещает фигуру в board." alt="" coords="853,419,958,445"/>
+<area shape="rect" id="node5" href="$engine_8cpp.html#a8bc4d4b36aae439f5e6e3ce34903c487" title=" " alt="" coords="1064,5,1212,32"/>
+<area shape="rect" id="node6" href="$classEngine.html#af2c8028ccaf85425744ad55844765fac" title=" " alt="" coords="1075,56,1201,83"/>
+<area shape="rect" id="node8" href="$engine_8cpp.html#a695770becb73d90aa349fd87533b435e" title=" " alt="" coords="1055,107,1221,133"/>
+<area shape="rect" id="node7" href="$classBoard.html#ab906dade3854d38f6354861a715fccac" title=" " alt="" coords="1269,56,1428,83"/>
+<area shape="rect" id="node17" href="$classEngine.html#a7e19f1f9eb9e6ec51f646bb0a94dd1d6" title="clearBoard" alt="" coords="569,444,713,471"/>
+<area shape="rect" id="node19" href="$classEngine.html#a9027b51e4922e147b8ae3b50348c69af" title="Базовая расстановка фигур на поле." alt="" coords="525,495,756,521"/>
+<area shape="rect" id="node18" href="$classBoard.html#af74f0d4b43e5aa3faea16d7c6407b05e" title="clear Очищает доску." alt="" coords="855,469,955,496"/>
+<area shape="rect" id="node20" href="$classBoard.html#a183ac960c959ed0df9b49314d0479703" title="Устанавливает фигуру на доску." alt="" coords="832,520,979,547"/>
 </map>
