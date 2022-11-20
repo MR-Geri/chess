@@ -16,13 +16,19 @@ public:
    * @param price вес фигуры.
    * @param color цвет фигуры (FigureColor).
    */
-  Figure(int price, FigureColor color = WHITE);
+  Figure(int price, int advantage_price, FigureColor color = WHITE);
 
   /**
    * @brief Получение веса фигуры.
    * @return вес фигуры.
    */
   int getPrice();
+
+  /**
+   * @brief Получение веса преимущества фигуры.
+   * @return вес фигуры.
+   */
+  int getPriceAdvantage();
 
   /**
    * @brief Получение элементарных ходов.
@@ -35,13 +41,13 @@ public:
    * @brief Получение возможных ходов перемещения.
    * @return список ходов.
    */
-  virtual std::set<Position> getPossibleMoves();
+  virtual std::list<std::list<Position>> getPossibleMoves();
 
   /**
    * @brief Получение возможных ходов атаки.
    * @return список ходов.
    */
-  virtual std::set<Position> getPossibleAttacks();
+  virtual std::list<std::list<Position>> getPossibleAttacks();
 
   /**
    * @brief Получение цвета фигуры.
@@ -53,7 +59,8 @@ public:
 
 protected:
   int b_price;
-  std::set<Position> possible_moves;
+  int b_advantage_price;
+  std::list<std::list<Position>> possible_moves;
   FigureColor b_color;
   Figures type_figure;
 };
@@ -147,5 +154,5 @@ public:
    * @brief Получение возможных ходов атаки. Перегуженный для пешки метод.
    * @return список ходов.
    */
-  std::set<Position> getPossibleAttacks() override;
+  std::list<std::list<Position>> getPossibleAttacks() override;
 };

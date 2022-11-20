@@ -24,7 +24,7 @@ public:
    * @brief Расчет преимущества игрока.
    * @return расчитанное значение.
    */
-  int calculateAdvantage();
+  double calculateAdvantageWhite();
 
   /**
    * @brief Базовая расстановка фигур на поле.
