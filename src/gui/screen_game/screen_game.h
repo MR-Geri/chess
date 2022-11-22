@@ -4,8 +4,11 @@
 #include <QGraphicsSvgItem>
 #include <QString>
 #include <QWidget>
+#include <QTimeLine>
+#include <QGraphicsItemAnimation>
 #include <src/constants.h>
 #include <src/gui/screen_game/gui_figure.h>
+#include <src/gui/screen_game/gui_advantage_bar.h>
 
 namespace Ui {
 class ScreenGame;
@@ -66,6 +69,9 @@ private:
   Ui::ScreenGame *ui;
   QGraphicsScene *scene;
   QGraphicsSvgItem *board;
+  GuiAdvantageBar *advantage_bar;
+  QList<QGraphicsSvgItem*> *figures;
+  QTimeLine *timer;
   QVector<QVector<Position>> positions;
   QVector<QVector<Figures>> data;
   int indent;

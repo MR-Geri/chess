@@ -12,8 +12,14 @@ ScreenGame::ScreenGame(QWidget *parent)
   ui->graphicsView->setMinimumHeight(500);
   ui->graphicsView->setMinimumWidth(500);
 
-  indent = 20;
+  indent = 15;
+
+  timer = new QTimeLine(3000);
+  figures = new QList<QGraphicsSvgItem*>;
   scene = new QGraphicsScene();
+
+  timer->setFrameRange(0, 100);
+
   ui->graphicsView->setScene(this->scene);
 
   data = QVector<QVector<Figures>>(8, QVector<Figures>(8, Figures::NONE));
@@ -38,7 +44,8 @@ void ScreenGame::drawGameField() {
   float width_graphicsView = ui->graphicsView->width() - 10;
   float height_graphicsView = ui->graphicsView->height() - 10;
 
-  scene->clear();
+  qDeleteAll(*figures);
+  figures = new QList<QGraphicsSvgItem*>;
   scene->setSceneRect(0, 0, std::min(width_graphicsView, height_graphicsView),
                       std::min(width_graphicsView, height_graphicsView));
 
@@ -46,10 +53,21 @@ void ScreenGame::drawGameField() {
   float width_board = board->boundingRect().size().width();
   float height_board = board->boundingRect().size().height();
   float scale_board =
-      (std::min(width_graphicsView, height_graphicsView) - 40) / width_board;
+      (std::min(width_graphicsView, height_graphicsView) - indent * 2) / width_board;
   board->setScale(scale_board);
   board->setPos(indent, indent);
   scene->addItem(board);
+
+  float advantage_white = 0.5; //TODO
+  advantage_bar = new GuiAdvantageBar(indent, height_board * scale_board);
+  QGraphicsItemAnimation *animation = new QGraphicsItemAnimation();
+  advantage_bar->setAdvantageWhite(advantage_white);
+  advantage_bar->setPos(indent + height_board * scale_board + 5, indent);
+  animation->setItem(advantage_bar);
+  animation->setTimeLine(timer);
+  for (int i = 0; i < 100; ++i)
+          animation->setScaleAt(0.01, 1, 0.5);
+  scene->addItem(advantage_bar);
 
   positions = QVector<QVector<Position>>(8, QVector<Position>(8));
   for (int i = 0; i < 8; i++) {
@@ -68,9 +86,12 @@ void ScreenGame::drawGameField() {
       connect(figure, SIGNAL(moved(Position, Position)), this,
               SLOT(figureMoved(Position, Position)));
       figure->setPos(positions[i][j].x, positions[i][j].y);
+      figures->append(figure);
       scene->addItem(figure);
     }
   }
+
+  timer->start();
 }
 
 void ScreenGame::resizeEvent(QResizeEvent *event) { this->drawGameField(); }
