@@ -1,21 +1,30 @@
 #include "figures.h"
 #include <iostream>
 
+Figure::Figure(int price, int advantage_price, FigureColor color)
+    : b_price(price), b_advantage_price(advantage_price), b_color(color) {}
+
 int Figure::getPrice() { return b_price; }
+
+int Figure::getPriceAdvantage() { return b_advantage_price; }
 
 FigureColor Figure::getColor() { return b_color; }
 
-std::set<Position> Figure::getPossibleMoves() { return possible_moves; }
+std::list<std::list<Position>> Figure::getPossibleMoves() {
+  return possible_moves;
+}
 
-std::set<Position> Figure::getPossibleAttacks() { return possible_moves; }
+std::list<std::list<Position>> Figure::getPossibleAttacks() {
+  return possible_moves;
+}
 
-Figure::Figure(int price, FigureColor color) : b_price(price), b_color(color) {}
-
-King::King(FigureColor color) : Figure(KING, color) {
+King::King(FigureColor color) : Figure(KING, 0, color) {
   for (int i = -1; i <= 1; i++) {
     for (int j = -1; j <= 1; j++) {
+      std::list<Position> line;
       if (i != 0 || j != 0)
-        possible_moves.insert({i, j});
+        line.push_back({i, j});
+      possible_moves.push_back(line);
     }
   }
   if (color == FigureColor::WHITE) {
@@ -25,12 +34,15 @@ King::King(FigureColor color) : Figure(KING, color) {
   }
 }
 
-Queen::Queen(FigureColor color) : Figure(QUEEN, color) {
+Queen::Queen(FigureColor color) : Figure(QUEEN, ADVANTAGE_QUEEN, color) {
   for (int i = -1; i <= 1; i++) {
     for (int j = -1; j <= 1; j++) {
-      if (i != 0 || j != 0)
+      if (i != 0 || j != 0) {
+        std::list<Position> line;
         for (int k = 1; k <= 7; k++)
-          possible_moves.insert({i * k, j * k});
+          line.push_back({i * k, j * k});
+        possible_moves.push_back(line);
+      }
     }
   }
   if (color == FigureColor::WHITE) {
@@ -40,13 +52,18 @@ Queen::Queen(FigureColor color) : Figure(QUEEN, color) {
   }
 }
 
-Bishop::Bishop(FigureColor color) : Figure(BISHOP, color) {
+Bishop::Bishop(FigureColor color) : Figure(BISHOP, ADVANTAGE_BISHOP, color) {
+  std::list<Position> line1, line2, line3, line4;
   for (int i = 1; i <= 7; i++) {
-    possible_moves.insert({i, i});
-    possible_moves.insert({-i, i});
-    possible_moves.insert({i, -i});
-    possible_moves.insert({-i, -i});
+    line1.push_back({i, i});
+    line2.push_back({-i, i});
+    line3.push_back({i, -i});
+    line4.push_back({-i, -i});
   }
+  possible_moves.push_back(line1);
+  possible_moves.push_back(line2);
+  possible_moves.push_back(line3);
+  possible_moves.push_back(line4);
   if (color == FigureColor::WHITE) {
     type_figure = Figures::W_BISHOP;
   } else {
@@ -54,13 +71,18 @@ Bishop::Bishop(FigureColor color) : Figure(BISHOP, color) {
   }
 }
 
-Rook::Rook(FigureColor color) : Figure(ROOK, color) {
+Rook::Rook(FigureColor color) : Figure(ROOK, ADVANTAGE_ROOK, color) {
+  std::list<Position> line1, line2, line3, line4;
   for (int i = 1; i <= 7; i++) {
-    possible_moves.insert({0, i});
-    possible_moves.insert({i, 0});
-    possible_moves.insert({0, -i});
-    possible_moves.insert({-i, 0});
+    line1.push_back({0, i});
+    line2.push_back({i, 0});
+    line3.push_back({0, -i});
+    line4.push_back({-i, 0});
   }
+  possible_moves.push_back(line1);
+  possible_moves.push_back(line2);
+  possible_moves.push_back(line3);
+  possible_moves.push_back(line4);
   if (color == FigureColor::WHITE) {
     type_figure = Figures::W_ROOK;
   } else {
@@ -68,25 +90,28 @@ Rook::Rook(FigureColor color) : Figure(ROOK, color) {
   }
 }
 
-Knight::Knight(FigureColor color) : Figure(KINGHT, color) {
-  possible_moves.insert({1, 2});
-  possible_moves.insert({1, -2});
-  possible_moves.insert({-1, 2});
-  possible_moves.insert({-1, -2});
-  possible_moves.insert({2, 1});
-  possible_moves.insert({2, -1});
-  possible_moves.insert({-2, 1});
-  possible_moves.insert({-2, -1});
+Knight::Knight(FigureColor color) : Figure(KNIGHT, ADVANTAGE_KNIGHT, color) {
+  for (int i = -2; i <= 2; i++) {
+    for (int j = -2; j <= 2; j++) {
+      if (abs(i) + abs(j) == 3) {
+        std::list<Position> line;
+        line.push_back({i, j});
+        possible_moves.push_back(line);
+      }
+    }
+  }
   if (color == FigureColor::WHITE) {
-    type_figure = Figures::W_KINGHT;
+    type_figure = Figures::W_KNIGHT;
   } else {
-    type_figure = Figures::B_KINGHT;
+    type_figure = Figures::B_KNIGHT;
   }
 }
 
-Pawn::Pawn(FigureColor color) : Figure(PAWN, color) {
+Pawn::Pawn(FigureColor color) : Figure(PAWN, ADVANTAGE_PAWN, color) {
   int color_mod = (color == WHITE) ? -1 : 1;
-  possible_moves.insert({0, 1 * color_mod});
+  std::list<Position> line;
+  line.push_back({0, 1 * color_mod});
+  possible_moves.push_back(line);
   if (color == FigureColor::WHITE) {
     type_figure = Figures::W_PAWN;
   } else {
@@ -94,14 +119,17 @@ Pawn::Pawn(FigureColor color) : Figure(PAWN, color) {
   }
 }
 
-Pawn::Pawn(bool flag_move, FigureColor color) : Figure(PAWN, color) {
+Pawn::Pawn(bool flag_move, FigureColor color)
+    : Figure(PAWN, ADVANTAGE_PAWN, color) {
   int color_mod = (color == WHITE) ? -1 : 1;
+  std::list<Position> line;
   if (flag_move) {
-    possible_moves.insert({0, 1 * color_mod});
+    line.push_back({0, 1 * color_mod});
   } else {
-    possible_moves.insert({0, 1 * color_mod});
-    possible_moves.insert({0, 2 * color_mod});
+    line.push_back({0, 1 * color_mod});
+    line.push_back({0, 2 * color_mod});
   }
+  possible_moves.push_back(line);
   if (color == FigureColor::WHITE) {
     type_figure = Figures::W_PAWN;
   } else {
@@ -109,11 +137,14 @@ Pawn::Pawn(bool flag_move, FigureColor color) : Figure(PAWN, color) {
   }
 }
 
-std::set<Position> Pawn::getPossibleAttacks() {
+std::list<std::list<Position>> Pawn::getPossibleAttacks() {
+  std::list<Position> line1, line2;
+  std::list<std::list<Position>> out;
   int color_mod = (b_color == WHITE) ? -1 : 1;
-  std::set<Position> out;
-  out.insert({1, 1 * color_mod});
-  out.insert({-1, 1 * color_mod});
+  line1.push_back({1, 1 * color_mod});
+  line2.push_back({-1, 1 * color_mod});
+  out.push_back(line1);
+  out.push_back(line2);
   return out;
 }
 

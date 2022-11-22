@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['windows_237',['Windows',['../constants_8h.html#af1edd7b7fcdf15ab1bff70cf1daf8ae5',1,'constants.h']]]
+  ['statusmove_255',['StatusMove',['../constants_8h.html#a8b9a4049772aeb1c0e054b0571babc95',1,'constants.h']]]
 ];

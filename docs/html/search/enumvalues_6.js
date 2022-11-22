@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['king_252',['KING',['../constants_8h.html#a3da527ca0edbe6a57ea4f61d1e5af434a157524408d6f0fc4b7dc5e52f3dd3b80',1,'constants.h']]],
-  ['kinght_253',['KINGHT',['../constants_8h.html#a3da527ca0edbe6a57ea4f61d1e5af434ae6eca7709e5f68a4b00be2b57e9b93e0',1,'constants.h']]]
+  ['impossible_5fmove_275',['IMPOSSIBLE_MOVE',['../constants_8h.html#a8b9a4049772aeb1c0e054b0571babc95a2ff03637351b08d6d3032ff73f842f5f',1,'constants.h']]]
 ];

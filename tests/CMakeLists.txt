@@ -15,7 +15,10 @@ set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 add_executable(tests
-    tst_figure.cpp
+    tst_board.cpp
+    tst_figures.cpp
+    tst_engine.cpp
+    tst_all.cpp
     ../src/logic/figures/figures.h
     ../src/logic/figures/figures.cpp
     ../src/logic/engine/engine.h
@@ -24,7 +27,7 @@ add_executable(tests
     ../src/logic/board/board.cpp
 )
 
-target_link_libraries(tests 
+target_link_libraries(tests
         Qt${QT_VERSION_MAJOR}::Widgets
         Qt${QT_VERSION_MAJOR}::Test
 )
