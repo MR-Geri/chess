@@ -6,13 +6,15 @@
 
 class GuiAdvantageBar : public QGraphicsItem {
 public:
-  GuiAdvantageBar(int x_size = 0, int y_size = 0, QColor new_color = Qt::white, QGraphicsItem *parent = nullptr);
+  GuiAdvantageBar(int x_size = 0, int y_size = 0, QColor new_color = Qt::white,
+                  QGraphicsItem *parent = nullptr);
   ~GuiAdvantageBar();
 
   void setAdvantageWhite(float new_advantage_white);
 
 protected:
-  void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget = nullptr) override;
+  void paint(QPainter *painter, const QStyleOptionGraphicsItem *option,
+             QWidget *widget = nullptr) override;
   QRectF boundingRect() const override;
 
 private:
@@ -22,4 +24,3 @@ private:
   int x_size;
   int y_size;
 };
-

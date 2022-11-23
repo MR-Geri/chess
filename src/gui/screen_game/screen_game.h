@@ -1,14 +1,14 @@
 #pragma once
 
+#include <QGraphicsItemAnimation>
 #include <QGraphicsScene>
 #include <QGraphicsSvgItem>
 #include <QString>
-#include <QWidget>
 #include <QTimeLine>
-#include <QGraphicsItemAnimation>
+#include <QWidget>
 #include <src/constants.h>
-#include <src/gui/screen_game/gui_figure.h>
 #include <src/gui/screen_game/gui_advantage_bar.h>
+#include <src/gui/screen_game/gui_figure.h>
 
 namespace Ui {
 class ScreenGame;
@@ -46,7 +46,8 @@ public slots:
   /**
    * @brief Получает данные для отрисовки из логики.
    */
-  void catchData(QVector<QVector<Figures>> catched_data, double new_advantage_white);
+  void catchData(QVector<QVector<Figures>> catched_data,
+                 double new_advantage_white);
 
 private slots:
   /**

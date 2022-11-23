@@ -55,19 +55,23 @@ void ScreenGame::drawGameField() {
   float width_board = board->boundingRect().size().width();
   float height_board = board->boundingRect().size().height();
   float scale_board =
-      (std::min(width_graphicsView, height_graphicsView) - indent * 2) / width_board;
+      (std::min(width_graphicsView, height_graphicsView) - indent * 2) /
+      width_board;
   board->setScale(scale_board);
   board->setPos(indent, indent);
   scene->addItem(board);
 
-  advantage_bar_black = new GuiAdvantageBar(indent, height_board * scale_board, Qt::black);
-  advantage_bar_white = new GuiAdvantageBar(indent, height_board * scale_board, Qt::white);
+  advantage_bar_black =
+      new GuiAdvantageBar(indent, height_board * scale_board, Qt::black);
+  advantage_bar_white =
+      new GuiAdvantageBar(indent, height_board * scale_board, Qt::white);
   advantage_bar_black->setAdvantageWhite(1 - first_advantage_white);
   advantage_bar_black->setPos(indent + height_board * scale_board + 5, indent);
   advantage_bar_white->setPos(indent + height_board * scale_board + 5, indent);
   animation_black->setItem(advantage_bar_black);
   for (int i = 0; i < 5; ++i)
-          animation_black->setScaleAt(0.1, 1, (1 - second_advantage_white) / (1 - first_advantage_white));
+    animation_black->setScaleAt(
+        0.1, 1, (1 - second_advantage_white) / (1 - first_advantage_white));
   scene->addItem(advantage_bar_white);
   scene->addItem(advantage_bar_black);
 
@@ -97,7 +101,8 @@ void ScreenGame::drawGameField() {
 
 void ScreenGame::resizeEvent(QResizeEvent *event) { this->drawGameField(); }
 
-void ScreenGame::catchData(QVector<QVector<Figures>> catched_data, double new_advantage_white) {
+void ScreenGame::catchData(QVector<QVector<Figures>> catched_data,
+                           double new_advantage_white) {
   this->data = catched_data;
   this->first_advantage_white = second_advantage_white;
   this->second_advantage_white = new_advantage_white;
