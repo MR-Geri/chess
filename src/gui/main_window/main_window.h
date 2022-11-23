@@ -52,7 +52,7 @@ public slots:
   void startNewGame();
 
 signals:
-  void sendDataToGui(QVector<QVector<Figures>> data);
+  void sendDataToGui(QVector<QVector<Figures>> data, double advantage_white);
 
 private:
   Ui::MainWindow *ui;

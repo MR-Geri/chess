@@ -13,10 +13,13 @@ ScreenGame::ScreenGame(QWidget *parent)
   ui->graphicsView->setMinimumWidth(500);
 
   indent = 15;
+  first_advantage_white = 0.5;
+  second_advantage_white = 0.5;
 
-  timer = new QTimeLine(3000);
-  figures = new QList<QGraphicsSvgItem*>;
+  timer = new QTimeLine(500);
   scene = new QGraphicsScene();
+  animation_black = new QGraphicsItemAnimation();
+  animation_black->setTimeLine(timer);
 
   timer->setFrameRange(0, 100);
 
@@ -44,8 +47,7 @@ void ScreenGame::drawGameField() {
   float width_graphicsView = ui->graphicsView->width() - 10;
   float height_graphicsView = ui->graphicsView->height() - 10;
 
-  qDeleteAll(*figures);
-  figures = new QList<QGraphicsSvgItem*>;
+  scene->clear();
   scene->setSceneRect(0, 0, std::min(width_graphicsView, height_graphicsView),
                       std::min(width_graphicsView, height_graphicsView));
 
@@ -58,16 +60,16 @@ void ScreenGame::drawGameField() {
   board->setPos(indent, indent);
   scene->addItem(board);
 
-  float advantage_white = 0.5; //TODO
-  advantage_bar = new GuiAdvantageBar(indent, height_board * scale_board);
-  QGraphicsItemAnimation *animation = new QGraphicsItemAnimation();
-  advantage_bar->setAdvantageWhite(advantage_white);
-  advantage_bar->setPos(indent + height_board * scale_board + 5, indent);
-  animation->setItem(advantage_bar);
-  animation->setTimeLine(timer);
-  for (int i = 0; i < 100; ++i)
-          animation->setScaleAt(0.01, 1, 0.5);
-  scene->addItem(advantage_bar);
+  advantage_bar_black = new GuiAdvantageBar(indent, height_board * scale_board, Qt::black);
+  advantage_bar_white = new GuiAdvantageBar(indent, height_board * scale_board, Qt::white);
+  advantage_bar_black->setAdvantageWhite(1 - first_advantage_white);
+  advantage_bar_black->setPos(indent + height_board * scale_board + 5, indent);
+  advantage_bar_white->setPos(indent + height_board * scale_board + 5, indent);
+  animation_black->setItem(advantage_bar_black);
+  for (int i = 0; i < 5; ++i)
+          animation_black->setScaleAt(0.1, 1, (1 - second_advantage_white) / (1 - first_advantage_white));
+  scene->addItem(advantage_bar_white);
+  scene->addItem(advantage_bar_black);
 
   positions = QVector<QVector<Position>>(8, QVector<Position>(8));
   for (int i = 0; i < 8; i++) {
@@ -86,7 +88,6 @@ void ScreenGame::drawGameField() {
       connect(figure, SIGNAL(moved(Position, Position)), this,
               SLOT(figureMoved(Position, Position)));
       figure->setPos(positions[i][j].x, positions[i][j].y);
-      figures->append(figure);
       scene->addItem(figure);
     }
   }
@@ -96,8 +97,10 @@ void ScreenGame::drawGameField() {
 
 void ScreenGame::resizeEvent(QResizeEvent *event) { this->drawGameField(); }
 
-void ScreenGame::catchData(QVector<QVector<Figures>> catched_data) {
+void ScreenGame::catchData(QVector<QVector<Figures>> catched_data, double new_advantage_white) {
   this->data = catched_data;
+  this->first_advantage_white = second_advantage_white;
+  this->second_advantage_white = new_advantage_white;
   this->drawGameField();
 }
 

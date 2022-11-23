@@ -6,7 +6,7 @@
 
 class GuiAdvantageBar : public QGraphicsItem {
 public:
-  GuiAdvantageBar(int x_size = 0, int y_size = 0, QGraphicsItem *parent = nullptr);
+  GuiAdvantageBar(int x_size = 0, int y_size = 0, QColor new_color = Qt::white, QGraphicsItem *parent = nullptr);
   ~GuiAdvantageBar();
 
   void setAdvantageWhite(float new_advantage_white);
@@ -19,5 +19,7 @@ private:
   float advantage_white;
   QColor color;
   QRectF bar_rect;
+  int x_size;
+  int y_size;
 };
 

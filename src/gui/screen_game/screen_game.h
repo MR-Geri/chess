@@ -46,7 +46,7 @@ public slots:
   /**
    * @brief Получает данные для отрисовки из логики.
    */
-  void catchData(QVector<QVector<Figures>> catched_data);
+  void catchData(QVector<QVector<Figures>> catched_data, double new_advantage_white);
 
 private slots:
   /**
@@ -69,10 +69,14 @@ private:
   Ui::ScreenGame *ui;
   QGraphicsScene *scene;
   QGraphicsSvgItem *board;
-  GuiAdvantageBar *advantage_bar;
-  QList<QGraphicsSvgItem*> *figures;
+  GuiAdvantageBar *advantage_bar_black;
+  GuiAdvantageBar *advantage_bar_white;
   QTimeLine *timer;
+  QGraphicsItemAnimation *animation_black;
+  QGraphicsItemAnimation *animation_white;
   QVector<QVector<Position>> positions;
   QVector<QVector<Figures>> data;
   int indent;
+  double first_advantage_white;
+  double second_advantage_white;
 };
