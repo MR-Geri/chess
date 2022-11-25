@@ -20,4 +20,3 @@ private slots:
   void test_quantityPossibleMove();
   void test_calculateAdvantageWhite();
 };
-
