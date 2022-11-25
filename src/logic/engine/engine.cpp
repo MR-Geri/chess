@@ -62,7 +62,8 @@ StatusMove Engine::move(Position from_pos, Position step) {
   // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   game_board->move(from_pos, to_pos);
-  std::cout << this->calculateAdvantageWhite() << "\n";
+  this->calculateAdvantageWhite();
+  // std::cout << this->calculateAdvantageWhite() << "\n";
   return DONE;
 }
 
@@ -120,6 +121,7 @@ int enemyUnderAttack(std::vector<std::vector<Figure *>> board, Position pos) {
         }
     }
   }
+  // std::cout << "figures_under_attack: " << figures_under_attack << std::endl;
   return figures_under_attack;
 }
 
@@ -139,7 +141,7 @@ int quantityPossibleMove(std::vector<std::vector<Figure *>> board,
       }
     }
   }
-  return moves * 20;
+  return moves;
 }
 
 double Engine::calculateAdvantageWhite() {
@@ -154,11 +156,11 @@ double Engine::calculateAdvantageWhite() {
         if (color == WHITE) {
           white += board[i][j]->getPriceAdvantage();
           white += enemyUnderAttack(board, {i, j});
-          white += quantityPossibleMove(board, {i, j});
+          white += quantityPossibleMove(board, {i, j}) * 20;
         } else {
           black += board[i][j]->getPriceAdvantage();
           black += enemyUnderAttack(board, {i, j});
-          black += quantityPossibleMove(board, {i, j});
+          black += quantityPossibleMove(board, {i, j}) * 20;
         }
       }
     }

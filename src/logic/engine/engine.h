@@ -49,3 +49,8 @@ public:
 private:
   Board *game_board;
 };
+
+int enemyUnderAttack(std::vector<std::vector<Figure *>> board, Position pos);
+
+int quantityPossibleMove(std::vector<std::vector<Figure *>> board,
+                         Position pos);

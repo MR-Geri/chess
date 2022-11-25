@@ -16,4 +16,8 @@ public:
 
 private slots:
   void test_setStartingArrangement();
+  void test_enemyUnderAttack();
+  void test_quantityPossibleMove();
+  void test_calculateAdvantageWhite();
 };
+
