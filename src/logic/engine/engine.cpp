@@ -63,7 +63,7 @@ StatusMove Engine::move(Position from_pos, Position step) {
 
   game_board->move(from_pos, to_pos);
   this->calculateAdvantageWhite();
-  // std::cout << this->calculateAdvantageWhite() << "\n";
+  std::cout << this->calculateAdvantageWhite() << "\n";
   return DONE;
 }
 

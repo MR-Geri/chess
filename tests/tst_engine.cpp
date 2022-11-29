@@ -76,6 +76,30 @@ void TestsEngine::test_calculateAdvantageWhite() {
   Engine engine = Engine();
   engine.setStartingArrangement();
   QCOMPARE(engine.calculateAdvantageWhite(), 0.5);
+  engine.move({1, 7}, {1, -2});
+  QCOMPARE(engine.calculateAdvantageWhite(), 0.502186748305);
+  engine.move({1, 0}, {1, 2});
+  QCOMPARE(engine.calculateAdvantageWhite(), 0.5);
+  engine.move({2, 2}, {1, 2});
+  QCOMPARE(engine.calculateAdvantageWhite(), 0.490349560369);
+  engine.move({1, 1}, {0, 2});
+  QCOMPARE(engine.calculateAdvantageWhite(), 0.491983753741);
+  engine.move({5, 1}, {0, 2});
+  QCOMPARE(engine.calculateAdvantageWhite(), 0.493037703513);
+  engine.move({1, 1}, {0, 2});
+  QCOMPARE(engine.calculateAdvantageWhite(), 0.493037703513);
+  engine.move({0, 6}, {0, -2});
+  QCOMPARE(engine.calculateAdvantageWhite(), 0.49418358714);
+  engine.move({2, 6}, {0, -2});
+  QCOMPARE(engine.calculateAdvantageWhite(), 0.49418358714);
+  engine.move({5, 6}, {0, -2});
+  QCOMPARE(engine.calculateAdvantageWhite(), 0.494158878505);
+  engine.move({3, 4}, {-1, 2});
+  QCOMPARE(engine.calculateAdvantageWhite(), 0.48786407767);
+  engine.move({2, 6}, {1, 1});
+  QCOMPARE(engine.calculateAdvantageWhite(), 0.454284401562);
+  engine.move({3, 7}, {1, -1});
+  QCOMPARE(engine.calculateAdvantageWhite(), 0.445438861333);
 }
 
 #include "tst_engine.moc"
