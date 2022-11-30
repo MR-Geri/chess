@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['guiadvantagebar_150',['GuiAdvantageBar',['../classGuiAdvantageBar.html',1,'']]],
-  ['guifigure_151',['GuiFigure',['../classGuiFigure.html',1,'']]]
+  ['guiadvantagebar_149',['GuiAdvantageBar',['../classGuiAdvantageBar.html',1,'']]],
+  ['guifigure_150',['GuiFigure',['../classGuiFigure.html',1,'']]]
 ];
