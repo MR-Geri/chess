@@ -46,9 +46,9 @@ if (edges && edges.length) {
         </defs>
 
 <script type="text/javascript">
-var viewWidth = 595;
+var viewWidth = 634;
 var viewHeight = 338;
-var sectionId = 'dynsection-8';
+var sectionId = 'dynsection-9';
 </script>
 <script xlink:href="svgpan.js"/>
 <svg id="graph" class="graph">
@@ -187,62 +187,62 @@ var sectionId = 'dynsection-8';
 <!-- Node3 -->
 <g id="node3" class="node">
 <title>Node3</title>
-<g id="a_node3"><a xlink:href="engine_8cpp.html#a8bc4d4b36aae439f5e6e3ce34903c487" target="_top" xlink:title=" ">
-<polygon fill="none" stroke="black" points="314,-310.5 314,-329.5 425,-329.5 425,-310.5 314,-310.5"/>
-<text text-anchor="middle" x="369.5" y="-317.5" font-family="Helvetica,sans-Serif" font-size="10.00">enemyUnderAttack</text>
+<g id="a_node3"><a xlink:href="classEngine.html#a93442cf58f7239df6e2b5303b7b90cda" target="_top" xlink:title=" ">
+<polygon fill="none" stroke="black" points="314,-310.5 314,-329.5 464,-329.5 464,-310.5 314,-310.5"/>
+<text text-anchor="middle" x="389" y="-317.5" font-family="Helvetica,sans-Serif" font-size="10.00">Engine::enemyUnderAttack</text>
 </a>
 </g>
 </g>
 <!-- Node2&#45;&gt;Node3 -->
 <g id="edge2" class="edge">
 <title>Node2&#45;&gt;Node3</title>
-<path fill="none" stroke="midnightblue" d="M264.18,-297.02C281.26,-300.78 299.32,-304.76 315.54,-308.33"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="314.85,-311.77 325.37,-310.5 316.36,-304.93 314.85,-311.77"/>
+<path fill="none" stroke="midnightblue" d="M271.06,-296.86C290.58,-300.72 311.32,-304.82 329.82,-308.49"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="329.36,-311.96 339.85,-310.47 330.72,-305.1 329.36,-311.96"/>
 </g>
 <!-- Node4 -->
 <g id="node4" class="node">
 <title>Node4</title>
-<g id="a_node4"><a xlink:href="classEngine.html#af2c8028ccaf85425744ad55844765fac" target="_top" xlink:title=" ">
-<polygon fill="none" stroke="black" points="322,-272.5 322,-291.5 417,-291.5 417,-272.5 322,-272.5"/>
-<text text-anchor="middle" x="369.5" y="-279.5" font-family="Helvetica,sans-Serif" font-size="10.00">Engine::getData</text>
+<g id="a_node4"><a xlink:href="classEngine.html#af2c8028ccaf85425744ad55844765fac" target="_top" xlink:title="getData возвращает поле.">
+<polygon fill="none" stroke="black" points="341.5,-272.5 341.5,-291.5 436.5,-291.5 436.5,-272.5 341.5,-272.5"/>
+<text text-anchor="middle" x="389" y="-279.5" font-family="Helvetica,sans-Serif" font-size="10.00">Engine::getData</text>
 </a>
 </g>
 </g>
 <!-- Node2&#45;&gt;Node4 -->
 <g id="edge3" class="edge">
 <title>Node2&#45;&gt;Node4</title>
-<path fill="none" stroke="midnightblue" d="M271.16,-282C284.77,-282 298.76,-282 311.73,-282"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="311.89,-285.5 321.89,-282 311.89,-278.5 311.89,-285.5"/>
+<path fill="none" stroke="midnightblue" d="M271.06,-282C291.02,-282 312.26,-282 331.08,-282"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="331.27,-285.5 341.27,-282 331.27,-278.5 331.27,-285.5"/>
 </g>
 <!-- Node6 -->
 <g id="node6" class="node">
 <title>Node6</title>
-<g id="a_node6"><a xlink:href="engine_8cpp.html#a695770becb73d90aa349fd87533b435e" target="_top" xlink:title=" ">
-<polygon fill="none" stroke="black" points="307,-234.5 307,-253.5 432,-253.5 432,-234.5 307,-234.5"/>
-<text text-anchor="middle" x="369.5" y="-241.5" font-family="Helvetica,sans-Serif" font-size="10.00">quantityPossibleMove</text>
+<g id="a_node6"><a xlink:href="classEngine.html#a9154a3995005939adcc56d46d8bd78b0" target="_top" xlink:title=" ">
+<polygon fill="none" stroke="black" points="307,-234.5 307,-253.5 471,-253.5 471,-234.5 307,-234.5"/>
+<text text-anchor="middle" x="389" y="-241.5" font-family="Helvetica,sans-Serif" font-size="10.00">Engine::quantityPossibleMove</text>
 </a>
 </g>
 </g>
 <!-- Node2&#45;&gt;Node6 -->
 <g id="edge5" class="edge">
 <title>Node2&#45;&gt;Node6</title>
-<path fill="none" stroke="midnightblue" d="M264.18,-266.98C281.26,-263.22 299.32,-259.24 315.54,-255.67"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="316.36,-259.07 325.37,-253.5 314.85,-252.23 316.36,-259.07"/>
+<path fill="none" stroke="midnightblue" d="M271.06,-267.14C290.58,-263.28 311.32,-259.18 329.82,-255.51"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="330.72,-258.9 339.85,-253.53 329.36,-252.04 330.72,-258.9"/>
 </g>
 <!-- Node5 -->
 <g id="node5" class="node">
 <title>Node5</title>
-<g id="a_node5"><a xlink:href="classBoard.html#ab906dade3854d38f6354861a715fccac" target="_top" xlink:title=" ">
-<polygon fill="none" stroke="black" points="468,-272.5 468,-291.5 587,-291.5 587,-272.5 468,-272.5"/>
-<text text-anchor="middle" x="527.5" y="-279.5" font-family="Helvetica,sans-Serif" font-size="10.00">Board::getBoardData</text>
+<g id="a_node5"><a xlink:href="classBoard.html#ab906dade3854d38f6354861a715fccac" target="_top" xlink:title="getBoo Возвращает доску.">
+<polygon fill="none" stroke="black" points="507,-272.5 507,-291.5 626,-291.5 626,-272.5 507,-272.5"/>
+<text text-anchor="middle" x="566.5" y="-279.5" font-family="Helvetica,sans-Serif" font-size="10.00">Board::getBoardData</text>
 </a>
 </g>
 </g>
 <!-- Node4&#45;&gt;Node5 -->
 <g id="edge4" class="edge">
 <title>Node4&#45;&gt;Node5</title>
-<path fill="none" stroke="midnightblue" d="M417.31,-282C429.96,-282 443.93,-282 457.53,-282"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="457.83,-285.5 467.83,-282 457.83,-278.5 457.83,-285.5"/>
+<path fill="none" stroke="midnightblue" d="M436.57,-282C454.99,-282 476.53,-282 496.68,-282"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="496.75,-285.5 506.75,-282 496.75,-278.5 496.75,-285.5"/>
 </g>
 </g>
 </svg>

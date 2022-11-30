@@ -4,9 +4,7 @@ TestsEngine::TestsEngine() {}
 
 TestsEngine::~TestsEngine() {}
 
-void TestsEngine::test_move(){
-
-}
+void TestsEngine::test_move() {}
 
 void TestsEngine::test_setStartingArrangement() {
   Engine engine = Engine();
@@ -106,16 +104,10 @@ void TestsEngine::test_calculateAdvantageWhite() {
   QCOMPARE(engine.calculateAdvantageWhite(), 0.445438861333);
 }
 
-void TestsEngine::test_setFigureOnBoard(){
+void TestsEngine::test_setFigureOnBoard() {}
 
-}
+void TestsEngine::test_clearBoard() {}
 
-void TestsEngine::test_clearBoard(){
-
-}
-
-void TestsEngine::test_getData(){
-
-}
+void TestsEngine::test_getData() {}
 
 #include "tst_engine.moc"

@@ -1,4 +1,4 @@
 <map id="Engine::clearBoard" name="Engine::clearBoard">
-<area shape="rect" id="node1" title="clearBoard" alt="" coords="5,5,137,32"/>
-<area shape="rect" id="node2" href="$classBoard.html#af74f0d4b43e5aa3faea16d7c6407b05e" title="clear Очищает доску." alt="" coords="185,5,277,32"/>
+<area shape="rect" id="node1" title="clearBoard очищает поле." alt="" coords="5,5,149,32"/>
+<area shape="rect" id="node2" href="$classBoard.html#af74f0d4b43e5aa3faea16d7c6407b05e" title="clear Очищает доску." alt="" coords="197,5,297,32"/>
 </map>

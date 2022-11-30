@@ -1,6 +1,6 @@
 <map id="Board::clear" name="Board::clear">
 <area shape="rect" id="node1" title="clear Очищает доску." alt="" coords="788,31,888,57"/>
-<area shape="rect" id="node2" href="$classEngine.html#a7e19f1f9eb9e6ec51f646bb0a94dd1d6" title="clearBoard" alt="" coords="553,5,697,32"/>
+<area shape="rect" id="node2" href="$classEngine.html#a7e19f1f9eb9e6ec51f646bb0a94dd1d6" title="clearBoard очищает поле." alt="" coords="553,5,697,32"/>
 <area shape="rect" id="node5" href="$classEngine.html#a9027b51e4922e147b8ae3b50348c69af" title="Базовая расстановка фигур на поле." alt="" coords="509,56,740,83"/>
 <area shape="rect" id="node3" href="$classMainWindow.html#a4195422fe1346c1aa9c640715dfe73cb" title=" " alt="" coords="251,5,461,32"/>
 <area shape="rect" id="node4" href="$classMainWindow.html#a996c5a2b6f77944776856f08ec30858d" title=" " alt="" coords="5,5,203,32"/>

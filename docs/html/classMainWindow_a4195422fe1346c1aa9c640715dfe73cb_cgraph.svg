@@ -66,7 +66,7 @@ var sectionId = 'dynsection-6';
 <!-- Node2 -->
 <g id="node2" class="node">
 <title>Node2</title>
-<g id="a_node2"><a xlink:href="classEngine.html#a7e19f1f9eb9e6ec51f646bb0a94dd1d6" target="_top" xlink:title="clearBoard">
+<g id="a_node2"><a xlink:href="classEngine.html#a7e19f1f9eb9e6ec51f646bb0a94dd1d6" target="_top" xlink:title="clearBoard очищает поле.">
 <polygon fill="none" stroke="black" points="226.5,-38.5 226.5,-57.5 334.5,-57.5 334.5,-38.5 226.5,-38.5"/>
 <text text-anchor="middle" x="280.5" y="-45.5" font-family="Helvetica,sans-Serif" font-size="10.00">Engine::clearBoard</text>
 </a>

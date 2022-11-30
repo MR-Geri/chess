@@ -104,7 +104,8 @@ std::vector<std::vector<Figure *>> Engine::getData() {
   return data;
 }
 
-int Engine::enemyUnderAttack(std::vector<std::vector<Figure *>> board, Position pos) {
+int Engine::enemyUnderAttack(std::vector<std::vector<Figure *>> board,
+                             Position pos) {
   int figures_under_attack = 0;
   for (auto line : board[pos.x][pos.y]->getPossibleAttacks()) {
     for (auto step : line) {
@@ -126,7 +127,7 @@ int Engine::enemyUnderAttack(std::vector<std::vector<Figure *>> board, Position 
 }
 
 int Engine::quantityPossibleMove(std::vector<std::vector<Figure *>> board,
-                         Position pos) {
+                                 Position pos) {
   int moves = 0;
   for (auto line : board[pos.x][pos.y]->getPossibleMoves()) {
     for (auto step : line) {
