@@ -10,9 +10,12 @@
 int main(int argc, char **argv) {
   int status = 0;
 
-  status |= QTest::qExec(new TestsBoard, argc, argv);
-  status |= QTest::qExec(new TestsFigures, argc, argv);
-  status |= QTest::qExec(new TestsEngine, argc, argv);
+  TestsBoard test1;
+  TestsFigures test2;
+  TestsEngine test3;
+  status |= QTest::qExec(&test1, argc, argv);
+  status |= QTest::qExec(&test2, argc, argv);
+  status |= QTest::qExec(&test3, argc, argv);
 
   if (status == 0) {
     std::cout << "\x1B[32mTESTS OK\033[0m" << std::endl;
