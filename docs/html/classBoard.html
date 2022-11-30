@@ -76,7 +76,8 @@ $(function() {
 <div class="dynheader">
 Граф связей класса Board:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classBoard__coll__graph.svg" width="202" height="206"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classBoard__coll__graph.svg" width="202" height="191"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -91,9 +92,6 @@ $(function() {
 <tr class="memitem:a0bac43a8a2fc2aabc7e687eeedbe9f9e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classFigure.html">Figure</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBoard.html#a0bac43a8a2fc2aabc7e687eeedbe9f9e">getFigure</a> (<a class="el" href="classPosition.html">Position</a> coords) const</td></tr>
 <tr class="memdesc:a0bac43a8a2fc2aabc7e687eeedbe9f9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает фигуру, которая находится в ячейке поля с координатами coords.  <a href="classBoard.html#a0bac43a8a2fc2aabc7e687eeedbe9f9e">Подробнее...</a><br /></td></tr>
 <tr class="separator:a0bac43a8a2fc2aabc7e687eeedbe9f9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab88eabe2d17dadba7cbe4bf2a73e5b77"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBoard.html#ab88eabe2d17dadba7cbe4bf2a73e5b77">getSituation</a> () const</td></tr>
-<tr class="memdesc:ab88eabe2d17dadba7cbe4bf2a73e5b77"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает текущую ситуацию на поле.  <a href="classBoard.html#ab88eabe2d17dadba7cbe4bf2a73e5b77">Подробнее...</a><br /></td></tr>
-<tr class="separator:ab88eabe2d17dadba7cbe4bf2a73e5b77"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4ed8cf3fae283d3c88eb6b0dea9e9f0a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBoard.html#a4ed8cf3fae283d3c88eb6b0dea9e9f0a">move</a> (<a class="el" href="classPosition.html">Position</a> from, <a class="el" href="classPosition.html">Position</a> to)</td></tr>
 <tr class="memdesc:a4ed8cf3fae283d3c88eb6b0dea9e9f0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Перемещает фигуру в board.  <a href="classBoard.html#a4ed8cf3fae283d3c88eb6b0dea9e9f0a">Подробнее...</a><br /></td></tr>
 <tr class="separator:a4ed8cf3fae283d3c88eb6b0dea9e9f0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -252,27 +250,6 @@ $(function() {
   </dd>
 </dl>
 <dl class="section return"><dt>Возвращает</dt><dd>список возможных ходов для фигуры с координатами. </dd></dl>
-
-</div>
-</div>
-<a id="ab88eabe2d17dadba7cbe4bf2a73e5b77"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab88eabe2d17dadba7cbe4bf2a73e5b77">&#9670;&nbsp;</a></span>getSituation()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int Board::getSituation </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Возвращает текущую ситуацию на поле. </p>
-<dl class="section warning"><dt>Предупреждения</dt><dd>на данный момент не планируется изпользоваться. </dd></dl>
-<dl class="section return"><dt>Возвращает</dt><dd>значение int, которое может принимать значения от -100 до 100, где -100 означает победу черных, а 100 означает победу белых. </dd></dl>
 
 </div>
 </div>

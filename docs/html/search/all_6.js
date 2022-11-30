@@ -10,14 +10,13 @@ var searchData=
   ['getpossiblestepsfrom_53',['getPossibleStepsFrom',['../classBoard.html#ad2288a8adf6de5ecbb70fa2a11cd390f',1,'Board']]],
   ['getprice_54',['getPrice',['../classFigure.html#a7a36488fa19e8ceb96b684527df50d9e',1,'Figure']]],
   ['getpriceadvantage_55',['getPriceAdvantage',['../classFigure.html#aa8ab8dbf3af5c0722f32aab99947eb54',1,'Figure']]],
-  ['getsituation_56',['getSituation',['../classBoard.html#ab88eabe2d17dadba7cbe4bf2a73e5b77',1,'Board']]],
-  ['gettypefigure_57',['getTypeFigure',['../classFigure.html#a6e9afb1f33f8d9298adb15608666c801',1,'Figure']]],
-  ['getunarysteps_58',['getUnarySteps',['../classKnight.html#a4fcfdb07e9fb214be013de3cefe425f7',1,'Knight::getUnarySteps()'],['../classFigure.html#aad86c6d796ac96d30f2a310c107fdbac',1,'Figure::getUnarySteps()']]],
-  ['go_5fout_59',['GO_OUT',['../constants_8h.html#a8b9a4049772aeb1c0e054b0571babc95a2712d5b0cbf61d5d441224182e9ec1da',1,'constants.h']]],
-  ['gui_5fadvantage_5fbar_2ecpp_60',['gui_advantage_bar.cpp',['../gui__advantage__bar_8cpp.html',1,'']]],
-  ['gui_5fadvantage_5fbar_2eh_61',['gui_advantage_bar.h',['../gui__advantage__bar_8h.html',1,'']]],
-  ['gui_5ffigure_2ecpp_62',['gui_figure.cpp',['../gui__figure_8cpp.html',1,'']]],
-  ['gui_5ffigure_2eh_63',['gui_figure.h',['../gui__figure_8h.html',1,'']]],
-  ['guiadvantagebar_64',['GuiAdvantageBar',['../classGuiAdvantageBar.html#a5c6b28fb8c87867f450ef3e51c056621',1,'GuiAdvantageBar::GuiAdvantageBar()'],['../classGuiAdvantageBar.html',1,'GuiAdvantageBar']]],
-  ['guifigure_65',['GuiFigure',['../classGuiFigure.html#a71a04c51f2d58ab07c225f962df1189a',1,'GuiFigure::GuiFigure(QGraphicsItem *parent=nullptr)'],['../classGuiFigure.html#ac6355c43ee006eddd9cddffb01228195',1,'GuiFigure::GuiFigure(float w_gV, float h_gV, Figures figure, QGraphicsItem *parent=nullptr)'],['../classGuiFigure.html',1,'GuiFigure']]]
+  ['gettypefigure_56',['getTypeFigure',['../classFigure.html#a6e9afb1f33f8d9298adb15608666c801',1,'Figure']]],
+  ['getunarysteps_57',['getUnarySteps',['../classKnight.html#a4fcfdb07e9fb214be013de3cefe425f7',1,'Knight::getUnarySteps()'],['../classFigure.html#aad86c6d796ac96d30f2a310c107fdbac',1,'Figure::getUnarySteps()']]],
+  ['go_5fout_58',['GO_OUT',['../constants_8h.html#a8b9a4049772aeb1c0e054b0571babc95a2712d5b0cbf61d5d441224182e9ec1da',1,'constants.h']]],
+  ['gui_5fadvantage_5fbar_2ecpp_59',['gui_advantage_bar.cpp',['../gui__advantage__bar_8cpp.html',1,'']]],
+  ['gui_5fadvantage_5fbar_2eh_60',['gui_advantage_bar.h',['../gui__advantage__bar_8h.html',1,'']]],
+  ['gui_5ffigure_2ecpp_61',['gui_figure.cpp',['../gui__figure_8cpp.html',1,'']]],
+  ['gui_5ffigure_2eh_62',['gui_figure.h',['../gui__figure_8h.html',1,'']]],
+  ['guiadvantagebar_63',['GuiAdvantageBar',['../classGuiAdvantageBar.html#a5c6b28fb8c87867f450ef3e51c056621',1,'GuiAdvantageBar::GuiAdvantageBar()'],['../classGuiAdvantageBar.html',1,'GuiAdvantageBar']]],
+  ['guifigure_64',['GuiFigure',['../classGuiFigure.html#a71a04c51f2d58ab07c225f962df1189a',1,'GuiFigure::GuiFigure(QGraphicsItem *parent=nullptr)'],['../classGuiFigure.html#ac6355c43ee006eddd9cddffb01228195',1,'GuiFigure::GuiFigure(float w_gV, float h_gV, Figures figure, QGraphicsItem *parent=nullptr)'],['../classGuiFigure.html',1,'GuiFigure']]]
 ];
