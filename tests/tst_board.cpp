@@ -40,4 +40,16 @@ void TestsBoard::test_clear() {
   }
 }
 
+void TestsBoard::test_getPossibleStepsFrom(){
+
+}
+
+void TestsBoard::test_getFigure(){
+
+}
+
+void TestsBoard::test_move(){
+
+}
+
 #include "tst_board.moc"

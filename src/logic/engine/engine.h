@@ -40,17 +40,20 @@ public:
   bool setFigureOnBoard(Figure *figure, Position position);
 
   /**
-   * @brief clearBoard
+   * @brief clearBoard очищает поле.
    */
   void clearBoard();
 
+  /**
+   * @brief getData возвращает поле.
+   */
   std::vector<std::vector<Figure *>> getData();
+
+  int enemyUnderAttack(std::vector<std::vector<Figure *>> board, Position pos);
+
+  int quantityPossibleMove(std::vector<std::vector<Figure *>> board,
+                           Position pos);
 
 private:
   Board *game_board;
 };
-
-int enemyUnderAttack(std::vector<std::vector<Figure *>> board, Position pos);
-
-int quantityPossibleMove(std::vector<std::vector<Figure *>> board,
-                         Position pos);

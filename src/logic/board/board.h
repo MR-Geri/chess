@@ -52,6 +52,9 @@ public:
    */
   void clear();
 
+  /**
+   * @brief getBoo Возвращает доску.
+   */
   std::vector<std::vector<Figure *>> getBoardData() const;
 
 private:

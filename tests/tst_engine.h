@@ -15,8 +15,12 @@ public:
   ~TestsEngine();
 
 private slots:
-  void test_setStartingArrangement();
-  void test_enemyUnderAttack();
+  void test_move();
   void test_quantityPossibleMove();
+  void test_enemyUnderAttack();
   void test_calculateAdvantageWhite();
+  void test_setStartingArrangement();
+  void test_setFigureOnBoard();
+  void test_clearBoard();
+  void test_getData();
 };
