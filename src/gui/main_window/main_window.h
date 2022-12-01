@@ -36,7 +36,7 @@ public:
   ~MainWindow();
 
 private:
-  void sendToGuiBoardData();
+  void sendToGuiBoardData(bool is_new_game = false);
 
 public slots:
   /**
@@ -52,7 +52,7 @@ public slots:
   void startNewGame();
 
 signals:
-  void sendDataToGui(QVector<QVector<Figures>> data, double advantage_white);
+  void sendDataToGui(QVector<QVector<Figures>> data, double advantage_white, bool is_new_game);
 
 private:
   Ui::MainWindow *ui;

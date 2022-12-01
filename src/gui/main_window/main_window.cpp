@@ -25,8 +25,8 @@ MainWindow::MainWindow(QWidget *parent)
           SLOT(windowsManager(int)));
   connect(&screen_game, SIGNAL(figureMovedBoard(Position, Position)), this,
           SLOT(connectGuiMoveWithEngine(Position, Position)));
-  connect(this, SIGNAL(sendDataToGui(QVector<QVector<Figures>>, double)),
-          &screen_game, SLOT(catchData(QVector<QVector<Figures>>, double)));
+  connect(this, SIGNAL(sendDataToGui(QVector<QVector<Figures>>, double, bool)),
+          &screen_game, SLOT(catchData(QVector<QVector<Figures>>, double, bool)));
   connect(&screen_game, SIGNAL(newGameFromGame()), this, SLOT(startNewGame()));
   connect(&screen_menu, SIGNAL(newGameFromMenu()), this, SLOT(startNewGame()));
 }
@@ -45,7 +45,7 @@ void MainWindow::connectGuiMoveWithEngine(Position from_board,
   sendToGuiBoardData();
 }
 
-void MainWindow::sendToGuiBoardData() {
+void MainWindow::sendToGuiBoardData(bool is_new_game) {
   double advantage_white = engine.calculateAdvantageWhite();
   std::vector<std::vector<Figure *>> data = engine.getData();
   QVector<QVector<Figures>> data_for_gui(data.size(),
@@ -58,11 +58,11 @@ void MainWindow::sendToGuiBoardData() {
         data_for_gui[i][j] = data[i][j]->getTypeFigure();
     }
   }
-  emit sendDataToGui(data_for_gui, advantage_white);
+  emit sendDataToGui(data_for_gui, advantage_white, is_new_game);
 }
 
 void MainWindow::startNewGame() {
   engine.clearBoard();
   engine.setStartingArrangement();
-  sendToGuiBoardData();
+  sendToGuiBoardData(true);
 }

@@ -47,7 +47,7 @@ public slots:
    * @brief Получает данные для отрисовки из логики.
    */
   void catchData(QVector<QVector<Figures>> catched_data,
-                 double new_advantage_white);
+                 double new_advantage_white, bool is_new_game = false);
 
 private slots:
   /**
