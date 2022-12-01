@@ -12,7 +12,7 @@ var searchData=
   ['screenliderboard_107',['ScreenLiderboard',['../classScreenLiderboard.html',1,'ScreenLiderboard'],['../classScreenLiderboard.html#a01635816bd4c91868be303b1801d46ae',1,'ScreenLiderboard::ScreenLiderboard()']]],
   ['screenmenu_108',['ScreenMenu',['../classScreenMenu.html',1,'ScreenMenu'],['../classScreenMenu.html#a61ed295b340b34244e12bd49b38f3697',1,'ScreenMenu::ScreenMenu()']]],
   ['screensettings_109',['ScreenSettings',['../classScreenSettings.html',1,'ScreenSettings'],['../classScreenSettings.html#af0f226067ae6c297e288e769cc43f7d7',1,'ScreenSettings::ScreenSettings()']]],
-  ['senddatatogui_110',['sendDataToGui',['../classMainWindow.html#a146c449c1350b95c114ebf4845961fc8',1,'MainWindow']]],
+  ['senddatatogui_110',['sendDataToGui',['../classMainWindow.html#a9273b141df983fe146775bc8df5c765b',1,'MainWindow']]],
   ['setadvantagewhite_111',['setAdvantageWhite',['../classGuiAdvantageBar.html#a8e495cc9f4dec57798089a6f2740c464',1,'GuiAdvantageBar']]],
   ['setfigureon_112',['setFigureOn',['../classBoard.html#a183ac960c959ed0df9b49314d0479703',1,'Board']]],
   ['setfigureonboard_113',['setFigureOnBoard',['../classEngine.html#aecc43b5398baffd0cddd1af03dca4793',1,'Engine']]],

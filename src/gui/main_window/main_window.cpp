@@ -26,7 +26,8 @@ MainWindow::MainWindow(QWidget *parent)
   connect(&screen_game, SIGNAL(figureMovedBoard(Position, Position)), this,
           SLOT(connectGuiMoveWithEngine(Position, Position)));
   connect(this, SIGNAL(sendDataToGui(QVector<QVector<Figures>>, double, bool)),
-          &screen_game, SLOT(catchData(QVector<QVector<Figures>>, double, bool)));
+          &screen_game,
+          SLOT(catchData(QVector<QVector<Figures>>, double, bool)));
   connect(&screen_game, SIGNAL(newGameFromGame()), this, SLOT(startNewGame()));
   connect(&screen_menu, SIGNAL(newGameFromMenu()), this, SLOT(startNewGame()));
 }

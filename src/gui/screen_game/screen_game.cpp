@@ -103,7 +103,8 @@ void ScreenGame::resizeEvent(QResizeEvent *event) { this->drawGameField(); }
 
 void ScreenGame::catchData(QVector<QVector<Figures>> catched_data,
                            double new_advantage_white, bool is_new_game) {
-  if (is_new_game) second_advantage_white = new_advantage_white;
+  if (is_new_game)
+    second_advantage_white = new_advantage_white;
   this->data = catched_data;
   this->first_advantage_white = second_advantage_white;
   this->second_advantage_white = new_advantage_white;
