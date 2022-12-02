@@ -4,10 +4,8 @@ TestsEngine::TestsEngine() {}
 
 TestsEngine::~TestsEngine() {}
 
-void TestsEngine::test_move() {}
-
 void TestsEngine::test_setStartingArrangement() {
-  Engine engine = Engine();
+  Engine engine;
   engine.setStartingArrangement();
 
   QCOMPARE(engine.getData()[0][7]->getTypeFigure(), W_ROOK);
@@ -38,7 +36,7 @@ void TestsEngine::test_setStartingArrangement() {
 }
 
 void TestsEngine::test_enemyUnderAttack() {
-  Engine engine = Engine();
+  Engine engine;
   engine.setStartingArrangement();
   for (int i = 0; i <= 7; i++) {
     QCOMPARE(engine.enemyUnderAttack(engine.getData(), {i, 0}), 0);
@@ -49,7 +47,7 @@ void TestsEngine::test_enemyUnderAttack() {
 }
 
 void TestsEngine::test_quantityPossibleMove() {
-  Engine engine = Engine();
+  Engine engine;
   engine.setStartingArrangement();
   QCOMPARE(engine.quantityPossibleMove(engine.getData(), {0, 0}), 0);
   QCOMPARE(engine.quantityPossibleMove(engine.getData(), {1, 0}), 2);
@@ -75,7 +73,7 @@ void TestsEngine::test_quantityPossibleMove() {
 }
 
 void TestsEngine::test_calculateAdvantageWhite() {
-  Engine engine = Engine();
+  Engine engine;
   engine.setStartingArrangement();
   QCOMPARE(engine.calculateAdvantageWhite(), 0.5);
   engine.move({1, 7}, {1, -2});
@@ -104,10 +102,54 @@ void TestsEngine::test_calculateAdvantageWhite() {
   QCOMPARE(engine.calculateAdvantageWhite(), 0.445438861333);
 }
 
-void TestsEngine::test_setFigureOnBoard() {}
+void TestsEngine::test_setFigureOnBoard() {
+  Engine engine;
+  engine.clearBoard();
+  King *king = new King(WHITE);
+  engine.setFigureOnBoard(king, {1, 2});
+  QCOMPARE(engine.getData()[1][2], king);
+  QCOMPARE(engine.getData()[0][0], nullptr);
+}
 
-void TestsEngine::test_clearBoard() {}
+void TestsEngine::test_clearBoard() {
+  Engine engine;
+  engine.clearBoard();
+  for (int i = 0; i < 8; i++) {
+    for (int j = 0; j < 8; j++) {
+      if (engine.getData()[i][j] != nullptr) {
+        QString message = "Not empty i=%1 j=%2";
+        QFAIL(message.arg(i).arg(j).toLatin1());
+      }
+    }
+  }
+}
 
-void TestsEngine::test_getData() {}
+void TestsEngine::test_getData() {
+  FigureColor colors[2] = {WHITE, BLACK};
+  Engine engine;
+  engine.clearBoard();
+  for (int i_color = 0; i_color < 2; i_color++) {
+    King *king = new King(colors[i_color]);
+    Knight *knight = new Knight(colors[i_color]);
+    Queen *queen = new Queen(colors[i_color]);
+    Pawn *pawn = new Pawn(colors[i_color]);
+    Rook *rook = new Rook(colors[i_color]);
+    Bishop *bishop = new Bishop(colors[i_color]);
+
+    engine.setFigureOnBoard(king, {i_color, 0});
+    engine.setFigureOnBoard(pawn, {i_color, 1});
+    engine.setFigureOnBoard(queen, {i_color, 2});
+    engine.setFigureOnBoard(rook, {i_color, 3});
+    engine.setFigureOnBoard(bishop, {i_color, 4});
+    engine.setFigureOnBoard(knight, {i_color, 5});
+
+    QCOMPARE(engine.getData()[i_color][0], king);
+    QCOMPARE(engine.getData()[i_color][1], pawn);
+    QCOMPARE(engine.getData()[i_color][2], queen);
+    QCOMPARE(engine.getData()[i_color][3], rook);
+    QCOMPARE(engine.getData()[i_color][4], bishop);
+    QCOMPARE(engine.getData()[i_color][5], knight);
+  }
+}
 
 #include "tst_engine.moc"
