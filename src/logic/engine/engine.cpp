@@ -122,7 +122,6 @@ int Engine::enemyUnderAttack(std::vector<std::vector<Figure *>> board,
         }
     }
   }
-  // std::cout << "figures_under_attack: " << figures_under_attack << std::endl;
   return figures_under_attack;
 }
 
