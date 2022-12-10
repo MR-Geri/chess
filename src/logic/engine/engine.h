@@ -56,6 +56,8 @@ public:
 
   std::list<std::list<Position>> getPosibleAttacksFigureFrom(Position position);
 
+  std::list<std::list<Position>> getPosibleMovesFigureFrom(Position position);
+
 private:
   Board *game_board;
 };

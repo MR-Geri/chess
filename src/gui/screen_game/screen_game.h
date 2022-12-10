@@ -54,6 +54,8 @@ public slots:
 
   void hilightAttacks(std::list<std::list<Position>> attacks);
 
+  void hilightMoves(std::list<std::list<Position>> moves);
+
 private slots:
   /**
    * @brief Отправляет сигнал перехода на окно меню.
@@ -90,5 +92,5 @@ private:
   int indent;
   double first_advantage_white;
   double second_advantage_white;
-  QGraphicsItemGroup hilight_group;
+  int size_cell_board;
 };

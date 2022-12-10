@@ -30,6 +30,7 @@ MainWindow::MainWindow(QWidget *parent)
   connect(&screen_game, SIGNAL(newGameFromGame()), this, SLOT(startNewGame()));
   connect(&screen_menu, SIGNAL(newGameFromMenu()), this, SLOT(startNewGame()));
   connect(this, SIGNAL(hilightGuiAttacks(std::list<std::list<Position>>)), &screen_game, SLOT(hilightAttacks(std::list<std::list<Position>>)));
+  connect(this, SIGNAL(hilightGuiMoves(std::list<std::list<Position>>)), &screen_game, SLOT(hilightMoves(std::list<std::list<Position>>)));
   connect(&screen_game, SIGNAL(pressGuiFigure(Position)), this, SLOT(guiPressFigure(Position)));
 }
 
@@ -71,5 +72,7 @@ void MainWindow::startNewGame() {
 
 void MainWindow::guiPressFigure(Position position) {
   std::list<std::list<Position>> attacks = engine.getPosibleAttacksFigureFrom(position);
+  std::list<std::list<Position>> moves = engine.getPosibleMovesFigureFrom(position);
   emit hilightGuiAttacks(attacks);
+  emit hilightGuiMoves(moves);
 }

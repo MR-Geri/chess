@@ -177,8 +177,31 @@ std::list<std::list<Position>> Engine::getPosibleAttacksFigureFrom(Position posi
     for (auto &step : attack) {
       step.x += position.x;
       step.y += position.y;
-      std::cout << step.x << " " << step.y << " this is\n";
     }
   }
   return possible_attacks;
+}
+
+std::list<std::list<Position>> Engine::getPosibleMovesFigureFrom(Position position) {
+  std::vector<std::vector<Figure *>> board_data = game_board->getBoardData();
+  std::list<std::list<Position>> possible_moves =
+      board_data[position.x][position.y]->getPossibleMoves();
+  std::list<std::list<Position>> moves;
+  for (auto &one_move : possible_moves) {
+    std::list<Position> move;
+    bool flag = true;
+    for (auto &step : one_move) {
+      step.x += position.x;
+      step.y += position.y;
+      if (step.x < 0 || step.x >= 8 || step.y < 0 || step.y >= 8) continue;
+      if (flag && board_data[step.x][step.y] == nullptr) {
+          move.push_back({step.x, step.y});
+          std::cout << flag << ' ' << step.x << " " << step.y << " this is\n";
+      } else flag = false;
+    }
+    if (!move.empty()) {
+      moves.push_back(move);
+    }
+  }
+  return moves;
 }

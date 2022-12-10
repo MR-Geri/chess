@@ -16,6 +16,7 @@ ScreenGame::ScreenGame(QWidget *parent)
   indent = 15;
   first_advantage_white = 0.5;
   second_advantage_white = 0.5;
+  size_cell_board = 0;
 
   timer = new QTimeLine(500);
   scene = new QGraphicsScene();
@@ -61,6 +62,8 @@ void ScreenGame::drawGameField() {
   board->setScale(scale_board);
   board->setPos(indent, indent);
   scene->addItem(board);
+
+  size_cell_board = (std::min(width_graphicsView, height_graphicsView) - indent * 2) / 8.;
 
   drawAdvantageBar(height_board, scale_board);
 
@@ -134,19 +137,25 @@ void ScreenGame::drawAdvantageBar(float height_board, float scale_board){
 }
 
 void ScreenGame::hilightAttacks(std::list<std::list<Position>> attacks) {
-  for (auto attack : attacks) {
-    Position pos = calculatePositionOnScene(attack.back());
-    int x = pos.x;
-    int y = pos.y;
-    scene->addEllipse(x, y, 5, 5);
-    std::cout << x << " " << y << "!!!!!\n";
+  //TODO
+}
+
+void ScreenGame::hilightMoves(std::list<std::list<Position>> moves) {
+  int size = size_cell_board / 4;
+  for (auto move : moves) {
+    for (auto step : move) {
+      Position pos = calculatePositionOnScene(step);
+      int x = pos.x;
+      int y = pos.y;
+      scene->addEllipse(x - size / 2, y - size / 2, size, size, QPen(Qt::gray), QBrush(Qt::green));
+      std::cout << x << " " << y << "!!!!!\n";
+    }
   }
 }
 
 Position ScreenGame::calculatePositionOnScene(Position position) {
   float width_graphicsView = ui->graphicsView->width() - 10;
   float height_graphicsView = ui->graphicsView->height() - 10;
-  float size_cell_board = (std::min(width_graphicsView, height_graphicsView) - indent * 2) / 8.;
   float width_board = board->boundingRect().size().width();
   float scale_board =
       (std::min(width_graphicsView, height_graphicsView) - indent * 2) /
@@ -163,8 +172,6 @@ Position ScreenGame::calculatePositionOnBoard(Position position) {
   Position delta_board;
   float width_graphicsView = ui->graphicsView->width() - 10;
   float height_graphicsView = ui->graphicsView->height() - 10;
-  float size_cell_board =
-      (std::min(width_graphicsView, height_graphicsView) - indent * 2) / 8.;
   position_on_board.x = static_cast<int>((position.x + 1 - indent) / size_cell_board);
   position_on_board.y = static_cast<int>((position.y + 1 - indent) / size_cell_board);
   return position_on_board;
