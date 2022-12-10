@@ -14,9 +14,8 @@ public:
 
 private slots:
   void test_initBoard();
-  void test_setFigureOn();
-  void test_clear();
-  void test_getPossibleStepsFrom();
   void test_getFigure();
   void test_move();
+  void test_setFigureOn();
+  void test_clear();
 };

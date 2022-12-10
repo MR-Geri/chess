@@ -36,5 +36,4 @@ void GuiFigure::mouseReleaseEvent(QGraphicsSceneMouseEvent *event) {
   this->setZValue(0);
   QGraphicsItem::mouseReleaseEvent(event);
   emit moved(Position(x, y), Position(last_delta_move.x, last_delta_move.y));
-  // std::cout << x << " " << y << '\n';
 }

@@ -1,4 +1,7 @@
-*.sh
+*.log
+run.sh
+test.sh
+test_and_run.sh
 *.user
 .cache/
 .cmake/

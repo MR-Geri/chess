@@ -15,7 +15,6 @@ public:
   ~TestsEngine();
 
 private slots:
-  void test_move();
   void test_quantityPossibleMove();
   void test_enemyUnderAttack();
   void test_calculateAdvantageWhite();

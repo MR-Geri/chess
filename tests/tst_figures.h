@@ -21,4 +21,5 @@ private slots:
   void test_rook();
   void test_knight();
   void test_pawn();
+  void test_transform_figures();
 };

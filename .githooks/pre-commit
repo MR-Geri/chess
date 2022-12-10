@@ -7,12 +7,12 @@
 # exit 1
 # fi
 #
-# "$(dirname "$0")"/pre-commit-tests
-# if [ $? -eq 0 ]; then
-# echo "tests OK"
-# else
-# exit 1
-# fi
+"$(dirname "$0")"/pre-commit-tests
+if [ $? -eq 0 ]; then
+echo "tests OK"
+else
+exit 1
+fi
 #
 # "$(dirname "$0")"/pre-commit-generation-doxygen
 # if [ $? -eq 0 ]; then
