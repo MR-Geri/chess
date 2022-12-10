@@ -168,3 +168,17 @@ double Engine::calculateAdvantageWhite() {
   }
   return white / (white + black);
 }
+
+std::list<std::list<Position>> Engine::getPosibleAttacksFigureFrom(Position position) {
+  std::vector<std::vector<Figure *>> board_data = game_board->getBoardData();
+  std::list<std::list<Position>> possible_attacks =
+      board_data[position.x][position.y]->getPossibleAttacks();
+  for (auto &attack : possible_attacks) {
+    for (auto &step : attack) {
+      step.x += position.x;
+      step.y += position.y;
+      std::cout << step.x << " " << step.y << " this is\n";
+    }
+  }
+  return possible_attacks;
+}

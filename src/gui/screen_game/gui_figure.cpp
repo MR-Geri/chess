@@ -26,6 +26,7 @@ void GuiFigure::mousePressEvent(QGraphicsSceneMouseEvent *event) {
   y = this->scenePos().y();
   this->setZValue(1);
   QGraphicsItem::mousePressEvent(event);
+  emit mousePressed({static_cast<int>(x), static_cast<int>(y)});
 }
 
 void GuiFigure::mouseReleaseEvent(QGraphicsSceneMouseEvent *event) {

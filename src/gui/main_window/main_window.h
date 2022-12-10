@@ -51,8 +51,11 @@ public slots:
 
   void startNewGame();
 
+  void guiPressFigure(Position position);
+
 signals:
   void sendDataToGui(QVector<QVector<Figures>> data, double advantage_white, bool is_new_game);
+  void hilightGuiAttacks(std::list<std::list<Position>> attacks);
 
 private:
   Ui::MainWindow *ui;

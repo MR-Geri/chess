@@ -3,6 +3,7 @@
 #include <QGraphicsItemAnimation>
 #include <QGraphicsScene>
 #include <QGraphicsSvgItem>
+#include <QGraphicsEllipseItem>
 #include <QString>
 #include <QTimeLine>
 #include <QWidget>
@@ -42,12 +43,16 @@ signals:
 
   void newGameFromGame();
 
+  void pressGuiFigure(Position position);
+
 public slots:
   /**
    * @brief Получает данные для отрисовки из логики.
    */
   void catchData(QVector<QVector<Figures>> catched_data,
                  double new_advantage_white, bool is_new_game = false);
+
+  void hilightAttacks(std::list<std::list<Position>> attacks);
 
 private slots:
   /**
@@ -62,9 +67,14 @@ private slots:
 
   void figureMoved(Position from, Position delta);
 
+  void pressFigure(Position position);
+
 private:
   void resizeEvent(QResizeEvent *event);
   void drawGameField();
+  void drawAdvantageBar(float height_board, float scale_board);
+  Position calculatePositionOnScene(Position position);
+  Position calculatePositionOnBoard(Position position);
 
 private:
   Ui::ScreenGame *ui;
@@ -80,4 +90,5 @@ private:
   int indent;
   double first_advantage_white;
   double second_advantage_white;
+  QGraphicsItemGroup hilight_group;
 };

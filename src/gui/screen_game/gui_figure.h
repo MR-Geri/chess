@@ -20,6 +20,7 @@ protected:
 
 signals:
   void moved(Position from, Position delta);
+  void mousePressed(Position position);
 
 private:
   float scale;

@@ -1,5 +1,6 @@
 #include "screen_game.h"
 #include "ui_screen_game.h"
+#include <iostream>
 
 ScreenGame::ScreenGame(QWidget *parent)
     : QWidget(parent), ui(new Ui::ScreenGame) {
@@ -61,19 +62,7 @@ void ScreenGame::drawGameField() {
   board->setPos(indent, indent);
   scene->addItem(board);
 
-  advantage_bar_black =
-      new GuiAdvantageBar(indent, height_board * scale_board, Qt::black);
-  advantage_bar_white =
-      new GuiAdvantageBar(indent, height_board * scale_board, Qt::white);
-  advantage_bar_black->setAdvantageWhite(1 - first_advantage_white);
-  advantage_bar_black->setPos(indent + height_board * scale_board + 5, indent);
-  advantage_bar_white->setPos(indent + height_board * scale_board + 5, indent);
-  animation_black->setItem(advantage_bar_black);
-  for (int i = 0; i < 5; ++i)
-    animation_black->setScaleAt(
-        0.1, 1, (1 - second_advantage_white) / (1 - first_advantage_white));
-  scene->addItem(advantage_bar_white);
-  scene->addItem(advantage_bar_black);
+  drawAdvantageBar(height_board, scale_board);
 
   positions = QVector<QVector<Position>>(8, QVector<Position>(8));
   for (int i = 0; i < 8; i++) {
@@ -91,6 +80,7 @@ void ScreenGame::drawGameField() {
           new GuiFigure(width_graphicsView, height_graphicsView, data[i][j]);
       connect(figure, SIGNAL(moved(Position, Position)), this,
               SLOT(figureMoved(Position, Position)));
+      connect(figure, SIGNAL(mousePressed(Position)), this, SLOT(pressFigure(Position)));
       figure->setPos(positions[i][j].x, positions[i][j].y);
       scene->addItem(figure);
     }
@@ -125,4 +115,61 @@ void ScreenGame::figureMoved(Position from, Position delta) {
   delta_board.y = static_cast<int>(
       (delta.y + ((delta.y > 0) ? ratio : -ratio)) / size_cell_board);
   emit figureMovedBoard(from_board, delta_board);
+}
+
+void ScreenGame::drawAdvantageBar(float height_board, float scale_board){
+  advantage_bar_black =
+      new GuiAdvantageBar(indent, height_board * scale_board, Qt::black);
+  advantage_bar_white =
+      new GuiAdvantageBar(indent, height_board * scale_board, Qt::white);
+  advantage_bar_black->setAdvantageWhite(1 - first_advantage_white);
+  advantage_bar_black->setPos(indent + height_board * scale_board + 5, indent);
+  advantage_bar_white->setPos(indent + height_board * scale_board + 5, indent);
+  animation_black->setItem(advantage_bar_black);
+  for (int i = 0; i < 5; ++i)
+    animation_black->setScaleAt(
+        0.1, 1, (1 - second_advantage_white) / (1 - first_advantage_white));
+  scene->addItem(advantage_bar_white);
+  scene->addItem(advantage_bar_black);
+}
+
+void ScreenGame::hilightAttacks(std::list<std::list<Position>> attacks) {
+  for (auto attack : attacks) {
+    Position pos = calculatePositionOnScene(attack.back());
+    int x = pos.x;
+    int y = pos.y;
+    scene->addEllipse(x, y, 5, 5);
+    std::cout << x << " " << y << "!!!!!\n";
+  }
+}
+
+Position ScreenGame::calculatePositionOnScene(Position position) {
+  float width_graphicsView = ui->graphicsView->width() - 10;
+  float height_graphicsView = ui->graphicsView->height() - 10;
+  float size_cell_board = (std::min(width_graphicsView, height_graphicsView) - indent * 2) / 8.;
+  float width_board = board->boundingRect().size().width();
+  float scale_board =
+      (std::min(width_graphicsView, height_graphicsView) - indent * 2) /
+      width_board;
+  int x = static_cast<int>(indent + position.x * ((width_board * scale_board) / 8));
+  int y = static_cast<int>(indent + position.y * ((width_board * scale_board) / 8));
+  x += size_cell_board / 2.;
+  y += size_cell_board / 2.;
+  return {x, y};
+}
+
+Position ScreenGame::calculatePositionOnBoard(Position position) {
+  Position position_on_board;
+  Position delta_board;
+  float width_graphicsView = ui->graphicsView->width() - 10;
+  float height_graphicsView = ui->graphicsView->height() - 10;
+  float size_cell_board =
+      (std::min(width_graphicsView, height_graphicsView) - indent * 2) / 8.;
+  position_on_board.x = static_cast<int>((position.x + 1 - indent) / size_cell_board);
+  position_on_board.y = static_cast<int>((position.y + 1 - indent) / size_cell_board);
+  return position_on_board;
+}
+
+void ScreenGame::pressFigure(Position position) {
+  emit pressGuiFigure(calculatePositionOnBoard(position));
 }
