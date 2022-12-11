@@ -26,7 +26,6 @@ void GuiFigure::mousePressEvent(QGraphicsSceneMouseEvent *event) {
   y = this->scenePos().y();
   this->setZValue(1);
   QGraphicsItem::mousePressEvent(event);
-  emit mousePressed({static_cast<int>(x), static_cast<int>(y)});
 }
 
 void GuiFigure::mouseReleaseEvent(QGraphicsSceneMouseEvent *event) {
@@ -35,5 +34,7 @@ void GuiFigure::mouseReleaseEvent(QGraphicsSceneMouseEvent *event) {
   this->setPos(x, y);
   this->setZValue(0);
   QGraphicsItem::mouseReleaseEvent(event);
+  if (last_delta_move.x == 0 && last_delta_move.y == 0)
+    emit mousePressed({static_cast<int>(x), static_cast<int>(y)});
   emit moved(Position(x, y), Position(last_delta_move.x, last_delta_move.y));
 }

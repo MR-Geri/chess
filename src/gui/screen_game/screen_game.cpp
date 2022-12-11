@@ -19,7 +19,7 @@ ScreenGame::ScreenGame(QWidget *parent)
   size_cell_board = 0;
 
   timer = new QTimeLine(500);
-  scene = new QGraphicsScene();
+  scene = new GuiScene();
   animation_black = new QGraphicsItemAnimation();
   animation_black->setTimeLine(timer);
 
@@ -89,6 +89,9 @@ void ScreenGame::drawGameField() {
     }
   }
 
+  highlightAll();
+  highlight_moves.clear();
+  highlight_attacks.clear();
   timer->start();
 }
 
@@ -137,21 +140,12 @@ void ScreenGame::drawAdvantageBar(float height_board, float scale_board){
   scene->addItem(advantage_bar_black);
 }
 
-void ScreenGame::hilightAttacks(std::list<std::list<Position>> attacks) {
-  //TODO
+void ScreenGame::highlightAttacks(std::list<std::list<Position>> attacks) {
+  highlight_attacks = std::move(attacks);
 }
 
-void ScreenGame::hilightMoves(std::list<std::list<Position>> moves) {
-  int size = size_cell_board / 4;
-  for (auto move : moves) {
-    for (auto step : move) {
-      Position pos = calculatePositionOnScene(step);
-      int x = pos.x;
-      int y = pos.y;
-      scene->addEllipse(x - size / 2, y - size / 2, size, size, QPen(Qt::gray), QBrush(Qt::green));
-      std::cout << x << " " << y << "!!!!!\n";
-    }
-  }
+void ScreenGame::highlightMoves(std::list<std::list<Position>> moves) {
+  highlight_moves = std::move(moves);
 }
 
 Position ScreenGame::calculatePositionOnScene(Position position) {
@@ -179,5 +173,19 @@ Position ScreenGame::calculatePositionOnBoard(Position position) {
 }
 
 void ScreenGame::pressFigure(Position position) {
+  from = position;
   emit pressGuiFigure(calculatePositionOnBoard(position));
+}
+
+void ScreenGame::highlightAll() {
+  int size = size_cell_board / 4;
+  for (auto move : highlight_moves) {
+    for (auto step : move) {
+      Position pos = calculatePositionOnScene(step);
+      int x = pos.x;
+      int y = pos.y;
+      scene->addEllipse(x - size / 2, y - size / 2, size, size, QPen(Qt::gray), QBrush(Qt::green));
+      std::cout << x << " " << y << "!!!!!\n";
+    }
+  }
 }

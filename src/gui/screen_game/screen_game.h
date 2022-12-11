@@ -10,6 +10,7 @@
 #include <src/constants.h>
 #include <src/gui/screen_game/gui_advantage_bar.h>
 #include <src/gui/screen_game/gui_figure.h>
+#include <src/gui/gui_scene/gui_scene.h>
 
 namespace Ui {
 class ScreenGame;
@@ -52,9 +53,9 @@ public slots:
   void catchData(QVector<QVector<Figures>> catched_data,
                  double new_advantage_white, bool is_new_game = false);
 
-  void hilightAttacks(std::list<std::list<Position>> attacks);
+  void highlightAttacks(std::list<std::list<Position>> attacks);
 
-  void hilightMoves(std::list<std::list<Position>> moves);
+  void highlightMoves(std::list<std::list<Position>> moves);
 
 private slots:
   /**
@@ -77,10 +78,11 @@ private:
   void drawAdvantageBar(float height_board, float scale_board);
   Position calculatePositionOnScene(Position position);
   Position calculatePositionOnBoard(Position position);
+  void highlightAll();
 
 private:
   Ui::ScreenGame *ui;
-  QGraphicsScene *scene;
+  GuiScene *scene;
   QGraphicsSvgItem *board;
   GuiAdvantageBar *advantage_bar_black;
   GuiAdvantageBar *advantage_bar_white;
@@ -93,4 +95,7 @@ private:
   double first_advantage_white;
   double second_advantage_white;
   int size_cell_board;
+  std::list<std::list<Position>> highlight_moves;
+  std::list<std::list<Position>> highlight_attacks;
+  Position from;
 };
