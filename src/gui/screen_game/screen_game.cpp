@@ -33,6 +33,7 @@ ScreenGame::ScreenGame(QWidget *parent)
           SLOT(buttonNewGameReleased()));
   connect(ui->buttonBackGame, SIGNAL(released()), this,
           SLOT(buttonBackGameReleased()));
+  connect(scene, SIGNAL(mousePress(Position)), this, SLOT(mousePressScene(Position)));
 }
 
 ScreenGame::~ScreenGame() {
@@ -173,8 +174,14 @@ Position ScreenGame::calculatePositionOnBoard(Position position) {
 }
 
 void ScreenGame::pressFigure(Position position) {
-  from = position;
-  emit pressGuiFigure(calculatePositionOnBoard(position));
+  if (from.x != 0 && from.y != 0) {
+    this->highlight_attacks.clear();
+    this->highlight_moves.clear();
+      this->from = {0, 0};
+  } else {
+    from = position;
+    emit pressGuiFigure(calculatePositionOnBoard(position));
+  }
 }
 
 void ScreenGame::highlightAll() {
@@ -187,5 +194,14 @@ void ScreenGame::highlightAll() {
       scene->addEllipse(x - size / 2, y - size / 2, size, size, QPen(Qt::gray), QBrush(Qt::green));
       std::cout << x << " " << y << "!!!!!\n";
     }
+  }
+}
+
+void ScreenGame::mousePressScene(Position to) {
+  if (from.x != 0 && from.y != 0) {
+    Position delta = calculatePositionOnBoard(to);
+    Position from_board = calculatePositionOnBoard(from);
+    std::cout << delta.x - from_board.x << " " << delta.y - from_board.y << "Hello!!!!!!!!!!!!!\n";
+    emit figureMovedBoard(from_board, {delta.x - from_board.x, delta.y - from_board.y});
   }
 }

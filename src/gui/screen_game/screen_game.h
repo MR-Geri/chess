@@ -72,6 +72,8 @@ private slots:
 
   void pressFigure(Position position);
 
+  void mousePressScene(Position to);
+
 private:
   void resizeEvent(QResizeEvent *event);
   void drawGameField();
