@@ -78,6 +78,7 @@ pipeline{
                 sh 'git add .'
                 sh 'git config --global user.email "ilya.kamckine@yandex.ru"'
                 sh 'git config --global user.name "Jenkins"'
+                sh 'git config pull.rebase true'
                 sh 'git commit -m \"Jenkins fix: $(git show-branch --no-name $(git symbolic-ref --short HEAD))\"'
                 sh 'git push --set-upstream origin main'
             }
