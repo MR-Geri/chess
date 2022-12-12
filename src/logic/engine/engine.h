@@ -54,7 +54,7 @@ public:
   int quantityPossibleMove(std::vector<std::vector<Figure *>> board,
                            Position pos);
 
-  std::list<std::list<Position>> getPosibleAttacksFigureFrom(Position position);
+  std::list<Position> getPosibleAttacksFigureFrom(Position position);
 
   std::list<std::list<Position>> getPosibleMovesFigureFrom(Position position);
 

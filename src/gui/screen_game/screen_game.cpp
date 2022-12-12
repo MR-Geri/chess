@@ -141,7 +141,7 @@ void ScreenGame::drawAdvantageBar(float height_board, float scale_board){
   scene->addItem(advantage_bar_black);
 }
 
-void ScreenGame::highlightAttacks(std::list<std::list<Position>> attacks) {
+void ScreenGame::highlightAttacks(std::list<Position> attacks) {
   highlight_attacks = std::move(attacks);
 }
 
@@ -186,6 +186,12 @@ void ScreenGame::pressFigure(Position position) {
 
 void ScreenGame::highlightAll() {
   int size = size_cell_board / 4;
+  for (auto attack : highlight_attacks) {
+    Position pos = calculatePositionOnScene(attack);
+    int x = pos.x;
+    int y = pos.y;
+    scene->addEllipse(x - size / 2, y - size / 2, size, size, QPen(Qt::gray), QBrush(Qt::blue));
+  }
   for (auto move : highlight_moves) {
     for (auto step : move) {
       Position pos = calculatePositionOnScene(step);

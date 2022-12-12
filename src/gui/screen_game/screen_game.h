@@ -53,7 +53,7 @@ public slots:
   void catchData(QVector<QVector<Figures>> catched_data,
                  double new_advantage_white, bool is_new_game = false);
 
-  void highlightAttacks(std::list<std::list<Position>> attacks);
+  void highlightAttacks(std::list<Position> attacks);
 
   void highlightMoves(std::list<std::list<Position>> moves);
 
@@ -98,6 +98,6 @@ private:
   double second_advantage_white;
   int size_cell_board;
   std::list<std::list<Position>> highlight_moves;
-  std::list<std::list<Position>> highlight_attacks;
+  std::list<Position> highlight_attacks;
   Position from;
 };
