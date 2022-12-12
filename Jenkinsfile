@@ -17,7 +17,7 @@ pipeline{
         GitUrl = """${sh(
             returnStdout: true,
             script: 'git config --get remote.origin.url'
-        )}""" 
+        )}"""
     }
     triggers {
         githubPush()
@@ -79,7 +79,7 @@ pipeline{
                 sh 'git config --global user.email "ilya.kamckine@yandex.ru"'
                 sh 'git config --global user.name "Jenkins"'
                 sh 'git commit -m \"Jenkins fix: $(git show-branch --no-name $(git symbolic-ref --short HEAD))\"'
-                sh 'git push --set-upstream origin $(git symbolic-ref --short HEAD):main'
+                sh 'git push --set-upstream origin main'
             }
         }
     }
