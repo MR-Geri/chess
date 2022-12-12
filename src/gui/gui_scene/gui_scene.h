@@ -1,12 +1,11 @@
 #pragma once
 
 #include <QGraphicsScene>
-#include <QPoint>
 #include <QMouseEvent>
+#include <QPoint>
 #include <src/utils.h>
 
-class GuiScene : public QGraphicsScene
-{
+class GuiScene : public QGraphicsScene {
   Q_OBJECT
 signals:
   void mousePress(Position position);
@@ -14,4 +13,3 @@ signals:
 protected:
   void mousePressEvent(QGraphicsSceneMouseEvent *event);
 };
-
