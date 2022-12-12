@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.5)
+cmake_minimum_required(VERSION 3.12)
 
 project(chess VERSION 0.1 LANGUAGES CXX)
 
@@ -13,37 +13,18 @@ set(CMAKE_AUTORCC ON)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Test Widgets)
+find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Test Widgets Svg)
 find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Test Widgets)
+find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Svg)
 
 
-set(PROJECT_SOURCES
-    src/main.cpp
-    src/constants.h
-    src/game/game.cpp
-    src/game/game.h
-    src/game/game.ui
-    src/figure/figure.h
-    src/figure/figure.cpp
-    src/gameboard/gameboard.h
-    src/gameboard/gameboard.cpp
-    src/bot/bot.h
-    src/bot/bot.cpp
-    src/chose_type_game_window/chose_type_game_window.h
-    src/chose_type_game_window/chose_type_game_window.cpp
-    src/chose_type_game_window/chose_type_game_window.ui
-    src/menu_window/menu_window.h
-    src/menu_window/menu_window.cpp
-    src/menu_window/menu_window.ui
-    src/settings_window/settings_window.h
-    src/settings_window/settings_window.cpp
-    src/settings_window/settings_window.ui
-    src/game_field_window/game_field_window.h
-    src/game_field_window/game_field_window.cpp
-    src/game_field_window/game_field_window.ui
-    src/liderboard_window/liderboard_window.h
-    src/liderboard_window/liderboard_window.cpp
-    src/liderboard_window/liderboard_window.ui
+file(GLOB chess_src CONFIGURE_DEPENDS 
+  "resource.qrc"
+  "src/*.cpp" "src/*.h" "src/*.ui"
+  "src/*/*.cpp" "src/*/*.h" "src/*/*.ui"
+  "src/*/*/*.cpp" "src/*/*/*.h" "src/*/*/*.ui"
+  "src/*/*/*/*.cpp" "src/*/*/*/*.h" "src/*/*/*/*.ui"
+  "src/*/*/*/*/*.cpp" "src/*/*/*/*/*.h" "src/*/*/*/*/*.ui"
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
@@ -64,7 +45,7 @@ else()
 #    set(ANDROID_PACKAGE_SOURCE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/android")
     else()
         add_executable(chess
-            ${PROJECT_SOURCES}
+            ${chess_src}
         )
     endif()
 endif()
@@ -73,14 +54,7 @@ endif()
 target_link_libraries(chess PRIVATE
     Qt${QT_VERSION_MAJOR}::Widgets
     Qt${QT_VERSION_MAJOR}::Test
-)
-
-set_target_properties(chess PROPERTIES
-    MACOSX_BUNDLE_GUI_IDENTIFIER my.example.com
-    MACOSX_BUNDLE_BUNDLE_VERSION ${PROJECT_VERSION}
-    MACOSX_BUNDLE_SHORT_VERSION_STRING ${PROJECT_VERSION_MAJOR}.${PROJECT_VERSION_MINOR}
-    MACOSX_BUNDLE TRUE
-    WIN32_EXECUTABLE TRUE
+    Qt${QT_VERSION_MAJOR}::Svg
 )
 
 install(TARGETS chess

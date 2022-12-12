@@ -1,4 +1,7 @@
-scripts/
+*.log
+run.sh
+test.sh
+test_and_run.sh
 *.user
 .cache/
 .cmake/
@@ -12,5 +15,5 @@ chess
 chess_autogen/
 tests/tests
 tests/tests_autogen/
-html/
 build-tests-Desktop-Debug/
+.obsidian/

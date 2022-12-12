@@ -1,0 +1,198 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Chess: Исходный файл src/constants.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Chess
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">constants.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="constants_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &lt;QVector&gt;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="constants_8h.html#af1edd7b7fcdf15ab1bff70cf1daf8ae5a7a10b5d68d31711288e1fe0fa17dbf4f">    7</a></span>&#160;<span class="keyword">enum</span> <a class="code" href="constants_8h.html#af1edd7b7fcdf15ab1bff70cf1daf8ae5">Windows</a> { <a class="code" href="constants_8h.html#af1edd7b7fcdf15ab1bff70cf1daf8ae5a798135e850645f5609a36f8c750033b8">GAME_FIELD</a>, <a class="code" href="constants_8h.html#af1edd7b7fcdf15ab1bff70cf1daf8ae5a4c40e60bc71a32b924ce1f08d57f9721">MENU</a>, <a class="code" href="constants_8h.html#af1edd7b7fcdf15ab1bff70cf1daf8ae5ac678338caea29d77d56be2ea56325610">SETTINGS</a>, <a class="code" href="constants_8h.html#af1edd7b7fcdf15ab1bff70cf1daf8ae5aedb219d039d864ce9bb4d5337b378422">LIDERBOARD</a>, <a class="code" href="constants_8h.html#af1edd7b7fcdf15ab1bff70cf1daf8ae5a7a10b5d68d31711288e1fe0fa17dbf4f">EXIT</a> };</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="constants_8h.html#a8b9a4049772aeb1c0e054b0571babc95a9c954bcf443428c80b0f107b3bc48749">   17</a></span>&#160;<span class="keyword">enum</span> <a class="code" href="constants_8h.html#a8b9a4049772aeb1c0e054b0571babc95">StatusMove</a> { <a class="code" href="constants_8h.html#a8b9a4049772aeb1c0e054b0571babc95a9c954bcf443428c80b0f107b3bc48749">DONE</a>, <a class="code" href="constants_8h.html#a8b9a4049772aeb1c0e054b0571babc95a936c4a5547a9360243178f726f6b2715">FAIL</a>, <a class="code" href="constants_8h.html#a8b9a4049772aeb1c0e054b0571babc95a2712d5b0cbf61d5d441224182e9ec1da">GO_OUT</a>, <a class="code" href="constants_8h.html#a8b9a4049772aeb1c0e054b0571babc95a2ff03637351b08d6d3032ff73f842f5f">IMPOSSIBLE_MOVE</a>, <a class="code" href="constants_8h.html#a8b9a4049772aeb1c0e054b0571babc95a3f5c66d2b4eac7ece123eac05867a3c6">MOVE_TO_THROUGH_FIGURE</a> };</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="constants_8h.html#a3da527ca0edbe6a57ea4f61d1e5af434a6bc4b5ac244475b6bd2595d608f18814">   22</a></span>&#160;<span class="keyword">enum</span> <a class="code" href="constants_8h.html#a3da527ca0edbe6a57ea4f61d1e5af434">FiguresPrice</a> { <a class="code" href="constants_8h.html#a3da527ca0edbe6a57ea4f61d1e5af434a157524408d6f0fc4b7dc5e52f3dd3b80">KING</a> = -1, <a class="code" href="constants_8h.html#a3da527ca0edbe6a57ea4f61d1e5af434a1f189a15a64c7c4a1553e876b56c6bf2">PAWN</a> = 1, <a class="code" href="constants_8h.html#a3da527ca0edbe6a57ea4f61d1e5af434ad4a86ac7d51335fcb5756203a88612d6">KNIGHT</a>, <a class="code" href="constants_8h.html#a3da527ca0edbe6a57ea4f61d1e5af434a6bc4b5ac244475b6bd2595d608f18814">BISHOP</a>, <a class="code" href="constants_8h.html#a3da527ca0edbe6a57ea4f61d1e5af434a49b75ad9a5137e805c60f32ed9cc2820">ROOK</a>, <a class="code" href="constants_8h.html#a3da527ca0edbe6a57ea4f61d1e5af434a58561257be7e2f96f82c0fdb51d7f964">QUEEN</a> };</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="constants_8h.html#a80feabe81f30d5b97df91defa4774c0faf77fb67151d0c18d397069ad8c271ba3">   27</a></span>&#160;<span class="keyword">enum</span> <a class="code" href="constants_8h.html#a80feabe81f30d5b97df91defa4774c0f">FigureColor</a> { <a class="code" href="constants_8h.html#a80feabe81f30d5b97df91defa4774c0fa283fc479650da98250635b9c3c0e7e50">WHITE</a>, <a class="code" href="constants_8h.html#a80feabe81f30d5b97df91defa4774c0faf77fb67151d0c18d397069ad8c271ba3">BLACK</a> };</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="constants_8h.html#aad5143bace5bd3ff842dc242706a3682">   29</a></span>&#160;<span class="keyword">enum</span> <a class="code" href="constants_8h.html#aad5143bace5bd3ff842dc242706a3682">Figures</a> {</div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="constants_8h.html#aad5143bace5bd3ff842dc242706a3682ac157bdf0b85a40d2619cbc8bc1ae5fe2">   30</a></span>&#160;  <a class="code" href="constants_8h.html#aad5143bace5bd3ff842dc242706a3682ac157bdf0b85a40d2619cbc8bc1ae5fe2">NONE</a> = 0,</div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="constants_8h.html#aad5143bace5bd3ff842dc242706a3682ac83045cc341040ac96329ace5be3fbdb">   31</a></span>&#160;  <a class="code" href="constants_8h.html#aad5143bace5bd3ff842dc242706a3682ac83045cc341040ac96329ace5be3fbdb">W_KING</a>,</div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="constants_8h.html#aad5143bace5bd3ff842dc242706a3682a1130d3cf82aa779fd073e9c3c83a399e">   32</a></span>&#160;  <a class="code" href="constants_8h.html#aad5143bace5bd3ff842dc242706a3682a1130d3cf82aa779fd073e9c3c83a399e">W_PAWN</a>,</div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="constants_8h.html#aad5143bace5bd3ff842dc242706a3682a33d84a0a4f5db7d9d343681db8677e3c">   33</a></span>&#160;  <a class="code" href="constants_8h.html#aad5143bace5bd3ff842dc242706a3682a33d84a0a4f5db7d9d343681db8677e3c">W_KNIGHT</a>,</div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="constants_8h.html#aad5143bace5bd3ff842dc242706a3682aef8fb6ecdbbc4ed386d74bea6f376961">   34</a></span>&#160;  <a class="code" href="constants_8h.html#aad5143bace5bd3ff842dc242706a3682aef8fb6ecdbbc4ed386d74bea6f376961">W_BISHOP</a>,</div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="constants_8h.html#aad5143bace5bd3ff842dc242706a3682a785fb200910eedbaeb442031a5168a81">   35</a></span>&#160;  <a class="code" href="constants_8h.html#aad5143bace5bd3ff842dc242706a3682a785fb200910eedbaeb442031a5168a81">W_ROOK</a>,</div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="constants_8h.html#aad5143bace5bd3ff842dc242706a3682a81e53c62cfc3ee3eee51a927e1628bdc">   36</a></span>&#160;  <a class="code" href="constants_8h.html#aad5143bace5bd3ff842dc242706a3682a81e53c62cfc3ee3eee51a927e1628bdc">W_QUEEN</a>,</div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="constants_8h.html#aad5143bace5bd3ff842dc242706a3682a9c419a9a2cc88ad479284577858c469e">   37</a></span>&#160;  <a class="code" href="constants_8h.html#aad5143bace5bd3ff842dc242706a3682a9c419a9a2cc88ad479284577858c469e">B_KING</a>,</div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="constants_8h.html#aad5143bace5bd3ff842dc242706a3682ae12c95af2cb74b1426bbcbdf6081dba9">   38</a></span>&#160;  <a class="code" href="constants_8h.html#aad5143bace5bd3ff842dc242706a3682ae12c95af2cb74b1426bbcbdf6081dba9">B_PAWN</a>,</div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="constants_8h.html#aad5143bace5bd3ff842dc242706a3682abf5807e62f8378eb70b1a43d048963bc">   39</a></span>&#160;  <a class="code" href="constants_8h.html#aad5143bace5bd3ff842dc242706a3682abf5807e62f8378eb70b1a43d048963bc">B_KNIGHT</a>,</div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="constants_8h.html#aad5143bace5bd3ff842dc242706a3682a68012127cc230c8fc2038fa80f33e3f9">   40</a></span>&#160;  <a class="code" href="constants_8h.html#aad5143bace5bd3ff842dc242706a3682a68012127cc230c8fc2038fa80f33e3f9">B_BISHOP</a>,</div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="constants_8h.html#aad5143bace5bd3ff842dc242706a3682a81a3808b8084b236b0fcb4ade2967c23">   41</a></span>&#160;  <a class="code" href="constants_8h.html#aad5143bace5bd3ff842dc242706a3682a81a3808b8084b236b0fcb4ade2967c23">B_ROOK</a>,</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  <a class="code" href="constants_8h.html#aad5143bace5bd3ff842dc242706a3682ae835e3319547c8a23a451ab299ace328">B_QUEEN</a></div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="constants_8h.html#aad5143bace5bd3ff842dc242706a3682ae835e3319547c8a23a451ab299ace328">   43</a></span>&#160;};</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="constants_8h.html#a8224c874c4c22423feb0ad8d3eb65a94">   45</a></span>&#160;<span class="keyword">enum</span> <a class="code" href="constants_8h.html#a8224c874c4c22423feb0ad8d3eb65a94">AdvantagePrices</a> {</div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="constants_8h.html#a8224c874c4c22423feb0ad8d3eb65a94a3339134087f54002c67894f563a3e425">   46</a></span>&#160;  <a class="code" href="constants_8h.html#a8224c874c4c22423feb0ad8d3eb65a94a3339134087f54002c67894f563a3e425">ADVANTAGE_PAWN</a> = 100,</div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="constants_8h.html#a8224c874c4c22423feb0ad8d3eb65a94a4edaf43845dcad714b23d10e98a9343b">   47</a></span>&#160;  <a class="code" href="constants_8h.html#a8224c874c4c22423feb0ad8d3eb65a94a4edaf43845dcad714b23d10e98a9343b">ADVANTAGE_KNIGHT</a> = 305,</div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="constants_8h.html#a8224c874c4c22423feb0ad8d3eb65a94ad1b7b69d5010d78dd0068dc399efa84e">   48</a></span>&#160;  <a class="code" href="constants_8h.html#a8224c874c4c22423feb0ad8d3eb65a94ad1b7b69d5010d78dd0068dc399efa84e">ADVANTAGE_BISHOP</a> = 333,</div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="constants_8h.html#a8224c874c4c22423feb0ad8d3eb65a94aa462892fa00f4bf646b90a561f3622f6">   49</a></span>&#160;  <a class="code" href="constants_8h.html#a8224c874c4c22423feb0ad8d3eb65a94aa462892fa00f4bf646b90a561f3622f6">ADVANTAGE_ROOK</a> = 563,</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  <a class="code" href="constants_8h.html#a8224c874c4c22423feb0ad8d3eb65a94af4a2ec72f2b7de5a8fccabe94ff02aee">ADVANTAGE_QUEEN</a> = 950</div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="constants_8h.html#a8224c874c4c22423feb0ad8d3eb65a94af4a2ec72f2b7de5a8fccabe94ff02aee">   51</a></span>&#160;};</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="namespaceTablePositionRatioYX.html">   53</a></span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceTablePositionRatioYX.html">TablePositionRatioYX</a> {</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="keyword">static</span> std::vector&lt;std::vector&lt;float&gt;&gt; WHITE_POSITION_RATIO_KING = {</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    {-3, -4, -4, -5, -5, -4, -4, -3}, {-3, -4, -4, -5, -5, -4, -4, -3},</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    {-3, -4, -4, -5, -5, -4, -4, -3}, {-3, -4, -4, -5, -5, -4, -4, -3},</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    {-2, -3, -3, -4, -4, -3, -3, -2}, {-1, -2, -2, -2, -2, -2, -2, -1},</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    {2, 2, 0, 0, 0, 0, 0, 2, 2},      {2, 3, 1, 0, 0, 1, 3, 2},</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;};</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="keyword">static</span> std::vector&lt;std::vector&lt;float&gt;&gt; WHITE_POSITION_RATIO_PAWN = {</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    {0, 0, 0, 0, 0, 0, 0, 0},       {5, 5, 5, 5, 5, 5, 5, 5},</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    {1, 1, 2, 3, 3, 2, 1, 1},       {0.5, 0.5, 1, 2.5, 2.5, 1, 0.5, 0.5},</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    {0, 0, 0, 2, 2, 0, 0, 0},       {0.5, -0.5, -1, 0, 0, -1, -0.5, -0.5},</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    {0.5, 1, 1, -2, -2, 1, 1, 0.5}, {0, 0, 0, 0, 0, 0, 0, 0},</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;};</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="keyword">static</span> std::vector&lt;std::vector&lt;float&gt;&gt; WHITE_POSITION_RATIO_KNIGHT = {</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    {-5, -4, -3, -3, -3, -3, -4, -5}, {-4, -2, 0, 0, 0, 0, -2, -4},</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    {-3, 0, 1, 1.5, 1.5, 1, 0, -3},   {-3, 0.5, 1.5, 2, 2, 1.5, 0.5, -3},</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    {-3, 0, 1.5, 2, 2, 1.5, 0, -3},   {-3, 0.5, 1, 1.5, 1.5, 1, 0.5, -3},</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    {-4, -2, 0, 0.5, 0.5, 0, -2, -4}, {-5, -4, -3, -3, -3, -3, -4, -5},</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;};</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="keyword">static</span> std::vector&lt;std::vector&lt;float&gt;&gt; WHITE_POSITION_RATIO_BISHOP = {</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    {-2, -1, -1, -1, -1, -1, -1, -2}, {-1, 0, 0, 0, 0, 0, 0, -1},</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    {-1, 0, 0.5, 1, 1, 0.5, 0, -1},   {-1, 0.5, 0.5, 1, 1, 0.5, 0.5, -1},</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    {-1, 0, 1, 1, 1, 1, 0, -1},       {-1, 1, 1, 1, 1, 1, 1, -1},</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    {-1, 0.5, 0, 0, 0, 0, 0.5, -1},   {-2, -1, -1, -1, -1, -1, -1, -2},</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;};</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="keyword">static</span> std::vector&lt;std::vector&lt;float&gt;&gt; WHITE_POSITION_RATIO_ROOK = {</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    {0, 0, 0, 0, 0, 0, 0, 0},       {0.5, 1, 1, 1, 1, 1, 1, 0.5},</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    {-0.5, 0, 0, 0, 0, 0, 0, -0.5}, {-0.5, 0, 0, 0, 0, 0, 0, -0.5},</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    {-0.5, 0, 0, 0, 0, 0, 0, -0.5}, {-0.5, 0, 0, 0, 0, 0, 0, -0.5},</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    {-0.5, 0, 0, 0, 0, 0, 0, -0.5}, {0, 0, 0, 0.5, 0.5, 0, 0, 0},</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;};</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="keyword">static</span> std::vector&lt;std::vector&lt;float&gt;&gt; WHITE_POSITION_RATIO_QUEEN = {</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    {-2, -1, -1, -0.5, -0.5, -1, -1, -2},</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    {-1, 0, 0, 0, 0, 0, 0, -1},</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    {-1, 0, 0.5, 0.5, 0.5, 0.5, 0, -1},</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    {-0.5, 0, 0.5, 0.5, 0.5, 0.5, 0, -0.5},</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    {0, 0, 0.5, 0.5, 0.5, 0.5, 0, -0.5},</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    {-1, 0.5, 0.5, 0.5, 0.5, 0.5, 0, -1},</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    {-1, 0, 0.5, 0, 0, 0, 0, -1},</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    {-2, -1, -1, -0.5, -0.5, -1, -1, -2},</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;};</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;} <span class="comment">// namespace TablePositionRatioYX</span></div>
+<div class="ttc" id="aconstants_8h_html_a3da527ca0edbe6a57ea4f61d1e5af434"><div class="ttname"><a href="constants_8h.html#a3da527ca0edbe6a57ea4f61d1e5af434">FiguresPrice</a></div><div class="ttdeci">FiguresPrice</div><div class="ttdoc">Перечисление, содержащее веса фигур.</div><div class="ttdef"><b>Definition:</b> constants.h:22</div></div>
+<div class="ttc" id="aconstants_8h_html_a3da527ca0edbe6a57ea4f61d1e5af434a157524408d6f0fc4b7dc5e52f3dd3b80"><div class="ttname"><a href="constants_8h.html#a3da527ca0edbe6a57ea4f61d1e5af434a157524408d6f0fc4b7dc5e52f3dd3b80">KING</a></div><div class="ttdeci">@ KING</div><div class="ttdef"><b>Definition:</b> constants.h:22</div></div>
+<div class="ttc" id="aconstants_8h_html_a3da527ca0edbe6a57ea4f61d1e5af434a1f189a15a64c7c4a1553e876b56c6bf2"><div class="ttname"><a href="constants_8h.html#a3da527ca0edbe6a57ea4f61d1e5af434a1f189a15a64c7c4a1553e876b56c6bf2">PAWN</a></div><div class="ttdeci">@ PAWN</div><div class="ttdef"><b>Definition:</b> constants.h:22</div></div>
+<div class="ttc" id="aconstants_8h_html_a3da527ca0edbe6a57ea4f61d1e5af434a49b75ad9a5137e805c60f32ed9cc2820"><div class="ttname"><a href="constants_8h.html#a3da527ca0edbe6a57ea4f61d1e5af434a49b75ad9a5137e805c60f32ed9cc2820">ROOK</a></div><div class="ttdeci">@ ROOK</div><div class="ttdef"><b>Definition:</b> constants.h:22</div></div>
+<div class="ttc" id="aconstants_8h_html_a3da527ca0edbe6a57ea4f61d1e5af434a58561257be7e2f96f82c0fdb51d7f964"><div class="ttname"><a href="constants_8h.html#a3da527ca0edbe6a57ea4f61d1e5af434a58561257be7e2f96f82c0fdb51d7f964">QUEEN</a></div><div class="ttdeci">@ QUEEN</div><div class="ttdef"><b>Definition:</b> constants.h:22</div></div>
+<div class="ttc" id="aconstants_8h_html_a3da527ca0edbe6a57ea4f61d1e5af434a6bc4b5ac244475b6bd2595d608f18814"><div class="ttname"><a href="constants_8h.html#a3da527ca0edbe6a57ea4f61d1e5af434a6bc4b5ac244475b6bd2595d608f18814">BISHOP</a></div><div class="ttdeci">@ BISHOP</div><div class="ttdef"><b>Definition:</b> constants.h:22</div></div>
+<div class="ttc" id="aconstants_8h_html_a3da527ca0edbe6a57ea4f61d1e5af434ad4a86ac7d51335fcb5756203a88612d6"><div class="ttname"><a href="constants_8h.html#a3da527ca0edbe6a57ea4f61d1e5af434ad4a86ac7d51335fcb5756203a88612d6">KNIGHT</a></div><div class="ttdeci">@ KNIGHT</div><div class="ttdef"><b>Definition:</b> constants.h:22</div></div>
+<div class="ttc" id="aconstants_8h_html_a80feabe81f30d5b97df91defa4774c0f"><div class="ttname"><a href="constants_8h.html#a80feabe81f30d5b97df91defa4774c0f">FigureColor</a></div><div class="ttdeci">FigureColor</div><div class="ttdoc">Перечисление, содержащее цвета фигур.</div><div class="ttdef"><b>Definition:</b> constants.h:27</div></div>
+<div class="ttc" id="aconstants_8h_html_a80feabe81f30d5b97df91defa4774c0fa283fc479650da98250635b9c3c0e7e50"><div class="ttname"><a href="constants_8h.html#a80feabe81f30d5b97df91defa4774c0fa283fc479650da98250635b9c3c0e7e50">WHITE</a></div><div class="ttdeci">@ WHITE</div><div class="ttdef"><b>Definition:</b> constants.h:27</div></div>
+<div class="ttc" id="aconstants_8h_html_a80feabe81f30d5b97df91defa4774c0faf77fb67151d0c18d397069ad8c271ba3"><div class="ttname"><a href="constants_8h.html#a80feabe81f30d5b97df91defa4774c0faf77fb67151d0c18d397069ad8c271ba3">BLACK</a></div><div class="ttdeci">@ BLACK</div><div class="ttdef"><b>Definition:</b> constants.h:27</div></div>
+<div class="ttc" id="aconstants_8h_html_a8224c874c4c22423feb0ad8d3eb65a94"><div class="ttname"><a href="constants_8h.html#a8224c874c4c22423feb0ad8d3eb65a94">AdvantagePrices</a></div><div class="ttdeci">AdvantagePrices</div><div class="ttdef"><b>Definition:</b> constants.h:45</div></div>
+<div class="ttc" id="aconstants_8h_html_a8224c874c4c22423feb0ad8d3eb65a94a3339134087f54002c67894f563a3e425"><div class="ttname"><a href="constants_8h.html#a8224c874c4c22423feb0ad8d3eb65a94a3339134087f54002c67894f563a3e425">ADVANTAGE_PAWN</a></div><div class="ttdeci">@ ADVANTAGE_PAWN</div><div class="ttdef"><b>Definition:</b> constants.h:46</div></div>
+<div class="ttc" id="aconstants_8h_html_a8224c874c4c22423feb0ad8d3eb65a94a4edaf43845dcad714b23d10e98a9343b"><div class="ttname"><a href="constants_8h.html#a8224c874c4c22423feb0ad8d3eb65a94a4edaf43845dcad714b23d10e98a9343b">ADVANTAGE_KNIGHT</a></div><div class="ttdeci">@ ADVANTAGE_KNIGHT</div><div class="ttdef"><b>Definition:</b> constants.h:47</div></div>
+<div class="ttc" id="aconstants_8h_html_a8224c874c4c22423feb0ad8d3eb65a94aa462892fa00f4bf646b90a561f3622f6"><div class="ttname"><a href="constants_8h.html#a8224c874c4c22423feb0ad8d3eb65a94aa462892fa00f4bf646b90a561f3622f6">ADVANTAGE_ROOK</a></div><div class="ttdeci">@ ADVANTAGE_ROOK</div><div class="ttdef"><b>Definition:</b> constants.h:49</div></div>
+<div class="ttc" id="aconstants_8h_html_a8224c874c4c22423feb0ad8d3eb65a94ad1b7b69d5010d78dd0068dc399efa84e"><div class="ttname"><a href="constants_8h.html#a8224c874c4c22423feb0ad8d3eb65a94ad1b7b69d5010d78dd0068dc399efa84e">ADVANTAGE_BISHOP</a></div><div class="ttdeci">@ ADVANTAGE_BISHOP</div><div class="ttdef"><b>Definition:</b> constants.h:48</div></div>
+<div class="ttc" id="aconstants_8h_html_a8224c874c4c22423feb0ad8d3eb65a94af4a2ec72f2b7de5a8fccabe94ff02aee"><div class="ttname"><a href="constants_8h.html#a8224c874c4c22423feb0ad8d3eb65a94af4a2ec72f2b7de5a8fccabe94ff02aee">ADVANTAGE_QUEEN</a></div><div class="ttdeci">@ ADVANTAGE_QUEEN</div><div class="ttdef"><b>Definition:</b> constants.h:50</div></div>
+<div class="ttc" id="aconstants_8h_html_a8b9a4049772aeb1c0e054b0571babc95"><div class="ttname"><a href="constants_8h.html#a8b9a4049772aeb1c0e054b0571babc95">StatusMove</a></div><div class="ttdeci">StatusMove</div><div class="ttdoc">Перечисление, содержащее значение, возвращаемое функцией move.   DONE - перемещение выполнено   FAIL ...</div><div class="ttdef"><b>Definition:</b> constants.h:17</div></div>
+<div class="ttc" id="aconstants_8h_html_a8b9a4049772aeb1c0e054b0571babc95a2712d5b0cbf61d5d441224182e9ec1da"><div class="ttname"><a href="constants_8h.html#a8b9a4049772aeb1c0e054b0571babc95a2712d5b0cbf61d5d441224182e9ec1da">GO_OUT</a></div><div class="ttdeci">@ GO_OUT</div><div class="ttdef"><b>Definition:</b> constants.h:17</div></div>
+<div class="ttc" id="aconstants_8h_html_a8b9a4049772aeb1c0e054b0571babc95a2ff03637351b08d6d3032ff73f842f5f"><div class="ttname"><a href="constants_8h.html#a8b9a4049772aeb1c0e054b0571babc95a2ff03637351b08d6d3032ff73f842f5f">IMPOSSIBLE_MOVE</a></div><div class="ttdeci">@ IMPOSSIBLE_MOVE</div><div class="ttdef"><b>Definition:</b> constants.h:17</div></div>
+<div class="ttc" id="aconstants_8h_html_a8b9a4049772aeb1c0e054b0571babc95a3f5c66d2b4eac7ece123eac05867a3c6"><div class="ttname"><a href="constants_8h.html#a8b9a4049772aeb1c0e054b0571babc95a3f5c66d2b4eac7ece123eac05867a3c6">MOVE_TO_THROUGH_FIGURE</a></div><div class="ttdeci">@ MOVE_TO_THROUGH_FIGURE</div><div class="ttdef"><b>Definition:</b> constants.h:17</div></div>
+<div class="ttc" id="aconstants_8h_html_a8b9a4049772aeb1c0e054b0571babc95a936c4a5547a9360243178f726f6b2715"><div class="ttname"><a href="constants_8h.html#a8b9a4049772aeb1c0e054b0571babc95a936c4a5547a9360243178f726f6b2715">FAIL</a></div><div class="ttdeci">@ FAIL</div><div class="ttdef"><b>Definition:</b> constants.h:17</div></div>
+<div class="ttc" id="aconstants_8h_html_a8b9a4049772aeb1c0e054b0571babc95a9c954bcf443428c80b0f107b3bc48749"><div class="ttname"><a href="constants_8h.html#a8b9a4049772aeb1c0e054b0571babc95a9c954bcf443428c80b0f107b3bc48749">DONE</a></div><div class="ttdeci">@ DONE</div><div class="ttdef"><b>Definition:</b> constants.h:17</div></div>
+<div class="ttc" id="aconstants_8h_html_aad5143bace5bd3ff842dc242706a3682"><div class="ttname"><a href="constants_8h.html#aad5143bace5bd3ff842dc242706a3682">Figures</a></div><div class="ttdeci">Figures</div><div class="ttdef"><b>Definition:</b> constants.h:29</div></div>
+<div class="ttc" id="aconstants_8h_html_aad5143bace5bd3ff842dc242706a3682a1130d3cf82aa779fd073e9c3c83a399e"><div class="ttname"><a href="constants_8h.html#aad5143bace5bd3ff842dc242706a3682a1130d3cf82aa779fd073e9c3c83a399e">W_PAWN</a></div><div class="ttdeci">@ W_PAWN</div><div class="ttdef"><b>Definition:</b> constants.h:32</div></div>
+<div class="ttc" id="aconstants_8h_html_aad5143bace5bd3ff842dc242706a3682a33d84a0a4f5db7d9d343681db8677e3c"><div class="ttname"><a href="constants_8h.html#aad5143bace5bd3ff842dc242706a3682a33d84a0a4f5db7d9d343681db8677e3c">W_KNIGHT</a></div><div class="ttdeci">@ W_KNIGHT</div><div class="ttdef"><b>Definition:</b> constants.h:33</div></div>
+<div class="ttc" id="aconstants_8h_html_aad5143bace5bd3ff842dc242706a3682a68012127cc230c8fc2038fa80f33e3f9"><div class="ttname"><a href="constants_8h.html#aad5143bace5bd3ff842dc242706a3682a68012127cc230c8fc2038fa80f33e3f9">B_BISHOP</a></div><div class="ttdeci">@ B_BISHOP</div><div class="ttdef"><b>Definition:</b> constants.h:40</div></div>
+<div class="ttc" id="aconstants_8h_html_aad5143bace5bd3ff842dc242706a3682a785fb200910eedbaeb442031a5168a81"><div class="ttname"><a href="constants_8h.html#aad5143bace5bd3ff842dc242706a3682a785fb200910eedbaeb442031a5168a81">W_ROOK</a></div><div class="ttdeci">@ W_ROOK</div><div class="ttdef"><b>Definition:</b> constants.h:35</div></div>
+<div class="ttc" id="aconstants_8h_html_aad5143bace5bd3ff842dc242706a3682a81a3808b8084b236b0fcb4ade2967c23"><div class="ttname"><a href="constants_8h.html#aad5143bace5bd3ff842dc242706a3682a81a3808b8084b236b0fcb4ade2967c23">B_ROOK</a></div><div class="ttdeci">@ B_ROOK</div><div class="ttdef"><b>Definition:</b> constants.h:41</div></div>
+<div class="ttc" id="aconstants_8h_html_aad5143bace5bd3ff842dc242706a3682a81e53c62cfc3ee3eee51a927e1628bdc"><div class="ttname"><a href="constants_8h.html#aad5143bace5bd3ff842dc242706a3682a81e53c62cfc3ee3eee51a927e1628bdc">W_QUEEN</a></div><div class="ttdeci">@ W_QUEEN</div><div class="ttdef"><b>Definition:</b> constants.h:36</div></div>
+<div class="ttc" id="aconstants_8h_html_aad5143bace5bd3ff842dc242706a3682a9c419a9a2cc88ad479284577858c469e"><div class="ttname"><a href="constants_8h.html#aad5143bace5bd3ff842dc242706a3682a9c419a9a2cc88ad479284577858c469e">B_KING</a></div><div class="ttdeci">@ B_KING</div><div class="ttdef"><b>Definition:</b> constants.h:37</div></div>
+<div class="ttc" id="aconstants_8h_html_aad5143bace5bd3ff842dc242706a3682abf5807e62f8378eb70b1a43d048963bc"><div class="ttname"><a href="constants_8h.html#aad5143bace5bd3ff842dc242706a3682abf5807e62f8378eb70b1a43d048963bc">B_KNIGHT</a></div><div class="ttdeci">@ B_KNIGHT</div><div class="ttdef"><b>Definition:</b> constants.h:39</div></div>
+<div class="ttc" id="aconstants_8h_html_aad5143bace5bd3ff842dc242706a3682ac157bdf0b85a40d2619cbc8bc1ae5fe2"><div class="ttname"><a href="constants_8h.html#aad5143bace5bd3ff842dc242706a3682ac157bdf0b85a40d2619cbc8bc1ae5fe2">NONE</a></div><div class="ttdeci">@ NONE</div><div class="ttdef"><b>Definition:</b> constants.h:30</div></div>
+<div class="ttc" id="aconstants_8h_html_aad5143bace5bd3ff842dc242706a3682ac83045cc341040ac96329ace5be3fbdb"><div class="ttname"><a href="constants_8h.html#aad5143bace5bd3ff842dc242706a3682ac83045cc341040ac96329ace5be3fbdb">W_KING</a></div><div class="ttdeci">@ W_KING</div><div class="ttdef"><b>Definition:</b> constants.h:31</div></div>
+<div class="ttc" id="aconstants_8h_html_aad5143bace5bd3ff842dc242706a3682ae12c95af2cb74b1426bbcbdf6081dba9"><div class="ttname"><a href="constants_8h.html#aad5143bace5bd3ff842dc242706a3682ae12c95af2cb74b1426bbcbdf6081dba9">B_PAWN</a></div><div class="ttdeci">@ B_PAWN</div><div class="ttdef"><b>Definition:</b> constants.h:38</div></div>
+<div class="ttc" id="aconstants_8h_html_aad5143bace5bd3ff842dc242706a3682ae835e3319547c8a23a451ab299ace328"><div class="ttname"><a href="constants_8h.html#aad5143bace5bd3ff842dc242706a3682ae835e3319547c8a23a451ab299ace328">B_QUEEN</a></div><div class="ttdeci">@ B_QUEEN</div><div class="ttdef"><b>Definition:</b> constants.h:42</div></div>
+<div class="ttc" id="aconstants_8h_html_aad5143bace5bd3ff842dc242706a3682aef8fb6ecdbbc4ed386d74bea6f376961"><div class="ttname"><a href="constants_8h.html#aad5143bace5bd3ff842dc242706a3682aef8fb6ecdbbc4ed386d74bea6f376961">W_BISHOP</a></div><div class="ttdeci">@ W_BISHOP</div><div class="ttdef"><b>Definition:</b> constants.h:34</div></div>
+<div class="ttc" id="aconstants_8h_html_af1edd7b7fcdf15ab1bff70cf1daf8ae5"><div class="ttname"><a href="constants_8h.html#af1edd7b7fcdf15ab1bff70cf1daf8ae5">Windows</a></div><div class="ttdeci">Windows</div><div class="ttdoc">Перечисление, содержащее окна приложения.</div><div class="ttdef"><b>Definition:</b> constants.h:7</div></div>
+<div class="ttc" id="aconstants_8h_html_af1edd7b7fcdf15ab1bff70cf1daf8ae5a4c40e60bc71a32b924ce1f08d57f9721"><div class="ttname"><a href="constants_8h.html#af1edd7b7fcdf15ab1bff70cf1daf8ae5a4c40e60bc71a32b924ce1f08d57f9721">MENU</a></div><div class="ttdeci">@ MENU</div><div class="ttdef"><b>Definition:</b> constants.h:7</div></div>
+<div class="ttc" id="aconstants_8h_html_af1edd7b7fcdf15ab1bff70cf1daf8ae5a798135e850645f5609a36f8c750033b8"><div class="ttname"><a href="constants_8h.html#af1edd7b7fcdf15ab1bff70cf1daf8ae5a798135e850645f5609a36f8c750033b8">GAME_FIELD</a></div><div class="ttdeci">@ GAME_FIELD</div><div class="ttdef"><b>Definition:</b> constants.h:7</div></div>
+<div class="ttc" id="aconstants_8h_html_af1edd7b7fcdf15ab1bff70cf1daf8ae5a7a10b5d68d31711288e1fe0fa17dbf4f"><div class="ttname"><a href="constants_8h.html#af1edd7b7fcdf15ab1bff70cf1daf8ae5a7a10b5d68d31711288e1fe0fa17dbf4f">EXIT</a></div><div class="ttdeci">@ EXIT</div><div class="ttdef"><b>Definition:</b> constants.h:7</div></div>
+<div class="ttc" id="aconstants_8h_html_af1edd7b7fcdf15ab1bff70cf1daf8ae5ac678338caea29d77d56be2ea56325610"><div class="ttname"><a href="constants_8h.html#af1edd7b7fcdf15ab1bff70cf1daf8ae5ac678338caea29d77d56be2ea56325610">SETTINGS</a></div><div class="ttdeci">@ SETTINGS</div><div class="ttdef"><b>Definition:</b> constants.h:7</div></div>
+<div class="ttc" id="aconstants_8h_html_af1edd7b7fcdf15ab1bff70cf1daf8ae5aedb219d039d864ce9bb4d5337b378422"><div class="ttname"><a href="constants_8h.html#af1edd7b7fcdf15ab1bff70cf1daf8ae5aedb219d039d864ce9bb4d5337b378422">LIDERBOARD</a></div><div class="ttdeci">@ LIDERBOARD</div><div class="ttdef"><b>Definition:</b> constants.h:7</div></div>
+<div class="ttc" id="anamespaceTablePositionRatioYX_html"><div class="ttname"><a href="namespaceTablePositionRatioYX.html">TablePositionRatioYX</a></div><div class="ttdef"><b>Definition:</b> constants.h:53</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

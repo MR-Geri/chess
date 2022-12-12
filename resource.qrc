@@ -1,0 +1,17 @@
+<RCC>
+    <qresource prefix="/">
+        <file>images/green_chess_board.svg</file>
+        <file>images/figures/1.svg</file>
+        <file>images/figures/2.svg</file>
+        <file>images/figures/3.svg</file>
+        <file>images/figures/4.svg</file>
+        <file>images/figures/5.svg</file>
+        <file>images/figures/6.svg</file>
+        <file>images/figures/7.svg</file>
+        <file>images/figures/8.svg</file>
+        <file>images/figures/9.svg</file>
+        <file>images/figures/10.svg</file>
+        <file>images/figures/11.svg</file>
+        <file>images/figures/12.svg</file>
+    </qresource>
+</RCC>

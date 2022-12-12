@@ -1,0 +1,403 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Chess: Класс ScreenGame</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Chess
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-slots">Открытые слоты</a> &#124;
+<a href="#signals">Сигналы</a> &#124;
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="classScreenGame-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Класс ScreenGame</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Окно игры.  
+ <a href="classScreenGame.html#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="screen__game_8h_source.html">screen_game.h</a>&gt;</code></p>
+<div class="dynheader">
+Граф наследования:ScreenGame:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classScreenGame__inherit__graph.svg" width="164" height="272"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+Граф связей класса ScreenGame:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classScreenGame__coll__graph.svg" width="164" height="272"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-slots"></a>
+Открытые слоты</h2></td></tr>
+<tr class="memitem:a0ebcf1f50bb3cd0bee1d2b4821f0b47a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classScreenGame.html#a0ebcf1f50bb3cd0bee1d2b4821f0b47a">catchData</a> (QVector&lt; QVector&lt; <a class="el" href="constants_8h.html#aad5143bace5bd3ff842dc242706a3682">Figures</a> &gt;&gt; catched_data, double new_advantage_white, bool is_new_game=false)</td></tr>
+<tr class="memdesc:a0ebcf1f50bb3cd0bee1d2b4821f0b47a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Получает данные для отрисовки из логики.  <a href="classScreenGame.html#a0ebcf1f50bb3cd0bee1d2b4821f0b47a">Подробнее...</a><br /></td></tr>
+<tr class="separator:a0ebcf1f50bb3cd0bee1d2b4821f0b47a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a68ebc2494910e0a92ecf7d2a3d11691c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classScreenGame.html#a68ebc2494910e0a92ecf7d2a3d11691c">highlightAttacks</a> (std::list&lt; <a class="el" href="classPosition.html">Position</a> &gt; attacks)</td></tr>
+<tr class="separator:a68ebc2494910e0a92ecf7d2a3d11691c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa488a410a92be2a5e517119f8611d218"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classScreenGame.html#aa488a410a92be2a5e517119f8611d218">highlightMoves</a> (std::list&lt; std::list&lt; <a class="el" href="classPosition.html">Position</a> &gt;&gt; moves)</td></tr>
+<tr class="separator:aa488a410a92be2a5e517119f8611d218"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="signals"></a>
+Сигналы</h2></td></tr>
+<tr class="memitem:af814ece97f9910fb3477d576ae35e145"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classScreenGame.html#af814ece97f9910fb3477d576ae35e145">changeWindow</a> (int on_window)</td></tr>
+<tr class="memdesc:af814ece97f9910fb3477d576ae35e145"><td class="mdescLeft">&#160;</td><td class="mdescRight">Показывает менеджеру окон на какое окно нужно перейти.  <a href="classScreenGame.html#af814ece97f9910fb3477d576ae35e145">Подробнее...</a><br /></td></tr>
+<tr class="separator:af814ece97f9910fb3477d576ae35e145"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7c78c25f7448752e5d901d434f7d813"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classScreenGame.html#ac7c78c25f7448752e5d901d434f7d813">figureMovedBoard</a> (<a class="el" href="classPosition.html">Position</a> from_board, <a class="el" href="classPosition.html">Position</a> delta_board)</td></tr>
+<tr class="memdesc:ac7c78c25f7448752e5d901d434f7d813"><td class="mdescLeft">&#160;</td><td class="mdescRight">Показывает откуда и куда была перемещена фигура в координатах поля. (Строка, столбец)  <a href="classScreenGame.html#ac7c78c25f7448752e5d901d434f7d813">Подробнее...</a><br /></td></tr>
+<tr class="separator:ac7c78c25f7448752e5d901d434f7d813"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac6f16eced5239c184a16922ac16aadfe"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classScreenGame.html#ac6f16eced5239c184a16922ac16aadfe">newGameFromGame</a> ()</td></tr>
+<tr class="separator:ac6f16eced5239c184a16922ac16aadfe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26fc8b68d9989640c20be7ac937e4823"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classScreenGame.html#a26fc8b68d9989640c20be7ac937e4823">pressGuiFigure</a> (<a class="el" href="classPosition.html">Position</a> position)</td></tr>
+<tr class="separator:a26fc8b68d9989640c20be7ac937e4823"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:a510bde54887671e51185e19f00d8b7f4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classScreenGame.html#a510bde54887671e51185e19f00d8b7f4">ScreenGame</a> (QWidget *parent=nullptr)</td></tr>
+<tr class="separator:a510bde54887671e51185e19f00d8b7f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae3be2b72300f87330ffc78b5bbbfc009"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classScreenGame.html#ae3be2b72300f87330ffc78b5bbbfc009">~ScreenGame</a> ()</td></tr>
+<tr class="separator:ae3be2b72300f87330ffc78b5bbbfc009"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Окно игры. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">*game_scene</td><td>указатель на объект сцены игры (поле). </td></tr>
+  </table>
+  </dd>
+</dl>
+</div><h2 class="groupheader">Конструктор(ы)</h2>
+<a id="a510bde54887671e51185e19f00d8b7f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a510bde54887671e51185e19f00d8b7f4">&#9670;&nbsp;</a></span>ScreenGame()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ScreenGame::ScreenGame </td>
+          <td>(</td>
+          <td class="paramtype">QWidget *&#160;</td>
+          <td class="paramname"><em>parent</em> = <code>nullptr</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae3be2b72300f87330ffc78b5bbbfc009"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae3be2b72300f87330ffc78b5bbbfc009">&#9670;&nbsp;</a></span>~ScreenGame()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ScreenGame::~ScreenGame </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="a0ebcf1f50bb3cd0bee1d2b4821f0b47a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ebcf1f50bb3cd0bee1d2b4821f0b47a">&#9670;&nbsp;</a></span>catchData</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ScreenGame::catchData </td>
+          <td>(</td>
+          <td class="paramtype">QVector&lt; QVector&lt; <a class="el" href="constants_8h.html#aad5143bace5bd3ff842dc242706a3682">Figures</a> &gt;&gt;&#160;</td>
+          <td class="paramname"><em>catched_data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>new_advantage_white</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>is_new_game</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Получает данные для отрисовки из логики. </p>
+
+</div>
+</div>
+<a id="af814ece97f9910fb3477d576ae35e145"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af814ece97f9910fb3477d576ae35e145">&#9670;&nbsp;</a></span>changeWindow</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ScreenGame::changeWindow </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>on_window</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">signal</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Показывает менеджеру окон на какое окно нужно перейти. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">on_window</td><td>окно на которое нужно переместиться. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ac7c78c25f7448752e5d901d434f7d813"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac7c78c25f7448752e5d901d434f7d813">&#9670;&nbsp;</a></span>figureMovedBoard</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ScreenGame::figureMovedBoard </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classPosition.html">Position</a>&#160;</td>
+          <td class="paramname"><em>from_board</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classPosition.html">Position</a>&#160;</td>
+          <td class="paramname"><em>delta_board</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">signal</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Показывает откуда и куда была перемещена фигура в координатах поля. (Строка, столбец) </p>
+
+</div>
+</div>
+<a id="a68ebc2494910e0a92ecf7d2a3d11691c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a68ebc2494910e0a92ecf7d2a3d11691c">&#9670;&nbsp;</a></span>highlightAttacks</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ScreenGame::highlightAttacks </td>
+          <td>(</td>
+          <td class="paramtype">std::list&lt; <a class="el" href="classPosition.html">Position</a> &gt;&#160;</td>
+          <td class="paramname"><em>attacks</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa488a410a92be2a5e517119f8611d218"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa488a410a92be2a5e517119f8611d218">&#9670;&nbsp;</a></span>highlightMoves</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ScreenGame::highlightMoves </td>
+          <td>(</td>
+          <td class="paramtype">std::list&lt; std::list&lt; <a class="el" href="classPosition.html">Position</a> &gt;&gt;&#160;</td>
+          <td class="paramname"><em>moves</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac6f16eced5239c184a16922ac16aadfe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac6f16eced5239c184a16922ac16aadfe">&#9670;&nbsp;</a></span>newGameFromGame</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ScreenGame::newGameFromGame </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">signal</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a26fc8b68d9989640c20be7ac937e4823"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a26fc8b68d9989640c20be7ac937e4823">&#9670;&nbsp;</a></span>pressGuiFigure</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ScreenGame::pressGuiFigure </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classPosition.html">Position</a>&#160;</td>
+          <td class="paramname"><em>position</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">signal</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>Объявления и описания членов классов находятся в файлах:<ul>
+<li>src/gui/screen_game/<a class="el" href="screen__game_8h_source.html">screen_game.h</a></li>
+<li>src/gui/screen_game/<a class="el" href="screen__game_8cpp.html">screen_game.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>
