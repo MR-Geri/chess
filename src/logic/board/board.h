@@ -30,6 +30,8 @@ public:
    */
   void move(Position from, Position to);
 
+  Figures calculateFigureAfterTaking(Position from, Position to);
+
   /**
    * @brief Устанавливает фигуру на доску.
    * @param figure ссылка на фигуру, которую нужно разместить на поле.

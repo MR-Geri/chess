@@ -55,7 +55,7 @@ public slots:
 
 signals:
   void sendDataToGui(QVector<QVector<Figures>> data, double advantage_white, bool is_new_game);
-  void highlightGuiAttacks(std::list<Position> attacks);
+  void highlightGuiAttacks(std::list<std::pair<Position, Figures>> attacks);
   void highlightGuiMoves(std::list<std::list<Position>> moves);
 
 private:
