@@ -1,5 +1,6 @@
 #pragma once
 
+#include <QGraphicsEllipseItem>
 #include <QGraphicsItemAnimation>
 #include <QGraphicsScene>
 #include <QGraphicsSvgItem>
@@ -9,9 +10,9 @@
 #include <QTimeLine>
 #include <QWidget>
 #include <src/constants.h>
+#include <src/gui/gui_scene/gui_scene.h>
 #include <src/gui/screen_game/gui_advantage_bar.h>
 #include <src/gui/screen_game/gui_figure.h>
-#include <src/gui/gui_scene/gui_scene.h>
 
 namespace Ui {
 class ScreenGame;

@@ -1,4 +1,7 @@
 var searchData=
 [
-  ['impossible_5fmove_64',['IMPOSSIBLE_MOVE',['../constants_8h.html#a8b9a4049772aeb1c0e054b0571babc95a2ff03637351b08d6d3032ff73f842f5f',1,'constants.h']]]
+  ['highlightattacks_70',['highlightAttacks',['../classScreenGame.html#a68ebc2494910e0a92ecf7d2a3d11691c',1,'ScreenGame']]],
+  ['highlightguiattacks_71',['highlightGuiAttacks',['../classMainWindow.html#ab6e33cf67bc3720db69c87312956f03e',1,'MainWindow']]],
+  ['highlightguimoves_72',['highlightGuiMoves',['../classMainWindow.html#a6989d260045e823b95a98f3d619cfae6',1,'MainWindow']]],
+  ['highlightmoves_73',['highlightMoves',['../classScreenGame.html#aa488a410a92be2a5e517119f8611d218',1,'ScreenGame']]]
 ];

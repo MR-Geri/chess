@@ -1,4 +1,4 @@
 <map id="Position" name="Position">
-<area shape="rect" id="node1" title="Позиция на поле (координаты)." alt="" coords="25,131,115,252"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,5,135,83"/>
+<area shape="rect" id="node1" title="Позиция на поле (координаты)." alt="" coords="22,131,135,267"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,5,152,83"/>
 </map>

@@ -1,12 +1,13 @@
 var searchData=
 [
-  ['_7eboard_245',['~Board',['../classBoard.html#af73f45730119a1fd8f6670f53f959e68',1,'Board']]],
-  ['_7eengine_246',['~Engine',['../classEngine.html#a8ef7030a089ecb30bbfcb9e43094717a',1,'Engine']]],
-  ['_7eguiadvantagebar_247',['~GuiAdvantageBar',['../classGuiAdvantageBar.html#a2ff1e8baa73fd14675cd3ff991514a33',1,'GuiAdvantageBar']]],
-  ['_7eguifigure_248',['~GuiFigure',['../classGuiFigure.html#a22b5833103c8100ab6cac21fa8590259',1,'GuiFigure']]],
-  ['_7emainwindow_249',['~MainWindow',['../classMainWindow.html#ae98d00a93bc118200eeef9f9bba1dba7',1,'MainWindow']]],
-  ['_7escreengame_250',['~ScreenGame',['../classScreenGame.html#ae3be2b72300f87330ffc78b5bbbfc009',1,'ScreenGame']]],
-  ['_7escreenliderboard_251',['~ScreenLiderboard',['../classScreenLiderboard.html#a2f00e3ae7ee1d2ac6c12d548e7c3ce36',1,'ScreenLiderboard']]],
-  ['_7escreenmenu_252',['~ScreenMenu',['../classScreenMenu.html#a2ea12005679876f5279aa89816d6df52',1,'ScreenMenu']]],
-  ['_7escreensettings_253',['~ScreenSettings',['../classScreenSettings.html#a90444a724ca86f9d5cf9b9fbd34fcd37',1,'ScreenSettings']]]
+  ['screengame_262',['ScreenGame',['../classScreenGame.html#a510bde54887671e51185e19f00d8b7f4',1,'ScreenGame']]],
+  ['screenliderboard_263',['ScreenLiderboard',['../classScreenLiderboard.html#a01635816bd4c91868be303b1801d46ae',1,'ScreenLiderboard']]],
+  ['screenmenu_264',['ScreenMenu',['../classScreenMenu.html#a61ed295b340b34244e12bd49b38f3697',1,'ScreenMenu']]],
+  ['screensettings_265',['ScreenSettings',['../classScreenSettings.html#af0f226067ae6c297e288e769cc43f7d7',1,'ScreenSettings']]],
+  ['senddatatogui_266',['sendDataToGui',['../classMainWindow.html#a9273b141df983fe146775bc8df5c765b',1,'MainWindow']]],
+  ['setadvantagewhite_267',['setAdvantageWhite',['../classGuiAdvantageBar.html#a8e495cc9f4dec57798089a6f2740c464',1,'GuiAdvantageBar']]],
+  ['setfigureon_268',['setFigureOn',['../classBoard.html#a183ac960c959ed0df9b49314d0479703',1,'Board']]],
+  ['setfigureonboard_269',['setFigureOnBoard',['../classEngine.html#aecc43b5398baffd0cddd1af03dca4793',1,'Engine']]],
+  ['setstartingarrangement_270',['setStartingArrangement',['../classEngine.html#a9027b51e4922e147b8ae3b50348c69af',1,'Engine']]],
+  ['startnewgame_271',['startNewGame',['../classMainWindow.html#a4195422fe1346c1aa9c640715dfe73cb',1,'MainWindow']]]
 ];

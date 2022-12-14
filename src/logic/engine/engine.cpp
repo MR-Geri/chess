@@ -178,7 +178,8 @@ std::list<std::pair<Position, Figures>> Engine::getPosibleAttacksFigureFrom(Posi
     for (auto &step : attack) {
       step.x += position.x;
       step.y += position.y;
-      if (step.x < 0 || step.x >= 8 || step.y < 0 || step.y >= 8) continue;
+      if (step.x < 0 || step.x >= 8 || step.y < 0 || step.y >= 8)
+        continue;
       if (board_data[step.x][step.y] != nullptr) {
         if (color != board_data[step.x][step.y]->getColor())
           attacks.push_back({step, game_board->calculateFigureAfterTaking(position, step)});
@@ -199,7 +200,8 @@ std::list<std::pair<Position, Figures>> Engine::getPosibleAttacksFigureFrom(Posi
   return attacks;
 }
 
-std::list<std::list<Position>> Engine::getPosibleMovesFigureFrom(Position position) {
+std::list<std::list<Position>>
+Engine::getPosibleMovesFigureFrom(Position position) {
   std::vector<std::vector<Figure *>> board_data = game_board->getBoardData();
   std::list<std::list<Position>> possible_moves =
       board_data[position.x][position.y]->getPossibleMoves();
@@ -210,11 +212,13 @@ std::list<std::list<Position>> Engine::getPosibleMovesFigureFrom(Position positi
     for (auto &step : one_move) {
       step.x += position.x;
       step.y += position.y;
-      if (step.x < 0 || step.x >= 8 || step.y < 0 || step.y >= 8) continue;
+      if (step.x < 0 || step.x >= 8 || step.y < 0 || step.y >= 8)
+        continue;
       if (flag && board_data[step.x][step.y] == nullptr) {
-          move.push_back({step.x, step.y});
-          std::cout << flag << ' ' << step.x << " " << step.y << " this is\n";
-      } else flag = false;
+        move.push_back({step.x, step.y});
+        std::cout << flag << ' ' << step.x << " " << step.y << " this is\n";
+      } else
+        flag = false;
     }
     if (!move.empty() &&
         !((board_data[position.x][position.y]->getTypeFigure() == W_PAWN &&

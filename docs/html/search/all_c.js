@@ -1,8 +1,6 @@
 var searchData=
 [
-  ['paint_86',['paint',['../classGuiAdvantageBar.html#a8646a360c8a773c9e7fb318d110fc3af',1,'GuiAdvantageBar']]],
-  ['pawn_87',['Pawn',['../classPawn.html',1,'Pawn'],['../classPawn.html#a8d03682a1590cde01da0dc998dea0426',1,'Pawn::Pawn(FigureColor color=WHITE)'],['../classPawn.html#a1f29610a1f93f12fc49de75a33331d23',1,'Pawn::Pawn(bool flag_move, FigureColor color=WHITE)']]],
-  ['pawn_88',['PAWN',['../constants_8h.html#a3da527ca0edbe6a57ea4f61d1e5af434a1f189a15a64c7c4a1553e876b56c6bf2',1,'constants.h']]],
-  ['position_89',['Position',['../classPosition.html',1,'Position'],['../classPosition.html#a369a577425f8ba02e8750d04b6a088db',1,'Position::Position()'],['../classPosition.html#ae89a1c268c745eeb3f34a3e3f969fbf5',1,'Position::Position(const Position &amp;pos)'],['../classPosition.html#a6e36cf0fee251e74cfedb86f4e99558d',1,'Position::Position(int x, int y)']]],
-  ['possible_5fmoves_90',['possible_moves',['../classFigure.html#ae72a9794daea8b4547c11ee315aefaf0',1,'Figure']]]
+  ['newgamefromgame_95',['newGameFromGame',['../classScreenGame.html#ac6f16eced5239c184a16922ac16aadfe',1,'ScreenGame']]],
+  ['newgamefrommenu_96',['newGameFromMenu',['../classScreenMenu.html#a82f4b69989b590689c2006807fee5dca',1,'ScreenMenu']]],
+  ['none_97',['NONE',['../constants_8h.html#aad5143bace5bd3ff842dc242706a3682ac157bdf0b85a40d2619cbc8bc1ae5fe2',1,'constants.h']]]
 ];

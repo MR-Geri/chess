@@ -78,12 +78,14 @@ $(function() {
 <div class="dynheader">
 Граф наследования:ScreenGame:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classScreenGame__inherit__graph.svg" width="152" height="243"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classScreenGame__inherit__graph.svg" width="164" height="272"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
 </div>
 <div class="dynheader">
 Граф связей класса ScreenGame:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classScreenGame__coll__graph.svg" width="152" height="243"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classScreenGame__coll__graph.svg" width="164" height="272"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-slots"></a>
@@ -91,6 +93,10 @@ $(function() {
 <tr class="memitem:a0ebcf1f50bb3cd0bee1d2b4821f0b47a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classScreenGame.html#a0ebcf1f50bb3cd0bee1d2b4821f0b47a">catchData</a> (QVector&lt; QVector&lt; <a class="el" href="constants_8h.html#aad5143bace5bd3ff842dc242706a3682">Figures</a> &gt;&gt; catched_data, double new_advantage_white, bool is_new_game=false)</td></tr>
 <tr class="memdesc:a0ebcf1f50bb3cd0bee1d2b4821f0b47a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Получает данные для отрисовки из логики.  <a href="classScreenGame.html#a0ebcf1f50bb3cd0bee1d2b4821f0b47a">Подробнее...</a><br /></td></tr>
 <tr class="separator:a0ebcf1f50bb3cd0bee1d2b4821f0b47a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a68ebc2494910e0a92ecf7d2a3d11691c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classScreenGame.html#a68ebc2494910e0a92ecf7d2a3d11691c">highlightAttacks</a> (std::list&lt; <a class="el" href="classPosition.html">Position</a> &gt; attacks)</td></tr>
+<tr class="separator:a68ebc2494910e0a92ecf7d2a3d11691c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa488a410a92be2a5e517119f8611d218"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classScreenGame.html#aa488a410a92be2a5e517119f8611d218">highlightMoves</a> (std::list&lt; std::list&lt; <a class="el" href="classPosition.html">Position</a> &gt;&gt; moves)</td></tr>
+<tr class="separator:aa488a410a92be2a5e517119f8611d218"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="signals"></a>
 Сигналы</h2></td></tr>
@@ -102,6 +108,8 @@ $(function() {
 <tr class="separator:ac7c78c25f7448752e5d901d434f7d813"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac6f16eced5239c184a16922ac16aadfe"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classScreenGame.html#ac6f16eced5239c184a16922ac16aadfe">newGameFromGame</a> ()</td></tr>
 <tr class="separator:ac6f16eced5239c184a16922ac16aadfe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26fc8b68d9989640c20be7ac937e4823"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classScreenGame.html#a26fc8b68d9989640c20be7ac937e4823">pressGuiFigure</a> (<a class="el" href="classPosition.html">Position</a> position)</td></tr>
+<tr class="separator:a26fc8b68d9989640c20be7ac937e4823"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Открытые члены</h2></td></tr>
@@ -279,6 +287,58 @@ $(function() {
 
 </div>
 </div>
+<a id="a68ebc2494910e0a92ecf7d2a3d11691c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a68ebc2494910e0a92ecf7d2a3d11691c">&#9670;&nbsp;</a></span>highlightAttacks</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ScreenGame::highlightAttacks </td>
+          <td>(</td>
+          <td class="paramtype">std::list&lt; <a class="el" href="classPosition.html">Position</a> &gt;&#160;</td>
+          <td class="paramname"><em>attacks</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa488a410a92be2a5e517119f8611d218"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa488a410a92be2a5e517119f8611d218">&#9670;&nbsp;</a></span>highlightMoves</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ScreenGame::highlightMoves </td>
+          <td>(</td>
+          <td class="paramtype">std::list&lt; std::list&lt; <a class="el" href="classPosition.html">Position</a> &gt;&gt;&#160;</td>
+          <td class="paramname"><em>moves</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="ac6f16eced5239c184a16922ac16aadfe"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac6f16eced5239c184a16922ac16aadfe">&#9670;&nbsp;</a></span>newGameFromGame</h2>
 
@@ -292,6 +352,32 @@ $(function() {
           <td class="memname">void ScreenGame::newGameFromGame </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">signal</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a26fc8b68d9989640c20be7ac937e4823"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a26fc8b68d9989640c20be7ac937e4823">&#9670;&nbsp;</a></span>pressGuiFigure</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ScreenGame::pressGuiFigure </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classPosition.html">Position</a>&#160;</td>
+          <td class="paramname"><em>position</em></td><td>)</td>
           <td></td>
         </tr>
       </table>

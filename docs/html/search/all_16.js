@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['Шахматы_143',['Шахматы',['../md_README.html',1,'']]]
+  ['y_147',['y',['../classPosition.html#a82734fc09dabee57a86c6dd31ecdf06c',1,'Position']]]
 ];

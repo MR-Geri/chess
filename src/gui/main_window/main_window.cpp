@@ -30,9 +30,12 @@ MainWindow::MainWindow(QWidget *parent)
           SLOT(catchData(QVector<QVector<Figures>>, double, bool)));
   connect(&screen_game, SIGNAL(newGameFromGame()), this, SLOT(startNewGame()));
   connect(&screen_menu, SIGNAL(newGameFromMenu()), this, SLOT(startNewGame()));
-  connect(this, SIGNAL(highlightGuiAttacks(std::list<std::pair<Position, Figures>>)), &screen_game, SLOT(highlightAttacks(std::list<std::pair<Position, Figures>>)));
-  connect(this, SIGNAL(highlightGuiMoves(std::list<std::list<Position>>)), &screen_game, SLOT(highlightMoves(std::list<std::list<Position>>)));
-  connect(&screen_game, SIGNAL(pressGuiFigure(Position)), this, SLOT(guiPressFigure(Position)));
+  connect(this, SIGNAL(highlightGuiAttacks(std::list<Position>)), &screen_game,
+          SLOT(highlightAttacks(std::list<Position>)));
+  connect(this, SIGNAL(highlightGuiMoves(std::list<std::list<Position>>)),
+          &screen_game, SLOT(highlightMoves(std::list<std::list<Position>>)));
+  connect(&screen_game, SIGNAL(pressGuiFigure(Position)), this,
+          SLOT(guiPressFigure(Position)));
 }
 
 MainWindow::~MainWindow() { delete ui; }
