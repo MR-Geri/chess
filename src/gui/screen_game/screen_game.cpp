@@ -144,7 +144,8 @@ void ScreenGame::drawAdvantageBar(float height_board, float scale_board) {
   scene->addItem(advantage_bar_black);
 }
 
-void ScreenGame::highlightAttacks(std::list<std::pair<Position, Figures>> attacks) {
+void ScreenGame::highlightAttacks(
+    std::list<std::pair<Position, Figures>> attacks) {
   highlight_attacks = std::move(attacks);
 }
 
@@ -199,7 +200,8 @@ void ScreenGame::highlightAll() {
     Position pos = calculatePositionOnScene(attack.first);
     int x = pos.x;
     int y = pos.y;
-    GuiFigure *figure = new GuiFigure(width_graphicsView, height_graphicsView, attack.second);
+    GuiFigure *figure =
+        new GuiFigure(width_graphicsView, height_graphicsView, attack.second);
     figure->setPos(x - size_cell_board / 2, y - size_cell_board / 2);
     QGraphicsColorizeEffect *colorize_effect = new QGraphicsColorizeEffect();
     colorize_effect->setColor(QColor(255, 140, 0));

@@ -75,8 +75,10 @@ void MainWindow::startNewGame() {
 }
 
 void MainWindow::guiPressFigure(Position position) {
-  std::list<std::pair<Position, Figures>> attacks = engine.getPosibleAttacksFigureFrom(position);
-  std::list<std::list<Position>> moves = engine.getPosibleMovesFigureFrom(position);
+  std::list<std::pair<Position, Figures>> attacks =
+      engine.getPosibleAttacksFigureFrom(position);
+  std::list<std::list<Position>> moves =
+      engine.getPosibleMovesFigureFrom(position);
   emit highlightGuiAttacks(attacks);
   emit highlightGuiMoves(moves);
 }

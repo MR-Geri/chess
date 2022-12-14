@@ -168,7 +168,8 @@ double Engine::calculateAdvantageWhite() {
   return white / (white + black);
 }
 
-std::list<std::pair<Position, Figures>> Engine::getPosibleAttacksFigureFrom(Position position) {
+std::list<std::pair<Position, Figures>>
+Engine::getPosibleAttacksFigureFrom(Position position) {
   std::vector<std::vector<Figure *>> board_data = game_board->getBoardData();
   std::list<std::list<Position>> possible_attacks =
       board_data[position.x][position.y]->getPossibleAttacks();
@@ -182,20 +183,19 @@ std::list<std::pair<Position, Figures>> Engine::getPosibleAttacksFigureFrom(Posi
         continue;
       if (board_data[step.x][step.y] != nullptr) {
         if (color != board_data[step.x][step.y]->getColor())
-          attacks.push_back({step, game_board->calculateFigureAfterTaking(position, step)});
+          attacks.push_back(
+              {step, game_board->calculateFigureAfterTaking(position, step)});
         break;
       }
     }
   }
   if (board_data[position.x][position.y]->getTypeFigure() == W_PAWN &&
-      position.y == 1 &&
-      board_data[position.x][position.y - 1] == nullptr){
-      attacks.push_back({{position.x, position.y - 1}, W_QUEEN});
+      position.y == 1 && board_data[position.x][position.y - 1] == nullptr) {
+    attacks.push_back({{position.x, position.y - 1}, W_QUEEN});
   }
   if (board_data[position.x][position.y]->getTypeFigure() == B_PAWN &&
-      position.y == 6 &&
-      board_data[position.x][position.y + 1] == nullptr){
-      attacks.push_back({{position.x, position.y + 1}, B_QUEEN});
+      position.y == 6 && board_data[position.x][position.y + 1] == nullptr) {
+    attacks.push_back({{position.x, position.y + 1}, B_QUEEN});
   }
   return attacks;
 }
@@ -222,11 +222,9 @@ Engine::getPosibleMovesFigureFrom(Position position) {
     }
     if (!move.empty() &&
         !((board_data[position.x][position.y]->getTypeFigure() == W_PAWN &&
-        !(move.back().x == 0 && move.back().y == -1) &&
-        position.y == 1) ||
-        (board_data[position.x][position.y]->getTypeFigure() == B_PAWN) &&
-        !(move.back().x == 0 && move.back().y == 1) &&
-        position.y == 6)) {
+           !(move.back().x == 0 && move.back().y == -1) && position.y == 1) ||
+          (board_data[position.x][position.y]->getTypeFigure() == B_PAWN) &&
+              !(move.back().x == 0 && move.back().y == 1) && position.y == 6)) {
       moves.push_back(move);
     }
   }

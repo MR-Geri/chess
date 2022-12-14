@@ -92,33 +92,46 @@ Figures Board::calculateFigureAfterTaking(Position from, Position to) {
   int price = board[from.x][from.y]->getPrice();
 
   if (board[to.x][to.y]->getPrice() != -1 && price != -1) {
-    price -= round((static_cast<float>(price) - board[to.x][to.y]->getPrice()) / 2.);
+    price -=
+        round((static_cast<float>(price) - board[to.x][to.y]->getPrice()) / 2.);
   }
 
   switch (price) {
   case KING:
-    if (color == FigureColor::WHITE) return W_KING;
-    else return B_KING;
+    if (color == FigureColor::WHITE)
+      return W_KING;
+    else
+      return B_KING;
     break;
   case PAWN:
-    if (color == FigureColor::WHITE) return W_PAWN;
-    else return B_PAWN;
+    if (color == FigureColor::WHITE)
+      return W_PAWN;
+    else
+      return B_PAWN;
     break;
   case KNIGHT:
-    if (color == FigureColor::WHITE) return W_KNIGHT;
-    else return B_KNIGHT;
+    if (color == FigureColor::WHITE)
+      return W_KNIGHT;
+    else
+      return B_KNIGHT;
     break;
   case ROOK:
-    if (color == FigureColor::WHITE) return W_ROOK;
-    else return B_ROOK;
+    if (color == FigureColor::WHITE)
+      return W_ROOK;
+    else
+      return B_ROOK;
     break;
   case BISHOP:
-    if (color == FigureColor::WHITE) return W_BISHOP;
-    else return B_BISHOP;
+    if (color == FigureColor::WHITE)
+      return W_BISHOP;
+    else
+      return B_BISHOP;
     break;
   case QUEEN:
-    if (color == FigureColor::WHITE) return W_QUEEN;
-    else return B_QUEEN;
+    if (color == FigureColor::WHITE)
+      return W_QUEEN;
+    else
+      return B_QUEEN;
     break;
   }
   return W_KING; // Error

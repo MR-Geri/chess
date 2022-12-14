@@ -1,11 +1,10 @@
 #pragma once
 
+#include <QGraphicsColorizeEffect>
 #include <QGraphicsEllipseItem>
 #include <QGraphicsItemAnimation>
 #include <QGraphicsScene>
 #include <QGraphicsSvgItem>
-#include <QGraphicsEllipseItem>
-#include <QGraphicsColorizeEffect>
 #include <QString>
 #include <QTimeLine>
 #include <QWidget>
