@@ -17,3 +17,4 @@ tests/tests
 tests/tests_autogen/
 build-tests-Desktop-Debug/
 .obsidian/
+_deps/
