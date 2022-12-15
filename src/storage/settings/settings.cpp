@@ -48,7 +48,7 @@ void ReadJson(const QString &path) {
     QJsonDocument document = QJsonDocument::fromJson(bytes, &jsonError);
     if (jsonError.error != QJsonParseError::NoError) {
       std::cout << "fromJson failed: " << jsonError.errorString().toStdString()
-           << std::endl;
+                << std::endl;
       return;
     }
     if (document.isObject()) {

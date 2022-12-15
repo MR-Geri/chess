@@ -1,4 +1,9 @@
 <map id="Иерархия классов. Графический вид." name="Иерархия классов. Графический вид.">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,124,32"/>
-<area shape="rect" id="node2" href="$classGuiAdvantageBar.html" title=" " alt="" coords="172,5,308,32"/>
+<area shape="rect" id="node1" href="$classFigure.html" title="Абстрактный класс фигуры." alt="" coords="5,132,68,159"/>
+<area shape="rect" id="node2" href="$classBishop.html" title="Слон." alt="" coords="116,5,183,32"/>
+<area shape="rect" id="node3" href="$classKing.html" title="Король." alt="" coords="124,56,175,83"/>
+<area shape="rect" id="node4" href="$classKnight.html" title="Конь." alt="" coords="117,107,181,133"/>
+<area shape="rect" id="node5" href="$classPawn.html" title="Пешка." alt="" coords="121,157,177,184"/>
+<area shape="rect" id="node6" href="$classQueen.html" title="Ферзь." alt="" coords="117,208,181,235"/>
+<area shape="rect" id="node7" href="$classRook.html" title="Ладья." alt="" coords="122,259,177,285"/>
 </map>
