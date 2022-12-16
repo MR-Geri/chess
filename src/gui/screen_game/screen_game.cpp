@@ -172,8 +172,6 @@ Position ScreenGame::calculatePositionOnScene(Position position) {
 Position ScreenGame::calculatePositionOnBoard(Position position) {
   Position position_on_board;
   Position delta_board;
-  float width_graphicsView = ui->graphicsView->width() - 10;
-  float height_graphicsView = ui->graphicsView->height() - 10;
   position_on_board.x =
       static_cast<int>((position.x + 1 - indent) / size_cell_board);
   position_on_board.y =
