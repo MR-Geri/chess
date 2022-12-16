@@ -1,0 +1,5 @@
+<map id="Engine::setStartingArrangement" name="Engine::setStartingArrangement">
+<area shape="rect" id="node1" title="Базовая расстановка фигур на поле." alt="" coords="5,31,236,57"/>
+<area shape="rect" id="node2" href="$classBoard.html#af74f0d4b43e5aa3faea16d7c6407b05e" title="clear Очищает доску." alt="" coords="307,5,407,32"/>
+<area shape="rect" id="node3" href="$classBoard.html#a183ac960c959ed0df9b49314d0479703" title="Устанавливает фигуру на доску." alt="" coords="284,56,431,83"/>
+</map>

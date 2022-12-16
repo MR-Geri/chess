@@ -1,0 +1,8 @@
+<map id="Board::setFigureOn" name="Board::setFigureOn">
+<area shape="rect" id="node1" title="Устанавливает фигуру на доску." alt="" coords="788,31,935,57"/>
+<area shape="rect" id="node2" href="$classEngine.html#aecc43b5398baffd0cddd1af03dca4793" title="Установка фигуры на доску." alt="" coords="529,5,720,32"/>
+<area shape="rect" id="node3" href="$classEngine.html#a9027b51e4922e147b8ae3b50348c69af" title="Базовая расстановка фигур на поле." alt="" coords="509,56,740,83"/>
+<area shape="rect" id="node4" href="$classEngine.html#a8c98683b0a3aa28d8ab72a8bcd0d52f2" title=" " alt="" coords="297,31,415,57"/>
+<area shape="rect" id="node5" href="$classMainWindow.html#a4195422fe1346c1aa9c640715dfe73cb" title=" " alt="" coords="251,81,461,108"/>
+<area shape="rect" id="node6" href="$classMainWindow.html#a996c5a2b6f77944776856f08ec30858d" title=" " alt="" coords="5,81,203,108"/>
+</map>

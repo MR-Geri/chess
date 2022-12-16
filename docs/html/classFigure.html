@@ -1,0 +1,493 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Chess: Класс Figure</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Chess
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pro-attribs">Защищенные данные</a> &#124;
+<a href="classFigure-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Класс Figure</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Абстрактный класс фигуры.  
+ <a href="classFigure.html#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="figures_8h_source.html">figures.h</a>&gt;</code></p>
+<div class="dynheader">
+Граф наследования:Figure:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classFigure__inherit__graph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+<div class="dynheader">
+Граф связей класса Figure:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classFigure__coll__graph.svg" width="182" height="250"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:afba85b201705ed621744572817fd46be"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFigure.html#afba85b201705ed621744572817fd46be">Figure</a> (int price, int advantage_price, <a class="el" href="constants_8h.html#a80feabe81f30d5b97df91defa4774c0f">FigureColor</a> color=<a class="el" href="constants_8h.html#a80feabe81f30d5b97df91defa4774c0fa283fc479650da98250635b9c3c0e7e50">WHITE</a>)</td></tr>
+<tr class="memdesc:afba85b201705ed621744572817fd46be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Конструктор, используемый в классах наследниках.  <a href="classFigure.html#afba85b201705ed621744572817fd46be">Подробнее...</a><br /></td></tr>
+<tr class="separator:afba85b201705ed621744572817fd46be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a36488fa19e8ceb96b684527df50d9e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFigure.html#a7a36488fa19e8ceb96b684527df50d9e">getPrice</a> ()</td></tr>
+<tr class="memdesc:a7a36488fa19e8ceb96b684527df50d9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Получение веса фигуры.  <a href="classFigure.html#a7a36488fa19e8ceb96b684527df50d9e">Подробнее...</a><br /></td></tr>
+<tr class="separator:a7a36488fa19e8ceb96b684527df50d9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa8ab8dbf3af5c0722f32aab99947eb54"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFigure.html#aa8ab8dbf3af5c0722f32aab99947eb54">getPriceAdvantage</a> ()</td></tr>
+<tr class="memdesc:aa8ab8dbf3af5c0722f32aab99947eb54"><td class="mdescLeft">&#160;</td><td class="mdescRight">Получение веса преимущества фигуры.  <a href="classFigure.html#aa8ab8dbf3af5c0722f32aab99947eb54">Подробнее...</a><br /></td></tr>
+<tr class="separator:aa8ab8dbf3af5c0722f32aab99947eb54"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad86c6d796ac96d30f2a310c107fdbac"><td class="memItemLeft" align="right" valign="top">virtual std::list&lt; <a class="el" href="classPosition.html">Position</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFigure.html#aad86c6d796ac96d30f2a310c107fdbac">getUnarySteps</a> (<a class="el" href="classPosition.html">Position</a> step)</td></tr>
+<tr class="memdesc:aad86c6d796ac96d30f2a310c107fdbac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Получение элементарных ходов.  <a href="classFigure.html#aad86c6d796ac96d30f2a310c107fdbac">Подробнее...</a><br /></td></tr>
+<tr class="separator:aad86c6d796ac96d30f2a310c107fdbac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac527b099db89b98b705eb74bed96c147"><td class="memItemLeft" align="right" valign="top">virtual std::list&lt; std::list&lt; <a class="el" href="classPosition.html">Position</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFigure.html#ac527b099db89b98b705eb74bed96c147">getPossibleMoves</a> ()</td></tr>
+<tr class="memdesc:ac527b099db89b98b705eb74bed96c147"><td class="mdescLeft">&#160;</td><td class="mdescRight">Получение возможных ходов перемещения.  <a href="classFigure.html#ac527b099db89b98b705eb74bed96c147">Подробнее...</a><br /></td></tr>
+<tr class="separator:ac527b099db89b98b705eb74bed96c147"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12d36f015da3026f980f87a93210885a"><td class="memItemLeft" align="right" valign="top">virtual std::list&lt; std::list&lt; <a class="el" href="classPosition.html">Position</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFigure.html#a12d36f015da3026f980f87a93210885a">getPossibleAttacks</a> ()</td></tr>
+<tr class="memdesc:a12d36f015da3026f980f87a93210885a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Получение возможных ходов атаки.  <a href="classFigure.html#a12d36f015da3026f980f87a93210885a">Подробнее...</a><br /></td></tr>
+<tr class="separator:a12d36f015da3026f980f87a93210885a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af27c0f2d5fe69cb9eb17380d3ba91d6a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="constants_8h.html#a80feabe81f30d5b97df91defa4774c0f">FigureColor</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFigure.html#af27c0f2d5fe69cb9eb17380d3ba91d6a">getColor</a> ()</td></tr>
+<tr class="memdesc:af27c0f2d5fe69cb9eb17380d3ba91d6a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Получение цвета фигуры.  <a href="classFigure.html#af27c0f2d5fe69cb9eb17380d3ba91d6a">Подробнее...</a><br /></td></tr>
+<tr class="separator:af27c0f2d5fe69cb9eb17380d3ba91d6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e9afb1f33f8d9298adb15608666c801"><td class="memItemLeft" align="right" valign="top"><a class="el" href="constants_8h.html#aad5143bace5bd3ff842dc242706a3682">Figures</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFigure.html#a6e9afb1f33f8d9298adb15608666c801">getTypeFigure</a> () const</td></tr>
+<tr class="separator:a6e9afb1f33f8d9298adb15608666c801"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+Защищенные данные</h2></td></tr>
+<tr class="memitem:a72d0bf2ff589f0ceb9171d31268b3494"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFigure.html#a72d0bf2ff589f0ceb9171d31268b3494">b_price</a></td></tr>
+<tr class="separator:a72d0bf2ff589f0ceb9171d31268b3494"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa5f6b03f2a5c883690ddb5cc1fef4d4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFigure.html#aaa5f6b03f2a5c883690ddb5cc1fef4d4">b_advantage_price</a></td></tr>
+<tr class="separator:aaa5f6b03f2a5c883690ddb5cc1fef4d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae72a9794daea8b4547c11ee315aefaf0"><td class="memItemLeft" align="right" valign="top">std::list&lt; std::list&lt; <a class="el" href="classPosition.html">Position</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFigure.html#ae72a9794daea8b4547c11ee315aefaf0">possible_moves</a></td></tr>
+<tr class="separator:ae72a9794daea8b4547c11ee315aefaf0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13206acc9b4fce30d4d18a911f5cbf83"><td class="memItemLeft" align="right" valign="top"><a class="el" href="constants_8h.html#a80feabe81f30d5b97df91defa4774c0f">FigureColor</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFigure.html#a13206acc9b4fce30d4d18a911f5cbf83">b_color</a></td></tr>
+<tr class="separator:a13206acc9b4fce30d4d18a911f5cbf83"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a301940106d0bfb22d955362ec885e95f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="constants_8h.html#aad5143bace5bd3ff842dc242706a3682">Figures</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFigure.html#a301940106d0bfb22d955362ec885e95f">type_figure</a></td></tr>
+<tr class="separator:a301940106d0bfb22d955362ec885e95f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Абстрактный класс фигуры. </p>
+</div><h2 class="groupheader">Конструктор(ы)</h2>
+<a id="afba85b201705ed621744572817fd46be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afba85b201705ed621744572817fd46be">&#9670;&nbsp;</a></span>Figure()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Figure::Figure </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>price</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>advantage_price</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="constants_8h.html#a80feabe81f30d5b97df91defa4774c0f">FigureColor</a>&#160;</td>
+          <td class="paramname"><em>color</em> = <code><a class="el" href="constants_8h.html#a80feabe81f30d5b97df91defa4774c0fa283fc479650da98250635b9c3c0e7e50">WHITE</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Конструктор, используемый в классах наследниках. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">price</td><td>вес фигуры. </td></tr>
+    <tr><td class="paramname">color</td><td>цвет фигуры (FigureColor). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="af27c0f2d5fe69cb9eb17380d3ba91d6a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af27c0f2d5fe69cb9eb17380d3ba91d6a">&#9670;&nbsp;</a></span>getColor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="constants_8h.html#a80feabe81f30d5b97df91defa4774c0f">FigureColor</a> Figure::getColor </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Получение цвета фигуры. </p>
+<dl class="section return"><dt>Возвращает</dt><dd>цвет фигуры. </dd></dl>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classFigure_af27c0f2d5fe69cb9eb17380d3ba91d6a_icgraph.svg" width="100%" height="378"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a12d36f015da3026f980f87a93210885a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a12d36f015da3026f980f87a93210885a">&#9670;&nbsp;</a></span>getPossibleAttacks()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::list&lt; std::list&lt; <a class="el" href="classPosition.html">Position</a> &gt; &gt; Figure::getPossibleAttacks </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Получение возможных ходов атаки. </p>
+<dl class="section return"><dt>Возвращает</dt><dd>список ходов. </dd></dl>
+
+<p>Переопределяется в <a class="el" href="classPawn.html#a02c85fafa3c6dc6cb2ad9e4322347a15">Pawn</a>.</p>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classFigure_a12d36f015da3026f980f87a93210885a_icgraph.svg" width="100%" height="378"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="ac527b099db89b98b705eb74bed96c147"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac527b099db89b98b705eb74bed96c147">&#9670;&nbsp;</a></span>getPossibleMoves()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::list&lt; std::list&lt; <a class="el" href="classPosition.html">Position</a> &gt; &gt; Figure::getPossibleMoves </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Получение возможных ходов перемещения. </p>
+<dl class="section return"><dt>Возвращает</dt><dd>список ходов. </dd></dl>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classFigure_ac527b099db89b98b705eb74bed96c147_icgraph.svg" width="100%" height="378"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a7a36488fa19e8ceb96b684527df50d9e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7a36488fa19e8ceb96b684527df50d9e">&#9670;&nbsp;</a></span>getPrice()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Figure::getPrice </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Получение веса фигуры. </p>
+<dl class="section return"><dt>Возвращает</dt><dd>вес фигуры. </dd></dl>
+
+</div>
+</div>
+<a id="aa8ab8dbf3af5c0722f32aab99947eb54"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa8ab8dbf3af5c0722f32aab99947eb54">&#9670;&nbsp;</a></span>getPriceAdvantage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Figure::getPriceAdvantage </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Получение веса преимущества фигуры. </p>
+<dl class="section return"><dt>Возвращает</dt><dd>вес фигуры. </dd></dl>
+
+</div>
+</div>
+<a id="a6e9afb1f33f8d9298adb15608666c801"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e9afb1f33f8d9298adb15608666c801">&#9670;&nbsp;</a></span>getTypeFigure()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="constants_8h.html#aad5143bace5bd3ff842dc242706a3682">Figures</a> Figure::getTypeFigure </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aad86c6d796ac96d30f2a310c107fdbac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad86c6d796ac96d30f2a310c107fdbac">&#9670;&nbsp;</a></span>getUnarySteps()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::list&lt; <a class="el" href="classPosition.html">Position</a> &gt; Figure::getUnarySteps </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classPosition.html">Position</a>&#160;</td>
+          <td class="paramname"><em>step</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Получение элементарных ходов. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">step</td><td>позиция в которую нужно переместиться. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>список элементарных ходов. </dd></dl>
+
+<p>Переопределяется в <a class="el" href="classKnight.html#a4fcfdb07e9fb214be013de3cefe425f7">Knight</a>.</p>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classFigure_aad86c6d796ac96d30f2a310c107fdbac_icgraph.svg" width="100%" height="378"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Данные класса</h2>
+<a id="aaa5f6b03f2a5c883690ddb5cc1fef4d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa5f6b03f2a5c883690ddb5cc1fef4d4">&#9670;&nbsp;</a></span>b_advantage_price</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Figure::b_advantage_price</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a13206acc9b4fce30d4d18a911f5cbf83"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a13206acc9b4fce30d4d18a911f5cbf83">&#9670;&nbsp;</a></span>b_color</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="constants_8h.html#a80feabe81f30d5b97df91defa4774c0f">FigureColor</a> Figure::b_color</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a72d0bf2ff589f0ceb9171d31268b3494"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a72d0bf2ff589f0ceb9171d31268b3494">&#9670;&nbsp;</a></span>b_price</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Figure::b_price</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae72a9794daea8b4547c11ee315aefaf0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae72a9794daea8b4547c11ee315aefaf0">&#9670;&nbsp;</a></span>possible_moves</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::list&lt;std::list&lt;<a class="el" href="classPosition.html">Position</a>&gt; &gt; Figure::possible_moves</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a301940106d0bfb22d955362ec885e95f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a301940106d0bfb22d955362ec885e95f">&#9670;&nbsp;</a></span>type_figure</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="constants_8h.html#aad5143bace5bd3ff842dc242706a3682">Figures</a> Figure::type_figure</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>Объявления и описания членов классов находятся в файлах:<ul>
+<li>src/logic/figures/<a class="el" href="figures_8h_source.html">figures.h</a></li>
+<li>src/logic/figures/<a class="el" href="figures_8cpp.html">figures.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

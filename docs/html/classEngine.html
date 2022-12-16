@@ -1,0 +1,517 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Chess: Класс Engine</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Chess
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="classEngine-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Класс Engine</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Движок игры. Реализует логику ходов.  
+ <a href="classEngine.html#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="engine_8h_source.html">engine.h</a>&gt;</code></p>
+<div class="dynheader">
+Граф связей класса Engine:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classEngine__coll__graph.svg" width="248" height="250"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:a8c98683b0a3aa28d8ab72a8bcd0d52f2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEngine.html#a8c98683b0a3aa28d8ab72a8bcd0d52f2">Engine</a> ()</td></tr>
+<tr class="separator:a8c98683b0a3aa28d8ab72a8bcd0d52f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ef7030a089ecb30bbfcb9e43094717a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEngine.html#a8ef7030a089ecb30bbfcb9e43094717a">~Engine</a> ()</td></tr>
+<tr class="separator:a8ef7030a089ecb30bbfcb9e43094717a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66f2b590d92c6e0fa99741f02a8a9a3f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="constants_8h.html#a8b9a4049772aeb1c0e054b0571babc95">StatusMove</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEngine.html#a66f2b590d92c6e0fa99741f02a8a9a3f">move</a> (<a class="el" href="classPosition.html">Position</a> from_pos, <a class="el" href="classPosition.html">Position</a> step)</td></tr>
+<tr class="memdesc:a66f2b590d92c6e0fa99741f02a8a9a3f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Проверяет возможность хода и перемещает фигуру.  <a href="classEngine.html#a66f2b590d92c6e0fa99741f02a8a9a3f">Подробнее...</a><br /></td></tr>
+<tr class="separator:a66f2b590d92c6e0fa99741f02a8a9a3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b384a18565b9cdd85b52fed6d25ff0c"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEngine.html#a2b384a18565b9cdd85b52fed6d25ff0c">calculateAdvantageWhite</a> ()</td></tr>
+<tr class="memdesc:a2b384a18565b9cdd85b52fed6d25ff0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Расчет преимущества игрока.  <a href="classEngine.html#a2b384a18565b9cdd85b52fed6d25ff0c">Подробнее...</a><br /></td></tr>
+<tr class="separator:a2b384a18565b9cdd85b52fed6d25ff0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9027b51e4922e147b8ae3b50348c69af"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEngine.html#a9027b51e4922e147b8ae3b50348c69af">setStartingArrangement</a> ()</td></tr>
+<tr class="memdesc:a9027b51e4922e147b8ae3b50348c69af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Базовая расстановка фигур на поле.  <a href="classEngine.html#a9027b51e4922e147b8ae3b50348c69af">Подробнее...</a><br /></td></tr>
+<tr class="separator:a9027b51e4922e147b8ae3b50348c69af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aecc43b5398baffd0cddd1af03dca4793"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEngine.html#aecc43b5398baffd0cddd1af03dca4793">setFigureOnBoard</a> (<a class="el" href="classFigure.html">Figure</a> *figure, <a class="el" href="classPosition.html">Position</a> position)</td></tr>
+<tr class="memdesc:aecc43b5398baffd0cddd1af03dca4793"><td class="mdescLeft">&#160;</td><td class="mdescRight">Установка фигуры на доску.  <a href="classEngine.html#aecc43b5398baffd0cddd1af03dca4793">Подробнее...</a><br /></td></tr>
+<tr class="separator:aecc43b5398baffd0cddd1af03dca4793"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e19f1f9eb9e6ec51f646bb0a94dd1d6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEngine.html#a7e19f1f9eb9e6ec51f646bb0a94dd1d6">clearBoard</a> ()</td></tr>
+<tr class="memdesc:a7e19f1f9eb9e6ec51f646bb0a94dd1d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">clearBoard очищает поле.  <a href="classEngine.html#a7e19f1f9eb9e6ec51f646bb0a94dd1d6">Подробнее...</a><br /></td></tr>
+<tr class="separator:a7e19f1f9eb9e6ec51f646bb0a94dd1d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af2c8028ccaf85425744ad55844765fac"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::vector&lt; <a class="el" href="classFigure.html">Figure</a> * &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEngine.html#af2c8028ccaf85425744ad55844765fac">getData</a> ()</td></tr>
+<tr class="memdesc:af2c8028ccaf85425744ad55844765fac"><td class="mdescLeft">&#160;</td><td class="mdescRight">getData возвращает поле.  <a href="classEngine.html#af2c8028ccaf85425744ad55844765fac">Подробнее...</a><br /></td></tr>
+<tr class="separator:af2c8028ccaf85425744ad55844765fac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a93442cf58f7239df6e2b5303b7b90cda"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEngine.html#a93442cf58f7239df6e2b5303b7b90cda">enemyUnderAttack</a> (std::vector&lt; std::vector&lt; <a class="el" href="classFigure.html">Figure</a> * &gt;&gt; board, <a class="el" href="classPosition.html">Position</a> pos)</td></tr>
+<tr class="separator:a93442cf58f7239df6e2b5303b7b90cda"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9154a3995005939adcc56d46d8bd78b0"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEngine.html#a9154a3995005939adcc56d46d8bd78b0">quantityPossibleMove</a> (std::vector&lt; std::vector&lt; <a class="el" href="classFigure.html">Figure</a> * &gt;&gt; board, <a class="el" href="classPosition.html">Position</a> pos)</td></tr>
+<tr class="separator:a9154a3995005939adcc56d46d8bd78b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afffac825472b73103b32f2d3e4555267"><td class="memItemLeft" align="right" valign="top">std::list&lt; std::pair&lt; <a class="el" href="classPosition.html">Position</a>, <a class="el" href="constants_8h.html#aad5143bace5bd3ff842dc242706a3682">Figures</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEngine.html#afffac825472b73103b32f2d3e4555267">getPosibleAttacksFigureFrom</a> (<a class="el" href="classPosition.html">Position</a> position)</td></tr>
+<tr class="separator:afffac825472b73103b32f2d3e4555267"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab4b084189c3f29e30a3a44ac0d5ed6b3"><td class="memItemLeft" align="right" valign="top">std::list&lt; std::list&lt; <a class="el" href="classPosition.html">Position</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEngine.html#ab4b084189c3f29e30a3a44ac0d5ed6b3">getPosibleMovesFigureFrom</a> (<a class="el" href="classPosition.html">Position</a> position)</td></tr>
+<tr class="separator:ab4b084189c3f29e30a3a44ac0d5ed6b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Движок игры. Реализует логику ходов. </p>
+</div><h2 class="groupheader">Конструктор(ы)</h2>
+<a id="a8c98683b0a3aa28d8ab72a8bcd0d52f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8c98683b0a3aa28d8ab72a8bcd0d52f2">&#9670;&nbsp;</a></span>Engine()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Engine::Engine </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Граф вызовов:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classEngine_a8c98683b0a3aa28d8ab72a8bcd0d52f2_cgraph.svg" width="603" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a8ef7030a089ecb30bbfcb9e43094717a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ef7030a089ecb30bbfcb9e43094717a">&#9670;&nbsp;</a></span>~Engine()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Engine::~Engine </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="a2b384a18565b9cdd85b52fed6d25ff0c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b384a18565b9cdd85b52fed6d25ff0c">&#9670;&nbsp;</a></span>calculateAdvantageWhite()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Engine::calculateAdvantageWhite </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Расчет преимущества игрока. </p>
+<dl class="section return"><dt>Возвращает</dt><dd>расчитанное значение. </dd></dl>
+<div class="dynheader">
+Граф вызовов:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classEngine_a2b384a18565b9cdd85b52fed6d25ff0c_cgraph.svg" width="100%" height="404"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classEngine_a2b384a18565b9cdd85b52fed6d25ff0c_icgraph.svg" width="100%" height="378"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a7e19f1f9eb9e6ec51f646bb0a94dd1d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e19f1f9eb9e6ec51f646bb0a94dd1d6">&#9670;&nbsp;</a></span>clearBoard()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Engine::clearBoard </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>clearBoard очищает поле. </p>
+<div class="dynheader">
+Граф вызовов:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classEngine_a7e19f1f9eb9e6ec51f646bb0a94dd1d6_cgraph.svg" width="303" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classEngine_a7e19f1f9eb9e6ec51f646bb0a94dd1d6_icgraph.svg" width="659" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a93442cf58f7239df6e2b5303b7b90cda"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a93442cf58f7239df6e2b5303b7b90cda">&#9670;&nbsp;</a></span>enemyUnderAttack()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Engine::enemyUnderAttack </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; std::vector&lt; <a class="el" href="classFigure.html">Figure</a> * &gt;&gt;&#160;</td>
+          <td class="paramname"><em>board</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classPosition.html">Position</a>&#160;</td>
+          <td class="paramname"><em>pos</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classEngine_a93442cf58f7239df6e2b5303b7b90cda_icgraph.svg" width="100%" height="378"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="af2c8028ccaf85425744ad55844765fac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af2c8028ccaf85425744ad55844765fac">&#9670;&nbsp;</a></span>getData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; std::vector&lt; <a class="el" href="classFigure.html">Figure</a> * &gt; &gt; Engine::getData </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>getData возвращает поле. </p>
+<div class="dynheader">
+Граф вызовов:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classEngine_af2c8028ccaf85425744ad55844765fac_cgraph.svg" width="344" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classEngine_af2c8028ccaf85425744ad55844765fac_icgraph.svg" width="100%" height="378"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="afffac825472b73103b32f2d3e4555267"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afffac825472b73103b32f2d3e4555267">&#9670;&nbsp;</a></span>getPosibleAttacksFigureFrom()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::list&lt; std::pair&lt; <a class="el" href="classPosition.html">Position</a>, <a class="el" href="constants_8h.html#aad5143bace5bd3ff842dc242706a3682">Figures</a> &gt; &gt; Engine::getPosibleAttacksFigureFrom </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classPosition.html">Position</a>&#160;</td>
+          <td class="paramname"><em>position</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Граф вызовов:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classEngine_afffac825472b73103b32f2d3e4555267_cgraph.svg" width="448" height="104"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classEngine_afffac825472b73103b32f2d3e4555267_icgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="ab4b084189c3f29e30a3a44ac0d5ed6b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab4b084189c3f29e30a3a44ac0d5ed6b3">&#9670;&nbsp;</a></span>getPosibleMovesFigureFrom()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::list&lt; std::list&lt; <a class="el" href="classPosition.html">Position</a> &gt; &gt; Engine::getPosibleMovesFigureFrom </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classPosition.html">Position</a>&#160;</td>
+          <td class="paramname"><em>position</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Граф вызовов:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classEngine_ab4b084189c3f29e30a3a44ac0d5ed6b3_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classEngine_ab4b084189c3f29e30a3a44ac0d5ed6b3_icgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a66f2b590d92c6e0fa99741f02a8a9a3f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a66f2b590d92c6e0fa99741f02a8a9a3f">&#9670;&nbsp;</a></span>move()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="constants_8h.html#a8b9a4049772aeb1c0e054b0571babc95">StatusMove</a> Engine::move </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classPosition.html">Position</a>&#160;</td>
+          <td class="paramname"><em>from_pos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classPosition.html">Position</a>&#160;</td>
+          <td class="paramname"><em>step</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Проверяет возможность хода и перемещает фигуру. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">from_pos</td><td>позиция фигуры, которую нужно переместить </td></tr>
+    <tr><td class="paramname">step</td><td>шаг, на который переместить фигуру </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>статус перемещения StatusMove (Enum) </dd></dl>
+<div class="dynheader">
+Граф вызовов:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classEngine_a66f2b590d92c6e0fa99741f02a8a9a3f_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classEngine_a66f2b590d92c6e0fa99741f02a8a9a3f_icgraph.svg" width="100%" height="378"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a9154a3995005939adcc56d46d8bd78b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9154a3995005939adcc56d46d8bd78b0">&#9670;&nbsp;</a></span>quantityPossibleMove()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Engine::quantityPossibleMove </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; std::vector&lt; <a class="el" href="classFigure.html">Figure</a> * &gt;&gt;&#160;</td>
+          <td class="paramname"><em>board</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classPosition.html">Position</a>&#160;</td>
+          <td class="paramname"><em>pos</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classEngine_a9154a3995005939adcc56d46d8bd78b0_icgraph.svg" width="100%" height="378"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="aecc43b5398baffd0cddd1af03dca4793"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aecc43b5398baffd0cddd1af03dca4793">&#9670;&nbsp;</a></span>setFigureOnBoard()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Engine::setFigureOnBoard </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classFigure.html">Figure</a> *&#160;</td>
+          <td class="paramname"><em>figure</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classPosition.html">Position</a>&#160;</td>
+          <td class="paramname"><em>position</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Установка фигуры на доску. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">figure</td><td>указатель на фигуру, которую нужно поставить на поле. </td></tr>
+    <tr><td class="paramname">position</td><td>позиция на которую нужно поставить фигуру. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>если установка прошла успешно - true, в противном случае - false. </dd></dl>
+<div class="dynheader">
+Граф вызовов:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classEngine_aecc43b5398baffd0cddd1af03dca4793_cgraph.svg" width="396" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a9027b51e4922e147b8ae3b50348c69af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9027b51e4922e147b8ae3b50348c69af">&#9670;&nbsp;</a></span>setStartingArrangement()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Engine::setStartingArrangement </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Базовая расстановка фигур на поле. </p>
+<div class="dynheader">
+Граф вызовов:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classEngine_a9027b51e4922e147b8ae3b50348c69af_cgraph.svg" width="436" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classEngine_a9027b51e4922e147b8ae3b50348c69af_icgraph.svg" width="100%" height="366"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<hr/>Объявления и описания членов классов находятся в файлах:<ul>
+<li>src/logic/engine/<a class="el" href="engine_8h_source.html">engine.h</a></li>
+<li>src/logic/engine/<a class="el" href="engine_8cpp.html">engine.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

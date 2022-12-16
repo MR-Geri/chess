@@ -1,0 +1,365 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Chess: Класс Board</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Chess
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="classBoard-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Класс Board</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Обрабатывает логику игрового поля.  
+ <a href="classBoard.html#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="board_8h_source.html">board.h</a>&gt;</code></p>
+<div class="dynheader">
+Граф связей класса Board:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classBoard__coll__graph.svg" width="230" height="191"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:a9ee491d4fea680cf69b033374a9fdfcb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBoard.html#a9ee491d4fea680cf69b033374a9fdfcb">Board</a> ()</td></tr>
+<tr class="separator:a9ee491d4fea680cf69b033374a9fdfcb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af73f45730119a1fd8f6670f53f959e68"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBoard.html#af73f45730119a1fd8f6670f53f959e68">~Board</a> ()</td></tr>
+<tr class="separator:af73f45730119a1fd8f6670f53f959e68"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0bac43a8a2fc2aabc7e687eeedbe9f9e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classFigure.html">Figure</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBoard.html#a0bac43a8a2fc2aabc7e687eeedbe9f9e">getFigure</a> (<a class="el" href="classPosition.html">Position</a> coords) const</td></tr>
+<tr class="memdesc:a0bac43a8a2fc2aabc7e687eeedbe9f9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает фигуру, которая находится в ячейке поля с координатами coords.  <a href="classBoard.html#a0bac43a8a2fc2aabc7e687eeedbe9f9e">Подробнее...</a><br /></td></tr>
+<tr class="separator:a0bac43a8a2fc2aabc7e687eeedbe9f9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ed8cf3fae283d3c88eb6b0dea9e9f0a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBoard.html#a4ed8cf3fae283d3c88eb6b0dea9e9f0a">move</a> (<a class="el" href="classPosition.html">Position</a> from, <a class="el" href="classPosition.html">Position</a> to)</td></tr>
+<tr class="memdesc:a4ed8cf3fae283d3c88eb6b0dea9e9f0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Перемещает фигуру в board.  <a href="classBoard.html#a4ed8cf3fae283d3c88eb6b0dea9e9f0a">Подробнее...</a><br /></td></tr>
+<tr class="separator:a4ed8cf3fae283d3c88eb6b0dea9e9f0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3f85f5b615feede6ea32745632203dd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="constants_8h.html#aad5143bace5bd3ff842dc242706a3682">Figures</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBoard.html#ac3f85f5b615feede6ea32745632203dd">calculateFigureAfterTaking</a> (<a class="el" href="classPosition.html">Position</a> from, <a class="el" href="classPosition.html">Position</a> to)</td></tr>
+<tr class="separator:ac3f85f5b615feede6ea32745632203dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a183ac960c959ed0df9b49314d0479703"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBoard.html#a183ac960c959ed0df9b49314d0479703">setFigureOn</a> (<a class="el" href="classFigure.html">Figure</a> *figure, <a class="el" href="classPosition.html">Position</a> position)</td></tr>
+<tr class="memdesc:a183ac960c959ed0df9b49314d0479703"><td class="mdescLeft">&#160;</td><td class="mdescRight">Устанавливает фигуру на доску.  <a href="classBoard.html#a183ac960c959ed0df9b49314d0479703">Подробнее...</a><br /></td></tr>
+<tr class="separator:a183ac960c959ed0df9b49314d0479703"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af74f0d4b43e5aa3faea16d7c6407b05e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBoard.html#af74f0d4b43e5aa3faea16d7c6407b05e">clear</a> ()</td></tr>
+<tr class="memdesc:af74f0d4b43e5aa3faea16d7c6407b05e"><td class="mdescLeft">&#160;</td><td class="mdescRight">clear Очищает доску.  <a href="classBoard.html#af74f0d4b43e5aa3faea16d7c6407b05e">Подробнее...</a><br /></td></tr>
+<tr class="separator:af74f0d4b43e5aa3faea16d7c6407b05e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab906dade3854d38f6354861a715fccac"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::vector&lt; <a class="el" href="classFigure.html">Figure</a> * &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBoard.html#ab906dade3854d38f6354861a715fccac">getBoardData</a> () const</td></tr>
+<tr class="memdesc:ab906dade3854d38f6354861a715fccac"><td class="mdescLeft">&#160;</td><td class="mdescRight">getBoo Возвращает доску.  <a href="classBoard.html#ab906dade3854d38f6354861a715fccac">Подробнее...</a><br /></td></tr>
+<tr class="separator:ab906dade3854d38f6354861a715fccac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Обрабатывает логику игрового поля. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">board</td><td>матрица, которая хранит указатели на фигуры и расположение фигур на поле. </td></tr>
+  </table>
+  </dd>
+</dl>
+</div><h2 class="groupheader">Конструктор(ы)</h2>
+<a id="a9ee491d4fea680cf69b033374a9fdfcb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ee491d4fea680cf69b033374a9fdfcb">&#9670;&nbsp;</a></span>Board()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Board::Board </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af73f45730119a1fd8f6670f53f959e68"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af73f45730119a1fd8f6670f53f959e68">&#9670;&nbsp;</a></span>~Board()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Board::~Board </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="ac3f85f5b615feede6ea32745632203dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac3f85f5b615feede6ea32745632203dd">&#9670;&nbsp;</a></span>calculateFigureAfterTaking()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="constants_8h.html#aad5143bace5bd3ff842dc242706a3682">Figures</a> Board::calculateFigureAfterTaking </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classPosition.html">Position</a>&#160;</td>
+          <td class="paramname"><em>from</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classPosition.html">Position</a>&#160;</td>
+          <td class="paramname"><em>to</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classBoard_ac3f85f5b615feede6ea32745632203dd_icgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="af74f0d4b43e5aa3faea16d7c6407b05e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af74f0d4b43e5aa3faea16d7c6407b05e">&#9670;&nbsp;</a></span>clear()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Board::clear </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>clear Очищает доску. </p>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classBoard_af74f0d4b43e5aa3faea16d7c6407b05e_icgraph.svg" width="100%" height="366"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="ab906dade3854d38f6354861a715fccac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab906dade3854d38f6354861a715fccac">&#9670;&nbsp;</a></span>getBoardData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; std::vector&lt; <a class="el" href="classFigure.html">Figure</a> * &gt; &gt; Board::getBoardData </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>getBoo Возвращает доску. </p>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classBoard_ab906dade3854d38f6354861a715fccac_icgraph.svg" width="100%" height="427"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a0bac43a8a2fc2aabc7e687eeedbe9f9e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0bac43a8a2fc2aabc7e687eeedbe9f9e">&#9670;&nbsp;</a></span>getFigure()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classFigure.html">Figure</a> * Board::getFigure </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classPosition.html">Position</a>&#160;</td>
+          <td class="paramname"><em>coords</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Возвращает фигуру, которая находится в ячейке поля с координатами coords. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coords</td><td>координаты ячейки поля, содержимое которой нужно узнать. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>наследника класса <a class="el" href="classFigure.html" title="Абстрактный класс фигуры.">Figure</a>. </dd></dl>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classBoard_a0bac43a8a2fc2aabc7e687eeedbe9f9e_icgraph.svg" width="100%" height="378"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a4ed8cf3fae283d3c88eb6b0dea9e9f0a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ed8cf3fae283d3c88eb6b0dea9e9f0a">&#9670;&nbsp;</a></span>move()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Board::move </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classPosition.html">Position</a>&#160;</td>
+          <td class="paramname"><em>from</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classPosition.html">Position</a>&#160;</td>
+          <td class="paramname"><em>to</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Перемещает фигуру в board. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">from</td><td>позиция с которой переместить фигуру. </td></tr>
+    <tr><td class="paramname">to</td><td>позиция куда переместить фигуру. </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classBoard_a4ed8cf3fae283d3c88eb6b0dea9e9f0a_icgraph.svg" width="100%" height="378"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a183ac960c959ed0df9b49314d0479703"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a183ac960c959ed0df9b49314d0479703">&#9670;&nbsp;</a></span>setFigureOn()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Board::setFigureOn </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classFigure.html">Figure</a> *&#160;</td>
+          <td class="paramname"><em>figure</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classPosition.html">Position</a>&#160;</td>
+          <td class="paramname"><em>position</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Устанавливает фигуру на доску. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">figure</td><td>ссылка на фигуру, которую нужно разместить на поле. </td></tr>
+    <tr><td class="paramname">position</td><td>позиция, на котрую нужно разместить фигуру. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>если установка прошла успешно - true, в противном случае - false. </dd></dl>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classBoard_a183ac960c959ed0df9b49314d0479703_icgraph.svg" width="100%" height="385"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<hr/>Объявления и описания членов классов находятся в файлах:<ul>
+<li>src/logic/board/<a class="el" href="board_8h_source.html">board.h</a></li>
+<li>src/logic/board/<a class="el" href="board_8cpp.html">board.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

@@ -1,0 +1,4 @@
+<map id="Engine::setFigureOnBoard" name="Engine::setFigureOnBoard">
+<area shape="rect" id="node1" title="Установка фигуры на доску." alt="" coords="5,5,196,32"/>
+<area shape="rect" id="node2" href="$classBoard.html#a183ac960c959ed0df9b49314d0479703" title="Устанавливает фигуру на доску." alt="" coords="244,5,391,32"/>
+</map>
