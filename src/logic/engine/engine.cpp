@@ -213,10 +213,9 @@ Engine::getPosibleMovesFigureFrom(Position position) {
       step.x += position.x;
       step.y += position.y;
       if (step.x < 0 || step.x >= 8 || step.y < 0 || step.y >= 8)
-        continue;
+        break;
       if (flag && board_data[step.x][step.y] == nullptr) {
         move.push_back({step.x, step.y});
-        std::cout << flag << ' ' << step.x << " " << step.y << " this is\n";
       } else
         flag = false;
     }

@@ -219,7 +219,6 @@ void ScreenGame::highlightAll() {
       int y = pos.y;
       scene->addEllipse(x - size / 2, y - size / 2, size, size, QPen(Qt::gray),
                         QBrush(Qt::green));
-      std::cout << x << " " << y << "!!!!!\n";
     }
   }
 }
@@ -228,8 +227,6 @@ void ScreenGame::mousePressScene(Position to) {
   if (from.x != 0 && from.y != 0) {
     Position delta = calculatePositionOnBoard(to);
     Position from_board = calculatePositionOnBoard(from);
-    std::cout << delta.x - from_board.x << " " << delta.y - from_board.y
-              << "Hello!!!!!!!!!!!!!\n";
     emit figureMovedBoard(from_board,
                           {delta.x - from_board.x, delta.y - from_board.y});
   }
