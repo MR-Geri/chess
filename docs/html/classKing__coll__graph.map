@@ -1,4 +1,0 @@
-<map id="King" name="King">
-<area shape="rect" id="node1" title="Король." alt="" coords="53,292,129,369"/>
-<area shape="rect" id="node2" href="$classFigure.html" title="Абстрактный класс фигуры." alt="" coords="5,5,176,244"/>
-</map>

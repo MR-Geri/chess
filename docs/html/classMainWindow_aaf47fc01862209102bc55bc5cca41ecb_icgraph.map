@@ -1,4 +1,0 @@
-<map id="MainWindow::windowsManager" name="MainWindow::windowsManager">
-<area shape="rect" id="node1" title="Менеджер окон, переключает QStacedWidget на тот виджет, номер которого ему передали." alt="" coords="233,5,440,32"/>
-<area shape="rect" id="node2" href="$classMainWindow.html#a996c5a2b6f77944776856f08ec30858d" title=" " alt="" coords="5,5,185,32"/>
-</map>

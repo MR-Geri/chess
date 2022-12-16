@@ -1,4 +1,0 @@
-<map id="SceneGame" name="SceneGame">
-<area shape="rect" id="node1" title="Отрисовывает игровое поле." alt="" coords="9,131,123,208"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,5,127,83"/>
-</map>

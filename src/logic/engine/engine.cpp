@@ -168,11 +168,13 @@ double Engine::calculateAdvantageWhite() {
   return white / (white + black);
 }
 
-std::list<Position> Engine::getPosibleAttacksFigureFrom(Position position) {
+std::list<std::pair<Position, Figures>>
+Engine::getPosibleAttacksFigureFrom(Position position) {
   std::vector<std::vector<Figure *>> board_data = game_board->getBoardData();
   std::list<std::list<Position>> possible_attacks =
       board_data[position.x][position.y]->getPossibleAttacks();
-  std::list<Position> attacks;
+  std::list<std::pair<Position, Figures>> attacks;
+  FigureColor color = board_data[position.x][position.y]->getColor();
   for (auto &attack : possible_attacks) {
     for (auto &step : attack) {
       step.x += position.x;
@@ -180,10 +182,20 @@ std::list<Position> Engine::getPosibleAttacksFigureFrom(Position position) {
       if (step.x < 0 || step.x >= 8 || step.y < 0 || step.y >= 8)
         continue;
       if (board_data[step.x][step.y] != nullptr) {
-        attacks.push_back(step);
+        if (color != board_data[step.x][step.y]->getColor())
+          attacks.push_back(
+              {step, game_board->calculateFigureAfterTaking(position, step)});
         break;
       }
     }
+  }
+  if (board_data[position.x][position.y]->getTypeFigure() == W_PAWN &&
+      position.y == 1 && board_data[position.x][position.y - 1] == nullptr) {
+    attacks.push_back({{position.x, position.y - 1}, W_QUEEN});
+  }
+  if (board_data[position.x][position.y]->getTypeFigure() == B_PAWN &&
+      position.y == 6 && board_data[position.x][position.y + 1] == nullptr) {
+    attacks.push_back({{position.x, position.y + 1}, B_QUEEN});
   }
   return attacks;
 }
@@ -201,14 +213,17 @@ Engine::getPosibleMovesFigureFrom(Position position) {
       step.x += position.x;
       step.y += position.y;
       if (step.x < 0 || step.x >= 8 || step.y < 0 || step.y >= 8)
-        continue;
+        break;
       if (flag && board_data[step.x][step.y] == nullptr) {
         move.push_back({step.x, step.y});
-        std::cout << flag << ' ' << step.x << " " << step.y << " this is\n";
       } else
         flag = false;
     }
-    if (!move.empty()) {
+    if (!move.empty() &&
+        !((board_data[position.x][position.y]->getTypeFigure() == W_PAWN &&
+           !(move.back().x == 0 && move.back().y == -1) && position.y == 1) ||
+          (board_data[position.x][position.y]->getTypeFigure() == B_PAWN) &&
+              !(move.back().x == 0 && move.back().y == 1) && position.y == 6)) {
       moves.push_back(move);
     }
   }

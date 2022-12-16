@@ -1,8 +1,0 @@
-<map id="Figure::getUnarySteps" name="Figure::getUnarySteps">
-<area shape="rect" id="node1" title="Получение элементарных ходов." alt="" coords="987,42,1153,69"/>
-<area shape="rect" id="node2" href="$classEngine.html#a66f2b590d92c6e0fa99741f02a8a9a3f" title="Проверяет возможность хода и перемещает фигуру." alt="" coords="828,42,939,69"/>
-<area shape="rect" id="node3" href="$classMainWindow.html#a85e58f13e52e2a2d01b0bbf87c1442e9" title=" " alt="" coords="251,5,473,47"/>
-<area shape="rect" id="node5" href="$classEngine.html#ab4b084189c3f29e30a3a44ac0d5ed6b3" title=" " alt="" coords="521,67,780,94"/>
-<area shape="rect" id="node4" href="$classMainWindow.html#a996c5a2b6f77944776856f08ec30858d" title=" " alt="" coords="5,42,203,69"/>
-<area shape="rect" id="node6" href="$classMainWindow.html#adf52446f5b40a6b0045d04ccca523242" title=" " alt="" coords="258,71,466,98"/>
-</map>

@@ -1,9 +1,0 @@
-<map id="src/gui/scene_game/scene_game.h" name="src/gui/scene_game/scene_game.h">
-<area shape="rect" id="node1" title=" " alt="" coords="88,5,227,47"/>
-<area shape="rect" id="node2" href="$scene__game_8cpp.html" title=" " alt="" coords="5,95,144,136"/>
-<area shape="rect" id="node3" href="$screen__game_8h.html" title=" " alt="" coords="169,95,311,136"/>
-<area shape="rect" id="node4" href="$main__window_8h.html" title=" " alt="" coords="84,184,228,225"/>
-<area shape="rect" id="node7" href="$screen__game_8cpp.html" title=" " alt="" coords="253,184,395,225"/>
-<area shape="rect" id="node5" href="$main__window_8cpp.html" title=" " alt="" coords="12,273,156,315"/>
-<area shape="rect" id="node6" href="$main_8cpp.html" title=" " alt="" coords="181,281,278,307"/>
-</map>

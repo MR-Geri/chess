@@ -1,9 +1,0 @@
-<map id="Engine::enemyUnderAttack" name="Engine::enemyUnderAttack">
-<area shape="rect" id="node1" title=" " alt="" coords="1237,42,1437,69"/>
-<area shape="rect" id="node2" href="$classEngine.html#a2b384a18565b9cdd85b52fed6d25ff0c" title="Расчет преимущества игрока." alt="" coords="987,35,1189,76"/>
-<area shape="rect" id="node3" href="$classEngine.html#a66f2b590d92c6e0fa99741f02a8a9a3f" title="Проверяет возможность хода и перемещает фигуру." alt="" coords="828,42,939,69"/>
-<area shape="rect" id="node4" href="$classMainWindow.html#a85e58f13e52e2a2d01b0bbf87c1442e9" title=" " alt="" coords="251,5,473,47"/>
-<area shape="rect" id="node6" href="$classEngine.html#ab4b084189c3f29e30a3a44ac0d5ed6b3" title=" " alt="" coords="521,67,780,94"/>
-<area shape="rect" id="node5" href="$classMainWindow.html#a996c5a2b6f77944776856f08ec30858d" title=" " alt="" coords="5,42,203,69"/>
-<area shape="rect" id="node7" href="$classMainWindow.html#adf52446f5b40a6b0045d04ccca523242" title=" " alt="" coords="258,71,466,98"/>
-</map>

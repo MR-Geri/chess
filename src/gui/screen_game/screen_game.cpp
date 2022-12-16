@@ -144,7 +144,8 @@ void ScreenGame::drawAdvantageBar(float height_board, float scale_board) {
   scene->addItem(advantage_bar_black);
 }
 
-void ScreenGame::highlightAttacks(std::list<Position> attacks) {
+void ScreenGame::highlightAttacks(
+    std::list<std::pair<Position, Figures>> attacks) {
   highlight_attacks = std::move(attacks);
 }
 
@@ -171,8 +172,6 @@ Position ScreenGame::calculatePositionOnScene(Position position) {
 Position ScreenGame::calculatePositionOnBoard(Position position) {
   Position position_on_board;
   Position delta_board;
-  float width_graphicsView = ui->graphicsView->width() - 10;
-  float height_graphicsView = ui->graphicsView->height() - 10;
   position_on_board.x =
       static_cast<int>((position.x + 1 - indent) / size_cell_board);
   position_on_board.y =
@@ -193,12 +192,23 @@ void ScreenGame::pressFigure(Position position) {
 
 void ScreenGame::highlightAll() {
   int size = size_cell_board / 4;
+  float width_graphicsView = ui->graphicsView->width() - 10;
+  float height_graphicsView = ui->graphicsView->height() - 10;
   for (auto attack : highlight_attacks) {
-    Position pos = calculatePositionOnScene(attack);
+    Position pos = calculatePositionOnScene(attack.first);
     int x = pos.x;
     int y = pos.y;
-    scene->addEllipse(x - size / 2, y - size / 2, size, size, QPen(Qt::gray),
-                      QBrush(Qt::blue));
+    GuiFigure *figure =
+        new GuiFigure(width_graphicsView, height_graphicsView, attack.second);
+    figure->setPos(x - size_cell_board / 2, y - size_cell_board / 2);
+    QGraphicsColorizeEffect *colorize_effect = new QGraphicsColorizeEffect();
+    colorize_effect->setColor(QColor(255, 140, 0));
+    figure->setGraphicsEffect(colorize_effect);
+    scene->addItem(figure);
+    for (auto item : scene->collidingItems(figure)) {
+      if (item != board)
+        item->hide();
+    }
   }
   for (auto move : highlight_moves) {
     for (auto step : move) {
@@ -207,7 +217,6 @@ void ScreenGame::highlightAll() {
       int y = pos.y;
       scene->addEllipse(x - size / 2, y - size / 2, size, size, QPen(Qt::gray),
                         QBrush(Qt::green));
-      std::cout << x << " " << y << "!!!!!\n";
     }
   }
 }
@@ -216,8 +225,6 @@ void ScreenGame::mousePressScene(Position to) {
   if (from.x != 0 && from.y != 0) {
     Position delta = calculatePositionOnBoard(to);
     Position from_board = calculatePositionOnBoard(from);
-    std::cout << delta.x - from_board.x << " " << delta.y - from_board.y
-              << "Hello!!!!!!!!!!!!!\n";
     emit figureMovedBoard(from_board,
                           {delta.x - from_board.x, delta.y - from_board.y});
   }
