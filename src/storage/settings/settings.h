@@ -4,7 +4,6 @@
 #include <QJsonObject>
 #include <iostream>
 
-
 class Settings {
 public:
   Settings();
@@ -21,7 +20,7 @@ public slots:
   void changeSoundFlag(bool flag);
 
 private:
-  QString path="./data/settings.json";
+  QString path = "./data/settings.json";
 
   int m_music_volume;
   bool m_music_flag;
