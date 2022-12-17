@@ -57,7 +57,7 @@
           <enum>Qt::NoFocus</enum>
          </property>
          <property name="text">
-          <string>Назад</string>
+          <string>Меню</string>
          </property>
         </widget>
        </item>
