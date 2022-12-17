@@ -180,12 +180,12 @@ Position ScreenGame::calculatePositionOnBoard(Position position) {
 }
 
 void ScreenGame::pressFigure(Position position) {
-  if (from.x != 0 && from.y != 0) {
+  if (from_global.x != 0 && from_global.y != 0) {
     this->highlight_attacks.clear();
     this->highlight_moves.clear();
-    this->from = {0, 0};
+    this->from_global = {0, 0};
   } else {
-    from = position;
+    from_global = position;
     emit pressGuiFigure(calculatePositionOnBoard(position));
   }
 }
@@ -222,9 +222,9 @@ void ScreenGame::highlightAll() {
 }
 
 void ScreenGame::mousePressScene(Position to) {
-  if (from.x != 0 && from.y != 0) {
+  if (from_global.x != 0 && from_global.y != 0) {
     Position delta = calculatePositionOnBoard(to);
-    Position from_board = calculatePositionOnBoard(from);
+    Position from_board = calculatePositionOnBoard(from_global);
     emit figureMovedBoard(from_board,
                           {delta.x - from_board.x, delta.y - from_board.y});
   }

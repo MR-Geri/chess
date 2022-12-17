@@ -100,5 +100,5 @@ private:
   int size_cell_board;
   std::list<std::list<Position>> highlight_moves;
   std::list<std::pair<Position, Figures>> highlight_attacks;
-  Position from;
+  Position from_global;
 };
