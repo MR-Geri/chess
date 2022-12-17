@@ -1,11 +1,11 @@
 #include "settings.h"
 
-Settings::Settings(){
+Settings::Settings() {
   load();
   save();
 }
 
-void Settings::load(){
+void Settings::load() {
   std::cout << "LOAD\n";
   QFile file(path);
   if (file.open(QIODevice::ReadOnly)) {
@@ -46,7 +46,7 @@ void Settings::load(){
   }
 }
 
-void Settings::save(){
+void Settings::save() {
   std::cout << "SAVE\n";
   QJsonObject settings;
   settings.insert("music_flag", m_music_flag);

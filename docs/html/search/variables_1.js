@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['name_298',['name',['../structBook.html#a2836236503178dc953b07d9baef8a8d8',1,'Book']]]
+  ['possible_5fmoves_307',['possible_moves',['../classFigure.html#ae72a9794daea8b4547c11ee315aefaf0',1,'Figure']]]
 ];
