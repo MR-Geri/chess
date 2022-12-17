@@ -1,3 +1,7 @@
 <map id="Иерархия классов. Графический вид." name="Иерархия классов. Графический вид.">
-<area shape="rect" id="node1" href="$classSettings.html" title=" " alt="" coords="5,5,80,32"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,81,84,108"/>
+<area shape="rect" id="node2" href="$classScreenGame.html" title="Окно игры." alt="" coords="147,5,252,32"/>
+<area shape="rect" id="node3" href="$classScreenLiderboard.html" title="Окно табллицы лидеров." alt="" coords="132,56,267,83"/>
+<area shape="rect" id="node4" href="$classScreenMenu.html" title="Окно меню." alt="" coords="148,107,251,133"/>
+<area shape="rect" id="node5" href="$classScreenSettings.html" title="Окно настроек." alt="" coords="140,157,259,184"/>
 </map>

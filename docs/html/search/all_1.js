@@ -13,8 +13,9 @@ var searchData=
   ['bishop_17',['BISHOP',['../constants_8h.html#a3da527ca0edbe6a57ea4f61d1e5af434a6bc4b5ac244475b6bd2595d608f18814',1,'constants.h']]],
   ['bishop_18',['Bishop',['../classBishop.html#afd7972b31fd21fa1fb8ec45e64d5a7b4',1,'Bishop::Bishop()'],['../classBishop.html',1,'Bishop']]],
   ['black_19',['BLACK',['../constants_8h.html#a80feabe81f30d5b97df91defa4774c0faf77fb67151d0c18d397069ad8c271ba3',1,'constants.h']]],
-  ['board_20',['Board',['../classBoard.html#a9ee491d4fea680cf69b033374a9fdfcb',1,'Board::Board()'],['../classBoard.html',1,'Board']]],
-  ['board_2ecpp_21',['board.cpp',['../board_8cpp.html',1,'']]],
-  ['board_2eh_22',['board.h',['../board_8h.html',1,'']]],
-  ['boundingrect_23',['boundingRect',['../classGuiAdvantageBar.html#a442a4c8cf8d0e87d9abcfd5d95c310f2',1,'GuiAdvantageBar']]]
+  ['board_20',['board',['../classGuiScene.html#a77c808eb53a503bb8bdae1f8685fcb5d',1,'GuiScene']]],
+  ['board_21',['Board',['../classBoard.html#a9ee491d4fea680cf69b033374a9fdfcb',1,'Board::Board()'],['../classBoard.html',1,'Board']]],
+  ['board_2ecpp_22',['board.cpp',['../board_8cpp.html',1,'']]],
+  ['board_2eh_23',['board.h',['../board_8h.html',1,'']]],
+  ['boundingrect_24',['boundingRect',['../classGuiAdvantageBar.html#a442a4c8cf8d0e87d9abcfd5d95c310f2',1,'GuiAdvantageBar::boundingRect()'],['../classGuiPoint.html#a3f77fc3cae02d852f20210a147595f92',1,'GuiPoint::boundingRect()']]]
 ];

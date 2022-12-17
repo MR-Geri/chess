@@ -1,12 +1,12 @@
 var searchData=
 [
-  ['_7eboard_159',['~Board',['../classBoard.html#af73f45730119a1fd8f6670f53f959e68',1,'Board']]],
-  ['_7eengine_160',['~Engine',['../classEngine.html#a8ef7030a089ecb30bbfcb9e43094717a',1,'Engine']]],
-  ['_7eguiadvantagebar_161',['~GuiAdvantageBar',['../classGuiAdvantageBar.html#a2ff1e8baa73fd14675cd3ff991514a33',1,'GuiAdvantageBar']]],
-  ['_7eguifigure_162',['~GuiFigure',['../classGuiFigure.html#a22b5833103c8100ab6cac21fa8590259',1,'GuiFigure']]],
-  ['_7emainwindow_163',['~MainWindow',['../classMainWindow.html#ae98d00a93bc118200eeef9f9bba1dba7',1,'MainWindow']]],
-  ['_7escreengame_164',['~ScreenGame',['../classScreenGame.html#ae3be2b72300f87330ffc78b5bbbfc009',1,'ScreenGame']]],
-  ['_7escreenliderboard_165',['~ScreenLiderboard',['../classScreenLiderboard.html#a2f00e3ae7ee1d2ac6c12d548e7c3ce36',1,'ScreenLiderboard']]],
-  ['_7escreenmenu_166',['~ScreenMenu',['../classScreenMenu.html#a2ea12005679876f5279aa89816d6df52',1,'ScreenMenu']]],
-  ['_7escreensettings_167',['~ScreenSettings',['../classScreenSettings.html#a90444a724ca86f9d5cf9b9fbd34fcd37',1,'ScreenSettings']]]
+  ['_7eboard_164',['~Board',['../classBoard.html#af73f45730119a1fd8f6670f53f959e68',1,'Board']]],
+  ['_7eengine_165',['~Engine',['../classEngine.html#a8ef7030a089ecb30bbfcb9e43094717a',1,'Engine']]],
+  ['_7eguiadvantagebar_166',['~GuiAdvantageBar',['../classGuiAdvantageBar.html#a2ff1e8baa73fd14675cd3ff991514a33',1,'GuiAdvantageBar']]],
+  ['_7eguifigure_167',['~GuiFigure',['../classGuiFigure.html#a22b5833103c8100ab6cac21fa8590259',1,'GuiFigure']]],
+  ['_7emainwindow_168',['~MainWindow',['../classMainWindow.html#ae98d00a93bc118200eeef9f9bba1dba7',1,'MainWindow']]],
+  ['_7escreengame_169',['~ScreenGame',['../classScreenGame.html#ae3be2b72300f87330ffc78b5bbbfc009',1,'ScreenGame']]],
+  ['_7escreenliderboard_170',['~ScreenLiderboard',['../classScreenLiderboard.html#a2f00e3ae7ee1d2ac6c12d548e7c3ce36',1,'ScreenLiderboard']]],
+  ['_7escreenmenu_171',['~ScreenMenu',['../classScreenMenu.html#a2ea12005679876f5279aa89816d6df52',1,'ScreenMenu']]],
+  ['_7escreensettings_172',['~ScreenSettings',['../classScreenSettings.html#a90444a724ca86f9d5cf9b9fbd34fcd37',1,'ScreenSettings']]]
 ];

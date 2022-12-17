@@ -185,9 +185,11 @@ Position ScreenGame::calculatePositionOnBoard(Position position) {
 void ScreenGame::pressFigure(Position position) {
   Position board_from_position = calculatePositionOnBoard(from_global);
   Position board_position = calculatePositionOnBoard(position);
-  std::cout << board_from_position.x << " " << from_global.y << " " << board_from_position.x << " " << board_position.y << "\n";
+  std::cout << board_from_position.x << " " << from_global.y << " "
+            << board_from_position.x << " " << board_position.y << "\n";
   if (from_global.x != 0 && from_global.y != 0 &&
-      board_from_position.x == board_position.x && board_from_position.y == board_position.y) {
+      board_from_position.x == board_position.x &&
+      board_from_position.y == board_position.y) {
     this->highlight_attacks.clear();
     this->highlight_moves.clear();
     this->from_global = {0, 0};
@@ -207,7 +209,8 @@ void ScreenGame::highlightAll() {
     float y = pos.y;
     GuiFigure *figure =
         new GuiFigure(width_graphicsView, height_graphicsView, attack.second);
-    connect(figure, SIGNAL(press(Position)), this, SLOT(mousePressStep(Position)));
+    connect(figure, SIGNAL(press(Position)), this,
+            SLOT(mousePressStep(Position)));
     figure->setPos(x - size_cell_board / 2, y - size_cell_board / 2);
     QGraphicsColorizeEffect *colorize_effect = new QGraphicsColorizeEffect();
     colorize_effect->setColor(QColor(255, 140, 0));
@@ -225,7 +228,8 @@ void ScreenGame::highlightAll() {
       int y = pos.y;
       GuiPoint *figure = new GuiPoint(size_cell_board);
       figure->setPos(x, y);
-      connect(figure, SIGNAL(press(Position)), this, SLOT(mousePressStep(Position)));
+      connect(figure, SIGNAL(press(Position)), this,
+              SLOT(mousePressStep(Position)));
       scene->addItem(figure);
     }
   }
@@ -243,6 +247,7 @@ void ScreenGame::mousePressStep(Position to) {
   Position from_board = calculatePositionOnBoard(from_global);
   emit figureMovedBoard(from_board,
                         {delta.x - from_board.x, delta.y - from_board.y});
-  std::cout << from_board.x << " " << from_board.y << " " << delta.x << " " << delta.y << '\n';
+  std::cout << from_board.x << " " << from_board.y << " " << delta.x << " "
+            << delta.y << '\n';
   from_global = {0, 0};
 }

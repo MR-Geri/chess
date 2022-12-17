@@ -1,18 +1,20 @@
 <map id="src/utils.h" name="src/utils.h">
-<area shape="rect" id="node1" title=" " alt="" coords="403,5,489,32"/>
-<area shape="rect" id="node2" href="$gui__scene_8h.html" title=" " alt="" coords="185,80,344,121"/>
-<area shape="rect" id="node9" href="$gui__figure_8h.html" title=" " alt="" coords="368,80,524,121"/>
-<area shape="rect" id="node11" href="$figures_8h.html" title=" " alt="" coords="606,87,790,114"/>
-<area shape="rect" id="node3" href="$gui__scene_8cpp.html" title=" " alt="" coords="5,169,164,211"/>
-<area shape="rect" id="node4" href="$screen__game_8h.html" title=" " alt="" coords="188,169,344,211"/>
-<area shape="rect" id="node5" href="$main__window_8h.html" title=" " alt="" coords="316,348,475,389"/>
-<area shape="rect" id="node8" href="$screen__game_8cpp.html" title=" " alt="" coords="275,259,431,300"/>
-<area shape="rect" id="node6" href="$main__window_8cpp.html" title=" " alt="" coords="239,437,397,479"/>
-<area shape="rect" id="node7" href="$main_8cpp.html" title=" " alt="" coords="421,445,527,471"/>
-<area shape="rect" id="node10" href="$gui__figure_8cpp.html" title=" " alt="" coords="368,169,524,211"/>
-<area shape="rect" id="node12" href="$board_8h.html" title=" " alt="" coords="549,177,719,203"/>
-<area shape="rect" id="node14" href="$engine_8h.html" title=" " alt="" coords="665,266,849,293"/>
-<area shape="rect" id="node16" href="$figures_8cpp.html" title=" " alt="" coords="793,177,992,203"/>
-<area shape="rect" id="node13" href="$board_8cpp.html" title=" " alt="" coords="455,266,640,293"/>
-<area shape="rect" id="node15" href="$engine_8cpp.html" title=" " alt="" coords="657,355,856,382"/>
+<area shape="rect" id="node1" title=" " alt="" coords="490,5,575,32"/>
+<area shape="rect" id="node2" href="$gui__point_8h.html" title=" " alt="" coords="185,80,339,121"/>
+<area shape="rect" id="node9" href="$gui__scene_8h.html" title=" " alt="" coords="363,80,521,121"/>
+<area shape="rect" id="node11" href="$gui__figure_8h.html" title=" " alt="" coords="545,80,701,121"/>
+<area shape="rect" id="node13" href="$figures_8h.html" title=" " alt="" coords="747,87,931,114"/>
+<area shape="rect" id="node3" href="$gui__point_8cpp.html" title=" " alt="" coords="5,169,159,211"/>
+<area shape="rect" id="node4" href="$screen__game_8h.html" title=" " alt="" coords="365,169,521,211"/>
+<area shape="rect" id="node5" href="$main__window_8h.html" title=" " alt="" coords="404,348,563,389"/>
+<area shape="rect" id="node8" href="$screen__game_8cpp.html" title=" " alt="" coords="467,259,623,300"/>
+<area shape="rect" id="node6" href="$main__window_8cpp.html" title=" " alt="" coords="327,437,485,479"/>
+<area shape="rect" id="node7" href="$main_8cpp.html" title=" " alt="" coords="509,445,615,471"/>
+<area shape="rect" id="node10" href="$gui__scene_8cpp.html" title=" " alt="" coords="183,169,341,211"/>
+<area shape="rect" id="node12" href="$gui__figure_8cpp.html" title=" " alt="" coords="545,169,701,211"/>
+<area shape="rect" id="node14" href="$board_8h.html" title=" " alt="" coords="777,177,947,203"/>
+<area shape="rect" id="node16" href="$engine_8h.html" title=" " alt="" coords="647,266,831,293"/>
+<area shape="rect" id="node18" href="$figures_8cpp.html" title=" " alt="" coords="972,177,1171,203"/>
+<area shape="rect" id="node15" href="$board_8cpp.html" title=" " alt="" coords="856,266,1041,293"/>
+<area shape="rect" id="node17" href="$engine_8cpp.html" title=" " alt="" coords="640,355,839,382"/>
 </map>
