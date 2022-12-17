@@ -56,6 +56,7 @@ void ScreenGame::drawGameField() {
                       std::min(width_graphicsView, height_graphicsView));
 
   board = new QGraphicsSvgItem(":/images/green_chess_board.svg");
+  scene->board = board;
   float width_board = board->boundingRect().size().width();
   float height_board = board->boundingRect().size().height();
   float scale_board =
@@ -125,6 +126,7 @@ void ScreenGame::figureMoved(Position from, Position delta) {
       (delta.x + ((delta.x > 0) ? ratio : -ratio)) / size_cell_board);
   delta_board.y = static_cast<int>(
       (delta.y + ((delta.y > 0) ? ratio : -ratio)) / size_cell_board);
+  from_global = {0, 0};
   emit figureMovedBoard(from_board, delta_board);
 }
 
@@ -142,6 +144,7 @@ void ScreenGame::drawAdvantageBar(float height_board, float scale_board) {
         0.1, 1, (1 - second_advantage_white) / (1 - first_advantage_white));
   scene->addItem(advantage_bar_white);
   scene->addItem(advantage_bar_black);
+  first_advantage_white = second_advantage_white;
 }
 
 void ScreenGame::highlightAttacks(
@@ -180,26 +183,31 @@ Position ScreenGame::calculatePositionOnBoard(Position position) {
 }
 
 void ScreenGame::pressFigure(Position position) {
-  if (from_global.x != 0 && from_global.y != 0) {
+  Position board_from_position = calculatePositionOnBoard(from_global);
+  Position board_position = calculatePositionOnBoard(position);
+  std::cout << board_from_position.x << " " << from_global.y << " " << board_from_position.x << " " << board_position.y << "\n";
+  if (from_global.x != 0 && from_global.y != 0 &&
+      board_from_position.x == board_position.x && board_from_position.y == board_position.y) {
     this->highlight_attacks.clear();
     this->highlight_moves.clear();
     this->from_global = {0, 0};
   } else {
     from_global = position;
-    emit pressGuiFigure(calculatePositionOnBoard(position));
+    emit pressGuiFigure(board_position);
   }
+  drawGameField();
 }
 
 void ScreenGame::highlightAll() {
-  int size = size_cell_board / 4;
   float width_graphicsView = ui->graphicsView->width() - 10;
   float height_graphicsView = ui->graphicsView->height() - 10;
   for (auto attack : highlight_attacks) {
     Position pos = calculatePositionOnScene(attack.first);
-    int x = pos.x;
-    int y = pos.y;
+    float x = pos.x;
+    float y = pos.y;
     GuiFigure *figure =
         new GuiFigure(width_graphicsView, height_graphicsView, attack.second);
+    connect(figure, SIGNAL(press(Position)), this, SLOT(mousePressStep(Position)));
     figure->setPos(x - size_cell_board / 2, y - size_cell_board / 2);
     QGraphicsColorizeEffect *colorize_effect = new QGraphicsColorizeEffect();
     colorize_effect->setColor(QColor(255, 140, 0));
@@ -215,17 +223,26 @@ void ScreenGame::highlightAll() {
       Position pos = calculatePositionOnScene(step);
       int x = pos.x;
       int y = pos.y;
-      scene->addEllipse(x - size / 2, y - size / 2, size, size, QPen(Qt::gray),
-                        QBrush(Qt::green));
+      GuiPoint *figure = new GuiPoint(size_cell_board);
+      figure->setPos(x, y);
+      connect(figure, SIGNAL(press(Position)), this, SLOT(mousePressStep(Position)));
+      scene->addItem(figure);
     }
   }
 }
 
 void ScreenGame::mousePressScene(Position to) {
-  if (from_global.x != 0 && from_global.y != 0) {
-    Position delta = calculatePositionOnBoard(to);
-    Position from_board = calculatePositionOnBoard(from_global);
-    emit figureMovedBoard(from_board,
-                          {delta.x - from_board.x, delta.y - from_board.y});
-  }
+  from_global = {0, 0};
+  drawGameField();
+  std::cout << "Press scene\n";
+}
+
+void ScreenGame::mousePressStep(Position to) {
+  std::cout << "step\n";
+  Position delta = calculatePositionOnBoard(to);
+  Position from_board = calculatePositionOnBoard(from_global);
+  emit figureMovedBoard(from_board,
+                        {delta.x - from_board.x, delta.y - from_board.y});
+  std::cout << from_board.x << " " << from_board.y << " " << delta.x << " " << delta.y << '\n';
+  from_global = {0, 0};
 }

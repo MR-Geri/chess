@@ -12,6 +12,7 @@
 #include <src/gui/gui_scene/gui_scene.h>
 #include <src/gui/screen_game/gui_advantage_bar.h>
 #include <src/gui/screen_game/gui_figure.h>
+#include <src/gui/gui_point/gui_point.h>
 
 namespace Ui {
 class ScreenGame;
@@ -75,6 +76,8 @@ private slots:
 
   void mousePressScene(Position to);
 
+  void mousePressStep(Position to);
+
 private:
   void resizeEvent(QResizeEvent *event);
   void drawGameField();
@@ -97,7 +100,7 @@ private:
   int indent;
   double first_advantage_white;
   double second_advantage_white;
-  int size_cell_board;
+  float size_cell_board;
   std::list<std::list<Position>> highlight_moves;
   std::list<std::pair<Position, Figures>> highlight_attacks;
   Position from_global;

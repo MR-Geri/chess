@@ -12,4 +12,7 @@ signals:
 
 protected:
   void mousePressEvent(QGraphicsSceneMouseEvent *event);
+
+public:
+  QGraphicsItem* board;
 };
