@@ -89,7 +89,8 @@ void ScreenGame::drawGameField() {
               SLOT(figureMoved(Position, Position)));
       connect(figure, SIGNAL(mousePressed(Position)), this,
               SLOT(pressFigure(Position)));
-      connect(figure, SIGNAL(press(Position)), this, SLOT(mousePressFigure(Position)));
+      connect(figure, SIGNAL(press(Position)), this,
+              SLOT(mousePressFigure(Position)));
       figure->setPos(positions[i][j].x, positions[i][j].y);
       scene->addItem(figure);
     }

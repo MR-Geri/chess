@@ -60,7 +60,8 @@ public slots:
 
   void highlightAttacks(std::list<std::pair<Position, Figures>> attacks);
 
-  void highlightAttacksWhisRedrawing(std::list<std::pair<Position, Figures>> attacks);
+  void highlightAttacksWhisRedrawing(
+      std::list<std::pair<Position, Figures>> attacks);
 
   void highlightMoves(std::list<std::list<Position>> moves);
 

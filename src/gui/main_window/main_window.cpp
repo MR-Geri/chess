@@ -31,9 +31,11 @@ MainWindow::MainWindow(QWidget *parent)
   connect(&screen_game, SIGNAL(newGameFromGame()), this, SLOT(startNewGame()));
   connect(&screen_menu, SIGNAL(newGameFromMenu()), this, SLOT(startNewGame()));
   connect(this,
-          SIGNAL(highlightGuiAttacksForMousePress(std::list<std::pair<Position, Figures>>)),
+          SIGNAL(highlightGuiAttacksForMousePress(
+              std::list<std::pair<Position, Figures>>)),
           &screen_game,
-          SLOT(highlightAttacksWhisRedrawing(std::list<std::pair<Position, Figures>>)));
+          SLOT(highlightAttacksWhisRedrawing(
+              std::list<std::pair<Position, Figures>>)));
   connect(this,
           SIGNAL(highlightGuiAttacks(std::list<std::pair<Position, Figures>>)),
           &screen_game,
@@ -42,7 +44,8 @@ MainWindow::MainWindow(QWidget *parent)
           &screen_game, SLOT(highlightMoves(std::list<std::list<Position>>)));
   connect(&screen_game, SIGNAL(pressGuiFigure(Position)), this,
           SLOT(guiPressFigure(Position)));
-  connect(&screen_game, SIGNAL(mousePressGuiFigure(Position)), this, SLOT(guiMousePressFigure(Position)));
+  connect(&screen_game, SIGNAL(mousePressGuiFigure(Position)), this,
+          SLOT(guiMousePressFigure(Position)));
 }
 
 MainWindow::~MainWindow() { delete ui; }
@@ -83,15 +86,15 @@ void MainWindow::startNewGame() {
 
 void MainWindow::guiPressFigure(Position position) {
   std::list<std::pair<Position, Figures>> attacks =
-    engine.getPosibleAttacksFigureFrom(position);
+      engine.getPosibleAttacksFigureFrom(position);
   std::list<std::list<Position>> moves =
-    engine.getPosibleMovesFigureFrom(position);
+      engine.getPosibleMovesFigureFrom(position);
   emit highlightGuiAttacks(attacks);
   emit highlightGuiMoves(moves);
 }
 
 void MainWindow::guiMousePressFigure(Position position) {
   std::list<std::pair<Position, Figures>> attacks =
-    engine.getPosibleAttacksFigureFrom(position);
+      engine.getPosibleAttacksFigureFrom(position);
   emit highlightGuiAttacksForMousePress(attacks);
 }

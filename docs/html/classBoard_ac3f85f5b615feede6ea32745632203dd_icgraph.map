@@ -1,6 +1,7 @@
 <map id="Board::calculateFigureAfterTaking" name="Board::calculateFigureAfterTaking">
-<area shape="rect" id="node1" title=" " alt="" coords="745,5,944,47"/>
-<area shape="rect" id="node2" href="$classEngine.html#afffac825472b73103b32f2d3e4555267" title=" " alt="" coords="507,5,697,47"/>
-<area shape="rect" id="node3" href="$classMainWindow.html#adf52446f5b40a6b0045d04ccca523242" title=" " alt="" coords="251,13,459,39"/>
-<area shape="rect" id="node4" href="$classMainWindow.html#a996c5a2b6f77944776856f08ec30858d" title=" " alt="" coords="5,13,203,39"/>
+<area shape="rect" id="node1" title=" " alt="" coords="748,35,947,76"/>
+<area shape="rect" id="node2" href="$classEngine.html#afffac825472b73103b32f2d3e4555267" title=" " alt="" coords="509,35,700,76"/>
+<area shape="rect" id="node3" href="$classMainWindow.html#ac8e148d721ba666a05fe1422d14ebcd8" title=" " alt="" coords="251,5,461,47"/>
+<area shape="rect" id="node5" href="$classMainWindow.html#adf52446f5b40a6b0045d04ccca523242" title=" " alt="" coords="252,71,460,98"/>
+<area shape="rect" id="node4" href="$classMainWindow.html#a996c5a2b6f77944776856f08ec30858d" title=" " alt="" coords="5,42,203,69"/>
 </map>
