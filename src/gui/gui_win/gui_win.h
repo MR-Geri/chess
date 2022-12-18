@@ -1,13 +1,12 @@
 #pragma once
 
+#include <QGraphicsSceneEvent>
 #include <QGraphicsSvgItem>
 #include <QString>
-#include <src/utils.h>
-#include <QGraphicsSceneEvent>
 #include <QSvgRenderer>
+#include <src/utils.h>
 
-class GuiWin : public QGraphicsSvgItem
-{
+class GuiWin : public QGraphicsSvgItem {
   Q_OBJECT
 public:
   GuiWin(QGraphicsItem *parent = nullptr);
@@ -24,4 +23,3 @@ private:
   float size;
   QSvgRenderer *renderer;
 };
-
