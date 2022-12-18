@@ -12,6 +12,7 @@ CTestTestfile.cmake
 compile_commands.json
 Makefile
 chess
+comp_file
 chess_autogen/
 tests/tests
 tests/tests_autogen/

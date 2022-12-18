@@ -4,13 +4,40 @@
 #include <QJsonObject>
 #include <iostream>
 
+/**
+ * @class Settings
+ * @brief Хранение в базе настроек приложения.
+ */
 class Settings {
 public:
   Settings();
 
+  /**
+   * @brief Возвращает значение громкости музыки
+   *
+   * @return значение в int 0..100
+   */
   int getMusicVolume();
+
+  /**
+   * @brief Возвращает флаг музыки [On, Off]
+   *
+   * @return флаг
+   */
   bool getMusicFlag();
+
+  /**
+   * @brief Возвращает значение громкости звуков
+   *
+   * @return значение в int 0..100
+   */
   int getSoundVolume();
+
+  /**
+   * @brief Возвращает флаг звуков [On, Off]
+   *
+   * @return флаг
+   */
   bool getSoundFlag();
 
 public slots:

@@ -23,6 +23,9 @@ public:
   int &y = this->second;
 };
 
+/**
+ * @brief Хранение игроков и победителя в партии.
+ */
 struct Party {
   std::pair<QString, QString> players;
   int idPalyerWin;

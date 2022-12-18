@@ -26,6 +26,9 @@ enum FiguresPrice { KING = -1, PAWN = 1, KNIGHT, BISHOP, ROOK, QUEEN };
  */
 enum FigureColor { WHITE, BLACK };
 
+/**
+ * @brief Перечисление, всех фигур с их цветами.
+ */
 enum Figures {
   NONE = 0,
   W_KING,
@@ -44,6 +47,9 @@ enum Figures {
   B_WIN
 };
 
+/**
+ * @brief Стоимость всех фигур для анализатора победителя.
+ */
 enum AdvantagePrices {
   ADVANTAGE_PAWN = 100,
   ADVANTAGE_KNIGHT = 305,
@@ -51,6 +57,10 @@ enum AdvantagePrices {
   ADVANTAGE_ROOK = 563,
   ADVANTAGE_QUEEN = 950
 };
+
+/**
+ * @brief Лучшие позиции для всех фигур на поле.
+ */
 
 namespace TablePositionRatioYX {
 static std::vector<std::vector<float>> WHITE_POSITION_RATIO_KING = {
