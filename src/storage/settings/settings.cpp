@@ -67,3 +67,39 @@ void Settings::save() {
     std::cout << "file open failed: " << path.toStdString() << std::endl;
   }
 }
+
+void Settings::changeMusicFlag(bool flag){
+  m_music_flag = flag;
+  save();
+}
+
+void Settings::changeMusicVolume(int volume){
+  m_music_volume = volume;
+  save();
+}
+
+void Settings::changeSoundFlag(bool flag){
+  m_sound_flag = flag;
+  save();
+}
+
+void Settings::changeSoundVolume(int volume){
+  m_sound_volume = volume;
+  save();
+}
+
+int Settings::getMusicVolume(){
+  return m_music_volume;
+}
+
+bool Settings::getMusicFlag(){
+  return m_music_flag;
+}
+
+int Settings::getSoundVolume(){
+  return m_sound_volume;
+}
+
+bool Settings::getSoundFlag(){
+  return m_sound_flag;
+}
