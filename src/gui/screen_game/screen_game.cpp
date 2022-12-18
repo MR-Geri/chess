@@ -238,11 +238,11 @@ void ScreenGame::highlightAttacksScene() {
     float y = pos.y;
     QGraphicsSvgItem *figure;
     if (attack.second == W_WIN || attack.second == B_WIN) {
-      figure = new GuiWin(size_cell_board,
+      figure = new GuiWin(size_cell_board * 0.95,
                           attack.second == W_WIN ? "white" : "black");
       QGraphicsColorizeEffect *colorize_effect = new QGraphicsColorizeEffect();
       colorize_effect->setColor(QColor(255, 140, 0));
-      figure->setPos(x - size_cell_board * 0.5, y - size_cell_board * 0.5);
+      figure->setPos(x - size_cell_board * 0.5 * 0.95, y - size_cell_board * 0.5 * 0.95);
       figure->setGraphicsEffect(colorize_effect);
       connect(figure, SIGNAL(press(Position)), this,
               SLOT(mousePressStep(Position)));
