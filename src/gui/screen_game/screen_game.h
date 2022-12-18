@@ -13,6 +13,8 @@
 #include <src/gui/gui_scene/gui_scene.h>
 #include <src/gui/screen_game/gui_advantage_bar.h>
 #include <src/gui/screen_game/gui_figure.h>
+#include <src/gui/gui_point/gui_point.h>
+#include <src/gui/gui_win/gui_win.h>
 
 namespace Ui {
 class ScreenGame;

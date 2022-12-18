@@ -91,6 +91,14 @@ Figures Board::calculateFigureAfterTaking(Position from, Position to) {
   FigureColor color = board[from.x][from.y]->getColor();
   int price = board[from.x][from.y]->getPrice();
 
+  if (board[to.x][to.y]->getTypeFigure() == Figures::W_KING) {
+    return B_WIN;
+  }
+
+  if (board[to.x][to.y]->getTypeFigure() == Figures::B_KING) {
+    return W_WIN;
+  }
+
   if (board[to.x][to.y]->getPrice() != -1 && price != -1) {
     price -=
         round((static_cast<float>(price) - board[to.x][to.y]->getPrice()) / 2.);

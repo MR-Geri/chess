@@ -13,5 +13,7 @@
         <file>images/figures/10.svg</file>
         <file>images/figures/11.svg</file>
         <file>images/figures/12.svg</file>
+        <file>images/winner_black.svg</file>
+        <file>images/winner_white.svg</file>
     </qresource>
 </RCC>

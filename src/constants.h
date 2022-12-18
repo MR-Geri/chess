@@ -39,7 +39,9 @@ enum Figures {
   B_KNIGHT,
   B_BISHOP,
   B_ROOK,
-  B_QUEEN
+  B_QUEEN,
+  W_WIN,
+  B_WIN
 };
 
 enum AdvantagePrices {

@@ -207,15 +207,23 @@ void ScreenGame::highlightAll() {
     Position pos = calculatePositionOnScene(attack.first);
     float x = pos.x;
     float y = pos.y;
-    GuiFigure *figure =
-        new GuiFigure(width_graphicsView, height_graphicsView, attack.second);
-    connect(figure, SIGNAL(press(Position)), this,
-            SLOT(mousePressStep(Position)));
-    figure->setPos(x - size_cell_board / 2, y - size_cell_board / 2);
-    QGraphicsColorizeEffect *colorize_effect = new QGraphicsColorizeEffect();
-    colorize_effect->setColor(QColor(255, 140, 0));
-    figure->setGraphicsEffect(colorize_effect);
-    scene->addItem(figure);
+    QGraphicsSvgItem* figure;
+    if (attack.second == W_WIN || attack.second == B_WIN) {
+      figure = new GuiWin(size_cell_board, attack.second == W_WIN ? "white" : "black");      QGraphicsColorizeEffect *colorize_effect = new QGraphicsColorizeEffect();
+      colorize_effect->setColor(QColor(255, 140, 0));
+      figure->setPos(x - size_cell_board * 0.5, y - size_cell_board * 0.5);
+      figure->setGraphicsEffect(colorize_effect);
+      connect(figure, SIGNAL(press(Position)), this, SLOT(mousePressStep(Position)));
+      scene->addItem(figure);
+    } else {
+      figure = new GuiFigure(width_graphicsView, height_graphicsView, attack.second);
+      connect(figure, SIGNAL(press(Position)), this, SLOT(mousePressStep(Position)));
+      figure->setPos(x - size_cell_board / 2, y - size_cell_board / 2);
+      QGraphicsColorizeEffect *colorize_effect = new QGraphicsColorizeEffect();
+      colorize_effect->setColor(QColor(255, 140, 0));
+      figure->setGraphicsEffect(colorize_effect);
+      scene->addItem(figure);
+    }
     for (auto item : scene->collidingItems(figure)) {
       if (item != board)
         item->hide();
@@ -226,7 +234,7 @@ void ScreenGame::highlightAll() {
       Position pos = calculatePositionOnScene(step);
       int x = pos.x;
       int y = pos.y;
-      GuiPoint *figure = new GuiPoint(size_cell_board);
+      GuiPoint *figure = new GuiPoint(size_cell_board);      QGraphicsColorizeEffect *colorize_effect = new QGraphicsColorizeEffect();
       figure->setPos(x, y);
       connect(figure, SIGNAL(press(Position)), this,
               SLOT(mousePressStep(Position)));
