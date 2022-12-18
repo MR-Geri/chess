@@ -49,6 +49,8 @@ signals:
 
   void pressGuiFigure(Position position);
 
+  void mousePressGuiFigure(Position position);
+
 public slots:
   /**
    * @brief Получает данные для отрисовки из логики.
@@ -57,6 +59,8 @@ public slots:
                  double new_advantage_white, bool is_new_game = false);
 
   void highlightAttacks(std::list<std::pair<Position, Figures>> attacks);
+
+  void highlightAttacksWhisRedrawing(std::list<std::pair<Position, Figures>> attacks);
 
   void highlightMoves(std::list<std::list<Position>> moves);
 
@@ -79,6 +83,8 @@ private slots:
 
   void mousePressStep(Position to);
 
+  void mousePressFigure(Position position);
+
 private:
   void resizeEvent(QResizeEvent *event);
   void drawGameField();
@@ -86,6 +92,8 @@ private:
   Position calculatePositionOnScene(Position position);
   Position calculatePositionOnBoard(Position position);
   void highlightAll();
+  void highlightAttacksScene();
+  void highlightMovesScene();
 
 private:
   Ui::ScreenGame *ui;

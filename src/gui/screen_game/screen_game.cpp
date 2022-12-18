@@ -89,6 +89,7 @@ void ScreenGame::drawGameField() {
               SLOT(figureMoved(Position, Position)));
       connect(figure, SIGNAL(mousePressed(Position)), this,
               SLOT(pressFigure(Position)));
+      connect(figure, SIGNAL(press(Position)), this, SLOT(mousePressFigure(Position)));
       figure->setPos(positions[i][j].x, positions[i][j].y);
       scene->addItem(figure);
     }
@@ -127,6 +128,7 @@ void ScreenGame::figureMoved(Position from, Position delta) {
   delta_board.y = static_cast<int>(
       (delta.y + ((delta.y > 0) ? ratio : -ratio)) / size_cell_board);
   from_global = {0, 0};
+  highlight_attacks.clear();
   emit figureMovedBoard(from_board, delta_board);
 }
 
@@ -150,6 +152,12 @@ void ScreenGame::drawAdvantageBar(float height_board, float scale_board) {
 void ScreenGame::highlightAttacks(
     std::list<std::pair<Position, Figures>> attacks) {
   highlight_attacks = std::move(attacks);
+}
+
+void ScreenGame::highlightAttacksWhisRedrawing(
+    std::list<std::pair<Position, Figures>> attacks) {
+  highlight_attacks = std::move(attacks);
+  highlightAll();
 }
 
 void ScreenGame::highlightMoves(std::list<std::list<Position>> moves) {
@@ -201,6 +209,26 @@ void ScreenGame::pressFigure(Position position) {
 }
 
 void ScreenGame::highlightAll() {
+  highlightAttacksScene();
+  highlightMovesScene();
+}
+
+void ScreenGame::highlightMovesScene() {
+  for (auto move : highlight_moves) {
+    for (auto step : move) {
+      Position pos = calculatePositionOnScene(step);
+      int x = pos.x;
+      int y = pos.y;
+      GuiPoint *figure = new GuiPoint(size_cell_board);
+      figure->setPos(x, y);
+      connect(figure, SIGNAL(press(Position)), this,
+              SLOT(mousePressStep(Position)));
+      scene->addItem(figure);
+    }
+  }
+}
+
+void ScreenGame::highlightAttacksScene() {
   float width_graphicsView = ui->graphicsView->width() - 10;
   float height_graphicsView = ui->graphicsView->height() - 10;
   for (auto attack : highlight_attacks) {
@@ -234,19 +262,6 @@ void ScreenGame::highlightAll() {
         item->hide();
     }
   }
-  for (auto move : highlight_moves) {
-    for (auto step : move) {
-      Position pos = calculatePositionOnScene(step);
-      int x = pos.x;
-      int y = pos.y;
-      GuiPoint *figure = new GuiPoint(size_cell_board);
-      QGraphicsColorizeEffect *colorize_effect = new QGraphicsColorizeEffect();
-      figure->setPos(x, y);
-      connect(figure, SIGNAL(press(Position)), this,
-              SLOT(mousePressStep(Position)));
-      scene->addItem(figure);
-    }
-  }
 }
 
 void ScreenGame::mousePressScene(Position to) {
@@ -264,4 +279,9 @@ void ScreenGame::mousePressStep(Position to) {
   std::cout << from_board.x << " " << from_board.y << " " << delta.x << " "
             << delta.y << '\n';
   from_global = {0, 0};
+}
+
+void ScreenGame::mousePressFigure(Position position) {
+  std::cout << "It works!!!\n";
+  emit mousePressGuiFigure(calculatePositionOnBoard(position));
 }
