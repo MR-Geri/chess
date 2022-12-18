@@ -40,7 +40,7 @@ void Liderboard::load() {
 void Liderboard::save() {
   std::cout << "SAVE\n";
   QJsonArray parties;
-  for (auto party : this->m_parties){
+  for (auto party : this->m_parties) {
     QJsonObject jsonParty;
     QJsonArray players;
     players.append(party.players.first);

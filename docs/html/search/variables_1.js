@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['possible_5fmoves_347',['possible_moves',['../classFigure.html#ae72a9794daea8b4547c11ee315aefaf0',1,'Figure']]]
+  ['idpalyerwin_353',['idPalyerWin',['../structParty.html#afb0bc6e19e7dc7c43b8243ca0566ca66',1,'Party']]]
 ];

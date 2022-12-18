@@ -8,9 +8,9 @@
  viewBox="0.00 0.00 214.00 66.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 62)">
 <title>Иерархия классов. Графический вид.</title>
-<!-- Node19 -->
+<!-- Node20 -->
 <g id="node1" class="node">
-<title>Node19</title>
+<title>Node20</title>
 <g id="a_node1"><a xlink:title=" ">
 <polygon fill="none" stroke="#bfbfbf" points="0,-19.5 0,-38.5 107,-38.5 107,-19.5 0,-19.5"/>
 <text text-anchor="middle" x="53.5" y="-26.5" font-family="Helvetica,sans-Serif" font-size="10.00">QGraphicsSvgItem</text>
@@ -26,24 +26,24 @@
 </a>
 </g>
 </g>
-<!-- Node19&#45;&gt;Node0 -->
+<!-- Node20&#45;&gt;Node0 -->
 <g id="edge1" class="edge">
-<title>Node19&#45;&gt;Node0</title>
+<title>Node20&#45;&gt;Node0</title>
 <path fill="none" stroke="midnightblue" d="M117.1,-38.99C126.01,-40.42 134.83,-41.83 142.75,-43.09"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="117.47,-35.51 107.04,-37.39 116.36,-42.42 117.47,-35.51"/>
 </g>
-<!-- Node21 -->
+<!-- Node22 -->
 <g id="node3" class="node">
-<title>Node21</title>
+<title>Node22</title>
 <g id="a_node3"><a xlink:href="classGuiWin.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="148.5,-0.5 148.5,-19.5 200.5,-19.5 200.5,-0.5 148.5,-0.5"/>
 <text text-anchor="middle" x="174.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">GuiWin</text>
 </a>
 </g>
 </g>
-<!-- Node19&#45;&gt;Node21 -->
+<!-- Node20&#45;&gt;Node22 -->
 <g id="edge2" class="edge">
-<title>Node19&#45;&gt;Node21</title>
+<title>Node20&#45;&gt;Node22</title>
 <path fill="none" stroke="midnightblue" d="M117.16,-19C128.17,-17.24 139.05,-15.5 148.26,-14.03"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="116.36,-15.58 107.04,-20.61 117.47,-22.49 116.36,-15.58"/>
 </g>

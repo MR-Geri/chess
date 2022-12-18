@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['type_5ffigure_348',['type_figure',['../classFigure.html#a301940106d0bfb22d955362ec885e95f',1,'Figure']]]
+  ['players_354',['players',['../structParty.html#a496ea7d3563804c192291f92644342da',1,'Party']]],
+  ['possible_5fmoves_355',['possible_moves',['../classFigure.html#ae72a9794daea8b4547c11ee315aefaf0',1,'Figure']]]
 ];

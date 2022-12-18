@@ -3,7 +3,7 @@ var searchData=
   ['game_5ffield_57',['GAME_FIELD',['../constants_8h.html#af1edd7b7fcdf15ab1bff70cf1daf8ae5a798135e850645f5609a36f8c750033b8',1,'constants.h']]],
   ['getboarddata_58',['getBoardData',['../classBoard.html#ab906dade3854d38f6354861a715fccac',1,'Board']]],
   ['getcolor_59',['getColor',['../classFigure.html#af27c0f2d5fe69cb9eb17380d3ba91d6a',1,'Figure']]],
-  ['getdata_60',['getData',['../classLiderboard.html#a7d27cb9c4f7223e9ca89156eb0c08ea9',1,'Liderboard::getData()'],['../classEngine.html#af2c8028ccaf85425744ad55844765fac',1,'Engine::getData()']]],
+  ['getdata_60',['getData',['../classLiderboard.html#a07e2210e7e5c500db11ddbf096a5309a',1,'Liderboard::getData()'],['../classEngine.html#af2c8028ccaf85425744ad55844765fac',1,'Engine::getData()']]],
   ['getfigure_61',['getFigure',['../classBoard.html#a0bac43a8a2fc2aabc7e687eeedbe9f9e',1,'Board']]],
   ['getmusicflag_62',['getMusicFlag',['../classSettings.html#aafac1118b06ef59fd2559e79ddaaf64a',1,'Settings']]],
   ['getmusicvolume_63',['getMusicVolume',['../classSettings.html#a8db67fed89c78f12e8cd036c02c274ac',1,'Settings']]],

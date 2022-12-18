@@ -1,10 +1,11 @@
 <map id="src/gui/gui_scene/gui_scene.cpp" name="src/gui/gui_scene/gui_scene.cpp">
 <area shape="rect" id="node1" title=" " alt="" coords="270,5,429,47"/>
 <area shape="rect" id="node2" href="$gui__scene_8h.html" title=" " alt="" coords="220,95,319,121"/>
-<area shape="rect" id="node8" title=" " alt="" coords="343,95,515,121"/>
+<area shape="rect" id="node9" title=" " alt="" coords="343,95,515,121"/>
 <area shape="rect" id="node3" title=" " alt="" coords="5,169,133,196"/>
 <area shape="rect" id="node4" title=" " alt="" coords="157,169,269,196"/>
 <area shape="rect" id="node5" title=" " alt="" coords="293,169,358,196"/>
 <area shape="rect" id="node6" href="$utils_8h.html" title=" " alt="" coords="383,169,468,196"/>
-<area shape="rect" id="node7" title=" " alt="" coords="395,244,455,271"/>
+<area shape="rect" id="node7" title=" " alt="" coords="345,244,415,271"/>
+<area shape="rect" id="node8" title=" " alt="" coords="439,244,499,271"/>
 </map>

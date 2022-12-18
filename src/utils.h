@@ -1,7 +1,7 @@
 #pragma once
 
-#include <utility>
 #include <QString>
+#include <utility>
 
 /**
  * @brief Позиция на поле (координаты).
@@ -23,8 +23,7 @@ public:
   int &y = this->second;
 };
 
-
-struct Party{
+struct Party {
   std::pair<QString, QString> players;
   int idPalyerWin;
 };
