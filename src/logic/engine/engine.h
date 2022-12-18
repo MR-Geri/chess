@@ -59,6 +59,10 @@ public:
 
   std::list<std::list<Position>> getPosibleMovesFigureFrom(Position position);
 
+  int isEnd();
+
 private:
   Board *game_board;
+  int is_game_end;
+  FigureColor current_color;
 };

@@ -5,9 +5,11 @@
 #include <QGraphicsItemAnimation>
 #include <QGraphicsScene>
 #include <QGraphicsSvgItem>
+#include <QInputDialog>
 #include <QString>
 #include <QTimeLine>
 #include <QWidget>
+#include <QDir>
 #include <src/constants.h>
 #include <src/gui/gui_point/gui_point.h>
 #include <src/gui/gui_scene/gui_scene.h>

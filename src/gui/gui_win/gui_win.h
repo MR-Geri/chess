@@ -22,4 +22,5 @@ signals:
 private:
   float size;
   QSvgRenderer *renderer;
+  bool is_white;
 };

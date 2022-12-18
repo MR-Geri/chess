@@ -5,6 +5,7 @@ GuiWin::GuiWin(QGraphicsItem *parent) : QGraphicsSvgItem(parent) {}
 GuiWin::GuiWin(float size_rect, QString color, QGraphicsItem *parent)
     : QGraphicsSvgItem(parent) {
   size = size_rect;
+  is_white = color == "white" ? true : false;
   renderer = new QSvgRenderer(QString(":/images/winner_" + color + ".svg"));
   this->setSharedRenderer(renderer);
   float width_figure = this->boundingRect().size().width();

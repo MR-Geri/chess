@@ -38,6 +38,8 @@ public:
 private:
   void sendToGuiBoardData(bool is_new_game = false);
 
+  void endGame(bool);
+
 public slots:
   /**
    * @brief Менеджер окон, переключает QStacedWidget на тот виджет,

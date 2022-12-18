@@ -6,6 +6,8 @@
 Engine::Engine() {
   game_board = new Board();
   setStartingArrangement();
+  is_game_end = 0;
+  current_color = WHITE;
 }
 
 Engine::~Engine() { delete game_board; }
@@ -60,6 +62,22 @@ StatusMove Engine::move(Position from_pos, Position step) {
     }
   }
   // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  Figure *figure = game_board->getBoardData()[from_pos.x][from_pos.y];
+  if (figure != nullptr && figure->getColor() != current_color) {
+    return DONE;
+  }
+  current_color = current_color == WHITE ? BLACK : WHITE;
+
+  is_game_end = 0;
+  if (game_board->getBoardData()[to_pos.x][to_pos.y] != nullptr) {
+    if (game_board->getBoardData()[to_pos.x][to_pos.y]->getTypeFigure() == W_KING) {
+      is_game_end = 1;
+    }
+    if (game_board->getBoardData()[to_pos.x][to_pos.y]->getTypeFigure() == B_KING) {
+      is_game_end = 2;
+    }
+  }
 
   game_board->move(from_pos, to_pos);
   this->calculateAdvantageWhite();
@@ -174,6 +192,7 @@ Engine::getPosibleAttacksFigureFrom(Position position) {
   std::list<std::list<Position>> possible_attacks =
       board_data[position.x][position.y]->getPossibleAttacks();
   std::list<std::pair<Position, Figures>> attacks;
+  if (board_data[position.x][position.y]->getColor() != current_color) return attacks;
   FigureColor color = board_data[position.x][position.y]->getColor();
   for (auto &attack : possible_attacks) {
     for (auto &step : attack) {
@@ -206,6 +225,7 @@ Engine::getPosibleMovesFigureFrom(Position position) {
   std::list<std::list<Position>> possible_moves =
       board_data[position.x][position.y]->getPossibleMoves();
   std::list<std::list<Position>> moves;
+  if (board_data[position.x][position.y]->getColor() != current_color) return moves;
   for (auto &one_move : possible_moves) {
     std::list<Position> move;
     bool flag = true;
@@ -228,4 +248,8 @@ Engine::getPosibleMovesFigureFrom(Position position) {
     }
   }
   return moves;
+}
+
+int Engine::isEnd() {
+  return is_game_end;
 }
