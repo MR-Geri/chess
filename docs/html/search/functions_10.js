@@ -1,13 +1,14 @@
 var searchData=
 [
-  ['_7eboard_325',['~Board',['../classBoard.html#af73f45730119a1fd8f6670f53f959e68',1,'Board']]],
-  ['_7eengine_326',['~Engine',['../classEngine.html#a8ef7030a089ecb30bbfcb9e43094717a',1,'Engine']]],
-  ['_7eguiadvantagebar_327',['~GuiAdvantageBar',['../classGuiAdvantageBar.html#a2ff1e8baa73fd14675cd3ff991514a33',1,'GuiAdvantageBar']]],
-  ['_7eguifigure_328',['~GuiFigure',['../classGuiFigure.html#a22b5833103c8100ab6cac21fa8590259',1,'GuiFigure']]],
-  ['_7eguiwin_329',['~GuiWin',['../classGuiWin.html#afbc213b4c34d8aca49e69230b664be6f',1,'GuiWin']]],
-  ['_7emainwindow_330',['~MainWindow',['../classMainWindow.html#ae98d00a93bc118200eeef9f9bba1dba7',1,'MainWindow']]],
-  ['_7escreengame_331',['~ScreenGame',['../classScreenGame.html#ae3be2b72300f87330ffc78b5bbbfc009',1,'ScreenGame']]],
-  ['_7escreenliderboard_332',['~ScreenLiderboard',['../classScreenLiderboard.html#a2f00e3ae7ee1d2ac6c12d548e7c3ce36',1,'ScreenLiderboard']]],
-  ['_7escreenmenu_333',['~ScreenMenu',['../classScreenMenu.html#a2ea12005679876f5279aa89816d6df52',1,'ScreenMenu']]],
-  ['_7escreensettings_334',['~ScreenSettings',['../classScreenSettings.html#a90444a724ca86f9d5cf9b9fbd34fcd37',1,'ScreenSettings']]]
+  ['screengame_321',['ScreenGame',['../classScreenGame.html#a510bde54887671e51185e19f00d8b7f4',1,'ScreenGame']]],
+  ['screenliderboard_322',['ScreenLiderboard',['../classScreenLiderboard.html#a01635816bd4c91868be303b1801d46ae',1,'ScreenLiderboard']]],
+  ['screenmenu_323',['ScreenMenu',['../classScreenMenu.html#a61ed295b340b34244e12bd49b38f3697',1,'ScreenMenu']]],
+  ['screensettings_324',['ScreenSettings',['../classScreenSettings.html#af0f226067ae6c297e288e769cc43f7d7',1,'ScreenSettings']]],
+  ['senddatatogui_325',['sendDataToGui',['../classMainWindow.html#a9273b141df983fe146775bc8df5c765b',1,'MainWindow']]],
+  ['setadvantagewhite_326',['setAdvantageWhite',['../classGuiAdvantageBar.html#a8e495cc9f4dec57798089a6f2740c464',1,'GuiAdvantageBar']]],
+  ['setfigureon_327',['setFigureOn',['../classBoard.html#a183ac960c959ed0df9b49314d0479703',1,'Board']]],
+  ['setfigureonboard_328',['setFigureOnBoard',['../classEngine.html#aecc43b5398baffd0cddd1af03dca4793',1,'Engine']]],
+  ['setstartingarrangement_329',['setStartingArrangement',['../classEngine.html#a9027b51e4922e147b8ae3b50348c69af',1,'Engine']]],
+  ['settings_330',['Settings',['../classLiderboard.html#abc66e0968ead95319b00b74583d47509',1,'Liderboard::Settings()'],['../classSettings.html#ab7169a6eefce79566dd07db3b1e5e967',1,'Settings::Settings()']]],
+  ['startnewgame_331',['startNewGame',['../classMainWindow.html#a4195422fe1346c1aa9c640715dfe73cb',1,'MainWindow']]]
 ];

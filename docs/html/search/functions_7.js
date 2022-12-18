@@ -1,5 +1,9 @@
 var searchData=
 [
-  ['king_291',['King',['../classKing.html#a2ce46bf43fede5a700d153dd648a91c9',1,'King']]],
-  ['knight_292',['Knight',['../classKnight.html#a823aa51e2dab4c42c715704ac195cb96',1,'Knight']]]
+  ['highlightattacks_292',['highlightAttacks',['../classScreenGame.html#afedf4a58c84bad70f59909c5da0471d6',1,'ScreenGame']]],
+  ['highlightattackswhisredrawing_293',['highlightAttacksWhisRedrawing',['../classScreenGame.html#ab78db545e5f0377ea4a27f8a4657525f',1,'ScreenGame']]],
+  ['highlightguiattacks_294',['highlightGuiAttacks',['../classMainWindow.html#a85bff6750f28e9643dcdb395eb68ad70',1,'MainWindow']]],
+  ['highlightguiattacksformousepress_295',['highlightGuiAttacksForMousePress',['../classMainWindow.html#a6686134a173c77d6bb587d508830eb75',1,'MainWindow']]],
+  ['highlightguimoves_296',['highlightGuiMoves',['../classMainWindow.html#a6989d260045e823b95a98f3d619cfae6',1,'MainWindow']]],
+  ['highlightmoves_297',['highlightMoves',['../classScreenGame.html#aa488a410a92be2a5e517119f8611d218',1,'ScreenGame']]]
 ];

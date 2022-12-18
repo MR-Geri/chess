@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['figure_261',['Figure',['../classFigure.html#afba85b201705ed621744572817fd46be',1,'Figure']]],
-  ['figuremovedboard_262',['figureMovedBoard',['../classScreenGame.html#ac7c78c25f7448752e5d901d434f7d813',1,'ScreenGame']]]
+  ['enemyunderattack_266',['enemyUnderAttack',['../classEngine.html#a93442cf58f7239df6e2b5303b7b90cda',1,'Engine']]],
+  ['engine_267',['Engine',['../classEngine.html#a8c98683b0a3aa28d8ab72a8bcd0d52f2',1,'Engine']]]
 ];

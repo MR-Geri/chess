@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['quantitypossiblemove_310',['quantityPossibleMove',['../classEngine.html#a9154a3995005939adcc56d46d8bd78b0',1,'Engine']]],
-  ['queen_311',['Queen',['../classQueen.html#a56662c4ff83e3dd61f5ba4f5a2a65061',1,'Queen']]]
+  ['operator_3d_312',['operator=',['../classPosition.html#a557c9c3e4128af53f2bf8cd485ab8c22',1,'Position']]]
 ];

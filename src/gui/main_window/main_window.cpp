@@ -107,18 +107,20 @@ void MainWindow::guiMousePressFigure(Position position) {
 void MainWindow::endGame(bool is_white_win) {
   QString first_player_name;
   QString second_player_name;
-  QString message = QString(is_white_win ? "White" : "Black") + QString(" WIN!!!");
+  QString message =
+      QString(is_white_win ? "White" : "Black") + QString(" WIN!!!");
   bool ok;
-  QString text = QInputDialog::getText(this, message,
-                                       tr("Введите никнеймы через дефис, слева белый, справа чёрный игроки: "), QLineEdit::Normal,
-                                       tr(""), &ok);
+  QString text = QInputDialog::getText(
+      this, message,
+      tr("Введите никнеймы через дефис, слева белый, справа чёрный игроки: "),
+      QLineEdit::Normal, tr(""), &ok);
   if (ok && !text.isEmpty() && text.indexOf('-') != -1) {
     first_player_name = text.section('-', 0, 0).trimmed();
     second_player_name = text.section('-', 1, 1).trimmed();
   }
   if (!first_player_name.isEmpty() && !second_player_name.isEmpty()) {
-    std::cout << first_player_name.toStdString() << " " << second_player_name.toStdString();
+    std::cout << first_player_name.toStdString() << " "
+              << second_player_name.toStdString();
   }
   windowsManager(Windows::MENU);
 }
-

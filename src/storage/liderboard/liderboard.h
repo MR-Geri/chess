@@ -6,9 +6,9 @@
 
 class Liderboard {
 public:
- Liderboard Settings();
+  Liderboard Settings();
 
- void getData();
+  void getData();
 
 public slots:
   void deleteAllData();

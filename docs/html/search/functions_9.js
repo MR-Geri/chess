@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['newgamefromgame_302',['newGameFromGame',['../classScreenGame.html#ac6f16eced5239c184a16922ac16aadfe',1,'ScreenGame']]],
-  ['newgamefrommenu_303',['newGameFromMenu',['../classScreenMenu.html#a82f4b69989b590689c2006807fee5dca',1,'ScreenMenu']]]
+  ['king_299',['King',['../classKing.html#a2ce46bf43fede5a700d153dd648a91c9',1,'King']]],
+  ['knight_300',['Knight',['../classKnight.html#a823aa51e2dab4c42c715704ac195cb96',1,'Knight']]]
 ];

@@ -1,12 +1,12 @@
 var searchData=
 [
-  ['b_5fbishop_355',['B_BISHOP',['../constants_8h.html#aad5143bace5bd3ff842dc242706a3682a68012127cc230c8fc2038fa80f33e3f9',1,'constants.h']]],
-  ['b_5fking_356',['B_KING',['../constants_8h.html#aad5143bace5bd3ff842dc242706a3682a9c419a9a2cc88ad479284577858c469e',1,'constants.h']]],
-  ['b_5fknight_357',['B_KNIGHT',['../constants_8h.html#aad5143bace5bd3ff842dc242706a3682abf5807e62f8378eb70b1a43d048963bc',1,'constants.h']]],
-  ['b_5fpawn_358',['B_PAWN',['../constants_8h.html#aad5143bace5bd3ff842dc242706a3682ae12c95af2cb74b1426bbcbdf6081dba9',1,'constants.h']]],
-  ['b_5fqueen_359',['B_QUEEN',['../constants_8h.html#aad5143bace5bd3ff842dc242706a3682ae835e3319547c8a23a451ab299ace328',1,'constants.h']]],
-  ['b_5frook_360',['B_ROOK',['../constants_8h.html#aad5143bace5bd3ff842dc242706a3682a81a3808b8084b236b0fcb4ade2967c23',1,'constants.h']]],
-  ['b_5fwin_361',['B_WIN',['../constants_8h.html#aad5143bace5bd3ff842dc242706a3682add41e0e61432255d3193542784339a55',1,'constants.h']]],
-  ['bishop_362',['BISHOP',['../constants_8h.html#a3da527ca0edbe6a57ea4f61d1e5af434a6bc4b5ac244475b6bd2595d608f18814',1,'constants.h']]],
-  ['black_363',['BLACK',['../constants_8h.html#a80feabe81f30d5b97df91defa4774c0faf77fb67151d0c18d397069ad8c271ba3',1,'constants.h']]]
+  ['b_5fbishop_363',['B_BISHOP',['../constants_8h.html#aad5143bace5bd3ff842dc242706a3682a68012127cc230c8fc2038fa80f33e3f9',1,'constants.h']]],
+  ['b_5fking_364',['B_KING',['../constants_8h.html#aad5143bace5bd3ff842dc242706a3682a9c419a9a2cc88ad479284577858c469e',1,'constants.h']]],
+  ['b_5fknight_365',['B_KNIGHT',['../constants_8h.html#aad5143bace5bd3ff842dc242706a3682abf5807e62f8378eb70b1a43d048963bc',1,'constants.h']]],
+  ['b_5fpawn_366',['B_PAWN',['../constants_8h.html#aad5143bace5bd3ff842dc242706a3682ae12c95af2cb74b1426bbcbdf6081dba9',1,'constants.h']]],
+  ['b_5fqueen_367',['B_QUEEN',['../constants_8h.html#aad5143bace5bd3ff842dc242706a3682ae835e3319547c8a23a451ab299ace328',1,'constants.h']]],
+  ['b_5frook_368',['B_ROOK',['../constants_8h.html#aad5143bace5bd3ff842dc242706a3682a81a3808b8084b236b0fcb4ade2967c23',1,'constants.h']]],
+  ['b_5fwin_369',['B_WIN',['../constants_8h.html#aad5143bace5bd3ff842dc242706a3682add41e0e61432255d3193542784339a55',1,'constants.h']]],
+  ['bishop_370',['BISHOP',['../constants_8h.html#a3da527ca0edbe6a57ea4f61d1e5af434a6bc4b5ac244475b6bd2595d608f18814',1,'constants.h']]],
+  ['black_371',['BLACK',['../constants_8h.html#a80feabe81f30d5b97df91defa4774c0faf77fb67151d0c18d397069ad8c271ba3',1,'constants.h']]]
 ];

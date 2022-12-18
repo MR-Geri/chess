@@ -73,10 +73,12 @@ StatusMove Engine::move(Position from_pos, Position step) {
 
   is_game_end = 0;
   if (game_board->getBoardData()[to_pos.x][to_pos.y] != nullptr) {
-    if (game_board->getBoardData()[to_pos.x][to_pos.y]->getTypeFigure() == W_KING) {
+    if (game_board->getBoardData()[to_pos.x][to_pos.y]->getTypeFigure() ==
+        W_KING) {
       is_game_end = 1;
     }
-    if (game_board->getBoardData()[to_pos.x][to_pos.y]->getTypeFigure() == B_KING) {
+    if (game_board->getBoardData()[to_pos.x][to_pos.y]->getTypeFigure() ==
+        B_KING) {
       is_game_end = 2;
     }
   }
@@ -193,7 +195,8 @@ Engine::getPosibleAttacksFigureFrom(Position position) {
   std::list<std::list<Position>> possible_attacks =
       board_data[position.x][position.y]->getPossibleAttacks();
   std::list<std::pair<Position, Figures>> attacks;
-  if (board_data[position.x][position.y]->getColor() != current_color) return attacks;
+  if (board_data[position.x][position.y]->getColor() != current_color)
+    return attacks;
   FigureColor color = board_data[position.x][position.y]->getColor();
   for (auto &attack : possible_attacks) {
     for (auto &step : attack) {
@@ -226,7 +229,8 @@ Engine::getPosibleMovesFigureFrom(Position position) {
   std::list<std::list<Position>> possible_moves =
       board_data[position.x][position.y]->getPossibleMoves();
   std::list<std::list<Position>> moves;
-  if (board_data[position.x][position.y]->getColor() != current_color) return moves;
+  if (board_data[position.x][position.y]->getColor() != current_color)
+    return moves;
   for (auto &one_move : possible_moves) {
     std::list<Position> move;
     bool flag = true;
@@ -251,6 +255,4 @@ Engine::getPosibleMovesFigureFrom(Position position) {
   return moves;
 }
 
-int Engine::isEnd() {
-  return is_game_end;
-}
+int Engine::isEnd() { return is_game_end; }
