@@ -63,7 +63,6 @@ StatusMove Engine::move(Position from_pos, Position step) {
   }
   // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-  game_board->move(from_pos, to_pos);
 
   Figure *figure = game_board->getBoardData()[from_pos.x][from_pos.y];
   if (figure != nullptr && figure->getColor() != current_color) {
@@ -83,6 +82,7 @@ StatusMove Engine::move(Position from_pos, Position step) {
     }
   }
 
+  game_board->move(from_pos, to_pos);
   this->calculateAdvantageWhite();
   std::cout << this->calculateAdvantageWhite() << "\n";
   return DONE;
