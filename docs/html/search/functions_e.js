@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['quantitypossiblemove_323',['quantityPossibleMove',['../classEngine.html#a9154a3995005939adcc56d46d8bd78b0',1,'Engine']]],
-  ['queen_324',['Queen',['../classQueen.html#a56662c4ff83e3dd61f5ba4f5a2a65061',1,'Queen']]]
+  ['quantitypossiblemove_325',['quantityPossibleMove',['../classEngine.html#a9154a3995005939adcc56d46d8bd78b0',1,'Engine']]],
+  ['queen_326',['Queen',['../classQueen.html#a56662c4ff83e3dd61f5ba4f5a2a65061',1,'Queen']]]
 ];

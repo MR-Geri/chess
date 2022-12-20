@@ -16,7 +16,8 @@ MainWindow::MainWindow(QWidget *parent)
   sendToGuiBoardData();
 
   QList<Party> parties = storage_liderboard.getData();
-  for (auto party : parties) screen_liderboard.addNewRecord(party);
+  for (auto party : parties)
+    screen_liderboard.addNewRecord(party);
 
   connect(&screen_game, SIGNAL(changeWindow(int)), this,
           SLOT(windowsManager(int)));
@@ -49,8 +50,10 @@ MainWindow::MainWindow(QWidget *parent)
           SLOT(guiPressFigure(Position)));
   connect(&screen_game, SIGNAL(mousePressGuiFigure(Position)), this,
           SLOT(guiMousePressFigure(Position)));
-  connect(this, SIGNAL(endParty(Party)), &screen_liderboard, SLOT(addNewRecord(Party)));
-  connect(this, SIGNAL(endParty(Party)), &storage_liderboard, SLOT(addRecord(Party)));
+  connect(this, SIGNAL(endParty(Party)), &screen_liderboard,
+          SLOT(addNewRecord(Party)));
+  connect(this, SIGNAL(endParty(Party)), &storage_liderboard,
+          SLOT(addRecord(Party)));
 }
 
 MainWindow::~MainWindow() { delete ui; }

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['idpalyerwin_353',['idPalyerWin',['../structParty.html#afb0bc6e19e7dc7c43b8243ca0566ca66',1,'Party']]]
+  ['id_5fplayer_5fwin_355',['id_player_win',['../structParty.html#a1bd668315aa75f764cd103f8ec0a2de5',1,'Party']]]
 ];

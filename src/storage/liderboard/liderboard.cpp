@@ -62,10 +62,6 @@ void Liderboard::save() {
   }
 }
 
-void Liderboard::addRecord(Party new_party) {
-  m_parties.append(new_party);
-}
+void Liderboard::addRecord(Party new_party) { m_parties.append(new_party); }
 
-QList<Party> Liderboard::getData() {
-  return m_parties;
-}
+QList<Party> Liderboard::getData() { return m_parties; }

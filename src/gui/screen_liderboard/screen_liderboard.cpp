@@ -27,11 +27,16 @@ void ScreenLiderboard::buttonBackLiderboardReleased() {
 }
 
 void ScreenLiderboard::addNewRecord(Party new_party) {
-  std::cout << "Added: " << new_party.players.first.toStdString() << " - " << new_party.players.second.toStdString() << std::endl;
+  std::cout << "Added: " << new_party.players.first.toStdString() << " - "
+            << new_party.players.second.toStdString() << std::endl;
   ui->tableLiderboard->insertRow(count_parties);
-  ui->tableLiderboard->setItem(count_parties, 0, new QTableWidgetItem(new_party.players.first));
-  ui->tableLiderboard->setItem(count_parties, 1, new QTableWidgetItem(new_party.players.second));
-  ui->tableLiderboard->setItem(count_parties, 2, new QTableWidgetItem(new_party.id_player_win == 1 ? "белые" : "черные"));
+  ui->tableLiderboard->setItem(count_parties, 0,
+                               new QTableWidgetItem(new_party.players.first));
+  ui->tableLiderboard->setItem(count_parties, 1,
+                               new QTableWidgetItem(new_party.players.second));
+  ui->tableLiderboard->setItem(
+      count_parties, 2,
+      new QTableWidgetItem(new_party.id_player_win == 1 ? "белые" : "черные"));
   ui->tableLiderboard->resizeColumnsToContents();
   count_parties++;
 }

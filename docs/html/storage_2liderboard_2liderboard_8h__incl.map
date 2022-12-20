@@ -1,12 +1,13 @@
 <map id="src/storage/liderboard/liderboard.h" name="src/storage/liderboard/liderboard.h">
-<area shape="rect" id="node1" title=" " alt="" coords="323,5,487,47"/>
+<area shape="rect" id="node1" title=" " alt="" coords="379,5,543,47"/>
 <area shape="rect" id="node2" title=" " alt="" coords="5,95,60,121"/>
 <area shape="rect" id="node3" title=" " alt="" coords="84,95,179,121"/>
 <area shape="rect" id="node4" title=" " alt="" coords="203,95,329,121"/>
 <area shape="rect" id="node5" title=" " alt="" coords="354,95,455,121"/>
-<area shape="rect" id="node6" title=" " alt="" coords="479,95,559,121"/>
-<area shape="rect" id="node7" title=" " alt="" coords="584,95,647,121"/>
-<area shape="rect" id="node8" href="$utils_8h.html" title=" " alt="" coords="671,95,757,121"/>
-<area shape="rect" id="node9" title=" " alt="" coords="633,169,704,196"/>
-<area shape="rect" id="node10" title=" " alt="" coords="728,169,788,196"/>
+<area shape="rect" id="node6" title=" " alt="" coords="479,95,554,121"/>
+<area shape="rect" id="node7" title=" " alt="" coords="578,95,658,121"/>
+<area shape="rect" id="node8" title=" " alt="" coords="683,95,745,121"/>
+<area shape="rect" id="node9" href="$utils_8h.html" title=" " alt="" coords="770,95,855,121"/>
+<area shape="rect" id="node10" title=" " alt="" coords="732,169,803,196"/>
+<area shape="rect" id="node11" title=" " alt="" coords="827,169,887,196"/>
 </map>
