@@ -85,6 +85,9 @@
            <property name="focusPolicy">
             <enum>Qt::NoFocus</enum>
            </property>
+           <property name="styleSheet">
+            <string notr="true">font: 75 11pt &quot;Comfortaa&quot;;</string>
+           </property>
            <property name="text">
             <string>Новая игра</string>
            </property>
@@ -100,6 +103,9 @@
            </property>
            <property name="focusPolicy">
             <enum>Qt::NoFocus</enum>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">font: 75 11pt &quot;Comfortaa&quot;;</string>
            </property>
            <property name="text">
             <string>Таблица лидеров</string>
@@ -117,6 +123,9 @@
            <property name="focusPolicy">
             <enum>Qt::NoFocus</enum>
            </property>
+           <property name="styleSheet">
+            <string notr="true">font: 75 11pt &quot;Comfortaa&quot;;</string>
+           </property>
            <property name="text">
             <string>Настройки</string>
            </property>
@@ -132,6 +141,9 @@
            </property>
            <property name="focusPolicy">
             <enum>Qt::NoFocus</enum>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">font: 75 11pt &quot;Comfortaa&quot;;</string>
            </property>
            <property name="text">
             <string>Выход</string>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
  <class>ScreenLiderboard</class>
- <widget class="QWidget" name="LiderboardWindow">
+ <widget class="QWidget" name="ScreenLiderboard">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -74,6 +74,9 @@
       <widget class="QPushButton" name="buttonBackLiderboard">
        <property name="focusPolicy">
         <enum>Qt::NoFocus</enum>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 75 11pt &quot;Comfortaa&quot;;</string>
        </property>
        <property name="text">
         <string>Назад</string>

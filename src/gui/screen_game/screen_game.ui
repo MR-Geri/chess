@@ -23,6 +23,9 @@
          <property name="focusPolicy">
           <enum>Qt::NoFocus</enum>
          </property>
+         <property name="styleSheet">
+          <string notr="true">font: 75 11pt &quot;Comfortaa&quot;;</string>
+         </property>
          <property name="text">
           <string>Новая игра</string>
          </property>
@@ -56,6 +59,9 @@
          <property name="focusPolicy">
           <enum>Qt::NoFocus</enum>
          </property>
+         <property name="styleSheet">
+          <string notr="true">font: 75 11pt &quot;Comfortaa&quot;;</string>
+         </property>
          <property name="text">
           <string>Меню</string>
          </property>
@@ -69,37 +75,6 @@
         <enum>Qt::NoFocus</enum>
        </property>
       </widget>
-     </item>
-     <item>
-      <layout class="QHBoxLayout" name="game_footer">
-       <item>
-        <widget class="QToolButton" name="buttonPrevStep">
-         <property name="focusPolicy">
-          <enum>Qt::NoFocus</enum>
-         </property>
-         <property name="text">
-          <string>ᐊ</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QToolButton" name="buttonNextStep">
-         <property name="focusPolicy">
-          <enum>Qt::NoFocus</enum>
-         </property>
-         <property name="text">
-          <string>ᐅ</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QComboBox" name="comboBoxSteps">
-         <property name="focusPolicy">
-          <enum>Qt::NoFocus</enum>
-         </property>
-        </widget>
-       </item>
-      </layout>
      </item>
     </layout>
    </item>
