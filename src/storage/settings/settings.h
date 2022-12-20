@@ -41,9 +41,28 @@ public:
   bool getSoundFlag();
 
 public slots:
+  /**
+   * @brief Сохранение изменений громкости музыки
+   *
+   * @param value значение громкости в int 0..100
+   */
   void changeMusicVolume(int value);
+
+  /**
+   * @brief Сохранение изменений флага звуков
+   */
   void changeSoundVolume(int value);
+
+  /**
+   * @brief Сохранение изменений флага музыки
+   */
   void changeMusicFlag(bool flag);
+
+  /**
+   * @brief Сохранение изменений громкости звуков
+   *
+   * @param value значение громкости в int 0..100
+   */
   void changeSoundFlag(bool flag);
 
 private:
@@ -54,6 +73,13 @@ private:
   int m_sound_volume;
   bool m_sound_flag;
 
+  /**
+   * @brief Сохранить настройки в файл
+   */
   void save();
+
+  /**
+   * @brief Загрузить настройки из файла
+   */
   void load();
 };

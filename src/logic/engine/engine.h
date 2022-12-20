@@ -49,20 +49,48 @@ public:
    */
   std::vector<std::vector<Figure *>> getData();
 
+  /**
+   * @brief Количество противников, которые находятся под атакой.
+   *
+   * @param board поле
+   * @param pos позиция фигуры для которой расчитывается заначение
+   * @return int - количество противников под атакой
+   */
   int enemyUnderAttack(std::vector<std::vector<Figure *>> board, Position pos);
 
+  /**
+   * @brief Количество возможных ходов.
+   *
+   * @param board поле
+   * @param pos позиция фигуры для которой расчитывается заначение
+   * @return int - количество возможных ходов
+   */
   int quantityPossibleMove(std::vector<std::vector<Figure *>> board,
                            Position pos);
 
+  /**
+   * @brief Возможные атаки для фигуры.
+   *
+   * @param position список возможных атак
+   */
   std::list<std::pair<Position, Figures>>
   getPosibleAttacksFigureFrom(Position position);
 
+  /**
+   * @brief Возможные ходы для фигуры.
+   *
+   * @param position список возможных ходов
+   */
   std::list<std::list<Position>> getPosibleMovesFigureFrom(Position position);
 
+  /**
+   * @brief Проверка на конец игры.
+   */
   int isEnd();
+
+  FigureColor current_color;
 
 private:
   Board *game_board;
   int is_game_end;
-  FigureColor current_color;
 };

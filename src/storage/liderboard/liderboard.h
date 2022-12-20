@@ -7,20 +7,39 @@
 
 #include "src/utils.h"
 
+/**
+ * @class Liderboard
+ * @brief Хранение в базе таблицы лидеров.
+ *
+ */
 class Liderboard {
 public:
   Liderboard();
 
+  /**
+   * @brief Получить таблицу лидеров
+   */
   QList<Party> getData();
 
 public slots:
-  void deleteAllData();
+  // void deleteAllData();
+
+  /**
+   * @brief Добавить запись о партии в таблицу
+   */
   void addRecord();
 
 private:
   QString path = "./data/liderboard.json";
   QList<Party> m_parties;
 
+  /**
+   * @brief Сохранить таблицу лидеров в файл.
+   */
   void save();
+
+  /**
+   * @brief Загрузить таблицу лидеров из файла.
+   */
   void load();
 };

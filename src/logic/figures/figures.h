@@ -55,6 +55,11 @@ public:
    */
   FigureColor getColor();
 
+  /**
+   * @brief Получение типа фиугры.
+   *
+   * @return тип фигуры
+   */
   Figures getTypeFigure() const;
 
 protected:

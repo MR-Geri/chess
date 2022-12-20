@@ -49,12 +49,31 @@ public slots:
    */
   void windowsManager(int window_id);
 
+  /**
+   * @brief Перемещение и окончание игры.
+   *
+   * @param from_board позиция откуда
+   * @param delta_board шаг
+   */
   void connectGuiMoveWithEngine(Position from_board, Position delta_board);
 
+  /**
+   * @brief Новая игра.
+   */
   void startNewGame();
 
+  /**
+   * @brief Обработка нажатия на фигуру.
+   *
+   * @param position позиция фигуры
+   */
   void guiPressFigure(Position position);
 
+  /**
+   * @brief Обработка нажатия на фигуру.
+   *
+   * @param position позиция фигуры
+   */
   void guiMousePressFigure(Position position);
 
 signals:

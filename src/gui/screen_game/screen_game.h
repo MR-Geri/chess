@@ -47,10 +47,23 @@ signals:
    */
   void figureMovedBoard(Position from_board, Position delta_board);
 
+  /**
+   * @brief Новая игра.
+   */
   void newGameFromGame();
 
+  /**
+   * @brief Нажатие на фигуру.
+   *
+   * @param position позиция фигуры
+   */
   void pressGuiFigure(Position position);
 
+  /**
+   * @brief Нажатие на фигуру.
+   *
+   * @param position позиция фигуры
+   */
   void mousePressGuiFigure(Position position);
 
 public slots:
@@ -60,11 +73,17 @@ public slots:
   void catchData(QVector<QVector<Figures>> catched_data,
                  double new_advantage_white, bool is_new_game = false);
 
+  /**
+   * @brief Отображение атаки.
+   */
   void highlightAttacks(std::list<std::pair<Position, Figures>> attacks);
 
   void highlightAttacksWhisRedrawing(
       std::list<std::pair<Position, Figures>> attacks);
 
+  /**
+   * @brief Отображение ходов.
+   */
   void highlightMoves(std::list<std::list<Position>> moves);
 
 private slots:
@@ -78,18 +97,40 @@ private slots:
    */
   void buttonNewGameReleased();
 
+  /**
+   * @brief Отправляет сигнал перемещения фигуры.
+   */
   void figureMoved(Position from, Position delta);
 
+  /**
+   * @brief Отправляет сигнал о нажатии на фигуру.
+   */
   void pressFigure(Position position);
 
+  /**
+   * @brief Отправляет сигнал о нажатии на сцену.
+   */
   void mousePressScene(Position to);
 
+  /**
+   * @brief Отправляет сигнал о нажатии на ход.
+   */
   void mousePressStep(Position to);
 
+  /**
+   * @brief Отправляет сигнал о нажатии на фигуру.
+   */
   void mousePressFigure(Position position);
 
 private:
+  /**
+   * @brief Событие изменения размера.
+   */
   void resizeEvent(QResizeEvent *event);
+
+  /**
+   * @brief Отрисовка .
+   */
   void drawGameField();
   void drawAdvantageBar(float height_board, float scale_board);
   Position calculatePositionOnScene(Position position);

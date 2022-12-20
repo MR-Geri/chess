@@ -30,6 +30,13 @@ public:
    */
   void move(Position from, Position to);
 
+  /**
+   * @brief Определение фигуры после перемещения.
+   *
+   * @param from позиция откуда
+   * @param to позиция куда
+   * @return фигура, которая получится после перемещения
+   */
   Figures calculateFigureAfterTaking(Position from, Position to);
 
   /**

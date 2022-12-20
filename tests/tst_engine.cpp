@@ -81,25 +81,25 @@ void TestsEngine::test_calculateAdvantageWhite() {
   engine.move({1, 0}, {1, 2});
   QCOMPARE(engine.calculateAdvantageWhite(), 0.5);
   engine.move({2, 2}, {1, 2});
-  QCOMPARE(engine.calculateAdvantageWhite(), 0.490349560369);
+  QCOMPARE(engine.calculateAdvantageWhite(), 0.5);
   engine.move({1, 1}, {0, 2});
-  QCOMPARE(engine.calculateAdvantageWhite(), 0.491983753741);
+  QCOMPARE(engine.calculateAdvantageWhite(), 0.5);
   engine.move({5, 1}, {0, 2});
-  QCOMPARE(engine.calculateAdvantageWhite(), 0.493037703513);
+  QCOMPARE(engine.calculateAdvantageWhite(), 0.5);
   engine.move({1, 1}, {0, 2});
-  QCOMPARE(engine.calculateAdvantageWhite(), 0.493037703513);
+  QCOMPARE(engine.calculateAdvantageWhite(), 0.5);
   engine.move({0, 6}, {0, -2});
-  QCOMPARE(engine.calculateAdvantageWhite(), 0.49418358714);
+  QCOMPARE(engine.calculateAdvantageWhite(), 0.501086248099);
   engine.move({2, 6}, {0, -2});
-  QCOMPARE(engine.calculateAdvantageWhite(), 0.49418358714);
+  QCOMPARE(engine.calculateAdvantageWhite(), 0.501086248099);
   engine.move({5, 6}, {0, -2});
-  QCOMPARE(engine.calculateAdvantageWhite(), 0.494158878505);
+  QCOMPARE(engine.calculateAdvantageWhite(), 0.501086248099);
   engine.move({3, 4}, {-1, 2});
-  QCOMPARE(engine.calculateAdvantageWhite(), 0.48786407767);
+  QCOMPARE(engine.calculateAdvantageWhite(), 0.501086248099);
   engine.move({2, 6}, {1, 1});
-  QCOMPARE(engine.calculateAdvantageWhite(), 0.454284401562);
+  QCOMPARE(engine.calculateAdvantageWhite(), 0.501086248099);
   engine.move({3, 7}, {1, -1});
-  QCOMPARE(engine.calculateAdvantageWhite(), 0.445438861333);
+  QCOMPARE(engine.calculateAdvantageWhite(), 0.501086248099);
 }
 
 void TestsEngine::test_setFigureOnBoard() {

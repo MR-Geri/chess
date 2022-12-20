@@ -7,6 +7,7 @@ TestsFigures::~TestsFigures() {}
 FigureColor colors[2] = {WHITE, BLACK};
 
 void setOnlyOneFigureOn(Engine &engine, Figure *figure, Position position) {
+  engine.current_color = figure->getColor();
   engine.clearBoard();
   engine.setFigureOnBoard(figure, position);
 }
