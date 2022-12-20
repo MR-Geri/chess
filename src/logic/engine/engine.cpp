@@ -89,6 +89,7 @@ StatusMove Engine::move(Position from_pos, Position step) {
 
 void Engine::setStartingArrangement() {
   game_board->clear();
+  is_game_end = 0;
   for (int i = 0; i < 8; i++) {
     Figure *pawn_white = new Pawn(false, WHITE);
     Figure *pawn_black = new Pawn(false, BLACK);

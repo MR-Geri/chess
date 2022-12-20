@@ -15,6 +15,9 @@ MainWindow::MainWindow(QWidget *parent)
 
   sendToGuiBoardData();
 
+  QList<Party> parties = storage_liderboard.getData();
+  for (auto party : parties) screen_liderboard.addNewRecord(party);
+
   connect(&screen_game, SIGNAL(changeWindow(int)), this,
           SLOT(windowsManager(int)));
   connect(&screen_menu, SIGNAL(changeWindow(int)), this,
@@ -46,6 +49,8 @@ MainWindow::MainWindow(QWidget *parent)
           SLOT(guiPressFigure(Position)));
   connect(&screen_game, SIGNAL(mousePressGuiFigure(Position)), this,
           SLOT(guiMousePressFigure(Position)));
+  connect(this, SIGNAL(endParty(Party)), &screen_liderboard, SLOT(addNewRecord(Party)));
+  connect(this, SIGNAL(endParty(Party)), &storage_liderboard, SLOT(addRecord(Party)));
 }
 
 MainWindow::~MainWindow() { delete ui; }
@@ -84,8 +89,8 @@ void MainWindow::sendToGuiBoardData(bool is_new_game) {
 }
 
 void MainWindow::startNewGame() {
-  engine.clearBoard();
   engine.setStartingArrangement();
+  engine.current_color = WHITE;
   sendToGuiBoardData(true);
 }
 
@@ -117,6 +122,11 @@ void MainWindow::endGame(bool is_white_win) {
   if (ok && !text.isEmpty() && text.indexOf('-') != -1) {
     first_player_name = text.section('-', 0, 0).trimmed();
     second_player_name = text.section('-', 1, 1).trimmed();
+    Party party;
+    party.players.first = first_player_name;
+    party.players.second = second_player_name;
+    party.id_player_win = is_white_win ? 1 : 2;
+    emit endParty(party);
   }
   if (!first_player_name.isEmpty() && !second_player_name.isEmpty()) {
     std::cout << first_player_name.toStdString() << " "

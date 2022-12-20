@@ -1,7 +1,10 @@
+#pragma once
+
 #include <QFile>
 #include <QJsonArray>
 #include <QJsonDocument>
 #include <QJsonObject>
+#include <QObject>
 #include <iostream>
 #include <qlist.h>
 
@@ -12,7 +15,8 @@
  * @brief Хранение в базе таблицы лидеров.
  *
  */
-class Liderboard {
+class Liderboard : public QObject {
+  Q_OBJECT
 public:
   Liderboard();
 
@@ -27,7 +31,7 @@ public slots:
   /**
    * @brief Добавить запись о партии в таблицу
    */
-  void addRecord();
+  void addRecord(Party new_party);
 
 private:
   QString path = "./data/liderboard.json";

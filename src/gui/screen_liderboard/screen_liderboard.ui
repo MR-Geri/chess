@@ -53,7 +53,7 @@
         <font>
          <family>Comfortaa</family>
          <pointsize>11</pointsize>
-         <weight>50</weight>
+         <weight>9</weight>
          <italic>false</italic>
          <bold>false</bold>
          <underline>false</underline>
@@ -62,11 +62,17 @@
        <property name="focusPolicy">
         <enum>Qt::NoFocus</enum>
        </property>
+       <property name="styleSheet">
+        <string notr="true">font: 75 11pt &quot;Comfortaa&quot;;</string>
+       </property>
+       <property name="editTriggers">
+        <set>QAbstractItemView::NoEditTriggers</set>
+       </property>
        <property name="selectionMode">
         <enum>QAbstractItemView::ExtendedSelection</enum>
        </property>
        <property name="showGrid">
-        <bool>true</bool>
+        <bool>false</bool>
        </property>
       </widget>
      </item>

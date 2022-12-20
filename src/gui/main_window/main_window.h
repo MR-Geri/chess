@@ -10,6 +10,7 @@
 #include <src/gui/screen_menu/screen_menu.h>
 #include <src/gui/screen_settings/screen_settings.h>
 #include <src/logic/engine/engine.h>
+#include <src/storage/liderboard/liderboard.h>
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -83,6 +84,7 @@ signals:
   void highlightGuiAttacksForMousePress(
       std::list<std::pair<Position, Figures>> attacks);
   void highlightGuiMoves(std::list<std::list<Position>> moves);
+  void endParty(Party party);
 
 private:
   Ui::MainWindow *ui;
@@ -91,4 +93,5 @@ private:
   ScreenMenu screen_menu;
   ScreenSettings screen_settings;
   ScreenLiderboard screen_liderboard;
+  Liderboard storage_liderboard;
 };

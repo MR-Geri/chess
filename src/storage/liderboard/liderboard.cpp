@@ -1,7 +1,7 @@
 #include "liderboard.h"
 #include <utility>
 
-Liderboard::Liderboard() {
+Liderboard::Liderboard() : QObject() {
   load();
   save();
 }
@@ -27,7 +27,7 @@ void Liderboard::load() {
       for (int i = 0; i < jsonArr.count(); ++i) {
         QJsonObject jsonObj = jsonArr.at(i).toObject();
         Party party;
-        party.idPalyerWin = jsonObj.take("idPlayerWin").toInt();
+        party.id_player_win = jsonObj.take("idPlayerWin").toInt();
         QString one(jsonObj.take("players").toArray()[0].toString());
         QString two(jsonObj.take("players").toArray()[1].toString());
         party.players = std::make_pair(one, two);
@@ -45,7 +45,7 @@ void Liderboard::save() {
     QJsonArray players;
     players.append(party.players.first);
     players.append(party.players.second);
-    jsonParty["idPlayerWin"] = party.idPalyerWin;
+    jsonParty["idPlayerWin"] = party.id_player_win;
     jsonParty["players"] = players;
     parties.append(jsonParty);
   }
@@ -60,4 +60,12 @@ void Liderboard::save() {
   } else {
     std::cout << "file open failed: " << path.toStdString() << std::endl;
   }
+}
+
+void Liderboard::addRecord(Party new_party) {
+  m_parties.append(new_party);
+}
+
+QList<Party> Liderboard::getData() {
+  return m_parties;
 }

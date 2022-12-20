@@ -2,6 +2,7 @@
 
 #include <QWidget>
 #include <src/constants.h>
+#include <src/utils.h>
 
 namespace Ui {
 class ScreenLiderboard;
@@ -31,7 +32,7 @@ public slots:
    * @param record
    * запись, которую нужно добавить.
    */
-  void addNewRecord(QString record);
+  void addNewRecord(Party new_party);
 
 private slots:
   /**
@@ -41,4 +42,5 @@ private slots:
 
 private:
   Ui::ScreenLiderboard *ui;
+  int count_parties;
 };

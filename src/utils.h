@@ -28,5 +28,5 @@ public:
  */
 struct Party {
   std::pair<QString, QString> players;
-  int idPalyerWin;
+  int id_player_win;
 };
