@@ -11,7 +11,7 @@
 <!-- Node1 -->
 <g id="node1" class="node">
 <title>Node1</title>
-<g id="a_node1"><a xlink:title=" ">
+<g id="a_node1"><a xlink:title="Определение фигуры после перемещения.">
 <polygon fill="#bfbfbf" stroke="black" points="557,-17 557,-47 706,-47 706,-17 557,-17"/>
 <text text-anchor="start" x="565" y="-35" font-family="Helvetica,sans-Serif" font-size="10.00">Board::calculateFigureAfter</text>
 <text text-anchor="middle" x="631.5" y="-24" font-family="Helvetica,sans-Serif" font-size="10.00">Taking</text>
@@ -21,7 +21,7 @@
 <!-- Node2 -->
 <g id="node2" class="node">
 <title>Node2</title>
-<g id="a_node2"><a xlink:href="classEngine.html#afffac825472b73103b32f2d3e4555267" target="_top" xlink:title=" ">
+<g id="a_node2"><a xlink:href="classEngine.html#afffac825472b73103b32f2d3e4555267" target="_top" xlink:title="Возможные атаки для фигуры.">
 <polygon fill="none" stroke="black" points="378,-17 378,-47 521,-47 521,-17 378,-17"/>
 <text text-anchor="start" x="386" y="-35" font-family="Helvetica,sans-Serif" font-size="10.00">Engine::getPosibleAttacks</text>
 <text text-anchor="middle" x="449.5" y="-24" font-family="Helvetica,sans-Serif" font-size="10.00">FigureFrom</text>
@@ -37,7 +37,7 @@
 <!-- Node3 -->
 <g id="node3" class="node">
 <title>Node3</title>
-<g id="a_node3"><a xlink:href="classMainWindow.html#ac8e148d721ba666a05fe1422d14ebcd8" target="_top" xlink:title=" ">
+<g id="a_node3"><a xlink:href="classMainWindow.html#ac8e148d721ba666a05fe1422d14ebcd8" target="_top" xlink:title="Обработка нажатия на фигуру.">
 <polygon fill="none" stroke="black" points="184,-39 184,-69 342,-69 342,-39 184,-39"/>
 <text text-anchor="start" x="192" y="-57" font-family="Helvetica,sans-Serif" font-size="10.00">MainWindow::guiMousePress</text>
 <text text-anchor="middle" x="263" y="-46" font-family="Helvetica,sans-Serif" font-size="10.00">Figure</text>
@@ -53,7 +53,7 @@
 <!-- Node5 -->
 <g id="node5" class="node">
 <title>Node5</title>
-<g id="a_node5"><a xlink:href="classMainWindow.html#adf52446f5b40a6b0045d04ccca523242" target="_top" xlink:title=" ">
+<g id="a_node5"><a xlink:href="classMainWindow.html#adf52446f5b40a6b0045d04ccca523242" target="_top" xlink:title="Обработка нажатия на фигуру.">
 <polygon fill="none" stroke="black" points="185,-0.5 185,-19.5 341,-19.5 341,-0.5 185,-0.5"/>
 <text text-anchor="middle" x="263" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">MainWindow::guiPressFigure</text>
 </a>

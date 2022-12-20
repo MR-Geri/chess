@@ -1,11 +1,11 @@
 <map id="MainWindow::MainWindow" name="MainWindow::MainWindow">
 <area shape="rect" id="node1" title=" " alt="" coords="5,536,203,563"/>
-<area shape="rect" id="node2" href="$classMainWindow.html#a85e58f13e52e2a2d01b0bbf87c1442e9" title=" " alt="" coords="253,339,475,381"/>
-<area shape="rect" id="node17" href="$classMainWindow.html#ac8e148d721ba666a05fe1422d14ebcd8" title=" " alt="" coords="259,529,469,570"/>
-<area shape="rect" id="node20" href="$classMainWindow.html#adf52446f5b40a6b0045d04ccca523242" title=" " alt="" coords="260,477,468,504"/>
-<area shape="rect" id="node22" href="$classMainWindow.html#a4195422fe1346c1aa9c640715dfe73cb" title=" " alt="" coords="259,595,469,621"/>
+<area shape="rect" id="node2" href="$classMainWindow.html#a85e58f13e52e2a2d01b0bbf87c1442e9" title="Перемещение и окончание игры." alt="" coords="253,339,475,381"/>
+<area shape="rect" id="node17" href="$classMainWindow.html#ac8e148d721ba666a05fe1422d14ebcd8" title="Обработка нажатия на фигуру." alt="" coords="259,529,469,570"/>
+<area shape="rect" id="node20" href="$classMainWindow.html#adf52446f5b40a6b0045d04ccca523242" title="Обработка нажатия на фигуру." alt="" coords="260,477,468,504"/>
+<area shape="rect" id="node22" href="$classMainWindow.html#a4195422fe1346c1aa9c640715dfe73cb" title="Новая игра." alt="" coords="259,595,469,621"/>
 <area shape="rect" id="node27" href="$classMainWindow.html#aaf47fc01862209102bc55bc5cca41ecb" title="Менеджер окон, переключает QStacedWidget на тот виджет, номер которого ему передали." alt="" coords="251,645,477,672"/>
-<area shape="rect" id="node3" href="$classEngine.html#acb6729165e26058f5dc442428f11b6be" title=" " alt="" coords="600,296,709,323"/>
+<area shape="rect" id="node3" href="$classEngine.html#acb6729165e26058f5dc442428f11b6be" title="Проверка на конец игры." alt="" coords="600,296,709,323"/>
 <area shape="rect" id="node4" href="$classEngine.html#a66f2b590d92c6e0fa99741f02a8a9a3f" title="Проверяет возможность хода и перемещает фигуру." alt="" coords="876,275,987,301"/>
 <area shape="rect" id="node5" href="$classEngine.html#a2b384a18565b9cdd85b52fed6d25ff0c" title="Расчет преимущества игрока." alt="" coords="1079,158,1281,199"/>
 <area shape="rect" id="node8" href="$classBoard.html#ab906dade3854d38f6354861a715fccac" title="getBoo Возвращает доску." alt="" coords="1596,347,1755,373"/>
@@ -16,12 +16,12 @@
 <area shape="rect" id="node14" href="$classFigure.html#ac527b099db89b98b705eb74bed96c147" title="Получение возможных ходов перемещения." alt="" coords="1086,427,1274,453"/>
 <area shape="rect" id="node15" href="$classFigure.html#aad86c6d796ac96d30f2a310c107fdbac" title="Получение элементарных ходов." alt="" coords="1097,5,1263,32"/>
 <area shape="rect" id="node16" href="$classBoard.html#a4ed8cf3fae283d3c88eb6b0dea9e9f0a" title="Перемещает фигуру в board." alt="" coords="1127,56,1233,83"/>
-<area shape="rect" id="node6" href="$classEngine.html#a93442cf58f7239df6e2b5303b7b90cda" title=" " alt="" coords="1339,161,1539,188"/>
+<area shape="rect" id="node6" href="$classEngine.html#a93442cf58f7239df6e2b5303b7b90cda" title="Количество противников, которые находятся под атакой." alt="" coords="1339,161,1539,188"/>
 <area shape="rect" id="node7" href="$classEngine.html#af2c8028ccaf85425744ad55844765fac" title="getData возвращает поле." alt="" coords="1375,212,1502,239"/>
-<area shape="rect" id="node9" href="$classEngine.html#a9154a3995005939adcc56d46d8bd78b0" title=" " alt="" coords="1329,263,1548,289"/>
-<area shape="rect" id="node18" href="$classEngine.html#afffac825472b73103b32f2d3e4555267" title=" " alt="" coords="559,529,750,570"/>
-<area shape="rect" id="node19" href="$classBoard.html#ac3f85f5b615feede6ea32745632203dd" title=" " alt="" coords="832,579,1031,621"/>
-<area shape="rect" id="node21" href="$classEngine.html#ab4b084189c3f29e30a3a44ac0d5ed6b3" title=" " alt="" coords="525,477,784,504"/>
+<area shape="rect" id="node9" href="$classEngine.html#a9154a3995005939adcc56d46d8bd78b0" title="Количество возможных ходов." alt="" coords="1329,263,1548,289"/>
+<area shape="rect" id="node18" href="$classEngine.html#afffac825472b73103b32f2d3e4555267" title="Возможные атаки для фигуры." alt="" coords="559,529,750,570"/>
+<area shape="rect" id="node19" href="$classBoard.html#ac3f85f5b615feede6ea32745632203dd" title="Определение фигуры после перемещения." alt="" coords="832,579,1031,621"/>
+<area shape="rect" id="node21" href="$classEngine.html#ab4b084189c3f29e30a3a44ac0d5ed6b3" title="Возможные ходы для фигуры." alt="" coords="525,477,784,504"/>
 <area shape="rect" id="node23" href="$classEngine.html#a7e19f1f9eb9e6ec51f646bb0a94dd1d6" title="clearBoard очищает поле." alt="" coords="583,595,727,621"/>
 <area shape="rect" id="node25" href="$classEngine.html#a9027b51e4922e147b8ae3b50348c69af" title="Базовая расстановка фигур на поле." alt="" coords="539,645,770,672"/>
 <area shape="rect" id="node24" href="$classBoard.html#af74f0d4b43e5aa3faea16d7c6407b05e" title="clear Очищает доску." alt="" coords="881,645,981,672"/>

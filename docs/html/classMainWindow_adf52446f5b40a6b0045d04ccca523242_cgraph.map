@@ -1,8 +1,8 @@
 <map id="MainWindow::guiPressFigure" name="MainWindow::guiPressFigure">
-<area shape="rect" id="node1" title=" " alt="" coords="5,97,213,123"/>
-<area shape="rect" id="node2" href="$classEngine.html#afffac825472b73103b32f2d3e4555267" title=" " alt="" coords="295,60,486,101"/>
-<area shape="rect" id="node5" href="$classEngine.html#ab4b084189c3f29e30a3a44ac0d5ed6b3" title=" " alt="" coords="261,126,520,153"/>
-<area shape="rect" id="node3" href="$classBoard.html#ac3f85f5b615feede6ea32745632203dd" title=" " alt="" coords="568,5,767,47"/>
+<area shape="rect" id="node1" title="Обработка нажатия на фигуру." alt="" coords="5,97,213,123"/>
+<area shape="rect" id="node2" href="$classEngine.html#afffac825472b73103b32f2d3e4555267" title="Возможные атаки для фигуры." alt="" coords="295,60,486,101"/>
+<area shape="rect" id="node5" href="$classEngine.html#ab4b084189c3f29e30a3a44ac0d5ed6b3" title="Возможные ходы для фигуры." alt="" coords="261,126,520,153"/>
+<area shape="rect" id="node3" href="$classBoard.html#ac3f85f5b615feede6ea32745632203dd" title="Определение фигуры после перемещения." alt="" coords="568,5,767,47"/>
 <area shape="rect" id="node4" href="$classBoard.html#ab906dade3854d38f6354861a715fccac" title="getBoo Возвращает доску." alt="" coords="1332,147,1491,174"/>
 <area shape="rect" id="node6" href="$classEngine.html#a66f2b590d92c6e0fa99741f02a8a9a3f" title="Проверяет возможность хода и перемещает фигуру." alt="" coords="612,366,723,393"/>
 <area shape="rect" id="node7" href="$classEngine.html#a2b384a18565b9cdd85b52fed6d25ff0c" title="Расчет преимущества игрока." alt="" coords="815,224,1017,265"/>
@@ -13,7 +13,7 @@
 <area shape="rect" id="node15" href="$classFigure.html#ac527b099db89b98b705eb74bed96c147" title="Получение возможных ходов перемещения." alt="" coords="822,493,1010,519"/>
 <area shape="rect" id="node16" href="$classFigure.html#aad86c6d796ac96d30f2a310c107fdbac" title="Получение элементарных ходов." alt="" coords="833,543,999,570"/>
 <area shape="rect" id="node17" href="$classBoard.html#a4ed8cf3fae283d3c88eb6b0dea9e9f0a" title="Перемещает фигуру в board." alt="" coords="863,594,969,621"/>
-<area shape="rect" id="node8" href="$classEngine.html#a93442cf58f7239df6e2b5303b7b90cda" title=" " alt="" coords="1075,223,1275,250"/>
+<area shape="rect" id="node8" href="$classEngine.html#a93442cf58f7239df6e2b5303b7b90cda" title="Количество противников, которые находятся под атакой." alt="" coords="1075,223,1275,250"/>
 <area shape="rect" id="node9" href="$classEngine.html#af2c8028ccaf85425744ad55844765fac" title="getData возвращает поле." alt="" coords="1111,274,1238,301"/>
-<area shape="rect" id="node10" href="$classEngine.html#a9154a3995005939adcc56d46d8bd78b0" title=" " alt="" coords="1065,325,1284,351"/>
+<area shape="rect" id="node10" href="$classEngine.html#a9154a3995005939adcc56d46d8bd78b0" title="Количество возможных ходов." alt="" coords="1065,325,1284,351"/>
 </map>

@@ -1,5 +1,5 @@
 <map id="Engine::clearBoard" name="Engine::clearBoard">
 <area shape="rect" id="node1" title="clearBoard очищает поле." alt="" coords="509,5,653,32"/>
-<area shape="rect" id="node2" href="$classMainWindow.html#a4195422fe1346c1aa9c640715dfe73cb" title=" " alt="" coords="251,5,461,32"/>
+<area shape="rect" id="node2" href="$classMainWindow.html#a4195422fe1346c1aa9c640715dfe73cb" title="Новая игра." alt="" coords="251,5,461,32"/>
 <area shape="rect" id="node3" href="$classMainWindow.html#a996c5a2b6f77944776856f08ec30858d" title=" " alt="" coords="5,5,203,32"/>
 </map>

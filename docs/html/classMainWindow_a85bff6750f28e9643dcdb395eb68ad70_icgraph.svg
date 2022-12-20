@@ -48,7 +48,7 @@ if (edges && edges.length) {
 <script type="text/javascript">
 var viewWidth = 528;
 var viewHeight = 53;
-var sectionId = 'dynsection-7';
+var sectionId = 'dynsection-9';
 </script>
 <script xlink:href="svgpan.js"/>
 <svg id="graph" class="graph">
@@ -67,7 +67,7 @@ var sectionId = 'dynsection-7';
 <!-- Node2 -->
 <g id="node2" class="node">
 <title>Node2</title>
-<g id="a_node2"><a xlink:href="classMainWindow.html#adf52446f5b40a6b0045d04ccca523242" target="_top" xlink:title=" ">
+<g id="a_node2"><a xlink:href="classMainWindow.html#adf52446f5b40a6b0045d04ccca523242" target="_top" xlink:title="Обработка нажатия на фигуру.">
 <polygon fill="none" stroke="black" points="184,-25 184,-44 340,-44 340,-25 184,-25"/>
 <text text-anchor="middle" x="262" y="-32" font-family="Helvetica,sans-Serif" font-size="10.00">MainWindow::guiPressFigure</text>
 </a>

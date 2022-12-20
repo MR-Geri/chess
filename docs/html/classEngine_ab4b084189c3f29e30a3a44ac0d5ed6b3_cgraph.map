@@ -1,5 +1,5 @@
 <map id="Engine::getPosibleMovesFigureFrom" name="Engine::getPosibleMovesFigureFrom">
-<area shape="rect" id="node1" title=" " alt="" coords="5,120,264,147"/>
+<area shape="rect" id="node1" title="Возможные ходы для фигуры." alt="" coords="5,120,264,147"/>
 <area shape="rect" id="node2" href="$classBoard.html#ab906dade3854d38f6354861a715fccac" title="getBoo Возвращает доску." alt="" coords="988,36,1147,63"/>
 <area shape="rect" id="node3" href="$classEngine.html#a66f2b590d92c6e0fa99741f02a8a9a3f" title="Проверяет возможность хода и перемещает фигуру." alt="" coords="312,229,423,256"/>
 <area shape="rect" id="node4" href="$classEngine.html#a2b384a18565b9cdd85b52fed6d25ff0c" title="Расчет преимущества игрока." alt="" coords="471,87,673,129"/>
@@ -10,7 +10,7 @@
 <area shape="rect" id="node12" href="$classFigure.html#ac527b099db89b98b705eb74bed96c147" title="Получение возможных ходов перемещения." alt="" coords="478,356,666,383"/>
 <area shape="rect" id="node13" href="$classFigure.html#aad86c6d796ac96d30f2a310c107fdbac" title="Получение элементарных ходов." alt="" coords="489,407,655,433"/>
 <area shape="rect" id="node14" href="$classBoard.html#a4ed8cf3fae283d3c88eb6b0dea9e9f0a" title="Перемещает фигуру в board." alt="" coords="519,457,625,484"/>
-<area shape="rect" id="node5" href="$classEngine.html#a93442cf58f7239df6e2b5303b7b90cda" title=" " alt="" coords="731,87,931,113"/>
+<area shape="rect" id="node5" href="$classEngine.html#a93442cf58f7239df6e2b5303b7b90cda" title="Количество противников, которые находятся под атакой." alt="" coords="731,87,931,113"/>
 <area shape="rect" id="node6" href="$classEngine.html#af2c8028ccaf85425744ad55844765fac" title="getData возвращает поле." alt="" coords="767,137,894,164"/>
-<area shape="rect" id="node7" href="$classEngine.html#a9154a3995005939adcc56d46d8bd78b0" title=" " alt="" coords="721,188,940,215"/>
+<area shape="rect" id="node7" href="$classEngine.html#a9154a3995005939adcc56d46d8bd78b0" title="Количество возможных ходов." alt="" coords="721,188,940,215"/>
 </map>

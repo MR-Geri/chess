@@ -57,7 +57,7 @@ var sectionId = 'dynsection-3';
 <!-- Node1 -->
 <g id="node1" class="node">
 <title>Node1</title>
-<g id="a_node1"><a xlink:title=" ">
+<g id="a_node1"><a xlink:title="Перемещение и окончание игры.">
 <polygon fill="#bfbfbf" stroke="black" points="0,-166 0,-196 167,-196 167,-166 0,-166"/>
 <text text-anchor="start" x="8" y="-184" font-family="Helvetica,sans-Serif" font-size="10.00">MainWindow::connectGuiMove</text>
 <text text-anchor="middle" x="83.5" y="-173" font-family="Helvetica,sans-Serif" font-size="10.00">WithEngine</text>
@@ -67,7 +67,7 @@ var sectionId = 'dynsection-3';
 <!-- Node2 -->
 <g id="node2" class="node">
 <title>Node2</title>
-<g id="a_node2"><a xlink:href="classEngine.html#acb6729165e26058f5dc442428f11b6be" target="_top" xlink:title=" ">
+<g id="a_node2"><a xlink:href="classEngine.html#acb6729165e26058f5dc442428f11b6be" target="_top" xlink:title="Проверка на конец игры.">
 <polygon fill="none" stroke="black" points="203.5,-190.5 203.5,-209.5 285.5,-209.5 285.5,-190.5 203.5,-190.5"/>
 <text text-anchor="middle" x="244.5" y="-197.5" font-family="Helvetica,sans-Serif" font-size="10.00">Engine::isEnd</text>
 </a>
@@ -233,7 +233,7 @@ var sectionId = 'dynsection-3';
 <!-- Node5 -->
 <g id="node5" class="node">
 <title>Node5</title>
-<g id="a_node5"><a xlink:href="classEngine.html#a93442cf58f7239df6e2b5303b7b90cda" target="_top" xlink:title=" ">
+<g id="a_node5"><a xlink:href="classEngine.html#a93442cf58f7239df6e2b5303b7b90cda" target="_top" xlink:title="Количество противников, которые находятся под атакой.">
 <polygon fill="none" stroke="black" points="517,-380.5 517,-399.5 667,-399.5 667,-380.5 517,-380.5"/>
 <text text-anchor="middle" x="592" y="-387.5" font-family="Helvetica,sans-Serif" font-size="10.00">Engine::enemyUnderAttack</text>
 </a>
@@ -263,7 +263,7 @@ var sectionId = 'dynsection-3';
 <!-- Node8 -->
 <g id="node8" class="node">
 <title>Node8</title>
-<g id="a_node8"><a xlink:href="classEngine.html#a9154a3995005939adcc56d46d8bd78b0" target="_top" xlink:title=" ">
+<g id="a_node8"><a xlink:href="classEngine.html#a9154a3995005939adcc56d46d8bd78b0" target="_top" xlink:title="Количество возможных ходов.">
 <polygon fill="none" stroke="black" points="510,-304.5 510,-323.5 674,-323.5 674,-304.5 510,-304.5"/>
 <text text-anchor="middle" x="592" y="-311.5" font-family="Helvetica,sans-Serif" font-size="10.00">Engine::quantityPossibleMove</text>
 </a>

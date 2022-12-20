@@ -11,7 +11,7 @@
 <!-- Node1 -->
 <g id="node1" class="node">
 <title>Node1</title>
-<g id="a_node1"><a xlink:title=" ">
+<g id="a_node1"><a xlink:title="Обработка нажатия на фигуру.">
 <polygon fill="#bfbfbf" stroke="black" points="0,-17 0,-47 158,-47 158,-17 0,-17"/>
 <text text-anchor="start" x="8" y="-35" font-family="Helvetica,sans-Serif" font-size="10.00">MainWindow::guiMousePress</text>
 <text text-anchor="middle" x="79" y="-24" font-family="Helvetica,sans-Serif" font-size="10.00">Figure</text>
@@ -21,7 +21,7 @@
 <!-- Node2 -->
 <g id="node2" class="node">
 <title>Node2</title>
-<g id="a_node2"><a xlink:href="classEngine.html#afffac825472b73103b32f2d3e4555267" target="_top" xlink:title=" ">
+<g id="a_node2"><a xlink:href="classEngine.html#afffac825472b73103b32f2d3e4555267" target="_top" xlink:title="Возможные атаки для фигуры.">
 <polygon fill="none" stroke="black" points="194,-17 194,-47 337,-47 337,-17 194,-17"/>
 <text text-anchor="start" x="202" y="-35" font-family="Helvetica,sans-Serif" font-size="10.00">Engine::getPosibleAttacks</text>
 <text text-anchor="middle" x="265.5" y="-24" font-family="Helvetica,sans-Serif" font-size="10.00">FigureFrom</text>
@@ -37,7 +37,7 @@
 <!-- Node3 -->
 <g id="node3" class="node">
 <title>Node3</title>
-<g id="a_node3"><a xlink:href="classBoard.html#ac3f85f5b615feede6ea32745632203dd" target="_top" xlink:title=" ">
+<g id="a_node3"><a xlink:href="classBoard.html#ac3f85f5b615feede6ea32745632203dd" target="_top" xlink:title="Определение фигуры после перемещения.">
 <polygon fill="none" stroke="black" points="373,-39 373,-69 522,-69 522,-39 373,-39"/>
 <text text-anchor="start" x="381" y="-57" font-family="Helvetica,sans-Serif" font-size="10.00">Board::calculateFigureAfter</text>
 <text text-anchor="middle" x="447.5" y="-46" font-family="Helvetica,sans-Serif" font-size="10.00">Taking</text>

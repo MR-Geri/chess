@@ -1,5 +1,5 @@
 <map id="MainWindow::startNewGame" name="MainWindow::startNewGame">
-<area shape="rect" id="node1" title=" " alt="" coords="5,31,216,57"/>
+<area shape="rect" id="node1" title="Новая игра." alt="" coords="5,31,216,57"/>
 <area shape="rect" id="node2" href="$classEngine.html#a7e19f1f9eb9e6ec51f646bb0a94dd1d6" title="clearBoard очищает поле." alt="" coords="307,5,451,32"/>
 <area shape="rect" id="node4" href="$classEngine.html#a9027b51e4922e147b8ae3b50348c69af" title="Базовая расстановка фигур на поле." alt="" coords="264,56,495,83"/>
 <area shape="rect" id="node3" href="$classBoard.html#af74f0d4b43e5aa3faea16d7c6407b05e" title="clear Очищает доску." alt="" coords="566,5,666,32"/>

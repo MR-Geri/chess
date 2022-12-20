@@ -1,6 +1,6 @@
 <map id="MainWindow::connectGuiMoveWithEngine" name="MainWindow::connectGuiMoveWithEngine">
-<area shape="rect" id="node1" title=" " alt="" coords="5,277,228,318"/>
-<area shape="rect" id="node2" href="$classEngine.html#acb6729165e26058f5dc442428f11b6be" title=" " alt="" coords="277,259,386,285"/>
+<area shape="rect" id="node1" title="Перемещение и окончание игры." alt="" coords="5,277,228,318"/>
+<area shape="rect" id="node2" href="$classEngine.html#acb6729165e26058f5dc442428f11b6be" title="Проверка на конец игры." alt="" coords="277,259,386,285"/>
 <area shape="rect" id="node3" href="$classEngine.html#a66f2b590d92c6e0fa99741f02a8a9a3f" title="Проверяет возможность хода и перемещает фигуру." alt="" coords="276,309,387,336"/>
 <area shape="rect" id="node4" href="$classEngine.html#a2b384a18565b9cdd85b52fed6d25ff0c" title="Расчет преимущества игрока." alt="" coords="435,70,637,111"/>
 <area shape="rect" id="node7" href="$classBoard.html#ab906dade3854d38f6354861a715fccac" title="getBoo Возвращает доску." alt="" coords="952,107,1111,133"/>
@@ -11,7 +11,7 @@
 <area shape="rect" id="node13" href="$classFigure.html#ac527b099db89b98b705eb74bed96c147" title="Получение возможных ходов перемещения." alt="" coords="442,411,630,437"/>
 <area shape="rect" id="node14" href="$classFigure.html#aad86c6d796ac96d30f2a310c107fdbac" title="Получение элементарных ходов." alt="" coords="453,461,619,488"/>
 <area shape="rect" id="node15" href="$classBoard.html#a4ed8cf3fae283d3c88eb6b0dea9e9f0a" title="Перемещает фигуру в board." alt="" coords="483,512,589,539"/>
-<area shape="rect" id="node5" href="$classEngine.html#a93442cf58f7239df6e2b5303b7b90cda" title=" " alt="" coords="695,5,895,32"/>
+<area shape="rect" id="node5" href="$classEngine.html#a93442cf58f7239df6e2b5303b7b90cda" title="Количество противников, которые находятся под атакой." alt="" coords="695,5,895,32"/>
 <area shape="rect" id="node6" href="$classEngine.html#af2c8028ccaf85425744ad55844765fac" title="getData возвращает поле." alt="" coords="731,56,858,83"/>
-<area shape="rect" id="node8" href="$classEngine.html#a9154a3995005939adcc56d46d8bd78b0" title=" " alt="" coords="685,107,904,133"/>
+<area shape="rect" id="node8" href="$classEngine.html#a9154a3995005939adcc56d46d8bd78b0" title="Количество возможных ходов." alt="" coords="685,107,904,133"/>
 </map>

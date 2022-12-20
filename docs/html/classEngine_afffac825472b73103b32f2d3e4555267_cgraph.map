@@ -1,5 +1,5 @@
 <map id="Engine::getPosibleAttacksFigureFrom" name="Engine::getPosibleAttacksFigureFrom">
-<area shape="rect" id="node1" title=" " alt="" coords="5,35,196,76"/>
-<area shape="rect" id="node2" href="$classBoard.html#ac3f85f5b615feede6ea32745632203dd" title=" " alt="" coords="244,5,443,47"/>
+<area shape="rect" id="node1" title="Возможные атаки для фигуры." alt="" coords="5,35,196,76"/>
+<area shape="rect" id="node2" href="$classBoard.html#ac3f85f5b615feede6ea32745632203dd" title="Определение фигуры после перемещения." alt="" coords="244,5,443,47"/>
 <area shape="rect" id="node3" href="$classBoard.html#ab906dade3854d38f6354861a715fccac" title="getBoo Возвращает доску." alt="" coords="264,71,423,98"/>
 </map>

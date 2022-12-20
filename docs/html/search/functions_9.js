@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['king_304',['King',['../classKing.html#a2ce46bf43fede5a700d153dd648a91c9',1,'King']]],
-  ['knight_305',['Knight',['../classKnight.html#a823aa51e2dab4c42c715704ac195cb96',1,'Knight']]]
+  ['liderboard_305',['Liderboard',['../classLiderboard.html#ad40d5e3ecc6c2a565d099068dbadc745',1,'Liderboard']]]
 ];

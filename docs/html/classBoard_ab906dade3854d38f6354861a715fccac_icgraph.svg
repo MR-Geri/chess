@@ -96,7 +96,7 @@ var sectionId = 'dynsection-3';
 <!-- Node7 -->
 <g id="node7" class="node">
 <title>Node7</title>
-<g id="a_node7"><a xlink:href="classEngine.html#ab4b084189c3f29e30a3a44ac0d5ed6b3" target="_top" xlink:title=" ">
+<g id="a_node7"><a xlink:href="classEngine.html#ab4b084189c3f29e30a3a44ac0d5ed6b3" target="_top" xlink:title="Возможные ходы для фигуры.">
 <polygon fill="none" stroke="black" points="387,-51 387,-70 581,-70 581,-51 387,-51"/>
 <text text-anchor="middle" x="484" y="-58" font-family="Helvetica,sans-Serif" font-size="10.00">Engine::getPosibleMovesFigureFrom</text>
 </a>
@@ -111,7 +111,7 @@ var sectionId = 'dynsection-3';
 <!-- Node9 -->
 <g id="node9" class="node">
 <title>Node9</title>
-<g id="a_node9"><a xlink:href="classEngine.html#afffac825472b73103b32f2d3e4555267" target="_top" xlink:title=" ">
+<g id="a_node9"><a xlink:href="classEngine.html#afffac825472b73103b32f2d3e4555267" target="_top" xlink:title="Возможные атаки для фигуры.">
 <polygon fill="none" stroke="black" points="412.5,-1.5 412.5,-31.5 555.5,-31.5 555.5,-1.5 412.5,-1.5"/>
 <text text-anchor="start" x="420.5" y="-19.5" font-family="Helvetica,sans-Serif" font-size="10.00">Engine::getPosibleAttacks</text>
 <text text-anchor="middle" x="484" y="-8.5" font-family="Helvetica,sans-Serif" font-size="10.00">FigureFrom</text>
@@ -149,7 +149,7 @@ var sectionId = 'dynsection-3';
 <!-- Node5 -->
 <g id="node5" class="node">
 <title>Node5</title>
-<g id="a_node5"><a xlink:href="classMainWindow.html#a85e58f13e52e2a2d01b0bbf87c1442e9" target="_top" xlink:title=" ">
+<g id="a_node5"><a xlink:href="classMainWindow.html#a85e58f13e52e2a2d01b0bbf87c1442e9" target="_top" xlink:title="Перемещение и окончание игры.">
 <polygon fill="none" stroke="black" points="184,-88.5 184,-118.5 351,-118.5 351,-88.5 184,-88.5"/>
 <text text-anchor="start" x="192" y="-106.5" font-family="Helvetica,sans-Serif" font-size="10.00">MainWindow::connectGuiMove</text>
 <text text-anchor="middle" x="267.5" y="-95.5" font-family="Helvetica,sans-Serif" font-size="10.00">WithEngine</text>
@@ -186,7 +186,7 @@ var sectionId = 'dynsection-3';
 <!-- Node8 -->
 <g id="node8" class="node">
 <title>Node8</title>
-<g id="a_node8"><a xlink:href="classMainWindow.html#adf52446f5b40a6b0045d04ccca523242" target="_top" xlink:title=" ">
+<g id="a_node8"><a xlink:href="classMainWindow.html#adf52446f5b40a6b0045d04ccca523242" target="_top" xlink:title="Обработка нажатия на фигуру.">
 <polygon fill="none" stroke="black" points="189.5,-50 189.5,-69 345.5,-69 345.5,-50 189.5,-50"/>
 <text text-anchor="middle" x="267.5" y="-57" font-family="Helvetica,sans-Serif" font-size="10.00">MainWindow::guiPressFigure</text>
 </a>
@@ -213,7 +213,7 @@ var sectionId = 'dynsection-3';
 <!-- Node10 -->
 <g id="node10" class="node">
 <title>Node10</title>
-<g id="a_node10"><a xlink:href="classMainWindow.html#ac8e148d721ba666a05fe1422d14ebcd8" target="_top" xlink:title=" ">
+<g id="a_node10"><a xlink:href="classMainWindow.html#ac8e148d721ba666a05fe1422d14ebcd8" target="_top" xlink:title="Обработка нажатия на фигуру.">
 <polygon fill="none" stroke="black" points="188.5,-0.5 188.5,-30.5 346.5,-30.5 346.5,-0.5 188.5,-0.5"/>
 <text text-anchor="start" x="196.5" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00">MainWindow::guiMousePress</text>
 <text text-anchor="middle" x="267.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">Figure</text>

@@ -1,6 +1,6 @@
 <map id="Engine::setStartingArrangement" name="Engine::setStartingArrangement">
 <area shape="rect" id="node1" title="Базовая расстановка фигур на поле." alt="" coords="509,31,740,57"/>
 <area shape="rect" id="node2" href="$classEngine.html#a8c98683b0a3aa28d8ab72a8bcd0d52f2" title=" " alt="" coords="297,5,415,32"/>
-<area shape="rect" id="node3" href="$classMainWindow.html#a4195422fe1346c1aa9c640715dfe73cb" title=" " alt="" coords="251,56,461,83"/>
+<area shape="rect" id="node3" href="$classMainWindow.html#a4195422fe1346c1aa9c640715dfe73cb" title="Новая игра." alt="" coords="251,56,461,83"/>
 <area shape="rect" id="node4" href="$classMainWindow.html#a996c5a2b6f77944776856f08ec30858d" title=" " alt="" coords="5,56,203,83"/>
 </map>

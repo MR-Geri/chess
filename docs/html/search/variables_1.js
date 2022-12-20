@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['idpalyerwin_353',['idPalyerWin',['../structParty.html#afb0bc6e19e7dc7c43b8243ca0566ca66',1,'Party']]]
+  ['current_5fcolor_352',['current_color',['../classEngine.html#ab4530100a493ee40978ef67a404959cd',1,'Engine']]]
 ];

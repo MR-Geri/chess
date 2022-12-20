@@ -88,29 +88,33 @@ $(function() {
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classSettings.html#a0c1e9abe929b1597f5e4f8730334c616">getSoundFlag</a>();</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="keyword">public</span> slots:</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classSettings.html#a082228079c89f928f58737f53f3a05b1">changeMusicVolume</a>(<span class="keywordtype">int</span> value);</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classSettings.html#a316bd14c7b2b7c8001002965035a400c">changeSoundVolume</a>(<span class="keywordtype">int</span> value);</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classSettings.html#a8bf04e06f91e3c448650673d23229d25">changeMusicFlag</a>(<span class="keywordtype">bool</span> flag);</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classSettings.html#a2ae32bbeaa364765caccb3aa3c5380db">changeSoundFlag</a>(<span class="keywordtype">bool</span> flag);</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  QString path = <span class="stringliteral">&quot;./data/settings.json&quot;</span>;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  <span class="keywordtype">int</span> m_music_volume;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  <span class="keywordtype">bool</span> m_music_flag;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  <span class="keywordtype">int</span> m_sound_volume;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  <span class="keywordtype">bool</span> m_sound_flag;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  <span class="keywordtype">void</span> save();</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  <span class="keywordtype">void</span> load();</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;};</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classSettings.html#a082228079c89f928f58737f53f3a05b1">changeMusicVolume</a>(<span class="keywordtype">int</span> value);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classSettings.html#a316bd14c7b2b7c8001002965035a400c">changeSoundVolume</a>(<span class="keywordtype">int</span> value);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classSettings.html#a8bf04e06f91e3c448650673d23229d25">changeMusicFlag</a>(<span class="keywordtype">bool</span> flag);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classSettings.html#a2ae32bbeaa364765caccb3aa3c5380db">changeSoundFlag</a>(<span class="keywordtype">bool</span> flag);</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  QString path = <span class="stringliteral">&quot;./data/settings.json&quot;</span>;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  <span class="keywordtype">int</span> m_music_volume;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;  <span class="keywordtype">bool</span> m_music_flag;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  <span class="keywordtype">int</span> m_sound_volume;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  <span class="keywordtype">bool</span> m_sound_flag;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  <span class="keywordtype">void</span> save();</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  <span class="keywordtype">void</span> load();</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;};</div>
 <div class="ttc" id="aclassSettings_html"><div class="ttname"><a href="classSettings.html">Settings</a></div><div class="ttdoc">Хранение в базе настроек приложения.</div><div class="ttdef"><b>Definition:</b> settings.h:11</div></div>
-<div class="ttc" id="aclassSettings_html_a082228079c89f928f58737f53f3a05b1"><div class="ttname"><a href="classSettings.html#a082228079c89f928f58737f53f3a05b1">Settings::changeMusicVolume</a></div><div class="ttdeci">void changeMusicVolume(int value)</div><div class="ttdef"><b>Definition:</b> settings.cpp:76</div></div>
+<div class="ttc" id="aclassSettings_html_a082228079c89f928f58737f53f3a05b1"><div class="ttname"><a href="classSettings.html#a082228079c89f928f58737f53f3a05b1">Settings::changeMusicVolume</a></div><div class="ttdeci">void changeMusicVolume(int value)</div><div class="ttdoc">Сохранение изменений громкости музыки</div><div class="ttdef"><b>Definition:</b> settings.cpp:76</div></div>
 <div class="ttc" id="aclassSettings_html_a0c1e9abe929b1597f5e4f8730334c616"><div class="ttname"><a href="classSettings.html#a0c1e9abe929b1597f5e4f8730334c616">Settings::getSoundFlag</a></div><div class="ttdeci">bool getSoundFlag()</div><div class="ttdoc">Возвращает флаг звуков [On, Off].</div><div class="ttdef"><b>Definition:</b> settings.cpp:97</div></div>
-<div class="ttc" id="aclassSettings_html_a2ae32bbeaa364765caccb3aa3c5380db"><div class="ttname"><a href="classSettings.html#a2ae32bbeaa364765caccb3aa3c5380db">Settings::changeSoundFlag</a></div><div class="ttdeci">void changeSoundFlag(bool flag)</div><div class="ttdef"><b>Definition:</b> settings.cpp:81</div></div>
-<div class="ttc" id="aclassSettings_html_a316bd14c7b2b7c8001002965035a400c"><div class="ttname"><a href="classSettings.html#a316bd14c7b2b7c8001002965035a400c">Settings::changeSoundVolume</a></div><div class="ttdeci">void changeSoundVolume(int value)</div><div class="ttdef"><b>Definition:</b> settings.cpp:86</div></div>
+<div class="ttc" id="aclassSettings_html_a2ae32bbeaa364765caccb3aa3c5380db"><div class="ttname"><a href="classSettings.html#a2ae32bbeaa364765caccb3aa3c5380db">Settings::changeSoundFlag</a></div><div class="ttdeci">void changeSoundFlag(bool flag)</div><div class="ttdoc">Сохранение изменений громкости звуков</div><div class="ttdef"><b>Definition:</b> settings.cpp:81</div></div>
+<div class="ttc" id="aclassSettings_html_a316bd14c7b2b7c8001002965035a400c"><div class="ttname"><a href="classSettings.html#a316bd14c7b2b7c8001002965035a400c">Settings::changeSoundVolume</a></div><div class="ttdeci">void changeSoundVolume(int value)</div><div class="ttdoc">Сохранение изменений флага звуков</div><div class="ttdef"><b>Definition:</b> settings.cpp:86</div></div>
 <div class="ttc" id="aclassSettings_html_a5b139a8de1c25906e1cc618e2834956f"><div class="ttname"><a href="classSettings.html#a5b139a8de1c25906e1cc618e2834956f">Settings::getSoundVolume</a></div><div class="ttdeci">int getSoundVolume()</div><div class="ttdoc">Возвращает значение громкости звуков</div><div class="ttdef"><b>Definition:</b> settings.cpp:95</div></div>
-<div class="ttc" id="aclassSettings_html_a8bf04e06f91e3c448650673d23229d25"><div class="ttname"><a href="classSettings.html#a8bf04e06f91e3c448650673d23229d25">Settings::changeMusicFlag</a></div><div class="ttdeci">void changeMusicFlag(bool flag)</div><div class="ttdef"><b>Definition:</b> settings.cpp:71</div></div>
+<div class="ttc" id="aclassSettings_html_a8bf04e06f91e3c448650673d23229d25"><div class="ttname"><a href="classSettings.html#a8bf04e06f91e3c448650673d23229d25">Settings::changeMusicFlag</a></div><div class="ttdeci">void changeMusicFlag(bool flag)</div><div class="ttdoc">Сохранение изменений флага музыки</div><div class="ttdef"><b>Definition:</b> settings.cpp:71</div></div>
 <div class="ttc" id="aclassSettings_html_a8db67fed89c78f12e8cd036c02c274ac"><div class="ttname"><a href="classSettings.html#a8db67fed89c78f12e8cd036c02c274ac">Settings::getMusicVolume</a></div><div class="ttdeci">int getMusicVolume()</div><div class="ttdoc">Возвращает значение громкости музыки</div><div class="ttdef"><b>Definition:</b> settings.cpp:91</div></div>
 <div class="ttc" id="aclassSettings_html_aafac1118b06ef59fd2559e79ddaaf64a"><div class="ttname"><a href="classSettings.html#aafac1118b06ef59fd2559e79ddaaf64a">Settings::getMusicFlag</a></div><div class="ttdeci">bool getMusicFlag()</div><div class="ttdoc">Возвращает флаг музыки [On, Off].</div><div class="ttdef"><b>Definition:</b> settings.cpp:93</div></div>
 <div class="ttc" id="aclassSettings_html_ab7169a6eefce79566dd07db3b1e5e967"><div class="ttname"><a href="classSettings.html#ab7169a6eefce79566dd07db3b1e5e967">Settings::Settings</a></div><div class="ttdeci">Settings()</div><div class="ttdef"><b>Definition:</b> settings.cpp:3</div></div>
