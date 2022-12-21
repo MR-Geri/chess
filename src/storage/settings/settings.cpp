@@ -1,8 +1,6 @@
 #include "settings.h"
 
-Settings::Settings() : QObject() {
-  load();
-}
+Settings::Settings() : QObject() { load(); }
 
 Settings::~Settings() { save(); }
 
@@ -60,21 +58,13 @@ void Settings::save() {
   }
 }
 
-void Settings::changeMusicFlag(bool flag) {
-  m_music_flag = flag;
-}
+void Settings::changeMusicFlag(bool flag) { m_music_flag = flag; }
 
-void Settings::changeMusicVolume(int volume) {
-  m_music_volume = volume;
-}
+void Settings::changeMusicVolume(int volume) { m_music_volume = volume; }
 
-void Settings::changeSoundFlag(bool flag) {
-  m_sound_flag = flag;
-}
+void Settings::changeSoundFlag(bool flag) { m_sound_flag = flag; }
 
-void Settings::changeSoundVolume(int volume) {
-  m_sound_volume = volume;
-}
+void Settings::changeSoundVolume(int volume) { m_sound_volume = volume; }
 
 int Settings::getMusicVolume() { return m_music_volume; }
 

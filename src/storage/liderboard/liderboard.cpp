@@ -1,9 +1,7 @@
 #include "liderboard.h"
 #include <utility>
 
-Liderboard::Liderboard() : QObject() {
-  load();
-}
+Liderboard::Liderboard() : QObject() { load(); }
 
 Liderboard::~Liderboard() { save(); }
 
