@@ -3,13 +3,12 @@
 
 Liderboard::Liderboard() : QObject() {
   load();
-  save();
 }
 
 Liderboard::~Liderboard() { save(); }
 
 void Liderboard::load() {
-  std::cout << "LOAD\n";
+  std::cout << "LOAD liderboard\n";
   QFile file(path);
   if (file.open(QIODevice::ReadOnly)) {
     QByteArray bytes = file.readAll();
@@ -22,7 +21,7 @@ void Liderboard::load() {
                 << std::endl;
       return;
     }
-    if (document.isObject()) {
+    if (document.isArray()) {
       QJsonArray jsonArr = document.array();
       m_parties.clear();
 
@@ -30,9 +29,10 @@ void Liderboard::load() {
         QJsonObject jsonObj = jsonArr.at(i).toObject();
         Party party;
         party.id_player_win = jsonObj.take("idPlayerWin").toInt();
-        QString one(jsonObj.take("players").toArray()[0].toString());
-        QString two(jsonObj.take("players").toArray()[1].toString());
-        party.players = std::make_pair(one, two);
+        QJsonArray playersArray = jsonObj.take("players").toArray();
+        QString player1 = playersArray.at(0).toString();
+        QString player2 = playersArray.at(1).toString();
+        party.players = std::make_pair(player1, player2);
         m_parties.push_back(party);
       }
     }
@@ -40,7 +40,7 @@ void Liderboard::load() {
 }
 
 void Liderboard::save() {
-  std::cout << "SAVE\n";
+  std::cout << "SAVE Liderboard\n";
   QJsonArray parties;
   for (auto party : this->m_parties) {
     QJsonObject jsonParty;

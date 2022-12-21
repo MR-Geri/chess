@@ -2,13 +2,12 @@
 
 Settings::Settings() : QObject() {
   load();
-  save();
 }
 
 Settings::~Settings() { save(); }
 
 void Settings::load() {
-  std::cout << "LOAD\n";
+  std::cout << "LOAD settings\n";
   QFile file(path);
   if (file.open(QIODevice::ReadOnly)) {
     QByteArray bytes = file.readAll();
@@ -23,38 +22,29 @@ void Settings::load() {
     }
     if (document.isObject()) {
       QJsonObject jsonObj = document.object();
-      // QStringList books;
       m_music_flag = jsonObj.take("music_flag").toBool();
+      std::cout << "music_flag " << m_music_flag << "\n";
       m_music_volume = jsonObj.take("music_volume").toInt();
+      std::cout << "music_volume " << m_music_volume << "\n";
       m_sound_flag = jsonObj.take("sound_flag").toBool();
+      std::cout << "soind_flag " << m_sound_flag << "\n";
       m_sound_volume = jsonObj.take("sound_volume").toInt();
-      // books << "book1"
-      //       << "book2";
-      // for (auto book : books) {
-      //   if (jsonObj.contains(book)) {
-      //     QJsonObject obj = jsonObj.value(book).toObject();
-      //     QStringList keys = obj.keys();
-      //     for (auto key : keys) {
-      //       auto value = obj.take(key);
-      //       if (value.isDouble()) {
-      //         qDebug() << key << " : " << value.toDouble();
-      //       } else if (value.isString()) {
-      //         qDebug() << key << " : " << value.toString();
-      //       }
-      //     }
-      //   }
-      // }
+      std::cout << "sound_volume " << m_sound_volume << "\n";
     }
   }
 }
 
 void Settings::save() {
-  std::cout << "SAVE\n";
+  std::cout << "SAVE settings\n";
   QJsonObject settings;
   settings.insert("music_flag", m_music_flag);
+  std::cout << "music_flag " << m_music_flag;
   settings.insert("music_volume", m_music_volume);
+  std::cout << "\nmusic_volume " << m_music_volume;
   settings.insert("sound_flag", m_sound_flag);
+  std::cout << "\nsoind_flag " << m_sound_flag;
   settings.insert("sound_volume", m_sound_volume);
+  std::cout << "\nsound_volume " << m_sound_volume;
 
   QJsonDocument document;
   document.setObject(settings);
@@ -72,22 +62,18 @@ void Settings::save() {
 
 void Settings::changeMusicFlag(bool flag) {
   m_music_flag = flag;
-  save();
 }
 
 void Settings::changeMusicVolume(int volume) {
   m_music_volume = volume;
-  save();
 }
 
 void Settings::changeSoundFlag(bool flag) {
   m_sound_flag = flag;
-  save();
 }
 
 void Settings::changeSoundVolume(int volume) {
   m_sound_volume = volume;
-  save();
 }
 
 int Settings::getMusicVolume() { return m_music_volume; }

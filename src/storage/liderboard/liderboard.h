@@ -35,7 +35,7 @@ public slots:
   void addRecord(Party new_party);
 
 private:
-  QString path = ":/data/liderboard.json";
+  QString path = "/home/mr-geri/projects/c/chess/data/liderboard.json";
   QList<Party> m_parties;
 
   /**
