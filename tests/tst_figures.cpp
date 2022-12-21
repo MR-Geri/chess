@@ -585,31 +585,31 @@ void TestsFigures::test_transform_figures() {
   // ------------------------------QUEEN--------------------------------------
   // -------------------------------------------------------------------------
   Queen *queen = new Queen(WHITE);
-  setOnlyOneFigureOn(engine, rook, {5, 5});
+  setOnlyOneFigureOn(engine, queen, {5, 5});
   engine.setFigureOnBoard(new Pawn(BLACK), {5, 4});
   engine.move({5, 5}, {0, -1});
   QCOMPARE(engine.getData()[5][4]->getTypeFigure(), W_BISHOP);
 
   queen = new Queen(WHITE);
-  setOnlyOneFigureOn(engine, rook, {5, 5});
+  setOnlyOneFigureOn(engine, queen, {5, 5});
   engine.setFigureOnBoard(new Knight(BLACK), {5, 4});
   engine.move({5, 5}, {0, -1});
   QCOMPARE(engine.getData()[5][4]->getTypeFigure(), W_BISHOP);
 
   queen = new Queen(WHITE);
-  setOnlyOneFigureOn(engine, rook, {5, 5});
+  setOnlyOneFigureOn(engine, queen, {5, 5});
   engine.setFigureOnBoard(new Bishop(BLACK), {5, 4});
   engine.move({5, 5}, {0, -1});
   QCOMPARE(engine.getData()[5][4]->getTypeFigure(), W_ROOK);
 
   queen = new Queen(WHITE);
-  setOnlyOneFigureOn(engine, rook, {5, 5});
+  setOnlyOneFigureOn(engine, queen, {5, 5});
   engine.setFigureOnBoard(new Rook(BLACK), {5, 4});
   engine.move({5, 5}, {0, -1});
   QCOMPARE(engine.getData()[5][4]->getTypeFigure(), W_ROOK);
 
   queen = new Queen(WHITE);
-  setOnlyOneFigureOn(engine, rook, {5, 5});
+  setOnlyOneFigureOn(engine, queen, {5, 5});
   engine.setFigureOnBoard(new Queen(BLACK), {5, 4});
   engine.move({5, 5}, {0, -1});
   QCOMPARE(engine.getData()[5][4]->getTypeFigure(), W_QUEEN);
