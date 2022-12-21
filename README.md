@@ -139,4 +139,4 @@
 
 ---
 ## Классы
-Все классы представлены в [документации](https://mr-geri.github.io/chess/html/index.html).\
+Все классы представлены в [документации](https://mr-geri.github.io/chess/html/index.html).
