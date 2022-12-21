@@ -6,9 +6,7 @@ Liderboard::Liderboard() : QObject() {
   save();
 }
 
-Liderboard::~Liderboard() {
-  save();
-}
+Liderboard::~Liderboard() { save(); }
 
 void Liderboard::load() {
   std::cout << "LOAD\n";

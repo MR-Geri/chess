@@ -25,7 +25,8 @@ ScreenSettings::ScreenSettings(QWidget *parent)
           SLOT(buttonBackSettingsReleased()));
 }
 
-ScreenSettings::~ScreenSettings() { delete ui;
+ScreenSettings::~ScreenSettings() {
+  delete ui;
   delete music_player;
   delete music_playlist;
   delete sounds_player;
@@ -47,14 +48,12 @@ void ScreenSettings::on_checkBox_stateChanged(int arg1) {
   }
 }
 
-
 void ScreenSettings::on_horizontalSlider_valueChanged(int value) {
   music_volume = value;
   music_player->setVolume(music_volume);
   emit changeMusicVolume(music_volume);
   std::cout << music_volume << std::endl;
 }
-
 
 void ScreenSettings::on_checkBox_2_stateChanged(int arg1) {
   std::cout << arg1 << std::endl;
@@ -68,7 +67,6 @@ void ScreenSettings::on_checkBox_2_stateChanged(int arg1) {
   }
 }
 
-
 void ScreenSettings::on_horizontalSlider_2_valueChanged(int value) {
   sounds_volume = value;
   sounds_player->setVolume(sounds_volume);
@@ -81,7 +79,8 @@ void ScreenSettings::playSoundStep() {
   std::cout << "STEP!" << std::endl;
 }
 
-void ScreenSettings::setPlayersData(bool is_music_active, bool is_sounds_active, int music_volume, int sounds_volume) {
+void ScreenSettings::setPlayersData(bool is_music_active, bool is_sounds_active,
+                                    int music_volume, int sounds_volume) {
   this->music_volume = music_volume;
   this->sounds_volume = sounds_volume;
   ui->checkBox->setCheckState(is_music_active ? Qt::Checked : Qt::Unchecked);
