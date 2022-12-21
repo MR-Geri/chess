@@ -1,4 +1,4 @@
 <map id="GuiFigure::press" name="GuiFigure::press">
-<area shape="rect" id="node1" title=" " alt="" coords="261,5,388,32"/>
+<area shape="rect" id="node1" title="Издается при нажатии на фигуру." alt="" coords="261,5,388,32"/>
 <area shape="rect" id="node2" href="$classGuiFigure.html#a36c883d0d293a42f739f2ded51723809" title=" " alt="" coords="5,5,213,32"/>
 </map>

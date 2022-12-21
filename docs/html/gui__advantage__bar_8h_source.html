@@ -75,32 +75,32 @@ $(function() {
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;QPainter&gt;</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;QPen&gt;</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
-<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="classGuiAdvantageBar.html">    7</a></span>&#160;<span class="keyword">class </span><a class="code" href="classGuiAdvantageBar.html">GuiAdvantageBar</a> : <span class="keyword">public</span> QGraphicsItem {</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;  <a class="code" href="classGuiAdvantageBar.html#a5c6b28fb8c87867f450ef3e51c056621">GuiAdvantageBar</a>(<span class="keywordtype">int</span> x_size = 0, <span class="keywordtype">int</span> y_size = 0, QColor new_color = Qt::white,</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;                  QGraphicsItem *parent = <span class="keyword">nullptr</span>);</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;  <a class="code" href="classGuiAdvantageBar.html#a2ff1e8baa73fd14675cd3ff991514a33">~GuiAdvantageBar</a>();</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classGuiAdvantageBar.html#a8e495cc9f4dec57798089a6f2740c464">setAdvantageWhite</a>(<span class="keywordtype">float</span> new_advantage_white);</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classGuiAdvantageBar.html#a8646a360c8a773c9e7fb318d110fc3af">paint</a>(QPainter *painter, <span class="keyword">const</span> QStyleOptionGraphicsItem *option,</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;             QWidget *widget = <span class="keyword">nullptr</span>) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;  QRectF <a class="code" href="classGuiAdvantageBar.html#a442a4c8cf8d0e87d9abcfd5d95c310f2">boundingRect</a>() <span class="keyword">const override</span>;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;  <span class="keywordtype">float</span> advantage_white;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  QColor color;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  QRectF bar_rect;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  <span class="keywordtype">int</span> x_size;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  <span class="keywordtype">int</span> y_size;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;};</div>
-<div class="ttc" id="aclassGuiAdvantageBar_html"><div class="ttname"><a href="classGuiAdvantageBar.html">GuiAdvantageBar</a></div><div class="ttdef"><b>Definition:</b> gui_advantage_bar.h:7</div></div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="classGuiAdvantageBar.html">   10</a></span>&#160;<span class="keyword">class </span><a class="code" href="classGuiAdvantageBar.html">GuiAdvantageBar</a> : <span class="keyword">public</span> QGraphicsItem {</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;  <a class="code" href="classGuiAdvantageBar.html#a5c6b28fb8c87867f450ef3e51c056621">GuiAdvantageBar</a>(<span class="keywordtype">int</span> x_size = 0, <span class="keywordtype">int</span> y_size = 0, QColor new_color = Qt::white,</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;                  QGraphicsItem *parent = <span class="keyword">nullptr</span>);</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;  <a class="code" href="classGuiAdvantageBar.html#a2ff1e8baa73fd14675cd3ff991514a33">~GuiAdvantageBar</a>();</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classGuiAdvantageBar.html#a8e495cc9f4dec57798089a6f2740c464">setAdvantageWhite</a>(<span class="keywordtype">float</span> new_advantage_white);</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classGuiAdvantageBar.html#a8646a360c8a773c9e7fb318d110fc3af">paint</a>(QPainter *painter, <span class="keyword">const</span> QStyleOptionGraphicsItem *option,</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;             QWidget *widget = <span class="keyword">nullptr</span>) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  QRectF <a class="code" href="classGuiAdvantageBar.html#a442a4c8cf8d0e87d9abcfd5d95c310f2">boundingRect</a>() <span class="keyword">const override</span>;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  <span class="keywordtype">float</span> advantage_white;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  QColor color;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  QRectF bar_rect;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  <span class="keywordtype">int</span> x_size;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  <span class="keywordtype">int</span> y_size;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;};</div>
+<div class="ttc" id="aclassGuiAdvantageBar_html"><div class="ttname"><a href="classGuiAdvantageBar.html">GuiAdvantageBar</a></div><div class="ttdoc">Класс шкалы преимущества.</div><div class="ttdef"><b>Definition:</b> gui_advantage_bar.h:10</div></div>
 <div class="ttc" id="aclassGuiAdvantageBar_html_a2ff1e8baa73fd14675cd3ff991514a33"><div class="ttname"><a href="classGuiAdvantageBar.html#a2ff1e8baa73fd14675cd3ff991514a33">GuiAdvantageBar::~GuiAdvantageBar</a></div><div class="ttdeci">~GuiAdvantageBar()</div><div class="ttdef"><b>Definition:</b> gui_advantage_bar.cpp:11</div></div>
 <div class="ttc" id="aclassGuiAdvantageBar_html_a442a4c8cf8d0e87d9abcfd5d95c310f2"><div class="ttname"><a href="classGuiAdvantageBar.html#a442a4c8cf8d0e87d9abcfd5d95c310f2">GuiAdvantageBar::boundingRect</a></div><div class="ttdeci">QRectF boundingRect() const override</div><div class="ttdef"><b>Definition:</b> gui_advantage_bar.cpp:21</div></div>
 <div class="ttc" id="aclassGuiAdvantageBar_html_a5c6b28fb8c87867f450ef3e51c056621"><div class="ttname"><a href="classGuiAdvantageBar.html#a5c6b28fb8c87867f450ef3e51c056621">GuiAdvantageBar::GuiAdvantageBar</a></div><div class="ttdeci">GuiAdvantageBar(int x_size=0, int y_size=0, QColor new_color=Qt::white, QGraphicsItem *parent=nullptr)</div><div class="ttdef"><b>Definition:</b> gui_advantage_bar.cpp:3</div></div>
 <div class="ttc" id="aclassGuiAdvantageBar_html_a8646a360c8a773c9e7fb318d110fc3af"><div class="ttname"><a href="classGuiAdvantageBar.html#a8646a360c8a773c9e7fb318d110fc3af">GuiAdvantageBar::paint</a></div><div class="ttdeci">void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget=nullptr) override</div><div class="ttdef"><b>Definition:</b> gui_advantage_bar.cpp:13</div></div>
-<div class="ttc" id="aclassGuiAdvantageBar_html_a8e495cc9f4dec57798089a6f2740c464"><div class="ttname"><a href="classGuiAdvantageBar.html#a8e495cc9f4dec57798089a6f2740c464">GuiAdvantageBar::setAdvantageWhite</a></div><div class="ttdeci">void setAdvantageWhite(float new_advantage_white)</div><div class="ttdef"><b>Definition:</b> gui_advantage_bar.cpp:23</div></div>
+<div class="ttc" id="aclassGuiAdvantageBar_html_a8e495cc9f4dec57798089a6f2740c464"><div class="ttname"><a href="classGuiAdvantageBar.html#a8e495cc9f4dec57798089a6f2740c464">GuiAdvantageBar::setAdvantageWhite</a></div><div class="ttdeci">void setAdvantageWhite(float new_advantage_white)</div><div class="ttdoc">Устанавливает значение преимущества белого игрока.</div><div class="ttdef"><b>Definition:</b> gui_advantage_bar.cpp:23</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

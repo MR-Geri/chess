@@ -67,7 +67,7 @@
 <!-- Node20 -->
 <g id="node20" class="node">
 <title>Node20</title>
-<g id="a_node20"><a xlink:href="classMainWindow.html#a6e4021087f5f5c353d8e5c89e3a737cf" target="_top" xlink:title=" ">
+<g id="a_node20"><a xlink:href="classMainWindow.html#a6e4021087f5f5c353d8e5c89e3a737cf" target="_top" xlink:title="Сохраняет флаг активности музыки при его изменении.">
 <polygon fill="none" stroke="black" points="193,-403 193,-433 345,-433 345,-403 193,-403"/>
 <text text-anchor="start" x="201" y="-421" font-family="Helvetica,sans-Serif" font-size="10.00">MainWindow::connectMusic</text>
 <text text-anchor="middle" x="269" y="-410" font-family="Helvetica,sans-Serif" font-size="10.00">FlagToStorage</text>
@@ -83,7 +83,7 @@
 <!-- Node22 -->
 <g id="node22" class="node">
 <title>Node22</title>
-<g id="a_node22"><a xlink:href="classMainWindow.html#a096e1792cdc01314c34af35c7c7e1794" target="_top" xlink:title=" ">
+<g id="a_node22"><a xlink:href="classMainWindow.html#a096e1792cdc01314c34af35c7c7e1794" target="_top" xlink:title="Сохраняет громкость музыки при её изменении.">
 <polygon fill="none" stroke="black" points="193,-589 193,-619 345,-619 345,-589 193,-589"/>
 <text text-anchor="start" x="201" y="-607" font-family="Helvetica,sans-Serif" font-size="10.00">MainWindow::connectMusic</text>
 <text text-anchor="middle" x="269" y="-596" font-family="Helvetica,sans-Serif" font-size="10.00">VolumeToStorage</text>
@@ -99,7 +99,7 @@
 <!-- Node23 -->
 <g id="node23" class="node">
 <title>Node23</title>
-<g id="a_node23"><a xlink:href="classMainWindow.html#acaf597ce57fa054538f0c156b8c4a799" target="_top" xlink:title=" ">
+<g id="a_node23"><a xlink:href="classMainWindow.html#acaf597ce57fa054538f0c156b8c4a799" target="_top" xlink:title="Сохраняет флаг активности музыки при его изменении.">
 <polygon fill="none" stroke="black" points="190,-354 190,-384 348,-384 348,-354 190,-354"/>
 <text text-anchor="start" x="198" y="-372" font-family="Helvetica,sans-Serif" font-size="10.00">MainWindow::connectSounds</text>
 <text text-anchor="middle" x="269" y="-361" font-family="Helvetica,sans-Serif" font-size="10.00">FlagToStorage</text>
@@ -115,7 +115,7 @@
 <!-- Node25 -->
 <g id="node25" class="node">
 <title>Node25</title>
-<g id="a_node25"><a xlink:href="classMainWindow.html#a606f7772cff0368694aabeff689067aa" target="_top" xlink:title=" ">
+<g id="a_node25"><a xlink:href="classMainWindow.html#a606f7772cff0368694aabeff689067aa" target="_top" xlink:title="Сохраняет громкость музыки при её изменении.">
 <polygon fill="none" stroke="black" points="190,-305 190,-335 348,-335 348,-305 190,-305"/>
 <text text-anchor="start" x="198" y="-323" font-family="Helvetica,sans-Serif" font-size="10.00">MainWindow::connectSounds</text>
 <text text-anchor="middle" x="269" y="-312" font-family="Helvetica,sans-Serif" font-size="10.00">VolumeToStorage</text>
@@ -237,7 +237,7 @@
 <!-- Node37 -->
 <g id="node37" class="node">
 <title>Node37</title>
-<g id="a_node37"><a xlink:href="classScreenSettings.html#af175ef004e7bffb7796cb66a21338218" target="_top" xlink:title=" ">
+<g id="a_node37"><a xlink:href="classScreenSettings.html#af175ef004e7bffb7796cb66a21338218" target="_top" xlink:title="Устанавливает значения параметров настроек.">
 <polygon fill="none" stroke="black" points="184,-76.5 184,-95.5 354,-95.5 354,-76.5 184,-76.5"/>
 <text text-anchor="middle" x="269" y="-83.5" font-family="Helvetica,sans-Serif" font-size="10.00">ScreenSettings::setPlayersData</text>
 </a>

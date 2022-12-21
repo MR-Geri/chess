@@ -1,4 +1,4 @@
 <map id="GuiScene" name="GuiScene">
-<area shape="rect" id="node1" title=" " alt="" coords="5,131,168,208"/>
+<area shape="rect" id="node1" title="Графическая сцена, которая используется для отрисовки поля и фигур." alt="" coords="5,131,168,208"/>
 <area shape="rect" id="node2" title=" " alt="" coords="23,5,151,83"/>
 </map>

@@ -66,7 +66,7 @@ var sectionId = 'dynsection-3';
 <!-- Node2 -->
 <g id="node2" class="node">
 <title>Node2</title>
-<g id="a_node2"><a xlink:href="classMainWindow.html#a096e1792cdc01314c34af35c7c7e1794" target="_top" xlink:title=" ">
+<g id="a_node2"><a xlink:href="classMainWindow.html#a096e1792cdc01314c34af35c7c7e1794" target="_top" xlink:title="Сохраняет громкость музыки при её изменении.">
 <polygon fill="none" stroke="black" points="184,-17 184,-47 336,-47 336,-17 184,-17"/>
 <text text-anchor="start" x="192" y="-35" font-family="Helvetica,sans-Serif" font-size="10.00">MainWindow::connectMusic</text>
 <text text-anchor="middle" x="260" y="-24" font-family="Helvetica,sans-Serif" font-size="10.00">VolumeToStorage</text>

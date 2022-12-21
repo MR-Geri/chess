@@ -20,7 +20,7 @@
 <!-- Node0 -->
 <g id="node2" class="node">
 <title>Node0</title>
-<g id="a_node2"><a xlink:href="classGuiScene.html" target="_top" xlink:title=" ">
+<g id="a_node2"><a xlink:href="classGuiScene.html" target="_top" xlink:title="Графическая сцена, которая используется для отрисовки поля и фигур.">
 <polygon fill="none" stroke="black" points="132,-0.5 132,-19.5 194,-19.5 194,-0.5 132,-0.5"/>
 <text text-anchor="middle" x="163" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">GuiScene</text>
 </a>

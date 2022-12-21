@@ -1,4 +1,4 @@
 <map id="MainWindow::connectSoundsFlagToStorage" name="MainWindow::connectSoundsFlagToStorage">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,216,47"/>
+<area shape="rect" id="node1" title="Сохраняет флаг активности музыки при его изменении." alt="" coords="5,5,216,47"/>
 <area shape="rect" id="node2" href="$classSettings.html#a2ae32bbeaa364765caccb3aa3c5380db" title="Сохранение изменений громкости звуков" alt="" coords="264,13,463,39"/>
 </map>

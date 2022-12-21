@@ -122,7 +122,8 @@ signals:
   void highlightGuiAttacks(std::list<std::pair<Position, Figures>> attacks);
 
   /**
-   * @brief Отправляе на GUI возможные ходы - атаки, для фигуры которую перемещают.
+   * @brief Отправляе на GUI возможные ходы - атаки, для фигуры которую
+   * перемещают.
    * @param attacks список ходов.
    */
   void highlightGuiAttacksForMousePress(

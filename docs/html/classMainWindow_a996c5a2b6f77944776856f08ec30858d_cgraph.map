@@ -3,10 +3,10 @@
 <area shape="rect" id="node2" href="$classScreenLiderboard.html#a82fe5bb9612760278f98be788877b461" title="Добавляет новую запись в таблицу." alt="" coords="266,217,462,258"/>
 <area shape="rect" id="node3" href="$classSettings.html#a082228079c89f928f58737f53f3a05b1" title="Сохранение изменений громкости музыки" alt="" coords="546,267,763,293"/>
 <area shape="rect" id="node4" href="$classMainWindow.html#a85e58f13e52e2a2d01b0bbf87c1442e9" title="Перемещение и окончание игры." alt="" coords="253,399,475,441"/>
-<area shape="rect" id="node20" href="$classMainWindow.html#a6e4021087f5f5c353d8e5c89e3a737cf" title=" " alt="" coords="263,582,465,623"/>
-<area shape="rect" id="node22" href="$classMainWindow.html#a096e1792cdc01314c34af35c7c7e1794" title=" " alt="" coords="263,334,465,375"/>
-<area shape="rect" id="node23" href="$classMainWindow.html#acaf597ce57fa054538f0c156b8c4a799" title=" " alt="" coords="259,647,469,689"/>
-<area shape="rect" id="node25" href="$classMainWindow.html#a606f7772cff0368694aabeff689067aa" title=" " alt="" coords="259,713,469,754"/>
+<area shape="rect" id="node20" href="$classMainWindow.html#a6e4021087f5f5c353d8e5c89e3a737cf" title="Сохраняет флаг активности музыки при его изменении." alt="" coords="263,582,465,623"/>
+<area shape="rect" id="node22" href="$classMainWindow.html#a096e1792cdc01314c34af35c7c7e1794" title="Сохраняет громкость музыки при её изменении." alt="" coords="263,334,465,375"/>
+<area shape="rect" id="node23" href="$classMainWindow.html#acaf597ce57fa054538f0c156b8c4a799" title="Сохраняет флаг активности музыки при его изменении." alt="" coords="259,647,469,689"/>
+<area shape="rect" id="node25" href="$classMainWindow.html#a606f7772cff0368694aabeff689067aa" title="Сохраняет громкость музыки при её изменении." alt="" coords="259,713,469,754"/>
 <area shape="rect" id="node27" href="$classLiderboard.html#a3314a003631ca5b033d12f450ea915bb" title="Получить таблицу лидеров" alt="" coords="289,779,439,805"/>
 <area shape="rect" id="node28" href="$classSettings.html#aafac1118b06ef59fd2559e79ddaaf64a" title="Возвращает флаг музыки [On, Off]." alt="" coords="279,829,449,856"/>
 <area shape="rect" id="node29" href="$classSettings.html#a8db67fed89c78f12e8cd036c02c274ac" title="Возвращает значение громкости музыки" alt="" coords="269,880,459,907"/>
@@ -14,7 +14,7 @@
 <area shape="rect" id="node31" href="$classSettings.html#a5b139a8de1c25906e1cc618e2834956f" title="Возвращает значение громкости звуков" alt="" coords="267,981,461,1008"/>
 <area shape="rect" id="node32" href="$classMainWindow.html#ac8e148d721ba666a05fe1422d14ebcd8" title="Обработка нажатия на фигуру." alt="" coords="259,517,469,558"/>
 <area shape="rect" id="node35" href="$classMainWindow.html#adf52446f5b40a6b0045d04ccca523242" title="Обработка нажатия на фигуру." alt="" coords="260,465,468,492"/>
-<area shape="rect" id="node37" href="$classScreenSettings.html#af175ef004e7bffb7796cb66a21338218" title=" " alt="" coords="251,1032,477,1059"/>
+<area shape="rect" id="node37" href="$classScreenSettings.html#af175ef004e7bffb7796cb66a21338218" title="Устанавливает значения параметров настроек." alt="" coords="251,1032,477,1059"/>
 <area shape="rect" id="node38" href="$classMainWindow.html#a4195422fe1346c1aa9c640715dfe73cb" title="Новая игра." alt="" coords="259,1083,469,1109"/>
 <area shape="rect" id="node42" href="$classMainWindow.html#aaf47fc01862209102bc55bc5cca41ecb" title="Менеджер окон, переключает QStacedWidget на тот виджет, номер которого ему передали." alt="" coords="251,1133,477,1160"/>
 <area shape="rect" id="node5" href="$classEngine.html#acb6729165e26058f5dc442428f11b6be" title="Проверка на конец игры." alt="" coords="600,368,709,395"/>

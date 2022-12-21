@@ -1,4 +1,4 @@
 <map id="GuiPoint" name="GuiPoint">
-<area shape="rect" id="node1" title=" " alt="" coords="5,131,168,267"/>
+<area shape="rect" id="node1" title="Класс графической точки. Служит для подсветки возможных ходов." alt="" coords="5,131,168,267"/>
 <area shape="rect" id="node2" title=" " alt="" coords="21,5,152,83"/>
 </map>

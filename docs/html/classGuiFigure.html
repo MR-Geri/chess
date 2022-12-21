@@ -71,25 +71,33 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
+<p>Класс графической фигуры. Используется для отрисовки фигур.  
+ <a href="classGuiFigure.html#details">Подробнее...</a></p>
+
 <p><code>#include &lt;<a class="el" href="gui__figure_8h_source.html">gui_figure.h</a>&gt;</code></p>
 <div class="dynheader">
 Граф наследования:GuiFigure:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classGuiFigure__inherit__graph.svg" width="191" height="272"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classGuiFigure__inherit__graph.svg" width="191" height="272"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
 </div>
 <div class="dynheader">
 Граф связей класса GuiFigure:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classGuiFigure__coll__graph.svg" width="191" height="272"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classGuiFigure__coll__graph.svg" width="191" height="272"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="signals"></a>
 Сигналы</h2></td></tr>
 <tr class="memitem:a1854da6cd58c6c79ad19220ff58dbd48"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGuiFigure.html#a1854da6cd58c6c79ad19220ff58dbd48">moved</a> (<a class="el" href="classPosition.html">Position</a> from, <a class="el" href="classPosition.html">Position</a> delta)</td></tr>
+<tr class="memdesc:a1854da6cd58c6c79ad19220ff58dbd48"><td class="mdescLeft">&#160;</td><td class="mdescRight">Издается при перемещении фигуры.  <a href="classGuiFigure.html#a1854da6cd58c6c79ad19220ff58dbd48">Подробнее...</a><br /></td></tr>
 <tr class="separator:a1854da6cd58c6c79ad19220ff58dbd48"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0ac297922c4f5bdacbc550cc6671fd3d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGuiFigure.html#a0ac297922c4f5bdacbc550cc6671fd3d">mousePressed</a> (<a class="el" href="classPosition.html">Position</a> position)</td></tr>
+<tr class="memdesc:a0ac297922c4f5bdacbc550cc6671fd3d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Издается при клике по фигуре без смещения.  <a href="classGuiFigure.html#a0ac297922c4f5bdacbc550cc6671fd3d">Подробнее...</a><br /></td></tr>
 <tr class="separator:a0ac297922c4f5bdacbc550cc6671fd3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa9dbd4ee4b42328d521509ac07c4cbf9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGuiFigure.html#aa9dbd4ee4b42328d521509ac07c4cbf9">press</a> (<a class="el" href="classPosition.html">Position</a>)</td></tr>
+<tr class="memdesc:aa9dbd4ee4b42328d521509ac07c4cbf9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Издается при нажатии на фигуру.  <a href="classGuiFigure.html#aa9dbd4ee4b42328d521509ac07c4cbf9">Подробнее...</a><br /></td></tr>
 <tr class="separator:aa9dbd4ee4b42328d521509ac07c4cbf9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -108,7 +116,9 @@ $(function() {
 <tr class="memitem:af90c3d61ae63bff23d0fcdd036f06e4f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGuiFigure.html#af90c3d61ae63bff23d0fcdd036f06e4f">mouseReleaseEvent</a> (QGraphicsSceneMouseEvent *event) override</td></tr>
 <tr class="separator:af90c3d61ae63bff23d0fcdd036f06e4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Конструктор(ы)</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Класс графической фигуры. Используется для отрисовки фигур. </p>
+</div><h2 class="groupheader">Конструктор(ы)</h2>
 <a id="a71a04c51f2d58ab07c225f962df1189a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a71a04c51f2d58ab07c225f962df1189a">&#9670;&nbsp;</a></span>GuiFigure() <span class="overload">[1/2]</span></h2>
 
@@ -208,10 +218,19 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Издается при клике по фигуре без смещения. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">position</td><td>позиция фигуры. </td></tr>
+  </table>
+  </dd>
+</dl>
 <div class="dynheader">
 Граф вызова функции:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classGuiFigure_a0ac297922c4f5bdacbc550cc6671fd3d_icgraph.svg" width="471" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classGuiFigure_a0ac297922c4f5bdacbc550cc6671fd3d_icgraph.svg" width="471" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
 </div>
 
 </div>
@@ -301,10 +320,20 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Издается при перемещении фигуры. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">from</td><td>позиция, на которой фигура находилась. </td></tr>
+    <tr><td class="paramname">delta</td><td>смещение фигуры. </td></tr>
+  </table>
+  </dd>
+</dl>
 <div class="dynheader">
 Граф вызова функции:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classGuiFigure_a1854da6cd58c6c79ad19220ff58dbd48_icgraph.svg" width="422" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classGuiFigure_a1854da6cd58c6c79ad19220ff58dbd48_icgraph.svg" width="422" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
 </div>
 
 </div>
@@ -332,10 +361,13 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Издается при нажатии на фигуру. </p>
 <div class="dynheader">
 Граф вызова функции:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classGuiFigure_aa9dbd4ee4b42328d521509ac07c4cbf9_icgraph.svg" width="394" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classGuiFigure_aa9dbd4ee4b42328d521509ac07c4cbf9_icgraph.svg" width="394" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
 </div>
 
 </div>

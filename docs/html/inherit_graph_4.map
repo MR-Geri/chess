@@ -1,5 +1,5 @@
 <map id="Иерархия классов. Графический вид." name="Иерархия классов. Графический вид.">
 <area shape="rect" id="node1" title=" " alt="" coords="5,31,148,57"/>
-<area shape="rect" id="node2" href="$classGuiFigure.html" title=" " alt="" coords="196,5,280,32"/>
-<area shape="rect" id="node3" href="$classGuiWin.html" title=" " alt="" coords="203,56,273,83"/>
+<area shape="rect" id="node2" href="$classGuiFigure.html" title="Класс графической фигуры. Используется для отрисовки фигур." alt="" coords="196,5,280,32"/>
+<area shape="rect" id="node3" href="$classGuiWin.html" title="Класс фигуры победного хода." alt="" coords="203,56,273,83"/>
 </map>

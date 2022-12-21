@@ -66,7 +66,7 @@ var sectionId = 'dynsection-2';
 <!-- Node2 -->
 <g id="node2" class="node">
 <title>Node2</title>
-<g id="a_node2"><a xlink:href="classMainWindow.html#a6e4021087f5f5c353d8e5c89e3a737cf" target="_top" xlink:title=" ">
+<g id="a_node2"><a xlink:href="classMainWindow.html#a6e4021087f5f5c353d8e5c89e3a737cf" target="_top" xlink:title="Сохраняет флаг активности музыки при его изменении.">
 <polygon fill="none" stroke="black" points="184,-0.5 184,-30.5 336,-30.5 336,-0.5 184,-0.5"/>
 <text text-anchor="start" x="192" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00">MainWindow::connectMusic</text>
 <text text-anchor="middle" x="260" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">FlagToStorage</text>
