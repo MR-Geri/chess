@@ -1,6 +1,8 @@
 <map id="src/gui/screen_settings/screen_settings.h" name="src/gui/screen_settings/screen_settings.h">
-<area shape="rect" id="node1" title=" " alt="" coords="21,5,191,47"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,95,84,121"/>
-<area shape="rect" id="node3" href="$constants_8h.html" title=" " alt="" coords="109,95,229,121"/>
-<area shape="rect" id="node4" title=" " alt="" coords="132,169,205,196"/>
+<area shape="rect" id="node1" title=" " alt="" coords="179,5,350,47"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,95,119,121"/>
+<area shape="rect" id="node3" title=" " alt="" coords="143,95,263,121"/>
+<area shape="rect" id="node4" title=" " alt="" coords="288,95,367,121"/>
+<area shape="rect" id="node5" href="$constants_8h.html" title=" " alt="" coords="391,95,511,121"/>
+<area shape="rect" id="node6" title=" " alt="" coords="415,169,488,196"/>
 </map>

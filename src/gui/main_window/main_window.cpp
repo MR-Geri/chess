@@ -13,10 +13,9 @@ MainWindow::MainWindow(QWidget *parent)
   ui->stackedWidget->addWidget(&screen_liderboard);
   ui->stackedWidget->setCurrentIndex(Windows::MENU);
 
-  screen_settings.setPlayersData(storage_settings.getMusicFlag(),
-                                 storage_settings.getSoundFlag(),
-                                 storage_settings.getMusicVolume(),
-                                 storage_settings.getSoundVolume());
+  screen_settings.setPlayersData(
+      storage_settings.getMusicFlag(), storage_settings.getSoundFlag(),
+      storage_settings.getMusicVolume(), storage_settings.getSoundVolume());
 
   sendToGuiBoardData();
 
@@ -77,7 +76,8 @@ void MainWindow::windowsManager(int window_id) {
 
 void MainWindow::connectGuiMoveWithEngine(Position from_board,
                                           Position delta_board) {
-  if (engine.move(from_board, delta_board) == DONE) screen_settings.playSoundStep();
+  if (engine.move(from_board, delta_board) == DONE)
+    screen_settings.playSoundStep();
   bool isEnd = engine.isEnd() != 0 ? true : false;
   if (isEnd) {
     endGame(engine.isEnd() == 1 ? false : true);

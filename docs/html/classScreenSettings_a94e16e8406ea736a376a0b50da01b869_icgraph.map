@@ -1,0 +1,5 @@
+<map id="ScreenSettings::playSoundStep" name="ScreenSettings::playSoundStep">
+<area shape="rect" id="node1" title="Проигрывает звук шага." alt="" coords="521,13,745,39"/>
+<area shape="rect" id="node2" href="$classMainWindow.html#a85e58f13e52e2a2d01b0bbf87c1442e9" title="Перемещение и окончание игры." alt="" coords="251,5,473,47"/>
+<area shape="rect" id="node3" href="$classMainWindow.html#a996c5a2b6f77944776856f08ec30858d" title=" " alt="" coords="5,13,203,39"/>
+</map>

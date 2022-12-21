@@ -1,9 +1,9 @@
 #pragma once
 
-#include <QWidget>
-#include <src/constants.h>
 #include <QMediaPlayer>
 #include <QMediaPlaylist>
+#include <QWidget>
+#include <src/constants.h>
 
 namespace Ui {
 class ScreenSettings;
@@ -19,7 +19,8 @@ public:
   explicit ScreenSettings(QWidget *parent = nullptr);
   ~ScreenSettings();
 
-  void setPlayersData(bool is_music_active, bool is_sounds_active, int music_volume, int sounds_volume);
+  void setPlayersData(bool is_music_active, bool is_sounds_active,
+                      int music_volume, int sounds_volume);
 
 signals:
   /**

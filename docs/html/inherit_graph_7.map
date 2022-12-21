@@ -1,4 +1,5 @@
 <map id="Иерархия классов. Графический вид." name="Иерархия классов. Графический вид.">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,80,32"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,31,80,57"/>
 <area shape="rect" id="node2" href="$classLiderboard.html" title="Хранение в базе таблицы лидеров." alt="" coords="128,5,219,32"/>
+<area shape="rect" id="node3" href="$classSettings.html" title="Хранение в базе настроек приложения." alt="" coords="136,56,211,83"/>
 </map>

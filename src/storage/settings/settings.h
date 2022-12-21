@@ -11,7 +11,7 @@
  * @class Settings
  * @brief Хранение в базе настроек приложения.
  */
-class Settings : public QObject{
+class Settings : public QObject {
 public:
   Settings();
   ~Settings();

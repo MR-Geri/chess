@@ -5,9 +5,7 @@ Settings::Settings() : QObject() {
   save();
 }
 
-Settings::~Settings() {
-  save();
-}
+Settings::~Settings() { save(); }
 
 void Settings::load() {
   std::cout << "LOAD\n";

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['queen_211',['Queen',['../classQueen.html',1,'']]]
+  ['queen_217',['Queen',['../classQueen.html',1,'']]]
 ];
