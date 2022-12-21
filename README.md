@@ -35,38 +35,39 @@
 
 #### Король
 
-<img src="images/2.png" title="" alt="" width="538">
+<img src="images/2.png" title="" alt="" width="450">
 
 #### Ферзь
 
-<img src="images/1.png" title="" alt="" width="538">
+<img src="images/1.png" title="" alt="" width="450">
 
 #### Слон
 
-<img src="images/5.png" title="" alt="" width="538">
+<img src="images/5.png" title="" alt="" width="450">
 
 #### Ладья
 
-<img src="images/3.png" title="" alt="" width="538">
+<img src="images/3.png" title="" alt="" width="450">
 
 #### Конь
 
-<img src="images/4.png" title="" alt="" width="538">
+<img src="images/4.png" title="" alt="" width="450">
 
 #### Пешка
 
 Ходы пешки:
 
-<img src="images/6.png" title="" alt="" width="538">
+<img src="images/6.png" title="" alt="" width="450">
 
 Взятие пешкой фигур противника:
 
-<img src="images/7.png" title="" alt="" width="538">
+<img src="images/7.png" title="" alt="" width="450">
 
 #### Атака
 
 При ходе на поле, занятое чужой фигурой [вес Вашей фигуры](#типы-фигур-и-их-вес) рассчитывается следующим образом:
-{Вес Вашей фигуры} - математическое_округление[({Вес Вашей фигуры} - {Вес фигуры противника}) / 2]
+![equation](http://www.sciweavers.org/upload/Tex2Img_1671655093/render.png)
+Где x - вес Вашей фигуры, y - вес фигуры противника, дробь округляется математически.
 
 Следовательно выгоднее бить более слабыми фигурами более сильные фигуры.
 Ниже приведены все изменения веса Вашей фигуры при атаке фигур противника:
@@ -84,7 +85,7 @@
 - 2 Коня
 - 8 Пешек
 
-<img src="images/12.png" title="" alt="" width="538">
+<img src="images/12.png" title="" alt="" width="450">
 
 ## Описание проекта
 
