@@ -1,7 +1,11 @@
 #include "settings.h"
 
-Settings::Settings() {
+Settings::Settings() : QObject() {
   load();
+  save();
+}
+
+Settings::~Settings() {
   save();
 }
 

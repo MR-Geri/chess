@@ -14,7 +14,7 @@ enum Windows { GAME_FIELD, MENU, SETTINGS, LIDERBOARD, EXIT };
  * \n IMPOSSIBLE_MOVE - фигура не может совершить такой ход
  * \n MOVE_TO_YOUR_FIGURE - ход совершается на/через собственную фигуру
  */
-enum StatusMove { DONE, FAIL, GO_OUT, IMPOSSIBLE_MOVE, MOVE_TO_THROUGH_FIGURE };
+enum StatusMove { DONE, FAIL, GO_OUT, IMPOSSIBLE_MOVE, MOVE_TO_THROUGH_FIGURE, FALSE_COLOR };
 
 /**
  * @brief Перечисление, содержащее веса фигур.

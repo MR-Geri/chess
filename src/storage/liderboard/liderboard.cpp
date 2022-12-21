@@ -6,6 +6,10 @@ Liderboard::Liderboard() : QObject() {
   save();
 }
 
+Liderboard::~Liderboard() {
+  save();
+}
+
 void Liderboard::load() {
   std::cout << "LOAD\n";
   QFile file(path);

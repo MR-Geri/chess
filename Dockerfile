@@ -1,7 +1,7 @@
 FROM gcc:latest as build
 
 RUN apt-get update && \
-    apt-get install -y cmake cppcheck graphviz doxygen clang-format libqt5svg5-dev qtdeclarative5-dev
+    apt-get install -y cmake cppcheck graphviz doxygen clang-format libqt5svg5-dev qtdeclarative5-dev qtmultimedia5-dev
 
 # ADD ./src /app/src
 # ADD ./tests /app/tests

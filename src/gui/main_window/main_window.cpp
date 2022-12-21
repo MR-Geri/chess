@@ -13,6 +13,11 @@ MainWindow::MainWindow(QWidget *parent)
   ui->stackedWidget->addWidget(&screen_liderboard);
   ui->stackedWidget->setCurrentIndex(Windows::MENU);
 
+  screen_settings.setPlayersData(storage_settings.getMusicFlag(),
+                                 storage_settings.getSoundFlag(),
+                                 storage_settings.getMusicVolume(),
+                                 storage_settings.getSoundVolume());
+
   sendToGuiBoardData();
 
   QList<Party> parties = storage_liderboard.getData();
@@ -54,6 +59,10 @@ MainWindow::MainWindow(QWidget *parent)
           SLOT(addNewRecord(Party)));
   connect(this, SIGNAL(endParty(Party)), &storage_liderboard,
           SLOT(addRecord(Party)));
+  connect(&screen_settings, SIGNAL(changeMusicFlag(bool)), &storage_settings, SLOT(changeMusicFlag(bool)));
+  connect(&screen_settings, SIGNAL(changeSoundsFlag(bool)), &storage_settings, SLOT(changeSoundsFlag(bool)));
+  connect(&screen_settings, SIGNAL(changeMusicVolume(int)), &storage_settings, SLOT(changeMusicVolume(int)));
+  connect(&screen_settings, SIGNAL(changeSoundsVolume(int)), &storage_settings, SLOT(changeSoundsVolume(int)));
 }
 
 MainWindow::~MainWindow() { delete ui; }
@@ -66,7 +75,7 @@ void MainWindow::windowsManager(int window_id) {
 
 void MainWindow::connectGuiMoveWithEngine(Position from_board,
                                           Position delta_board) {
-  engine.move(from_board, delta_board);
+  if (engine.move(from_board, delta_board) == DONE) screen_settings.playSoundStep();
   bool isEnd = engine.isEnd() != 0 ? true : false;
   if (isEnd) {
     endGame(engine.isEnd() == 1 ? false : true);

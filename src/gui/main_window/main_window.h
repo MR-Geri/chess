@@ -11,6 +11,7 @@
 #include <src/gui/screen_settings/screen_settings.h>
 #include <src/logic/engine/engine.h>
 #include <src/storage/liderboard/liderboard.h>
+#include <src/storage/settings/settings.h>
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -94,4 +95,5 @@ private:
   ScreenSettings screen_settings;
   ScreenLiderboard screen_liderboard;
   Liderboard storage_liderboard;
+  Settings storage_settings;
 };

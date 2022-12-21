@@ -19,6 +19,7 @@ class Liderboard : public QObject {
   Q_OBJECT
 public:
   Liderboard();
+  ~Liderboard();
 
   /**
    * @brief Получить таблицу лидеров

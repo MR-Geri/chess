@@ -1,16 +1,20 @@
+#pragma once
+
 #include <QFile>
 #include <QJsonArray>
 #include <QJsonDocument>
 #include <QJsonObject>
+#include <QObject>
 #include <iostream>
 
 /**
  * @class Settings
  * @brief Хранение в базе настроек приложения.
  */
-class Settings {
+class Settings : public QObject{
 public:
   Settings();
+  ~Settings();
 
   /**
    * @brief Возвращает значение громкости музыки
@@ -66,7 +70,7 @@ public slots:
   void changeSoundFlag(bool flag);
 
 private:
-  QString path = "./data/settings.json";
+  QString path = ":/data/settings.json";
 
   int m_music_volume;
   bool m_music_flag;

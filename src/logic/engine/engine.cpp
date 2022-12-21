@@ -65,7 +65,7 @@ StatusMove Engine::move(Position from_pos, Position step) {
 
   Figure *figure = game_board->getBoardData()[from_pos.x][from_pos.y];
   if (figure != nullptr && figure->getColor() != current_color) {
-    return DONE;
+    return FALSE_COLOR;
   }
   current_color = current_color == WHITE ? BLACK : WHITE;
 

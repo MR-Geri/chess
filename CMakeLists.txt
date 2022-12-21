@@ -13,8 +13,8 @@ set(CMAKE_AUTORCC ON)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Test Widgets Svg Core)
-find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Test Widgets Svg Core)
+find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Test Widgets Svg Core Multimedia)
+find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Test Widgets Svg Core Multimedia)
 
 file(GLOB chess_src CONFIGURE_DEPENDS
   "resource.qrc"
@@ -54,6 +54,7 @@ target_link_libraries(chess PRIVATE
     Qt${QT_VERSION_MAJOR}::Test
     Qt${QT_VERSION_MAJOR}::Svg
     Qt${QT_VERSION_MAJOR}::Core
+    Qt${QT_VERSION_MAJOR}::Multimedia
 )
 
 install(TARGETS chess
