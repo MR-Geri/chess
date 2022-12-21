@@ -24,6 +24,8 @@ MainWindow::MainWindow(QWidget *parent)
   for (auto party : parties)
     screen_liderboard.addNewRecord(party);
 
+  storage_settings.changeMusicVolume(50);
+
   connect(&screen_game, SIGNAL(changeWindow(int)), this,
           SLOT(windowsManager(int)));
   connect(&screen_menu, SIGNAL(changeWindow(int)), this,
@@ -59,10 +61,10 @@ MainWindow::MainWindow(QWidget *parent)
           SLOT(addNewRecord(Party)));
   connect(this, SIGNAL(endParty(Party)), &storage_liderboard,
           SLOT(addRecord(Party)));
-  connect(&screen_settings, SIGNAL(changeMusicFlag(bool)), &storage_settings, SLOT(changeMusicFlag(bool)));
-  connect(&screen_settings, SIGNAL(changeSoundsFlag(bool)), &storage_settings, SLOT(changeSoundsFlag(bool)));
-  connect(&screen_settings, SIGNAL(changeMusicVolume(int)), &storage_settings, SLOT(changeMusicVolume(int)));
-  connect(&screen_settings, SIGNAL(changeSoundsVolume(int)), &storage_settings, SLOT(changeSoundsVolume(int)));
+  connect(&screen_settings, SIGNAL(changeMusicFlag(bool)), this, SLOT(connectMusicFlagToStorage(bool)));
+  connect(&screen_settings, SIGNAL(changeSoundsFlag(bool)), this, SLOT(connectSoundsFlagToStorage(bool)));
+  connect(&screen_settings, SIGNAL(changeMusicVolume(int)), this, SLOT(connectMusicVolumeToStorage(int)));
+  connect(&screen_settings, SIGNAL(changeSoundsVolume(int)), this, SLOT(connectSoundsVolumeToStorage(int)));
 }
 
 MainWindow::~MainWindow() { delete ui; }
@@ -145,4 +147,20 @@ void MainWindow::endGame(bool is_white_win) {
               << second_player_name.toStdString();
   }
   windowsManager(Windows::MENU);
+}
+
+void MainWindow::connectMusicVolumeToStorage(int music_volume) {
+  storage_settings.changeMusicVolume(music_volume);
+}
+
+void MainWindow::connectMusicFlagToStorage(bool music_flag) {
+  storage_settings.changeMusicFlag(music_flag);
+}
+
+void MainWindow::connectSoundsVolumeToStorage(int sound_volume) {
+  storage_settings.changeSoundVolume(sound_volume);
+}
+
+void MainWindow::connectSoundsFlagToStorage(bool sound_volume) {
+  storage_settings.changeSoundFlag(sound_volume);
 }

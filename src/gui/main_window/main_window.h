@@ -78,6 +78,11 @@ public slots:
    */
   void guiMousePressFigure(Position position);
 
+  void connectMusicVolumeToStorage(int);
+  void connectMusicFlagToStorage(bool);
+  void connectSoundsVolumeToStorage(int);
+  void connectSoundsFlagToStorage(bool);
+
 signals:
   void sendDataToGui(QVector<QVector<Figures>> data, double advantage_white,
                      bool is_new_game);
