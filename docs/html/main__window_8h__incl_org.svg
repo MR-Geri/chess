@@ -175,7 +175,7 @@
 <!-- Node45 -->
 <g id="node45" class="node">
 <title>Node45</title>
-<g id="a_node45"><a xlink:href="storage_2liderboard_2liderboard_8h.html" target="_top" xlink:title=" ">
+<g id="a_node45"><a xlink:href="liderboard_8h.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="2841,-179.5 2841,-209.5 2964,-209.5 2964,-179.5 2841,-179.5"/>
 <text text-anchor="start" x="2849" y="-197.5" font-family="Helvetica,sans-Serif" font-size="10.00">src/storage/liderboard</text>
 <text text-anchor="middle" x="2902.5" y="-186.5" font-family="Helvetica,sans-Serif" font-size="10.00">/liderboard.h</text>

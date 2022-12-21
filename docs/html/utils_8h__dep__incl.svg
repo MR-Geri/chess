@@ -161,7 +161,7 @@ var sectionId = 'dynsection-1';
 <!-- Node23 -->
 <g id="node23" class="node">
 <title>Node23</title>
-<g id="a_node23"><a xlink:href="storage_2liderboard_2liderboard_8h.html" target="_top" xlink:title=" ">
+<g id="a_node23"><a xlink:href="liderboard_8h.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="822,-268.5 822,-298.5 945,-298.5 945,-268.5 822,-268.5"/>
 <text text-anchor="start" x="830" y="-286.5" font-family="Helvetica,sans-Serif" font-size="10.00">src/storage/liderboard</text>
 <text text-anchor="middle" x="883.5" y="-275.5" font-family="Helvetica,sans-Serif" font-size="10.00">/liderboard.h</text>
@@ -453,7 +453,7 @@ var sectionId = 'dynsection-1';
 <!-- Node24 -->
 <g id="node24" class="node">
 <title>Node24</title>
-<g id="a_node24"><a xlink:href="storage_2liderboard_2liderboard_8cpp.html" target="_top" xlink:title=" ">
+<g id="a_node24"><a xlink:href="liderboard_8cpp.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="899,-201.5 899,-231.5 1022,-231.5 1022,-201.5 899,-201.5"/>
 <text text-anchor="start" x="907" y="-219.5" font-family="Helvetica,sans-Serif" font-size="10.00">src/storage/liderboard</text>
 <text text-anchor="middle" x="960.5" y="-208.5" font-family="Helvetica,sans-Serif" font-size="10.00">/liderboard.cpp</text>
