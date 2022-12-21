@@ -38,8 +38,15 @@ public:
   ~MainWindow();
 
 private:
+  /**
+   * @brief Отправляет данные игровой доски на гуи.
+   * @param is_new_game показывает началась новая игра или нет.
+   */
   void sendToGuiBoardData(bool is_new_game = false);
 
+  /**
+   * @brief Завершает игру.
+   */
   void endGame(bool);
 
 public slots:
@@ -78,18 +85,59 @@ public slots:
    */
   void guiMousePressFigure(Position position);
 
+  /**
+   * @brief Сохраняет громкость музыки при её изменении.
+   */
   void connectMusicVolumeToStorage(int);
+
+  /**
+   * @brief Сохраняет флаг активности музыки при его изменении.
+   */
   void connectMusicFlagToStorage(bool);
+
+  /**
+   * @brief Сохраняет громкость музыки при её изменении.
+   */
   void connectSoundsVolumeToStorage(int);
+
+  /**
+   * @brief Сохраняет флаг активности музыки при его изменении.
+   */
   void connectSoundsFlagToStorage(bool);
 
 signals:
+  /**
+   * @brief Отправляет данные на GUI.
+   * @param data матрица фигур.
+   * @param advantage_white преимущество белого игрока.
+   * @param is_new_game флог новой игры.
+   */
   void sendDataToGui(QVector<QVector<Figures>> data, double advantage_white,
                      bool is_new_game);
+
+  /**
+   * @brief Отправляет на GUI возможные ходы - атаки.
+   * @param attacks список ходов.
+   */
   void highlightGuiAttacks(std::list<std::pair<Position, Figures>> attacks);
+
+  /**
+   * @brief Отправляе на GUI возможные ходы - атаки, для фигуры которую перемещают.
+   * @param attacks список ходов.
+   */
   void highlightGuiAttacksForMousePress(
       std::list<std::pair<Position, Figures>> attacks);
+
+  /**
+   * @brief Отправляет на GUI возможные ходы - перемещения.
+   * @param moves список ходов.
+   */
   void highlightGuiMoves(std::list<std::list<Position>> moves);
+
+  /**
+   * @brief Издается при завершении игры.
+   * @param party итоги партии.
+   */
   void endParty(Party party);
 
 private:

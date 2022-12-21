@@ -5,6 +5,9 @@
 #include <QPoint>
 #include <src/utils.h>
 
+/**
+ * @brief Графическая сцена, которая используется для отрисовки поля и фигур.
+ */
 class GuiScene : public QGraphicsScene {
   Q_OBJECT
 signals:

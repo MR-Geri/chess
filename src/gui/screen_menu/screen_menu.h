@@ -25,6 +25,9 @@ signals:
    */
   void changeWindow(int on_window);
 
+  /**
+   * @brief Издается при нажатии на кнопку новой игры.
+   */
   void newGameFromMenu();
 
 private slots:

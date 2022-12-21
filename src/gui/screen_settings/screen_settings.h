@@ -19,6 +19,13 @@ public:
   explicit ScreenSettings(QWidget *parent = nullptr);
   ~ScreenSettings();
 
+  /**
+   * @brief Устанавливает значения параметров настроек.
+   * @param is_music_active флаг активности музыки.
+   * @param is_sounds_active флаг активности звуков.
+   * @param music_volume громкость музыки.
+   * @param sounds_volume громкость звуков.
+   */
   void setPlayersData(bool is_music_active, bool is_sounds_active,
                       int music_volume, int sounds_volume);
 
@@ -28,9 +35,24 @@ signals:
    */
   void changeWindow(int on_window);
 
+  /**
+   * @brief Издается при изменении галочки включения музыки.
+   */
   void changeMusicFlag(bool);
+
+  /**
+   * @brief Издается при изменении галочки включения звуков.
+   */
   void changeSoundsFlag(bool);
+
+  /**
+   * @brief Издается при изменении громкости звука.
+   */
   void changeMusicVolume(int);
+
+  /**
+   * @brief Издается при изменении громкости звука.
+   */
   void changeSoundsVolume(int);
 
 public slots:

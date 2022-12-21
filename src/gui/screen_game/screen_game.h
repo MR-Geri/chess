@@ -132,11 +132,41 @@ private:
    * @brief Отрисовка .
    */
   void drawGameField();
+
+  /**
+   * @brief Отрисовка шкалы преимущества.
+   * @param высота доски.
+   * @param коэффициент масштабирования доски.
+   */
   void drawAdvantageBar(float height_board, float scale_board);
+
+  /**
+   * @brief Рассчет позиции фигуры на графической сцене по координатам на доске.
+   * @param позиция фигуры на доске.
+   * @return
+   */
   Position calculatePositionOnScene(Position position);
+
+  /**
+   * @brief Рассчет позиции фигуры на доске по координатам на графической сцене.
+   * @param позиция фигуры на графической сцене.
+   * @return
+   */
   Position calculatePositionOnBoard(Position position);
+
+  /**
+   * @brief Отрисовка всех подсказок ходов.
+   */
   void highlightAll();
+
+  /**
+   * @brief Отрисовка возможных ходов - атак.
+   */
   void highlightAttacksScene();
+
+  /**
+   * @brief Отрисовка возможных ходов - перемещений.
+   */
   void highlightMovesScene();
 
 private:

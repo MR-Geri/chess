@@ -5,6 +5,9 @@
 #include <QPainter>
 #include <src/utils.h>
 
+/**
+ * @brief Класс графической точки. Служит для подсветки возможных ходов.
+ */
 class GuiPoint : public QGraphicsObject {
   Q_OBJECT
 public:
@@ -20,6 +23,9 @@ protected:
   void mousePressEvent(QGraphicsSceneMouseEvent *event) override;
 
 signals:
+  /**
+   * @brief Издается при нажатии на точку.
+   */
   void press(Position);
 
 private:
