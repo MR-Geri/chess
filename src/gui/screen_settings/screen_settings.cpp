@@ -76,6 +76,7 @@ void ScreenSettings::on_horizontalSlider_2_valueChanged(int value) {
 
 void ScreenSettings::playSoundStep() {
   sounds_playlist->addMedia(QUrl("qrc:/sounds/step.mp3"));
+  sounds_player->play();
   std::cout << "STEP!" << std::endl;
 }
 

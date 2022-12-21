@@ -19,3 +19,5 @@ tests/tests_autogen/
 build-tests-Desktop-Debug/
 .obsidian/
 _deps/
+liderboard.json
+settings.json
