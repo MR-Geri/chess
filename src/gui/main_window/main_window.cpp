@@ -60,10 +60,14 @@ MainWindow::MainWindow(QWidget *parent)
           SLOT(addNewRecord(Party)));
   connect(this, SIGNAL(endParty(Party)), &storage_liderboard,
           SLOT(addRecord(Party)));
-  connect(&screen_settings, SIGNAL(changeMusicFlag(bool)), this, SLOT(connectMusicFlagToStorage(bool)));
-  connect(&screen_settings, SIGNAL(changeSoundsFlag(bool)), this, SLOT(connectSoundsFlagToStorage(bool)));
-  connect(&screen_settings, SIGNAL(changeMusicVolume(int)), this, SLOT(connectMusicVolumeToStorage(int)));
-  connect(&screen_settings, SIGNAL(changeSoundsVolume(int)), this, SLOT(connectSoundsVolumeToStorage(int)));
+  connect(&screen_settings, SIGNAL(changeMusicFlag(bool)), this,
+          SLOT(connectMusicFlagToStorage(bool)));
+  connect(&screen_settings, SIGNAL(changeSoundsFlag(bool)), this,
+          SLOT(connectSoundsFlagToStorage(bool)));
+  connect(&screen_settings, SIGNAL(changeMusicVolume(int)), this,
+          SLOT(connectMusicVolumeToStorage(int)));
+  connect(&screen_settings, SIGNAL(changeSoundsVolume(int)), this,
+          SLOT(connectSoundsVolumeToStorage(int)));
 }
 
 MainWindow::~MainWindow() { delete ui; }

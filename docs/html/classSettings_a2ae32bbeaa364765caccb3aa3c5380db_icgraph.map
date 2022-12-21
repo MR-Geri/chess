@@ -1,0 +1,5 @@
+<map id="Settings::changeSoundFlag" name="Settings::changeSoundFlag">
+<area shape="rect" id="node1" title="Сохранение изменений громкости звуков" alt="" coords="509,13,708,39"/>
+<area shape="rect" id="node2" href="$classMainWindow.html#acaf597ce57fa054538f0c156b8c4a799" title=" " alt="" coords="251,5,461,47"/>
+<area shape="rect" id="node3" href="$classMainWindow.html#a996c5a2b6f77944776856f08ec30858d" title=" " alt="" coords="5,13,203,39"/>
+</map>

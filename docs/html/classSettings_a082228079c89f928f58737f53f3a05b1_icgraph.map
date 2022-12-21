@@ -1,0 +1,5 @@
+<map id="Settings::changeMusicVolume" name="Settings::changeMusicVolume">
+<area shape="rect" id="node1" title="Сохранение изменений громкости музыки" alt="" coords="501,42,719,69"/>
+<area shape="rect" id="node2" href="$classMainWindow.html#a096e1792cdc01314c34af35c7c7e1794" title=" " alt="" coords="251,5,453,47"/>
+<area shape="rect" id="node3" href="$classMainWindow.html#a996c5a2b6f77944776856f08ec30858d" title=" " alt="" coords="5,42,203,69"/>
+</map>
