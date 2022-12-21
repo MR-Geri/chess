@@ -5,6 +5,7 @@
 #include <QJsonDocument>
 #include <QJsonObject>
 #include <QObject>
+#include <QDir>
 #include <iostream>
 #include <qlist.h>
 
@@ -35,7 +36,7 @@ public slots:
   void addRecord(Party new_party);
 
 private:
-  QString path = ":/data/liderboard.json";
+  QString path = QDir::currentPath() + "/liderboard.json";
   QList<Party> m_parties;
 
   /**

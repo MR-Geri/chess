@@ -5,6 +5,7 @@
 #include <QJsonDocument>
 #include <QJsonObject>
 #include <QObject>
+#include <QDir>
 #include <iostream>
 
 /**
@@ -70,7 +71,7 @@ public slots:
   void changeSoundFlag(bool flag);
 
 private:
-  QString path = ":/data/settings.json";
+  QString path = QDir::currentPath() + "/settings.json";
 
   int m_music_volume;
   bool m_music_flag;

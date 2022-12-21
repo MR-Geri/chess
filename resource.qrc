@@ -15,9 +15,7 @@
         <file>images/figures/12.svg</file>
         <file>images/winner_black.svg</file>
         <file>images/winner_white.svg</file>
-        <file>data/liderboard.json</file>
         <file>sounds/music.mp3</file>
         <file>sounds/step.mp3</file>
-        <file>data/settings.json</file>
     </qresource>
 </RCC>

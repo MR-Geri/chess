@@ -39,8 +39,8 @@ void Board::move(Position from, Position to) {
     if (board[to.x][to.y]->getPrice() != -1 && price != -1) {
       price -= round(
           (static_cast<float>(price) - board[to.x][to.y]->getPrice()) / 2.);
-      delete board[to.x][to.y];
     }
+    delete board[to.x][to.y];
   }
 
   switch (price) {

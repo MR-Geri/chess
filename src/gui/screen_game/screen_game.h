@@ -147,7 +147,6 @@ private:
   GuiAdvantageBar *advantage_bar_white;
   QTimeLine *timer;
   QGraphicsItemAnimation *animation_black;
-  QGraphicsItemAnimation *animation_white;
   QVector<QVector<Position>> positions;
   QVector<QVector<Figures>> data;
   int indent;

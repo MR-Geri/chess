@@ -8,6 +8,7 @@ Liderboard::~Liderboard() { save(); }
 void Liderboard::load() {
   std::cout << "LOAD liderboard\n";
   QFile file(path);
+  std::cout << path.toStdString() << std::endl;
   if (file.open(QIODevice::ReadOnly)) {
     QByteArray bytes = file.readAll();
     file.close();

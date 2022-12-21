@@ -1,6 +1,12 @@
 #include "settings.h"
 
-Settings::Settings() : QObject() { load(); }
+Settings::Settings() : QObject() {
+  m_music_flag = false;
+  m_music_volume = 0;
+  m_sound_flag = false;
+  m_sound_volume = 0;
+  load();
+}
 
 Settings::~Settings() { save(); }
 
