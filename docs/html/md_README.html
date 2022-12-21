@@ -119,60 +119,37 @@ $(function() {
 Атака</h3>
 <p>При ходе на поле, занятое чужой фигурой <a href="#типы-фигур-и-их-вес">вес Вашей фигуры</a> рассчитывается следующим образом: <img src="http://www.sciweavers.org/upload/Tex2Img_1671655093/render.png" alt="equation" class="inline"/> Где x - вес Вашей фигуры, y - вес фигуры противника, дробь округляется математически.</p>
 <p>Следовательно выгоднее бить более слабыми фигурами более сильные фигуры. Ниже приведены все изменения веса Вашей фигуры при атаке фигур противника:</p>
-<p><img src="images/8.jpg" alt="" class="inline"/> </p><table class="markdownTable">
-<tr class="markdownTableHead">
-<th class="markdownTableHeadNone">Противник   </th><th class="markdownTableHeadNone">Вы   </th><th class="markdownTableHeadNone">Цена вашей фигуры    </th></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">1   </td><td class="markdownTableBodyNone">1   </td><td class="markdownTableBodyNone">1    </td></tr>
-<tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">1   </td><td class="markdownTableBodyNone">2   </td><td class="markdownTableBodyNone">1    </td></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">1   </td><td class="markdownTableBodyNone">3   </td><td class="markdownTableBodyNone">2    </td></tr>
-<tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">1   </td><td class="markdownTableBodyNone">4   </td><td class="markdownTableBodyNone">2    </td></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">1   </td><td class="markdownTableBodyNone">5   </td><td class="markdownTableBodyNone">3    </td></tr>
-<tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">2   </td><td class="markdownTableBodyNone">1   </td><td class="markdownTableBodyNone">2    </td></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">2   </td><td class="markdownTableBodyNone">2   </td><td class="markdownTableBodyNone">2    </td></tr>
-<tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">2   </td><td class="markdownTableBodyNone">3   </td><td class="markdownTableBodyNone">2    </td></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">2   </td><td class="markdownTableBodyNone">4   </td><td class="markdownTableBodyNone">3    </td></tr>
-<tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">2   </td><td class="markdownTableBodyNone">5   </td><td class="markdownTableBodyNone">3    </td></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">3   </td><td class="markdownTableBodyNone">1   </td><td class="markdownTableBodyNone">2    </td></tr>
-<tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">3   </td><td class="markdownTableBodyNone">2   </td><td class="markdownTableBodyNone">3    </td></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">3   </td><td class="markdownTableBodyNone">3   </td><td class="markdownTableBodyNone">3    </td></tr>
-<tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">3   </td><td class="markdownTableBodyNone">4   </td><td class="markdownTableBodyNone">3    </td></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">3   </td><td class="markdownTableBodyNone">5   </td><td class="markdownTableBodyNone">4    </td></tr>
-<tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">4   </td><td class="markdownTableBodyNone">1   </td><td class="markdownTableBodyNone">3    </td></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">4   </td><td class="markdownTableBodyNone">2   </td><td class="markdownTableBodyNone">3    </td></tr>
-<tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">4   </td><td class="markdownTableBodyNone">3   </td><td class="markdownTableBodyNone">4    </td></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">4   </td><td class="markdownTableBodyNone">4   </td><td class="markdownTableBodyNone">4    </td></tr>
-<tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">4   </td><td class="markdownTableBodyNone">5   </td><td class="markdownTableBodyNone">4    </td></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">5   </td><td class="markdownTableBodyNone">1   </td><td class="markdownTableBodyNone">3    </td></tr>
-<tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">5   </td><td class="markdownTableBodyNone">2   </td><td class="markdownTableBodyNone">4    </td></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">5   </td><td class="markdownTableBodyNone">3   </td><td class="markdownTableBodyNone">4    </td></tr>
-<tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">5   </td><td class="markdownTableBodyNone">4   </td><td class="markdownTableBodyNone">5    </td></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">5   </td><td class="markdownTableBodyNone">5   </td><td class="markdownTableBodyNone">5   </td></tr>
-</table>
+<p><img src="images/8.jpg" alt="" class="inline"/></p>
+<p><br  />
+ |Противник|Вы|Цена вашей фигуры|<br  />
+ |-|-|-|<br  />
+ |1|1|1|<br  />
+ |1|2|1|<br  />
+ |1|3|2|<br  />
+ |1|4|2|<br  />
+ |1|5|3|<br  />
+ |2|1|2|<br  />
+ |2|2|2|<br  />
+ |2|3|2|<br  />
+ |2|4|3|<br  />
+ |2|5|3|<br  />
+ |3|1|2|<br  />
+ |3|2|3|<br  />
+ |3|3|3|<br  />
+ |3|4|3|<br  />
+ |3|5|4|<br  />
+ |4|1|3|<br  />
+ |4|2|3|<br  />
+ |4|3|4|<br  />
+ |4|4|4|<br  />
+ |4|5|4|<br  />
+ |5|1|3|<br  />
+ |5|2|4|<br  />
+ |5|3|4|<br  />
+ |5|4|5|<br  />
+ |5|5|5|<br  />
+ <br  />
+</p>
 <p>Данные правила применимы ко всем фигурам, кроме короля. Если Ваш король находится в зоне хода фигуры противника вам нужно сделать ход в такую клетку, в которой король не находится в зоне атаки фигуры противника. Если Вы не сделаете такой ход - Вы можете проиграть, если Ваш соперник заметит победный ход.</p>
 <h3><a class="anchor" id="autotoc_md12"></a>
 Стартовый состав армии</h3>
