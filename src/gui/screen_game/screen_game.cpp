@@ -40,7 +40,7 @@ ScreenGame::ScreenGame(QWidget *parent)
 ScreenGame::~ScreenGame() {
   delete ui;
   delete scene;
-  delete board;
+  //if (board != nullptr) delete board;
 }
 
 void ScreenGame::buttonNewGameReleased() { emit newGameFromGame(); }

@@ -27,10 +27,10 @@ ScreenSettings::ScreenSettings(QWidget *parent)
 
 ScreenSettings::~ScreenSettings() {
   delete ui;
-  delete music_player;
   delete music_playlist;
-  delete sounds_player;
   delete sounds_playlist;
+  delete music_player;
+  delete sounds_player;
 }
 
 void ScreenSettings::buttonBackSettingsReleased() {
