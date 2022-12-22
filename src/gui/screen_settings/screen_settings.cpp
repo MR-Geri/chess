@@ -9,13 +9,11 @@ ScreenSettings::ScreenSettings(QWidget *parent)
   music_volume = ui->horizontalSlider->value();
   sounds_volume = ui->horizontalSlider_2->value();
   music_player = new QMediaPlayer(this);
-  music_player = new QMediaPlayer(this);
   music_playlist = new QMediaPlaylist(music_player);
   music_playlist->addMedia(QUrl("qrc:/sounds/music.mp3"));
   music_player->setPlaylist(music_playlist);
   music_player->setVolume(music_volume);
   music_playlist->setPlaybackMode(QMediaPlaylist::Loop);
-  sounds_player = new QMediaPlayer(this);
   sounds_player = new QMediaPlayer(this);
   sounds_playlist = new QMediaPlaylist(sounds_player);
   sounds_player->setPlaylist(sounds_playlist);
@@ -75,6 +73,8 @@ void ScreenSettings::on_horizontalSlider_2_valueChanged(int value) {
 }
 
 void ScreenSettings::playSoundStep() {
+  delete sounds_player;
+  sounds_player = new QMediaPlayer();
   sounds_playlist->addMedia(QUrl("qrc:/sounds/step.mp3"));
   sounds_playlist->setPlaybackMode(QMediaPlaylist::CurrentItemOnce);
   sounds_player->play();
