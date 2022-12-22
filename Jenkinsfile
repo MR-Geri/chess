@@ -48,7 +48,7 @@ pipeline{
             steps{
                 sh 'docker-compose run maker_cpp mkdir -p tmp'
                 sh 'docker-compose run maker_cpp rm -rf tmp/*'
-                sh 'docker-compose run maker_cpp cmake ./ -B ./tmp'
+                sh 'docker-compose run maker_cpp cmake ./ -B ./tmp -DCMAKE_BUILD_TYPE=lsan'
                 sh 'docker-compose run maker_cpp make -C ./tmp'
             }
         }
