@@ -88,6 +88,8 @@ void ScreenSettings::setPlayersData(bool is_music_active, bool is_sounds_active,
   ui->checkBox_2->setCheckState(is_sounds_active ? Qt::Checked : Qt::Unchecked);
   ui->horizontalSlider->setValue(music_volume);
   ui->horizontalSlider_2->setValue(sounds_volume);
-  if (is_music_active) music_player->play();
-  if (is_sounds_active) sounds_player->play();
+  if (is_music_active)
+    music_player->play();
+  if (is_sounds_active)
+    sounds_player->play();
 }
