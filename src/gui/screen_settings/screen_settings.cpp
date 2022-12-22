@@ -73,8 +73,12 @@ void ScreenSettings::on_horizontalSlider_2_valueChanged(int value) {
 }
 
 void ScreenSettings::playSoundStep() {
+  sounds_player->stop();
+  delete sounds_playlist;
   delete sounds_player;
   sounds_player = new QMediaPlayer();
+  sounds_playlist = new QMediaPlaylist();
+  sounds_player->setPlaylist(sounds_playlist);
   sounds_playlist->addMedia(QUrl("qrc:/sounds/step.mp3"));
   sounds_playlist->setPlaybackMode(QMediaPlaylist::CurrentItemOnce);
   sounds_player->play();
