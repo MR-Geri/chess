@@ -20,7 +20,6 @@ ScreenSettings::ScreenSettings(QWidget *parent)
   sounds_playlist = new QMediaPlaylist(sounds_player);
   sounds_player->setPlaylist(sounds_playlist);
   sounds_player->setVolume(sounds_volume);
-  sounds_player->play();
 
   connect(ui->buttonBackSettings, SIGNAL(released()), this,
           SLOT(buttonBackSettingsReleased()));
@@ -77,6 +76,7 @@ void ScreenSettings::on_horizontalSlider_2_valueChanged(int value) {
 
 void ScreenSettings::playSoundStep() {
   sounds_playlist->addMedia(QUrl("qrc:/sounds/step.mp3"));
+  sounds_player->play();
   std::cout << "STEP!" << std::endl;
 }
 
