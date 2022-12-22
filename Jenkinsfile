@@ -44,6 +44,14 @@ pipeline{
                 sh 'docker-compose run maker_cpp make'
             }
         }
+        stage("Compile leak memory"){
+            steps{
+                sh 'docker-compose run maker_cpp mkdir -p tmp'
+                sh 'docker-compose run maker_cpp rm -rf tmp/*'
+                sh 'docker-compose run maker_cpp cmake ./ -B ./tmp'
+                sh 'docker-compose run maker_cpp cd tmp && make'
+            }
+        }
         stage("Create documentation"){
             steps {
                 sh 'docker-compose run maker_cpp doxygen'
@@ -59,6 +67,11 @@ pipeline{
                 stage("Unit Tests"){
                     steps {
                         sh 'docker-compose run maker_cpp ./tests/tests'
+                    }
+                }
+                stage("Leak memory"){
+                    steps {
+                        sh 'docker-compose run maker_cpp ./tmp/tests/tests >> /dev/null'
                     }
                 }
             }
