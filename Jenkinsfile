@@ -17,7 +17,7 @@ pipeline{
         GitUrl = """${sh(
             returnStdout: true,
             script: 'git config --get remote.origin.url'
-        )}""" 
+        )}"""
     }
     triggers {
         githubPush()
@@ -49,7 +49,7 @@ pipeline{
                 sh 'docker-compose run maker_cpp mkdir -p tmp'
                 sh 'docker-compose run maker_cpp rm -rf tmp/*'
                 sh 'docker-compose run maker_cpp cmake ./ -B ./tmp'
-                sh 'docker-compose run maker_cpp cd tmp && make'
+                sh 'docker-compose run maker_cpp make -C ./tmp'
             }
         }
         stage("Create documentation"){
@@ -105,3 +105,4 @@ pipeline{
         }
     }
 }
+
