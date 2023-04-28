@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['liderboard_80',['LIDERBOARD',['../constants_8h.html#af1edd7b7fcdf15ab1bff70cf1daf8ae5aedb219d039d864ce9bb4d5337b378422',1,'constants.h']]],
-  ['liderboard_2ecpp_81',['liderboard.cpp',['../logic_2liderboard_2liderboard_8cpp.html',1,'(Глобальное пространство имён)'],['../storage_2liderboard_2liderboard_8cpp.html',1,'(Глобальное пространство имён)']]],
-  ['liderboard_2eh_82',['liderboard.h',['../logic_2liderboard_2liderboard_8h.html',1,'(Глобальное пространство имён)'],['../storage_2liderboard_2liderboard_8h.html',1,'(Глобальное пространство имён)']]]
+  ['liderboard_0',['LIDERBOARD',['../constants_8h.html#af1edd7b7fcdf15ab1bff70cf1daf8ae5aedb219d039d864ce9bb4d5337b378422',1,'constants.h']]],
+  ['liderboard_2ecpp_1',['liderboard.cpp',['../logic_2liderboard_2liderboard_8cpp.html',1,'(Глобальное пространство имён)'],['../storage_2liderboard_2liderboard_8cpp.html',1,'(Глобальное пространство имён)']]],
+  ['liderboard_2eh_2',['liderboard.h',['../logic_2liderboard_2liderboard_8h.html',1,'(Глобальное пространство имён)'],['../storage_2liderboard_2liderboard_8h.html',1,'(Глобальное пространство имён)']]]
 ];

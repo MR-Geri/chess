@@ -25,11 +25,11 @@
 <g id="node2" class="node">
 <title>Node2</title>
 <g id="a_node2"><a xlink:title=" ">
-<polygon fill="none" stroke="#bfbfbf" points="13,-94.5 13,-151.5 109,-151.5 109,-94.5 13,-94.5"/>
+<polygon fill="none" stroke="black" points="13,-94.5 13,-151.5 109,-151.5 109,-94.5 13,-94.5"/>
 <text text-anchor="middle" x="61" y="-139.5" font-family="Helvetica,sans-Serif" font-size="10.00">QGraphicsScene</text>
-<polyline fill="none" stroke="#bfbfbf" points="13,-132.5 109,-132.5 "/>
+<polyline fill="none" stroke="black" points="13,-132.5 109,-132.5 "/>
 <text text-anchor="middle" x="61" y="-120.5" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
-<polyline fill="none" stroke="#bfbfbf" points="13,-113.5 109,-113.5 "/>
+<polyline fill="none" stroke="black" points="13,-113.5 109,-113.5 "/>
 <text text-anchor="middle" x="61" y="-101.5" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
 </a>
 </g>
