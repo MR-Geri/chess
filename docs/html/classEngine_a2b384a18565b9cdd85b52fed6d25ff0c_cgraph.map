@@ -1,7 +1,7 @@
 <map id="Engine::calculateAdvantageWhite" name="Engine::calculateAdvantageWhite">
 <area shape="rect" id="node1" title="Расчет преимущества игрока." alt="" coords="5,49,208,90"/>
-<area shape="rect" id="node2" href="$classEngine.html#a93442cf58f7239df6e2b5303b7b90cda" title="Количество противников, которые находятся под атакой." alt="" coords="265,5,465,32"/>
+<area shape="rect" id="node2" href="$classEngine.html#ab74c7d4f0e0778c122dc43fd052081b3" title="Количество противников, которые находятся под атакой." alt="" coords="265,5,465,32"/>
 <area shape="rect" id="node3" href="$classEngine.html#af2c8028ccaf85425744ad55844765fac" title="getData возвращает поле." alt="" coords="302,56,429,83"/>
-<area shape="rect" id="node5" href="$classEngine.html#a9154a3995005939adcc56d46d8bd78b0" title="Количество возможных ходов." alt="" coords="256,107,475,133"/>
+<area shape="rect" id="node5" href="$classEngine.html#a1633adb681319e5d8840e7f432d88a7a" title="Количество возможных ходов." alt="" coords="256,107,475,133"/>
 <area shape="rect" id="node4" href="$classBoard.html#ab906dade3854d38f6354861a715fccac" title="getBoo Возвращает доску." alt="" coords="523,56,681,83"/>
 </map>

@@ -1,0 +1,5 @@
+<map id="MainWindow::highlightGuiMoves" name="MainWindow::highlightGuiMoves">
+<area shape="rect" id="node1" title="Отправляет на GUI возможные ходы &#45; перемещения." alt="" coords="507,23,699,65"/>
+<area shape="rect" id="node2" href="$classMainWindow.html#adf52446f5b40a6b0045d04ccca523242" title="Обработка нажатия на фигуру." alt="" coords="251,5,459,32"/>
+<area shape="rect" id="node3" href="$classMainWindow.html#a996c5a2b6f77944776856f08ec30858d" title=" " alt="" coords="5,31,203,57"/>
+</map>

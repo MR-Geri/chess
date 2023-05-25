@@ -34,11 +34,11 @@
 <g id="node2" class="node">
 <title>Node2</title>
 <g id="a_node2"><a xlink:title=" ">
-<polygon fill="none" stroke="#bfbfbf" points="40.5,-193.5 40.5,-250.5 96.5,-250.5 96.5,-193.5 40.5,-193.5"/>
+<polygon fill="none" stroke="black" points="40.5,-193.5 40.5,-250.5 96.5,-250.5 96.5,-193.5 40.5,-193.5"/>
 <text text-anchor="middle" x="68.5" y="-238.5" font-family="Helvetica,sans-Serif" font-size="10.00">QObject</text>
-<polyline fill="none" stroke="#bfbfbf" points="40.5,-231.5 96.5,-231.5 "/>
+<polyline fill="none" stroke="black" points="40.5,-231.5 96.5,-231.5 "/>
 <text text-anchor="middle" x="68.5" y="-219.5" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
-<polyline fill="none" stroke="#bfbfbf" points="40.5,-212.5 96.5,-212.5 "/>
+<polyline fill="none" stroke="black" points="40.5,-212.5 96.5,-212.5 "/>
 <text text-anchor="middle" x="68.5" y="-200.5" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
 </a>
 </g>

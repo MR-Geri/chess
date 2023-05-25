@@ -143,7 +143,7 @@ var sectionId = 'dynsection-3';
 <!-- Node9 -->
 <g id="node9" class="node">
 <title>Node9</title>
-<g id="a_node9"><a xlink:href="engine_8cpp.html#a0aedf9d17abf2bab41a04d5beb4f4988" target="_top" xlink:title=" ">
+<g id="a_node9"><a xlink:href="engine_8cpp.html#ad73d39e7626a81fa0e95b7e2f04b28ce" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="422.5,-228.5 422.5,-247.5 543.5,-247.5 543.5,-228.5 422.5,-228.5"/>
 <text text-anchor="middle" x="483" y="-235.5" font-family="Helvetica,sans-Serif" font-size="10.00">checkStepOnPossible</text>
 </a>
@@ -248,7 +248,7 @@ var sectionId = 'dynsection-3';
 <!-- Node5 -->
 <g id="node5" class="node">
 <title>Node5</title>
-<g id="a_node5"><a xlink:href="classEngine.html#a93442cf58f7239df6e2b5303b7b90cda" target="_top" xlink:title="Количество противников, которые находятся под атакой.">
+<g id="a_node5"><a xlink:href="classEngine.html#ab74c7d4f0e0778c122dc43fd052081b3" target="_top" xlink:title="Количество противников, которые находятся под атакой.">
 <polygon fill="none" stroke="black" points="602,-380.5 602,-399.5 752,-399.5 752,-380.5 602,-380.5"/>
 <text text-anchor="middle" x="677" y="-387.5" font-family="Helvetica,sans-Serif" font-size="10.00">Engine::enemyUnderAttack</text>
 </a>
@@ -278,7 +278,7 @@ var sectionId = 'dynsection-3';
 <!-- Node8 -->
 <g id="node8" class="node">
 <title>Node8</title>
-<g id="a_node8"><a xlink:href="classEngine.html#a9154a3995005939adcc56d46d8bd78b0" target="_top" xlink:title="Количество возможных ходов.">
+<g id="a_node8"><a xlink:href="classEngine.html#a1633adb681319e5d8840e7f432d88a7a" target="_top" xlink:title="Количество возможных ходов.">
 <polygon fill="none" stroke="black" points="595,-304.5 595,-323.5 759,-323.5 759,-304.5 595,-304.5"/>
 <text text-anchor="middle" x="677" y="-311.5" font-family="Helvetica,sans-Serif" font-size="10.00">Engine::quantityPossibleMove</text>
 </a>

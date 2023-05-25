@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['party_219',['Party',['../structParty.html',1,'']]],
-  ['pawn_220',['Pawn',['../classPawn.html',1,'']]],
-  ['position_221',['Position',['../classPosition.html',1,'']]]
+  ['party_0',['Party',['../structParty.html',1,'']]],
+  ['pawn_1',['Pawn',['../classPawn.html',1,'']]],
+  ['position_2',['Position',['../classPosition.html',1,'']]]
 ];

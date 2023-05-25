@@ -27,11 +27,11 @@
 <g id="node2" class="node">
 <title>Node2</title>
 <g id="a_node2"><a xlink:title=" ">
-<polygon fill="none" stroke="#bfbfbf" points="34.5,-116.5 34.5,-173.5 93.5,-173.5 93.5,-116.5 34.5,-116.5"/>
+<polygon fill="none" stroke="black" points="34.5,-116.5 34.5,-173.5 93.5,-173.5 93.5,-116.5 34.5,-116.5"/>
 <text text-anchor="middle" x="64" y="-161.5" font-family="Helvetica,sans-Serif" font-size="10.00">QWidget</text>
-<polyline fill="none" stroke="#bfbfbf" points="34.5,-154.5 93.5,-154.5 "/>
+<polyline fill="none" stroke="black" points="34.5,-154.5 93.5,-154.5 "/>
 <text text-anchor="middle" x="64" y="-142.5" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
-<polyline fill="none" stroke="#bfbfbf" points="34.5,-135.5 93.5,-135.5 "/>
+<polyline fill="none" stroke="black" points="34.5,-135.5 93.5,-135.5 "/>
 <text text-anchor="middle" x="64" y="-123.5" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
 </a>
 </g>

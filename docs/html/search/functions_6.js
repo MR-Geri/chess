@@ -1,9 +1,9 @@
 var searchData=
 [
-  ['highlightattacks_315',['highlightAttacks',['../classScreenGame.html#afedf4a58c84bad70f59909c5da0471d6',1,'ScreenGame']]],
-  ['highlightattackswhisredrawing_316',['highlightAttacksWhisRedrawing',['../classScreenGame.html#ab78db545e5f0377ea4a27f8a4657525f',1,'ScreenGame']]],
-  ['highlightguiattacks_317',['highlightGuiAttacks',['../classMainWindow.html#a85bff6750f28e9643dcdb395eb68ad70',1,'MainWindow']]],
-  ['highlightguiattacksformousepress_318',['highlightGuiAttacksForMousePress',['../classMainWindow.html#a6686134a173c77d6bb587d508830eb75',1,'MainWindow']]],
-  ['highlightguimoves_319',['highlightGuiMoves',['../classMainWindow.html#a6989d260045e823b95a98f3d619cfae6',1,'MainWindow']]],
-  ['highlightmoves_320',['highlightMoves',['../classScreenGame.html#aa488a410a92be2a5e517119f8611d218',1,'ScreenGame']]]
+  ['highlightattacks_0',['highlightAttacks',['../classScreenGame.html#adf2a37a2d79201eb3d93f95523b6750f',1,'ScreenGame']]],
+  ['highlightattackswhisredrawing_1',['highlightAttacksWhisRedrawing',['../classScreenGame.html#a9d534f734880b4090b700db3fc9b02f1',1,'ScreenGame']]],
+  ['highlightguiattacks_2',['highlightGuiAttacks',['../classMainWindow.html#a7d255ffd5a3120d6c37d0bbb9dab7fe6',1,'MainWindow']]],
+  ['highlightguiattacksformousepress_3',['highlightGuiAttacksForMousePress',['../classMainWindow.html#a722cc27444a6b7a3a7b00f0b59183241',1,'MainWindow']]],
+  ['highlightguimoves_4',['highlightGuiMoves',['../classMainWindow.html#a127f537d2ba6dbb68490cd269683aa45',1,'MainWindow']]],
+  ['highlightmoves_5',['highlightMoves',['../classScreenGame.html#acb1faee5790388f60ce278f7c4865563',1,'ScreenGame']]]
 ];
